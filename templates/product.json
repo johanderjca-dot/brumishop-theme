@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "lp-hero": {
+      "type": "lp-hero",
+      "settings": {}
+    },
+    "lp-description": {
+      "type": "lp-description",
+      "settings": {}
+    },
+    "lp-benefits": {
+      "type": "lp-benefits",
+      "settings": {}
+    },
+    "lp-offer": {
+      "type": "lp-offer",
+      "settings": {}
+    },
+    "lp-reviews": {
+      "type": "lp-reviews",
+      "settings": {}
+    },
+    "lp-shipping": {
+      "type": "lp-shipping",
+      "settings": {}
+    },
+    "lp-policies": {
+      "type": "lp-policies",
+      "settings": {}
+    },
+    "lp-buy-button": {
+      "type": "lp-buy-button",
+      "settings": {}
+    },
+    "lp-how-to-use": {
+      "type": "lp-how-to-use",
+      "settings": {}
+    },
+    "lp-problem-solution": {
+      "type": "lp-problem-solution",
+      "settings": {}
+    },
+    "lp-faq": {
+      "type": "lp-faq",
+      "settings": {}
+    },
+    "lp-testimonials": {
+      "type": "lp-testimonials",
+      "settings": {}
+    }
+  },
+  "order": [
+    "lp-hero",
+    "lp-description",
+    "lp-benefits",
+    "lp-offer",
+    "lp-reviews",
+    "lp-shipping",
+    "lp-policies",
+    "lp-buy-button",
+    "lp-how-to-use",
+    "lp-problem-solution",
+    "lp-faq",
+    "lp-testimonials"
+  ]
+}

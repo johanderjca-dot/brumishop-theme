@@ -1,9 +1,9 @@
-<div class="border-y border-[#E8E8E2] bg-[#FAFAF6] py-6">
+<div style="border-top:1px solid {{ section.settings.border_color }}; border-bottom:1px solid {{ section.settings.border_color }}; background:{{ section.settings.bg_color }}; padding:1.5rem 0;">
   <div class="max-w-[1320px] mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4">
     {% for block in section.blocks %}
       <div class="flex items-center gap-3">
-        <span class="text-lg" style="color: {{ section.settings.icon_color }};">{{ block.settings.icon }}</span>
-        <span class="text-xs font-medium text-[#5a5a52]">{{ block.settings.text }}</span>
+        <span style="font-size:1.125rem; color:{{ section.settings.icon_color }};">{{ block.settings.icon }}</span>
+        <span style="font-size:0.75rem; font-weight:500; color:{{ section.settings.text_color }};">{{ block.settings.text }}</span>
       </div>
     {% endfor %}
   </div>
@@ -15,9 +15,27 @@
   "settings": [
     {
       "type": "color",
+      "id": "bg_color",
+      "label": "Color de fondo",
+      "default": "#FAFAF6"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Color del borde",
+      "default": "#E8E8E2"
+    },
+    {
+      "type": "color",
       "id": "icon_color",
-      "label": "Icon color",
+      "label": "Color del ícono",
       "default": "#5a7a40"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color del texto",
+      "default": "#5a5a52"
     }
   ],
   "max_blocks": 6,
