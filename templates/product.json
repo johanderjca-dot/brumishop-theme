@@ -1,17 +1,67 @@
 {
   "sections": {
-    "lp-hero":             { "type": "lp-hero" },
-    "lp-description":      { "type": "lp-description" },
-    "lp-benefits":         { "type": "lp-benefits" },
-    "lp-offer":            { "type": "lp-offer" },
-    "lp-reviews":          { "type": "lp-reviews" },
-    "lp-shipping":         { "type": "lp-shipping" },
-    "lp-policies":         { "type": "lp-policies" },
-    "lp-buy-button":       { "type": "lp-buy-button" },
-    "lp-how-to-use":       { "type": "lp-how-to-use" },
-    "lp-problem-solution": { "type": "lp-problem-solution" },
-    "lp-faq":              { "type": "lp-faq" },
-    "lp-testimonials":     { "type": "lp-testimonials" }
+    "lp-hero": {
+      "type": "lp-hero",
+      "settings": {}
+    },
+    "lp-description": {
+      "type": "lp-description",
+      "settings": {}
+    },
+    "lp-benefits": {
+      "type": "lp-benefits",
+      "blocks": {},
+      "block_order": [],
+      "settings": {}
+    },
+    "lp-offer": {
+      "type": "lp-offer",
+      "settings": {}
+    },
+    "lp-reviews": {
+      "type": "lp-reviews",
+      "blocks": {},
+      "block_order": [],
+      "settings": {}
+    },
+    "lp-shipping": {
+      "type": "lp-shipping",
+      "blocks": {},
+      "block_order": [],
+      "settings": {}
+    },
+    "lp-policies": {
+      "type": "lp-policies",
+      "blocks": {},
+      "block_order": [],
+      "settings": {}
+    },
+    "lp-buy-button": {
+      "type": "lp-buy-button",
+      "settings": {}
+    },
+    "lp-how-to-use": {
+      "type": "lp-how-to-use",
+      "settings": {}
+    },
+    "lp-problem-solution": {
+      "type": "lp-problem-solution",
+      "blocks": {},
+      "block_order": [],
+      "settings": {}
+    },
+    "lp-faq": {
+      "type": "lp-faq",
+      "blocks": {},
+      "block_order": [],
+      "settings": {}
+    },
+    "lp-testimonials": {
+      "type": "lp-testimonials",
+      "blocks": {},
+      "block_order": [],
+      "settings": {}
+    }
   },
   "order": [
     "lp-hero",
