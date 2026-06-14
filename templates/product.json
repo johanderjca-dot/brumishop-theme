@@ -1,9 +1,4 @@
 {
-  "sections": {
-    "lp-test": {
-      "type": "lp-test",
-      "settings": {}
-    }
-  },
-  "order": ["lp-test"]
+  "sections": {},
+  "order": []
 }

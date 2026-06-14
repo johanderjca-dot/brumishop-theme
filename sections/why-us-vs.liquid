@@ -1,0 +1,192 @@
+<style>
+  .vs-check  { color: #5a7a40; font-size: 1rem; }
+  .vs-cross  { color: #c0392b; font-size: 1rem; }
+  .vs-row    { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.85rem 0; border-bottom: 1px solid {{ section.settings.border_color }}; }
+  .vs-row:last-child { border-bottom: none; }
+</style>
+
+<section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0;">
+  <div style="max-width:1200px; margin:0 auto; padding:0 1.5rem;">
+
+    <!-- Header -->
+    <div style="text-align:center; margin-bottom:3.5rem;">
+      {% if section.settings.eyebrow != blank %}
+        <p style="font-size:0.7rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:{{ section.settings.accent_color }}; margin-bottom:0.75rem;">
+          {{ section.settings.eyebrow }}
+        </p>
+      {% endif %}
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(2rem,4vw,3.25rem); font-weight:600; color:{{ section.settings.heading_color }}; line-height:1.2; max-width:700px; margin:0 auto 1rem;">
+        {{ section.settings.title }}
+      </h2>
+      {% if section.settings.subtitle != blank %}
+        <p style="font-size:1rem; color:{{ section.settings.text_color }}; max-width:58ch; margin:0 auto;">
+          {{ section.settings.subtitle }}
+        </p>
+      {% endif %}
+    </div>
+
+    <!-- Comparison table -->
+    {% if section.settings.layout == 'table' %}
+      <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; text-align:left;">
+          <thead>
+            <tr>
+              <th style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:{{ section.settings.text_color }}; padding:1rem 1.25rem; border-bottom:2px solid {{ section.settings.border_color }}; width:40%;"></th>
+              <th style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#fff; background:{{ section.settings.accent_color }}; padding:1rem 1.25rem; border-bottom:2px solid {{ section.settings.accent_color }}; border-radius:8px 8px 0 0; text-align:center;">
+                {{ section.settings.our_label }}
+              </th>
+              <th style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:{{ section.settings.text_color }}; background:{{ section.settings.comp_bg }}; padding:1rem 1.25rem; border-bottom:2px solid {{ section.settings.border_color }}; text-align:center;">
+                {{ section.settings.comp_label }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for block in section.blocks %}
+              <tr {{ block.shopify_attributes }}
+                  style="{% cycle 'background:#fff;', 'background:' | append: section.settings.bg_color | append: ';' %}">
+                <td style="padding:1rem 1.25rem; font-size:0.875rem; color:{{ section.settings.heading_color }}; font-weight:500; border-bottom:1px solid {{ section.settings.border_color }};">
+                  {{ block.settings.feature }}
+                </td>
+                <td style="padding:1rem 1.25rem; text-align:center; background:{{ section.settings.accent_color }}08; border-bottom:1px solid {{ section.settings.border_color }};">
+                  {% if block.settings.we_have %}
+                    <span class="vs-check">✓</span>
+                    {% if block.settings.we_detail != blank %}
+                      <span style="font-size:0.78rem; color:#5a5a52; display:block; margin-top:0.2rem;">{{ block.settings.we_detail }}</span>
+                    {% endif %}
+                  {% else %}
+                    <span class="vs-cross">✗</span>
+                  {% endif %}
+                </td>
+                <td style="padding:1rem 1.25rem; text-align:center; background:{{ section.settings.comp_bg }}; border-bottom:1px solid {{ section.settings.border_color }};">
+                  {% if block.settings.they_have %}
+                    <span class="vs-check">✓</span>
+                    {% if block.settings.they_detail != blank %}
+                      <span style="font-size:0.78rem; color:#5a5a52; display:block; margin-top:0.2rem;">{{ block.settings.they_detail }}</span>
+                    {% endif %}
+                  {% else %}
+                    <span class="vs-cross">✗</span>
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+    <!-- Cards layout -->
+    {% else %}
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:start;">
+        <!-- Our column -->
+        <div style="background:{{ section.settings.accent_color }}; border-radius:12px; padding:2rem; color:#fff;">
+          <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.6); margin-bottom:1rem;">
+            {{ section.settings.our_label }}
+          </div>
+          {% for block in section.blocks %}
+            {% if block.settings.we_have %}
+              <div {{ block.shopify_attributes }} class="vs-row" style="border-color:rgba(255,255,255,0.15); color:#fff;">
+                <span style="font-size:1.1rem; margin-top:0.05rem; flex-shrink:0;">✓</span>
+                <div>
+                  <p style="font-size:0.875rem; font-weight:600; margin:0;">{{ block.settings.feature }}</p>
+                  {% if block.settings.we_detail != blank %}
+                    <p style="font-size:0.78rem; color:rgba(255,255,255,0.65); margin:0.2rem 0 0;">{{ block.settings.we_detail }}</p>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <!-- Competition column -->
+        <div style="background:{{ section.settings.comp_bg }}; border-radius:12px; padding:2rem;">
+          <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:{{ section.settings.text_color }}; margin-bottom:1rem;">
+            {{ section.settings.comp_label }}
+          </div>
+          {% for block in section.blocks %}
+            <div {{ block.shopify_attributes }} class="vs-row" style="border-color:{{ section.settings.border_color }};">
+              {% if block.settings.they_have %}
+                <span style="color:#5a7a40; font-size:1.1rem; margin-top:0.05rem; flex-shrink:0;">✓</span>
+              {% else %}
+                <span style="color:#c0392b; font-size:1.1rem; margin-top:0.05rem; flex-shrink:0;">✗</span>
+              {% endif %}
+              <div>
+                <p style="font-size:0.875rem; color:{{ section.settings.heading_color }}; {% unless block.settings.they_have %}opacity:0.55;{% endunless %} margin:0; font-weight:{% if block.settings.they_have %}500{% else %}400{% endif %};">
+                  {{ block.settings.feature }}
+                </p>
+                {% if block.settings.they_detail != blank %}
+                  <p style="font-size:0.78rem; color:{{ section.settings.text_color }}; margin:0.2rem 0 0;">{{ block.settings.they_detail }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    <!-- CTA -->
+    {% if section.settings.btn_label != blank %}
+      <div style="text-align:center; margin-top:3rem;">
+        <a href="{{ section.settings.btn_url }}"
+           style="display:inline-block; background:{{ section.settings.btn_bg }}; color:{{ section.settings.btn_color }}; font-size:0.875rem; font-weight:700; padding:1rem 2.5rem; border-radius:4px; text-decoration:none; letter-spacing:0.05em; transition:transform 160ms cubic-bezier(0.23,1,0.32,1), opacity .15s;"
+           onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'"
+           onmousedown="this.style.transform='scale(0.97)'" onmouseup="this.style.transform='scale(1)'">
+          {{ section.settings.btn_label }}
+        </a>
+      </div>
+    {% endif %}
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "¿Por qué nosotros?",
+  "settings": [
+    { "type": "header", "content": "Encabezado" },
+    { "type": "text", "id": "eyebrow", "label": "Etiqueta", "default": "NUESTRA VENTAJA" },
+    { "type": "text", "id": "title", "label": "Título", "default": "¿Por qué elegirnos a nosotros y no a la competencia?" },
+    { "type": "text", "id": "subtitle", "label": "Subtítulo", "default": "No solo vendemos productos — garantizamos calidad, rapidez y una experiencia que la competencia no ofrece." },
+    { "type": "header", "content": "Columnas" },
+    { "type": "select", "id": "layout", "label": "Diseño", "options": [{"value":"cards","label":"Tarjetas (moderno)"},{"value":"table","label":"Tabla de comparación"}], "default": "cards" },
+    { "type": "text", "id": "our_label", "label": "Etiqueta nuestra columna", "default": "BrumiShop" },
+    { "type": "text", "id": "comp_label", "label": "Etiqueta competencia", "default": "La competencia" },
+    { "type": "header", "content": "Botón (opcional)" },
+    { "type": "text", "id": "btn_label", "label": "Texto del botón", "default": "Ver todos los productos" },
+    { "type": "url", "id": "btn_url", "label": "Enlace del botón" },
+    { "type": "color", "id": "btn_bg", "label": "Fondo botón", "default": "#1a1a18" },
+    { "type": "color", "id": "btn_color", "label": "Color texto botón", "default": "#ffffff" },
+    { "type": "header", "content": "Colores" },
+    { "type": "color", "id": "bg_color", "label": "Fondo sección", "default": "#FAFAF6" },
+    { "type": "color", "id": "comp_bg", "label": "Fondo columna competencia", "default": "#F0F0EA" },
+    { "type": "color", "id": "accent_color", "label": "Color acento (nuestra columna)", "default": "#1a1a18" },
+    { "type": "color", "id": "border_color", "label": "Color bordes", "default": "#E8E8E2" },
+    { "type": "color", "id": "heading_color", "label": "Color títulos", "default": "#1a1a18" },
+    { "type": "color", "id": "text_color", "label": "Color texto", "default": "#6a6a62" },
+    { "type": "range", "id": "py", "label": "Espacio vertical (px)", "min": 48, "max": 140, "step": 8, "default": 88 }
+  ],
+  "max_blocks": 12,
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Característica",
+      "settings": [
+        { "type": "text", "id": "feature", "label": "Característica o ventaja", "default": "Envío gratis disponible" },
+        { "type": "checkbox", "id": "we_have", "label": "Nosotros lo ofrecemos", "default": true },
+        { "type": "text", "id": "we_detail", "label": "Detalle nuestro (opcional)", "default": "Desde $50 de compra" },
+        { "type": "checkbox", "id": "they_have", "label": "La competencia lo ofrece", "default": false },
+        { "type": "text", "id": "they_detail", "label": "Detalle competencia (opcional)" }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "¿Por qué nosotros?",
+    "blocks": [
+      { "type": "feature", "settings": { "feature": "Envío gratis", "we_have": true, "we_detail": "En pedidos desde $50", "they_have": false, "they_detail": "Siempre pagan envío" } },
+      { "type": "feature", "settings": { "feature": "Garantía de devolución", "we_have": true, "we_detail": "30 días sin preguntas", "they_have": false, "they_detail": "" } },
+      { "type": "feature", "settings": { "feature": "Pago contra entrega", "we_have": true, "we_detail": "Paga cuando recibes", "they_have": false, "they_detail": "Solo pago anticipado" } },
+      { "type": "feature", "settings": { "feature": "Soporte al cliente", "we_have": true, "we_detail": "WhatsApp 24/7", "they_have": true, "they_detail": "Solo en horario comercial" } },
+      { "type": "feature", "settings": { "feature": "Productos verificados", "we_have": true, "we_detail": "Revisamos cada pedido", "they_have": false, "they_detail": "" } },
+      { "type": "feature", "settings": { "feature": "Precios competitivos", "we_have": true, "we_detail": "Los mejores precios del mercado", "they_have": true, "they_detail": "Precios variables" } }
+    ]
+  }]
+}
+{% endschema %}
