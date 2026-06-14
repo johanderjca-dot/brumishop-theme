@@ -31,9 +31,9 @@
 
 {% schema %}
 {
-  "name": "10 — Problema / Solución",
+  "name": "Problema / Solución",
   "settings": [
-    { "type": "range", "id": "py", "label": "Espacio vertical por bloque (px)", "min": 48, "max": 140, "step": 8, "default": 80 },
+    { "type": "range", "id": "py", "label": "Espacio vertical por bloque (px)", "min": 48, "max": 144, "step": 8, "default": 80 },
     { "type": "color", "id": "bg_odd", "label": "Fondo secciones impares (1°, 3°)", "default": "#FFFFFF" },
     { "type": "color", "id": "bg_even", "label": "Fondo secciones pares (2°)", "default": "#FAFAF6" },
     { "type": "color", "id": "border_color", "label": "Color separador", "default": "#E8E8E2" },
@@ -47,7 +47,7 @@
   "blocks": [
     {
       "type": "block",
-      "name": "Bloque Problema / Solución",
+      "name": "Bloque Prob/Solución",
       "settings": [
         { "type": "header", "content": "Problema" },
         { "type": "text", "id": "problem_label", "label": "Etiqueta (ej: EL PROBLEMA)", "default": "EL PROBLEMA" },
@@ -71,7 +71,7 @@
     }
   ],
   "presets": [{
-    "name": "10 — Problema / Solución",
+    "name": "Problema / Solución",
     "blocks": [
       { "type": "block" },
       { "type": "block", "settings": { "problem_label": "EL RETO", "problem_title": "Opciones caras que no duran", "solution_label": "NUESTRA VENTAJA", "solution_title": "Máxima calidad al mejor precio" } },
