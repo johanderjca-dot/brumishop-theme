@@ -1,0 +1,122 @@
+{
+  "sections": {
+    "hero-slider": {
+      "type": "hero-slider",
+      "blocks": {
+        "slide-1": {
+          "type": "slide",
+          "settings": {
+            "title": "Todo lo que Necesitas, Aquí",
+            "subtitle": "Productos seleccionados con calidad garantizada. Encuentra exactamente lo que buscas.",
+            "price_text": "Desde $9.99",
+            "button_label": "Comprar Ahora",
+            "bg_color": "#F8F7F2"
+          }
+        },
+        "slide-2": {
+          "type": "slide",
+          "settings": {
+            "title": "Nuevas Llegadas",
+            "subtitle": "Agregamos nuevos productos cada semana. Sé el primero en descurir lo último.",
+            "price_text": "Ver novedades",
+            "button_label": "Ver Colección",
+            "bg_color": "#EEF0E7"
+          }
+        },
+        "slide-3": {
+          "type": "slide",
+          "settings": {
+            "title": "Hasta 40% de Descuento",
+            "subtitle": "Ofertas limitadas en cientos de productos. Aprovecha antes de que se agoten.",
+            "price_text": "Desde $4.99",
+            "button_label": "Ver Ofertas",
+            "bg_color": "#F4EDE4"
+          }
+        }
+      },
+      "block_order": ["slide-1", "slide-2", "slide-3"],
+      "settings": {}
+    },
+    "category-cards": {
+      "type": "category-cards",
+      "blocks": {
+        "card-1": { "type": "card", "settings": { "title": "Nuevas Llegadas", "subtitle": "Recién agregados", "button_label": "Comprar Ahora", "bg_color": "#FFFFFF" } },
+        "card-2": { "type": "card", "settings": { "title": "¿Qué Hay de Nuevo?", "subtitle": "Descúbrelo primero", "button_label": "Explorar", "bg_color": "#EEF0E7" } },
+        "card-3": { "type": "card", "settings": { "title": "Lleva 2 Paga 1", "subtitle": "Oferta limitada", "button_label": "Ver Ofertas", "bg_color": "#F2EDE6" } }
+      },
+      "block_order": ["card-1", "card-2", "card-3"],
+      "settings": {}
+    },
+    "trust-bar": {
+      "type": "trust-bar",
+      "blocks": {
+        "item-1": { "type": "item", "settings": { "icon": "○", "text": "Envío gratis desde $50" } },
+        "item-2": { "type": "item", "settings": { "icon": "◇", "text": "Devoluciones en 30 días" } },
+        "item-3": { "type": "item", "settings": { "icon": "△", "text": "Pagos 100% seguros" } },
+        "item-4": { "type": "item", "settings": { "icon": "□", "text": "Soporte 24/7" } }
+      },
+      "block_order": ["item-1", "item-2", "item-3", "item-4"],
+      "settings": {}
+    },
+    "featured-collection-1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Más Vendidos",
+        "products_to_show": 5,
+        "bg_color": "#ffffff"
+      }
+    },
+    "featured-collection-2": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Menos de $25",
+        "products_to_show": 5,
+        "bg_color": "#F8F7F3"
+      }
+    },
+    "feature-banners": {
+      "type": "feature-banners",
+      "blocks": {
+        "banner-1": {
+          "type": "banner",
+          "settings": {
+            "eyebrow": "Nueva Colección",
+            "title": "Descubre lo Último en Tendencia",
+            "button_label": "Explorar",
+            "text_color": "#ffffff",
+            "overlay": true,
+            "bg_color": "#E0DDD8"
+          }
+        },
+        "banner-2": {
+          "type": "banner",
+          "settings": {
+            "title": "25% off en Todo",
+            "subtitle": "Cientos de productos con descuento. Oferta por tiempo limitado.",
+            "button_label": "Ir a la Oferta",
+            "text_color": "#1a2a0e",
+            "overlay": false,
+            "bg_color": "#C8D4B8"
+          }
+        }
+      },
+      "block_order": ["banner-1", "banner-2"],
+      "settings": {}
+    },
+    "brand-marquee": {
+      "type": "brand-marquee",
+      "settings": {
+        "text": "ENVÍO RÁPIDO, CALIDAD GARANTIZADA, PRECIOS JUSTOS, PRODUCTOS VERIFICADOS, DEVOLUCIÓN FÁCIL, PAGOS SEGUROS, SOPORTE REAL, STOCK PERMANENTE"
+      }
+    }
+  },
+  "order": [
+    "hero-slider",
+    "category-cards",
+    "trust-bar",
+    "featured-collection-1",
+    "featured-collection-2",
+    "feature-banners",
+    "brand-marquee"
+  ]
+}

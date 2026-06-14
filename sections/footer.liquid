@@ -1,0 +1,82 @@
+<footer class="border-t border-[#E8E8E2] bg-[#FAFAF6] pt-16 pb-8">
+  <div class="max-w-[1320px] mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-12">
+
+      <!-- Brand column -->
+      <div>
+        <a href="{{ routes.root_url }}" class="font-display text-2xl font-semibold tracking-[0.15em] text-[#1a1a18]">
+          {{ shop.name | upcase }}
+        </a>
+        <p class="mt-4 text-xs text-[#8a8a82] leading-relaxed">{{ section.settings.tagline }}</p>
+      </div>
+
+      <!-- Link columns -->
+      {% for block in section.blocks %}
+        <div>
+          <h4 class="text-[10px] font-bold tracking-[0.18em] uppercase text-[#1a1a18] mb-5">{{ block.settings.title }}</h4>
+          <ul class="space-y-3">
+            {% assign links = block.settings.links | split: ',' %}
+            {% for item in links %}
+              <li><span class="text-xs text-[#6a6a62]">{{ item | strip }}</span></li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+
+    </div>
+
+    <div class="border-t border-[#E8E8E2] pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-[10px] text-[#aaa9a0]">© {{ 'now' | date: '%Y' }} {{ shop.name }}. Todos los derechos reservados.</p>
+      <div class="flex items-center gap-4">
+        <span class="text-[9px] font-bold border border-[#E0E0DA] px-2 py-1 rounded text-[#a0a09a]">VISA</span>
+        <span class="text-[9px] font-bold border border-[#E0E0DA] px-2 py-1 rounded text-[#a0a09a]">MC</span>
+        <span class="text-[9px] font-bold border border-[#E0E0DA] px-2 py-1 rounded text-[#a0a09a]">PayPal</span>
+        <span class="text-[9px] font-bold border border-[#E0E0DA] px-2 py-1 rounded text-[#a0a09a]">AMEX</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Tu tienda de confianza. Productos de calidad para el día a día."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_column",
+      "name": "Link column",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Column title",
+          "default": "Ayuda"
+        },
+        {
+          "type": "textarea",
+          "id": "links",
+          "label": "Links (comma separated)",
+          "default": "FAQ, Envíos y Devoluciones, Contacto"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer",
+      "blocks": [
+        { "type": "link_column", "settings": { "title": "Ayuda", "links": "FAQ, Envíos y Devoluciones, Guía de Tallas, Contacto" } },
+        { "type": "link_column", "settings": { "title": "Empresa", "links": "Nosotros, Sustentabilidad, Prensa, Carreras" } },
+        { "type": "link_column", "settings": { "title": "Legal", "links": "Privacidad, Términos, Cookies" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

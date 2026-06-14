@@ -1,0 +1,37 @@
+/* ── Global ── */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+::selection { background: #C8D4B8; color: #1a1a18; }
+input, button, select { outline: none; font-family: inherit; }
+img { display: block; max-width: 100%; }
+
+/* ── Marquee ── */
+@keyframes nexo-marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.nexo-marquee { animation: nexo-marquee 28s linear infinite; }
+.nexo-marquee:hover { animation-play-state: paused; }
+
+/* ── Product card hover ── */
+.product-card .add-btn {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .22s ease, transform .22s ease;
+}
+.product-card:hover .add-btn { opacity: 1; transform: translateY(0); }
+.product-img { transition: transform .5s ease; }
+.product-card:hover .product-img { transform: scale(1.04); }
+
+/* ── Hero slider ── */
+.nexo-hero { transition: background-color .6s ease; }
+.nexo-slide { transition: opacity .4s ease; }
+.nexo-dot { cursor: pointer; border: none; }
+
+/* ── Feature panel ── */
+.feature-panel img { transition: transform .6s ease; }
+.feature-panel:hover img { transform: scale(1.04); }
+
+/* ── Scroll animations (added via JS) ── */
+.gsap-hidden { opacity: 0; transform: translateY(30px); }

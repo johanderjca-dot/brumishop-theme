@@ -1,0 +1,24 @@
+<div class="py-2.5 text-center text-xs font-medium tracking-wide" style="background: {{ section.settings.bg_color }};">
+  {{ section.settings.text }}
+</div>
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "ENVÍO GRATIS EN PEDIDOS MAYORES A $50  ·  NUEVOS PRODUCTOS CADA SEMANA"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#F2EBC4"
+    }
+  ],
+  "presets": [{ "name": "Announcement Bar" }]
+}
+{% endschema %}

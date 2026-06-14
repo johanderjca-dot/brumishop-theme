@@ -1,0 +1,79 @@
+<div class="max-w-[1320px] mx-auto px-6 py-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+
+    <!-- Images -->
+    <div class="space-y-3">
+      {% if product.images.size > 0 %}
+        <div class="bg-[#F8F7F3] rounded-sm overflow-hidden" style="aspect-ratio: 1/1;">
+          <img id="product-main-image"
+               src="{{ product.featured_image | image_url: width: 900 }}"
+               alt="{{ product.featured_image.alt | escape }}"
+               class="w-full h-full object-cover">
+        </div>
+        {% if product.images.size > 1 %}
+          <div class="grid grid-cols-4 gap-2">
+            {% for image in product.images limit: 4 %}
+              <div class="bg-[#F8F7F3] rounded-sm overflow-hidden cursor-pointer border-2 {% if forloop.first %}border-[#1a1a18]{% else %}border-transparent{% endif %}"
+                   style="aspect-ratio: 1/1;"
+                   onclick="document.getElementById('product-main-image').src='{{ image | image_url: width: 900 }}'">
+                <img src="{{ image | image_url: width: 200 }}" alt="" class="w-full h-full object-cover">
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+
+    <!-- Info -->
+    <div class="sticky top-24">
+      <p class="text-xs text-[#6a6a62] tracking-widest uppercase mb-2">{{ product.type }}</p>
+      <h1 class="font-display text-3xl font-semibold text-[#1a1a18] leading-tight">{{ product.title }}</h1>
+
+      <div class="flex items-center gap-3 mt-4">
+        <span class="text-xl font-semibold text-[#1a1a18]">{{ product.price | money }}</span>
+        {% if product.compare_at_price > product.price %}
+          <span class="text-sm text-[#a0a09a] line-through">{{ product.compare_at_price | money }}</span>
+          {% assign discount = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price %}
+          <span class="text-xs font-bold bg-[#5a7a40] text-white px-2 py-0.5 rounded-sm">-{{ discount }}%</span>
+        {% endif %}
+      </div>
+
+      <div class="mt-6 text-sm text-[#5a5a52] leading-relaxed">{{ product.description }}</div>
+
+      {% form 'product', product %}
+        {% if product.variants.size > 1 %}
+          <div class="mt-6">
+            <label class="text-xs font-semibold uppercase tracking-widest text-[#1a1a18] block mb-2">Variante</label>
+            <select name="id" class="border border-[#E0E0DA] text-sm px-3 py-2.5 w-full bg-white text-[#1a1a18] rounded-sm">
+              {% for variant in product.variants %}
+                <option value="{{ variant.id }}" {% unless variant.available %}disabled{% endunless %}>
+                  {{ variant.title }} — {{ variant.price | money }}
+                  {% unless variant.available %} (Agotado){% endunless %}
+                </option>
+              {% endfor %}
+            </select>
+          </div>
+        {% else %}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        {% endif %}
+
+        <div class="mt-6 space-y-3">
+          <button type="submit"
+                  class="w-full bg-[#1a1a18] text-white text-sm font-semibold py-4 hover:bg-[#333330] transition-colors duration-200"
+                  {% unless product.available %}disabled{% endunless %}>
+            {% if product.available %}Agregar al carrito{% else %}Agotado{% endif %}
+          </button>
+        </div>
+      {% endform %}
+
+      <div class="mt-8 pt-6 border-t border-[#E8E8E2] grid grid-cols-2 gap-4">
+        <div class="flex items-center gap-2 text-xs text-[#6a6a62]">
+          <span class="text-[#5a7a40]">○</span> Envío gratis desde $50
+        </div>
+        <div class="flex items-center gap-2 text-xs text-[#6a6a62]">
+          <span class="text-[#5a7a40]">◇</span> Devolución en 30 días
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="overflow-hidden py-5 border-b border-[#E8E8E2]">
+  <div class="nexo-marquee flex items-center gap-0 whitespace-nowrap">
+    {% assign items = section.settings.text | split: ',' %}
+    {% for i in (1..2) %}
+      {% for item in items %}
+        <span class="inline-flex items-center text-[10px] font-bold tracking-[0.2em] text-[#b0b0a0] uppercase whitespace-nowrap">
+          {{ item | strip }}
+          <span class="mx-8" style="color: #C8D4B8;">&#9670;</span>
+        </span>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Brand Marquee",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Items (comma separated)",
+      "default": "ENVÍO RÁPIDO, CALIDAD GARANTIZADA, PRECIOS JUSTOS, PRODUCTOS VERIFICADOS, DEVOLUCIÓN FÁCIL, PAGOS SEGUROS, SOPORTE REAL, STOCK PERMANENTE"
+    }
+  ],
+  "presets": [{ "name": "Brand Marquee" }]
+}
+{% endschema %}

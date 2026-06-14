@@ -1,0 +1,65 @@
+<div class="max-w-[900px] mx-auto px-6 py-12">
+  <h1 class="font-display text-3xl font-semibold text-[#1a1a18] mb-8">Tu Carrito</h1>
+
+  {% if cart.item_count == 0 %}
+    <div class="text-center py-20">
+      <p class="text-[#6a6a62] mb-6">Tu carrito está vacío.</p>
+      <a href="{{ routes.all_products_collection_url }}" class="inline-block bg-[#1a1a18] text-white text-sm font-semibold px-8 py-3.5 hover:bg-[#333330] transition-colors">
+        Seguir comprando
+      </a>
+    </div>
+  {% else %}
+    {% form 'cart' %}
+      <div class="space-y-4 mb-8">
+        {% for item in cart.items %}
+          <div class="flex items-center gap-5 py-5 border-b border-[#E8E8E2]">
+            <a href="{{ item.url }}" class="flex-shrink-0">
+              <img src="{{ item.image | image_url: width: 120 }}" alt="{{ item.title | escape }}"
+                   class="w-20 h-20 object-cover bg-[#F8F7F3] rounded-sm">
+            </a>
+            <div class="flex-1 min-w-0">
+              <a href="{{ item.url }}" class="font-medium text-sm text-[#1a1a18] hover:underline">{{ item.product.title }}</a>
+              {% if item.variant.title != 'Default Title' %}
+                <p class="text-xs text-[#6a6a62] mt-0.5">{{ item.variant.title }}</p>
+              {% endif %}
+              <p class="text-sm font-semibold text-[#1a1a18] mt-1">{{ item.final_price | money }}</p>
+            </div>
+            <div class="flex items-center gap-2 border border-[#E0E0DA] rounded-sm px-2">
+              <button type="button" class="py-1.5 px-1 text-[#6a6a62] hover:text-[#1a1a18]"
+                      onclick="updateQty({{ item.index | plus: 1 }}, {{ item.quantity | minus: 1 }})">−</button>
+              <span class="text-sm font-medium w-6 text-center">{{ item.quantity }}</span>
+              <button type="button" class="py-1.5 px-1 text-[#6a6a62] hover:text-[#1a1a18]"
+                      onclick="updateQty({{ item.index | plus: 1 }}, {{ item.quantity | plus: 1 }})">+</button>
+            </div>
+            <a href="{{ routes.cart_change_url }}?line={{ item.index | plus: 1 }}&quantity=0" class="text-xs text-[#a0a09a] hover:text-[#1a1a18]">Eliminar</a>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="ml-auto max-w-xs">
+        <div class="flex justify-between text-sm mb-2">
+          <span class="text-[#6a6a62]">Subtotal</span>
+          <span class="font-semibold">{{ cart.total_price | money }}</span>
+        </div>
+        <p class="text-xs text-[#a0a09a] mb-5">Impuestos e envío calculados al finalizar.</p>
+        <button type="submit" name="checkout" class="w-full bg-[#1a1a18] text-white text-sm font-semibold py-4 hover:bg-[#333330] transition-colors">
+          Finalizar compra
+        </button>
+        <a href="{{ routes.all_products_collection_url }}" class="block text-center text-xs text-[#6a6a62] mt-3 hover:text-[#1a1a18]">
+          Seguir comprando →
+        </a>
+      </div>
+    {% endform %}
+  {% endif %}
+</div>
+
+<script>
+  function updateQty(line, qty) {
+    if (qty < 0) return;
+    fetch('/cart/change.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ line, quantity: qty })
+    }).then(() => window.location.reload());
+  }
+</script>

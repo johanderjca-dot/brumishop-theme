@@ -1,0 +1,145 @@
+<div class="nexo-hero relative overflow-hidden" style="background: {{ section.blocks[0].settings.bg_color | default: '#F8F7F2' }};" id="nexo-hero">
+  <div class="max-w-[1320px] mx-auto px-6 relative">
+
+    {% for block in section.blocks %}
+      <div class="nexo-slide {% unless forloop.first %}hidden{% endunless %} grid grid-cols-2 gap-0 items-stretch min-h-[480px]"
+           data-slide="{{ forloop.index0 }}"
+           style="background: {{ block.settings.bg_color }};">
+
+        <!-- Text side -->
+        <div class="flex flex-col justify-center py-16 pr-12">
+          <h1 class="font-display text-[clamp(2.8rem,4vw,4.2rem)] font-semibold leading-tight text-[#1a1a18]">
+            {{ block.settings.title }}
+          </h1>
+          <p class="mt-4 text-sm text-[#6a6a62] leading-relaxed max-w-xs">{{ block.settings.subtitle }}</p>
+          {% if block.settings.price_text != blank %}
+            <p class="mt-5 text-sm font-semibold text-[#1a1a18]">{{ block.settings.price_text }}</p>
+          {% endif %}
+          <div class="mt-6">
+            <a href="{{ block.settings.button_url }}" class="inline-block bg-[#1a1a18] text-white text-xs font-semibold px-8 py-3.5 tracking-wide hover:bg-[#333330] transition-colors duration-200">
+              {{ block.settings.button_label | default: 'Comprar Ahora' }}
+            </a>
+          </div>
+        </div>
+
+        <!-- Image side -->
+        <div class="relative flex items-end justify-center pt-8">
+          {% if block.settings.image != blank %}
+            <img src="{{ block.settings.image | image_url: width: 800 }}"
+                 alt="{{ block.settings.title }}"
+                 class="w-full max-w-md h-[400px] object-cover"
+                 style="filter: contrast(1.05) saturate(0.85); object-position: center top;">
+          {% else %}
+            <div class="w-full max-w-md h-[400px] flex items-center justify-center bg-[#E8E8E2] rounded-sm">
+              <span class="text-sm text-[#a0a09a]">Sube una imagen en el editor</span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+
+  </div>
+
+  <!-- Dots -->
+  {% if section.blocks.size > 1 %}
+    <div class="flex justify-center gap-2 pb-6 pt-2">
+      {% for block in section.blocks %}
+        <button class="nexo-dot rounded-full transition-all duration-300 {% if forloop.first %}bg-[#1a1a18] w-5 h-2{% else %}bg-[#c8c8c0] w-2 h-2{% endif %}"
+                data-target="{{ forloop.index0 }}">
+        </button>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Hero Slider",
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background color",
+          "default": "#F8F7F2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Todo lo que Necesitas, Aquí"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Productos seleccionados con calidad garantizada."
+        },
+        {
+          "type": "text",
+          "id": "price_text",
+          "label": "Price label",
+          "default": "Desde $9.99"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button text",
+          "default": "Comprar Ahora"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Slider",
+      "blocks": [
+        {
+          "type": "slide",
+          "settings": {
+            "title": "Todo lo que Necesitas, Aquí",
+            "subtitle": "Productos seleccionados con calidad garantizada. Encuentra exactamente lo que buscas.",
+            "price_text": "Desde $9.99",
+            "button_label": "Comprar Ahora",
+            "bg_color": "#F8F7F2"
+          }
+        },
+        {
+          "type": "slide",
+          "settings": {
+            "title": "Nuevas Llegadas",
+            "subtitle": "Agregamos nuevos productos cada semana. Sé el primero en descubrir lo último.",
+            "price_text": "Ver novedades",
+            "button_label": "Ver Colección",
+            "bg_color": "#EEF0E7"
+          }
+        },
+        {
+          "type": "slide",
+          "settings": {
+            "title": "Hasta 40% de Descuento",
+            "subtitle": "Ofertas limitadas en cientos de productos. Aprovecha antes de que se agoten.",
+            "price_text": "Desde $4.99",
+            "button_label": "Ver Ofertas",
+            "bg_color": "#F4EDE4"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
