@@ -1,80 +1,9 @@
 {
   "sections": {
-    "lp-hero": {
-      "type": "lp-hero",
-      "settings": {}
-    },
-    "lp-description": {
-      "type": "lp-description",
-      "settings": {}
-    },
-    "lp-benefits": {
-      "type": "lp-benefits",
-      "blocks": {},
-      "block_order": [],
-      "settings": {}
-    },
-    "lp-offer": {
-      "type": "lp-offer",
-      "settings": {}
-    },
-    "lp-reviews": {
-      "type": "lp-reviews",
-      "blocks": {},
-      "block_order": [],
-      "settings": {}
-    },
-    "lp-shipping": {
-      "type": "lp-shipping",
-      "blocks": {},
-      "block_order": [],
-      "settings": {}
-    },
-    "lp-policies": {
-      "type": "lp-policies",
-      "blocks": {},
-      "block_order": [],
-      "settings": {}
-    },
-    "lp-buy-button": {
-      "type": "lp-buy-button",
-      "settings": {}
-    },
-    "lp-how-to-use": {
-      "type": "lp-how-to-use",
-      "settings": {}
-    },
-    "lp-problem-solution": {
-      "type": "lp-problem-solution",
-      "blocks": {},
-      "block_order": [],
-      "settings": {}
-    },
-    "lp-faq": {
-      "type": "lp-faq",
-      "blocks": {},
-      "block_order": [],
-      "settings": {}
-    },
-    "lp-testimonials": {
-      "type": "lp-testimonials",
-      "blocks": {},
-      "block_order": [],
+    "lp-test": {
+      "type": "lp-test",
       "settings": {}
     }
   },
-  "order": [
-    "lp-hero",
-    "lp-description",
-    "lp-benefits",
-    "lp-offer",
-    "lp-reviews",
-    "lp-shipping",
-    "lp-policies",
-    "lp-buy-button",
-    "lp-how-to-use",
-    "lp-problem-solution",
-    "lp-faq",
-    "lp-testimonials"
-  ]
+  "order": ["lp-test"]
 }
