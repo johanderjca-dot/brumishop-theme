@@ -1,0 +1,70 @@
+{% if section.blocks.size > 0 %}
+<section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0; border-top:1px solid {{ section.settings.border_color }};">
+  <div style="max-width:1100px; margin:0 auto; padding:0 1.5rem;">
+
+    {% if section.settings.title != blank %}
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.5rem,2.5vw,2.25rem); font-weight:600; color:{{ section.settings.heading_color }}; text-align:center; margin-bottom:2rem;">
+        {{ section.settings.title }}
+      </h2>
+    {% endif %}
+
+    <div style="display:grid; grid-template-columns:repeat({{ section.settings.columns }},1fr); gap:1.5rem;">
+      {% for block in section.blocks %}
+        <div {{ block.shopify_attributes }}
+             style="display:flex; align-items:flex-start; gap:1rem; {% if section.settings.card_style == 'boxed' %}background:{{ section.settings.card_bg }}; border:1px solid {{ section.settings.border_color }}; border-radius:8px; padding:1.25rem;{% endif %}">
+          {% if block.settings.icon != blank %}
+            <div style="font-size:1.75rem; line-height:1; flex-shrink:0; color:{{ section.settings.icon_color }};">{{ block.settings.icon }}</div>
+          {% endif %}
+          <div>
+            {% if block.settings.title != blank %}
+              <p style="font-weight:700; font-size:0.875rem; color:{{ section.settings.heading_color }}; margin:0 0 0.3rem;">{{ block.settings.title }}</p>
+            {% endif %}
+            {% if block.settings.description != blank %}
+              <p style="font-size:0.8rem; color:{{ section.settings.text_color }}; line-height:1.6; margin:0;">{{ block.settings.description }}</p>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "6 — Información de Envío",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Título", "default": "Envío y entrega" },
+    { "type": "select", "id": "columns", "label": "Columnas", "options": [{"value":"1","label":"1"},{"value":"2","label":"2"},{"value":"3","label":"3"},{"value":"4","label":"4"}], "default": "3" },
+    { "type": "select", "id": "card_style", "label": "Estilo", "options": [{"value":"plain","label":"Sin caja"},{"value":"boxed","label":"Con caja / borde"}], "default": "plain" },
+    { "type": "range", "id": "py", "label": "Espacio vertical (px)", "min": 32, "max": 120, "step": 8, "default": 64 },
+    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#FFFFFF" },
+    { "type": "color", "id": "card_bg", "label": "Fondo tarjeta", "default": "#FAFAF6" },
+    { "type": "color", "id": "border_color", "label": "Color bordes", "default": "#E8E8E2" },
+    { "type": "color", "id": "icon_color", "label": "Color íconos", "default": "#5a7a40" },
+    { "type": "color", "id": "heading_color", "label": "Color títulos", "default": "#1a1a18" },
+    { "type": "color", "id": "text_color", "label": "Color texto", "default": "#6a6a62" }
+  ],
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item de envío",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Ícono o emoji", "default": "🚚" },
+        { "type": "text", "id": "title", "label": "Título", "default": "Envío gratis" },
+        { "type": "textarea", "id": "description", "label": "Descripción", "default": "En pedidos mayores a $50. Entrega en 3-5 días hábiles." }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "6 — Información de Envío",
+    "blocks": [
+      { "type": "item", "settings": { "icon": "🚚", "title": "Envío gratis", "description": "En pedidos mayores a $50. Entrega en 3-5 días hábiles." } },
+      { "type": "item", "settings": { "icon": "📦", "title": "Empaque seguro", "description": "Todos los productos van empacados con protección para llegar en perfectas condiciones." } },
+      { "type": "item", "settings": { "icon": "🔒", "title": "Rastreo en tiempo real", "description": "Recibirás un número de rastreo por correo para seguir tu pedido." } }
+    ]
+  }]
+}
+{% endschema %}

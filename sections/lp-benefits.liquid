@@ -1,0 +1,86 @@
+{% if section.blocks.size > 0 %}
+<section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0;">
+  <div style="max-width:1320px; margin:0 auto; padding:0 1.5rem;">
+
+    {% if section.settings.title != blank %}
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.75rem,3vw,2.75rem); font-weight:600; color:{{ section.settings.heading_color }}; text-align:{{ section.settings.title_align }}; margin-bottom:{% if section.settings.subtitle != blank %}0.75rem{% else %}2.5rem{% endif %};">
+        {{ section.settings.title }}
+      </h2>
+    {% endif %}
+
+    {% if section.settings.subtitle != blank %}
+      <p style="font-size:1rem; color:{{ section.settings.text_color }}; text-align:{{ section.settings.title_align }}; margin-bottom:2.5rem; max-width:60ch; {% if section.settings.title_align == 'center' %}margin-left:auto;margin-right:auto;{% endif %}">
+        {{ section.settings.subtitle }}
+      </p>
+    {% endif %}
+
+    <div style="display:grid; grid-template-columns:repeat({{ section.settings.columns }},1fr); gap:1.25rem;">
+      {% for block in section.blocks %}
+        <div {{ block.shopify_attributes }}
+             style="background:{{ section.settings.card_bg }}; border:1px solid {{ section.settings.card_border }}; border-radius:{{ section.settings.card_radius }}px; padding:{{ section.settings.card_padding }}px; text-align:{{ section.settings.card_align }};">
+          {% if block.settings.icon != blank %}
+            <div style="font-size:{{ section.settings.icon_size }}px; margin-bottom:0.85rem; line-height:1;">{{ block.settings.icon }}</div>
+          {% endif %}
+          {% if block.settings.title != blank %}
+            <h3 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:1.2rem; font-weight:600; color:{{ section.settings.heading_color }}; margin-bottom:0.5rem;">
+              {{ block.settings.title }}
+            </h3>
+          {% endif %}
+          {% if block.settings.description != blank %}
+            <p style="font-size:0.875rem; color:{{ section.settings.text_color }}; line-height:1.75;">
+              {{ block.settings.description }}
+            </p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "3 — Beneficios",
+  "settings": [
+    { "type": "header", "content": "Textos" },
+    { "type": "text", "id": "title", "label": "Título de la sección", "default": "¿Por qué este producto?" },
+    { "type": "text", "id": "subtitle", "label": "Subtítulo (opcional)" },
+    { "type": "select", "id": "title_align", "label": "Alineación del título", "options": [{"value":"left","label":"Izquierda"},{"value":"center","label":"Centro"}], "default": "center" },
+    { "type": "header", "content": "Cuadrícula" },
+    { "type": "select", "id": "columns", "label": "Columnas", "options": [{"value":"1","label":"1"},{"value":"2","label":"2"},{"value":"3","label":"3"},{"value":"4","label":"4"}], "default": "3" },
+    { "type": "header", "content": "Tarjetas" },
+    { "type": "select", "id": "card_align", "label": "Alineación en tarjeta", "options": [{"value":"left","label":"Izquierda"},{"value":"center","label":"Centro"}], "default": "center" },
+    { "type": "range", "id": "card_padding", "label": "Espacio interior tarjeta (px)", "min": 16, "max": 60, "step": 4, "default": 32 },
+    { "type": "range", "id": "card_radius", "label": "Bordes redondeados (px)", "min": 0, "max": 24, "step": 2, "default": 4 },
+    { "type": "range", "id": "icon_size", "label": "Tamaño del ícono (px)", "min": 20, "max": 80, "step": 4, "default": 40 },
+    { "type": "header", "content": "Espaciado y colores" },
+    { "type": "range", "id": "py", "label": "Espacio vertical sección (px)", "min": 40, "max": 140, "step": 8, "default": 80 },
+    { "type": "color", "id": "bg_color", "label": "Fondo sección", "default": "#FAFAF6" },
+    { "type": "color", "id": "card_bg", "label": "Fondo tarjeta", "default": "#FFFFFF" },
+    { "type": "color", "id": "card_border", "label": "Borde tarjeta", "default": "#E8E8E2" },
+    { "type": "color", "id": "heading_color", "label": "Color títulos", "default": "#1a1a18" },
+    { "type": "color", "id": "text_color", "label": "Color texto", "default": "#5a5a52" }
+  ],
+  "max_blocks": 8,
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Beneficio",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Ícono o emoji", "default": "✓" },
+        { "type": "text", "id": "title", "label": "Título del beneficio", "default": "Alta calidad" },
+        { "type": "textarea", "id": "description", "label": "Descripción", "default": "Describe aquí la ventaja principal de este producto." }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "3 — Beneficios",
+    "blocks": [
+      { "type": "benefit", "settings": { "icon": "✓", "title": "Alta calidad", "description": "Elaborado con los mejores materiales disponibles." } },
+      { "type": "benefit", "settings": { "icon": "⚡", "title": "Resultados rápidos", "description": "Notarás la diferencia desde el primer uso." } },
+      { "type": "benefit", "settings": { "icon": "🛡️", "title": "Garantía total", "description": "Si no estás satisfecho, te devolvemos tu dinero." } }
+    ]
+  }]
+}
+{% endschema %}

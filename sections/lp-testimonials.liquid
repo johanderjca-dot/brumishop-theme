@@ -1,0 +1,134 @@
+{% if section.blocks.size > 0 %}
+<section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0; border-top:2px solid {{ section.settings.accent_color }};">
+  <div style="max-width:1320px; margin:0 auto; padding:0 1.5rem;">
+
+    <!-- Header -->
+    <div style="text-align:center; margin-bottom:3rem;">
+      {% if section.settings.badge_text != blank %}
+        <div style="display:inline-flex; align-items:center; gap:0.4rem; background:{{ section.settings.accent_color }}; color:#fff; font-size:0.65rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; padding:0.35rem 0.85rem; border-radius:50px; margin-bottom:1rem;">
+          {{ section.settings.badge_text }}
+        </div>
+      {% endif %}
+      {% if section.settings.title != blank %}
+        <h2 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.75rem,3vw,2.75rem); font-weight:600; color:{{ section.settings.heading_color }}; margin-bottom:0.5rem;">
+          {{ section.settings.title }}
+        </h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <p style="font-size:0.9rem; color:{{ section.settings.text_color }}; max-width:56ch; margin:0 auto;">
+          {{ section.settings.subtitle }}
+        </p>
+      {% endif %}
+    </div>
+
+    <!-- Testimonials grid -->
+    <div style="display:grid; grid-template-columns:repeat({{ section.settings.columns }},1fr); gap:1.5rem;">
+      {% for block in section.blocks %}
+        <div {{ block.shopify_attributes }}
+             style="background:{{ section.settings.card_bg }}; border:1px solid {{ section.settings.card_border }}; border-radius:{{ section.settings.card_radius }}px; padding:1.75rem; position:relative;">
+
+          <!-- Verified badge -->
+          {% if block.settings.verified %}
+            <div style="position:absolute; top:1.25rem; right:1.25rem; background:#EEF0E7; color:{{ section.settings.accent_color }}; font-size:0.6rem; font-weight:700; padding:0.2rem 0.55rem; border-radius:50px; letter-spacing:0.1em; text-transform:uppercase;">
+              ✓ Verificado
+            </div>
+          {% endif %}
+
+          <!-- Stars -->
+          <div style="color:{{ section.settings.star_color }}; font-size:1rem; margin-bottom:1rem; letter-spacing:0.08em;">
+            {% assign stars = block.settings.rating %}
+            {% for i in (1..5) %}{% if i <= stars %}★{% else %}☆{% endif %}{% endfor %}
+          </div>
+
+          <!-- Quote -->
+          {% if block.settings.testimonial != blank %}
+            <p style="font-size:0.925rem; color:{{ section.settings.text_color }}; line-height:1.75; margin-bottom:1.5rem; font-style:italic;">
+              "{{ block.settings.testimonial }}"
+            </p>
+          {% endif %}
+
+          <!-- Person -->
+          <div style="display:flex; align-items:center; gap:0.85rem;">
+            {% if block.settings.photo != blank %}
+              <img src="{{ block.settings.photo | image_url: width: 100 }}" alt="{{ block.settings.name }}"
+                   style="width:44px; height:44px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+            {% else %}
+              <div style="width:44px; height:44px; border-radius:50%; background:{{ section.settings.card_border }}; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-weight:700; color:{{ section.settings.heading_color }}; font-size:1rem;">
+                {{ block.settings.name | slice: 0 | upcase }}
+              </div>
+            {% endif %}
+            <div>
+              <p style="font-size:0.8rem; font-weight:700; color:{{ section.settings.heading_color }}; margin:0;">{{ block.settings.name }}</p>
+              {% if block.settings.title_role != blank %}
+                <p style="font-size:0.72rem; color:#a0a09a; margin:0.1rem 0 0;">{{ block.settings.title_role }}</p>
+              {% endif %}
+              {% if block.settings.date != blank %}
+                <p style="font-size:0.7rem; color:#c0c0ba; margin:0.1rem 0 0;">{{ block.settings.date }}</p>
+              {% endif %}
+            </div>
+          </div>
+
+          <!-- Product image (optional) -->
+          {% if block.settings.product_photo != blank %}
+            <div style="margin-top:1.25rem; padding-top:1.25rem; border-top:1px solid {{ section.settings.card_border }};">
+              <img src="{{ block.settings.product_photo | image_url: width: 200 }}" alt="Foto del producto del cliente"
+                   style="width:72px; height:72px; object-fit:cover; border-radius:4px; display:block;">
+            </div>
+          {% endif %}
+
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "12 — Testimonios Verificados",
+  "settings": [
+    { "type": "header", "content": "Encabezado" },
+    { "type": "text", "id": "badge_text", "label": "Badge sobre el título", "default": "✓ Testimonios reales de clientes" },
+    { "type": "text", "id": "title", "label": "Título", "default": "Esto dicen quienes ya lo tienen" },
+    { "type": "text", "id": "subtitle", "label": "Subtítulo" },
+    { "type": "header", "content": "Cuadrícula" },
+    { "type": "select", "id": "columns", "label": "Columnas", "options": [{"value":"1","label":"1"},{"value":"2","label":"2"},{"value":"3","label":"3"}], "default": "3" },
+    { "type": "range", "id": "card_radius", "label": "Bordes redondeados tarjeta (px)", "min": 0, "max": 24, "step": 2, "default": 10 },
+    { "type": "header", "content": "Colores" },
+    { "type": "color", "id": "bg_color", "label": "Fondo sección", "default": "#F8F7F3" },
+    { "type": "color", "id": "card_bg", "label": "Fondo tarjeta", "default": "#FFFFFF" },
+    { "type": "color", "id": "card_border", "label": "Borde tarjeta", "default": "#E8E8E2" },
+    { "type": "color", "id": "accent_color", "label": "Color acento (borde superior + badge)", "default": "#5a7a40" },
+    { "type": "color", "id": "star_color", "label": "Color estrellas", "default": "#F4A327" },
+    { "type": "color", "id": "heading_color", "label": "Color nombres", "default": "#1a1a18" },
+    { "type": "color", "id": "text_color", "label": "Color texto", "default": "#5a5a52" },
+    { "type": "range", "id": "py", "label": "Espacio vertical (px)", "min": 48, "max": 140, "step": 8, "default": 80 }
+  ],
+  "max_blocks": 12,
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonio",
+      "settings": [
+        { "type": "range", "id": "rating", "label": "Estrellas", "min": 1, "max": 5, "step": 1, "default": 5 },
+        { "type": "textarea", "id": "testimonial", "label": "Testimonio", "default": "Este producto cambió mi rutina por completo. Lo recomiendo a cualquiera que quiera ver resultados reales." },
+        { "type": "text", "id": "name", "label": "Nombre completo", "default": "María García" },
+        { "type": "text", "id": "title_role", "label": "Ciudad o cargo (opcional)", "default": "Santo Domingo, RD" },
+        { "type": "text", "id": "date", "label": "Fecha de la reseña (opcional)", "default": "Mayo 2025" },
+        { "type": "image_picker", "id": "photo", "label": "Foto de perfil del cliente" },
+        { "type": "image_picker", "id": "product_photo", "label": "Foto del producto en uso (opcional)" },
+        { "type": "checkbox", "id": "verified", "label": "Mostrar 'Verificado'", "default": true }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "12 — Testimonios Verificados",
+    "blocks": [
+      { "type": "testimonial", "settings": { "rating": 5, "testimonial": "Llevaba meses buscando algo que realmente funcionara. Este producto superó mis expectativas desde el primer día.", "name": "Laura Méndez", "title_role": "Cliente frecuente", "date": "Junio 2025", "verified": true } },
+      { "type": "testimonial", "settings": { "rating": 5, "testimonial": "Excelente calidad y llega rápido. Ya es la tercera vez que lo compro. No volvería a buscar otra marca.", "name": "Roberto Díaz", "title_role": "Santiago, RD", "date": "Mayo 2025", "verified": true } },
+      { "type": "testimonial", "settings": { "rating": 5, "testimonial": "Me lo recomendó una amiga y la verdad superó todo lo que esperaba. Definitivamente lo recomiendo.", "name": "Camila Torres", "title_role": "La Romana, RD", "date": "Abril 2025", "verified": true } }
+    ]
+  }]
+}
+{% endschema %}

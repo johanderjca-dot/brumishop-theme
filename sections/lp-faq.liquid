@@ -1,0 +1,82 @@
+<style>
+  .lp-faq details { border-bottom: 1px solid var(--faq-border); }
+  .lp-faq details:first-of-type { border-top: 1px solid var(--faq-border); }
+  .lp-faq summary { cursor: pointer; list-style: none; padding: 1.1rem 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .lp-faq summary::-webkit-details-marker { display: none; }
+  .lp-faq-arrow { transition: transform .22s ease; display: inline-block; flex-shrink: 0; }
+  .lp-faq details[open] .lp-faq-arrow { transform: rotate(45deg); }
+  .lp-faq-body { padding: 0 0 1.1rem; }
+  .lp-faq-body p { margin-bottom: 0.6rem; line-height: 1.75; }
+</style>
+
+{% if section.blocks.size > 0 %}
+<section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0;">
+  <div style="max-width:{{ section.settings.max_width }}px; margin:0 auto; padding:0 1.5rem;">
+
+    {% if section.settings.title != blank %}
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.75rem,3vw,2.75rem); font-weight:600; color:{{ section.settings.heading_color }}; text-align:{{ section.settings.title_align }}; margin-bottom:{% if section.settings.subtitle != blank %}0.6rem{% else %}2rem{% endif %};">
+        {{ section.settings.title }}
+      </h2>
+    {% endif %}
+    {% if section.settings.subtitle != blank %}
+      <p style="font-size:0.9rem; color:{{ section.settings.text_color }}; text-align:{{ section.settings.title_align }}; margin-bottom:2rem; max-width:60ch; {% if section.settings.title_align == 'center' %}margin-left:auto;margin-right:auto;{% endif %}">
+        {{ section.settings.subtitle }}
+      </p>
+    {% endif %}
+
+    <div class="lp-faq" style="--faq-border:{{ section.settings.border_color }};">
+      {% for block in section.blocks %}
+        <details {{ block.shopify_attributes }}>
+          <summary>
+            <span style="font-size:0.9rem; font-weight:600; color:{{ section.settings.heading_color }};">
+              {{ block.settings.question }}
+            </span>
+            <span class="lp-faq-arrow" style="font-size:1.1rem; color:{{ section.settings.text_color }};">+</span>
+          </summary>
+          <div class="lp-faq-body" style="font-size:0.875rem; color:{{ section.settings.text_color }};">
+            {{ block.settings.answer }}
+          </div>
+        </details>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "11 — Preguntas Frecuentes",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Título", "default": "Preguntas frecuentes" },
+    { "type": "text", "id": "subtitle", "label": "Subtítulo (opcional)" },
+    { "type": "select", "id": "title_align", "label": "Alineación título", "options": [{"value":"left","label":"Izquierda"},{"value":"center","label":"Centro"}], "default": "left" },
+    { "type": "range", "id": "max_width", "label": "Ancho máximo (px)", "min": 500, "max": 1100, "step": 20, "default": 780 },
+    { "type": "range", "id": "py", "label": "Espacio vertical (px)", "min": 40, "max": 140, "step": 8, "default": 80 },
+    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#FFFFFF" },
+    { "type": "color", "id": "border_color", "label": "Color separadores", "default": "#E8E8E2" },
+    { "type": "color", "id": "heading_color", "label": "Color preguntas", "default": "#1a1a18" },
+    { "type": "color", "id": "text_color", "label": "Color respuestas", "default": "#5a5a52" }
+  ],
+  "max_blocks": 16,
+  "blocks": [
+    {
+      "type": "question",
+      "name": "Pregunta",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Pregunta", "default": "¿Cuánto tarda en llegar mi pedido?" },
+        { "type": "richtext", "id": "answer", "label": "Respuesta", "default": "<p>Los pedidos se procesan en 1-2 días hábiles. El tiempo de entrega es de 3-5 días hábiles dependiendo de tu ubicación.</p>" }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "11 — Preguntas Frecuentes",
+    "blocks": [
+      { "type": "question", "settings": { "question": "¿Cuánto tarda en llegar mi pedido?", "answer": "<p>Los pedidos se procesan en 1-2 días hábiles. El tiempo de entrega es de 3-5 días hábiles dependiendo de tu ubicación.</p>" } },
+      { "type": "question", "settings": { "question": "¿Puedo devolver el producto si no me gusta?", "answer": "<p>Sí, aceptamos devoluciones dentro de los 30 días posteriores a la compra. El producto debe estar en su estado original.</p>" } },
+      { "type": "question", "settings": { "question": "¿El pago es seguro?", "answer": "<p>Totalmente. Utilizamos encriptación SSL y los métodos de pago más seguros del mercado. Tus datos nunca son compartidos.</p>" } },
+      { "type": "question", "settings": { "question": "¿Tienen alguna garantía?", "answer": "<p>Sí, ofrecemos garantía de satisfacción. Si el producto no cumple tus expectativas, te hacemos un reembolso completo sin preguntas.</p>" } }
+    ]
+  }]
+}
+{% endschema %}

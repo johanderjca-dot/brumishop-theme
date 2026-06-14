@@ -1,0 +1,116 @@
+{% assign cv = product.selected_or_first_available_variant %}
+
+<section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0;">
+  <div style="text-align:{{ section.settings.align }}; max-width:1320px; margin:0 auto; padding:0 1.5rem;">
+
+    {% if section.settings.heading != blank %}
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.75rem,3vw,2.75rem); font-weight:600; color:{{ section.settings.heading_color }}; margin-bottom:0.75rem;">
+        {{ section.settings.heading }}
+      </h2>
+    {% endif %}
+    {% if section.settings.subheading != blank %}
+      <p style="font-size:1rem; color:{{ section.settings.text_color }}; margin-bottom:1.75rem; max-width:56ch; {% if section.settings.align == 'center' %}margin-left:auto;margin-right:auto;{% endif %}">
+        {{ section.settings.subheading }}
+      </p>
+    {% endif %}
+
+    <!-- Button -->
+    {% if section.settings.action == 'cart' %}
+      {% form 'product', product, class: 'lp-buy-btn-form' %}
+        <input type="hidden" name="id" class="brumi-variant-id" data-brumi-variant value="{{ cv.id }}">
+        <input type="hidden" name="quantity" value="1">
+        <button type="submit" name="add"
+                style="
+                  background: {{ section.settings.btn_bg }};
+                  color: {{ section.settings.btn_color }};
+                  font-size: {{ section.settings.btn_font_size }}px;
+                  font-weight: {{ section.settings.btn_font_weight }};
+                  letter-spacing: {{ section.settings.btn_tracking }}em;
+                  padding: {{ section.settings.btn_py }}px {{ section.settings.btn_px }}px;
+                  border: {{ section.settings.btn_border_width }}px solid {{ section.settings.btn_border_color }};
+                  border-radius: {{ section.settings.btn_radius }}px;
+                  cursor: pointer;
+                  {% if section.settings.btn_width == 'full' %}width:100%;{% elsif section.settings.btn_width == 'auto' %}display:inline-block;{% else %}width:{{ section.settings.btn_custom_width }}px;{% endif %}
+                  {% if section.settings.btn_shadow %}box-shadow:0 4px 20px rgba(0,0,0,0.15);{% endif %}
+                  text-transform: {{ section.settings.btn_transform }};
+                  transition: transform 160ms cubic-bezier(0.23,1,0.32,1), opacity .15s;
+                "
+                onmouseover="this.style.opacity='0.88'"
+                onmouseout="this.style.opacity='1'"
+                onmousedown="this.style.transform='scale(0.97)'"
+                onmouseup="this.style.transform='scale(1)'"
+                {% unless cv.available %}disabled{% endunless %}>
+          {% if cv.available %}{{ section.settings.btn_text }}{% else %}Agotado{% endif %}
+        </button>
+      {% endform %}
+    {% else %}
+      <!-- Direct checkout -->
+      <a href="/cart/{{ cv.id }}:1" style="
+          display: inline-block;
+          background: {{ section.settings.btn_bg }};
+          color: {{ section.settings.btn_color }};
+          font-size: {{ section.settings.btn_font_size }}px;
+          font-weight: {{ section.settings.btn_font_weight }};
+          letter-spacing: {{ section.settings.btn_tracking }}em;
+          padding: {{ section.settings.btn_py }}px {{ section.settings.btn_px }}px;
+          border: {{ section.settings.btn_border_width }}px solid {{ section.settings.btn_border_color }};
+          border-radius: {{ section.settings.btn_radius }}px;
+          text-decoration: none;
+          {% if section.settings.btn_width == 'full' %}width:100%;text-align:center;{% endif %}
+          {% if section.settings.btn_shadow %}box-shadow:0 4px 20px rgba(0,0,0,0.15);{% endif %}
+          text-transform: {{ section.settings.btn_transform }};
+          transition: transform 160ms cubic-bezier(0.23,1,0.32,1), opacity .15s;
+        "
+        onmouseover="this.style.opacity='0.88'"
+        onmouseout="this.style.opacity='1'"
+        onmousedown="this.style.transform='scale(0.97)'"
+        onmouseup="this.style.transform='scale(1)'">
+        {{ section.settings.btn_text }}
+      </a>
+    {% endif %}
+
+    {% if section.settings.btn_subtext != blank %}
+      <p style="margin-top:0.85rem; font-size:0.78rem; color:{{ section.settings.text_color }};">{{ section.settings.btn_subtext }}</p>
+    {% endif %}
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "8 — Botón Comprar Ahora",
+  "settings": [
+    { "type": "header", "content": "Textos de la sección" },
+    { "type": "text", "id": "heading", "label": "Título sobre el botón (opcional)" },
+    { "type": "text", "id": "subheading", "label": "Subtítulo (opcional)" },
+    { "type": "text", "id": "btn_subtext", "label": "Texto bajo el botón", "default": "✓ Pago seguro  ·  ✓ Envío gratis  ·  ✓ Devolución 30 días" },
+    { "type": "header", "content": "Acción del botón" },
+    { "type": "select", "id": "action", "label": "¿Qué hace el botón?", "options": [{"value":"cart","label":"Agregar al carrito"},{"value":"checkout","label":"Ir directo al checkout (Pagar ahora)"}], "default": "checkout" },
+    { "type": "header", "content": "Texto del botón" },
+    { "type": "text", "id": "btn_text", "label": "Texto del botón", "default": "Comprar ahora" },
+    { "type": "select", "id": "btn_transform", "label": "Estilo de texto", "options": [{"value":"none","label":"Normal"},{"value":"uppercase","label":"TODO EN MAYÚSCULAS"},{"value":"capitalize","label":"Primera Letra Mayúscula"}], "default": "none" },
+    { "type": "range", "id": "btn_font_size", "label": "Tamaño de letra (px)", "min": 12, "max": 28, "step": 1, "default": 16 },
+    { "type": "select", "id": "btn_font_weight", "label": "Grosor de letra", "options": [{"value":"400","label":"Normal"},{"value":"600","label":"Semi-negrita"},{"value":"700","label":"Negrita"},{"value":"800","label":"Extra negrita"}], "default": "700" },
+    { "type": "range", "id": "btn_tracking", "label": "Espaciado entre letras (em × 0.01)", "min": 0, "max": 30, "step": 1, "default": 3, "info": "0 = sin espaciado, 5 = ligero, 15 = amplio" },
+    { "type": "header", "content": "Tamaño y forma del botón" },
+    { "type": "select", "id": "btn_width", "label": "Ancho del botón", "options": [{"value":"auto","label":"Automático (según contenido)"},{"value":"full","label":"Ancho completo"},{"value":"custom","label":"Personalizado (px)"}], "default": "custom" },
+    { "type": "range", "id": "btn_custom_width", "label": "Ancho personalizado (px)", "min": 160, "max": 800, "step": 10, "default": 360 },
+    { "type": "range", "id": "btn_py", "label": "Espacio vertical interior (px)", "min": 8, "max": 40, "step": 2, "default": 20 },
+    { "type": "range", "id": "btn_px", "label": "Espacio horizontal interior (px)", "min": 16, "max": 80, "step": 4, "default": 48 },
+    { "type": "range", "id": "btn_radius", "label": "Bordes redondeados (px)", "min": 0, "max": 60, "step": 2, "default": 6 },
+    { "type": "header", "content": "Colores del botón" },
+    { "type": "color", "id": "btn_bg", "label": "Color de fondo", "default": "#1a1a18" },
+    { "type": "color", "id": "btn_color", "label": "Color de texto", "default": "#FFFFFF" },
+    { "type": "range", "id": "btn_border_width", "label": "Grosor del borde (px)", "min": 0, "max": 4, "step": 1, "default": 0 },
+    { "type": "color", "id": "btn_border_color", "label": "Color del borde", "default": "#1a1a18" },
+    { "type": "checkbox", "id": "btn_shadow", "label": "Sombra en el botón", "default": false },
+    { "type": "header", "content": "Sección" },
+    { "type": "select", "id": "align", "label": "Alineación", "options": [{"value":"left","label":"Izquierda"},{"value":"center","label":"Centro"},{"value":"right","label":"Derecha"}], "default": "center" },
+    { "type": "range", "id": "py", "label": "Espacio vertical (px)", "min": 32, "max": 120, "step": 8, "default": 64 },
+    { "type": "color", "id": "bg_color", "label": "Fondo de la sección", "default": "#FFFFFF" },
+    { "type": "color", "id": "heading_color", "label": "Color título sección", "default": "#1a1a18" },
+    { "type": "color", "id": "text_color", "label": "Color subtextos", "default": "#a0a09a" }
+  ],
+  "presets": [{ "name": "8 — Botón Comprar Ahora" }]
+}
+{% endschema %}

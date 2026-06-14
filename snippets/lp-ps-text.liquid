@@ -1,0 +1,43 @@
+{% if block.settings.problem_label != blank %}
+  <span style="font-size:0.65rem; font-weight:700; letter-spacing:0.2em; color:{{ section.settings.problem_color }}; text-transform:uppercase;">
+    {{ block.settings.problem_label }}
+  </span>
+{% endif %}
+{% if block.settings.problem_title != blank %}
+  <h3 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.5rem,2.5vw,2.25rem); font-weight:600; color:{{ section.settings.heading_color }}; margin:0.5rem 0 0.75rem; line-height:1.2;">
+    {{ block.settings.problem_title }}
+  </h3>
+{% endif %}
+{% if block.settings.problem_text != blank %}
+  <p style="font-size:0.9rem; color:{{ section.settings.text_color }}; line-height:1.8; margin-bottom:1.5rem;">
+    {{ block.settings.problem_text }}
+  </p>
+{% endif %}
+
+{% if block.settings.solution_label != blank %}
+  <span style="font-size:0.65rem; font-weight:700; letter-spacing:0.2em; color:{{ section.settings.solution_color }}; text-transform:uppercase;">
+    {{ block.settings.solution_label }}
+  </span>
+{% endif %}
+{% if block.settings.solution_title != blank %}
+  <h3 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.5rem,2.5vw,2.25rem); font-weight:600; color:{{ section.settings.heading_color }}; margin:0.5rem 0 0.75rem; line-height:1.2;">
+    {{ block.settings.solution_title }}
+  </h3>
+{% endif %}
+{% if block.settings.solution_text != blank %}
+  <p style="font-size:0.9rem; color:{{ section.settings.text_color }}; line-height:1.8; margin-bottom:1.75rem;">
+    {{ block.settings.solution_text }}
+  </p>
+{% endif %}
+
+{% if block.settings.show_btn %}
+  {% form 'product', product, class: 'lp-buy-btn-form' %}
+    <input type="hidden" name="id" class="brumi-variant-id" data-brumi-variant value="{{ cv.id }}">
+    <input type="hidden" name="quantity" value="1">
+    <button type="submit" name="add"
+            class="lp-ps-btn"
+            style="background:{{ block.settings.btn_bg }}; color:{{ block.settings.btn_color }}; font-size:0.875rem; font-weight:700; padding:0.85rem 2rem; border:none; border-radius:{{ block.settings.btn_radius }}px; cursor:pointer; letter-spacing:0.04em;">
+      {{ block.settings.btn_text }}
+    </button>
+  {% endform %}
+{% endif %}

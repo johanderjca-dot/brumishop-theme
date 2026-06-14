@@ -1,0 +1,110 @@
+{% if section.blocks.size > 0 %}
+<section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0;">
+  <div style="max-width:1320px; margin:0 auto; padding:0 1.5rem;">
+
+    {% if section.settings.title != blank %}
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.75rem,3vw,2.75rem); font-weight:600; color:{{ section.settings.heading_color }}; text-align:{{ section.settings.title_align }}; margin-bottom:0.5rem;">
+        {{ section.settings.title }}
+      </h2>
+    {% endif %}
+    {% if section.settings.subtitle != blank %}
+      <p style="text-align:{{ section.settings.title_align }}; color:{{ section.settings.text_color }}; font-size:0.9rem; margin-bottom:2.25rem;">
+        {{ section.settings.subtitle }}
+      </p>
+    {% endif %}
+
+    <div style="display:grid; grid-template-columns:repeat({{ section.settings.columns }},1fr); gap:1.25rem;">
+      {% for block in section.blocks %}
+        <div {{ block.shopify_attributes }}
+             style="background:{{ section.settings.card_bg }}; border:1px solid {{ section.settings.card_border }}; border-radius:{{ section.settings.card_radius }}px; padding:1.75rem;">
+
+          <!-- Stars -->
+          <div style="color:{{ section.settings.star_color }}; font-size:1.1rem; margin-bottom:0.85rem; letter-spacing:0.05em;">
+            {% assign rating = block.settings.rating %}
+            {% for i in (1..5) %}{% if i <= rating %}★{% else %}☆{% endif %}{% endfor %}
+          </div>
+
+          <!-- Review text -->
+          {% if block.settings.review_text != blank %}
+            <p style="font-size:0.9rem; color:{{ section.settings.text_color }}; line-height:1.75; margin-bottom:1.25rem;">
+              "{{ block.settings.review_text }}"
+            </p>
+          {% endif %}
+
+          <!-- Reviewer info -->
+          <div style="display:flex; align-items:center; gap:0.75rem;">
+            {% if block.settings.avatar != blank %}
+              <img src="{{ block.settings.avatar | image_url: width: 80 }}" alt="{{ block.settings.name }}"
+                   style="width:42px; height:42px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+            {% else %}
+              <div style="width:42px; height:42px; border-radius:50%; background:{{ section.settings.card_border }}; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:1rem; color:{{ section.settings.heading_color }}; font-weight:700;">
+                {{ block.settings.name | slice: 0 | upcase }}
+              </div>
+            {% endif %}
+            <div>
+              <p style="font-size:0.8rem; font-weight:700; color:{{ section.settings.heading_color }}; margin:0;">{{ block.settings.name }}</p>
+              {% if block.settings.location != blank %}
+                <p style="font-size:0.72rem; color:#a0a09a; margin:0.1rem 0 0;">{{ block.settings.location }}</p>
+              {% endif %}
+            </div>
+            {% if block.settings.verified %}
+              <div style="margin-left:auto; background:#EEF0E7; color:#5a7a40; font-size:0.65rem; font-weight:700; padding:0.25rem 0.6rem; border-radius:50px; letter-spacing:0.08em; text-transform:uppercase; white-space:nowrap;">
+                ✓ Verificado
+              </div>
+            {% endif %}
+          </div>
+
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "5 — Reseñas",
+  "settings": [
+    { "type": "header", "content": "Encabezado" },
+    { "type": "text", "id": "title", "label": "Título", "default": "Lo que dicen nuestros clientes" },
+    { "type": "text", "id": "subtitle", "label": "Subtítulo" },
+    { "type": "select", "id": "title_align", "label": "Alineación del título", "options": [{"value":"left","label":"Izquierda"},{"value":"center","label":"Centro"}], "default": "center" },
+    { "type": "header", "content": "Cuadrícula" },
+    { "type": "select", "id": "columns", "label": "Columnas", "options": [{"value":"1","label":"1"},{"value":"2","label":"2"},{"value":"3","label":"3"}], "default": "3" },
+    { "type": "header", "content": "Diseño de tarjeta" },
+    { "type": "range", "id": "card_radius", "label": "Bordes redondeados (px)", "min": 0, "max": 24, "step": 2, "default": 8 },
+    { "type": "header", "content": "Colores" },
+    { "type": "color", "id": "bg_color", "label": "Fondo sección", "default": "#FFFFFF" },
+    { "type": "color", "id": "card_bg", "label": "Fondo tarjeta", "default": "#FAFAF6" },
+    { "type": "color", "id": "card_border", "label": "Borde tarjeta", "default": "#E8E8E2" },
+    { "type": "color", "id": "star_color", "label": "Color estrellas", "default": "#F4A327" },
+    { "type": "color", "id": "heading_color", "label": "Color nombre", "default": "#1a1a18" },
+    { "type": "color", "id": "text_color", "label": "Color texto reseña", "default": "#5a5a52" },
+    { "type": "range", "id": "py", "label": "Espacio vertical (px)", "min": 40, "max": 140, "step": 8, "default": 80 }
+  ],
+  "max_blocks": 12,
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Reseña",
+      "settings": [
+        { "type": "range", "id": "rating", "label": "Puntuación (estrellas)", "min": 1, "max": 5, "step": 1, "default": 5 },
+        { "type": "textarea", "id": "review_text", "label": "Texto de la reseña", "default": "Increíble producto, superó todas mis expectativas. Lo recomiendo al 100%." },
+        { "type": "text", "id": "name", "label": "Nombre del cliente", "default": "María G." },
+        { "type": "text", "id": "location", "label": "Ciudad / País (opcional)", "default": "Santo Domingo, RD" },
+        { "type": "image_picker", "id": "avatar", "label": "Foto de perfil (opcional)" },
+        { "type": "checkbox", "id": "verified", "label": "Mostrar badge 'Compra Verificada'", "default": true }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "5 — Reseñas",
+    "blocks": [
+      { "type": "review", "settings": { "rating": 5, "review_text": "Excelente calidad. Llegó rápido y el producto es exactamente como se describe. ¡Lo compraré de nuevo!", "name": "Ana M.", "location": "Santo Domingo, RD", "verified": true } },
+      { "type": "review", "settings": { "rating": 5, "review_text": "Muy satisfecha con la compra. Funciona perfecto y el precio es excelente.", "name": "Carlos R.", "location": "Santiago, RD", "verified": true } },
+      { "type": "review", "settings": { "rating": 4, "review_text": "Muy buena calidad, lo recomiendo. El envío fue rápido.", "name": "Laura P.", "location": "La Romana, RD", "verified": false } }
+    ]
+  }]
+}
+{% endschema %}

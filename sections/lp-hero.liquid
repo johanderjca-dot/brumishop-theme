@@ -1,0 +1,30 @@
+{% assign hero_img = section.settings.custom_image | default: product.featured_image %}
+
+<section style="background:{{ section.settings.bg_color }};">
+  <div {% unless section.settings.full_width %}style="max-width:1320px;margin:0 auto;padding:{{ section.settings.padding }}px 1.5rem;"{% endunless %}>
+    {% if hero_img != blank %}
+      <img src="{{ hero_img | image_url: width: 2000 }}"
+           alt="{{ product.title | escape }}"
+           style="width:100%; max-height:{{ section.settings.max_height }}px; object-fit:{{ section.settings.fit }}; display:block;">
+    {% else %}
+      <div style="background:#E8E8E2; height:{{ section.settings.max_height }}px; display:flex; align-items:center; justify-content:center;">
+        <p style="color:#a0a09a; font-size:0.875rem;">Sube una imagen en el editor → Imagen personalizada</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "1 — Foto Hero",
+  "settings": [
+    { "type": "image_picker", "id": "custom_image", "label": "Imagen personalizada (si no, usa la foto del producto)" },
+    { "type": "checkbox", "id": "full_width", "label": "Ancho completo (sin márgenes)", "default": true },
+    { "type": "range", "id": "max_height", "label": "Altura máxima (px)", "min": 300, "max": 900, "step": 20, "default": 680 },
+    { "type": "select", "id": "fit", "label": "Ajuste de imagen", "options": [{"value":"cover","label":"Recortar (llenar espacio)"},{"value":"contain","label":"Completa (sin recorte)"}], "default": "cover" },
+    { "type": "color", "id": "bg_color", "label": "Color de fondo", "default": "#F8F7F3" },
+    { "type": "range", "id": "padding", "label": "Espacio interior si no es ancho completo (px)", "min": 0, "max": 60, "step": 4, "default": 0 }
+  ],
+  "presets": [{ "name": "1 — Foto Hero" }]
+}
+{% endschema %}
