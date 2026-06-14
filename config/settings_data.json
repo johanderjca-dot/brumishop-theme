@@ -11,13 +11,29 @@
   "current": {
     "color_accent": "#5a7a40",
     "color_announcement_bg": "#F2EBC4",
-    "content_for_index": [],
-    "blocks": {
-      "13669795325273674392": {
-        "type": "shopify://apps/releasit-cod-form/blocks/app-embed/72faf214-4174-4fec-886b-0d0e8d3af9a2",
-        "disabled": false,
-        "settings": {}
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "text": "ENVÍO GRATIS EN PEDIDOS MAYORES A $50  ·  NUEVOS PRODUCTOS CADA SEMANA",
+          "bg_color": "#f2ebc4"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify://shop_images/LOGO_FINAL.svg",
+          "logo_height": 64,
+          "menu": "main-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "tagline": "Tu tienda de confianza. Productos de calidad para el día a día."
+        }
       }
-    }
+    },
+    "content_for_index": []
   }
 }

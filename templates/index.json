@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero-slider": {
@@ -6,62 +15,133 @@
         "slide-1": {
           "type": "slide",
           "settings": {
+            "bg_color": "#f8f7f2",
+            "image": "shopify://shop_images/LOGO_FINAL.svg",
             "title": "Todo lo que Necesitas, Aquí",
             "subtitle": "Productos seleccionados con calidad garantizada. Encuentra exactamente lo que buscas.",
-            "price_text": "Desde $9.99",
+            "price_text": "Desde 1499DOP",
             "button_label": "Comprar Ahora",
-            "bg_color": "#F8F7F2"
+            "button_url": ""
           }
         },
         "slide-2": {
           "type": "slide",
           "settings": {
+            "bg_color": "#eef0e7",
             "title": "Nuevas Llegadas",
             "subtitle": "Agregamos nuevos productos cada semana. Sé el primero en descurir lo último.",
             "price_text": "Ver novedades",
             "button_label": "Ver Colección",
-            "bg_color": "#EEF0E7"
+            "button_url": ""
           }
         },
         "slide-3": {
           "type": "slide",
           "settings": {
+            "bg_color": "#f4ede4",
             "title": "Hasta 40% de Descuento",
             "subtitle": "Ofertas limitadas en cientos de productos. Aprovecha antes de que se agoten.",
             "price_text": "Desde $4.99",
             "button_label": "Ver Ofertas",
-            "bg_color": "#F4EDE4"
+            "button_url": ""
           }
         }
       },
-      "block_order": ["slide-1", "slide-2", "slide-3"],
+      "block_order": [
+        "slide-1",
+        "slide-2",
+        "slide-3"
+      ],
       "settings": {}
     },
     "category-cards": {
       "type": "category-cards",
       "blocks": {
-        "card-1": { "type": "card", "settings": { "title": "Nuevas Llegadas", "subtitle": "Recién agregados", "button_label": "Comprar Ahora", "bg_color": "#FFFFFF" } },
-        "card-2": { "type": "card", "settings": { "title": "¿Qué Hay de Nuevo?", "subtitle": "Descúbrelo primero", "button_label": "Explorar", "bg_color": "#EEF0E7" } },
-        "card-3": { "type": "card", "settings": { "title": "Lleva 2 Paga 1", "subtitle": "Oferta limitada", "button_label": "Ver Ofertas", "bg_color": "#F2EDE6" } }
+        "card-1": {
+          "type": "card",
+          "settings": {
+            "bg_color": "#ffffff",
+            "title": "Nuevas Llegadas",
+            "subtitle": "Recién agregados",
+            "button_label": "Comprar Ahora",
+            "button_url": ""
+          }
+        },
+        "card-2": {
+          "type": "card",
+          "settings": {
+            "bg_color": "#eef0e7",
+            "title": "¿Qué Hay de Nuevo?",
+            "subtitle": "Descúbrelo primero",
+            "button_label": "Explorar",
+            "button_url": ""
+          }
+        },
+        "card-3": {
+          "type": "card",
+          "settings": {
+            "bg_color": "#f2ede6",
+            "title": "Lleva 2 Paga 1",
+            "subtitle": "Oferta limitada",
+            "button_label": "Ver Ofertas",
+            "button_url": ""
+          }
+        }
       },
-      "block_order": ["card-1", "card-2", "card-3"],
+      "block_order": [
+        "card-1",
+        "card-2",
+        "card-3"
+      ],
       "settings": {}
     },
     "trust-bar": {
       "type": "trust-bar",
       "blocks": {
-        "item-1": { "type": "item", "settings": { "icon": "○", "text": "Envío gratis desde $50" } },
-        "item-2": { "type": "item", "settings": { "icon": "◇", "text": "Devoluciones en 30 días" } },
-        "item-3": { "type": "item", "settings": { "icon": "△", "text": "Pagos 100% seguros" } },
-        "item-4": { "type": "item", "settings": { "icon": "□", "text": "Soporte 24/7" } }
+        "item-1": {
+          "type": "item",
+          "settings": {
+            "icon": "○",
+            "text": "Envío gratis desde $50"
+          }
+        },
+        "item-2": {
+          "type": "item",
+          "settings": {
+            "icon": "◇",
+            "text": "Devoluciones en 30 días"
+          }
+        },
+        "item-3": {
+          "type": "item",
+          "settings": {
+            "icon": "△",
+            "text": "Pagos 100% seguros"
+          }
+        },
+        "item-4": {
+          "type": "item",
+          "settings": {
+            "icon": "□",
+            "text": "Soporte 24/7"
+          }
+        }
       },
-      "block_order": ["item-1", "item-2", "item-3", "item-4"],
-      "settings": {}
+      "block_order": [
+        "item-1",
+        "item-2",
+        "item-3",
+        "item-4"
+      ],
+      "settings": {
+        "icon_color": "#5a7a40"
+      }
     },
     "featured-collection-1": {
       "type": "featured-collection",
       "settings": {
         "title": "Más Vendidos",
+        "collection": "",
         "products_to_show": 5,
         "bg_color": "#ffffff"
       }
@@ -70,8 +150,9 @@
       "type": "featured-collection",
       "settings": {
         "title": "Menos de $25",
+        "collection": "",
         "products_to_show": 5,
-        "bg_color": "#F8F7F3"
+        "bg_color": "#f8f7f3"
       }
     },
     "feature-banners": {
@@ -80,27 +161,34 @@
         "banner-1": {
           "type": "banner",
           "settings": {
+            "bg_color": "#e0ddd8",
+            "overlay": true,
             "eyebrow": "Nueva Colección",
             "title": "Descubre lo Último en Tendencia",
-            "button_label": "Explorar",
+            "subtitle": "",
             "text_color": "#ffffff",
-            "overlay": true,
-            "bg_color": "#E0DDD8"
+            "button_label": "Explorar",
+            "button_url": ""
           }
         },
         "banner-2": {
           "type": "banner",
           "settings": {
+            "bg_color": "#c8d4b8",
+            "overlay": false,
+            "eyebrow": "Nueva Colección",
             "title": "25% off en Todo",
             "subtitle": "Cientos de productos con descuento. Oferta por tiempo limitado.",
-            "button_label": "Ir a la Oferta",
             "text_color": "#1a2a0e",
-            "overlay": false,
-            "bg_color": "#C8D4B8"
+            "button_label": "Ir a la Oferta",
+            "button_url": ""
           }
         }
       },
-      "block_order": ["banner-1", "banner-2"],
+      "block_order": [
+        "banner-1",
+        "banner-2"
+      ],
       "settings": {}
     },
     "brand-marquee": {
