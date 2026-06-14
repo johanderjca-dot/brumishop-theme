@@ -118,7 +118,7 @@
         "item-4"
       ],
       "settings": {
-        "icon_color": "#5a7a40"
+        "icon_color": "#F67300"
       }
     },
     "featured-collection-1": {
@@ -159,7 +159,6 @@
         },
         "banner-2": {
           "type": "banner",
-          "disabled": true,
           "settings": {
             "bg_color": "#c8d4b8",
             "overlay": false,
@@ -179,27 +178,102 @@
       "disabled": true,
       "settings": {}
     },
+    "why-us-vs": {
+      "type": "why-us-vs",
+      "blocks": {
+        "f1": {
+          "type": "feature",
+          "settings": {
+            "feature": "Envío gratis",
+            "we_have": true,
+            "we_detail": "En pedidos desde $50",
+            "they_have": false,
+            "they_detail": "Siempre pagan envío"
+          }
+        },
+        "f2": {
+          "type": "feature",
+          "settings": {
+            "feature": "Garantía de devolución",
+            "we_have": true,
+            "we_detail": "Si aplica",
+            "they_have": false,
+            "they_detail": ""
+          }
+        },
+        "f3": {
+          "type": "feature",
+          "settings": {
+            "feature": "Pago contra entrega",
+            "we_have": true,
+            "we_detail": "Paga cuando recibes",
+            "they_have": false,
+            "they_detail": "Solo pago anticipado"
+          }
+        },
+        "f4": {
+          "type": "feature",
+          "settings": {
+            "feature": "Soporte al cliente",
+            "we_have": true,
+            "we_detail": "WhatsApp 24/7",
+            "they_have": true,
+            "they_detail": "Solo en horario comercial"
+          }
+        },
+        "f5": {
+          "type": "feature",
+          "settings": {
+            "feature": "Productos verificados",
+            "we_have": true,
+            "we_detail": "Revisamos cada pedido",
+            "they_have": false,
+            "they_detail": ""
+          }
+        },
+        "f6": {
+          "type": "feature",
+          "settings": {
+            "feature": "Precios competitivos",
+            "we_have": true,
+            "we_detail": "Los mejores precios del mercado",
+            "they_have": true,
+            "they_detail": "Precios variables"
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6"
+      ],
+      "settings": {
+        "eyebrow": "NUESTRA VENTAJA",
+        "title": "¿Por qué elegirnos?",
+        "subtitle": "No solo vendemos productos — garantizamos calidad, rapidez y una experiencia personalizada",
+        "layout": "cards",
+        "our_label": "BrumiShop",
+        "comp_label": "La competencia",
+        "btn_label": "",
+        "btn_url": "",
+        "btn_bg": "#F67300",
+        "btn_color": "#ffffff",
+        "bg_color": "#fafaf6",
+        "comp_bg": "#f0f0ea",
+        "accent_color": "#F67300",
+        "border_color": "#e8e8e2",
+        "heading_color": "#1a1a18",
+        "text_color": "#6a6a62",
+        "py": 88
+      }
+    },
     "brand-marquee": {
       "type": "brand-marquee",
       "settings": {
         "text": "ENVÍO RÁPIDO, CALIDAD GARANTIZADA, PRECIOS JUSTOS, PRODUCTOS VERIFICADOS, DEVOLUCIÓN FÁCIL, PAGOS SEGUROS, SOPORTE REAL, STOCK PERMANENTE"
-      }
-    },
-    "why-us-vs": {
-      "type": "why-us-vs",
-      "blocks": {
-        "f1": { "type": "feature", "settings": { "feature": "Envío gratis", "we_have": true, "we_detail": "En pedidos desde $50", "they_have": false, "they_detail": "Siempre pagan envío" } },
-        "f2": { "type": "feature", "settings": { "feature": "Garantía de devolución", "we_have": true, "we_detail": "30 días sin preguntas", "they_have": false, "they_detail": "" } },
-        "f3": { "type": "feature", "settings": { "feature": "Pago contra entrega", "we_have": true, "we_detail": "Paga cuando recibes", "they_have": false, "they_detail": "Solo pago anticipado" } },
-        "f4": { "type": "feature", "settings": { "feature": "Soporte al cliente", "we_have": true, "we_detail": "WhatsApp 24/7", "they_have": true, "they_detail": "Solo en horario comercial" } },
-        "f5": { "type": "feature", "settings": { "feature": "Productos verificados", "we_have": true, "we_detail": "Revisamos cada pedido", "they_have": false, "they_detail": "" } },
-        "f6": { "type": "feature", "settings": { "feature": "Precios competitivos", "we_have": true, "we_detail": "Los mejores precios del mercado", "they_have": true, "they_detail": "Precios variables" } }
-      },
-      "block_order": ["f1","f2","f3","f4","f5","f6"],
-      "settings": {
-        "our_label": "BrumiShop",
-        "comp_label": "La competencia",
-        "layout": "cards"
       }
     }
   },
