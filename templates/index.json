@@ -16,19 +16,26 @@
           "type": "slide",
           "settings": {
             "bg_color": "#f8f7f2",
+            "text_align": "left",
+            "text_padding_left": 7,
+            "title_size": 4.5,
             "title": "Todo lo que Necesitas, Aquí",
             "subtitle": "Productos seleccionados con calidad garantizada. Encuentra exactamente lo que buscas.",
             "price_text": "Desde 1499DOP",
             "button_label": "Comprar Ahora",
             "button_url": "shopify://collections/all",
-            "image": "shopify://shop_images/shopping-cart-svgrepo-com.svg"
+            "image": "shopify://shop_images/shopping-cart-svgrepo-com.svg",
+            "image_max_width": 60,
+            "image_max_height": 370
           }
         }
       },
       "block_order": [
         "slide-1"
       ],
-      "settings": {}
+      "settings": {
+        "min_height": 300
+      }
     },
     "category-cards": {
       "type": "category-cards",
