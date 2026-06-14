@@ -42,8 +42,9 @@
           </thead>
           <tbody>
             {% for block in section.blocks %}
+              {% assign row_alt = forloop.index0 | modulo: 2 %}
               <tr {{ block.shopify_attributes }}
-                  style="{% cycle 'background:#fff;', 'background:' | append: section.settings.bg_color | append: ';' %}">
+                  style="{% if row_alt == 0 %}background:#fff;{% else %}background:{{ section.settings.bg_color }};{% endif %}">
                 <td style="padding:1rem 1.25rem; font-size:0.875rem; color:{{ section.settings.heading_color }}; font-weight:500; border-bottom:1px solid {{ section.settings.border_color }};">
                   {{ block.settings.feature }}
                 </td>
