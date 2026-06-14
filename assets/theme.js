@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
 
   /* ── Hero Slider ── */
-  var slides = document.querySelectorAll('.nexo-slide');
-  var dots   = document.querySelectorAll('.nexo-dot');
-  var hero   = document.getElementById('nexo-hero');
+  var slides = document.querySelectorAll('.brumi-slide');
+  var dots   = document.querySelectorAll('.brumi-dot');
+  var hero   = document.getElementById('brumi-hero');
   var current = 0;
   var timer;
 

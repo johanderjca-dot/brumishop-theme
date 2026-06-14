@@ -1,8 +1,8 @@
-<div class="nexo-hero relative overflow-hidden" style="background: {{ section.blocks[0].settings.bg_color | default: '#F8F7F2' }};" id="nexo-hero">
+<div class="brumi-hero relative overflow-hidden" style="background: {{ section.blocks[0].settings.bg_color | default: '#F8F7F2' }};" id="brumi-hero">
   <div class="max-w-[1320px] mx-auto px-6 relative">
 
     {% for block in section.blocks %}
-      <div class="nexo-slide {% unless forloop.first %}hidden{% endunless %} grid grid-cols-2 gap-0 items-stretch min-h-[480px]"
+      <div class="brumi-slide {% unless forloop.first %}hidden{% endunless %} grid grid-cols-2 gap-0 items-stretch min-h-[480px]"
            data-slide="{{ forloop.index0 }}"
            style="background: {{ block.settings.bg_color }};">
 
@@ -44,7 +44,7 @@
   {% if section.blocks.size > 1 %}
     <div class="flex justify-center gap-2 pb-6 pt-2">
       {% for block in section.blocks %}
-        <button class="nexo-dot rounded-full transition-all duration-300 {% if forloop.first %}bg-[#1a1a18] w-5 h-2{% else %}bg-[#c8c8c0] w-2 h-2{% endif %}"
+        <button class="brumi-dot rounded-full transition-all duration-300 {% if forloop.first %}bg-[#1a1a18] w-5 h-2{% else %}bg-[#c8c8c0] w-2 h-2{% endif %}"
                 data-target="{{ forloop.index0 }}">
         </button>
       {% endfor %}

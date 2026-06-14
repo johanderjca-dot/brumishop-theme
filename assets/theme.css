@@ -7,12 +7,12 @@ input, button, select { outline: none; font-family: inherit; }
 img { display: block; max-width: 100%; }
 
 /* ── Marquee ── */
-@keyframes nexo-marquee {
+@keyframes brumi-marquee {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-.nexo-marquee { animation: nexo-marquee 28s linear infinite; }
-.nexo-marquee:hover { animation-play-state: paused; }
+.brumi-marquee { animation: brumi-marquee 28s linear infinite; }
+.brumi-marquee:hover { animation-play-state: paused; }
 
 /* ── Product card hover ── */
 .product-card .add-btn {
@@ -25,9 +25,9 @@ img { display: block; max-width: 100%; }
 .product-card:hover .product-img { transform: scale(1.04); }
 
 /* ── Hero slider ── */
-.nexo-hero { transition: background-color .6s ease; }
-.nexo-slide { transition: opacity .4s ease; }
-.nexo-dot { cursor: pointer; border: none; }
+.brumi-hero { transition: background-color .6s ease; }
+.brumi-slide { transition: opacity .4s ease; }
+.brumi-dot { cursor: pointer; border: none; }
 
 /* ── Feature panel ── */
 .feature-panel img { transition: transform .6s ease; }
