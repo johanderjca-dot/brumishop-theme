@@ -2,20 +2,24 @@
   <div class="max-w-[1320px] mx-auto px-6 relative">
 
     {% for block in section.blocks %}
-      <div class="brumi-slide {% unless forloop.first %}hidden{% endunless %} grid grid-cols-2 gap-0 items-stretch min-h-[480px]"
+      <div class="brumi-slide {% unless forloop.first %}hidden{% endunless %} grid gap-0 items-center min-h-[{{ section.settings.min_height }}px]"
            data-slide="{{ forloop.index0 }}"
-           style="background: {{ block.settings.bg_color }};">
+           style="background: {{ block.settings.bg_color }}; grid-template-columns: 1fr 1fr;">
 
         <!-- Text side -->
-        <div class="flex flex-col justify-center py-16 pr-12">
-          <h1 class="font-display text-[clamp(2.8rem,4vw,4.2rem)] font-semibold leading-tight text-[#1a1a18]">
+        <div class="flex flex-col justify-center py-16"
+             style="padding-left: {{ block.settings.text_padding_left }}%; text-align: {{ block.settings.text_align }};">
+          <h1 class="font-display leading-tight text-[#1a1a18]"
+              style="font-size: clamp(2rem, {{ block.settings.title_size }}vw, {{ block.settings.title_size | times: 1.4 }}rem); font-weight: 600;">
             {{ block.settings.title }}
           </h1>
-          <p class="mt-4 text-sm text-[#6a6a62] leading-relaxed max-w-xs">{{ block.settings.subtitle }}</p>
+          <p class="mt-4 text-sm text-[#6a6a62] leading-relaxed" style="max-width: 320px; {% if block.settings.text_align == 'center' %}margin-left: auto; margin-right: auto;{% endif %}">
+            {{ block.settings.subtitle }}
+          </p>
           {% if block.settings.price_text != blank %}
             <p class="mt-5 text-sm font-semibold text-[#1a1a18]">{{ block.settings.price_text }}</p>
           {% endif %}
-          <div class="mt-6">
+          <div class="mt-6" style="{% if block.settings.text_align == 'center' %}display: flex; justify-content: center;{% endif %}">
             <a href="{{ block.settings.button_url }}" class="inline-block bg-[#1a1a18] text-white text-xs font-semibold px-8 py-3.5 tracking-wide hover:bg-[#333330] transition-colors duration-200">
               {{ block.settings.button_label | default: 'Comprar Ahora' }}
             </a>
@@ -23,18 +27,25 @@
         </div>
 
         <!-- Image side -->
-        <div class="relative flex items-end justify-center pt-8">
+        <div class="flex items-center justify-center py-8" style="min-height: {{ section.settings.min_height }}px;">
           {% if block.settings.image != blank %}
-            <img src="{{ block.settings.image | image_url: width: 800 }}"
+            <img src="{{ block.settings.image | image_url: width: 1000 }}"
                  alt="{{ block.settings.title }}"
-                 class="w-full max-w-md h-[400px] object-cover"
-                 style="filter: contrast(1.05) saturate(0.85); object-position: center top;">
+                 style="
+                   max-width: {{ block.settings.image_max_width }}%;
+                   max-height: {{ block.settings.image_max_height }}px;
+                   width: auto;
+                   height: auto;
+                   display: block;
+                   object-fit: contain;
+                 ">
           {% else %}
-            <div class="w-full max-w-md h-[400px] flex items-center justify-center bg-[#E8E8E2] rounded-sm">
-              <span class="text-sm text-[#a0a09a]">Sube una imagen en el editor</span>
+            <div style="width: 100%; max-height: {{ block.settings.image_max_height }}px; min-height: 200px; background: #E8E8E2; display: flex; align-items: center; justify-content: center;">
+              <span style="font-size: 0.875rem; color: #a0a09a;">Sube una imagen en el editor</span>
             </div>
           {% endif %}
         </div>
+
       </div>
     {% endfor %}
 
@@ -42,10 +53,10 @@
 
   <!-- Dots -->
   {% if section.blocks.size > 1 %}
-    <div class="flex justify-center gap-2 pb-6 pt-2">
+    <div style="display: flex; justify-content: center; gap: 0.5rem; padding-bottom: 1.5rem; padding-top: 0.5rem;">
       {% for block in section.blocks %}
-        <button class="brumi-dot rounded-full transition-all duration-300 {% if forloop.first %}bg-[#1a1a18] w-5 h-2{% else %}bg-[#c8c8c0] w-2 h-2{% endif %}"
-                data-target="{{ forloop.index0 }}">
+        <button class="brumi-dot" data-target="{{ forloop.index0 }}"
+                style="border: none; border-radius: 9999px; cursor: pointer; transition: all .3s; {% if forloop.first %}background: #1a1a18; width: 1.25rem; height: 0.5rem;{% else %}background: #c8c8c0; width: 0.5rem; height: 0.5rem;{% endif %}">
         </button>
       {% endfor %}
     </div>
@@ -55,6 +66,17 @@
 {% schema %}
 {
   "name": "Hero Slider",
+  "settings": [
+    {
+      "type": "range",
+      "id": "min_height",
+      "label": "Altura mínima del hero (px)",
+      "min": 300,
+      "max": 800,
+      "step": 20,
+      "default": 480
+    }
+  ],
   "max_blocks": 5,
   "blocks": [
     {
@@ -62,44 +84,102 @@
       "name": "Slide",
       "settings": [
         {
+          "type": "header",
+          "content": "Fondo"
+        },
+        {
           "type": "color",
           "id": "bg_color",
-          "label": "Background color",
+          "label": "Color de fondo",
           "default": "#F8F7F2"
         },
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
+          "type": "header",
+          "content": "Texto"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Alineación del texto",
+          "options": [
+            { "value": "left",   "label": "Izquierda" },
+            { "value": "center", "label": "Centro" }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "range",
+          "id": "text_padding_left",
+          "label": "Margen izquierdo del texto (%)",
+          "min": 0,
+          "max": 15,
+          "step": 1,
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "title_size",
+          "label": "Tamaño del título (vw)",
+          "min": 2,
+          "max": 6,
+          "step": 0.5,
+          "default": 4
         },
         {
           "type": "text",
           "id": "title",
-          "label": "Title",
+          "label": "Título",
           "default": "Todo lo que Necesitas, Aquí"
         },
         {
           "type": "text",
           "id": "subtitle",
-          "label": "Subtitle",
+          "label": "Subtítulo",
           "default": "Productos seleccionados con calidad garantizada."
         },
         {
           "type": "text",
           "id": "price_text",
-          "label": "Price label",
+          "label": "Texto de precio",
           "default": "Desde $9.99"
         },
         {
           "type": "text",
           "id": "button_label",
-          "label": "Button text",
+          "label": "Texto del botón",
           "default": "Comprar Ahora"
         },
         {
           "type": "url",
           "id": "button_url",
-          "label": "Button link"
+          "label": "Enlace del botón"
+        },
+        {
+          "type": "header",
+          "content": "Imagen"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen"
+        },
+        {
+          "type": "range",
+          "id": "image_max_width",
+          "label": "Ancho máximo de imagen (%)",
+          "min": 20,
+          "max": 100,
+          "step": 5,
+          "default": 80
+        },
+        {
+          "type": "range",
+          "id": "image_max_height",
+          "label": "Alto máximo de imagen (px)",
+          "min": 150,
+          "max": 700,
+          "step": 10,
+          "default": 400
         }
       ]
     }
@@ -115,7 +195,12 @@
             "subtitle": "Productos seleccionados con calidad garantizada. Encuentra exactamente lo que buscas.",
             "price_text": "Desde $9.99",
             "button_label": "Comprar Ahora",
-            "bg_color": "#F8F7F2"
+            "bg_color": "#F8F7F2",
+            "text_align": "left",
+            "text_padding_left": 2,
+            "title_size": 4,
+            "image_max_width": 80,
+            "image_max_height": 420
           }
         },
         {
@@ -125,7 +210,12 @@
             "subtitle": "Agregamos nuevos productos cada semana. Sé el primero en descubrir lo último.",
             "price_text": "Ver novedades",
             "button_label": "Ver Colección",
-            "bg_color": "#EEF0E7"
+            "bg_color": "#EEF0E7",
+            "text_align": "left",
+            "text_padding_left": 2,
+            "title_size": 4,
+            "image_max_width": 80,
+            "image_max_height": 420
           }
         },
         {
@@ -135,7 +225,12 @@
             "subtitle": "Ofertas limitadas en cientos de productos. Aprovecha antes de que se agoten.",
             "price_text": "Desde $4.99",
             "button_label": "Ver Ofertas",
-            "bg_color": "#F4EDE4"
+            "bg_color": "#F4EDE4",
+            "text_align": "left",
+            "text_padding_left": 2,
+            "title_size": 4,
+            "image_max_width": 80,
+            "image_max_height": 420
           }
         }
       ]
