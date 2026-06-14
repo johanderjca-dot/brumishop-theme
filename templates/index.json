@@ -118,10 +118,7 @@
         "item-4"
       ],
       "settings": {
-        "bg_color": "#FFFFFF",
-        "border_color": "#e8e8e2",
-        "icon_color": "#f67300",
-        "text_color": "#5a5a52"
+        "icon_color": "#F67300"
       }
     },
     "featured-collection-1": {
@@ -266,7 +263,7 @@
         "btn_color": "#ffffff",
         "bg_color": "#fafaf6",
         "comp_bg": "#f0f0ea",
-        "accent_color": "#f67300",
+        "accent_color": "#F67300",
         "border_color": "#e8e8e2",
         "heading_color": "#1a1a18",
         "text_color": "#6a6a62",
