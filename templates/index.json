@@ -16,12 +16,12 @@
           "type": "slide",
           "settings": {
             "bg_color": "#f8f7f2",
-            "image": "shopify://shop_images/shopping-cart-svgrepo-com.svg",
             "title": "Todo lo que Necesitas, Aquí",
             "subtitle": "Productos seleccionados con calidad garantizada. Encuentra exactamente lo que buscas.",
             "price_text": "Desde 1499DOP",
             "button_label": "Comprar Ahora",
-            "button_url": "shopify://collections/all"
+            "button_url": "shopify://collections/all",
+            "image": "shopify://shop_images/shopping-cart-svgrepo-com.svg"
           }
         }
       },
@@ -75,37 +75,37 @@
     "trust-bar": {
       "type": "trust-bar",
       "blocks": {
-        "item-1": {
+        "item_qGEJcY": {
           "type": "item",
           "settings": {
-            "icon": "○",
-            "text": "Envío gratis desde DOP"
+            "icon": "•",
+            "text": "Envío gratis desde $50"
           }
         },
         "item-2": {
           "type": "item",
           "settings": {
-            "icon": "◇",
-            "text": "Devoluciones en 30 días"
+            "icon": "•",
+            "text": "Devoluciones en 7 días"
           }
         },
         "item-3": {
           "type": "item",
           "settings": {
-            "icon": "△",
-            "text": "Pagos 100% seguros"
+            "icon": "•",
+            "text": "Pagos 100% seguros, al recibir"
           }
         },
         "item-4": {
           "type": "item",
           "settings": {
-            "icon": "□",
+            "icon": "•",
             "text": "Soporte 24/7"
           }
         }
       },
       "block_order": [
-        "item-1",
+        "item_qGEJcY",
         "item-2",
         "item-3",
         "item-4"
@@ -116,6 +116,7 @@
     },
     "featured-collection-1": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Más Vendidos",
         "collection": "",
@@ -125,6 +126,7 @@
     },
     "featured-collection-2": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Menos de $25",
         "collection": "",
@@ -150,6 +152,7 @@
         },
         "banner-2": {
           "type": "banner",
+          "disabled": true,
           "settings": {
             "bg_color": "#c8d4b8",
             "overlay": false,
@@ -166,6 +169,7 @@
         "banner-1",
         "banner-2"
       ],
+      "disabled": true,
       "settings": {}
     },
     "brand-marquee": {
