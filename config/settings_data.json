@@ -15,8 +15,8 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "text": "ENVÍO GRATIS EN PEDIDOS MAYORES A $50  ·  NUEVOS PRODUCTOS CADA SEMANA",
-          "bg_color": "#f2ebc4"
+          "text": "PAGA CONTRA ENTREGA  ·  NUEVOS PRODUCTOS CADA SEMANA",
+          "bg_color": "#DB9D00"
         }
       },
       "header": {

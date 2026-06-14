@@ -16,41 +16,17 @@
           "type": "slide",
           "settings": {
             "bg_color": "#f8f7f2",
-            "image": "shopify://shop_images/LOGO_FINAL.svg",
+            "image": "shopify://shop_images/shopping-cart-svgrepo-com.svg",
             "title": "Todo lo que Necesitas, Aquí",
             "subtitle": "Productos seleccionados con calidad garantizada. Encuentra exactamente lo que buscas.",
             "price_text": "Desde 1499DOP",
             "button_label": "Comprar Ahora",
-            "button_url": ""
-          }
-        },
-        "slide-2": {
-          "type": "slide",
-          "settings": {
-            "bg_color": "#eef0e7",
-            "title": "Nuevas Llegadas",
-            "subtitle": "Agregamos nuevos productos cada semana. Sé el primero en descurir lo último.",
-            "price_text": "Ver novedades",
-            "button_label": "Ver Colección",
-            "button_url": ""
-          }
-        },
-        "slide-3": {
-          "type": "slide",
-          "settings": {
-            "bg_color": "#f4ede4",
-            "title": "Hasta 40% de Descuento",
-            "subtitle": "Ofertas limitadas en cientos de productos. Aprovecha antes de que se agoten.",
-            "price_text": "Desde $4.99",
-            "button_label": "Ver Ofertas",
-            "button_url": ""
+            "button_url": "shopify://collections/all"
           }
         }
       },
       "block_order": [
-        "slide-1",
-        "slide-2",
-        "slide-3"
+        "slide-1"
       ],
       "settings": {}
     },
@@ -93,6 +69,7 @@
         "card-2",
         "card-3"
       ],
+      "disabled": true,
       "settings": {}
     },
     "trust-bar": {
@@ -102,7 +79,7 @@
           "type": "item",
           "settings": {
             "icon": "○",
-            "text": "Envío gratis desde $50"
+            "text": "Envío gratis desde DOP"
           }
         },
         "item-2": {
