@@ -240,6 +240,19 @@
     },
     "lp-policies": {
       "type": "lp-policies",
+      "blocks": {
+        "policy_yzkpPH": {
+          "type": "policy",
+          "settings": {
+            "icon": "↩",
+            "title": "Política de devoluciones",
+            "content": "<p>Aceptamos devoluciones dentro de los 30 días posteriores a la compra. El producto debe estar en su estado original sin uso.</p><p>Para iniciar una devolución, contáctanos por WhatsApp o correo electrónico.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "policy_yzkpPH"
+      ],
       "settings": {
         "title": "",
         "title_align": "left",
