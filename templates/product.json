@@ -213,6 +213,19 @@
     },
     "lp-shipping": {
       "type": "lp-shipping",
+      "blocks": {
+        "item_8a9C43": {
+          "type": "item",
+          "settings": {
+            "icon": "📦",
+            "title": "Envío gratis",
+            "description": "Entrega en 3-5 días hábiles a todo el país."
+          }
+        }
+      },
+      "block_order": [
+        "item_8a9C43"
+      ],
       "settings": {
         "icon": "🚚",
         "title": "Información de envío",
@@ -227,6 +240,19 @@
     },
     "lp-policies": {
       "type": "lp-policies",
+      "blocks": {
+        "policy_774JgH": {
+          "type": "policy",
+          "settings": {
+            "icon": "↩",
+            "title": "Política de devoluciones",
+            "content": "<p>Aceptamos devoluciones dentro de los 30 días posteriores a la compra. El producto debe estar en su estado original sin uso.</p><p>Para iniciar una devolución, contáctanos por WhatsApp o correo electrónico.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "policy_774JgH"
+      ],
       "settings": {
         "title": "",
         "title_align": "left",
@@ -236,28 +262,6 @@
         "border_color": "#e8e8e2",
         "heading_color": "#1a1a18",
         "text_color": "#5a5a52"
-      }
-    },
-    "lp-how-to-use": {
-      "type": "lp-how-to-use",
-      "settings": {
-        "img_height": 500,
-        "img_fit": "cover",
-        "img_radius": 4,
-        "eyebrow": "MODO DE USO",
-        "title": "¿Cómo se usa?",
-        "description": "",
-        "layout": "image-right",
-        "img_col": 1,
-        "text_col": 1,
-        "overlay_opacity": 40,
-        "text_x": "center",
-        "text_align": "center",
-        "bg_color": "#f8f7f3",
-        "eyebrow_color": "#5a7a40",
-        "heading_color": "#1a1a18",
-        "text_color": "#5a5a52",
-        "py": 72
       }
     },
     "lp-problem-solution": {
@@ -350,7 +354,6 @@
     "lp-reviews",
     "lp-shipping",
     "lp-policies",
-    "lp-how-to-use",
     "lp-problem-solution",
     "lp-faq",
     "lp-testimonials",
