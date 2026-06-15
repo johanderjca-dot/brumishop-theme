@@ -90,7 +90,11 @@
     <!-- Bottom bar -->
     <div style="border-top:1px solid {{ section.settings.border_color }}; margin-top:3rem; padding-top:1.5rem; display:flex; flex-direction:column; gap:0.75rem; align-items:center; text-align:center;">
       <p style="font-size:0.7rem; color:{{ section.settings.text_color }}; margin:0;">
-        {{ section.settings.copyright | default: '© 2025 — Todos los derechos reservados.' | replace: '{year}', 'now' | date: '%Y' }}
+        {% if section.settings.copyright != blank %}
+          {{ section.settings.copyright }}
+        {% else %}
+          © {{ 'now' | date: '%Y' }} {{ shop.name }} — Todos los derechos reservados.
+        {% endif %}
       </p>
 
       {% if section.settings.show_payment_methods %}
