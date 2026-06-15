@@ -12,19 +12,19 @@
     "lp-hero": {
       "type": "lp-hero",
       "settings": {
-        "full_width": false,
+        "full_width": true,
         "max_height": 400,
         "fit": "contain",
         "bg_color": "#ffffff",
-        "padding": 0
+        "padding": 48
       }
     },
     "lp-description": {
       "type": "lp-description",
       "settings": {
-        "eyebrow": "",
-        "custom_title": "",
-        "slogan": "Calidad que se siente.",
+        "eyebrow": "kjbjkbj",
+        "custom_title": "Licua Max",
+        "slogan": "A donde sea, va contigo",
         "show_product_description": true,
         "custom_description": "",
         "align": "center",
