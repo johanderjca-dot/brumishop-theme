@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "lp-hero": {
@@ -12,7 +21,10 @@
         "bg_color": "#ffffff"
       }
     },
-    "div-1": { "type": "lp-divider", "settings": {} },
+    "div-1": {
+      "type": "lp-divider",
+      "settings": {}
+    },
     "lp-description": {
       "type": "lp-description",
       "settings": {
@@ -51,7 +63,10 @@
         "text_color": "#5a5a52"
       }
     },
-    "div-2": { "type": "lp-divider", "settings": {} },
+    "div-2": {
+      "type": "lp-divider",
+      "settings": {}
+    },
     "lp-benefits": {
       "type": "lp-benefits",
       "blocks": {
@@ -127,28 +142,24 @@
         "text_color": "#5a5a52"
       }
     },
-    "div-3": { "type": "lp-divider", "settings": { "bg_color": "#fafaf6" } },
+    "div-3": {
+      "type": "lp-divider",
+      "settings": {
+        "bg_color": "#fafaf6"
+      }
+    },
     "lp-offer": {
       "type": "lp-offer",
       "settings": {
         "price_size": 22,
         "price_color": "#1a1a18",
-        "fake_price_amount": 2500,
-        "card_bg": "#ffffff",
-        "card_border_color": "#e0e0da",
-        "card_border_width": 1,
-        "card_radius": 12,
-        "card_pad": 24,
-        "card_max_width": 420,
-        "savings_bg": "#f0fff4",
-        "savings_color": "#2d7a3a",
+        "badge_text": "",
+        "heading": "Consíguelo ahora con descuento exclusivo",
+        "heading_color": "#1a1a18",
         "urgency_qty": 17,
         "urgency_prefix": "⚡ Últimas",
         "urgency_suffix": "unidades disponibles",
         "urgency_color": "#c0392b",
-        "badge_text": "",
-        "heading": "Consíguelo ahora con descuento exclusivo",
-        "heading_color": "#1a1a18",
         "max_width": 640,
         "pt": 0,
         "pb": 15,
