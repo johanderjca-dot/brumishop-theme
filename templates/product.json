@@ -15,8 +15,7 @@
         "full_width": true,
         "max_height": 400,
         "fit": "contain",
-        "bg_color": "#ffffff",
-        "padding": 48
+        "bg_color": "#ffffff"
       }
     },
     "lp-description": {
