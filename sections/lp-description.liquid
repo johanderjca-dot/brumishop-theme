@@ -6,32 +6,44 @@
 </style>
 
 <section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0;">
-  <div style="max-width:{{ section.settings.max_width }}px; margin:0 auto; padding:0 1.5rem; text-align:{{ section.settings.align }};">
+  <div style="max-width:{{ section.settings.max_width }}px; margin:0 auto; padding:0 1.5rem;">
 
-    {% if section.settings.eyebrow != blank %}
-      <p style="font-size:0.7rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:{{ section.settings.accent_color }}; margin-bottom:0.85rem;">
-        {{ section.settings.eyebrow }}
-      </p>
-    {% endif %}
-
-    <h1 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(2rem,5vw,3.75rem); font-weight:600; color:{{ section.settings.heading_color }}; line-height:1.15; margin-bottom:1rem;">
-      {% if section.settings.custom_title != blank %}{{ section.settings.custom_title }}{% else %}{{ product.title }}{% endif %}
-    </h1>
-
-    {% if section.settings.slogan != blank %}
-      <p style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.25rem,2.5vw,1.9rem); font-style:italic; color:{{ section.settings.slogan_color }}; margin-bottom:1.75rem;">
-        {{ section.settings.slogan }}
-      </p>
-    {% endif %}
-
-    <div class="lp-desc-content" style="font-size:1rem; color:{{ section.settings.text_color }}; {% if section.settings.align == 'center' %}margin-left:auto; margin-right:auto;{% endif %} max-width:72ch;">
-      {% if section.settings.show_product_description %}
-        {{ product.description }}
-      {% elsif section.settings.custom_description != blank %}
-        {{ section.settings.custom_description }}
+    {% comment %} Contenedor con borde opcional {% endcomment %}
+    <div style="
+      text-align:{{ section.settings.align }};
+      {% if section.settings.show_box %}
+        border: {{ section.settings.box_border_width }}px solid {{ section.settings.box_border_color }};
+        border-radius: {{ section.settings.box_radius }}px;
+        background: {{ section.settings.box_bg }};
+        padding: {{ section.settings.box_pad }}px;
       {% endif %}
-    </div>
+    ">
 
+      {% if section.settings.eyebrow != blank %}
+        <p style="font-size:{{ section.settings.eyebrow_size }}px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:{{ section.settings.accent_color }}; margin-bottom:0.85rem;">
+          {{ section.settings.eyebrow }}
+        </p>
+      {% endif %}
+
+      <h1 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:{{ section.settings.title_size }}px; font-weight:600; color:{{ section.settings.heading_color }}; line-height:1.15; margin-bottom:1rem;">
+        {% if section.settings.custom_title != blank %}{{ section.settings.custom_title }}{% else %}{{ product.title }}{% endif %}
+      </h1>
+
+      {% if section.settings.slogan != blank %}
+        <p style="font-family:'Cormorant Garamond',Georgia,serif; font-size:{{ section.settings.slogan_size }}px; font-style:italic; color:{{ section.settings.slogan_color }}; margin-bottom:1.75rem;">
+          {{ section.settings.slogan }}
+        </p>
+      {% endif %}
+
+      <div class="lp-desc-content" style="font-size:{{ section.settings.desc_size }}px; color:{{ section.settings.text_color }}; {% if section.settings.align == 'center' %}margin-left:auto; margin-right:auto;{% endif %} max-width:72ch;">
+        {% if section.settings.show_product_description %}
+          {{ product.description }}
+        {% elsif section.settings.custom_description != blank %}
+          {{ section.settings.custom_description }}
+        {% endif %}
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -41,16 +53,32 @@
   "settings": [
     { "type": "header", "content": "Textos" },
     { "type": "text", "id": "eyebrow", "label": "Etiqueta sobre el título (ej: NUEVO · EXCLUSIVO)" },
-    { "type": "text", "id": "custom_title", "label": "Título personalizado (vacío = nombre del producto automático)" },
-    { "type": "text", "id": "slogan", "label": "Slogan del producto (vacío = no muestra nada)" },
+    { "type": "text", "id": "custom_title", "label": "Título personalizado (vacío = nombre del producto)" },
+    { "type": "text", "id": "slogan", "label": "Slogan (vacío = no aparece)" },
     { "type": "checkbox", "id": "show_product_description", "label": "Usar descripción de Shopify del producto", "default": true },
     { "type": "richtext", "id": "custom_description", "label": "Descripción personalizada (solo si NO marcas la opción anterior)" },
+
+    { "type": "header", "content": "Tamaños de texto" },
+    { "type": "range", "id": "eyebrow_size", "label": "Tamaño etiqueta (px)", "min": 8, "max": 18, "step": 1, "default": 11 },
+    { "type": "range", "id": "title_size", "label": "Tamaño título (px)", "min": 20, "max": 72, "step": 2, "default": 48 },
+    { "type": "range", "id": "slogan_size", "label": "Tamaño slogan (px)", "min": 14, "max": 40, "step": 1, "default": 22 },
+    { "type": "range", "id": "desc_size", "label": "Tamaño descripción (px)", "min": 12, "max": 22, "step": 1, "default": 16 },
+
     { "type": "header", "content": "Diseño" },
     { "type": "select", "id": "align", "label": "Alineación", "options": [{"value":"left","label":"Izquierda"},{"value":"center","label":"Centro"}], "default": "center" },
-    { "type": "range", "id": "max_width", "label": "Ancho máximo del texto (px)", "min": 600, "max": 1320, "step": 20, "default": 860 },
-    { "type": "range", "id": "py", "label": "Espacio vertical (px)", "min": 40, "max": 136, "step": 8, "default": 80 },
+    { "type": "range", "id": "max_width", "label": "Ancho máximo (px)", "min": 400, "max": 1320, "step": 20, "default": 860 },
+    { "type": "range", "id": "py", "label": "Espacio vertical (px)", "min": 16, "max": 136, "step": 8, "default": 80 },
+
+    { "type": "header", "content": "Cuadro / Tarjeta (opcional)" },
+    { "type": "checkbox", "id": "show_box", "label": "Mostrar cuadro con borde", "default": false },
+    { "type": "color", "id": "box_bg", "label": "Fondo del cuadro", "default": "#FFFFFF" },
+    { "type": "color", "id": "box_border_color", "label": "Color del borde", "default": "#E8E8E2" },
+    { "type": "range", "id": "box_border_width", "label": "Grosor del borde (px)", "min": 1, "max": 6, "step": 1, "default": 1 },
+    { "type": "range", "id": "box_radius", "label": "Bordes redondeados (px)", "min": 0, "max": 32, "step": 2, "default": 8 },
+    { "type": "range", "id": "box_pad", "label": "Relleno interno del cuadro (px)", "min": 16, "max": 80, "step": 4, "default": 40 },
+
     { "type": "header", "content": "Colores" },
-    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#FFFFFF" },
+    { "type": "color", "id": "bg_color", "label": "Fondo de la sección", "default": "#FFFFFF" },
     { "type": "color", "id": "accent_color", "label": "Color etiqueta", "default": "#5a7a40" },
     { "type": "color", "id": "heading_color", "label": "Color título", "default": "#1a1a18" },
     { "type": "color", "id": "slogan_color", "label": "Color slogan", "default": "#6a6a62" },
