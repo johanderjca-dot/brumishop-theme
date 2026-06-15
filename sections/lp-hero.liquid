@@ -1,5 +1,5 @@
-<section style="background:{{ section.settings.bg_color }};">
-  <div {% unless section.settings.full_width %}style="max-width:1320px;margin:0 auto;padding:{{ section.settings.padding }}px 1.5rem;"{% endunless %}>
+<section style="background:{{ section.settings.bg_color }}; padding-top:{{ section.settings.pt }}px;">
+  <div style="{% unless section.settings.full_width %}max-width:1320px;margin:0 auto;{% endunless %}padding:0 {{ section.settings.side_pad }}px;">
     {% if product.featured_image != blank %}
       <img src="{{ product.featured_image | image_url: width: 1600 }}"
            srcset="{{ product.featured_image | image_url: width: 750 }} 750w,
@@ -8,9 +8,9 @@
                    {{ product.featured_image | image_url: width: 2200 }} 2200w"
            sizes="100vw"
            alt="{{ product.title | escape }}"
-           style="width:100%; max-height:{{ section.settings.max_height }}px; object-fit:{{ section.settings.fit }}; display:block;">
+           style="width:100%; max-height:{{ section.settings.max_height }}px; object-fit:{{ section.settings.fit }}; display:block; border-radius:{{ section.settings.radius }}px;">
     {% else %}
-      <div style="background:#E8E8E2; height:{{ section.settings.max_height }}px; display:flex; align-items:center; justify-content:center;">
+      <div style="background:#E8E8E2; height:{{ section.settings.max_height }}px; display:flex; align-items:center; justify-content:center; border-radius:{{ section.settings.radius }}px;">
         <p style="color:#a0a09a; font-size:0.875rem;">Sube una imagen al producto en Shopify Admin para que aparezca aquí.</p>
       </div>
     {% endif %}
@@ -21,11 +21,13 @@
 {
   "name": "1 — Foto Hero",
   "settings": [
-    { "type": "checkbox", "id": "full_width", "label": "Ancho completo (sin márgenes)", "default": true },
+    { "type": "range", "id": "pt", "label": "Espacio superior (separación del header)", "min": 0, "max": 80, "step": 4, "default": 16 },
+    { "type": "range", "id": "side_pad", "label": "Margen lateral (px)", "min": 0, "max": 48, "step": 4, "default": 0 },
+    { "type": "checkbox", "id": "full_width", "label": "Ancho completo", "default": true },
     { "type": "range", "id": "max_height", "label": "Altura máxima (px)", "min": 300, "max": 900, "step": 20, "default": 680 },
+    { "type": "range", "id": "radius", "label": "Bordes redondeados (px)", "min": 0, "max": 40, "step": 2, "default": 0 },
     { "type": "select", "id": "fit", "label": "Ajuste de imagen", "options": [{"value":"cover","label":"Recortar (llenar espacio)"},{"value":"contain","label":"Completa (sin recorte)"}], "default": "cover" },
-    { "type": "color", "id": "bg_color", "label": "Color de fondo", "default": "#F8F7F3" },
-    { "type": "range", "id": "padding", "label": "Espacio interior si no es ancho completo (px)", "min": 0, "max": 60, "step": 4, "default": 0 }
+    { "type": "color", "id": "bg_color", "label": "Color de fondo", "default": "#F8F7F3" }
   ],
   "presets": [{ "name": "1 — Foto Hero" }]
 }
