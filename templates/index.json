@@ -24,7 +24,7 @@
             "price_text": "Desde 1499DOP",
             "button_label": "Comprar Ahora",
             "button_url": "shopify://collections/all",
-            "image": "shopify://shop_images/LOGO_FINAL_3.svg",
+            "image": "shopify://shop_images/LOGO_FINAL_7.png",
             "image_max_width": 100,
             "image_max_height": 320
           }
@@ -118,7 +118,10 @@
         "item-4"
       ],
       "settings": {
-        "icon_color": "#F67300"
+        "bg_color": "#fafaf6",
+        "border_color": "#e8e8e2",
+        "icon_color": "#f67300",
+        "text_color": "#5a5a52"
       }
     },
     "product-carousel": {
@@ -126,19 +129,20 @@
       "settings": {
         "eyebrow": "NUESTRA TIENDA",
         "title": "Productos destacados",
-        "btn_label": "Ver producto →",
+        "collection": "",
         "products_to_show": 12,
+        "btn_label": "Ver producto →",
         "card_width": 260,
         "gap": 16,
         "card_radius": 8,
-        "bg_color": "#FFFFFF",
-        "card_bg": "#FFFFFF",
-        "card_border": "#E8E8E2",
-        "img_bg": "#F8F7F3",
+        "bg_color": "#ffffff",
+        "card_bg": "#ffffff",
+        "card_border": "#e8e8e2",
+        "img_bg": "#f8f7f3",
         "heading_color": "#1a1a18",
         "accent_color": "#5a7a40",
         "btn_bg": "#1a1a18",
-        "btn_color": "#FFFFFF",
+        "btn_color": "#ffffff",
         "py": 72
       }
     },
@@ -284,7 +288,7 @@
         "btn_color": "#ffffff",
         "bg_color": "#fafaf6",
         "comp_bg": "#f0f0ea",
-        "accent_color": "#F67300",
+        "accent_color": "#f67300",
         "border_color": "#e8e8e2",
         "heading_color": "#1a1a18",
         "text_color": "#6a6a62",
