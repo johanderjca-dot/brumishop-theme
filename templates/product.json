@@ -295,7 +295,7 @@
             "solution_label": "LA SOLUCIÓN",
             "solution_title": "Nuestro producto sí funciona — garantizado",
             "solution_text": "Con nuestra fórmula probada y miles de clientes satisfechos, verás resultados reales desde la primera semana de uso.",
-            "show_btn": true,
+            "show_btn": false,
             "btn_text": "Quiero este producto",
             "btn_bg": "#1a1a18",
             "btn_color": "#ffffff",
