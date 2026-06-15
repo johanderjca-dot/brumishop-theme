@@ -1,19 +1,21 @@
 <section style="background:{{ section.settings.bg_color }}; padding-top:{{ section.settings.pt }}px;">
   <div style="{% unless section.settings.full_width %}max-width:1320px;margin:0 auto;{% endunless %}padding:0 {{ section.settings.side_pad }}px;">
-    {% if product.featured_image != blank %}
-      <img src="{{ product.featured_image | image_url: width: 1600 }}"
-           srcset="{{ product.featured_image | image_url: width: 750 }} 750w,
-                   {{ product.featured_image | image_url: width: 1100 }} 1100w,
-                   {{ product.featured_image | image_url: width: 1600 }} 1600w,
-                   {{ product.featured_image | image_url: width: 2200 }} 2200w"
-           sizes="100vw"
-           alt="{{ product.title | escape }}"
-           style="width:100%; max-height:{{ section.settings.max_height }}px; object-fit:{{ section.settings.fit }}; display:block; border-radius:{{ section.settings.radius }}px;">
-    {% else %}
-      <div style="background:#E8E8E2; height:{{ section.settings.max_height }}px; display:flex; align-items:center; justify-content:center; border-radius:{{ section.settings.radius }}px;">
-        <p style="color:#a0a09a; font-size:0.875rem;">Sube una imagen al producto en Shopify Admin para que aparezca aquí.</p>
-      </div>
-    {% endif %}
+    <div style="border-radius:{{ section.settings.radius }}px; overflow:hidden; line-height:0;">
+      {% if product.featured_image != blank %}
+        <img src="{{ product.featured_image | image_url: width: 1600 }}"
+             srcset="{{ product.featured_image | image_url: width: 750 }} 750w,
+                     {{ product.featured_image | image_url: width: 1100 }} 1100w,
+                     {{ product.featured_image | image_url: width: 1600 }} 1600w,
+                     {{ product.featured_image | image_url: width: 2200 }} 2200w"
+             sizes="100vw"
+             alt="{{ product.title | escape }}"
+             style="width:100%; max-height:{{ section.settings.max_height }}px; object-fit:{{ section.settings.fit }}; display:block;">
+      {% else %}
+        <div style="background:#E8E8E2; height:{{ section.settings.max_height }}px; display:flex; align-items:center; justify-content:center; line-height:normal;">
+          <p style="color:#a0a09a; font-size:0.875rem;">Sube una imagen al producto en Shopify Admin para que aparezca aquí.</p>
+        </div>
+      {% endif %}
+    </div>
   </div>
 </section>
 
