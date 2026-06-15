@@ -1,9 +1,12 @@
 <div style="border-top:1px solid {{ section.settings.border_color }}; border-bottom:1px solid {{ section.settings.border_color }}; background:{{ section.settings.bg_color }}; padding:1.5rem 0;">
-  <div class="max-w-[1320px] mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+  <div style="max-width:1320px; margin:0 auto; padding:0 1.5rem;
+              display:flex; flex-wrap:wrap; gap:0.75rem 2rem;
+              justify-content:{% if section.settings.center %}center{% else %}flex-start{% endif %};
+              align-items:center;">
     {% for block in section.blocks %}
-      <div class="flex items-center gap-3">
-        <span style="font-size:1.125rem; color:{{ section.settings.icon_color }};">{{ block.settings.icon }}</span>
-        <span style="font-size:0.75rem; font-weight:500; color:{{ section.settings.text_color }};">{{ block.settings.text }}</span>
+      <div {{ block.shopify_attributes }} style="display:flex; align-items:center; gap:0.6rem;">
+        <span style="font-size:1.125rem; color:{{ section.settings.icon_color }}; flex-shrink:0;">{{ block.settings.icon }}</span>
+        <span style="font-size:0.75rem; font-weight:500; color:{{ section.settings.text_color }}; white-space:nowrap;">{{ block.settings.text }}</span>
       </div>
     {% endfor %}
   </div>
@@ -13,6 +16,12 @@
 {
   "name": "Trust Bar",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "center",
+      "label": "Centrar los ítems",
+      "default": true
+    },
     {
       "type": "color",
       "id": "bg_color",
