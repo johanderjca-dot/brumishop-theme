@@ -264,30 +264,52 @@
         "text_color": "#5a5a52"
       }
     },
-    "lp-how-to-use": {
-      "type": "lp-how-to-use",
-      "settings": {
-        "img_height": 500,
-        "img_fit": "cover",
-        "img_radius": 4,
-        "eyebrow": "MODO DE USO",
-        "title": "¿Cómo se usa?",
-        "description": "",
-        "layout": "image-right",
-        "img_col": 1,
-        "text_col": 1,
-        "overlay_opacity": 40,
-        "text_x": "center",
-        "text_align": "center",
-        "bg_color": "#f8f7f3",
-        "eyebrow_color": "#5a7a40",
-        "heading_color": "#1a1a18",
-        "text_color": "#5a5a52",
-        "py": 72
-      }
-    },
     "lp-problem-solution": {
       "type": "lp-problem-solution",
+      "blocks": {
+        "block_cQUkYG": {
+          "type": "block",
+          "settings": {
+            "problem_label": "EL PROBLEMA",
+            "problem_title": "¿Cansado de productos que no funcionan?",
+            "problem_text": "Muchos productos en el mercado prometen resultados pero no los cumplen. Pierdes dinero y tiempo sin ver mejoras reales.",
+            "solution_label": "LA SOLUCIÓN",
+            "solution_title": "Nuestro producto sí funciona — garantizado",
+            "solution_text": "Con nuestra fórmula probada y miles de clientes satisfechos, verás resultados reales desde la primera semana de uso.",
+            "show_btn": false,
+            "btn_text": "Quiero este producto",
+            "btn_bg": "#1a1a18",
+            "btn_color": "#ffffff",
+            "btn_radius": 4,
+            "image": "shopify://shop_images/Firefly_Flux_hazlo_mas_pro_agregale_un_fondo_suave_como_si_fuese_un_producto_ninja_en_una_cocin_603505.png",
+            "img_radius": 8,
+            "img_height": 440
+          }
+        },
+        "block_8UHjf4": {
+          "type": "block",
+          "settings": {
+            "problem_label": "EL PROBLEMA",
+            "problem_title": "¿Cansado de productos que no funcionan?",
+            "problem_text": "Muchos productos en el mercado prometen resultados pero no los cumplen. Pierdes dinero y tiempo sin ver mejoras reales.",
+            "solution_label": "LA SOLUCIÓN",
+            "solution_title": "Nuestro producto sí funciona — garantizado",
+            "solution_text": "Con nuestra fórmula probada y miles de clientes satisfechos, verás resultados reales desde la primera semana de uso.",
+            "show_btn": false,
+            "btn_text": "Quiero este producto",
+            "btn_bg": "#1a1a18",
+            "btn_color": "#ffffff",
+            "btn_radius": 4,
+            "image": "shopify://shop_images/Firefly_Flux_hazlomaspro_agregaleunfondosuave_comosifueseunproductoninja_enunacocin603505.png",
+            "img_radius": 8,
+            "img_height": 440
+          }
+        }
+      },
+      "block_order": [
+        "block_cQUkYG",
+        "block_8UHjf4"
+      ],
       "settings": {
         "py": 80,
         "bg_odd": "#ffffff",
@@ -359,7 +381,6 @@
     "lp-reviews",
     "lp-shipping",
     "lp-policies",
-    "lp-how-to-use",
     "lp-problem-solution",
     "lp-faq",
     "lp-testimonials",
