@@ -42,7 +42,46 @@
   var btn = document.getElementById('lp-sticky-buy');
   if (!btn) return;
   var defaultId = {{ cv.id }};
+
+  function findReleaseitBtn() {
+    var selectors = [
+      '.ri-buy-now-btn',
+      '.ri-buy-button',
+      '.ri-btn-buy',
+      '[data-ri-buy-now]',
+      '[data-ri-buy-button]',
+      '[data-releaseit-btn]',
+      '#ri-buy-btn',
+      '#ri-buy-now',
+      '.ri-form-trigger',
+      '[class*="ri-buy"]',
+      '[id*="ri-buy"]'
+    ];
+    for (var i = 0; i < selectors.length; i++) {
+      var el = document.querySelector(selectors[i]);
+      if (el) return el;
+    }
+    return null;
+  }
+
   btn.addEventListener('click', function() {
+    // Intenta disparar el popup de Releaseit
+    var riBtn = findReleaseitBtn();
+    if (riBtn) {
+      riBtn.click();
+      return;
+    }
+    // Intenta API global de Releaseit
+    if (window.releaseit && typeof window.releaseit.open === 'function') {
+      window.releaseit.open(); return;
+    }
+    if (window.Ri && typeof window.Ri.openForm === 'function') {
+      window.Ri.openForm(); return;
+    }
+    if (window.RiBuyNow && typeof window.RiBuyNow.open === 'function') {
+      window.RiBuyNow.open(); return;
+    }
+    // Fallback: ir al carrito
     var id = window.brumiSelectedVariantId || defaultId;
     window.location.href = '/cart/' + id + ':1';
   });

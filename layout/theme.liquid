@@ -26,6 +26,14 @@
 
   {{ content_for_header }}
   {{ 'theme.css' | asset_url | stylesheet_tag }}
+  {% if template == 'product' %}
+  <style>
+    /* Oculta el botón de Releaseit — usamos nuestro botón sticky personalizado */
+    .ri-buy-now-section, .ri-buy-button-wrapper, .ri-buy-now-wrapper,
+    [class*="ri-buy-now"], [class*="ri-buy-button"], [id*="ri-buy"],
+    .releaseit-buy-btn, .ri-sticky-btn, .ri-floating-btn { display: none !important; }
+  </style>
+  {% endif %}
 </head>
 <body class="bg-white text-[#1a1a18] overflow-x-hidden antialiased">
 
