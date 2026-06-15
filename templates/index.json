@@ -118,7 +118,7 @@
         "item-4"
       ],
       "settings": {
-        "bg_color": "#fafaf6",
+        "bg_color": "#FFFFFF",
         "border_color": "#e8e8e2",
         "icon_color": "#f67300",
         "text_color": "#5a5a52"
@@ -132,7 +132,7 @@
         "collection": "",
         "products_to_show": 12,
         "btn_label": "Ver producto →",
-        "card_width": 260,
+        "card_width": 240,
         "gap": 16,
         "card_radius": 8,
         "bg_color": "#ffffff",
@@ -143,27 +143,7 @@
         "accent_color": "#5a7a40",
         "btn_bg": "#1a1a18",
         "btn_color": "#ffffff",
-        "py": 72
-      }
-    },
-    "featured-collection-1": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "Más Vendidos",
-        "collection": "",
-        "products_to_show": 5,
-        "bg_color": "#ffffff"
-      }
-    },
-    "featured-collection-2": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "Menos de $25",
-        "collection": "",
-        "products_to_show": 5,
-        "bg_color": "#f8f7f3"
+        "py": 48
       }
     },
     "feature-banners": {
@@ -307,8 +287,6 @@
     "category-cards",
     "trust-bar",
     "product-carousel",
-    "featured-collection-1",
-    "featured-collection-2",
     "feature-banners",
     "why-us-vs",
     "brand-marquee"
