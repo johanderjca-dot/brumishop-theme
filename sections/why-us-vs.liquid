@@ -3,11 +3,12 @@
   .vs-cross  { color: #c0392b; font-size: 1rem; }
   .vs-row    { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.85rem 0; border-bottom: 1px solid {{ section.settings.border_color }}; }
   .vs-row:last-child { border-bottom: none; }
-  .vs-grid   { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
-  @media (max-width: 640px) {
-    .vs-grid { grid-template-columns: 1fr; gap: 1rem; }
-    .vs-col-our  { border-radius: 12px 12px 0 0 !important; }
-    .vs-col-comp { border-radius: 0 0 12px 12px !important; }
+  .vs-grid   { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: start; }
+  @media (min-width: 640px) { .vs-grid { gap: 2rem; } }
+  @media (max-width: 639px) {
+    .vs-col-our, .vs-col-comp { padding: 1rem !important; border-radius: 8px !important; }
+    .vs-row p { font-size: 0.75rem !important; }
+    .vs-row { padding: 0.65rem 0 !important; gap: 0.5rem !important; }
   }
 </style>
 
