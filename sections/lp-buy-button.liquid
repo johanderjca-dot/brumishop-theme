@@ -44,34 +44,32 @@
         </button>
       {% endform %}
     {% else %}
-      <!-- Direct checkout: name="checkout" bypasses cart and goes straight to payment -->
-      {% form 'product', product, class: 'lp-buy-btn-form' %}
-        <input type="hidden" name="id" class="brumi-variant-id" data-brumi-variant value="{{ cv.id }}">
-        <input type="hidden" name="quantity" value="1">
-        <button type="submit" name="checkout"
-                style="
-                  background: {{ section.settings.btn_bg }};
-                  color: {{ section.settings.btn_color }};
-                  font-size: {{ section.settings.btn_font_size }}px;
-                  font-weight: {{ section.settings.btn_font_weight }};
-                  letter-spacing: {{ section.settings.btn_tracking }}em;
-                  padding: {{ section.settings.btn_py }}px {{ section.settings.btn_px }}px;
-                  border: {{ section.settings.btn_border_width }}px solid {{ section.settings.btn_border_color }};
-                  border-radius: {{ section.settings.btn_radius }}px;
-                  cursor: pointer;
-                  {% if section.settings.btn_width == 'full' %}width:100%;{% elsif section.settings.btn_width == 'auto' %}display:inline-block;{% else %}width:{{ section.settings.btn_custom_width }}px;{% endif %}
-                  {% if section.settings.btn_shadow %}box-shadow:0 4px 20px rgba(0,0,0,0.15);{% endif %}
-                  text-transform: {{ section.settings.btn_transform }};
-                  transition: transform 160ms cubic-bezier(0.23,1,0.32,1), opacity .15s;
-                "
-                onmouseover="this.style.opacity='0.88'"
-                onmouseout="this.style.opacity='1'"
-                onmousedown="this.style.transform='scale(0.97)'"
-                onmouseup="this.style.transform='scale(1)'"
-                {% unless cv.available %}disabled{% endunless %}>
-          {% if cv.available %}{{ section.settings.btn_text }}{% else %}Agotado{% endif %}
-        </button>
-      {% endform %}
+      <!-- Enlace directo al carrito — evita overlays de apps de pago -->
+      {% assign cart_url = '/cart/' | append: cv.id | append: ':1' %}
+      <a href="{{ cart_url }}" id="lp-buy-link"
+         style="
+           display: {% if section.settings.btn_width == 'full' %}block{% else %}inline-block{% endif %};
+           background: {{ section.settings.btn_bg }};
+           color: {{ section.settings.btn_color }};
+           font-size: {{ section.settings.btn_font_size }}px;
+           font-weight: {{ section.settings.btn_font_weight }};
+           letter-spacing: {{ section.settings.btn_tracking }}em;
+           padding: {{ section.settings.btn_py }}px {{ section.settings.btn_px }}px;
+           border: {{ section.settings.btn_border_width }}px solid {{ section.settings.btn_border_color }};
+           border-radius: {{ section.settings.btn_radius }}px;
+           text-decoration: none;
+           text-align: center;
+           {% if section.settings.btn_width == 'custom' %}width:{{ section.settings.btn_custom_width }}px;{% elsif section.settings.btn_width == 'full' %}width:100%;box-sizing:border-box;{% endif %}
+           {% if section.settings.btn_shadow %}box-shadow:0 4px 20px rgba(0,0,0,0.15);{% endif %}
+           text-transform: {{ section.settings.btn_transform }};
+           transition: transform 160ms cubic-bezier(0.23,1,0.32,1), opacity .15s;
+         "
+         onmouseover="this.style.opacity='0.88'"
+         onmouseout="this.style.opacity='1'"
+         onmousedown="this.style.transform='scale(0.97)'"
+         onmouseup="this.style.transform='scale(1)'">
+        {{ section.settings.btn_text }}
+      </a>
     {% endif %}
 
     {% if section.settings.btn_subtext != blank %}
