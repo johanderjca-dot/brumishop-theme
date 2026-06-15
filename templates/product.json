@@ -126,9 +126,9 @@
     "lp-offer": {
       "type": "lp-offer",
       "settings": {
-        "price_size": 42,
+        "price_size": 22,
         "price_color": "#1a1a18",
-        "fake_price_amount": 0,
+        "fake_price_amount": 2500,
         "card_bg": "#ffffff",
         "card_border_color": "#e0e0da",
         "card_border_width": 1,
@@ -142,9 +142,10 @@
         "urgency_suffix": "unidades disponibles",
         "urgency_color": "#c0392b",
         "badge_text": "",
-        "heading": "",
+        "heading": "Consíguelo ahora con descuento exclusivo",
+        "heading_color": "#1a1a18",
         "max_width": 640,
-        "pt": 15,
+        "pt": 0,
         "pb": 15,
         "bg_color": "#ffffff"
       }
