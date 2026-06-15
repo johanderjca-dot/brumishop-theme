@@ -31,7 +31,6 @@
         "custom_description": "",
         "align": "center",
         "max_width": 1160,
-        "py": 40,
         "bg_color": "#ffffff",
         "accent_color": "#5a7a40",
         "heading_color": "#1a1a18",
@@ -46,14 +45,9 @@
         "subtitle": "",
         "title_align": "center",
         "columns": "3",
-        "card_align": "center",
-        "card_padding": 32,
-        "card_radius": 4,
         "icon_size": 40,
         "py": 80,
         "bg_color": "#fafaf6",
-        "card_bg": "#ffffff",
-        "card_border": "#e8e8e2",
         "heading_color": "#1a1a18",
         "text_color": "#5a5a52"
       }
