@@ -1,4 +1,13 @@
 {% assign cv = product.selected_or_first_available_variant %}
+{% assign has_fake = false %}
+{% if section.settings.fake_price_amount > 0 %}
+  {% assign fake_cents = section.settings.fake_price_amount | times: 100 %}
+  {% if fake_cents > cv.price %}
+    {% assign has_fake = true %}
+    {% assign savings_cents = fake_cents | minus: cv.price %}
+    {% assign savings_pct = savings_cents | times: 100 | divided_by: fake_cents %}
+  {% endif %}
+{% endif %}
 
 <style>
   .lp-offer-variant-input:checked + .lp-offer-variant-label {
@@ -7,11 +16,6 @@
     color: #fff;
   }
 </style>
-
-{% assign has_top_content = false %}
-{% if section.settings.badge_text != blank or section.settings.heading != blank %}
-  {% assign has_top_content = true %}
-{% endif %}
 
 <section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.pt }}px 0 {{ section.settings.pb }}px;">
   <div style="max-width:{{ section.settings.max_width }}px; margin:0 auto; padding:0 1.5rem; text-align:center;">
@@ -23,58 +27,72 @@
     {% endif %}
 
     {% if section.settings.heading != blank %}
-      <h2 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.5rem,3.5vw,2.75rem); font-weight:600; color:{{ section.settings.heading_color }}; margin-bottom:0.75rem; line-height:1.2;">
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.5rem,3.5vw,2.5rem); font-weight:600; color:{{ section.settings.heading_color }}; margin-bottom:0.85rem; line-height:1.2;">
         {{ section.settings.heading }}
       </h2>
     {% endif %}
 
-    <!-- Precio real + precio tachado -->
-    <div style="display:flex; align-items:center; justify-content:center; gap:0.85rem; {% if has_top_content %}margin-top:0;{% endif %} margin-bottom:0.75rem; flex-wrap:wrap;">
-      <span id="lp-offer-price" style="font-size:{{ section.settings.price_size }}px; font-weight:700; color:{{ section.settings.price_color }};">
-        {{ cv.price | money }}
-      </span>
-      {% if section.settings.fake_price != blank %}
-        <span style="font-size:{{ section.settings.price_size | times: 0.7 | round }}px; color:#a0a09a; text-decoration:line-through;">
-          {{ section.settings.fake_price }}
+    <!-- Tarjeta de precio -->
+    <div style="background:{{ section.settings.card_bg }}; border:{{ section.settings.card_border_width }}px solid {{ section.settings.card_border_color }}; border-radius:{{ section.settings.card_radius }}px; padding:{{ section.settings.card_pad }}px; max-width:{{ section.settings.card_max_width }}px; margin:0 auto;">
+
+      <!-- Precio real + tachado -->
+      <div style="display:flex; align-items:center; justify-content:center; gap:0.85rem; flex-wrap:wrap; margin-bottom:{% if has_fake %}0.85rem{% else %}0{% endif %};">
+        <span id="lp-offer-price" style="font-size:{{ section.settings.price_size }}px; font-weight:700; color:{{ section.settings.price_color }}; line-height:1;">
+          {{ cv.price | money }}
         </span>
-      {% elsif cv.compare_at_price > cv.price %}
-        <span id="lp-offer-compare" style="font-size:{{ section.settings.price_size | times: 0.7 | round }}px; color:#a0a09a; text-decoration:line-through;">
-          {{ cv.compare_at_price | money }}
-        </span>
-        {% assign pct = cv.compare_at_price | minus: cv.price | times: 100 | divided_by: cv.compare_at_price %}
-        <span style="background:#d63a3a; color:#fff; font-size:0.72rem; font-weight:700; padding:0.25rem 0.55rem; border-radius:4px;">
-          AHORRAS {{ pct }}%
-        </span>
+        {% if has_fake %}
+          <span style="font-size:{{ section.settings.price_size | times: 0.55 | round }}px; color:#a0a09a; text-decoration:line-through; line-height:1;">
+            {{ fake_cents | money }}
+          </span>
+        {% elsif cv.compare_at_price > cv.price %}
+          <span style="font-size:{{ section.settings.price_size | times: 0.55 | round }}px; color:#a0a09a; text-decoration:line-through; line-height:1;">
+            {{ cv.compare_at_price | money }}
+          </span>
+        {% endif %}
+      </div>
+
+      <!-- Caja de ahorro -->
+      {% if has_fake %}
+        <div style="background:{{ section.settings.savings_bg }}; border-radius:8px; padding:0.6rem 1.25rem; display:inline-flex; align-items:center; gap:0.5rem; margin-bottom:0;">
+          <span style="color:{{ section.settings.savings_color }}; font-size:0.85rem; font-weight:700;">
+            ✓ Ahorras {{ savings_cents | money }} — {{ savings_pct }}% OFF
+          </span>
+        </div>
       {% endif %}
+
     </div>
 
+    <!-- Urgencia -->
     {% if section.settings.urgency_qty > 0 %}
-      <p style="font-size:0.85rem; color:{{ section.settings.urgency_color }}; margin-bottom:1.25rem; font-weight:600;">
-        {{ section.settings.urgency_prefix }}{{ section.settings.urgency_qty }}{{ section.settings.urgency_suffix }}
+      <p style="font-size:0.85rem; color:{{ section.settings.urgency_color }}; margin-top:1rem; margin-bottom:0; font-weight:600;">
+        {{ section.settings.urgency_prefix | strip }} {{ section.settings.urgency_qty }} {{ section.settings.urgency_suffix | strip }}
       </p>
     {% endif %}
 
+    <!-- Variantes (si el producto las tiene) -->
     {% form 'product', product, id: 'lp-offer-form' %}
       {% unless product.has_only_default_variant %}
-        {% for option in product.options_with_values %}
-          <div style="margin-bottom:1rem;">
-            <p style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#1a1a18; margin-bottom:0.6rem;">{{ option.name }}</p>
-            <div style="display:flex; flex-wrap:wrap; gap:0.5rem; justify-content:center;">
-              {% for value in option.values %}
-                <label>
-                  <input type="radio" name="options[{{ option.name }}]" value="{{ value }}"
-                         class="lp-offer-variant-input" style="display:none;"
-                         {% if option.selected_value == value %}checked{% endif %}>
-                  <span class="lp-offer-variant-label"
-                        style="display:inline-block; padding:0.5rem 1.1rem; font-size:0.8rem; font-weight:500; border:1.5px solid #E0E0DA; cursor:pointer; border-radius:3px; transition:all .15s; user-select:none;
-                        {% if option.selected_value == value %}border-color:#1a1a18;background:#1a1a18;color:#fff;{% endif %}">
-                    {{ value }}
-                  </span>
-                </label>
-              {% endfor %}
+        <div style="margin-top:1.25rem;">
+          {% for option in product.options_with_values %}
+            <div style="margin-bottom:1rem;">
+              <p style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#1a1a18; margin-bottom:0.6rem;">{{ option.name }}</p>
+              <div style="display:flex; flex-wrap:wrap; gap:0.5rem; justify-content:center;">
+                {% for value in option.values %}
+                  <label>
+                    <input type="radio" name="options[{{ option.name }}]" value="{{ value }}"
+                           class="lp-offer-variant-input" style="display:none;"
+                           {% if option.selected_value == value %}checked{% endif %}>
+                    <span class="lp-offer-variant-label"
+                          style="display:inline-block; padding:0.5rem 1.1rem; font-size:0.8rem; font-weight:500; border:1.5px solid #E0E0DA; cursor:pointer; border-radius:3px; transition:all .15s; user-select:none;
+                          {% if option.selected_value == value %}border-color:#1a1a18;background:#1a1a18;color:#fff;{% endif %}">
+                      {{ value }}
+                    </span>
+                  </label>
+                {% endfor %}
+              </div>
             </div>
-          </div>
-        {% endfor %}
+          {% endfor %}
+        </div>
       {% endunless %}
       <input type="hidden" name="id" id="lp-offer-variant-id" class="brumi-variant-id" value="{{ cv.id }}" data-brumi-variant>
     {% endform %}
@@ -89,15 +107,11 @@
   var variants = {{ product.variants | json }};
   var options  = {{ product.options | json }};
   var radios   = form.querySelectorAll('.lp-offer-variant-input');
-
   function getSelected() {
     var sel = {};
-    radios.forEach(function(r) {
-      if (r.checked) { sel[r.name.replace('options[','').replace(']','')] = r.value; }
-    });
+    radios.forEach(function(r) { if (r.checked) sel[r.name.replace('options[','').replace(']','')] = r.value; });
     return sel;
   }
-
   radios.forEach(function(r) {
     r.addEventListener('change', function() {
       radios.forEach(function(inp) {
@@ -113,7 +127,6 @@
       if (priceEl) priceEl.textContent = (v.price/100).toLocaleString('es-DO',{style:'currency',currency:'{{ shop.currency }}'});
     });
   });
-
   window.brumiSelectedVariantId = {{ cv.id }};
 })();
 </script>
@@ -122,10 +135,28 @@
 {
   "name": "4 — Precio y Oferta",
   "settings": [
-    { "type": "header", "content": "── PRECIO ──────────────────" },
-    { "type": "range", "id": "price_size", "label": "Tamaño del precio real (px)", "min": 20, "max": 60, "step": 2, "default": 40 },
+    { "type": "header", "content": "── PRECIO ──────────────────────" },
+    { "type": "range", "id": "price_size", "label": "Tamaño del precio (px)", "min": 24, "max": 64, "step": 2, "default": 42 },
     { "type": "color", "id": "price_color", "label": "Color del precio", "default": "#1a1a18" },
-    { "type": "text", "id": "fake_price", "label": "★ PRECIO TACHADO (ej: RD$2,500.00) — vacío = sin precio tachado" },
+    { "type": "number", "id": "fake_price_amount", "label": "★ Precio tachado — escribe solo el número (ej: 2500 = RD$2,500.00)", "default": 0 },
+
+    { "type": "header", "content": "── TARJETA DE PRECIO ───────────" },
+    { "type": "color", "id": "card_bg", "label": "Fondo de la tarjeta", "default": "#FFFFFF" },
+    { "type": "color", "id": "card_border_color", "label": "Color del borde", "default": "#E0E0DA" },
+    { "type": "range", "id": "card_border_width", "label": "Grosor del borde (px)", "min": 0, "max": 4, "step": 1, "default": 1 },
+    { "type": "range", "id": "card_radius", "label": "Bordes redondeados (px)", "min": 0, "max": 24, "step": 2, "default": 12 },
+    { "type": "range", "id": "card_pad", "label": "Relleno de la tarjeta (px)", "min": 12, "max": 48, "step": 4, "default": 24 },
+    { "type": "range", "id": "card_max_width", "label": "Ancho máximo tarjeta (px)", "min": 280, "max": 640, "step": 20, "default": 420 },
+
+    { "type": "header", "content": "── CAJA DE AHORRO ──────────────" },
+    { "type": "color", "id": "savings_bg", "label": "Fondo de la caja de ahorro", "default": "#F0FFF4" },
+    { "type": "color", "id": "savings_color", "label": "Color del texto de ahorro", "default": "#2d7a3a" },
+
+    { "type": "header", "content": "── URGENCIA (0 = no aparece) ───" },
+    { "type": "range", "id": "urgency_qty", "label": "Cantidad de unidades", "min": 0, "max": 99, "step": 1, "default": 0 },
+    { "type": "text", "id": "urgency_prefix", "label": "Texto antes del número", "default": "⚡ Últimas" },
+    { "type": "text", "id": "urgency_suffix", "label": "Texto después del número", "default": "unidades disponibles" },
+    { "type": "color", "id": "urgency_color", "label": "Color del texto", "default": "#c0392b" },
 
     { "type": "header", "content": "── BADGE (vacío = no aparece) ──" },
     { "type": "text", "id": "badge_text", "label": "Texto del badge" },
@@ -133,21 +164,15 @@
     { "type": "color", "id": "badge_color", "label": "Color texto badge", "default": "#856404" },
     { "type": "range", "id": "badge_radius", "label": "Bordes redondeados badge (px)", "min": 0, "max": 50, "step": 2, "default": 50 },
 
-    { "type": "header", "content": "── TÍTULO (vacío = no aparece) ──" },
+    { "type": "header", "content": "── TÍTULO (vacío = no aparece) ─" },
     { "type": "text", "id": "heading", "label": "Título" },
     { "type": "color", "id": "heading_color", "label": "Color título", "default": "#1a1a18" },
 
-    { "type": "header", "content": "Urgencia (0 = no aparece)" },
-    { "type": "range", "id": "urgency_qty", "label": "Cantidad de unidades", "min": 0, "max": 99, "step": 1, "default": 0 },
-    { "type": "text", "id": "urgency_prefix", "label": "Texto antes del número", "default": "⚡ Últimas " },
-    { "type": "text", "id": "urgency_suffix", "label": "Texto después del número", "default": " unidades disponibles" },
-    { "type": "color", "id": "urgency_color", "label": "Color del texto de urgencia", "default": "#c0392b" },
-
-    { "type": "header", "content": "Sección" },
-    { "type": "range", "id": "max_width", "label": "Ancho máximo del contenido (px)", "min": 400, "max": 900, "step": 20, "default": 640 },
+    { "type": "header", "content": "── SECCIÓN ─────────────────────" },
+    { "type": "range", "id": "max_width", "label": "Ancho máximo (px)", "min": 400, "max": 900, "step": 20, "default": 640 },
     { "type": "range", "id": "pt", "label": "Espacio superior (px)", "min": 0, "max": 80, "step": 1, "default": 15 },
     { "type": "range", "id": "pb", "label": "Espacio inferior (px)", "min": 0, "max": 80, "step": 1, "default": 15 },
-    { "type": "color", "id": "bg_color", "label": "Fondo de la sección", "default": "#FAFAF6" }
+    { "type": "color", "id": "bg_color", "label": "Fondo de la sección", "default": "#FFFFFF" }
   ],
   "presets": [{ "name": "4 — Precio y Oferta" }]
 }

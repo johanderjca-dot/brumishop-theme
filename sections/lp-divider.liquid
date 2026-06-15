@@ -1,0 +1,18 @@
+<div style="padding:{{ section.settings.py }}px 0; background:{{ section.settings.bg_color }};">
+  <div style="max-width:{{ section.settings.max_width }}px; margin:0 auto; padding:0 2rem;">
+    <div style="height:1px; background:linear-gradient(to right, transparent, {{ section.settings.line_color }} 25%, {{ section.settings.line_color }} 75%, transparent);"></div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "— Separador",
+  "settings": [
+    { "type": "range", "id": "py", "label": "Espacio vertical (px)", "min": 0, "max": 32, "step": 2, "default": 6 },
+    { "type": "range", "id": "max_width", "label": "Ancho máximo de la línea (px)", "min": 200, "max": 1200, "step": 20, "default": 700 },
+    { "type": "color", "id": "line_color", "label": "Color de la línea", "default": "#d0d0c8" },
+    { "type": "color", "id": "bg_color", "label": "Color de fondo", "default": "#ffffff" }
+  ],
+  "presets": [{ "name": "— Separador" }]
+}
+{% endschema %}
