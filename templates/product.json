@@ -266,6 +266,50 @@
     },
     "lp-problem-solution": {
       "type": "lp-problem-solution",
+      "blocks": {
+        "block_QUMQJ3": {
+          "type": "block",
+          "settings": {
+            "problem_label": "EL PROBLEMA",
+            "problem_title": "¿Cansado de productos que no funcionan?",
+            "problem_text": "Muchos productos en el mercado prometen resultados pero no los cumplen. Pierdes dinero y tiempo sin ver mejoras reales.",
+            "solution_label": "LA SOLUCIÓN",
+            "solution_title": "Nuestro producto sí funciona — garantizado",
+            "solution_text": "Con nuestra fórmula probada y miles de clientes satisfechos, verás resultados reales desde la primera semana de uso.",
+            "show_btn": false,
+            "btn_text": "Quiero este producto",
+            "btn_bg": "#1a1a18",
+            "btn_color": "#ffffff",
+            "btn_radius": 4,
+            "image": "shopify://shop_images/Firefly_Flux_hazlomaspro_agregaleunfondosuave_comosifueseunproductoninja_enunacocin603505.png",
+            "img_radius": 8,
+            "img_height": 440
+          }
+        },
+        "block_Q7zLAT": {
+          "type": "block",
+          "settings": {
+            "problem_label": "EL PROBLEMA",
+            "problem_title": "¿Cansado de productos que no funcionan?",
+            "problem_text": "Muchos productos en el mercado prometen resultados pero no los cumplen. Pierdes dinero y tiempo sin ver mejoras reales.",
+            "solution_label": "LA SOLUCIÓN",
+            "solution_title": "Nuestro producto sí funciona — garantizado",
+            "solution_text": "Con nuestra fórmula probada y miles de clientes satisfechos, verás resultados reales desde la primera semana de uso.",
+            "show_btn": true,
+            "btn_text": "Quiero este producto",
+            "btn_bg": "#1a1a18",
+            "btn_color": "#ffffff",
+            "btn_radius": 4,
+            "image": "shopify://shop_images/Firefly_Flux_hazlomaspro_agregaleunfondosuave_comosifueseunproductoninja_enunacocin603505.png",
+            "img_radius": 8,
+            "img_height": 440
+          }
+        }
+      },
+      "block_order": [
+        "block_QUMQJ3",
+        "block_Q7zLAT"
+      ],
       "settings": {
         "py": 80,
         "bg_odd": "#ffffff",
