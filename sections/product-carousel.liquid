@@ -103,7 +103,11 @@
           <a href="{{ product.url }}" style="display:block; text-decoration:none;">
             <div class="pc-img-wrap">
               {% if product.featured_image %}
-                <img src="{{ product.featured_image | image_url: width: 600 }}"
+                <img src="{{ product.featured_image | image_url: width: 800 }}"
+                     srcset="{{ product.featured_image | image_url: width: 400 }} 400w,
+                             {{ product.featured_image | image_url: width: 800 }} 800w,
+                             {{ product.featured_image | image_url: width: 1200 }} 1200w"
+                     sizes="(max-width: 640px) 72vw, 280px"
                      alt="{{ product.title | escape }}"
                      loading="lazy">
               {% else %}

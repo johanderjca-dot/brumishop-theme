@@ -30,6 +30,10 @@
         <div class="flex items-center justify-center py-8" style="min-height: {{ section.settings.min_height }}px;">
           {% if block.settings.image != blank %}
             <img src="{{ block.settings.image | image_url: width: 1000 }}"
+                 srcset="{{ block.settings.image | image_url: width: 600 }} 600w,
+                         {{ block.settings.image | image_url: width: 1000 }} 1000w,
+                         {{ block.settings.image | image_url: width: 1600 }} 1600w"
+                 sizes="(max-width: 640px) 90vw, 50vw"
                  alt="{{ block.settings.title }}"
                  style="
                    max-width: {{ block.settings.image_max_width }}%;

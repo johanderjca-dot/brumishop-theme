@@ -3,7 +3,12 @@
 <section style="background:{{ section.settings.bg_color }};">
   <div {% unless section.settings.full_width %}style="max-width:1320px;margin:0 auto;padding:{{ section.settings.padding }}px 1.5rem;"{% endunless %}>
     {% if hero_img != blank %}
-      <img src="{{ hero_img | image_url: width: 2000 }}"
+      <img src="{{ hero_img | image_url: width: 1600 }}"
+           srcset="{{ hero_img | image_url: width: 750 }} 750w,
+                   {{ hero_img | image_url: width: 1100 }} 1100w,
+                   {{ hero_img | image_url: width: 1600 }} 1600w,
+                   {{ hero_img | image_url: width: 2200 }} 2200w"
+           sizes="100vw"
            alt="{{ product.title | escape }}"
            style="width:100%; max-height:{{ section.settings.max_height }}px; object-fit:{{ section.settings.fit }}; display:block;">
     {% else %}
