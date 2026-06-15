@@ -12,10 +12,7 @@
         "bg_color": "#ffffff"
       }
     },
-    "div-1": {
-      "type": "lp-divider",
-      "settings": {}
-    },
+    "div-1": { "type": "lp-divider", "settings": {} },
     "lp-description": {
       "type": "lp-description",
       "settings": {
@@ -23,6 +20,7 @@
         "custom_title": "Licua Max",
         "slogan": "A donde sea, va contigo",
         "show_product_description": true,
+        "custom_description": "",
         "eyebrow_size": 11,
         "title_size": 48,
         "slogan_size": 22,
@@ -39,9 +37,13 @@
         "box_radius": 8,
         "box_pad": 24,
         "eyebrow_box": false,
+        "eyebrow_box_bg": "#f0f0ea",
         "title_box": false,
+        "title_box_bg": "#ffffff",
         "slogan_box": false,
+        "slogan_box_bg": "#ffffff",
         "desc_box": false,
+        "desc_box_bg": "#ffffff",
         "bg_color": "#ffffff",
         "accent_color": "#5a7a40",
         "heading_color": "#1a1a18",
@@ -49,18 +51,17 @@
         "text_color": "#5a5a52"
       }
     },
-    "div-2": {
-      "type": "lp-divider",
-      "settings": {}
-    },
+    "div-2": { "type": "lp-divider", "settings": {} },
     "lp-benefits": {
       "type": "lp-benefits",
       "blocks": {
         "benefit_6h3kaz": {
           "type": "benefit",
           "settings": {
+            "icon_url": "",
             "icon_emoji": "✓",
             "title": "0 conexión a luz.",
+            "description": "",
             "show_box": false,
             "box_bg": "#ffffff"
           }
@@ -68,8 +69,10 @@
         "benefit_EqcdRj": {
           "type": "benefit",
           "settings": {
+            "icon_url": "",
             "icon_emoji": "✓",
             "title": "Para porciones individuales",
+            "description": "",
             "show_box": false,
             "box_bg": "#ffffff"
           }
@@ -77,8 +80,10 @@
         "benefit_7hhXRx": {
           "type": "benefit",
           "settings": {
+            "icon_url": "",
             "icon_emoji": "✓",
             "title": "Alta calidad",
+            "description": "",
             "show_box": false,
             "box_bg": "#ffffff"
           }
@@ -86,8 +91,10 @@
         "benefit_HFXBUJ": {
           "type": "benefit",
           "settings": {
+            "icon_url": "",
             "icon_emoji": "✓",
             "title": "Llevalo donde sea, en donde sea.",
+            "description": "",
             "show_box": false,
             "box_bg": "#ffffff"
           }
@@ -101,6 +108,7 @@
       ],
       "settings": {
         "title": "¿Por qué este LicuaMax?",
+        "subtitle": "",
         "title_align": "center",
         "columns": "1",
         "gap": 8,
@@ -119,10 +127,7 @@
         "text_color": "#5a5a52"
       }
     },
-    "div-3": {
-      "type": "lp-divider",
-      "settings": { "bg_color": "#fafaf6" }
-    },
+    "div-3": { "type": "lp-divider", "settings": { "bg_color": "#fafaf6" } },
     "lp-offer": {
       "type": "lp-offer",
       "settings": {
@@ -147,13 +152,14 @@
         "max_width": 640,
         "pt": 0,
         "pb": 15,
-        "bg_color": "#ffffff"
+        "bg_color": "#FFFFFF"
       }
     },
     "lp-reviews": {
       "type": "lp-reviews",
       "settings": {
         "title": "Lo que dicen nuestros clientes",
+        "subtitle": "",
         "title_align": "center",
         "columns": "3",
         "card_radius": 8,
@@ -194,34 +200,21 @@
         "text_color": "#5a5a52"
       }
     },
-    "lp-buy-button": {
-      "type": "lp-buy-button",
-      "settings": {
-        "btn_subtext": "✓ Pago seguro  ·  ✓ Envío gratis  ·  ✓ Devolución 30 días",
-        "action": "checkout",
-        "btn_text": "Comprar ahora",
-        "btn_font_size": 16,
-        "btn_font_weight": "700",
-        "btn_width": "custom",
-        "btn_custom_width": 360,
-        "btn_py": 20,
-        "btn_px": 48,
-        "btn_radius": 6,
-        "btn_bg": "#1a1a18",
-        "btn_color": "#ffffff",
-        "align": "center",
-        "py": 64,
-        "bg_color": "#ffffff",
-        "heading_color": "#1a1a18",
-        "text_color": "#a0a09a"
-      }
-    },
     "lp-how-to-use": {
       "type": "lp-how-to-use",
       "settings": {
+        "img_height": 500,
+        "img_fit": "cover",
+        "img_radius": 4,
         "eyebrow": "MODO DE USO",
         "title": "¿Cómo se usa?",
+        "description": "",
         "layout": "image-right",
+        "img_col": 1,
+        "text_col": 1,
+        "overlay_opacity": 40,
+        "text_x": "center",
+        "text_align": "center",
         "bg_color": "#f8f7f3",
         "eyebrow_color": "#5a7a40",
         "heading_color": "#1a1a18",
@@ -233,19 +226,21 @@
       "type": "lp-problem-solution",
       "settings": {
         "py": 80,
-        "bg_color_odd": "#ffffff",
-        "bg_color_even": "#fafaf6",
+        "bg_odd": "#ffffff",
+        "bg_even": "#fafaf6",
         "border_color": "#e8e8e2",
         "problem_color": "#c0392b",
         "solution_color": "#5a7a40",
         "heading_color": "#1a1a18",
-        "text_color": "#5a5a52"
+        "text_color": "#5a5a52",
+        "img_bg": "#f0f0ea"
       }
     },
     "lp-faq": {
       "type": "lp-faq",
       "settings": {
         "title": "Preguntas frecuentes",
+        "subtitle": "",
         "title_align": "left",
         "max_width": 780,
         "py": 80,
@@ -260,6 +255,7 @@
       "settings": {
         "badge_text": "✓ Testimonios reales de clientes",
         "title": "Esto dicen quienes ya lo tienen",
+        "subtitle": "",
         "columns": "3",
         "card_radius": 10,
         "bg_color": "#f8f7f3",
@@ -284,7 +280,6 @@
     "lp-reviews",
     "lp-shipping",
     "lp-policies",
-    "lp-buy-button",
     "lp-how-to-use",
     "lp-problem-solution",
     "lp-faq",
