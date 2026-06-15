@@ -21,16 +21,7 @@
         "bg_color": "#ffffff"
       }
     },
-    "div-1": {
-      "type": "lp-divider",
-      "settings": {
-        "py": 6,
-        "max_width": 700,
-        "line_color": "#d0d0c8",
-        "bg_above": "#ffffff",
-        "bg_below": "#ffffff"
-      }
-    },
+    "div-1": { "type": "lp-divider", "settings": { "bg_above": "#ffffff", "bg_below": "#ffffff" } },
     "lp-description": {
       "type": "lp-description",
       "settings": {
@@ -69,16 +60,7 @@
         "text_color": "#5a5a52"
       }
     },
-    "div-2": {
-      "type": "lp-divider",
-      "settings": {
-        "py": 6,
-        "max_width": 700,
-        "line_color": "#d0d0c8",
-        "bg_above": "#ffffff",
-        "bg_below": "#fafaf6"
-      }
-    },
+    "div-2": { "type": "lp-divider", "settings": { "bg_above": "#ffffff", "bg_below": "#fafaf6" } },
     "lp-benefits": {
       "type": "lp-benefits",
       "blocks": {
@@ -154,16 +136,7 @@
         "text_color": "#5a5a52"
       }
     },
-    "div-3": {
-      "type": "lp-divider",
-      "settings": {
-        "py": 6,
-        "max_width": 700,
-        "line_color": "#d0d0c8",
-        "bg_above": "#fafaf6",
-        "bg_below": "#ffffff"
-      }
-    },
+    "div-3": { "type": "lp-divider", "settings": { "bg_above": "#fafaf6", "bg_below": "#ffffff" } },
     "lp-offer": {
       "type": "lp-offer",
       "settings": {
@@ -183,15 +156,12 @@
         "urgency_suffix": "unidades disponibles",
         "urgency_color": "#c0392b",
         "badge_text": "",
-        "badge_bg": "#fff3cd",
-        "badge_color": "#856404",
-        "badge_radius": 50,
         "heading": "Consíguelo ahora con descuento exclusivo",
         "heading_color": "#1a1a18",
         "max_width": 640,
         "pt": 0,
         "pb": 15,
-        "bg_color": "#ffffff"
+        "bg_color": "#FFFFFF"
       }
     },
     "lp-reviews": {
@@ -305,38 +275,6 @@
         "text_color": "#5a5a52",
         "py": 80
       }
-    },
-    "lp-sticky-btn": {
-      "type": "lp-sticky-btn",
-      "settings": {
-        "btn_text": "Ordenar",
-        "btn_bg": "#1a1a18",
-        "btn_color": "#ffffff",
-        "btn_font_size": 16,
-        "btn_py": 16,
-        "btn_px": 48,
-        "btn_radius": 6,
-        "btn_max_width": 480,
-        "bar_bg": "#ffffff",
-        "bar_py": 12,
-        "bar_px": 16,
-        "bar_height": 80
-      }
-    },
-    "178149700661e41949": {
-      "type": "apps",
-      "blocks": {
-        "releasit_cod_form_button_app_block_KiAQDN": {
-          "type": "shopify://apps/releasit-cod-form/blocks/button-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "releasit_cod_form_button_app_block_KiAQDN"
-      ],
-      "settings": {}
     }
   },
   "order": [
@@ -353,8 +291,6 @@
     "lp-how-to-use",
     "lp-problem-solution",
     "lp-faq",
-    "lp-testimonials",
-    "lp-sticky-btn",
-    "178149700661e41949"
+    "lp-testimonials"
   ]
 }
