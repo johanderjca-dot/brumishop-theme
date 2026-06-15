@@ -97,37 +97,81 @@
       <input type="hidden" name="id" id="lp-offer-variant-id" class="brumi-variant-id" value="{{ cv.id }}" data-brumi-variant>
     {% endform %}
 
+    <!-- Botón de comprar -->
+    {% if section.settings.show_btn %}
+      <div style="margin-top:1.5rem;">
+        <button id="lp-offer-buy-btn"
+                style="
+                  background: {{ section.settings.btn_bg }};
+                  color: {{ section.settings.btn_color }};
+                  font-size: {{ section.settings.btn_font_size }}px;
+                  font-weight: 700;
+                  padding: {{ section.settings.btn_py }}px {{ section.settings.btn_px }}px;
+                  border: none;
+                  border-radius: {{ section.settings.btn_radius }}px;
+                  cursor: pointer;
+                  {% if section.settings.btn_width == 'full' %}width:100%;{% elsif section.settings.btn_width == 'custom' %}width:{{ section.settings.btn_custom_width }}px;{% endif %}
+                  transition: transform 160ms cubic-bezier(0.23,1,0.32,1), opacity .15s;
+                "
+                onmouseover="this.style.opacity='0.88'"
+                onmouseout="this.style.opacity='1'"
+                onmousedown="this.style.transform='scale(0.97)'"
+                onmouseup="this.style.transform='scale(1)'">
+          {{ section.settings.btn_text }}
+        </button>
+      </div>
+    {% endif %}
+
   </div>
 </section>
 
 <script>
 (function() {
   var form = document.getElementById('lp-offer-form');
-  if (!form) return;
   var variants = {{ product.variants | json }};
   var options  = {{ product.options | json }};
-  var radios   = form.querySelectorAll('.lp-offer-variant-input');
-  function getSelected() {
-    var sel = {};
-    radios.forEach(function(r) { if (r.checked) sel[r.name.replace('options[','').replace(']','')] = r.value; });
-    return sel;
-  }
-  radios.forEach(function(r) {
-    r.addEventListener('change', function() {
-      radios.forEach(function(inp) {
-        var lbl = inp.nextElementSibling;
-        if (inp.checked) { lbl.style.borderColor='#1a1a18'; lbl.style.background='#1a1a18'; lbl.style.color='#fff'; }
-        else { lbl.style.borderColor=''; lbl.style.background=''; lbl.style.color=''; }
-      });
-      var v = variants.find(function(v) { return v.options.every(function(o,i){ return getSelected()[options[i]]===o; }); });
-      if (!v) return;
-      document.querySelectorAll('.brumi-variant-id').forEach(function(i){ i.value = v.id; });
-      window.brumiSelectedVariantId = v.id;
-      var priceEl = document.getElementById('lp-offer-price');
-      if (priceEl) priceEl.textContent = (v.price/100).toLocaleString('es-DO',{style:'currency',currency:'{{ shop.currency }}'});
-    });
-  });
   window.brumiSelectedVariantId = {{ cv.id }};
+
+  if (form) {
+    var radios = form.querySelectorAll('.lp-offer-variant-input');
+    function getSelected() {
+      var sel = {};
+      radios.forEach(function(r) { if (r.checked) sel[r.name.replace('options[','').replace(']','')] = r.value; });
+      return sel;
+    }
+    radios.forEach(function(r) {
+      r.addEventListener('change', function() {
+        radios.forEach(function(inp) {
+          var lbl = inp.nextElementSibling;
+          if (inp.checked) { lbl.style.borderColor='#1a1a18'; lbl.style.background='#1a1a18'; lbl.style.color='#fff'; }
+          else { lbl.style.borderColor=''; lbl.style.background=''; lbl.style.color=''; }
+        });
+        var v = variants.find(function(v) { return v.options.every(function(o,i){ return getSelected()[options[i]]===o; }); });
+        if (!v) return;
+        document.querySelectorAll('.brumi-variant-id').forEach(function(i){ i.value = v.id; });
+        window.brumiSelectedVariantId = v.id;
+        var priceEl = document.getElementById('lp-offer-price');
+        if (priceEl) priceEl.textContent = (v.price/100).toLocaleString('es-DO',{style:'currency',currency:'{{ shop.currency }}'});
+      });
+    });
+  }
+
+  var buyBtn = document.getElementById('lp-offer-buy-btn');
+  if (buyBtn) {
+    buyBtn.addEventListener('click', function() {
+      var id = window.brumiSelectedVariantId || {{ cv.id }};
+      buyBtn.disabled = true;
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({id: id, quantity: 1})
+      }).then(function() {
+        window.location.href = '/checkout';
+      }).catch(function() {
+        buyBtn.disabled = false;
+      });
+    });
+  }
 })();
 </script>
 
@@ -167,6 +211,18 @@
     { "type": "header", "content": "── TÍTULO (vacío = no aparece) ─" },
     { "type": "text", "id": "heading", "label": "Título" },
     { "type": "color", "id": "heading_color", "label": "Color título", "default": "#1a1a18" },
+
+    { "type": "header", "content": "── BOTÓN DE COMPRA ─────────────" },
+    { "type": "checkbox", "id": "show_btn", "label": "Mostrar botón de comprar", "default": true },
+    { "type": "text", "id": "btn_text", "label": "Texto del botón", "default": "Comprar ahora" },
+    { "type": "color", "id": "btn_bg", "label": "Color de fondo del botón", "default": "#1a1a18" },
+    { "type": "color", "id": "btn_color", "label": "Color de texto del botón", "default": "#ffffff" },
+    { "type": "range", "id": "btn_font_size", "label": "Tamaño de letra (px)", "min": 12, "max": 24, "step": 1, "default": 16 },
+    { "type": "range", "id": "btn_py", "label": "Espacio vertical interior (px)", "min": 8, "max": 36, "step": 2, "default": 18 },
+    { "type": "range", "id": "btn_px", "label": "Espacio horizontal interior (px)", "min": 16, "max": 80, "step": 4, "default": 48 },
+    { "type": "range", "id": "btn_radius", "label": "Bordes redondeados (px)", "min": 0, "max": 50, "step": 2, "default": 6 },
+    { "type": "select", "id": "btn_width", "label": "Ancho del botón", "options": [{"value":"auto","label":"Automático"},{"value":"full","label":"Ancho completo"},{"value":"custom","label":"Personalizado (px)"}], "default": "custom" },
+    { "type": "range", "id": "btn_custom_width", "label": "Ancho personalizado (px)", "min": 160, "max": 640, "step": 10, "default": 360 },
 
     { "type": "header", "content": "── SECCIÓN ─────────────────────" },
     { "type": "range", "id": "max_width", "label": "Ancho máximo (px)", "min": 400, "max": 900, "step": 20, "default": 640 },

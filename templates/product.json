@@ -164,30 +164,6 @@
         "bg_color": "#FFFFFF"
       }
     },
-    "lp-buy-button": {
-      "type": "lp-buy-button",
-      "settings": {
-        "action": "checkout",
-        "btn_text": "Comprar ahora",
-        "btn_width": "custom",
-        "btn_custom_width": 360,
-        "btn_py": 20,
-        "btn_px": 48,
-        "btn_radius": 6,
-        "btn_bg": "#1a1a18",
-        "btn_color": "#ffffff",
-        "btn_font_size": 16,
-        "btn_font_weight": "700",
-        "btn_tracking": 3,
-        "btn_transform": "none",
-        "btn_shadow": false,
-        "btn_border_width": 0,
-        "btn_border_color": "#1a1a18",
-        "align": "center",
-        "py": 32,
-        "bg_color": "#ffffff"
-      }
-    },
     "lp-reviews": {
       "type": "lp-reviews",
       "settings": {
@@ -310,7 +286,6 @@
     "lp-benefits",
     "div-3",
     "lp-offer",
-    "lp-buy-button",
     "lp-reviews",
     "lp-shipping",
     "lp-policies",
