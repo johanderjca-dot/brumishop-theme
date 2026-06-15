@@ -1,18 +1,74 @@
-<div style="border-top:1px solid {{ section.settings.border_color }}; border-bottom:1px solid {{ section.settings.border_color }}; background:{{ section.settings.bg_color }}; padding:1.5rem 0;">
-  <div class="max-w-[1320px] mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+<div style="border-top:1px solid {{ section.settings.border_color }}; border-bottom:1px solid {{ section.settings.border_color }}; background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0; overflow:hidden;">
+  <div style="max-width:1320px; margin:0 auto; padding:0 1.5rem; display:flex; flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none; gap:{{ section.settings.gap }}px; justify-content:{% if section.settings.center %}center{% else %}flex-start{% endif %}; align-items:center;">
     {% for block in section.blocks %}
-      <div class="flex items-center gap-3">
-        <span style="font-size:1.125rem; color:{{ section.settings.icon_color }};">{{ block.settings.icon }}</span>
-        <span style="font-size:0.75rem; font-weight:500; color:{{ section.settings.text_color }};">{{ block.settings.text }}</span>
+      <div {{ block.shopify_attributes }} style="display:flex; align-items:center; gap:0.5rem; flex-shrink:0;">
+        {% if block.settings.icon != blank %}
+          <span style="font-size:{{ section.settings.icon_size }}px; color:{{ section.settings.icon_color }}; flex-shrink:0; line-height:1;">{{ block.settings.icon }}</span>
+        {% endif %}
+        <span style="font-size:{{ section.settings.font_size }}px; font-weight:500; color:{{ section.settings.text_color }}; white-space:nowrap;">{{ block.settings.text }}</span>
       </div>
     {% endfor %}
   </div>
 </div>
 
+<style>
+  .trust-bar-scroll::-webkit-scrollbar { display: none; }
+</style>
+
 {% schema %}
 {
   "name": "Trust Bar",
   "settings": [
+    {
+      "type": "header",
+      "content": "Diseño"
+    },
+    {
+      "type": "checkbox",
+      "id": "center",
+      "label": "Centrar ítems",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "py",
+      "label": "Espacio vertical (px)",
+      "min": 8,
+      "max": 48,
+      "step": 4,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Separación entre ítems (px)",
+      "min": 12,
+      "max": 80,
+      "step": 4,
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Tamaño del texto (px)",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Tamaño del ícono (px)",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
     {
       "type": "color",
       "id": "bg_color",
@@ -38,7 +94,7 @@
       "default": "#5a5a52"
     }
   ],
-  "max_blocks": 6,
+  "max_blocks": 8,
   "blocks": [
     {
       "type": "item",
@@ -47,13 +103,13 @@
         {
           "type": "text",
           "id": "icon",
-          "label": "Icon (symbol)",
-          "default": "○"
+          "label": "Ícono (símbolo o emoji)",
+          "default": "•"
         },
         {
           "type": "text",
           "id": "text",
-          "label": "Text",
+          "label": "Texto",
           "default": "Envío gratis desde $50"
         }
       ]
@@ -63,10 +119,10 @@
     {
       "name": "Trust Bar",
       "blocks": [
-        { "type": "item", "settings": { "icon": "○", "text": "Envío gratis desde $50" } },
-        { "type": "item", "settings": { "icon": "◇", "text": "Devoluciones en 30 días" } },
-        { "type": "item", "settings": { "icon": "△", "text": "Pagos 100% seguros" } },
-        { "type": "item", "settings": { "icon": "□", "text": "Soporte 24/7" } }
+        { "type": "item", "settings": { "icon": "•", "text": "Envío gratis desde $50" } },
+        { "type": "item", "settings": { "icon": "•", "text": "Devoluciones en 7 días" } },
+        { "type": "item", "settings": { "icon": "•", "text": "Pagos 100% seguros, al recibir" } },
+        { "type": "item", "settings": { "icon": "•", "text": "Soporte 24/7" } }
       ]
     }
   ]
