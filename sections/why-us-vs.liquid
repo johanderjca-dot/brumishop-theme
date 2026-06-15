@@ -3,6 +3,12 @@
   .vs-cross  { color: #c0392b; font-size: 1rem; }
   .vs-row    { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.85rem 0; border-bottom: 1px solid {{ section.settings.border_color }}; }
   .vs-row:last-child { border-bottom: none; }
+  .vs-grid   { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+  @media (max-width: 640px) {
+    .vs-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .vs-col-our  { border-radius: 12px 12px 0 0 !important; }
+    .vs-col-comp { border-radius: 0 0 12px 12px !important; }
+  }
 </style>
 
 <section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0;">
@@ -76,9 +82,9 @@
 
     <!-- Cards layout -->
     {% else %}
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:start;">
+      <div class="vs-grid">
         <!-- Our column -->
-        <div style="background:{{ section.settings.accent_color }}; border-radius:12px; padding:2rem; color:#fff;">
+        <div class="vs-col-our" style="background:{{ section.settings.accent_color }}; border-radius:12px; padding:2rem; color:#fff;">
           <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.6); margin-bottom:1rem;">
             {{ section.settings.our_label }}
           </div>
@@ -98,7 +104,7 @@
         </div>
 
         <!-- Competition column -->
-        <div style="background:{{ section.settings.comp_bg }}; border-radius:12px; padding:2rem;">
+        <div class="vs-col-comp" style="background:{{ section.settings.comp_bg }}; border-radius:12px; padding:2rem;">
           <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:{{ section.settings.text_color }}; margin-bottom:1rem;">
             {{ section.settings.comp_label }}
           </div>

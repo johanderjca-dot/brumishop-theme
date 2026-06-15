@@ -1,37 +1,48 @@
 <header class="sticky top-0 z-50 bg-white border-b border-[#E8E8E2]">
-  <div class="max-w-[1320px] mx-auto px-6 h-16 flex items-center">
+  <div class="max-w-[1320px] mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center">
 
-    <!-- Search -->
+    <!-- Left: search (desktop) / spacer (mobile) -->
     <div class="flex-1">
-      <form action="{{ routes.search_url }}" method="get" class="flex items-center gap-2 border border-[#E0E0DA] rounded-sm px-3 py-1.5 w-44 bg-white">
+      <form action="{{ routes.search_url }}" method="get"
+            class="hidden md:flex items-center gap-2 border border-[#E0E0DA] rounded-sm px-3 py-1.5 w-44 bg-white">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#a0a09a" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
         <input type="text" name="q" placeholder="Buscar..." class="text-xs w-full bg-transparent text-[#1a1a18] outline-none placeholder:text-[#b0b0a8]">
       </form>
     </div>
 
-    <!-- Logo: imagen si existe, si no el nombre de la tienda -->
-    <div class="flex-shrink-0 mx-8">
+    <!-- Logo -->
+    <div class="flex-shrink-0 mx-4 md:mx-8">
       <a href="{{ routes.root_url }}" class="flex items-center">
         {% if section.settings.logo != blank %}
           <img
             src="{{ section.settings.logo | image_url: width: 400 }}"
             alt="{{ shop.name }}"
-            style="height: {{ section.settings.logo_height }}px; width: auto; display: block;">
+            style="height: {{ section.settings.logo_height | times: 0.75 | round }}px; width: auto; display: block;"
+            class="md:hidden">
+          <img
+            src="{{ section.settings.logo | image_url: width: 400 }}"
+            alt="{{ shop.name }}"
+            style="height: {{ section.settings.logo_height }}px; width: auto; display: block;"
+            class="hidden md:block">
         {% else %}
-          <span class="font-display text-2xl font-semibold tracking-[0.15em] text-[#1a1a18]">
+          <span class="font-display text-xl md:text-2xl font-semibold tracking-[0.12em] md:tracking-[0.15em] text-[#1a1a18]">
             {{ shop.name | upcase }}
           </span>
         {% endif %}
       </a>
     </div>
 
-    <!-- Icons -->
-    <div class="flex-1 flex items-center justify-end gap-4">
+    <!-- Right: icons -->
+    <div class="flex-1 flex items-center justify-end gap-3 md:gap-4">
+      <!-- Search icon (mobile only) -->
+      <a href="{{ routes.search_url }}" class="md:hidden text-[#5a5a52]" title="Buscar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+      </a>
       <a href="{{ routes.account_url }}" class="text-[#5a5a52] hover:text-[#1a1a18] transition-colors" title="Mi cuenta">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
       </a>
       <a href="{{ routes.cart_url }}" class="relative text-[#5a5a52] hover:text-[#1a1a18] transition-colors" title="Carrito">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
         {% if cart.item_count > 0 %}
           <span class="absolute -top-1.5 -right-1.5 w-4 h-4 bg-[#1a1a18] text-white text-[9px] font-bold rounded-full flex items-center justify-center">{{ cart.item_count }}</span>
         {% endif %}
@@ -39,11 +50,12 @@
     </div>
   </div>
 
-  <!-- Sub nav -->
-  <nav class="border-t border-[#F0F0EA]">
-    <div class="max-w-[1320px] mx-auto px-6 flex items-center justify-center gap-8 h-10">
+  <!-- Sub nav: horizontal scroll on mobile -->
+  <nav class="border-t border-[#F0F0EA] overflow-x-auto">
+    <div class="max-w-[1320px] mx-auto px-4 md:px-6 flex items-center justify-start md:justify-center gap-6 md:gap-8 h-10 whitespace-nowrap">
       {% for link in linklists[section.settings.menu].links %}
-        <a href="{{ link.url }}" class="text-xs tracking-wide transition-colors {% if link.active %}text-[#5a7a40] font-medium{% else %}text-[#5a5a52] hover:text-[#1a1a18]{% endif %}">
+        <a href="{{ link.url }}"
+           class="text-xs tracking-wide transition-colors flex-shrink-0 {% if link.active %}text-[#5a7a40] font-medium{% else %}text-[#5a5a52] hover:text-[#1a1a18]{% endif %}">
           {{ link.title }}
         </a>
       {% endfor %}
@@ -63,7 +75,7 @@
     {
       "type": "range",
       "id": "logo_height",
-      "label": "Altura del logo (px)",
+      "label": "Altura del logo en desktop (px)",
       "min": 20,
       "max": 80,
       "step": 2,
