@@ -9,6 +9,16 @@
  */
 {
   "sections": {
+    "lp-hero": {
+      "type": "lp-hero",
+      "settings": {
+        "full_width": false,
+        "max_height": 400,
+        "fit": "contain",
+        "bg_color": "#ffffff",
+        "padding": 0
+      }
+    },
     "lp-description": {
       "type": "lp-description",
       "settings": {
@@ -25,16 +35,6 @@
         "heading_color": "#1a1a18",
         "slogan_color": "#6a6a62",
         "text_color": "#5a5a52"
-      }
-    },
-    "lp-hero": {
-      "type": "lp-hero",
-      "settings": {
-        "full_width": false,
-        "max_height": 400,
-        "fit": "contain",
-        "bg_color": "#ffffff",
-        "padding": 0
       }
     },
     "lp-benefits": {
@@ -227,8 +227,8 @@
     }
   },
   "order": [
-    "lp-description",
     "lp-hero",
+    "lp-description",
     "lp-benefits",
     "lp-offer",
     "lp-reviews",
