@@ -29,8 +29,29 @@
         "slogan": "A donde sea, va contigo",
         "show_product_description": true,
         "custom_description": "",
+        "eyebrow_size": 11,
+        "title_size": 48,
+        "slogan_size": 22,
+        "desc_size": 16,
+        "mb_eyebrow": 8,
+        "mb_title": 8,
+        "mb_slogan": 12,
         "align": "center",
         "max_width": 1160,
+        "pt": 28,
+        "pb": 15,
+        "box_border_width": 1,
+        "box_border_color": "#e8e8e2",
+        "box_radius": 8,
+        "box_pad": 24,
+        "eyebrow_box": false,
+        "eyebrow_box_bg": "#f0f0ea",
+        "title_box": false,
+        "title_box_bg": "#ffffff",
+        "slogan_box": false,
+        "slogan_box_bg": "#ffffff",
+        "desc_box": false,
+        "desc_box_bg": "#ffffff",
         "bg_color": "#ffffff",
         "accent_color": "#5a7a40",
         "heading_color": "#1a1a18",
@@ -40,12 +61,74 @@
     },
     "lp-benefits": {
       "type": "lp-benefits",
+      "blocks": {
+        "benefit_6h3kaz": {
+          "type": "benefit",
+          "settings": {
+            "icon_url": "",
+            "icon_emoji": "✓",
+            "title": "0 conexión a luz.",
+            "description": "",
+            "show_box": false,
+            "box_bg": "#ffffff"
+          }
+        },
+        "benefit_EqcdRj": {
+          "type": "benefit",
+          "settings": {
+            "icon_url": "",
+            "icon_emoji": "✓",
+            "title": "Para porciones individuales",
+            "description": "",
+            "show_box": false,
+            "box_bg": "#ffffff"
+          }
+        },
+        "benefit_7hhXRx": {
+          "type": "benefit",
+          "settings": {
+            "icon_url": "",
+            "icon_emoji": "✓",
+            "title": "Alta calidad",
+            "description": "",
+            "show_box": false,
+            "box_bg": "#ffffff"
+          }
+        },
+        "benefit_HFXBUJ": {
+          "type": "benefit",
+          "settings": {
+            "icon_url": "",
+            "icon_emoji": "✓",
+            "title": "Llevalo donde sea, en donde sea.",
+            "description": "",
+            "show_box": false,
+            "box_bg": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_6h3kaz",
+        "benefit_EqcdRj",
+        "benefit_7hhXRx",
+        "benefit_HFXBUJ"
+      ],
       "settings": {
-        "title": "¿Por qué este producto?",
+        "title": "¿Por qué este LicuaMax?",
         "subtitle": "",
         "title_align": "center",
-        "columns": "3",
-        "icon_size": 40,
+        "columns": "1",
+        "gap": 8,
+        "icon_size": 16,
+        "icon_gap": 8,
+        "item_title_size": 15,
+        "item_desc_size": 14,
+        "box_border_width": 1,
+        "box_border_color": "#e8e8e2",
+        "box_radius": 8,
+        "box_pad": 20,
+        "pt": 15,
+        "pb": 15,
         "bg_color": "#fafaf6",
         "heading_color": "#1a1a18",
         "text_color": "#5a5a52"
