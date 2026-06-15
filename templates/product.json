@@ -11,51 +11,219 @@
   "sections": {
     "lp-hero": {
       "type": "lp-hero",
-      "settings": {}
+      "settings": {
+        "full_width": false,
+        "max_height": 400,
+        "fit": "contain",
+        "bg_color": "#FFFFFF",
+        "padding": 0
+      }
     },
     "lp-description": {
       "type": "lp-description",
-      "settings": {}
+      "settings": {
+        "eyebrow": "",
+        "custom_title": "",
+        "slogan": "Calidad que se siente.",
+        "show_product_description": true,
+        "custom_description": "",
+        "align": "center",
+        "max_width": 860,
+        "py": 80,
+        "bg_color": "#ffffff",
+        "accent_color": "#5a7a40",
+        "heading_color": "#1a1a18",
+        "slogan_color": "#6a6a62",
+        "text_color": "#5a5a52"
+      }
     },
     "lp-benefits": {
       "type": "lp-benefits",
-      "settings": {}
+      "settings": {
+        "title": "¿Por qué este producto?",
+        "subtitle": "",
+        "title_align": "center",
+        "columns": "3",
+        "card_align": "center",
+        "card_padding": 32,
+        "card_radius": 4,
+        "icon_size": 40,
+        "py": 80,
+        "bg_color": "#fafaf6",
+        "card_bg": "#ffffff",
+        "card_border": "#e8e8e2",
+        "heading_color": "#1a1a18",
+        "text_color": "#5a5a52"
+      }
     },
     "lp-offer": {
       "type": "lp-offer",
-      "settings": {}
+      "settings": {
+        "badge_text": "🔥 OFERTA ESPECIAL POR TIEMPO LIMITADO",
+        "badge_bg": "#fff3cd",
+        "badge_color": "#856404",
+        "badge_radius": 50,
+        "heading": "Consíguelo ahora con descuento exclusivo",
+        "heading_color": "#1a1a18",
+        "urgency_text": "⏳ Quedan pocas unidades — oferta termina pronto",
+        "urgency_color": "#c0392b",
+        "price_size": 40,
+        "price_color": "#1a1a18",
+        "btn_text": "Agregar al carrito",
+        "btn_bg": "#1a1a18",
+        "btn_color": "#ffffff",
+        "btn_font_size": 15,
+        "btn_py": 18,
+        "btn_px": 48,
+        "btn_radius": 4,
+        "btn_max_width": 480,
+        "btn_subtext": "Envío gratis · Pago seguro · Devolución 30 días",
+        "max_width": 640,
+        "py": 80,
+        "bg_color": "#fafaf6"
+      }
     },
     "lp-reviews": {
       "type": "lp-reviews",
-      "settings": {}
+      "settings": {
+        "title": "Lo que dicen nuestros clientes",
+        "subtitle": "",
+        "title_align": "center",
+        "columns": "3",
+        "card_radius": 8,
+        "bg_color": "#ffffff",
+        "card_bg": "#fafaf6",
+        "card_border": "#e8e8e2",
+        "star_color": "#f4a327",
+        "heading_color": "#1a1a18",
+        "text_color": "#5a5a52",
+        "py": 80
+      }
     },
     "lp-shipping": {
       "type": "lp-shipping",
-      "settings": {}
+      "settings": {
+        "title": "Envío y entrega",
+        "columns": "3",
+        "card_style": "plain",
+        "py": 64,
+        "bg_color": "#ffffff",
+        "card_bg": "#fafaf6",
+        "border_color": "#e8e8e2",
+        "icon_color": "#5a7a40",
+        "heading_color": "#1a1a18",
+        "text_color": "#6a6a62"
+      }
     },
     "lp-policies": {
       "type": "lp-policies",
-      "settings": {}
+      "settings": {
+        "title": "Políticas y devoluciones",
+        "title_align": "left",
+        "max_width": 780,
+        "py": 64,
+        "bg_color": "#ffffff",
+        "border_color": "#e8e8e2",
+        "heading_color": "#1a1a18",
+        "text_color": "#5a5a52"
+      }
     },
     "lp-buy-button": {
       "type": "lp-buy-button",
-      "settings": {}
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "btn_subtext": "✓ Pago seguro  ·  ✓ Envío gratis  ·  ✓ Devolución 30 días",
+        "action": "checkout",
+        "btn_text": "Comprar ahora",
+        "btn_transform": "none",
+        "btn_font_size": 16,
+        "btn_font_weight": "700",
+        "btn_tracking": 3,
+        "btn_width": "custom",
+        "btn_custom_width": 360,
+        "btn_py": 20,
+        "btn_px": 48,
+        "btn_radius": 6,
+        "btn_bg": "#1a1a18",
+        "btn_color": "#ffffff",
+        "btn_border_width": 0,
+        "btn_border_color": "#1a1a18",
+        "btn_shadow": false,
+        "align": "center",
+        "py": 64,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a18",
+        "text_color": "#a0a09a"
+      }
     },
     "lp-how-to-use": {
       "type": "lp-how-to-use",
-      "settings": {}
+      "settings": {
+        "img_height": 500,
+        "img_fit": "cover",
+        "img_radius": 4,
+        "eyebrow": "MODO DE USO",
+        "title": "¿Cómo se usa?",
+        "description": "",
+        "layout": "image-right",
+        "img_col": 1,
+        "text_col": 1,
+        "overlay_opacity": 40,
+        "text_x": "center",
+        "text_align": "center",
+        "bg_color": "#f8f7f3",
+        "eyebrow_color": "#5a7a40",
+        "heading_color": "#1a1a18",
+        "text_color": "#5a5a52",
+        "py": 72
+      }
     },
     "lp-problem-solution": {
       "type": "lp-problem-solution",
-      "settings": {}
+      "settings": {
+        "py": 80,
+        "bg_odd": "#ffffff",
+        "bg_even": "#fafaf6",
+        "border_color": "#e8e8e2",
+        "problem_color": "#c0392b",
+        "solution_color": "#5a7a40",
+        "heading_color": "#1a1a18",
+        "text_color": "#5a5a52",
+        "img_bg": "#f0f0ea"
+      }
     },
     "lp-faq": {
       "type": "lp-faq",
-      "settings": {}
+      "settings": {
+        "title": "Preguntas frecuentes",
+        "subtitle": "",
+        "title_align": "left",
+        "max_width": 780,
+        "py": 80,
+        "bg_color": "#ffffff",
+        "border_color": "#e8e8e2",
+        "heading_color": "#1a1a18",
+        "text_color": "#5a5a52"
+      }
     },
     "lp-testimonials": {
       "type": "lp-testimonials",
-      "settings": {}
+      "settings": {
+        "badge_text": "✓ Testimonios reales de clientes",
+        "title": "Esto dicen quienes ya lo tienen",
+        "subtitle": "",
+        "columns": "3",
+        "card_radius": 10,
+        "bg_color": "#f8f7f3",
+        "card_bg": "#ffffff",
+        "card_border": "#e8e8e2",
+        "accent_color": "#5a7a40",
+        "star_color": "#f4a327",
+        "heading_color": "#1a1a18",
+        "text_color": "#5a5a52",
+        "py": 80
+      }
     }
   },
   "order": [
