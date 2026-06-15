@@ -1,6 +1,4 @@
 {% assign cv = product.selected_or_first_available_variant %}
-{% assign has_discount = false %}
-{% if cv.compare_at_price > cv.price %}{% assign has_discount = true %}{% endif %}
 
 <style>
   .lp-offer-variant-input:checked + .lp-offer-variant-label {
@@ -10,50 +8,48 @@
   }
 </style>
 
-<section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0;">
+<section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.pt }}px 0 {{ section.settings.pb }}px;">
   <div style="max-width:{{ section.settings.max_width }}px; margin:0 auto; padding:0 1.5rem; text-align:center;">
 
-    <!-- Offer badge -->
     {% if section.settings.badge_text != blank %}
-      <div style="display:inline-block; background:{{ section.settings.badge_bg }}; color:{{ section.settings.badge_color }}; font-size:0.7rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; padding:0.4rem 1rem; border-radius:{{ section.settings.badge_radius }}px; margin-bottom:1.5rem;">
+      <div style="display:inline-block; background:{{ section.settings.badge_bg }}; color:{{ section.settings.badge_color }}; font-size:0.7rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; padding:0.4rem 1rem; border-radius:{{ section.settings.badge_radius }}px; margin-bottom:1.25rem;">
         {{ section.settings.badge_text }}
       </div>
     {% endif %}
 
-    <!-- Heading -->
     {% if section.settings.heading != blank %}
-      <h2 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.75rem,3.5vw,3rem); font-weight:600; color:{{ section.settings.heading_color }}; margin-bottom:1rem; line-height:1.2;">
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.5rem,3.5vw,2.75rem); font-weight:600; color:{{ section.settings.heading_color }}; margin-bottom:1rem; line-height:1.2;">
         {{ section.settings.heading }}
       </h2>
     {% endif %}
 
-    <!-- Price -->
-    <div style="display:flex; align-items:center; justify-content:center; gap:1rem; margin-bottom:0.75rem; flex-wrap:wrap;">
+    <!-- Precio real + precio tachado -->
+    <div style="display:flex; align-items:center; justify-content:center; gap:0.85rem; margin-bottom:0.75rem; flex-wrap:wrap;">
       <span id="lp-offer-price" style="font-size:{{ section.settings.price_size }}px; font-weight:700; color:{{ section.settings.price_color }};">
         {{ cv.price | money }}
       </span>
-      {% if has_discount %}
-        <span id="lp-offer-compare" style="font-size:1.25rem; color:#a0a09a; text-decoration:line-through;">
+      {% if section.settings.fake_price != blank %}
+        <span style="font-size:{{ section.settings.price_size | times: 0.7 | round }}px; color:#a0a09a; text-decoration:line-through;">
+          {{ section.settings.fake_price }}
+        </span>
+      {% elsif cv.compare_at_price > cv.price %}
+        <span id="lp-offer-compare" style="font-size:{{ section.settings.price_size | times: 0.7 | round }}px; color:#a0a09a; text-decoration:line-through;">
           {{ cv.compare_at_price | money }}
         </span>
         {% assign pct = cv.compare_at_price | minus: cv.price | times: 100 | divided_by: cv.compare_at_price %}
-        <span style="background:#d63a3a; color:#fff; font-size:0.75rem; font-weight:700; padding:0.3rem 0.6rem; border-radius:4px;">
+        <span style="background:#d63a3a; color:#fff; font-size:0.72rem; font-weight:700; padding:0.25rem 0.55rem; border-radius:4px;">
           AHORRAS {{ pct }}%
         </span>
       {% endif %}
     </div>
 
-    <!-- Urgency / hook text -->
-    {% if section.settings.urgency_text != blank %}
-      <p style="font-size:0.85rem; color:{{ section.settings.urgency_color }}; margin-bottom:1.75rem; font-weight:500;">
-        {{ section.settings.urgency_text }}
+    {% if section.settings.urgency_qty > 0 %}
+      <p style="font-size:0.85rem; color:{{ section.settings.urgency_color }}; margin-bottom:1.25rem; font-weight:600;">
+        {{ section.settings.urgency_prefix }}{{ section.settings.urgency_qty }}{{ section.settings.urgency_suffix }}
       </p>
     {% endif %}
 
-    <!-- Form -->
     {% form 'product', product, id: 'lp-offer-form' %}
-
-      <!-- Variants -->
       {% unless product.has_only_default_variant %}
         {% for option in product.options_with_values %}
           <div style="margin-bottom:1rem;">
@@ -75,36 +71,8 @@
           </div>
         {% endfor %}
       {% endunless %}
-
       <input type="hidden" name="id" id="lp-offer-variant-id" class="brumi-variant-id" value="{{ cv.id }}" data-brumi-variant>
-
-      <!-- Quantity -->
-      <div style="display:flex; align-items:center; justify-content:center; gap:1rem; margin:1.25rem 0;">
-        <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#1a1a18;">Cantidad</span>
-        <div style="display:flex; align-items:center; border:1px solid #E0E0DA; border-radius:3px;">
-          <button type="button" style="background:none;border:none;padding:0.5rem 0.85rem;cursor:pointer;font-size:1rem;color:#6a6a62;" onclick="var i=document.getElementById('lp-offer-qty');if(i.value>1)i.value=parseInt(i.value)-1;">−</button>
-          <input type="number" name="quantity" id="lp-offer-qty" value="1" min="1" style="width:2.5rem;text-align:center;border:none;border-left:1px solid #E0E0DA;border-right:1px solid #E0E0DA;padding:0.5rem 0;font-size:0.875rem;background:white;">
-          <button type="button" style="background:none;border:none;padding:0.5rem 0.85rem;cursor:pointer;font-size:1rem;color:#6a6a62;" onclick="var i=document.getElementById('lp-offer-qty');i.value=parseInt(i.value)+1;">+</button>
-        </div>
-      </div>
-
-      <!-- Add to cart button -->
-      <button type="submit" name="add" id="lp-offer-btn"
-              style="background:{{ section.settings.btn_bg }}; color:{{ section.settings.btn_color }}; font-size:{{ section.settings.btn_font_size }}px; font-weight:700; letter-spacing:0.05em; padding:{{ section.settings.btn_py }}px {{ section.settings.btn_px }}px; border:none; border-radius:{{ section.settings.btn_radius }}px; cursor:pointer; width:100%; max-width:{{ section.settings.btn_max_width }}px; transition:transform 160ms cubic-bezier(0.23,1,0.32,1), opacity .15s; display:inline-block;"
-              onmouseover="this.style.opacity='0.88'"
-              onmouseout="this.style.opacity='1'"
-              onmousedown="this.style.transform='scale(0.97)'"
-              onmouseup="this.style.transform='scale(1)'"
-              {% unless cv.available %}disabled{% endunless %}>
-        {% if cv.available %}{{ section.settings.btn_text }}{% else %}Agotado{% endif %}
-      </button>
-
     {% endform %}
-
-    <!-- Sub-text under button -->
-    {% if section.settings.btn_subtext != blank %}
-      <p style="margin-top:0.85rem; font-size:0.78rem; color:#a0a09a;">{{ section.settings.btn_subtext }}</p>
-    {% endif %}
 
   </div>
 </section>
@@ -113,57 +81,34 @@
 (function() {
   var form = document.getElementById('lp-offer-form');
   if (!form) return;
-  var variants  = {{ product.variants | json }};
-  var options   = {{ product.options | json }};
-  var radios    = form.querySelectorAll('.lp-offer-variant-input');
+  var variants = {{ product.variants | json }};
+  var options  = {{ product.options | json }};
+  var radios   = form.querySelectorAll('.lp-offer-variant-input');
 
   function getSelected() {
     var sel = {};
     radios.forEach(function(r) {
-      if (r.checked) {
-        var name = r.name.replace('options[','').replace(']','');
-        sel[name] = r.value;
-      }
+      if (r.checked) { sel[r.name.replace('options[','').replace(']','')] = r.value; }
     });
     return sel;
   }
 
-  function findVariant(sel) {
-    return variants.find(function(v) {
-      return v.options.every(function(o, i) { return sel[options[i]] === o; });
-    });
-  }
-
   radios.forEach(function(r) {
     r.addEventListener('change', function() {
-      // update labels
-      form.querySelectorAll('.lp-offer-variant-input').forEach(function(inp) {
+      radios.forEach(function(inp) {
         var lbl = inp.nextElementSibling;
-        if (inp.checked) {
-          lbl.style.borderColor='#1a1a18'; lbl.style.background='#1a1a18'; lbl.style.color='#fff';
-        } else {
-          lbl.style.borderColor=''; lbl.style.background=''; lbl.style.color='';
-        }
+        if (inp.checked) { lbl.style.borderColor='#1a1a18'; lbl.style.background='#1a1a18'; lbl.style.color='#fff'; }
+        else { lbl.style.borderColor=''; lbl.style.background=''; lbl.style.color=''; }
       });
-      var v = findVariant(getSelected());
+      var v = variants.find(function(v) { return v.options.every(function(o,i){ return getSelected()[options[i]]===o; }); });
       if (!v) return;
-      // sync all buy-button forms on the page
       document.querySelectorAll('.brumi-variant-id').forEach(function(i){ i.value = v.id; });
       window.brumiSelectedVariantId = v.id;
-      // update price display
       var priceEl = document.getElementById('lp-offer-price');
-      if (priceEl) priceEl.textContent = formatMoney(v.price);
-      // update button text
-      var btn = document.getElementById('lp-offer-btn');
-      if (btn) btn.disabled = !v.available;
+      if (priceEl) priceEl.textContent = (v.price/100).toLocaleString('es-DO',{style:'currency',currency:'{{ shop.currency }}'});
     });
   });
 
-  function formatMoney(cents) {
-    return (cents/100).toLocaleString('es-DO', {style:'currency', currency:'{{ shop.currency }}'});
-  }
-
-  // expose selected variant for other sections
   window.brumiSelectedVariantId = {{ cv.id }};
 })();
 </script>
@@ -172,32 +117,31 @@
 {
   "name": "4 — Precio y Oferta",
   "settings": [
-    { "type": "header", "content": "Badge de oferta" },
-    { "type": "text", "id": "badge_text", "label": "Texto del badge", "default": "🔥 OFERTA ESPECIAL POR TIEMPO LIMITADO" },
+    { "type": "header", "content": "Badge (vacío = no aparece)" },
+    { "type": "text", "id": "badge_text", "label": "Texto del badge" },
     { "type": "color", "id": "badge_bg", "label": "Fondo del badge", "default": "#FFF3CD" },
     { "type": "color", "id": "badge_color", "label": "Color texto badge", "default": "#856404" },
     { "type": "range", "id": "badge_radius", "label": "Bordes redondeados badge (px)", "min": 0, "max": 50, "step": 2, "default": 50 },
-    { "type": "header", "content": "Textos" },
-    { "type": "text", "id": "heading", "label": "Título", "default": "Consíguelo ahora con descuento exclusivo" },
+
+    { "type": "header", "content": "Título (vacío = no aparece)" },
+    { "type": "text", "id": "heading", "label": "Título" },
     { "type": "color", "id": "heading_color", "label": "Color título", "default": "#1a1a18" },
-    { "type": "text", "id": "urgency_text", "label": "Texto de urgencia", "default": "⏳ Quedan pocas unidades — oferta termina pronto" },
-    { "type": "color", "id": "urgency_color", "label": "Color texto urgencia", "default": "#c0392b" },
+
     { "type": "header", "content": "Precio" },
-    { "type": "range", "id": "price_size", "label": "Tamaño del precio (px)", "min": 20, "max": 60, "step": 2, "default": 40 },
+    { "type": "range", "id": "price_size", "label": "Tamaño del precio real (px)", "min": 20, "max": 60, "step": 2, "default": 40 },
     { "type": "color", "id": "price_color", "label": "Color del precio", "default": "#1a1a18" },
-    { "type": "header", "content": "Botón de compra" },
-    { "type": "text", "id": "btn_text", "label": "Texto del botón", "default": "Agregar al carrito" },
-    { "type": "color", "id": "btn_bg", "label": "Color de fondo del botón", "default": "#1a1a18" },
-    { "type": "color", "id": "btn_color", "label": "Color de texto del botón", "default": "#FFFFFF" },
-    { "type": "range", "id": "btn_font_size", "label": "Tamaño de letra del botón (px)", "min": 12, "max": 22, "step": 1, "default": 15 },
-    { "type": "range", "id": "btn_py", "label": "Espacio vertical del botón (px)", "min": 10, "max": 30, "step": 2, "default": 18 },
-    { "type": "range", "id": "btn_px", "label": "Espacio horizontal del botón (px)", "min": 20, "max": 80, "step": 4, "default": 48 },
-    { "type": "range", "id": "btn_radius", "label": "Bordes redondeados del botón (px)", "min": 0, "max": 50, "step": 2, "default": 4 },
-    { "type": "range", "id": "btn_max_width", "label": "Ancho máximo del botón (px)", "min": 200, "max": 800, "step": 20, "default": 480 },
-    { "type": "text", "id": "btn_subtext", "label": "Texto bajo el botón", "default": "Envío gratis · Pago seguro · Devolución 30 días" },
+    { "type": "text", "id": "fake_price", "label": "Precio tachado / precio anterior (ej: RD$2,500.00 — vacío = usa el de Shopify)" },
+
+    { "type": "header", "content": "Urgencia (0 = no aparece)" },
+    { "type": "range", "id": "urgency_qty", "label": "Cantidad de unidades", "min": 0, "max": 99, "step": 1, "default": 0 },
+    { "type": "text", "id": "urgency_prefix", "label": "Texto antes del número", "default": "⚡ Últimas " },
+    { "type": "text", "id": "urgency_suffix", "label": "Texto después del número", "default": " unidades disponibles" },
+    { "type": "color", "id": "urgency_color", "label": "Color del texto de urgencia", "default": "#c0392b" },
+
     { "type": "header", "content": "Sección" },
     { "type": "range", "id": "max_width", "label": "Ancho máximo del contenido (px)", "min": 400, "max": 900, "step": 20, "default": 640 },
-    { "type": "range", "id": "py", "label": "Espacio vertical (px)", "min": 40, "max": 136, "step": 8, "default": 80 },
+    { "type": "range", "id": "pt", "label": "Espacio superior (px)", "min": 0, "max": 80, "step": 1, "default": 15 },
+    { "type": "range", "id": "pb", "label": "Espacio inferior (px)", "min": 0, "max": 80, "step": 1, "default": 15 },
     { "type": "color", "id": "bg_color", "label": "Fondo de la sección", "default": "#FAFAF6" }
   ],
   "presets": [{ "name": "4 — Precio y Oferta" }]
