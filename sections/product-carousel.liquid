@@ -1,0 +1,189 @@
+<style>
+  .pc-track {
+    display: flex;
+    gap: {{ section.settings.gap }}px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+  }
+  .pc-track::-webkit-scrollbar { display: none; }
+
+  .pc-card {
+    flex: 0 0 {{ section.settings.card_width }}px;
+    scroll-snap-align: start;
+    background: {{ section.settings.card_bg }};
+    border: 1px solid {{ section.settings.card_border }};
+    border-radius: {{ section.settings.card_radius }}px;
+    overflow: hidden;
+    transition: transform 200ms cubic-bezier(0.23,1,0.32,1), box-shadow 200ms;
+  }
+  .pc-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+  .pc-img-wrap {
+    background: {{ section.settings.img_bg }};
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pc-img-wrap img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 500ms cubic-bezier(0.23,1,0.32,1);
+  }
+  .pc-card:hover .pc-img-wrap img { transform: scale(1.04); }
+
+  .pc-btn {
+    display: block; width: 100%;
+    background: {{ section.settings.btn_bg }};
+    color: {{ section.settings.btn_color }};
+    font-size: 0.75rem; font-weight: 700;
+    letter-spacing: 0.06em; text-align: center;
+    padding: 0.75rem 1rem; border: none; cursor: pointer;
+    text-decoration: none;
+    transition: transform 160ms cubic-bezier(0.23,1,0.32,1), opacity .15s;
+  }
+  .pc-btn:hover { opacity: .85; }
+  .pc-btn:active { transform: scale(0.97); }
+
+  .pc-arrow {
+    width: 2.5rem; height: 2.5rem; border-radius: 50%;
+    border: 1px solid {{ section.settings.card_border }};
+    background: #fff; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background .15s, border-color .15s;
+    flex-shrink: 0;
+  }
+  .pc-arrow:hover { background: #1a1a18; border-color: #1a1a18; }
+  .pc-arrow:hover svg { stroke: #fff; }
+  .pc-arrow:active { transform: scale(0.95); }
+  @media (max-width: 640px) {
+    .pc-card { flex: 0 0 72vw; }
+    .pc-arrows { display: none !important; }
+  }
+</style>
+
+<section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0;">
+  <div style="max-width:1320px; margin:0 auto; padding:0 1.5rem;">
+
+    <!-- Header row -->
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:2rem; gap:1rem; flex-wrap:wrap;">
+      <div>
+        {% if section.settings.eyebrow != blank %}
+          <p style="font-size:0.65rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:{{ section.settings.accent_color }}; margin-bottom:0.5rem;">
+            {{ section.settings.eyebrow }}
+          </p>
+        {% endif %}
+        <h2 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.75rem,3vw,2.5rem); font-weight:600; color:{{ section.settings.heading_color }}; line-height:1.15; margin:0;">
+          {{ section.settings.title }}
+        </h2>
+      </div>
+      <div style="display:flex; align-items:center; gap:0.75rem;" class="pc-arrows">
+        <button class="pc-arrow" id="pc-prev-{{ section.id }}" aria-label="Anterior">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a1a18" stroke-width="2.2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="pc-arrow" id="pc-next-{{ section.id }}" aria-label="Siguiente">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a1a18" stroke-width="2.2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Track -->
+    <div class="pc-track" id="pc-track-{{ section.id }}">
+      {% assign col = collections[section.settings.collection] %}
+      {% assign product_list = col.products | default: collections.all.products %}
+      {% for product in product_list limit: section.settings.products_to_show %}
+        {% assign cv = product.selected_or_first_available_variant %}
+        <div class="pc-card">
+          <a href="{{ product.url }}" style="display:block; text-decoration:none;">
+            <div class="pc-img-wrap">
+              {% if product.featured_image %}
+                <img src="{{ product.featured_image | image_url: width: 600 }}"
+                     alt="{{ product.title | escape }}"
+                     loading="lazy">
+              {% else %}
+                <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c8c8c0" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9l4-4 4 4 4-4 4 4"/><circle cx="8" cy="14" r="1.5"/></svg>
+                </div>
+              {% endif %}
+            </div>
+            <div style="padding:1rem 1rem 0.75rem;">
+              <p style="font-size:0.8rem; font-weight:600; color:{{ section.settings.heading_color }}; margin:0 0 0.35rem; line-height:1.35;
+                        display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
+                {{ product.title }}
+              </p>
+              <div style="display:flex; align-items:center; gap:0.6rem; flex-wrap:wrap;">
+                <span style="font-size:0.95rem; font-weight:700; color:{{ section.settings.heading_color }};">
+                  {{ cv.price | money }}
+                </span>
+                {% if cv.compare_at_price > cv.price %}
+                  <span style="font-size:0.78rem; color:#a0a09a; text-decoration:line-through;">{{ cv.compare_at_price | money }}</span>
+                  {% assign pct = cv.compare_at_price | minus: cv.price | times: 100 | divided_by: cv.compare_at_price %}
+                  <span style="font-size:0.65rem; font-weight:700; background:{{ section.settings.accent_color }}; color:#fff; padding:0.15rem 0.4rem; border-radius:3px;">-{{ pct }}%</span>
+                {% endif %}
+              </div>
+            </div>
+          </a>
+          <div style="padding:0 1rem 1rem;">
+            <a href="{{ product.url }}" class="pc-btn">
+              {{ section.settings.btn_label }}
+            </a>
+          </div>
+        </div>
+      {% else %}
+        <p style="color:#a0a09a; font-size:0.875rem;">Selecciona una colección en el editor para mostrar productos.</p>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<script>
+(function(){
+  var track = document.getElementById('pc-track-{{ section.id }}');
+  var prev  = document.getElementById('pc-prev-{{ section.id }}');
+  var next  = document.getElementById('pc-next-{{ section.id }}');
+  if (!track || !prev || !next) return;
+  var cardW = track.firstElementChild ? track.firstElementChild.offsetWidth + {{ section.settings.gap }} : 280;
+  prev.addEventListener('click', function(){ track.scrollBy({ left: -cardW * 2, behavior: 'smooth' }); });
+  next.addEventListener('click', function(){ track.scrollBy({ left:  cardW * 2, behavior: 'smooth' }); });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Carrusel de productos",
+  "settings": [
+    { "type": "header", "content": "Contenido" },
+    { "type": "text", "id": "eyebrow", "label": "Etiqueta superior", "default": "NUESTRA TIENDA" },
+    { "type": "text", "id": "title", "label": "Título", "default": "Productos destacados" },
+    { "type": "collection", "id": "collection", "label": "Colección a mostrar" },
+    { "type": "range", "id": "products_to_show", "label": "Cantidad de productos", "min": 4, "max": 24, "step": 2, "default": 12 },
+    { "type": "text", "id": "btn_label", "label": "Texto del botón", "default": "Ver producto →" },
+    { "type": "header", "content": "Tarjetas" },
+    { "type": "range", "id": "card_width", "label": "Ancho de tarjeta en desktop (px)", "min": 180, "max": 360, "step": 10, "default": 260 },
+    { "type": "range", "id": "gap", "label": "Espacio entre tarjetas (px)", "min": 8, "max": 32, "step": 4, "default": 16 },
+    { "type": "range", "id": "card_radius", "label": "Bordes redondeados (px)", "min": 0, "max": 20, "step": 2, "default": 8 },
+    { "type": "header", "content": "Colores" },
+    { "type": "color", "id": "bg_color", "label": "Fondo sección", "default": "#FFFFFF" },
+    { "type": "color", "id": "card_bg", "label": "Fondo tarjeta", "default": "#FFFFFF" },
+    { "type": "color", "id": "card_border", "label": "Borde tarjeta", "default": "#E8E8E2" },
+    { "type": "color", "id": "img_bg", "label": "Fondo imagen", "default": "#F8F7F3" },
+    { "type": "color", "id": "heading_color", "label": "Color títulos y precios", "default": "#1a1a18" },
+    { "type": "color", "id": "accent_color", "label": "Color acento (etiqueta + descuento)", "default": "#5a7a40" },
+    { "type": "color", "id": "btn_bg", "label": "Fondo botón", "default": "#1a1a18" },
+    { "type": "color", "id": "btn_color", "label": "Color texto botón", "default": "#FFFFFF" },
+    { "type": "header", "content": "Espaciado" },
+    { "type": "range", "id": "py", "label": "Espacio vertical sección (px)", "min": 40, "max": 136, "step": 8, "default": 72 }
+  ],
+  "presets": [{
+    "name": "Carrusel de productos",
+    "settings": {}
+  }]
+}
+{% endschema %}

@@ -121,6 +121,27 @@
         "icon_color": "#F67300"
       }
     },
+    "product-carousel": {
+      "type": "product-carousel",
+      "settings": {
+        "eyebrow": "NUESTRA TIENDA",
+        "title": "Productos destacados",
+        "btn_label": "Ver producto →",
+        "products_to_show": 12,
+        "card_width": 260,
+        "gap": 16,
+        "card_radius": 8,
+        "bg_color": "#FFFFFF",
+        "card_bg": "#FFFFFF",
+        "card_border": "#E8E8E2",
+        "img_bg": "#F8F7F3",
+        "heading_color": "#1a1a18",
+        "accent_color": "#5a7a40",
+        "btn_bg": "#1a1a18",
+        "btn_color": "#FFFFFF",
+        "py": 72
+      }
+    },
     "featured-collection-1": {
       "type": "featured-collection",
       "disabled": true,
@@ -281,6 +302,7 @@
     "hero-slider",
     "category-cards",
     "trust-bar",
+    "product-carousel",
     "featured-collection-1",
     "featured-collection-2",
     "feature-banners",
