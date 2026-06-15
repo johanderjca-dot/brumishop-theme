@@ -137,28 +137,23 @@
     "lp-offer": {
       "type": "lp-offer",
       "settings": {
-        "badge_text": "🔥 OFERTA ESPECIAL POR TIEMPO LIMITADO",
-        "badge_bg": "#fff3cd",
+        "price_size": 22,
+        "price_color": "#1a1a18",
+        "fake_price": "RD$ 2500",
+        "badge_text": "",
+        "badge_bg": "#FFFFFF",
         "badge_color": "#856404",
         "badge_radius": 50,
         "heading": "Consíguelo ahora con descuento exclusivo",
         "heading_color": "#1a1a18",
-        "urgency_text": "⏳ Quedan pocas unidades — oferta termina pronto",
+        "urgency_qty": 17,
+        "urgency_prefix": "⚡ Últimas",
+        "urgency_suffix": "unidades disponibles",
         "urgency_color": "#c0392b",
-        "price_size": 40,
-        "price_color": "#1a1a18",
-        "btn_text": "Agregar al carrito",
-        "btn_bg": "#1a1a18",
-        "btn_color": "#ffffff",
-        "btn_font_size": 15,
-        "btn_py": 18,
-        "btn_px": 48,
-        "btn_radius": 4,
-        "btn_max_width": 480,
-        "btn_subtext": "Envío gratis · Pago seguro · Devolución 30 días",
         "max_width": 640,
-        "py": 80,
-        "bg_color": "#fafaf6"
+        "pt": 0,
+        "pb": 15,
+        "bg_color": "#FFFFFF"
       }
     },
     "lp-reviews": {
@@ -204,35 +199,6 @@
         "border_color": "#e8e8e2",
         "heading_color": "#1a1a18",
         "text_color": "#5a5a52"
-      }
-    },
-    "lp-buy-button": {
-      "type": "lp-buy-button",
-      "settings": {
-        "heading": "",
-        "subheading": "",
-        "btn_subtext": "✓ Pago seguro  ·  ✓ Envío gratis  ·  ✓ Devolución 30 días",
-        "action": "checkout",
-        "btn_text": "Comprar ahora",
-        "btn_transform": "none",
-        "btn_font_size": 16,
-        "btn_font_weight": "700",
-        "btn_tracking": 3,
-        "btn_width": "custom",
-        "btn_custom_width": 360,
-        "btn_py": 20,
-        "btn_px": 48,
-        "btn_radius": 6,
-        "btn_bg": "#1a1a18",
-        "btn_color": "#ffffff",
-        "btn_border_width": 0,
-        "btn_border_color": "#1a1a18",
-        "btn_shadow": false,
-        "align": "center",
-        "py": 64,
-        "bg_color": "#ffffff",
-        "heading_color": "#1a1a18",
-        "text_color": "#a0a09a"
       }
     },
     "lp-how-to-use": {
@@ -312,7 +278,6 @@
     "lp-reviews",
     "lp-shipping",
     "lp-policies",
-    "lp-buy-button",
     "lp-how-to-use",
     "lp-problem-solution",
     "lp-faq",
