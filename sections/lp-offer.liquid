@@ -69,8 +69,8 @@
       </p>
     {% endif %}
 
-    <!-- Variantes (si el producto las tiene) -->
-    {% form 'product', product, id: 'lp-offer-form' %}
+    <!-- Variantes (sin form, para no activar apps de pago) -->
+    <div id="lp-offer-form">
       {% unless product.has_only_default_variant %}
         <div style="margin-top:1.25rem;">
           {% for option in product.options_with_values %}
@@ -79,7 +79,7 @@
               <div style="display:flex; flex-wrap:wrap; gap:0.5rem; justify-content:center;">
                 {% for value in option.values %}
                   <label>
-                    <input type="radio" name="options[{{ option.name }}]" value="{{ value }}"
+                    <input type="radio" data-option="{{ option.name }}" value="{{ value }}"
                            class="lp-offer-variant-input" style="display:none;"
                            {% if option.selected_value == value %}checked{% endif %}>
                     <span class="lp-offer-variant-label"
@@ -94,8 +94,8 @@
           {% endfor %}
         </div>
       {% endunless %}
-      <input type="hidden" name="id" id="lp-offer-variant-id" class="brumi-variant-id" value="{{ cv.id }}" data-brumi-variant>
-    {% endform %}
+      <input type="hidden" id="lp-offer-variant-id" class="brumi-variant-id" value="{{ cv.id }}" data-brumi-variant>
+    </div>
 
   </div>
 </section>
@@ -107,11 +107,12 @@
   var options  = {{ product.options | json }};
   window.brumiSelectedVariantId = {{ cv.id }};
 
-  if (form) {
-    var radios = form.querySelectorAll('.lp-offer-variant-input');
+  var container = document.getElementById('lp-offer-form');
+  if (container) {
+    var radios = container.querySelectorAll('.lp-offer-variant-input');
     function getSelected() {
       var sel = {};
-      radios.forEach(function(r) { if (r.checked) sel[r.name.replace('options[','').replace(']','')] = r.value; });
+      radios.forEach(function(r) { if (r.checked) sel[r.dataset.option] = r.value; });
       return sel;
     }
     radios.forEach(function(r) {
