@@ -21,7 +21,16 @@
         "bg_color": "#ffffff"
       }
     },
-    "div-1": { "type": "lp-divider", "settings": { "bg_above": "#ffffff", "bg_below": "#ffffff" } },
+    "div-1": {
+      "type": "lp-divider",
+      "settings": {
+        "py": 6,
+        "max_width": 700,
+        "line_color": "#d0d0c8",
+        "bg_above": "#ffffff",
+        "bg_below": "#ffffff"
+      }
+    },
     "lp-description": {
       "type": "lp-description",
       "settings": {
@@ -60,7 +69,16 @@
         "text_color": "#5a5a52"
       }
     },
-    "div-2": { "type": "lp-divider", "settings": { "bg_above": "#ffffff", "bg_below": "#fafaf6" } },
+    "div-2": {
+      "type": "lp-divider",
+      "settings": {
+        "py": 6,
+        "max_width": 700,
+        "line_color": "#d0d0c8",
+        "bg_above": "#ffffff",
+        "bg_below": "#fafaf6"
+      }
+    },
     "lp-benefits": {
       "type": "lp-benefits",
       "blocks": {
@@ -136,7 +154,16 @@
         "text_color": "#5a5a52"
       }
     },
-    "div-3": { "type": "lp-divider", "settings": { "bg_above": "#fafaf6", "bg_below": "#ffffff" } },
+    "div-3": {
+      "type": "lp-divider",
+      "settings": {
+        "py": 6,
+        "max_width": 700,
+        "line_color": "#d0d0c8",
+        "bg_above": "#fafaf6",
+        "bg_below": "#ffffff"
+      }
+    },
     "lp-offer": {
       "type": "lp-offer",
       "settings": {
@@ -156,38 +183,80 @@
         "urgency_suffix": "unidades disponibles",
         "urgency_color": "#c0392b",
         "badge_text": "",
+        "badge_bg": "#fff3cd",
+        "badge_color": "#856404",
+        "badge_radius": 50,
         "heading": "Consíguelo ahora con descuento exclusivo",
         "heading_color": "#1a1a18",
         "max_width": 640,
         "pt": 0,
         "pb": 15,
-        "bg_color": "#FFFFFF"
+        "bg_color": "#ffffff"
+      }
+    },
+    "lp_divider_7FYPdH": {
+      "type": "lp-divider",
+      "settings": {
+        "py": 6,
+        "max_width": 700,
+        "line_color": "#d0d0c8",
+        "bg_above": "#fafaf6",
+        "bg_below": "#ffffff"
       }
     },
     "lp-reviews": {
       "type": "lp-reviews",
+      "blocks": {
+        "review_ME3YUA": {
+          "type": "review",
+          "settings": {
+            "rating": 4,
+            "review_text": "Increíble producto, superó todas mis expectativas. Lo recomiendo al 100%.",
+            "name": "María G.",
+            "location": "Santo Domingo, RD",
+            "avatar": "shopify://shop_images/a7928580-0ee2-433a-ad6b-e6753a80c416.jpg",
+            "verified": true
+          }
+        }
+      },
+      "block_order": [
+        "review_ME3YUA"
+      ],
       "settings": {
         "title": "Lo que dicen nuestros clientes",
         "subtitle": "",
         "title_align": "center",
-        "columns": "3",
-        "card_radius": 8,
+        "columns": "1",
+        "card_radius": 12,
         "bg_color": "#ffffff",
         "card_bg": "#fafaf6",
         "card_border": "#e8e8e2",
         "star_color": "#f4a327",
         "heading_color": "#1a1a18",
         "text_color": "#5a5a52",
-        "py": 80
+        "py": 40
       }
     },
     "lp-shipping": {
       "type": "lp-shipping",
+      "blocks": {
+        "item_PzAUrY": {
+          "type": "item",
+          "settings": {
+            "icon": "🚚",
+            "title": "Envío gratis",
+            "description": "¡Envío gratis a todo el país! Para tu total tranquilidad, manejamos la modalidad de pago contra entrega (pagas solo al recibir tu producto). Tu pedido llegará de 3 a 4 días hábiles."
+          }
+        }
+      },
+      "block_order": [
+        "item_PzAUrY"
+      ],
       "settings": {
-        "title": "Envío y entrega",
-        "columns": "3",
+        "title": "Envío y Entrega",
+        "columns": "1",
         "card_style": "plain",
-        "py": 64,
+        "py": 32,
         "bg_color": "#ffffff",
         "card_bg": "#fafaf6",
         "border_color": "#e8e8e2",
@@ -303,6 +372,7 @@
     "lp-benefits",
     "div-3",
     "lp-offer",
+    "lp_divider_7FYPdH",
     "lp-reviews",
     "lp-shipping",
     "lp-policies",
