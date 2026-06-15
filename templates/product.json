@@ -213,10 +213,23 @@
     },
     "lp-shipping": {
       "type": "lp-shipping",
+      "blocks": {
+        "item_64AREK": {
+          "type": "item",
+          "settings": {
+            "icon": "📦",
+            "title": "Envío gratis",
+            "description": "Compra sin preocupaciones: Te lo enviamos de forma 100% gratuita a cualquier parte del país. Para tu mayor tranquilidad, no tienes que pagar nada por adelantado; realizas tu pago en efectivo justo cuando lo recibas. ¡Tu pedido llegará de 3 a 5 días!"
+          }
+        }
+      },
+      "block_order": [
+        "item_64AREK"
+      ],
       "settings": {
         "icon": "🚚",
         "title": "Información de envío",
-        "max_width": 780,
+        "max_width": 800,
         "py": 0,
         "bg_color": "#ffffff",
         "border_color": "#e8e8e2",
