@@ -46,7 +46,6 @@
         "title_align": "center",
         "columns": "3",
         "icon_size": 40,
-        "py": 80,
         "bg_color": "#fafaf6",
         "heading_color": "#1a1a18",
         "text_color": "#5a5a52"
