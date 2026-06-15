@@ -118,9 +118,14 @@
         "item-4"
       ],
       "settings": {
-        "bg_color": "#FFFFFF",
+        "center": true,
+        "py": 20,
+        "gap": 32,
+        "font_size": 13,
+        "icon_size": 16,
+        "bg_color": "#ffffff",
         "border_color": "#e8e8e2",
-        "icon_color": "#DB9D00",
+        "icon_color": "#db9d00",
         "text_color": "#5a5a52"
       }
     },
@@ -231,7 +236,7 @@
         "btn_color": "#ffffff",
         "bg_color": "#fafaf6",
         "comp_bg": "#f0f0ea",
-        "accent_color": "#DB9D00",
+        "accent_color": "#db9d00",
         "border_color": "#e8e8e2",
         "heading_color": "#1a1a18",
         "text_color": "#6a6a62",

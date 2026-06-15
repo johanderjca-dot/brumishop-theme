@@ -12,8 +12,11 @@
     "lp-hero": {
       "type": "lp-hero",
       "settings": {
+        "pt": 16,
+        "side_pad": 20,
         "full_width": true,
         "max_height": 400,
+        "radius": 14,
         "fit": "contain",
         "bg_color": "#ffffff"
       }
@@ -21,14 +24,14 @@
     "lp-description": {
       "type": "lp-description",
       "settings": {
-        "eyebrow": "kjbjkbj",
+        "eyebrow": "ENVIO GRATIS A TODO RD",
         "custom_title": "Licua Max",
         "slogan": "A donde sea, va contigo",
         "show_product_description": true,
         "custom_description": "",
         "align": "center",
-        "max_width": 860,
-        "py": 80,
+        "max_width": 1160,
+        "py": 40,
         "bg_color": "#ffffff",
         "accent_color": "#5a7a40",
         "heading_color": "#1a1a18",
