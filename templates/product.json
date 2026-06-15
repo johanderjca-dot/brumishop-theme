@@ -21,7 +21,16 @@
         "bg_color": "#ffffff"
       }
     },
-    "div-1": { "type": "lp-divider", "settings": { "bg_above": "#ffffff", "bg_below": "#ffffff" } },
+    "div-1": {
+      "type": "lp-divider",
+      "settings": {
+        "py": 6,
+        "max_width": 700,
+        "line_color": "#d0d0c8",
+        "bg_above": "#ffffff",
+        "bg_below": "#ffffff"
+      }
+    },
     "lp-description": {
       "type": "lp-description",
       "settings": {
@@ -60,7 +69,16 @@
         "text_color": "#5a5a52"
       }
     },
-    "div-2": { "type": "lp-divider", "settings": { "bg_above": "#ffffff", "bg_below": "#fafaf6" } },
+    "div-2": {
+      "type": "lp-divider",
+      "settings": {
+        "py": 6,
+        "max_width": 700,
+        "line_color": "#d0d0c8",
+        "bg_above": "#ffffff",
+        "bg_below": "#fafaf6"
+      }
+    },
     "lp-benefits": {
       "type": "lp-benefits",
       "blocks": {
@@ -136,7 +154,16 @@
         "text_color": "#5a5a52"
       }
     },
-    "div-3": { "type": "lp-divider", "settings": { "bg_above": "#fafaf6", "bg_below": "#ffffff" } },
+    "div-3": {
+      "type": "lp-divider",
+      "settings": {
+        "py": 6,
+        "max_width": 700,
+        "line_color": "#d0d0c8",
+        "bg_above": "#fafaf6",
+        "bg_below": "#ffffff"
+      }
+    },
     "lp-offer": {
       "type": "lp-offer",
       "settings": {
@@ -156,12 +183,15 @@
         "urgency_suffix": "unidades disponibles",
         "urgency_color": "#c0392b",
         "badge_text": "",
+        "badge_bg": "#fff3cd",
+        "badge_color": "#856404",
+        "badge_radius": 50,
         "heading": "Consíguelo ahora con descuento exclusivo",
         "heading_color": "#1a1a18",
         "max_width": 640,
         "pt": 0,
         "pb": 15,
-        "bg_color": "#FFFFFF"
+        "bg_color": "#ffffff"
       }
     },
     "lp-reviews": {
@@ -292,6 +322,21 @@
         "bar_px": 16,
         "bar_height": 80
       }
+    },
+    "1781498424f948e012": {
+      "type": "apps",
+      "blocks": {
+        "releasit_cod_form_button_app_block_DgC6DN": {
+          "type": "shopify://apps/releasit-cod-form/blocks/button-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "releasit_cod_form_button_app_block_DgC6DN"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -309,6 +354,7 @@
     "lp-problem-solution",
     "lp-faq",
     "lp-testimonials",
-    "lp-sticky-btn"
+    "lp-sticky-btn",
+    "1781498424f948e012"
   ]
 }
