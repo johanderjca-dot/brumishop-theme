@@ -1,11 +1,11 @@
 <style>
-  .lp-desc-content p { margin-bottom: 1rem; line-height: 1.8; }
-  .lp-desc-content ul, .lp-desc-content ol { margin: 0.75rem 0 1rem 1.5rem; }
+  .lp-desc-content p { margin-bottom: 1rem; line-height: var(--lp-lh, 1.8); }
+  .lp-desc-content ul, .lp-desc-content ol { margin: 0.75rem 0 1rem 1.5rem; line-height: var(--lp-lh, 1.8); }
   .lp-desc-content li { margin-bottom: 0.35rem; }
   .lp-desc-content strong { color: #1a1a18; }
 </style>
 
-<section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0;">
+<section style="--lp-lh:{{ section.settings.line_height | times: 0.1 }}; background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0;">
   <div style="max-width:{{ section.settings.max_width }}px; margin:0 auto; padding:0 1.5rem;">
 
     {% comment %} Contenedor con borde opcional {% endcomment %}
@@ -63,6 +63,7 @@
     { "type": "range", "id": "title_size", "label": "Tamaño título (px)", "min": 20, "max": 72, "step": 2, "default": 48 },
     { "type": "range", "id": "slogan_size", "label": "Tamaño slogan (px)", "min": 14, "max": 40, "step": 1, "default": 22 },
     { "type": "range", "id": "desc_size", "label": "Tamaño descripción (px)", "min": 12, "max": 22, "step": 1, "default": 16 },
+    { "type": "range", "id": "line_height", "label": "Interlineado (12=compacto · 18=normal · 24=espaciado)", "min": 12, "max": 24, "step": 2, "default": 18 },
 
     { "type": "header", "content": "Diseño" },
     { "type": "select", "id": "align", "label": "Alineación", "options": [{"value":"left","label":"Izquierda"},{"value":"center","label":"Centro"}], "default": "center" },
