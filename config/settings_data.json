@@ -32,8 +32,21 @@
         "blocks": {
           "link_column_XVackC": {
             "type": "link_column",
+            "disabled": true,
             "settings": {
-              "title": "Ayuda"
+              "title": "Ayuda",
+              "link_1_label": "FAQ",
+              "link_1_url": "",
+              "link_2_label": "Envíos y devoluciones",
+              "link_2_url": "",
+              "link_3_label": "Contacto",
+              "link_3_url": "",
+              "link_4_label": "",
+              "link_4_url": "",
+              "link_5_label": "",
+              "link_5_url": "",
+              "link_6_label": "",
+              "link_6_url": ""
             }
           }
         },
@@ -41,7 +54,25 @@
           "link_column_XVackC"
         ],
         "settings": {
-          "tagline": "Tu tienda de confianza. Productos de calidad para el día a día."
+          "logo_height": 32,
+          "brand_name": "BrumiShop",
+          "tagline": "Tu tienda de confianza. Productos de calidad para el día a día.",
+          "instagram": "",
+          "whatsapp": "",
+          "facebook": "",
+          "tiktok": "",
+          "copyright": "© 2026 BrumiShop — Todos los derechos reservados.",
+          "show_payment_methods": true,
+          "pay_cod": true,
+          "pay_visa": false,
+          "pay_mc": false,
+          "pay_amex": false,
+          "pay_paypal": false,
+          "pay_transfer": false,
+          "bg_color": "#fafaf6",
+          "heading_color": "#1a1a18",
+          "text_color": "#6a6a62",
+          "border_color": "#e8e8e2"
         }
       }
     },
