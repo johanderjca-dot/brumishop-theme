@@ -1,4 +1,5 @@
 {% assign cv = product.selected_or_first_available_variant %}
+
 {% assign has_fake = false %}
 {% if section.settings.fake_price_amount > 0 %}
   {% assign fake_cents = section.settings.fake_price_amount | times: 100 %}
@@ -8,14 +9,6 @@
     {% assign savings_pct = savings_cents | times: 100 | divided_by: fake_cents %}
   {% endif %}
 {% endif %}
-
-<style>
-  .lp-offer-variant-input:checked + .lp-offer-variant-label {
-    border-color: #1a1a18;
-    background: #1a1a18;
-    color: #fff;
-  }
-</style>
 
 <section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.pt }}px 0 {{ section.settings.pb }}px;">
   <div style="max-width:{{ section.settings.max_width }}px; margin:0 auto; padding:0 1.5rem; text-align:center;">
@@ -35,9 +28,8 @@
     <!-- Tarjeta de precio -->
     <div style="background:{{ section.settings.card_bg }}; border:{{ section.settings.card_border_width }}px solid {{ section.settings.card_border_color }}; border-radius:{{ section.settings.card_radius }}px; padding:{{ section.settings.card_pad }}px; max-width:{{ section.settings.card_max_width }}px; margin:0 auto;">
 
-      <!-- Precio real + tachado -->
-      <div style="display:flex; align-items:center; justify-content:center; gap:0.85rem; flex-wrap:wrap; margin-bottom:{% if has_fake %}0.85rem{% else %}0{% endif %};">
-        <span id="lp-offer-price" style="font-size:{{ section.settings.price_size }}px; font-weight:700; color:{{ section.settings.price_color }}; line-height:1;">
+      <div style="display:flex; align-items:center; justify-content:center; gap:0.85rem; flex-wrap:wrap; margin-bottom:{% if has_fake or cv.compare_at_price > cv.price %}0.85rem{% else %}0{% endif %};">
+        <span style="font-size:{{ section.settings.price_size }}px; font-weight:700; color:{{ section.settings.price_color }}; line-height:1;">
           {{ cv.price | money }}
         </span>
         {% if has_fake %}
@@ -51,9 +43,8 @@
         {% endif %}
       </div>
 
-      <!-- Caja de ahorro -->
       {% if has_fake %}
-        <div style="background:{{ section.settings.savings_bg }}; border-radius:8px; padding:0.6rem 1.25rem; display:inline-flex; align-items:center; gap:0.5rem; margin-bottom:0;">
+        <div style="background:{{ section.settings.savings_bg }}; border-radius:8px; padding:0.6rem 1.25rem; display:inline-flex; align-items:center; gap:0.5rem;">
           <span style="color:{{ section.settings.savings_color }}; font-size:0.85rem; font-weight:700;">
             ✓ Ahorras {{ savings_cents | money }} — {{ savings_pct }}% OFF
           </span>
@@ -62,79 +53,14 @@
 
     </div>
 
-    <!-- Urgencia -->
     {% if section.settings.urgency_qty > 0 %}
       <p style="font-size:0.85rem; color:{{ section.settings.urgency_color }}; margin-top:1rem; margin-bottom:0; font-weight:600;">
         {{ section.settings.urgency_prefix | strip }} {{ section.settings.urgency_qty }} {{ section.settings.urgency_suffix | strip }}
       </p>
     {% endif %}
 
-    <!-- Variantes (sin form, para no activar apps de pago) -->
-    <div id="lp-offer-form">
-      {% unless product.has_only_default_variant %}
-        <div style="margin-top:1.25rem;">
-          {% for option in product.options_with_values %}
-            <div style="margin-bottom:1rem;">
-              <p style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#1a1a18; margin-bottom:0.6rem;">{{ option.name }}</p>
-              <div style="display:flex; flex-wrap:wrap; gap:0.5rem; justify-content:center;">
-                {% for value in option.values %}
-                  <label>
-                    <input type="radio" data-option="{{ option.name }}" value="{{ value }}"
-                           class="lp-offer-variant-input" style="display:none;"
-                           {% if option.selected_value == value %}checked{% endif %}>
-                    <span class="lp-offer-variant-label"
-                          style="display:inline-block; padding:0.5rem 1.1rem; font-size:0.8rem; font-weight:500; border:1.5px solid #E0E0DA; cursor:pointer; border-radius:3px; transition:all .15s; user-select:none;
-                          {% if option.selected_value == value %}border-color:#1a1a18;background:#1a1a18;color:#fff;{% endif %}">
-                      {{ value }}
-                    </span>
-                  </label>
-                {% endfor %}
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      {% endunless %}
-      <input type="hidden" id="lp-offer-variant-id" class="brumi-variant-id" value="{{ cv.id }}" data-brumi-variant>
-    </div>
-
   </div>
 </section>
-
-<script>
-(function() {
-  var form = document.getElementById('lp-offer-form');
-  var variants = {{ product.variants | json }};
-  var options  = {{ product.options | json }};
-  window.brumiSelectedVariantId = {{ cv.id }};
-
-  var container = document.getElementById('lp-offer-form');
-  if (container) {
-    var radios = container.querySelectorAll('.lp-offer-variant-input');
-    function getSelected() {
-      var sel = {};
-      radios.forEach(function(r) { if (r.checked) sel[r.dataset.option] = r.value; });
-      return sel;
-    }
-    radios.forEach(function(r) {
-      r.addEventListener('change', function() {
-        radios.forEach(function(inp) {
-          var lbl = inp.nextElementSibling;
-          if (inp.checked) { lbl.style.borderColor='#1a1a18'; lbl.style.background='#1a1a18'; lbl.style.color='#fff'; }
-          else { lbl.style.borderColor=''; lbl.style.background=''; lbl.style.color=''; }
-        });
-        var v = variants.find(function(v) { return v.options.every(function(o,i){ return getSelected()[options[i]]===o; }); });
-        if (!v) return;
-        document.querySelectorAll('.brumi-variant-id').forEach(function(i){ i.value = v.id; });
-        window.brumiSelectedVariantId = v.id;
-        var priceEl = document.getElementById('lp-offer-price');
-        if (priceEl) priceEl.textContent = (v.price/100).toLocaleString('es-DO',{style:'currency',currency:'{{ shop.currency }}'});
-      });
-    });
-  }
-
-
-})();
-</script>
 
 {% schema %}
 {
@@ -143,7 +69,7 @@
     { "type": "header", "content": "── PRECIO ──────────────────────" },
     { "type": "range", "id": "price_size", "label": "Tamaño del precio (px)", "min": 24, "max": 64, "step": 2, "default": 42 },
     { "type": "color", "id": "price_color", "label": "Color del precio", "default": "#1a1a18" },
-    { "type": "number", "id": "fake_price_amount", "label": "★ Precio tachado — escribe solo el número (ej: 2500 = RD$2,500.00)", "default": 0 },
+    { "type": "number", "id": "fake_price_amount", "label": "Precio tachado — solo el número (ej: 2500)", "default": 0 },
 
     { "type": "header", "content": "── TARJETA DE PRECIO ───────────" },
     { "type": "color", "id": "card_bg", "label": "Fondo de la tarjeta", "default": "#FFFFFF" },
