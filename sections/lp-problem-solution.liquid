@@ -7,6 +7,20 @@
   }
   .lp-ps-btn:hover { opacity: .88; }
   .lp-ps-btn:active { transform: scale(0.97); }
+  .lp-ps-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  @media (max-width: 767px) {
+    .lp-ps-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .lp-ps-img-first { order: -1; }
+    .lp-ps-text-first { order: 1; }
+  }
 </style>
 
 {% for block in section.blocks %}
@@ -14,15 +28,14 @@
 
   <section {{ block.shopify_attributes }}
            style="background:{% if is_even == 0 %}{{ section.settings.bg_odd }}{% else %}{{ section.settings.bg_even }}{% endif %}; padding:{{ section.settings.py }}px 0; border-top:1px solid {{ section.settings.border_color }};">
-    <div style="max-width:1320px; margin:0 auto; padding:0 1.5rem; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+    <div class="lp-ps-grid" style="max-width:1320px; margin:0 auto; padding:0 1.5rem;">
 
-      <!-- Text side (alternates) -->
       {% if is_even == 0 %}
-        <div>{% render 'lp-ps-text', block: block, section: section, cv: cv %}</div>
-        <div>{% render 'lp-ps-image', block: block, section: section %}</div>
+        <div class="lp-ps-text-first">{% render 'lp-ps-text', block: block, section: section, cv: cv %}</div>
+        <div class="lp-ps-img-first">{% render 'lp-ps-image', block: block, section: section %}</div>
       {% else %}
-        <div>{% render 'lp-ps-image', block: block, section: section %}</div>
-        <div>{% render 'lp-ps-text', block: block, section: section, cv: cv %}</div>
+        <div class="lp-ps-img-first">{% render 'lp-ps-image', block: block, section: section %}</div>
+        <div class="lp-ps-text-first">{% render 'lp-ps-text', block: block, section: section, cv: cv %}</div>
       {% endif %}
 
     </div>
