@@ -33,8 +33,7 @@
           "link_column_XVackC": {
             "type": "link_column",
             "settings": {
-              "title": "Ayuda",
-              "links": "FAQ, Envíos y Devoluciones, Contacto"
+              "title": "Ayuda"
             }
           }
         },
