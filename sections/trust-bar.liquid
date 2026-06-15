@@ -1,19 +1,43 @@
+<style>
+  @keyframes tbScroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .tb-track {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .tb-track--scroll {
+    animation: tbScroll {{ section.settings.speed }}s linear infinite;
+  }
+  .tb-track--scroll:hover {
+    animation-play-state: paused;
+  }
+</style>
+
 <div style="border-top:1px solid {{ section.settings.border_color }}; border-bottom:1px solid {{ section.settings.border_color }}; background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0; overflow:hidden;">
-  <div style="max-width:1320px; margin:0 auto; padding:0 1.5rem; display:flex; flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none; gap:{{ section.settings.gap }}px; justify-content:{% if section.settings.center %}center{% else %}flex-start{% endif %}; align-items:center;">
-    {% for block in section.blocks %}
-      <div {{ block.shopify_attributes }} style="display:flex; align-items:center; gap:0.5rem; flex-shrink:0;">
-        {% if block.settings.icon != blank %}
-          <span style="font-size:{{ section.settings.icon_size }}px; color:{{ section.settings.icon_color }}; flex-shrink:0; line-height:1;">{{ block.settings.icon }}</span>
-        {% endif %}
-        <span style="font-size:{{ section.settings.font_size }}px; font-weight:500; color:{{ section.settings.text_color }}; white-space:nowrap;">{{ block.settings.text }}</span>
-      </div>
+  <div class="tb-track {% if section.settings.auto_scroll %}tb-track--scroll{% endif %}"
+       style="gap:{{ section.settings.gap }}px; {% unless section.settings.auto_scroll %}justify-content:{% if section.settings.center %}center{% else %}flex-start{% endif %};{% endunless %}">
+
+    {% comment %} Items — duplicados para que el loop sea continuo en modo marquee {% endcomment %}
+    {% assign repeat_count = 2 %}
+    {% if section.settings.auto_scroll == false %}{% assign repeat_count = 1 %}{% endif %}
+
+    {% for i in (1..repeat_count) %}
+      {% for block in section.blocks %}
+        <div {% if i == 1 %}{{ block.shopify_attributes }}{% endif %}
+             style="display:flex; align-items:center; gap:0.5rem; flex-shrink:0; padding:0 {{ section.settings.gap | divided_by: 2 }}px;">
+          {% if block.settings.icon != blank %}
+            <span style="font-size:{{ section.settings.icon_size }}px; color:{{ section.settings.icon_color }}; flex-shrink:0; line-height:1;">{{ block.settings.icon }}</span>
+          {% endif %}
+          <span style="font-size:{{ section.settings.font_size }}px; font-weight:500; color:{{ section.settings.text_color }}; white-space:nowrap;">{{ block.settings.text }}</span>
+        </div>
+      {% endfor %}
     {% endfor %}
+
   </div>
 </div>
-
-<style>
-  .trust-bar-scroll::-webkit-scrollbar { display: none; }
-</style>
 
 {% schema %}
 {
@@ -21,12 +45,31 @@
   "settings": [
     {
       "type": "header",
+      "content": "Desplazamiento"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_scroll",
+      "label": "Desplazamiento automático (marquee)",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Velocidad (segundos por vuelta) — menor = más rápido",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "default": 25
+    },
+    {
+      "type": "header",
       "content": "Diseño"
     },
     {
       "type": "checkbox",
       "id": "center",
-      "label": "Centrar ítems",
+      "label": "Centrar ítems (solo si desplazamiento OFF)",
       "default": true
     },
     {
@@ -45,7 +88,7 @@
       "min": 12,
       "max": 80,
       "step": 4,
-      "default": 32
+      "default": 40
     },
     {
       "type": "range",

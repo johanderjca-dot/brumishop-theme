@@ -1,3 +1,30 @@
+<style>
+  @media (max-width: 767px) {
+    .brumi-slide {
+      grid-template-columns: 1fr !important;
+      min-height: auto !important;
+    }
+    .brumi-slide .brumi-text-side {
+      order: 2;
+      padding: 1.5rem 0 2rem !important;
+      padding-left: 0 !important;
+    }
+    .brumi-slide .brumi-img-side {
+      order: 1;
+      min-height: 0 !important;
+      padding: 1.5rem 0 0 !important;
+    }
+    .brumi-hero-btn {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+    .brumi-hero-btn-wrap {
+      display: flex !important;
+      justify-content: stretch !important;
+    }
+  }
+</style>
 <div class="brumi-hero relative overflow-hidden" style="background: {{ section.blocks[0].settings.bg_color | default: '#F8F7F2' }};" id="brumi-hero">
   <div class="max-w-[1320px] mx-auto px-6 relative">
 
@@ -7,10 +34,10 @@
            style="background: {{ block.settings.bg_color }}; grid-template-columns: 1fr 1fr;">
 
         <!-- Text side -->
-        <div class="flex flex-col justify-center py-16"
+        <div class="brumi-text-side flex flex-col justify-center py-16"
              style="padding-left: {{ block.settings.text_padding_left }}%; text-align: {{ block.settings.text_align }};">
           <h1 class="font-display leading-tight text-[#1a1a18]"
-              style="font-size: clamp(2rem, {{ block.settings.title_size }}vw, {{ block.settings.title_size | times: 1.4 }}rem); font-weight: 600;">
+              style="font-size: clamp(1.75rem, {{ block.settings.title_size }}vw, {{ block.settings.title_size | times: 1.4 }}rem); font-weight: 600;">
             {{ block.settings.title }}
           </h1>
           <p class="mt-4 text-sm text-[#6a6a62] leading-relaxed" style="max-width: 320px; {% if block.settings.text_align == 'center' %}margin-left: auto; margin-right: auto;{% endif %}">
@@ -19,15 +46,15 @@
           {% if block.settings.price_text != blank %}
             <p class="mt-5 text-sm font-semibold text-[#1a1a18]">{{ block.settings.price_text }}</p>
           {% endif %}
-          <div class="mt-6" style="{% if block.settings.text_align == 'center' %}display: flex; justify-content: center;{% endif %}">
-            <a href="{{ block.settings.button_url }}" class="inline-block bg-[#1a1a18] text-white text-xs font-semibold px-8 py-3.5 tracking-wide hover:bg-[#333330] transition-colors duration-200">
+          <div class="brumi-hero-btn-wrap mt-6" style="{% if block.settings.text_align == 'center' %}display: flex; justify-content: center;{% endif %}">
+            <a href="{{ block.settings.button_url }}" class="brumi-hero-btn inline-block bg-[#1a1a18] text-white text-sm font-semibold px-8 py-3.5 tracking-wide hover:bg-[#333330] transition-colors duration-200">
               {{ block.settings.button_label | default: 'Comprar Ahora' }}
             </a>
           </div>
         </div>
 
         <!-- Image side -->
-        <div class="flex items-center justify-center py-8" style="min-height: {{ section.settings.min_height }}px;">
+        <div class="brumi-img-side flex items-center justify-center py-8" style="min-height: {{ section.settings.min_height }}px;">
           {% if block.settings.image != blank %}
             <img src="{{ block.settings.image | image_url: width: 1000 }}"
                  srcset="{{ block.settings.image | image_url: width: 600 }} 600w,
