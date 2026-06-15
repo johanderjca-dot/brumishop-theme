@@ -1,3 +1,8 @@
+<style>
+  .brumi-logo { height: {{ section.settings.logo_height | times: 0.75 | round }}px; width: auto; display: block; }
+  @media (min-width: 768px) { .brumi-logo { height: {{ section.settings.logo_height }}px; } }
+</style>
+
 <header class="sticky top-0 z-50 bg-white border-b border-[#E8E8E2]">
   <div class="max-w-[1320px] mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center">
 
@@ -17,13 +22,7 @@
           <img
             src="{{ section.settings.logo | image_url: width: 400 }}"
             alt="{{ shop.name }}"
-            style="height: {{ section.settings.logo_height | times: 0.75 | round }}px; width: auto; display: block;"
-            class="md:hidden">
-          <img
-            src="{{ section.settings.logo | image_url: width: 400 }}"
-            alt="{{ shop.name }}"
-            style="height: {{ section.settings.logo_height }}px; width: auto; display: block;"
-            class="hidden md:block">
+            class="brumi-logo">
         {% else %}
           <span class="font-display text-xl md:text-2xl font-semibold tracking-[0.12em] md:tracking-[0.15em] text-[#1a1a18]">
             {{ shop.name | upcase }}
