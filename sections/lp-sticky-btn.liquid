@@ -43,60 +43,69 @@
   if (!btn) return;
 
   var riBtn = null;
+  var ourBar = document.getElementById('lp-sticky-bar');
 
-  // Busca el botón de Releaseit en el DOM
+  // Oculta la sección de Releaseit por su ID de sección
+  function hideRiSection() {
+    var riSection = document.getElementById('shopify-section-1781498424f948e012');
+    if (riSection) { riSection.style.display = 'none'; return; }
+    // Fallback: busca por id parcial
+    var all = document.querySelectorAll('[id*="1781498424f948e012"]');
+    for (var i = 0; i < all.length; i++) { all[i].style.display = 'none'; }
+  }
+
+  // Busca el botón de Releaseit, nunca dentro de nuestro bar
   function findRiBtn() {
+    // Primero intenta directamente en la sección de Releaseit
+    var riSection = document.getElementById('shopify-section-1781498424f948e012');
+    if (riSection) {
+      var inner = riSection.querySelector('button, [role="button"]');
+      if (inner) return inner;
+    }
+    // Luego por clases/atributos conocidos de Releaseit
     var selectors = [
-      'button[class*="ri-"]',
-      'a[class*="ri-"]',
-      '[data-ri-buy-now]',
-      '[data-ri-buy-button]',
-      '[data-releaseit]',
-      '[id*="ri-buy"]',
-      '[id*="releaseit"]',
-      '[class*="releaseit"]',
-      '[class*="ri-buy"]'
+      'button[class*="ri-"]', 'a[class*="ri-"]',
+      '[data-ri-buy-now]', '[data-ri-buy-button]', '[data-releaseit]',
+      '[id*="ri-buy"]', '[id*="releaseit"]',
+      '[class*="releaseit"]', '[class*="ri-buy"]', '[class*="ri_btn"]'
     ];
     for (var i = 0; i < selectors.length; i++) {
       var el = document.querySelector(selectors[i]);
-      if (el && el !== btn) return el;
+      if (el && !ourBar.contains(el)) return el;
     }
     return null;
   }
 
-  // Observa el DOM hasta que Releaseit inyecte su botón
+  function init() {
+    riBtn = findRiBtn();
+    if (riBtn) hideRiSection();
+  }
+
+  // Observa hasta que Releaseit inyecte su botón
   var observer = new MutationObserver(function() {
     var found = findRiBtn();
     if (found) {
       riBtn = found;
-      // Oculta el botón inline de Releaseit (usamos el nuestro)
-      var parent = riBtn.closest('.shopify-section, section, [class*="ri-section"], [class*="ri-widget"]') || riBtn.parentElement;
-      if (parent && parent !== document.getElementById('lp-sticky-bar')) {
-        parent.style.display = 'none';
-      }
+      hideRiSection();
       observer.disconnect();
     }
   });
   observer.observe(document.body, { childList: true, subtree: true });
 
-  // También intenta al cargar
-  riBtn = findRiBtn();
+  // Intenta al cargar y cuando el DOM esté listo
+  init();
+  if (document.readyState !== 'loading') {
+    setTimeout(init, 800);
+  } else {
+    document.addEventListener('DOMContentLoaded', function() { setTimeout(init, 800); });
+  }
 
   btn.addEventListener('click', function() {
-    // Reintenta por si el observer no lo había encontrado aún
     if (!riBtn) riBtn = findRiBtn();
-
-    if (riBtn) {
-      riBtn.click();
-      return;
-    }
-
-    // Intenta API global de Releaseit
+    if (riBtn) { riBtn.click(); return; }
     if (window.releaseit && typeof window.releaseit.open === 'function') { window.releaseit.open(); return; }
     if (window.Ri && typeof window.Ri.openForm === 'function') { window.Ri.openForm(); return; }
     if (window.RiBuyNow && typeof window.RiBuyNow.open === 'function') { window.RiBuyNow.open(); return; }
-
-    // Fallback: carrito
     window.location.href = '/cart/{{ cv.id }}:1';
   });
 })();
