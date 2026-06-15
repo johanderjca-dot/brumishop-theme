@@ -41,49 +41,63 @@
 (function() {
   var btn = document.getElementById('lp-sticky-buy');
   if (!btn) return;
-  var defaultId = {{ cv.id }};
 
-  function findReleaseitBtn() {
+  var riBtn = null;
+
+  // Busca el botón de Releaseit en el DOM
+  function findRiBtn() {
     var selectors = [
-      '.ri-buy-now-btn',
-      '.ri-buy-button',
-      '.ri-btn-buy',
+      'button[class*="ri-"]',
+      'a[class*="ri-"]',
       '[data-ri-buy-now]',
       '[data-ri-buy-button]',
-      '[data-releaseit-btn]',
-      '#ri-buy-btn',
-      '#ri-buy-now',
-      '.ri-form-trigger',
-      '[class*="ri-buy"]',
-      '[id*="ri-buy"]'
+      '[data-releaseit]',
+      '[id*="ri-buy"]',
+      '[id*="releaseit"]',
+      '[class*="releaseit"]',
+      '[class*="ri-buy"]'
     ];
     for (var i = 0; i < selectors.length; i++) {
       var el = document.querySelector(selectors[i]);
-      if (el) return el;
+      if (el && el !== btn) return el;
     }
     return null;
   }
 
+  // Observa el DOM hasta que Releaseit inyecte su botón
+  var observer = new MutationObserver(function() {
+    var found = findRiBtn();
+    if (found) {
+      riBtn = found;
+      // Oculta el botón inline de Releaseit (usamos el nuestro)
+      var parent = riBtn.closest('.shopify-section, section, [class*="ri-section"], [class*="ri-widget"]') || riBtn.parentElement;
+      if (parent && parent !== document.getElementById('lp-sticky-bar')) {
+        parent.style.display = 'none';
+      }
+      observer.disconnect();
+    }
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  // También intenta al cargar
+  riBtn = findRiBtn();
+
   btn.addEventListener('click', function() {
-    // Intenta disparar el popup de Releaseit
-    var riBtn = findReleaseitBtn();
+    // Reintenta por si el observer no lo había encontrado aún
+    if (!riBtn) riBtn = findRiBtn();
+
     if (riBtn) {
       riBtn.click();
       return;
     }
+
     // Intenta API global de Releaseit
-    if (window.releaseit && typeof window.releaseit.open === 'function') {
-      window.releaseit.open(); return;
-    }
-    if (window.Ri && typeof window.Ri.openForm === 'function') {
-      window.Ri.openForm(); return;
-    }
-    if (window.RiBuyNow && typeof window.RiBuyNow.open === 'function') {
-      window.RiBuyNow.open(); return;
-    }
-    // Fallback: ir al carrito
-    var id = window.brumiSelectedVariantId || defaultId;
-    window.location.href = '/cart/' + id + ':1';
+    if (window.releaseit && typeof window.releaseit.open === 'function') { window.releaseit.open(); return; }
+    if (window.Ri && typeof window.Ri.openForm === 'function') { window.Ri.openForm(); return; }
+    if (window.RiBuyNow && typeof window.RiBuyNow.open === 'function') { window.RiBuyNow.open(); return; }
+
+    // Fallback: carrito
+    window.location.href = '/cart/{{ cv.id }}:1';
   });
 })();
 </script>
