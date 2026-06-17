@@ -1,23 +1,166 @@
+{% assign images = product.images %}
+{% assign img_count = images.size %}
+
+<style>
+  .lp-hero-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 0;
+  }
+  .lp-hero-track::-webkit-scrollbar { display: none; }
+  .lp-hero-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    line-height: 0;
+  }
+  .lp-hero-slide img {
+    width: 100%;
+    max-height: {{ section.settings.max_height }}px;
+    object-fit: {{ section.settings.fit }};
+    display: block;
+  }
+  .lp-hero-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 0 4px;
+  }
+  .lp-hero-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #c8c8c0;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background .2s, transform .2s;
+  }
+  .lp-hero-dot.active {
+    background: #1a1a18;
+    transform: scale(1.25);
+  }
+  .lp-hero-arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+    pointer-events: none;
+    box-sizing: border-box;
+  }
+  .lp-hero-arrow {
+    pointer-events: all;
+    background: rgba(255,255,255,0.85);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.15);
+    transition: background .15s;
+  }
+  .lp-hero-arrow:hover { background: #fff; }
+  @media (max-width: 767px) {
+    .lp-hero-arrows { display: none; }
+  }
+</style>
+
 <section style="background:{{ section.settings.bg_color }}; padding-top:{{ section.settings.pt }}px;">
   <div style="{% unless section.settings.full_width %}max-width:1320px;margin:0 auto;{% endunless %}padding:0 {{ section.settings.side_pad }}px;">
-    <div style="border-radius:{{ section.settings.radius }}px; overflow:hidden; line-height:0;">
-      {% if product.featured_image != blank %}
-        <img src="{{ product.featured_image | image_url: width: 1600 }}"
-             srcset="{{ product.featured_image | image_url: width: 750 }} 750w,
-                     {{ product.featured_image | image_url: width: 1100 }} 1100w,
-                     {{ product.featured_image | image_url: width: 1600 }} 1600w,
-                     {{ product.featured_image | image_url: width: 2200 }} 2200w"
-             sizes="100vw"
-             alt="{{ product.title | escape }}"
-             style="width:100%; max-height:{{ section.settings.max_height }}px; object-fit:{{ section.settings.fit }}; display:block;">
+    <div style="border-radius:{{ section.settings.radius }}px; overflow:hidden; position:relative;">
+
+      {% if img_count > 0 %}
+        <div class="lp-hero-track" id="lp-hero-track">
+          {% for image in images %}
+            <div class="lp-hero-slide">
+              <img src="{{ image | image_url: width: 1600 }}"
+                   srcset="{{ image | image_url: width: 750 }} 750w,
+                           {{ image | image_url: width: 1100 }} 1100w,
+                           {{ image | image_url: width: 1600 }} 1600w"
+                   sizes="100vw"
+                   alt="{{ product.title | escape }}"
+                   loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+            </div>
+          {% endfor %}
+        </div>
+
+        {% if img_count > 1 %}
+          <div class="lp-hero-arrows">
+            <button class="lp-hero-arrow" id="lp-hero-prev" aria-label="Anterior">&#8249;</button>
+            <button class="lp-hero-arrow" id="lp-hero-next" aria-label="Siguiente">&#8250;</button>
+          </div>
+
+          <div class="lp-hero-dots" id="lp-hero-dots">
+            {% for image in images %}
+              <button class="lp-hero-dot {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}" aria-label="Imagen {{ forloop.index }}"></button>
+            {% endfor %}
+          </div>
+        {% endif %}
+
       {% else %}
-        <div style="background:#E8E8E2; height:{{ section.settings.max_height }}px; display:flex; align-items:center; justify-content:center; line-height:normal;">
-          <p style="color:#a0a09a; font-size:0.875rem;">Sube una imagen al producto en Shopify Admin para que aparezca aquí.</p>
+        <div style="background:#E8E8E2; height:{{ section.settings.max_height }}px; display:flex; align-items:center; justify-content:center;">
+          <p style="color:#a0a09a; font-size:0.875rem;">Sube imágenes al producto en Shopify Admin.</p>
         </div>
       {% endif %}
+
     </div>
   </div>
 </section>
+
+{% if img_count > 1 %}
+<script>
+(function() {
+  var track = document.getElementById('lp-hero-track');
+  var dots  = document.querySelectorAll('#lp-hero-dots .lp-hero-dot');
+  var prev  = document.getElementById('lp-hero-prev');
+  var next  = document.getElementById('lp-hero-next');
+  if (!track) return;
+
+  var current = 0;
+  var total = {{ img_count }};
+
+  function goTo(index) {
+    current = (index + total) % total;
+    track.scrollTo({ left: current * track.offsetWidth, behavior: 'smooth' });
+    dots.forEach(function(d, i) {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  if (prev) prev.addEventListener('click', function() { goTo(current - 1); });
+  if (next) next.addEventListener('click', function() { goTo(current + 1); });
+
+  dots.forEach(function(d) {
+    d.addEventListener('click', function() { goTo(parseInt(d.dataset.index)); });
+  });
+
+  // Sync dots on swipe
+  var scrollTimer;
+  track.addEventListener('scroll', function() {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(function() {
+      var index = Math.round(track.scrollLeft / track.offsetWidth);
+      if (index !== current) {
+        current = index;
+        dots.forEach(function(d, i) {
+          d.classList.toggle('active', i === current);
+        });
+      }
+    }, 80);
+  });
+})();
+</script>
+{% endif %}
 
 {% schema %}
 {
