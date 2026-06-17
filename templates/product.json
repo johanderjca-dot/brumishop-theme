@@ -48,8 +48,8 @@
         "mb_slogan": 12,
         "align": "center",
         "max_width": 1160,
-        "pt": 28,
-        "pb": 15,
+        "pt": 16,
+        "pb": 8,
         "box_border_width": 1,
         "box_border_color": "#e8e8e2",
         "box_radius": 8,
@@ -147,8 +147,8 @@
         "box_border_color": "#e8e8e2",
         "box_radius": 8,
         "box_pad": 20,
-        "pt": 15,
-        "pb": 15,
+        "pt": 10,
+        "pb": 10,
         "bg_color": "#fafaf6",
         "heading_color": "#1a1a18",
         "text_color": "#5a5a52"
@@ -208,7 +208,7 @@
         "star_color": "#f4a327",
         "heading_color": "#1a1a18",
         "text_color": "#5a5a52",
-        "py": 80
+        "py": 48
       }
     },
     "lp-shipping": {
@@ -283,7 +283,7 @@
             "btn_radius": 4,
             "image": "shopify://shop_images/Firefly_Flux_hazlomaspro_agregaleunfondosuave_comosifueseunproductoninja_enunacocin603505.png",
             "img_radius": 8,
-            "img_height": 440
+            "img_height": 300
           }
         },
         "block_Q7zLAT": {
@@ -302,7 +302,7 @@
             "btn_radius": 4,
             "image": "shopify://shop_images/Firefly_Flux_hazlomaspro_agregaleunfondosuave_comosifueseunproductoninja_enunacocin603505.png",
             "img_radius": 8,
-            "img_height": 440
+            "img_height": 300
           }
         }
       },
@@ -311,7 +311,7 @@
         "block_Q7zLAT"
       ],
       "settings": {
-        "py": 80,
+        "py": 48,
         "bg_odd": "#ffffff",
         "bg_even": "#fafaf6",
         "border_color": "#e8e8e2",
@@ -329,7 +329,7 @@
         "subtitle": "",
         "title_align": "left",
         "max_width": 780,
-        "py": 80,
+        "py": 48,
         "bg_color": "#ffffff",
         "border_color": "#e8e8e2",
         "heading_color": "#1a1a18",
@@ -351,7 +351,7 @@
         "star_color": "#f4a327",
         "heading_color": "#1a1a18",
         "text_color": "#5a5a52",
-        "py": 80
+        "py": 48
       }
     },
     "lp-sticky-btn": {
