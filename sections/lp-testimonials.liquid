@@ -3,7 +3,7 @@
   <div style="max-width:1320px; margin:0 auto; padding:0 1.5rem;">
 
     <!-- Header -->
-    <div style="text-align:center; margin-bottom:3rem;">
+    <div style="text-align:center; margin-bottom:1.5rem;">
       {% if section.settings.badge_text != blank %}
         <div style="display:inline-flex; align-items:center; gap:0.4rem; background:{{ section.settings.accent_color }}; color:#fff; font-size:0.65rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; padding:0.35rem 0.85rem; border-radius:50px; margin-bottom:1rem;">
           {{ section.settings.badge_text }}
@@ -25,7 +25,7 @@
     <div style="display:grid; grid-template-columns:repeat({{ section.settings.columns }},1fr); gap:1.5rem;">
       {% for block in section.blocks %}
         <div {{ block.shopify_attributes }}
-             style="background:{{ section.settings.card_bg }}; border:1px solid {{ section.settings.card_border }}; border-radius:{{ section.settings.card_radius }}px; padding:1.75rem; position:relative;">
+             style="background:{{ section.settings.card_bg }}; border:1px solid {{ section.settings.card_border }}; border-radius:{{ section.settings.card_radius }}px; padding:1.25rem; position:relative;">
 
           <!-- Verified badge -->
           {% if block.settings.verified %}
@@ -35,14 +35,14 @@
           {% endif %}
 
           <!-- Stars -->
-          <div style="color:{{ section.settings.star_color }}; font-size:1rem; margin-bottom:1rem; letter-spacing:0.08em;">
+          <div style="color:{{ section.settings.star_color }}; font-size:0.9rem; margin-bottom:0.5rem; letter-spacing:0.08em;">
             {% assign stars = block.settings.rating %}
             {% for i in (1..5) %}{% if i <= stars %}★{% else %}☆{% endif %}{% endfor %}
           </div>
 
           <!-- Quote -->
           {% if block.settings.testimonial != blank %}
-            <p style="font-size:0.925rem; color:{{ section.settings.text_color }}; line-height:1.75; margin-bottom:1.5rem; font-style:italic;">
+            <p style="font-size:0.875rem; color:{{ section.settings.text_color }}; line-height:1.6; margin-bottom:0.85rem; font-style:italic;">
               "{{ block.settings.testimonial }}"
             </p>
           {% endif %}
