@@ -158,6 +158,19 @@
       }
     }, 80);
   });
+
+  // Auto-play
+  var autoplay = setInterval(function() { goTo(current + 1); }, 3500);
+
+  // Pause on interaction, resume after
+  function resetAutoplay() {
+    clearInterval(autoplay);
+    autoplay = setInterval(function() { goTo(current + 1); }, 3500);
+  }
+  track.addEventListener('touchstart', resetAutoplay, { passive: true });
+  if (prev) prev.addEventListener('click', resetAutoplay);
+  if (next) next.addEventListener('click', resetAutoplay);
+  dots.forEach(function(d) { d.addEventListener('click', resetAutoplay); });
 })();
 </script>
 {% endif %}
