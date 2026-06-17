@@ -208,7 +208,7 @@
         "star_color": "#f4a327",
         "heading_color": "#1a1a18",
         "text_color": "#5a5a52",
-        "py": 48
+        "py": 24
       }
     },
     "lp-shipping": {
@@ -311,7 +311,7 @@
         "block_Q7zLAT"
       ],
       "settings": {
-        "py": 48,
+        "py": 24,
         "bg_odd": "#ffffff",
         "bg_even": "#fafaf6",
         "border_color": "#e8e8e2",
@@ -329,7 +329,7 @@
         "subtitle": "",
         "title_align": "left",
         "max_width": 780,
-        "py": 48,
+        "py": 24,
         "bg_color": "#ffffff",
         "border_color": "#e8e8e2",
         "heading_color": "#1a1a18",
@@ -351,7 +351,7 @@
         "star_color": "#f4a327",
         "heading_color": "#1a1a18",
         "text_color": "#5a5a52",
-        "py": 48
+        "py": 24
       }
     },
     "lp-sticky-btn": {
