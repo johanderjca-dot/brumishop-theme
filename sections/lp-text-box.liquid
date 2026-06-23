@@ -1,0 +1,108 @@
+{% if section.settings.text != blank %}
+<div style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px {{ section.settings.px }}px;">
+  <div style="max-width:{{ section.settings.max_width }}px; margin:0 auto; background:{{ section.settings.box_bg }}; border:{{ section.settings.border_width }}px solid {{ section.settings.border_color }}; border-radius:{{ section.settings.radius }}px; padding:{{ section.settings.box_pad }}px; text-align:{{ section.settings.align }};">
+    {{ section.settings.text }}
+  </div>
+</div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Box de texto",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Contenido"
+    },
+    {
+      "type": "select",
+      "id": "align",
+      "label": "Alineación",
+      "options": [
+        { "value": "left", "label": "Izquierda" },
+        { "value": "center", "label": "Centro" },
+        { "value": "right", "label": "Derecha" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Ancho máximo (px)",
+      "min": 300,
+      "max": 1200,
+      "step": 20,
+      "default": 780
+    },
+    {
+      "type": "range",
+      "id": "py",
+      "label": "Espacio vertical sección (px)",
+      "min": 0,
+      "max": 64,
+      "step": 4,
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "px",
+      "label": "Espacio horizontal sección (px)",
+      "min": 0,
+      "max": 64,
+      "step": 4,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "box_pad",
+      "label": "Padding del box (px)",
+      "min": 8,
+      "max": 48,
+      "step": 4,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "radius",
+      "label": "Bordes redondeados (px)",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "label": "Grosor del borde (px)",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Fondo de sección",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "box_bg",
+      "label": "Fondo del box",
+      "default": "#fafaf6"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Color del borde",
+      "default": "#e8e8e2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Box de texto"
+    }
+  ]
+}
+{% endschema %}

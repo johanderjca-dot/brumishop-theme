@@ -31,6 +31,10 @@
         "bg_below": "#ffffff"
       }
     },
+    "lp-text-box": {
+      "type": "lp-text-box",
+      "settings": {}
+    },
     "lp-description": {
       "type": "lp-description",
       "settings": {
@@ -390,6 +394,7 @@
   "order": [
     "lp-hero",
     "div-1",
+    "lp-text-box",
     "lp-description",
     "div-2",
     "lp-benefits",
