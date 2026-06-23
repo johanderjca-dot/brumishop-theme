@@ -79,56 +79,6 @@
       "disabled": true,
       "settings": {}
     },
-    "trust-bar": {
-      "type": "trust-bar",
-      "blocks": {
-        "item_qGEJcY": {
-          "type": "item",
-          "settings": {
-            "icon": "•",
-            "text": "Envío gratis desde $50"
-          }
-        },
-        "item-2": {
-          "type": "item",
-          "settings": {
-            "icon": "•",
-            "text": "Devoluciones en 7 días"
-          }
-        },
-        "item-3": {
-          "type": "item",
-          "settings": {
-            "icon": "•",
-            "text": "Pagos 100% seguros, al recibir"
-          }
-        },
-        "item-4": {
-          "type": "item",
-          "settings": {
-            "icon": "•",
-            "text": "Soporte 24/7"
-          }
-        }
-      },
-      "block_order": [
-        "item_qGEJcY",
-        "item-2",
-        "item-3",
-        "item-4"
-      ],
-      "settings": {
-        "center": true,
-        "py": 20,
-        "gap": 32,
-        "font_size": 13,
-        "icon_size": 16,
-        "bg_color": "#ffffff",
-        "border_color": "#e8e8e2",
-        "icon_color": "#db9d00",
-        "text_color": "#5a5a52"
-      }
-    },
     "product-carousel": {
       "type": "product-carousel",
       "settings": {
@@ -253,7 +203,6 @@
   "order": [
     "hero-slider",
     "category-cards",
-    "trust-bar",
     "product-carousel",
     "why-us-vs",
     "brand-marquee"
