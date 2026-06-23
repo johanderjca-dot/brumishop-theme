@@ -33,7 +33,10 @@
     },
     "lp-text-box": {
       "type": "lp-text-box",
-      "settings": {}
+      "settings": {
+        "py": 0,
+        "px": 16
+      }
     },
     "lp-description": {
       "type": "lp-description",
