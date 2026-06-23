@@ -31,16 +31,6 @@
         "bg_below": "#ffffff"
       }
     },
-    "lp-badges": {
-      "type": "lp-badges",
-      "blocks": {
-        "badge_1": { "type": "badge", "settings": { "label": "Envío a todo RD" } },
-        "badge_2": { "type": "badge", "settings": { "label": "Paga al recibir" } },
-        "badge_3": { "type": "badge", "settings": { "label": "Garantía del producto" } }
-      },
-      "block_order": ["badge_1", "badge_2", "badge_3"],
-      "settings": {}
-    },
     "lp-description": {
       "type": "lp-description",
       "settings": {
@@ -400,7 +390,6 @@
   "order": [
     "lp-hero",
     "div-1",
-    "lp-badges",
     "lp-description",
     "div-2",
     "lp-benefits",
