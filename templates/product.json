@@ -34,17 +34,27 @@
     "lp-text-box": {
       "type": "lp-text-box",
       "settings": {
-        "text": "<p>ENVIO GRATIS A TODO RD</p>",
+        "text": "<p><strong>ENVIO GRATIS A TODO RD</strong></p>",
         "align": "center",
         "max_width": 300,
         "py": 0,
         "px": 0,
         "box_pad": 8,
         "radius": 0,
-        "border_width": 2,
+        "border_width": 0,
         "bg_color": "#ffffff",
         "box_bg": "#FFFFFF",
         "border_color": "#000000"
+      }
+    },
+    "lp_divider_jg7UjN": {
+      "type": "lp-divider",
+      "settings": {
+        "py": 6,
+        "max_width": 700,
+        "line_color": "#d0d0c8",
+        "bg_above": "#ffffff",
+        "bg_below": "#ffffff"
       }
     },
     "lp-description": {
@@ -407,6 +417,7 @@
     "lp-hero",
     "div-1",
     "lp-text-box",
+    "lp_divider_jg7UjN",
     "lp-description",
     "div-2",
     "lp-benefits",
