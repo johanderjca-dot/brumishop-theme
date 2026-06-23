@@ -44,7 +44,8 @@
         "border_width": 0,
         "bg_color": "#ffffff",
         "box_bg": "#ffffff",
-        "border_color": "#000000"
+        "border_color": "#000000",
+        "text_color": "#DB9D00"
       }
     },
     "lp_divider_jg7UjN": {
