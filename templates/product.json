@@ -34,7 +34,7 @@
     "lp-text-box": {
       "type": "lp-text-box",
       "settings": {
-        "text": "<p><strong>ENVIO GRATIS A TODO RD</strong></p>",
+        "text": "<p><strong>🚘 ENVIO GRATIS A TODO RD</strong></p>",
         "align": "center",
         "max_width": 300,
         "py": 0,
@@ -45,7 +45,8 @@
         "bg_color": "#ffffff",
         "box_bg": "#ffffff",
         "border_color": "#000000",
-        "text_color": "#DB9D00"
+        "text_color": "#db9d00",
+        "font_size": 16
       }
     },
     "lp_divider_jg7UjN": {
