@@ -15,7 +15,7 @@
         "pt": 16,
         "side_pad": 20,
         "full_width": true,
-        "max_height": 350,
+        "max_height": 400,
         "radius": 14,
         "fit": "contain",
         "bg_color": "#ffffff"
@@ -34,8 +34,17 @@
     "lp-text-box": {
       "type": "lp-text-box",
       "settings": {
+        "text": "<p>ENVIO GRATIS A TODO RD</p>",
+        "align": "center",
+        "max_width": 300,
         "py": 0,
-        "px": 16
+        "px": 0,
+        "box_pad": 8,
+        "radius": 0,
+        "border_width": 0,
+        "bg_color": "#ffffff",
+        "box_bg": "#fafaf6",
+        "border_color": "#e8e8e2"
       }
     },
     "lp-description": {
