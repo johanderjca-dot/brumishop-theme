@@ -1,7 +1,7 @@
 {% if section.settings.text != blank %}
 <div style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px {{ section.settings.px }}px;">
   <div style="max-width:{{ section.settings.max_width }}px; margin:0 auto; background:{{ section.settings.box_bg }}; border:{{ section.settings.border_width }}px solid {{ section.settings.border_color }}; border-radius:{{ section.settings.radius }}px; padding:{{ section.settings.box_pad }}px; text-align:{{ section.settings.align }};">
-    <div style="color:{{ section.settings.text_color }};">{{ section.settings.text }}</div>
+    <div style="color:{{ section.settings.text_color }}; font-size:{{ section.settings.font_size }}px;">{{ section.settings.text }}</div>
   </div>
 </div>
 {% endif %}
@@ -103,6 +103,15 @@
       "id": "text_color",
       "label": "Color del texto",
       "default": "#1a1a18"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Tamaño del texto (px)",
+      "min": 10,
+      "max": 48,
+      "step": 1,
+      "default": 14
     }
   ],
   "presets": [
