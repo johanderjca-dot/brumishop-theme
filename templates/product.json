@@ -15,7 +15,7 @@
         "pt": 16,
         "side_pad": 20,
         "full_width": true,
-        "max_height": 400,
+        "max_height": 350,
         "radius": 14,
         "fit": "contain",
         "bg_color": "#ffffff"
