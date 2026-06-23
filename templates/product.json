@@ -41,10 +41,10 @@
         "px": 0,
         "box_pad": 8,
         "radius": 0,
-        "border_width": 0,
+        "border_width": 2,
         "bg_color": "#ffffff",
-        "box_bg": "#fafaf6",
-        "border_color": "#e8e8e2"
+        "box_bg": "#FFFFFF",
+        "border_color": "#000000"
       }
     },
     "lp-description": {
