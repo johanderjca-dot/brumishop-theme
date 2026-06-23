@@ -1,116 +1,38 @@
-<style>
-  @keyframes tbScroll {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  .tb-track {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-  }
-  .tb-track--scroll {
-    animation: tbScroll {{ section.settings.speed }}s linear infinite;
-  }
-  .tb-track--scroll:hover {
-    animation-play-state: paused;
-  }
-</style>
-
-<div style="border-top:1px solid {{ section.settings.border_color }}; border-bottom:1px solid {{ section.settings.border_color }}; background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0; overflow:hidden;">
-  <div class="tb-track {% if section.settings.auto_scroll %}tb-track--scroll{% endif %}"
-       style="gap:{{ section.settings.gap }}px; {% unless section.settings.auto_scroll %}justify-content:{% if section.settings.center %}center{% else %}flex-start{% endif %};{% endunless %}">
-
-    {% comment %} Items — duplicados para que el loop sea continuo en modo marquee {% endcomment %}
-    {% assign repeat_count = 2 %}
-    {% if section.settings.auto_scroll == false %}{% assign repeat_count = 1 %}{% endif %}
-
-    {% for i in (1..repeat_count) %}
-      {% for block in section.blocks %}
-        <div {% if i == 1 %}{{ block.shopify_attributes }}{% endif %}
-             style="display:flex; align-items:center; gap:0.5rem; flex-shrink:0; padding:0 {{ section.settings.gap | divided_by: 2 }}px;">
-          {% if block.settings.icon != blank %}
-            <span style="font-size:{{ section.settings.icon_size }}px; color:{{ section.settings.icon_color }}; flex-shrink:0; line-height:1;">{{ block.settings.icon }}</span>
-          {% endif %}
-          <span style="font-size:{{ section.settings.font_size }}px; font-weight:500; color:{{ section.settings.text_color }}; white-space:nowrap;">{{ block.settings.text }}</span>
-        </div>
-      {% endfor %}
-    {% endfor %}
-
-  </div>
+{% if section.settings.image != blank %}
+<div style="border-top:1px solid {{ section.settings.border_color }}; border-bottom:1px solid {{ section.settings.border_color }}; background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0; text-align:center;">
+  <img src="{{ section.settings.image | image_url: width: 1400 }}"
+       alt="{{ section.settings.image.alt | default: 'Trust badges' | escape }}"
+       style="max-width:{{ section.settings.max_width }}px; width:100%; height:auto; display:inline-block;"
+       loading="lazy">
 </div>
+{% endif %}
 
 {% schema %}
 {
   "name": "Trust Bar",
   "settings": [
     {
-      "type": "header",
-      "content": "Desplazamiento"
-    },
-    {
-      "type": "checkbox",
-      "id": "auto_scroll",
-      "label": "Desplazamiento automático (marquee)",
-      "default": true
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen de badges"
     },
     {
       "type": "range",
-      "id": "speed",
-      "label": "Velocidad (segundos por vuelta) — menor = más rápido",
-      "min": 10,
-      "max": 60,
-      "step": 5,
-      "default": 25
-    },
-    {
-      "type": "header",
-      "content": "Diseño"
-    },
-    {
-      "type": "checkbox",
-      "id": "center",
-      "label": "Centrar ítems (solo si desplazamiento OFF)",
-      "default": true
+      "id": "max_width",
+      "label": "Ancho máximo de la imagen (px)",
+      "min": 200,
+      "max": 1200,
+      "step": 50,
+      "default": 900
     },
     {
       "type": "range",
       "id": "py",
       "label": "Espacio vertical (px)",
       "min": 8,
-      "max": 48,
+      "max": 64,
       "step": 4,
       "default": 20
-    },
-    {
-      "type": "range",
-      "id": "gap",
-      "label": "Separación entre ítems (px)",
-      "min": 12,
-      "max": 80,
-      "step": 4,
-      "default": 40
-    },
-    {
-      "type": "range",
-      "id": "font_size",
-      "label": "Tamaño del texto (px)",
-      "min": 10,
-      "max": 18,
-      "step": 1,
-      "default": 13
-    },
-    {
-      "type": "range",
-      "id": "icon_size",
-      "label": "Tamaño del ícono (px)",
-      "min": 10,
-      "max": 24,
-      "step": 1,
-      "default": 16
-    },
-    {
-      "type": "header",
-      "content": "Colores"
     },
     {
       "type": "color",
@@ -123,50 +45,11 @@
       "id": "border_color",
       "label": "Color del borde",
       "default": "#E8E8E2"
-    },
-    {
-      "type": "color",
-      "id": "icon_color",
-      "label": "Color del ícono",
-      "default": "#5a7a40"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Color del texto",
-      "default": "#5a5a52"
-    }
-  ],
-  "max_blocks": 8,
-  "blocks": [
-    {
-      "type": "item",
-      "name": "Item",
-      "settings": [
-        {
-          "type": "text",
-          "id": "icon",
-          "label": "Ícono (símbolo o emoji)",
-          "default": "•"
-        },
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Texto",
-          "default": "Envío gratis desde $50"
-        }
-      ]
     }
   ],
   "presets": [
     {
-      "name": "Trust Bar",
-      "blocks": [
-        { "type": "item", "settings": { "icon": "•", "text": "Envío gratis desde $50" } },
-        { "type": "item", "settings": { "icon": "•", "text": "Devoluciones en 7 días" } },
-        { "type": "item", "settings": { "icon": "•", "text": "Pagos 100% seguros, al recibir" } },
-        { "type": "item", "settings": { "icon": "•", "text": "Soporte 24/7" } }
-      ]
+      "name": "Trust Bar"
     }
   ]
 }
