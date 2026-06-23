@@ -1,3 +1,26 @@
+/* ── Sackers Gothic ── */
+@font-face {
+  font-family: 'Sackers Gothic';
+  src: url('sackers-gothic-light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sackers Gothic';
+  src: url('sackers-gothic-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sackers Gothic';
+  src: url('sackers-gothic-heavy.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ── Global ── */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
