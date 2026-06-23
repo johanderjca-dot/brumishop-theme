@@ -60,7 +60,7 @@
     "lp-description": {
       "type": "lp-description",
       "settings": {
-        "content": "<p>LICUAMAX:Potencia en cada giro. </p><p>Motor potente, cuchillas de acero inoxidable y diseño para el uso diario.</p>",
+        "content": "<p><strong>LICUAMAX:</strong>Potencia en cada giro. </p><p>Motor potente, cuchillas de acero inoxidable y diseño para el uso diario.</p>",
         "font_family": "'DM Sans', sans-serif",
         "align": "left",
         "font_size": 15,
