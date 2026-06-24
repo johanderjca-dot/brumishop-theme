@@ -25,9 +25,11 @@
       </h2>
     {% endif %}
 
-    <!-- Box: solo precio -->
-    <div style="display:inline-block; background:{{ section.settings.card_bg }}; border:{{ section.settings.card_border_width }}px solid {{ section.settings.card_border_color }}; border-radius:{{ section.settings.card_radius }}px; padding:{{ section.settings.card_pad }}px; text-align:left;">
-      <div style="display:flex; align-items:baseline; gap:0.6rem; flex-wrap:wrap;">
+    <!-- Box: precio + ahorro -->
+    <div style="display:inline-block; background:{{ section.settings.card_bg }}; border:{{ section.settings.card_border_width }}px dashed {{ section.settings.card_border_color }}; border-radius:{{ section.settings.card_radius }}px; padding:{{ section.settings.card_pad }}px; text-align:left;">
+
+      <!-- Fila: precio + tachado -->
+      <div style="display:flex; align-items:baseline; gap:0.6rem; flex-wrap:wrap; margin-bottom:{% if has_fake %}0.4rem{% else %}0{% endif %};">
         <span style="font-size:{{ section.settings.price_size }}px; font-weight:700; color:{{ section.settings.price_color }}; line-height:1;">
           {{ cv.price | money }}
         </span>
@@ -41,20 +43,19 @@
           </span>
         {% endif %}
       </div>
-    </div>
 
-    <!-- Badge: ahorro -->
-    {% if has_fake %}
-      <div style="margin-top:0.4rem;">
-        <div style="display:inline-flex; align-items:center; background:{{ section.settings.savings_bg }}; border-radius:6px; padding:0.25rem 0.65rem;">
+      <!-- Badge ahorro -->
+      {% if has_fake %}
+        <div style="display:inline-flex; align-items:center; background:{{ section.settings.savings_bg }}; border-radius:4px; padding:0.2rem 0.6rem;">
           <span style="color:{{ section.settings.savings_color }}; font-size:0.75rem; font-weight:700;">
             Ahorra {{ savings_cents | money }}
           </span>
         </div>
-      </div>
-    {% endif %}
+      {% endif %}
 
-    <!-- Urgencia -->
+    </div>
+
+    <!-- Urgencia — fuera del box -->
     {% if section.settings.urgency_qty > 0 %}
       <p style="font-size:0.78rem; color:{{ section.settings.urgency_color }}; margin:0.4rem 0 0; font-weight:600;">
         {{ section.settings.urgency_prefix | strip }} {{ section.settings.urgency_qty }} {{ section.settings.urgency_suffix | strip }}
