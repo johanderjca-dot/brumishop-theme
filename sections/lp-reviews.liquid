@@ -1,8 +1,18 @@
 {% if section.blocks.size > 0 %}
+<style>
+  .lp-reviews-grid {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.columns }}, 1fr);
+    gap: 1rem;
+  }
+  @media (max-width: 640px) {
+    .lp-reviews-grid { grid-template-columns: 1fr; }
+  }
+</style>
 <section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0;">
   <div style="max-width:1320px; margin:0 auto; padding:0 4px;">
 
-    <div style="display:grid; grid-template-columns:repeat({{ section.settings.columns }},1fr); gap:1.25rem;">
+    <div class="lp-reviews-grid">
       {% for block in section.blocks %}
         <div {{ block.shopify_attributes }}
              style="background:{{ section.settings.card_bg }}; border:1px solid {{ section.settings.card_border }}; border-radius:{{ section.settings.card_radius }}px; padding:1.25rem;">
