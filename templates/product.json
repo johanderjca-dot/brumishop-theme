@@ -67,6 +67,7 @@
         "align": "left",
         "font_size": 16,
         "max_width": 1200,
+        "px": 16,
         "pt": 0,
         "pb": 0,
         "box_pad": 0,
@@ -94,7 +95,6 @@
         "benefit_6h3kaz": {
           "type": "benefit",
           "settings": {
-            "icon_url": "",
             "icon_emoji": "✓",
             "title": "0 conexión a luz.",
             "description": "",
@@ -105,7 +105,6 @@
         "benefit_EqcdRj": {
           "type": "benefit",
           "settings": {
-            "icon_url": "",
             "icon_emoji": "✓",
             "title": "Para porciones individuales",
             "description": "",
@@ -116,7 +115,6 @@
         "benefit_7hhXRx": {
           "type": "benefit",
           "settings": {
-            "icon_url": "",
             "icon_emoji": "✓",
             "title": "Alta calidad",
             "description": "",
@@ -127,7 +125,6 @@
         "benefit_HFXBUJ": {
           "type": "benefit",
           "settings": {
-            "icon_url": "",
             "icon_emoji": "✓",
             "title": "Llevalo donde sea, en donde sea.",
             "description": "",
@@ -143,16 +140,12 @@
         "benefit_HFXBUJ"
       ],
       "settings": {
-        "title": "¿Por qué este LicuaMax?",
-        "subtitle": "",
-        "title_align": "center",
         "columns": "1",
         "gap": 4,
         "icon_size": 16,
         "icon_gap": 8,
         "item_title_size": 15,
         "item_desc_size": 14,
-        "box_border_width": 1,
         "box_border_color": "#e8e8e2",
         "box_radius": 8,
         "box_pad": 20,
@@ -176,7 +169,7 @@
     "lp-offer": {
       "type": "lp-offer",
       "settings": {
-        "price_size": 22,
+        "price_size": 20,
         "price_color": "#1a1a18",
         "fake_price_amount": 2500,
         "savings_bg": "#f0fff4",
@@ -193,10 +186,23 @@
     },
     "lp-reviews": {
       "type": "lp-reviews",
+      "blocks": {
+        "review_GiQC6J": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "Increíble producto, superó todas mis expectativas. Lo recomiendo al 100%.",
+            "name": "María G.",
+            "location": "Santo Domingo, RD",
+            "avatar": "shopify://shop_images/a7928580-0ee2-433a-ad6b-e6753a80c416.jpg",
+            "verified": true
+          }
+        }
+      },
+      "block_order": [
+        "review_GiQC6J"
+      ],
       "settings": {
-        "title": "Lo que dicen nuestros clientes",
-        "subtitle": "",
-        "title_align": "center",
         "columns": "3",
         "card_radius": 8,
         "bg_color": "#ffffff",
