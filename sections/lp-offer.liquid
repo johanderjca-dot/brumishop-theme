@@ -26,27 +26,28 @@
     {% endif %}
 
     <!-- Tarjeta de precio -->
-    <div style="background:{{ section.settings.card_bg }}; border:{{ section.settings.card_border_width }}px solid {{ section.settings.card_border_color }}; border-radius:{{ section.settings.card_radius }}px; padding:{{ section.settings.card_pad }}px; max-width:{{ section.settings.card_max_width }}px; margin:0 auto;">
+    <div style="background:{{ section.settings.card_bg }}; border:{{ section.settings.card_border_width }}px solid {{ section.settings.card_border_color }}; border-radius:{{ section.settings.card_radius }}px; padding:{{ section.settings.card_pad }}px; max-width:{{ section.settings.card_max_width }}px; margin:0 auto; text-align:left;">
 
-      <div style="display:flex; align-items:center; justify-content:center; gap:0.85rem; flex-wrap:wrap; margin-bottom:{% if has_fake or cv.compare_at_price > cv.price %}0.85rem{% else %}0{% endif %};">
+      <!-- Fila precio -->
+      <div style="display:flex; align-items:baseline; gap:0.6rem; flex-wrap:wrap; margin-bottom:{% if has_fake or cv.compare_at_price > cv.price %}0.5rem{% else %}0{% endif %};">
         <span style="font-size:{{ section.settings.price_size }}px; font-weight:700; color:{{ section.settings.price_color }}; line-height:1;">
           {{ cv.price | money }}
         </span>
         {% if has_fake %}
-          <span style="font-size:{{ section.settings.price_size | times: 0.55 | round }}px; color:#a0a09a; text-decoration:line-through; line-height:1;">
+          <span style="font-size:{{ section.settings.price_size | times: 0.5 | round }}px; color:#a0a09a; text-decoration:line-through; line-height:1;">
             {{ fake_cents | money }}
           </span>
         {% elsif cv.compare_at_price > cv.price %}
-          <span style="font-size:{{ section.settings.price_size | times: 0.55 | round }}px; color:#a0a09a; text-decoration:line-through; line-height:1;">
+          <span style="font-size:{{ section.settings.price_size | times: 0.5 | round }}px; color:#a0a09a; text-decoration:line-through; line-height:1;">
             {{ cv.compare_at_price | money }}
           </span>
         {% endif %}
       </div>
 
       {% if has_fake %}
-        <div style="background:{{ section.settings.savings_bg }}; border-radius:8px; padding:0.6rem 1.25rem; display:inline-flex; align-items:center; gap:0.5rem;">
-          <span style="color:{{ section.settings.savings_color }}; font-size:0.85rem; font-weight:700;">
-            ✓ Ahorras {{ savings_cents | money }} — {{ savings_pct }}% OFF
+        <div style="display:inline-flex; align-items:center; background:{{ section.settings.savings_bg }}; border-radius:6px; padding:0.3rem 0.75rem;">
+          <span style="color:{{ section.settings.savings_color }}; font-size:0.78rem; font-weight:700;">
+            Ahorra {{ savings_cents | money }}
           </span>
         </div>
       {% endif %}
