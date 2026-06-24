@@ -26,7 +26,7 @@
     {% endif %}
 
     <!-- Box: precio + ahorro -->
-    <div style="display:inline-block; background:{{ section.settings.card_bg }}; border:{{ section.settings.card_border_width }}px dashed {{ section.settings.card_border_color }}; border-radius:{{ section.settings.card_radius }}px; padding:{{ section.settings.card_pad }}px; text-align:left;">
+    <div style="background:{{ section.settings.card_bg }}; border:{{ section.settings.card_border_width }}px dashed {{ section.settings.card_border_color }}; border-radius:{{ section.settings.card_radius }}px; padding:{{ section.settings.card_pad }}px; margin:0 4px; text-align:left;">
 
       <!-- Fila: precio + tachado -->
       <div style="display:flex; align-items:baseline; gap:0.6rem; flex-wrap:wrap; margin-bottom:{% if has_fake %}0.4rem{% else %}0{% endif %};">
