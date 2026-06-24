@@ -13,8 +13,8 @@
                         padding:{{ section.settings.box_pad }}px;
                       {% endif %}">
 
-            {% if block.settings.icon_url != blank %}
-              <img src="{{ block.settings.icon_url }}"
+            {% if block.settings.icon_img != blank %}
+              <img src="{{ block.settings.icon_img | image_url: width: 120 }}"
                    alt=""
                    style="width:{{ section.settings.icon_size }}px; height:{{ section.settings.icon_size }}px; object-fit:contain; flex-shrink:0;">
             {% elsif block.settings.icon_emoji != blank %}
@@ -82,8 +82,8 @@
       "type": "benefit",
       "name": "Beneficio",
       "settings": [
-        { "type": "text", "id": "icon_url", "label": "URL de la imagen del ícono" },
-        { "type": "text", "id": "icon_emoji", "label": "Emoji (si no usas URL)", "default": "✓" },
+        { "type": "image_picker", "id": "icon_img", "label": "Imagen del ícono" },
+        { "type": "text", "id": "icon_emoji", "label": "Emoji (si no subes imagen)", "default": "✓" },
         { "type": "text", "id": "title", "label": "Título", "default": "Beneficio" },
         { "type": "textarea", "id": "description", "label": "Descripción (opcional)" },
         { "type": "checkbox", "id": "show_box", "label": "Mostrar cuadro en este ítem", "default": false },
