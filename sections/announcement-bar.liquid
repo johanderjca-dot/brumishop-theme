@@ -1,6 +1,15 @@
-<div class="py-2.5 text-center text-xs font-medium tracking-wide" style="background: {{ section.settings.bg_color }};">
-  {{ section.settings.text }}
+{% if section.settings.text != blank %}
+<div style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 1rem; text-align:center;">
+  <span style="font-size:{{ section.settings.font_size }}px;
+               color:{{ section.settings.text_color }};
+               font-weight:{% if section.settings.bold %}700{% else %}500{% endif %};
+               font-style:{% if section.settings.italic %}italic{% else %}normal{% endif %};
+               letter-spacing:{{ section.settings.letter_spacing }}em;
+               text-transform:{% if section.settings.uppercase %}uppercase{% else %}none{% endif %};">
+    {{ section.settings.text }}
+  </span>
 </div>
+{% endif %}
 
 {% schema %}
 {
@@ -9,14 +18,66 @@
     {
       "type": "text",
       "id": "text",
-      "label": "Text",
+      "label": "Texto",
       "default": "ENVÍO GRATIS EN PEDIDOS MAYORES A $50  ·  NUEVOS PRODUCTOS CADA SEMANA"
+    },
+    {
+      "type": "checkbox",
+      "id": "bold",
+      "label": "Negrita",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "italic",
+      "label": "Cursiva",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "uppercase",
+      "label": "Mayúsculas",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Tamaño del texto (px)",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "letter_spacing",
+      "label": "Espaciado entre letras",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "default": 1,
+      "info": "0 = normal, 1 = amplio, 5 = muy amplio"
+    },
+    {
+      "type": "range",
+      "id": "py",
+      "label": "Espacio vertical (px)",
+      "min": 4,
+      "max": 24,
+      "step": 2,
+      "default": 10
     },
     {
       "type": "color",
       "id": "bg_color",
-      "label": "Background color",
+      "label": "Color de fondo",
       "default": "#F2EBC4"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color del texto",
+      "default": "#1a1a18"
     }
   ],
   "presets": [{ "name": "Announcement Bar" }]
