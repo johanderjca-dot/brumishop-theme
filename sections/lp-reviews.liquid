@@ -2,17 +2,6 @@
 <section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0;">
   <div style="max-width:1320px; margin:0 auto; padding:0 1.5rem;">
 
-    {% if section.settings.title != blank %}
-      <h2 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.75rem,3vw,2.75rem); font-weight:600; color:{{ section.settings.heading_color }}; text-align:{{ section.settings.title_align }}; margin-bottom:0.5rem;">
-        {{ section.settings.title }}
-      </h2>
-    {% endif %}
-    {% if section.settings.subtitle != blank %}
-      <p style="text-align:{{ section.settings.title_align }}; color:{{ section.settings.text_color }}; font-size:0.9rem; margin-bottom:1.25rem;">
-        {{ section.settings.subtitle }}
-      </p>
-    {% endif %}
-
     <div style="display:grid; grid-template-columns:repeat({{ section.settings.columns }},1fr); gap:1.25rem;">
       {% for block in section.blocks %}
         <div {{ block.shopify_attributes }}
@@ -41,10 +30,10 @@
                 {{ block.settings.name | slice: 0 | upcase }}
               </div>
             {% endif %}
-            <div>
-              <p style="font-size:0.8rem; font-weight:700; color:{{ section.settings.heading_color }}; margin:0;">{{ block.settings.name }}</p>
+            <div style="min-width:0; flex:1;">
+              <p style="font-size:0.8rem; font-weight:700; color:{{ section.settings.heading_color }}; margin:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ block.settings.name }}</p>
               {% if block.settings.location != blank %}
-                <p style="font-size:0.72rem; color:#a0a09a; margin:0.1rem 0 0;">{{ block.settings.location }}</p>
+                <p style="font-size:0.72rem; color:#a0a09a; margin:0.1rem 0 0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ block.settings.location }}</p>
               {% endif %}
             </div>
             {% if block.settings.verified %}
@@ -66,10 +55,6 @@
 {
   "name": "5 — Reseñas",
   "settings": [
-    { "type": "header", "content": "Encabezado" },
-    { "type": "text", "id": "title", "label": "Título", "default": "Lo que dicen nuestros clientes" },
-    { "type": "text", "id": "subtitle", "label": "Subtítulo" },
-    { "type": "select", "id": "title_align", "label": "Alineación del título", "options": [{"value":"left","label":"Izquierda"},{"value":"center","label":"Centro"}], "default": "center" },
     { "type": "header", "content": "Cuadrícula" },
     { "type": "select", "id": "columns", "label": "Columnas", "options": [{"value":"1","label":"1"},{"value":"2","label":"2"},{"value":"3","label":"3"}], "default": "3" },
     { "type": "header", "content": "Diseño de tarjeta" },
