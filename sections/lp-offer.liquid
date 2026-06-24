@@ -26,7 +26,7 @@
     {% endif %}
 
     <!-- Tarjeta de precio -->
-    <div style="background:{{ section.settings.card_bg }}; border:{{ section.settings.card_border_width }}px solid {{ section.settings.card_border_color }}; border-radius:{{ section.settings.card_radius }}px; padding:{{ section.settings.card_pad }}px; max-width:{{ section.settings.card_max_width }}px; margin:0 auto; text-align:left;">
+    <div style="background:{{ section.settings.card_bg }}; border:{{ section.settings.card_border_width }}px solid {{ section.settings.card_border_color }}; border-radius:{{ section.settings.card_radius }}px; padding:{{ section.settings.card_pad }}px; display:inline-block; text-align:left;">
 
       <!-- Precio + tachado -->
       <div style="display:flex; align-items:baseline; gap:0.6rem; flex-wrap:wrap; margin-bottom:{% if section.settings.urgency_qty > 0 %}0.4rem{% else %}0{% endif %};">
@@ -55,7 +55,7 @@
 
     <!-- Ahorro — fuera del box -->
     {% if has_fake %}
-      <div style="max-width:{{ section.settings.card_max_width }}px; margin:0.4rem auto 0; text-align:left;">
+      <div style="margin:0.4rem 0 0; text-align:left;">
         <div style="display:inline-flex; align-items:center; background:{{ section.settings.savings_bg }}; border-radius:6px; padding:0.25rem 0.65rem;">
           <span style="color:{{ section.settings.savings_color }}; font-size:0.75rem; font-weight:700;">
             Ahorra {{ savings_cents | money }}
