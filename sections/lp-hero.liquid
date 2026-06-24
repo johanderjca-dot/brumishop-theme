@@ -4,17 +4,11 @@
 <style>
   .lp-hero-track {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    gap: 0;
+    transition: transform 0.45s cubic-bezier(0.23,1,0.32,1);
+    will-change: transform;
   }
-  .lp-hero-track::-webkit-scrollbar { display: none; }
   .lp-hero-slide {
     flex: 0 0 100%;
-    scroll-snap-align: start;
     line-height: 0;
   }
   .lp-hero-slide img {
@@ -22,155 +16,113 @@
     max-height: {{ section.settings.max_height }}px;
     object-fit: {{ section.settings.fit }};
     display: block;
+    background: {{ section.settings.bg_color }};
   }
-  .lp-hero-dots {
+
+  /* Thumbnails */
+  .lp-thumbs {
     display: flex;
-    justify-content: center;
     gap: 6px;
-    padding: 10px 0 4px;
+    padding: 6px 0 0;
+    overflow-x: auto;
+    scrollbar-width: none;
   }
-  .lp-hero-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: #c8c8c0;
-    border: none;
-    padding: 0;
+  .lp-thumbs::-webkit-scrollbar { display: none; }
+  .lp-thumb {
+    flex: 0 0 {{ section.settings.thumb_size }}px;
+    height: {{ section.settings.thumb_size }}px;
+    border-radius: 4px;
+    overflow: hidden;
     cursor: pointer;
-    transition: background .2s, transform .2s;
+    border: 2px solid transparent;
+    transition: border-color .2s;
+    background: {{ section.settings.bg_color }};
   }
-  .lp-hero-dot.active {
-    background: #1a1a18;
-    transform: scale(1.25);
+  .lp-thumb.active { border-color: #1a1a18; }
+  .lp-thumb img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
   }
-  .lp-hero-arrows {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 12px;
-    pointer-events: none;
-    box-sizing: border-box;
-  }
-  .lp-hero-arrow {
-    pointer-events: all;
-    background: rgba(255,255,255,0.85);
-    border: none;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.15);
-    transition: background .15s;
-  }
-  .lp-hero-arrow:hover { background: #fff; }
-  @media (max-width: 767px) {
-    .lp-hero-arrows { display: none; }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .lp-hero-slide img { max-height: {{ section.settings.max_height_mobile }}px; }
+    .lp-thumb { flex: 0 0 {{ section.settings.thumb_size | minus: 10 }}px; height: {{ section.settings.thumb_size | minus: 10 }}px; }
   }
 </style>
 
 <section style="background:{{ section.settings.bg_color }}; padding-top:{{ section.settings.pt }}px;">
-  <div style="{% unless section.settings.full_width %}max-width:1320px;margin:0 auto;{% endunless %}padding:0 {{ section.settings.side_pad }}px;">
-    <div style="border-radius:{{ section.settings.radius }}px; overflow:hidden; position:relative;">
 
-      {% if img_count > 0 %}
-        <div class="lp-hero-track" id="lp-hero-track">
-          {% for image in images %}
-            <div class="lp-hero-slide">
-              <img src="{{ image | image_url: width: 1600 }}"
-                   srcset="{{ image | image_url: width: 750 }} 750w,
-                           {{ image | image_url: width: 1100 }} 1100w,
-                           {{ image | image_url: width: 1600 }} 1600w"
-                   sizes="100vw"
-                   alt="{{ product.title | escape }}"
-                   loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
-            </div>
-          {% endfor %}
-        </div>
-
-        {% if img_count > 1 %}
-          <div class="lp-hero-arrows">
-            <button class="lp-hero-arrow" id="lp-hero-prev" aria-label="Anterior">&#8249;</button>
-            <button class="lp-hero-arrow" id="lp-hero-next" aria-label="Siguiente">&#8250;</button>
+  {% if img_count > 0 %}
+    <!-- Slider principal -->
+    <div style="overflow:hidden;">
+      <div class="lp-hero-track" id="lp-hero-track-{{ section.id }}">
+        {% for image in images %}
+          <div class="lp-hero-slide">
+            <img src="{{ image | image_url: width: 1200 }}"
+                 srcset="{{ image | image_url: width: 600 }} 600w,
+                         {{ image | image_url: width: 900 }} 900w,
+                         {{ image | image_url: width: 1200 }} 1200w"
+                 sizes="100vw"
+                 alt="{{ product.title | escape }}"
+                 loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
           </div>
-
-          <div class="lp-hero-dots" id="lp-hero-dots">
-            {% for image in images %}
-              <button class="lp-hero-dot {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}" aria-label="Imagen {{ forloop.index }}"></button>
-            {% endfor %}
-          </div>
-        {% endif %}
-
-      {% else %}
-        <div style="background:#E8E8E2; height:{{ section.settings.max_height }}px; display:flex; align-items:center; justify-content:center;">
-          <p style="color:#a0a09a; font-size:0.875rem;">Sube imágenes al producto en Shopify Admin.</p>
-        </div>
-      {% endif %}
-
+        {% endfor %}
+      </div>
     </div>
-  </div>
+
+    <!-- Miniaturas -->
+    {% if img_count > 1 %}
+      <div class="lp-thumbs" id="lp-thumbs-{{ section.id }}">
+        {% for image in images %}
+          <div class="lp-thumb {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}">
+            <img src="{{ image | image_url: width: 160 }}" alt="{{ product.title | escape }}" loading="lazy">
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+  {% else %}
+    <div style="background:#E8E8E2; height:{{ section.settings.max_height }}px; display:flex; align-items:center; justify-content:center;">
+      <p style="color:#a0a09a; font-size:0.875rem;">Sube imágenes al producto en Shopify Admin.</p>
+    </div>
+  {% endif %}
+
 </section>
 
 {% if img_count > 1 %}
 <script>
-(function() {
-  var track = document.getElementById('lp-hero-track');
-  var dots  = document.querySelectorAll('#lp-hero-dots .lp-hero-dot');
-  var prev  = document.getElementById('lp-hero-prev');
-  var next  = document.getElementById('lp-hero-next');
+(function(){
+  var track  = document.getElementById('lp-hero-track-{{ section.id }}');
+  var thumbs = document.querySelectorAll('#lp-thumbs-{{ section.id }} .lp-thumb');
   if (!track) return;
 
+  var total   = {{ img_count }};
   var current = 0;
-  var total = {{ img_count }};
+  var timer;
 
-  function goTo(index) {
-    current = (index + total) % total;
-    track.scrollTo({ left: current * track.offsetWidth, behavior: 'smooth' });
-    dots.forEach(function(d, i) {
-      d.classList.toggle('active', i === current);
+  function goTo(i) {
+    current = (i + total) % total;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    thumbs.forEach(function(t, idx) { t.classList.toggle('active', idx === current); });
+    // scroll thumbnail into view
+    if (thumbs[current]) thumbs[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  }
+
+  function startAuto() {
+    timer = setInterval(function(){ goTo(current + 1); }, {{ section.settings.speed }}000);
+  }
+
+  thumbs.forEach(function(t) {
+    t.addEventListener('click', function(){
+      clearInterval(timer);
+      goTo(parseInt(t.dataset.index));
+      startAuto();
     });
-  }
-
-  if (prev) prev.addEventListener('click', function() { goTo(current - 1); });
-  if (next) next.addEventListener('click', function() { goTo(current + 1); });
-
-  dots.forEach(function(d) {
-    d.addEventListener('click', function() { goTo(parseInt(d.dataset.index)); });
   });
 
-  // Sync dots on swipe
-  var scrollTimer;
-  track.addEventListener('scroll', function() {
-    clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(function() {
-      var index = Math.round(track.scrollLeft / track.offsetWidth);
-      if (index !== current) {
-        current = index;
-        dots.forEach(function(d, i) {
-          d.classList.toggle('active', i === current);
-        });
-      }
-    }, 80);
-  });
-
-  // Auto-play
-  var autoplay = setInterval(function() { goTo(current + 1); }, 3500);
-
-  // Pause on interaction, resume after
-  function resetAutoplay() {
-    clearInterval(autoplay);
-    autoplay = setInterval(function() { goTo(current + 1); }, 3500);
-  }
-  track.addEventListener('touchstart', resetAutoplay, { passive: true });
-  if (prev) prev.addEventListener('click', resetAutoplay);
-  if (next) next.addEventListener('click', resetAutoplay);
-  dots.forEach(function(d) { d.addEventListener('click', resetAutoplay); });
+  startAuto();
 })();
 </script>
 {% endif %}
@@ -179,13 +131,13 @@
 {
   "name": "1 — Foto Hero",
   "settings": [
-    { "type": "range", "id": "pt", "label": "Espacio superior (separación del header)", "min": 0, "max": 80, "step": 4, "default": 16 },
-    { "type": "range", "id": "side_pad", "label": "Margen lateral (px)", "min": 0, "max": 48, "step": 4, "default": 0 },
-    { "type": "checkbox", "id": "full_width", "label": "Ancho completo", "default": true },
-    { "type": "range", "id": "max_height", "label": "Altura máxima (px)", "min": 300, "max": 900, "step": 20, "default": 680 },
-    { "type": "range", "id": "radius", "label": "Bordes redondeados (px)", "min": 0, "max": 40, "step": 2, "default": 0 },
-    { "type": "select", "id": "fit", "label": "Ajuste de imagen", "options": [{"value":"cover","label":"Recortar (llenar espacio)"},{"value":"contain","label":"Completa (sin recorte)"}], "default": "cover" },
-    { "type": "color", "id": "bg_color", "label": "Color de fondo", "default": "#F8F7F3" }
+    { "type": "range", "id": "max_height", "label": "Altura máxima desktop (px)", "min": 200, "max": 800, "step": 10, "default": 420 },
+    { "type": "range", "id": "max_height_mobile", "label": "Altura máxima móvil (px)", "min": 200, "max": 600, "step": 10, "default": 340 },
+    { "type": "select", "id": "fit", "label": "Ajuste de imagen", "options": [{"value":"cover","label":"Recortar (llenar)"},{"value":"contain","label":"Completa (sin recorte)"}], "default": "contain" },
+    { "type": "range", "id": "pt", "label": "Espacio superior (px)", "min": 0, "max": 48, "step": 4, "default": 0 },
+    { "type": "range", "id": "thumb_size", "label": "Tamaño miniaturas desktop (px)", "min": 40, "max": 100, "step": 5, "default": 60 },
+    { "type": "range", "id": "speed", "label": "Velocidad auto-slide (seg)", "min": 2, "max": 10, "step": 1, "default": 3 },
+    { "type": "color", "id": "bg_color", "label": "Color de fondo", "default": "#FFFFFF" }
   ],
   "presets": [{ "name": "1 — Foto Hero" }]
 }
