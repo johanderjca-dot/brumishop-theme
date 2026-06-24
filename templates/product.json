@@ -183,7 +183,7 @@
         "card_border_color": "#e0e0da",
         "card_border_width": 1,
         "card_radius": 12,
-        "card_pad": 10,
+        "card_pad": 0,
         "card_max_width": 420,
         "savings_bg": "#f0fff4",
         "savings_color": "#2d7a3a",
