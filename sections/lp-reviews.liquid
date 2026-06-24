@@ -1,82 +1,145 @@
 {% if section.blocks.size > 0 %}
 <style>
-  .lp-reviews-grid {
-    display: grid;
-    grid-template-columns: repeat({{ section.settings.columns }}, 1fr);
-    gap: 1rem;
+  .rv-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.23,1,0.32,1);
+    will-change: transform;
   }
-  @media (max-width: 640px) {
-    .lp-reviews-grid { grid-template-columns: 1fr; }
+  .rv-slide {
+    flex: 0 0 100%;
+    padding: 0 4px;
+    box-sizing: border-box;
   }
+  .rv-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 0.75rem;
+  }
+  .rv-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #c8c8c0;
+    border: none; padding: 0; cursor: pointer;
+    transition: background .2s, transform .2s;
+  }
+  .rv-dot.active { background: #1a1a18; transform: scale(1.3); }
 </style>
-<section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0;">
-  <div style="max-width:1320px; margin:0 auto; padding:0 4px;">
 
-    <div class="lp-reviews-grid">
+<section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0; overflow:hidden;">
+
+  <div style="position:relative; overflow:hidden;">
+    <div class="rv-track" id="rv-track-{{ section.id }}">
       {% for block in section.blocks %}
-        <div {{ block.shopify_attributes }}
-             style="background:{{ section.settings.card_bg }}; border:1px solid {{ section.settings.card_border }}; border-radius:{{ section.settings.card_radius }}px; padding:1.25rem;">
+        <div class="rv-slide" {{ block.shopify_attributes }}>
+          <div style="background:{{ section.settings.card_bg }}; border:1px solid {{ section.settings.card_border }}; border-radius:{{ section.settings.card_radius }}px; padding:1rem;">
 
-          <!-- Stars -->
-          <div style="color:{{ section.settings.star_color }}; font-size:1rem; margin-bottom:0.5rem; letter-spacing:0.05em;">
-            {% assign rating = block.settings.rating %}
-            {% for i in (1..5) %}{% if i <= rating %}★{% else %}☆{% endif %}{% endfor %}
-          </div>
+            <div style="color:{{ section.settings.star_color }}; font-size:1rem; margin-bottom:0.4rem;">
+              {% assign rating = block.settings.rating %}
+              {% for i in (1..5) %}{% if i <= rating %}★{% else %}☆{% endif %}{% endfor %}
+            </div>
 
-          <!-- Review text -->
-          {% if block.settings.review_text != blank %}
-            <p style="font-size:0.875rem; color:{{ section.settings.text_color }}; line-height:1.6; margin-bottom:0.85rem;">
-              "{{ block.settings.review_text }}"
-            </p>
-          {% endif %}
-
-          <!-- Reviewer info -->
-          <div style="display:flex; align-items:center; gap:0.75rem;">
-            {% if block.settings.avatar != blank %}
-              <img src="{{ block.settings.avatar | image_url: width: 80 }}" alt="{{ block.settings.name }}"
-                   style="width:42px; height:42px; border-radius:50%; object-fit:cover; flex-shrink:0;">
-            {% else %}
-              <div style="width:42px; height:42px; border-radius:50%; background:{{ section.settings.card_border }}; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:1rem; color:{{ section.settings.heading_color }}; font-weight:700;">
-                {{ block.settings.name | slice: 0 | upcase }}
-              </div>
+            {% if block.settings.review_text != blank %}
+              <p style="font-size:0.875rem; color:{{ section.settings.text_color }}; line-height:1.6; margin-bottom:0.75rem;">
+                "{{ block.settings.review_text }}"
+              </p>
             {% endif %}
-            <div style="min-width:0; flex:1;">
-              <p style="font-size:0.8rem; font-weight:700; color:{{ section.settings.heading_color }}; margin:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ block.settings.name }}</p>
-              {% if block.settings.location != blank %}
-                <p style="font-size:0.72rem; color:#a0a09a; margin:0.1rem 0 0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ block.settings.location }}</p>
+
+            <div style="display:flex; align-items:center; gap:0.6rem;">
+              {% if block.settings.avatar != blank %}
+                <img src="{{ block.settings.avatar | image_url: width: 80 }}" alt="{{ block.settings.name }}"
+                     style="width:38px; height:38px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              {% else %}
+                <div style="width:38px; height:38px; border-radius:50%; background:{{ section.settings.card_border }}; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:0.9rem; color:{{ section.settings.heading_color }}; font-weight:700;">
+                  {{ block.settings.name | slice: 0 | upcase }}
+                </div>
+              {% endif %}
+              <div style="min-width:0; flex:1;">
+                <p style="font-size:0.8rem; font-weight:700; color:{{ section.settings.heading_color }}; margin:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ block.settings.name }}</p>
+                {% if block.settings.location != blank %}
+                  <p style="font-size:0.72rem; color:#a0a09a; margin:0.1rem 0 0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ block.settings.location }}</p>
+                {% endif %}
+              </div>
+              {% if block.settings.verified %}
+                <div style="margin-left:auto; background:#EEF0E7; color:#5a7a40; font-size:0.65rem; font-weight:700; padding:0.2rem 0.5rem; border-radius:50px; letter-spacing:0.08em; text-transform:uppercase; white-space:nowrap; flex-shrink:0;">
+                  ✓ Verificado
+                </div>
               {% endif %}
             </div>
-            {% if block.settings.verified %}
-              <div style="margin-left:auto; background:#EEF0E7; color:#5a7a40; font-size:0.65rem; font-weight:700; padding:0.25rem 0.6rem; border-radius:50px; letter-spacing:0.08em; text-transform:uppercase; white-space:nowrap;">
-                ✓ Verificado
-              </div>
-            {% endif %}
-          </div>
 
+          </div>
         </div>
       {% endfor %}
     </div>
-
   </div>
+
+  {% if section.blocks.size > 1 %}
+    <div class="rv-dots" id="rv-dots-{{ section.id }}">
+      {% for block in section.blocks %}
+        <button class="rv-dot {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}"></button>
+      {% endfor %}
+    </div>
+  {% endif %}
+
 </section>
+
+<script>
+(function(){
+  var track = document.getElementById('rv-track-{{ section.id }}');
+  var dots  = document.querySelectorAll('#rv-dots-{{ section.id }} .rv-dot');
+  if (!track) return;
+
+  var total   = {{ section.blocks.size }};
+  var current = 0;
+  var timer;
+
+  function goTo(i) {
+    current = (i + total) % total;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    dots.forEach(function(d, idx) { d.classList.toggle('active', idx === current); });
+  }
+
+  function startAuto() {
+    timer = setInterval(function(){ goTo(current + 1); }, {{ section.settings.speed }}000);
+  }
+
+  dots.forEach(function(d) {
+    d.addEventListener('click', function(){
+      clearInterval(timer);
+      goTo(parseInt(d.dataset.index));
+      startAuto();
+    });
+  });
+
+  startAuto();
+})();
+</script>
+
 {% endif %}
 
 {% schema %}
 {
   "name": "5 — Reseñas",
   "settings": [
-    { "type": "header", "content": "Cuadrícula" },
-    { "type": "select", "id": "columns", "label": "Columnas", "options": [{"value":"1","label":"1"},{"value":"2","label":"2"},{"value":"3","label":"3"}], "default": "3" },
-    { "type": "header", "content": "Diseño de tarjeta" },
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Velocidad (segundos por reseña)",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "default": 4
+    },
+    { "type": "header", "content": "Diseño" },
     { "type": "range", "id": "card_radius", "label": "Bordes redondeados (px)", "min": 0, "max": 24, "step": 2, "default": 8 },
+    { "type": "range", "id": "py", "label": "Espacio vertical (px)", "min": 0, "max": 64, "step": 4, "default": 16 },
     { "type": "header", "content": "Colores" },
     { "type": "color", "id": "bg_color", "label": "Fondo sección", "default": "#FFFFFF" },
     { "type": "color", "id": "card_bg", "label": "Fondo tarjeta", "default": "#FAFAF6" },
     { "type": "color", "id": "card_border", "label": "Borde tarjeta", "default": "#E8E8E2" },
     { "type": "color", "id": "star_color", "label": "Color estrellas", "default": "#F4A327" },
     { "type": "color", "id": "heading_color", "label": "Color nombre", "default": "#1a1a18" },
-    { "type": "color", "id": "text_color", "label": "Color texto reseña", "default": "#5a5a52" },
-    { "type": "range", "id": "py", "label": "Espacio vertical (px)", "min": 16, "max": 120, "step": 4, "default": 40 }
+    { "type": "color", "id": "text_color", "label": "Color texto reseña", "default": "#5a5a52" }
   ],
   "max_blocks": 12,
   "blocks": [
