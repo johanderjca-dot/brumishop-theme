@@ -25,11 +25,9 @@
       </h2>
     {% endif %}
 
-    <!-- Tarjeta de precio -->
-    <div style="background:{{ section.settings.card_bg }}; border:{{ section.settings.card_border_width }}px solid {{ section.settings.card_border_color }}; border-radius:{{ section.settings.card_radius }}px; padding:{{ section.settings.card_pad }}px; display:inline-block; text-align:left;">
-
-      <!-- Precio + tachado -->
-      <div style="display:flex; align-items:baseline; gap:0.6rem; flex-wrap:wrap; margin-bottom:{% if section.settings.urgency_qty > 0 %}0.4rem{% else %}0{% endif %};">
+    <!-- Box: solo precio -->
+    <div style="display:inline-block; background:{{ section.settings.card_bg }}; border:{{ section.settings.card_border_width }}px solid {{ section.settings.card_border_color }}; border-radius:{{ section.settings.card_radius }}px; padding:{{ section.settings.card_pad }}px; text-align:left;">
+      <div style="display:flex; align-items:baseline; gap:0.6rem; flex-wrap:wrap;">
         <span style="font-size:{{ section.settings.price_size }}px; font-weight:700; color:{{ section.settings.price_color }}; line-height:1;">
           {{ cv.price | money }}
         </span>
@@ -43,25 +41,24 @@
           </span>
         {% endif %}
       </div>
-
-      <!-- Urgencia -->
-      {% if section.settings.urgency_qty > 0 %}
-        <p style="font-size:0.78rem; color:{{ section.settings.urgency_color }}; margin:0; font-weight:600;">
-          {{ section.settings.urgency_prefix | strip }} {{ section.settings.urgency_qty }} {{ section.settings.urgency_suffix | strip }}
-        </p>
-      {% endif %}
-
     </div>
 
-    <!-- Ahorro — fuera del box -->
+    <!-- Badge: ahorro -->
     {% if has_fake %}
-      <div style="margin:0.4rem 0 0; text-align:left;">
+      <div style="margin-top:0.4rem;">
         <div style="display:inline-flex; align-items:center; background:{{ section.settings.savings_bg }}; border-radius:6px; padding:0.25rem 0.65rem;">
           <span style="color:{{ section.settings.savings_color }}; font-size:0.75rem; font-weight:700;">
             Ahorra {{ savings_cents | money }}
           </span>
         </div>
       </div>
+    {% endif %}
+
+    <!-- Urgencia -->
+    {% if section.settings.urgency_qty > 0 %}
+      <p style="font-size:0.78rem; color:{{ section.settings.urgency_color }}; margin:0.4rem 0 0; font-weight:600;">
+        {{ section.settings.urgency_prefix | strip }} {{ section.settings.urgency_qty }} {{ section.settings.urgency_suffix | strip }}
+      </p>
     {% endif %}
 
   </div>
