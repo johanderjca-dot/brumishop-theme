@@ -12,12 +12,12 @@
     "lp-hero": {
       "type": "lp-hero",
       "settings": {
-        "pt": 16,
-        "side_pad": 20,
-        "full_width": true,
-        "max_height": 400,
-        "radius": 14,
+        "pt": 0,
+        "max_height": 420,
+        "max_height_mobile": 340,
         "fit": "contain",
+        "thumb_size": 60,
+        "speed": 3,
         "bg_color": "#ffffff"
       }
     },
