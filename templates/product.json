@@ -176,7 +176,7 @@
     "lp-offer": {
       "type": "lp-offer",
       "settings": {
-        "price_size": 24,
+        "price_size": 20,
         "price_color": "#1a1a18",
         "fake_price_amount": 2500,
         "card_bg": "#ffffff",
