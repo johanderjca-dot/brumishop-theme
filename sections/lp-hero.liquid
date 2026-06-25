@@ -1,5 +1,6 @@
 {% assign images = product.images %}
 {% assign img_count = images.size %}
+{% assign desktop_count = section.blocks.size %}
 
 <style>
   .lp-hero-track {
@@ -13,40 +14,48 @@
   }
   .lp-hero-slide img {
     width: 100%;
-    max-height: {{ section.settings.max_height }}px;
-    object-fit: {{ section.settings.fit }};
+    object-fit: cover;
     display: block;
     background: {{ section.settings.bg_color }};
   }
-
-  /* Desktop banner */
-  .lp-desktop-banner { display: none; }
+  .lp-desktop-slider { display: none; }
+  .lp-mobile-slider  { display: block; }
   @media (min-width: 640px) {
-    .lp-desktop-banner { display: block; }
-    .lp-mobile-slider { display: none; }
+    .lp-desktop-slider { display: block; }
+    .lp-mobile-slider  { display: none; }
+    .lp-hero-slide img { max-height: {{ section.settings.max_height }}px; }
   }
-
-  /* Mobile */
   @media (max-width: 639px) {
     .lp-hero-slide img { max-height: {{ section.settings.max_height_mobile }}px; }
-    .lp-thumb { flex: 0 0 {{ section.settings.thumb_size | minus: 10 }}px; height: {{ section.settings.thumb_size | minus: 10 }}px; }
   }
 </style>
 
 <section style="background:{{ section.settings.bg_color }}; padding-top:{{ section.settings.pt }}px;">
 
-  {% if img_count > 0 %}
-    <!-- Imagen desktop separada (si existe) -->
-    {% if section.settings.desktop_image != blank %}
-      <div class="lp-desktop-banner">
-        <img src="{{ section.settings.desktop_image | image_url: width: 1600 }}"
-             alt="{{ product.title | escape }}"
-             style="width:100%; max-height:{{ section.settings.max_height }}px; object-fit:cover; display:block;">
+  {% if desktop_count > 0 %}
+    <!-- Slider desktop panorámico (bloques) -->
+    <div class="lp-desktop-slider" style="overflow:hidden;">
+      <div class="lp-hero-track" id="lp-desktop-track-{{ section.id }}">
+        {% for block in section.blocks %}
+          {% if block.settings.image != blank %}
+            <div class="lp-hero-slide" {{ block.shopify_attributes }}>
+              <img src="{{ block.settings.image | image_url: width: 2000 }}"
+                   srcset="{{ block.settings.image | image_url: width: 800 }} 800w,
+                           {{ block.settings.image | image_url: width: 1200 }} 1200w,
+                           {{ block.settings.image | image_url: width: 2000 }} 2000w"
+                   sizes="100vw"
+                   alt="{{ block.settings.alt | default: product.title | escape }}"
+                   loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
-    {% endif %}
+    </div>
+  {% endif %}
 
-    <!-- Slider principal (mobile always / desktop solo si no hay imagen desktop) -->
-    <div style="overflow:hidden;" class="{% if section.settings.desktop_image != blank %}lp-mobile-slider{% endif %}">
+  {% if img_count > 0 %}
+    <!-- Slider mobile (fotos del producto) -->
+    <div class="{% if desktop_count > 0 %}lp-mobile-slider{% endif %}" style="overflow:hidden;">
       <div class="lp-hero-track" id="lp-hero-track-{{ section.id }}">
         {% for image in images %}
           <div class="lp-hero-slide">
@@ -61,14 +70,30 @@
         {% endfor %}
       </div>
     </div>
-
   {% else %}
-    <div style="background:#E8E8E2; height:{{ section.settings.max_height }}px; display:flex; align-items:center; justify-content:center;">
+    <div class="{% if desktop_count > 0 %}lp-mobile-slider{% endif %}"
+         style="background:#E8E8E2; height:{{ section.settings.max_height_mobile }}px; display:flex; align-items:center; justify-content:center;">
       <p style="color:#a0a09a; font-size:0.875rem;">Sube imágenes al producto en Shopify Admin.</p>
     </div>
   {% endif %}
 
 </section>
+
+{% if desktop_count > 1 %}
+<script>
+(function(){
+  var track = document.getElementById('lp-desktop-track-{{ section.id }}');
+  if (!track) return;
+  var total = {{ desktop_count }};
+  var current = 0;
+  function goTo(i) {
+    current = (i + total) % total;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+  }
+  setInterval(function(){ goTo(current + 1); }, {{ section.settings.speed }}000);
+})();
+</script>
+{% endif %}
 
 {% if img_count > 1 %}
 <script>
@@ -90,14 +115,22 @@
 {
   "name": "1 — Foto Hero",
   "settings": [
-    { "type": "image_picker", "id": "desktop_image", "label": "Imagen desktop (landscape) — opcional" },
-    { "type": "range", "id": "max_height", "label": "Altura máxima desktop (px)", "min": 200, "max": 800, "step": 10, "default": 420 },
+    { "type": "range", "id": "max_height", "label": "Altura banner desktop (px)", "min": 200, "max": 800, "step": 10, "default": 420 },
     { "type": "range", "id": "max_height_mobile", "label": "Altura máxima móvil (px)", "min": 200, "max": 600, "step": 10, "default": 340 },
-    { "type": "select", "id": "fit", "label": "Ajuste de imagen", "options": [{"value":"cover","label":"Recortar (llenar)"},{"value":"contain","label":"Completa (sin recorte)"}], "default": "contain" },
     { "type": "range", "id": "pt", "label": "Espacio superior (px)", "min": 0, "max": 48, "step": 4, "default": 0 },
-    { "type": "range", "id": "thumb_size", "label": "Tamaño miniaturas desktop (px)", "min": 40, "max": 100, "step": 5, "default": 60 },
     { "type": "range", "id": "speed", "label": "Velocidad auto-slide (seg)", "min": 2, "max": 10, "step": 1, "default": 3 },
     { "type": "color", "id": "bg_color", "label": "Color de fondo", "default": "#FFFFFF" }
+  ],
+  "max_blocks": 10,
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Banner desktop",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Imagen panorámica" },
+        { "type": "text", "id": "alt", "label": "Texto alternativo (opcional)" }
+      ]
+    }
   ],
   "presets": [{ "name": "1 — Foto Hero" }]
 }
