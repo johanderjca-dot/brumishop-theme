@@ -12,7 +12,7 @@
 <section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.pt }}px {{ section.settings.px }}px {{ section.settings.pb }}px;">
 
   <!-- Fila precio -->
-  <div style="display:flex; align-items:baseline; gap:0.6rem; flex-wrap:wrap; margin-bottom:{% if has_fake %}0.35rem{% else %}0{% endif %};">
+  <div style="display:flex; align-items:baseline; gap:0.6rem; flex-wrap:wrap; justify-content:center; margin-bottom:{% if has_fake %}0.35rem{% else %}0{% endif %};">
     <span style="font-size:{{ section.settings.price_size }}px; font-weight:700; color:{{ section.settings.price_color }}; line-height:1;">
       {{ cv.price | money }}
     </span>
@@ -29,16 +29,18 @@
 
   <!-- Badge ahorro -->
   {% if has_fake %}
-    <div style="display:inline-flex; align-items:center; background:{{ section.settings.savings_bg }}; border-radius:4px; padding:0.2rem 0.6rem; margin-bottom:{% if section.settings.urgency_qty > 0 %}0.35rem{% else %}0{% endif %};">
-      <span style="color:{{ section.settings.savings_color }}; font-size:0.75rem; font-weight:700;">
-        Ahorra {{ savings_cents | money }}
-      </span>
+    <div style="display:flex; justify-content:center; margin-bottom:{% if section.settings.urgency_qty > 0 %}0.35rem{% else %}0{% endif %};">
+      <div style="display:inline-flex; align-items:center; background:{{ section.settings.savings_bg }}; border-radius:4px; padding:0.2rem 0.6rem;">
+        <span style="color:{{ section.settings.savings_color }}; font-size:0.75rem; font-weight:700;">
+          Ahorra {{ savings_cents | money }}
+        </span>
+      </div>
     </div>
   {% endif %}
 
   <!-- Urgencia -->
   {% if section.settings.urgency_qty > 0 %}
-    <p style="font-size:0.78rem; color:{{ section.settings.urgency_color }}; margin:0; font-weight:600;">
+    <p style="font-size:0.78rem; color:{{ section.settings.urgency_color }}; margin:0; font-weight:600; text-align:center;">
       {{ section.settings.urgency_prefix | strip }} {{ section.settings.urgency_qty }} {{ section.settings.urgency_suffix | strip }}
     </p>
   {% endif %}
