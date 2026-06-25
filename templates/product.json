@@ -248,6 +248,13 @@
     "lp-testimonials": {
       "type": "lp-testimonials",
       "blocks": {
+        "photo_VLq9pp": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/White_and_Beige_Minimal_Clean_Skincare_Product_Benefits_Instagram_Post-3.png",
+            "alt": ""
+          }
+        },
         "photo_3XV4pg": {
           "type": "photo",
           "settings": {
@@ -264,6 +271,7 @@
         }
       },
       "block_order": [
+        "photo_VLq9pp",
         "photo_3XV4pg",
         "photo_yLhcdK"
       ],
@@ -273,7 +281,7 @@
         "label_color": "#1a1a18",
         "label_gap": 12,
         "per_view": 2,
-        "photo_height": 110,
+        "photo_height": 150,
         "radius": 8,
         "gap": 8,
         "speed": 4,
