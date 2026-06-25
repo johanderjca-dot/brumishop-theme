@@ -117,21 +117,6 @@
       ],
       "settings": {}
     },
-    "apps_KDqhzb": {
-      "type": "apps",
-      "blocks": {
-        "releasit_cod_form_button_app_block_VbteNY": {
-          "type": "shopify://apps/releasit-cod-form/blocks/button-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "releasit_cod_form_button_app_block_VbteNY"
-      ],
-      "settings": {}
-    },
     "div-2": {
       "type": "lp-divider",
       "settings": {
@@ -260,6 +245,59 @@
         "text_color": "#5a5a52"
       }
     },
+    "lp-testimonials": {
+      "type": "lp-testimonials",
+      "blocks": {
+        "photo_3XV4pg": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/White_and_Beige_Minimal_Clean_Skincare_Product_Benefits_Instagram_Post.png",
+            "alt": ""
+          }
+        },
+        "photo_yLhcdK": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/White_and_Beige_Minimal_Clean_Skincare_Product_Benefits_Instagram_Post-2.png",
+            "alt": ""
+          }
+        }
+      },
+      "block_order": [
+        "photo_3XV4pg",
+        "photo_yLhcdK"
+      ],
+      "settings": {
+        "label": "ya ellos han probado:",
+        "label_size": 13,
+        "label_color": "#1a1a18",
+        "label_gap": 12,
+        "per_view": 2,
+        "photo_height": 260,
+        "radius": 8,
+        "gap": 8,
+        "speed": 4,
+        "bg_color": "#f8f7f3",
+        "pt": 16,
+        "pb": 16,
+        "px": 16
+      }
+    },
+    "apps_KDqhzb": {
+      "type": "apps",
+      "blocks": {
+        "releasit_cod_form_button_app_block_VbteNY": {
+          "type": "shopify://apps/releasit-cod-form/blocks/button-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "releasit_cod_form_button_app_block_VbteNY"
+      ],
+      "settings": {}
+    },
     "lp-shipping": {
       "type": "lp-shipping",
       "blocks": {
@@ -383,24 +421,6 @@
         "border_color": "#e8e8e2",
         "heading_color": "#1a1a18",
         "text_color": "#5a5a52"
-      }
-    },
-    "lp-testimonials": {
-      "type": "lp-testimonials",
-      "settings": {
-        "badge_text": "✓ Testimonios reales de clientes",
-        "title": "Esto dicen quienes ya lo tienen",
-        "subtitle": "",
-        "columns": "3",
-        "card_radius": 10,
-        "bg_color": "#f8f7f3",
-        "card_bg": "#ffffff",
-        "card_border": "#e8e8e2",
-        "accent_color": "#5a7a40",
-        "star_color": "#f4a327",
-        "heading_color": "#1a1a18",
-        "text_color": "#5a5a52",
-        "py": 24
       }
     }
   },
