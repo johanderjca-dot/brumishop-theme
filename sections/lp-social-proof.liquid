@@ -1,0 +1,146 @@
+<style>
+  .sp-wrap {
+    background: {{ section.settings.bg_color }};
+    padding: {{ section.settings.pt }}px 0 {{ section.settings.pb }}px;
+    overflow: hidden;
+  }
+  .sp-header {
+    text-align: center;
+    padding: 0 16px;
+    margin-bottom: {{ section.settings.header_gap }}px;
+  }
+  .sp-title {
+    font-size: {{ section.settings.title_size }}px;
+    font-weight: 700;
+    color: {{ section.settings.title_color }};
+    line-height: 1.3;
+    margin: 0 0 6px;
+  }
+  .sp-title em {
+    font-style: normal;
+    color: {{ section.settings.highlight_color }};
+  }
+  .sp-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: {{ section.settings.rating_size }}px;
+  }
+  .sp-stars { color: {{ section.settings.star_color }}; letter-spacing: 1px; }
+  .sp-score { font-weight: 700; color: {{ section.settings.title_color }}; }
+  .sp-count { color: #8a8a82; }
+  .sp-flag  { font-size: {{ section.settings.rating_size | plus: 2 }}px; }
+
+  /* Marquee */
+  .sp-marquee-wrap {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+  .sp-marquee-track {
+    display: flex;
+    gap: {{ section.settings.photo_gap }}px;
+    animation: sp-scroll {{ section.settings.speed }}s linear infinite;
+    will-change: transform;
+  }
+  .sp-marquee-track:hover { animation-play-state: paused; }
+  .sp-photo {
+    flex-shrink: 0;
+    width: {{ section.settings.photo_size }}px;
+    height: {{ section.settings.photo_size }}px;
+    border-radius: {{ section.settings.photo_radius }}px;
+    overflow: hidden;
+    object-fit: cover;
+    display: block;
+  }
+  @keyframes sp-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
+
+<div class="sp-wrap">
+
+  <div class="sp-header">
+    {% capture hl %}<em>{{ section.settings.highlight_word }}</em>{% endcapture %}
+    <p class="sp-title">{{ section.settings.title | replace: section.settings.highlight_word, hl }}</p>
+    <div class="sp-rating">
+      <span class="sp-stars">★★★★★</span>
+      <span class="sp-score">{{ section.settings.score }}/5</span>
+      <span class="sp-count">· {{ section.settings.review_count }} reseñas</span>
+      {% if section.settings.flag != blank %}
+        <span class="sp-flag">{{ section.settings.flag }}</span>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.blocks.size > 0 %}
+    <div class="sp-marquee-wrap">
+      <div class="sp-marquee-track">
+        {% for block in section.blocks %}
+          {% if block.settings.photo != blank %}
+            <img class="sp-photo"
+                 src="{{ block.settings.photo | image_url: width: 300 }}"
+                 alt="{{ block.settings.alt | default: 'Foto cliente' | escape }}"
+                 loading="lazy">
+          {% endif %}
+        {% endfor %}
+        {% for block in section.blocks %}
+          {% if block.settings.photo != blank %}
+            <img class="sp-photo"
+                 src="{{ block.settings.photo | image_url: width: 300 }}"
+                 alt="{{ block.settings.alt | default: 'Foto cliente' | escape }}"
+                 aria-hidden="true"
+                 loading="lazy">
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
+</div>
+
+{% schema %}
+{
+  "name": "Prueba Social",
+  "settings": [
+    { "type": "header", "content": "Título" },
+    { "type": "text", "id": "title", "label": "Título (usa [texto] para destacarlo)", "default": "Únete a +2,000 dominicanas que descansan mejor" },
+    { "type": "text", "id": "highlight_word", "label": "Palabra(s) a destacar en color", "default": "+2,000", "info": "Escribe exactamente el texto del título que quieres resaltar" },
+    { "type": "range", "id": "title_size", "label": "Tamaño título (px)", "min": 14, "max": 36, "step": 1, "default": 22 },
+    { "type": "color", "id": "title_color", "label": "Color título", "default": "#1a1a18" },
+    { "type": "color", "id": "highlight_color", "label": "Color destacado", "default": "#2d7a3a" },
+    { "type": "range", "id": "header_gap", "label": "Espacio título-fotos (px)", "min": 8, "max": 40, "step": 2, "default": 16 },
+
+    { "type": "header", "content": "Calificación" },
+    { "type": "text", "id": "score", "label": "Puntuación", "default": "4.9" },
+    { "type": "range", "id": "review_count", "label": "Número de reseñas", "min": 1, "max": 9999, "step": 1, "default": 202 },
+    { "type": "text", "id": "flag", "label": "Emoji de bandera (opcional)", "default": "🇩🇴" },
+    { "type": "range", "id": "rating_size", "label": "Tamaño calificación (px)", "min": 10, "max": 20, "step": 1, "default": 13 },
+    { "type": "color", "id": "star_color", "label": "Color estrellas", "default": "#f4a327" },
+
+    { "type": "header", "content": "Fotos" },
+    { "type": "range", "id": "photo_size", "label": "Tamaño foto (px)", "min": 60, "max": 200, "step": 4, "default": 100 },
+    { "type": "range", "id": "photo_radius", "label": "Bordes redondeados (px)", "min": 0, "max": 60, "step": 2, "default": 8 },
+    { "type": "range", "id": "photo_gap", "label": "Espacio entre fotos (px)", "min": 4, "max": 24, "step": 2, "default": 8 },
+    { "type": "range", "id": "speed", "label": "Velocidad scroll (seg — más alto = más lento)", "min": 10, "max": 60, "step": 2, "default": 30 },
+
+    { "type": "header", "content": "Fondo y espaciado" },
+    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#ffffff" },
+    { "type": "range", "id": "pt", "label": "Espacio superior (px)", "min": 0, "max": 64, "step": 4, "default": 24 },
+    { "type": "range", "id": "pb", "label": "Espacio inferior (px)", "min": 0, "max": 64, "step": 4, "default": 24 }
+  ],
+  "max_blocks": 20,
+  "blocks": [
+    {
+      "type": "photo",
+      "name": "Foto cliente",
+      "settings": [
+        { "type": "image_picker", "id": "photo", "label": "Foto" },
+        { "type": "text", "id": "alt", "label": "Texto alternativo (opcional)" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Prueba Social" }]
+}
+{% endschema %}
