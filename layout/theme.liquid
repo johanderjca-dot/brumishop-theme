@@ -26,6 +26,15 @@
 
   {{ content_for_header }}
   {{ 'theme.css' | asset_url | stylesheet_tag }}
+  <style>
+    [class*="releasit"] button,
+    [class*="releasit"] a,
+    [id*="releasit"] button,
+    [id*="releasit"] a,
+    .rc-btn, .rc-button, .cod-btn {
+      font-size: 28px !important;
+    }
+  </style>
 </head>
 <body class="bg-white text-[#1a1a18] overflow-x-hidden antialiased" style="font-family: 'Open Sans', system-ui, sans-serif;">
 
