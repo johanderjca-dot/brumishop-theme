@@ -199,7 +199,10 @@
     },
     "lp-how-to-use": {
       "type": "lp-how-to-use",
-      "settings": {}
+      "settings": {
+        "cols_mobile": 1,
+        "cols_desktop": 1
+      }
     },
     "lp-offer": {
       "type": "lp-offer",
