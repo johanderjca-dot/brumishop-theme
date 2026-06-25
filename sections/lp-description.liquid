@@ -18,13 +18,11 @@
         {{ section.settings.title }}
       </div>
     {% endif %}
-    <a href="#resenas" style="display:inline-flex; align-items:center; gap:6px; text-decoration:none; margin-bottom:{{ section.settings.title_gap }}px;">
-      <span style="color:{{ section.settings.star_color }}; font-size:{{ section.settings.star_size }}px; letter-spacing:1px; line-height:1;">
-        {% assign full = section.settings.rating_score | floor %}
-        {% for i in (1..5) %}{% if i <= full %}★{% else %}☆{% endif %}{% endfor %}
-      </span>
-      <span style="font-size:{{ section.settings.star_size | minus: 2 }}px; color:#6a6a62;">{{ section.settings.rating_count }} reseñas</span>
-    </a>
+    {% if section.settings.rating_text != blank %}
+      <a href="#resenas" style="display:inline-flex; align-items:center; text-decoration:none; margin-bottom:{{ section.settings.title_gap }}px; font-size:{{ section.settings.star_size }}px; color:{{ section.settings.star_color }};">
+        {{ section.settings.rating_text }}
+      </a>
+    {% endif %}
     <div class="lp-desc-content" style="font-size:{{ section.settings.font_size }}px; color:{{ section.settings.text_color }}; font-family:{{ section.settings.font_family }};">
       {% if section.settings.content != blank %}
         {{ section.settings.content }}
@@ -46,11 +44,9 @@
     { "type": "select", "id": "title_weight", "label": "Peso del título", "options": [{"value":"400","label":"Normal"},{"value":"600","label":"Semi-bold"},{"value":"700","label":"Bold"}], "default": "700" },
     { "type": "range", "id": "title_gap", "label": "Espacio título-texto (px)", "min": 4, "max": 32, "step": 2, "default": 8 },
     { "type": "header", "content": "Reseñas" },
-    { "type": "checkbox", "id": "show_rating", "label": "Mostrar estrellas", "default": true },
-    { "type": "range", "id": "rating_score", "label": "Calificación", "min": 1, "max": 5, "step": 1, "default": 5 },
-    { "type": "range", "id": "rating_count", "label": "Número de reseñas", "min": 1, "max": 9999, "step": 1, "default": 127 },
-    { "type": "range", "id": "star_size", "label": "Tamaño estrellas (px)", "min": 10, "max": 28, "step": 1, "default": 14 },
-    { "type": "color", "id": "star_color", "label": "Color estrellas", "default": "#F4A327" },
+    { "type": "text", "id": "rating_text", "label": "Estrellas y reseñas", "placeholder": "★★★★★  127 reseñas", "info": "Escribe las estrellas y el texto que quieras mostrar. Vacío = oculto." },
+    { "type": "range", "id": "star_size", "label": "Tamaño (px)", "min": 10, "max": 28, "step": 1, "default": 14 },
+    { "type": "color", "id": "star_color", "label": "Color", "default": "#F4A327" },
     { "type": "header", "content": "Contenido" },
     {
       "type": "richtext",
