@@ -18,6 +18,15 @@
         {{ section.settings.title }}
       </div>
     {% endif %}
+    {% if section.settings.show_rating %}
+      <a href="#resenas" style="display:inline-flex; align-items:center; gap:6px; text-decoration:none; margin-bottom:{{ section.settings.title_gap }}px;">
+        <span style="color:{{ section.settings.star_color }}; font-size:{{ section.settings.star_size }}px; letter-spacing:1px; line-height:1;">
+          {% assign full = section.settings.rating_score | floor %}
+          {% for i in (1..5) %}{% if i <= full %}★{% else %}☆{% endif %}{% endfor %}
+        </span>
+        <span style="font-size:{{ section.settings.star_size | minus: 2 }}px; color:#6a6a62;">{{ section.settings.rating_count }} reseñas</span>
+      </a>
+    {% endif %}
     <div class="lp-desc-content" style="font-size:{{ section.settings.font_size }}px; color:{{ section.settings.text_color }}; font-family:{{ section.settings.font_family }};">
       {% if section.settings.content != blank %}
         {{ section.settings.content }}
@@ -38,6 +47,12 @@
     { "type": "color", "id": "title_color", "label": "Color del título", "default": "#1a1a18" },
     { "type": "select", "id": "title_weight", "label": "Peso del título", "options": [{"value":"400","label":"Normal"},{"value":"600","label":"Semi-bold"},{"value":"700","label":"Bold"}], "default": "700" },
     { "type": "range", "id": "title_gap", "label": "Espacio título-texto (px)", "min": 4, "max": 32, "step": 2, "default": 8 },
+    { "type": "header", "content": "Reseñas" },
+    { "type": "checkbox", "id": "show_rating", "label": "Mostrar estrellas", "default": true },
+    { "type": "range", "id": "rating_score", "label": "Calificación", "min": 1, "max": 5, "step": 1, "default": 5 },
+    { "type": "range", "id": "rating_count", "label": "Número de reseñas", "min": 1, "max": 9999, "step": 1, "default": 127 },
+    { "type": "range", "id": "star_size", "label": "Tamaño estrellas (px)", "min": 10, "max": 28, "step": 1, "default": 14 },
+    { "type": "color", "id": "star_color", "label": "Color estrellas", "default": "#F4A327" },
     { "type": "header", "content": "Contenido" },
     {
       "type": "richtext",
