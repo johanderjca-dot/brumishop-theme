@@ -370,13 +370,61 @@
     "lp-ticker": {
       "type": "lp-ticker",
       "blocks": {
-        "ticker_1": { "type": "item", "settings": { "text": "Envío gratis a todo RD" } },
-        "ticker_2": { "type": "item", "settings": { "text": "Pagas al recibir" } },
-        "ticker_3": { "type": "item", "settings": { "text": "Garantía de satisfacción" } },
-        "ticker_4": { "type": "item", "settings": { "text": "Entrega en 24-48h" } }
+        "item_HUi8g9": {
+          "type": "item",
+          "settings": {
+            "text": "FACIL DE LAVAR"
+          }
+        },
+        "ticker_1": {
+          "type": "item",
+          "settings": {
+            "text": "LISTO EN 30 SEGUNDOS"
+          }
+        },
+        "ticker_2": {
+          "type": "item",
+          "settings": {
+            "text": "CARGA FACIL"
+          }
+        },
+        "ticker_3": {
+          "type": "item",
+          "settings": {
+            "text": "Garantía de satisfacción"
+          }
+        },
+        "ticker_4": {
+          "type": "item",
+          "settings": {
+            "text": "LO TOMAS DESDE EL MISMO FRASCO"
+          }
+        }
       },
-      "block_order": ["ticker_1", "ticker_2", "ticker_3", "ticker_4"],
-      "settings": {}
+      "block_order": [
+        "item_HUi8g9",
+        "ticker_1",
+        "ticker_2",
+        "ticker_3",
+        "ticker_4"
+      ],
+      "settings": {
+        "font_size": 13,
+        "font_weight": "600",
+        "uppercase": true,
+        "letter_spacing": 8,
+        "text_color": "#1a1a18",
+        "separator": "✦",
+        "sep_color": "#000000",
+        "sep_size": 14,
+        "sep_gap": 4,
+        "item_gap": 0,
+        "speed": 20,
+        "bg_color": "#F4EF88",
+        "border_color": "#e0e0da",
+        "border_width": 1,
+        "py": 10
+      }
     },
     "lp-problem-solution": {
       "type": "lp-problem-solution",
@@ -385,44 +433,24 @@
           "type": "block",
           "settings": {
             "problem_label": "EL PROBLEMA",
-            "problem_title": "¿Cansado de productos que no funcionan?",
+            "problem_title": "",
             "problem_text": "Muchos productos en el mercado prometen resultados pero no los cumplen. Pierdes dinero y tiempo sin ver mejoras reales.",
             "solution_label": "LA SOLUCIÓN",
             "solution_title": "Nuestro producto sí funciona — garantizado",
-            "solution_text": "Con nuestra fórmula probada y miles de clientes satisfechos, verás resultados reales desde la primera semana de uso.",
+            "solution_text": "Desde la primera vez, notarás su calidad de batidos y querrás llevarlo donde sea.",
             "show_btn": false,
             "btn_text": "Quiero este producto",
             "btn_bg": "#1a1a18",
             "btn_color": "#ffffff",
             "btn_radius": 4,
-            "image": "shopify://shop_images/Firefly_Flux_hazlomaspro_agregaleunfondosuave_comosifueseunproductoninja_enunacocin603505.png",
-            "img_radius": 8,
-            "img_height": 300
-          }
-        },
-        "block_Q7zLAT": {
-          "type": "block",
-          "settings": {
-            "problem_label": "EL PROBLEMA",
-            "problem_title": "¿Cansado de productos que no funcionan?",
-            "problem_text": "Muchos productos en el mercado prometen resultados pero no los cumplen. Pierdes dinero y tiempo sin ver mejoras reales.",
-            "solution_label": "LA SOLUCIÓN",
-            "solution_title": "Nuestro producto sí funciona — garantizado",
-            "solution_text": "Con nuestra fórmula probada y miles de clientes satisfechos, verás resultados reales desde la primera semana de uso.",
-            "show_btn": false,
-            "btn_text": "Quiero este producto",
-            "btn_bg": "#1a1a18",
-            "btn_color": "#ffffff",
-            "btn_radius": 4,
-            "image": "shopify://shop_images/Firefly_Flux_hazlomaspro_agregaleunfondosuave_comosifueseunproductoninja_enunacocin603505.png",
+            "image": "shopify://shop_images/Espanol.png",
             "img_radius": 8,
             "img_height": 300
           }
         }
       },
       "block_order": [
-        "block_QUMQJ3",
-        "block_Q7zLAT"
+        "block_QUMQJ3"
       ],
       "settings": {
         "py": 24,
@@ -436,8 +464,35 @@
         "img_bg": "#f0f0ea"
       }
     },
+    "apps_AzMUa7": {
+      "type": "apps",
+      "blocks": {
+        "releasit_cod_form_button_app_block_dp7cKQ": {
+          "type": "shopify://apps/releasit-cod-form/blocks/button-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "releasit_cod_form_button_app_block_dp7cKQ"
+      ],
+      "settings": {}
+    },
     "lp-faq": {
       "type": "lp-faq",
+      "blocks": {
+        "question_XQijMT": {
+          "type": "question",
+          "settings": {
+            "question": "¿Cuánto tarda en llegar mi pedido?",
+            "answer": "<p>Los pedidos se procesan en 1-2 días hábiles. El tiempo de entrega es de 3-5 días hábiles dependiendo de tu ubicación.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_XQijMT"
+      ],
       "settings": {
         "title": "Preguntas frecuentes",
         "subtitle": "",
@@ -468,6 +523,7 @@
     "lp-policies",
     "lp-ticker",
     "lp-problem-solution",
+    "apps_AzMUa7",
     "lp-faq"
   ]
 }
