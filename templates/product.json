@@ -117,6 +117,21 @@
       ],
       "settings": {}
     },
+    "apps_KDqhzb": {
+      "type": "apps",
+      "blocks": {
+        "releasit_cod_form_button_app_block_VbteNY": {
+          "type": "shopify://apps/releasit-cod-form/blocks/button-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "releasit_cod_form_button_app_block_VbteNY"
+      ],
+      "settings": {}
+    },
     "div-2": {
       "type": "lp-divider",
       "settings": {
@@ -195,16 +210,6 @@
         "bg_color": "#ffffff",
         "heading_color": "#1a1a18",
         "text_color": "#5a5a52"
-      }
-    },
-    "div-3": {
-      "type": "lp-divider",
-      "settings": {
-        "py": 6,
-        "max_width": 700,
-        "line_color": "#d0d0c8",
-        "bg_above": "#fafaf6",
-        "bg_below": "#ffffff"
       }
     },
     "lp-offer": {
@@ -408,9 +413,9 @@
     "1782416128197779a6",
     "div-2",
     "lp-benefits",
-    "div-3",
     "lp-offer",
     "lp-reviews",
+    "apps_KDqhzb",
     "lp-shipping",
     "lp-policies",
     "lp-problem-solution",
