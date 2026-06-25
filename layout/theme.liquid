@@ -38,6 +38,19 @@
       min-height: unset !important;
       height: auto !important;
     }
+    /* quitar posición fija del sticky bar de Releasit */
+    [class*="releasit"][style*="position: fixed"],
+    [class*="releasit"][style*="position:fixed"],
+    [id*="releasit"][style*="position: fixed"],
+    [id*="releasit"][style*="position:fixed"],
+    .rc-sticky-bar, .rc-sticky, .rc-fixed-bar {
+      position: static !important;
+      bottom: unset !important;
+      left: unset !important;
+      right: unset !important;
+      z-index: unset !important;
+      box-shadow: none !important;
+    }
   </style>
 </head>
 <body class="bg-white text-[#1a1a18] overflow-x-hidden antialiased" style="font-family: 'Open Sans', system-ui, sans-serif;">
