@@ -45,16 +45,14 @@
     display: block;
   }
 
-  /* Desktop: cover para llenar el ancho completo */
+  /* Desktop banner */
+  .lp-desktop-banner { display: none; }
   @media (min-width: 640px) {
-    .lp-hero-slide img {
-      object-fit: cover;
-      width: 100%;
-      max-height: {{ section.settings.max_height }}px;
-    }
+    .lp-desktop-banner { display: block; }
+    .lp-mobile-slider { display: none; }
   }
 
-  /* Mobile: mantener igual */
+  /* Mobile */
   @media (max-width: 639px) {
     .lp-hero-slide img { max-height: {{ section.settings.max_height_mobile }}px; }
     .lp-thumb { flex: 0 0 {{ section.settings.thumb_size | minus: 10 }}px; height: {{ section.settings.thumb_size | minus: 10 }}px; }
@@ -64,8 +62,17 @@
 <section style="background:{{ section.settings.bg_color }}; padding-top:{{ section.settings.pt }}px;">
 
   {% if img_count > 0 %}
-    <!-- Slider principal -->
-    <div style="overflow:hidden;">
+    <!-- Imagen desktop separada (si existe) -->
+    {% if section.settings.desktop_image != blank %}
+      <div class="lp-desktop-banner">
+        <img src="{{ section.settings.desktop_image | image_url: width: 1600 }}"
+             alt="{{ product.title | escape }}"
+             style="width:100%; max-height:{{ section.settings.max_height }}px; object-fit:cover; display:block;">
+      </div>
+    {% endif %}
+
+    <!-- Slider principal (mobile always / desktop solo si no hay imagen desktop) -->
+    <div style="overflow:hidden;" class="{% if section.settings.desktop_image != blank %}lp-mobile-slider{% endif %}">
       <div class="lp-hero-track" id="lp-hero-track-{{ section.id }}">
         {% for image in images %}
           <div class="lp-hero-slide">
@@ -140,6 +147,7 @@
 {
   "name": "1 — Foto Hero",
   "settings": [
+    { "type": "image_picker", "id": "desktop_image", "label": "Imagen desktop (landscape) — opcional" },
     { "type": "range", "id": "max_height", "label": "Altura máxima desktop (px)", "min": 200, "max": 800, "step": 10, "default": 420 },
     { "type": "range", "id": "max_height_mobile", "label": "Altura máxima móvil (px)", "min": 200, "max": 600, "step": 10, "default": 340 },
     { "type": "select", "id": "fit", "label": "Ajuste de imagen", "options": [{"value":"cover","label":"Recortar (llenar)"},{"value":"contain","label":"Completa (sin recorte)"}], "default": "contain" },
