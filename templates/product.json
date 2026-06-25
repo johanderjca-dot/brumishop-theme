@@ -45,6 +45,23 @@
         "py": 8
       }
     },
+    "lp-rating-bar": {
+      "type": "lp-rating-bar",
+      "settings": {
+        "score": "4.8",
+        "review_count": 127,
+        "reviews_anchor": "resenas",
+        "star_size": 16,
+        "score_size": 14,
+        "count_size": 12,
+        "star_color": "#F4A327",
+        "text_color": "#1a1a18",
+        "count_color": "#6a6a62",
+        "bg_color": "#ffffff",
+        "max_width": 600,
+        "py": 4
+      }
+    },
     "lp_divider_jg7UjN": {
       "type": "lp-divider",
       "settings": {
@@ -390,6 +407,7 @@
     "lp-hero",
     "div-1",
     "lp-trust-badges",
+    "lp-rating-bar",
     "lp_divider_jg7UjN",
     "lp-description",
     "div-2",
