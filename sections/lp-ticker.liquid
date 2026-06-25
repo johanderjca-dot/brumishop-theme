@@ -1,0 +1,101 @@
+{% if section.blocks.size > 0 %}
+<style>
+  .tk-wrap {
+    background: {{ section.settings.bg_color }};
+    padding: {{ section.settings.py }}px 0;
+    overflow: hidden;
+    border-top: {{ section.settings.border_width }}px solid {{ section.settings.border_color }};
+    border-bottom: {{ section.settings.border_width }}px solid {{ section.settings.border_color }};
+  }
+  .tk-track {
+    display: flex;
+    white-space: nowrap;
+    animation: tk-scroll {{ section.settings.speed }}s linear infinite;
+    will-change: transform;
+  }
+  .tk-track:hover { animation-play-state: paused; }
+  @keyframes tk-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .tk-item {
+    display: inline-flex;
+    align-items: center;
+    gap: {{ section.settings.sep_gap }}px;
+    padding: 0 {{ section.settings.item_gap }}px;
+    font-size: {{ section.settings.font_size }}px;
+    font-weight: {{ section.settings.font_weight }};
+    color: {{ section.settings.text_color }};
+    letter-spacing: {{ section.settings.letter_spacing }}em;
+    text-transform: {% if section.settings.uppercase %}uppercase{% else %}none{% endif %};
+  }
+  .tk-sep {
+    color: {{ section.settings.sep_color }};
+    font-size: {{ section.settings.sep_size }}px;
+    flex-shrink: 0;
+  }
+</style>
+
+<div class="tk-wrap">
+  <div class="tk-track">
+    {% comment %}Doble loop para loop infinito{% endcomment %}
+    {% for n in (1..2) %}
+      {% for block in section.blocks %}
+        <span class="tk-item" {{ block.shopify_attributes }}>
+          {% if section.settings.separator != blank and forloop.index > 1 or n == 2 %}
+            <span class="tk-sep">{{ section.settings.separator }}</span>
+          {% endif %}
+          {{ block.settings.text }}
+        </span>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Cinta de Texto",
+  "settings": [
+    { "type": "header", "content": "Texto" },
+    { "type": "range", "id": "font_size", "label": "Tamaño de letra (px)", "min": 10, "max": 24, "step": 1, "default": 13 },
+    { "type": "select", "id": "font_weight", "label": "Peso", "options": [{"value":"400","label":"Normal"},{"value":"600","label":"Semi-bold"},{"value":"700","label":"Bold"}], "default": "600" },
+    { "type": "checkbox", "id": "uppercase", "label": "Mayúsculas", "default": true },
+    { "type": "range", "id": "letter_spacing", "label": "Espaciado letras (em × 0.01)", "min": 0, "max": 30, "step": 1, "default": 8, "info": "Valor 8 = 0.08em" },
+    { "type": "color", "id": "text_color", "label": "Color texto", "default": "#1a1a18" },
+
+    { "type": "header", "content": "Separador entre items" },
+    { "type": "text", "id": "separator", "label": "Símbolo separador", "default": "✦", "info": "Ejemplos: ✦ · • ★ / —" },
+    { "type": "color", "id": "sep_color", "label": "Color separador", "default": "#5a7a40" },
+    { "type": "range", "id": "sep_size", "label": "Tamaño separador (px)", "min": 8, "max": 24, "step": 1, "default": 10 },
+    { "type": "range", "id": "sep_gap", "label": "Espacio alrededor del separador (px)", "min": 4, "max": 32, "step": 2, "default": 16 },
+    { "type": "range", "id": "item_gap", "label": "Espacio lateral por item (px)", "min": 0, "max": 32, "step": 2, "default": 0 },
+
+    { "type": "header", "content": "Velocidad y diseño" },
+    { "type": "range", "id": "speed", "label": "Velocidad (seg — más alto = más lento)", "min": 5, "max": 60, "step": 1, "default": 20 },
+    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#f5f5f0" },
+    { "type": "color", "id": "border_color", "label": "Color borde", "default": "#e0e0da" },
+    { "type": "range", "id": "border_width", "label": "Grosor borde (px)", "min": 0, "max": 4, "step": 1, "default": 1 },
+    { "type": "range", "id": "py", "label": "Espacio vertical (px)", "min": 4, "max": 32, "step": 2, "default": 10 }
+  ],
+  "max_blocks": 20,
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Texto",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Texto", "default": "Envío gratis a todo RD" }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Cinta de Texto",
+    "blocks": [
+      { "type": "item", "settings": { "text": "Envío gratis a todo RD" } },
+      { "type": "item", "settings": { "text": "Pagas al recibir" } },
+      { "type": "item", "settings": { "text": "Garantía de satisfacción" } },
+      { "type": "item", "settings": { "text": "Entrega en 24-48h" } }
+    ]
+  }]
+}
+{% endschema %}

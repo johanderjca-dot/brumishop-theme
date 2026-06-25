@@ -367,6 +367,17 @@
         "text_color": "#5a5a52"
       }
     },
+    "lp-ticker": {
+      "type": "lp-ticker",
+      "blocks": {
+        "ticker_1": { "type": "item", "settings": { "text": "Envío gratis a todo RD" } },
+        "ticker_2": { "type": "item", "settings": { "text": "Pagas al recibir" } },
+        "ticker_3": { "type": "item", "settings": { "text": "Garantía de satisfacción" } },
+        "ticker_4": { "type": "item", "settings": { "text": "Entrega en 24-48h" } }
+      },
+      "block_order": ["ticker_1", "ticker_2", "ticker_3", "ticker_4"],
+      "settings": {}
+    },
     "lp-problem-solution": {
       "type": "lp-problem-solution",
       "blocks": {
@@ -455,6 +466,7 @@
     "apps_KDqhzb",
     "lp-shipping",
     "lp-policies",
+    "lp-ticker",
     "lp-problem-solution",
     "lp-faq"
   ]
