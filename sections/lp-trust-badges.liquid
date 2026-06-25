@@ -31,6 +31,12 @@
     justify-content: center;
     flex-shrink: 0;
   }
+  .tb-icon-wrap img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+  }
   .tb-text {
     display: flex;
     flex-direction: column;
@@ -40,7 +46,7 @@
   .tb-title {
     font-weight: 700;
     font-size: 11px;
-    color: {{ section.settings.icon_color }};
+    color: #1a1a18;
     line-height: 1.2;
     white-space: nowrap;
     overflow: hidden;
@@ -48,15 +54,15 @@
   }
   .tb-sub {
     font-size: 9.5px;
-    color: {{ section.settings.icon_color }};
+    color: #1a1a18;
     line-height: 1.2;
-    opacity: 0.75;
+    opacity: 0.6;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
   .tb-divider {
-    background: #ececf5;
+    background: #e0e0da;
     margin: 12px 0;
   }
 </style>
@@ -65,12 +71,11 @@
   <div class="tb-box">
 
     <div class="tb-item">
-      <div class="tb-icon-wrap">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{ section.settings.icon_color }}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
-          <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
-        </svg>
-      </div>
+      {% if section.settings.badge1_icon != blank %}
+        <div class="tb-icon-wrap">
+          <img src="{{ section.settings.badge1_icon | image_url: width: 80 }}" alt="">
+        </div>
+      {% endif %}
       <div class="tb-text">
         <div class="tb-title">{{ section.settings.badge1_title }}</div>
         <div class="tb-sub">{{ section.settings.badge1_sub }}</div>
@@ -80,18 +85,16 @@
     <div class="tb-divider"></div>
 
     <div class="tb-item">
-      <div class="tb-icon-wrap">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{ section.settings.icon_color }}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="1" y="4" width="22" height="16" rx="2"/>
-          <line x1="1" y1="10" x2="23" y2="10"/>
-        </svg>
-      </div>
+      {% if section.settings.badge2_icon != blank %}
+        <div class="tb-icon-wrap">
+          <img src="{{ section.settings.badge2_icon | image_url: width: 80 }}" alt="">
+        </div>
+      {% endif %}
       <div class="tb-text">
         <div class="tb-title">{{ section.settings.badge2_title }}</div>
         <div class="tb-sub">{{ section.settings.badge2_sub }}</div>
       </div>
     </div>
-
 
   </div>
 </div>
@@ -100,6 +103,11 @@
 {
   "name": "Trust Badges",
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "badge1_icon",
+      "label": "Badge 1 — Ícono"
+    },
     {
       "type": "text",
       "id": "badge1_title",
@@ -113,6 +121,11 @@
       "default": "Entrega en 24-48h (Todo RD)"
     },
     {
+      "type": "image_picker",
+      "id": "badge2_icon",
+      "label": "Badge 2 — Ícono"
+    },
+    {
       "type": "text",
       "id": "badge2_title",
       "label": "Badge 2 — Título",
@@ -123,30 +136,6 @@
       "id": "badge2_sub",
       "label": "Badge 2 — Subtítulo",
       "default": "Efectivo o Transferencia"
-    },
-    {
-      "type": "text",
-      "id": "badge3_title",
-      "label": "Badge 3 — Título",
-      "default": "Garantía de 30 Días"
-    },
-    {
-      "type": "text",
-      "id": "badge3_sub",
-      "label": "Badge 3 — Subtítulo",
-      "default": "Pídelo con confianza"
-    },
-    {
-      "type": "color",
-      "id": "icon_color",
-      "label": "Color de íconos y subtítulos",
-      "default": "#6B5CE7"
-    },
-    {
-      "type": "text",
-      "id": "icon_color_rgb",
-      "label": "Color íconos en RGB (fondo circular)",
-      "default": "107,92,231"
     },
     {
       "type": "color",
