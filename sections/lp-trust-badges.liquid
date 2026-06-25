@@ -1,120 +1,114 @@
 <style>
-  .trust-badges-wrap {
+  .tb-wrap {
     background: {{ section.settings.bg_color }};
     padding: {{ section.settings.py }}px 16px;
   }
-  .trust-badges-box {
+  .tb-box {
     max-width: {{ section.settings.max_width }}px;
     margin: 0 auto;
     background: #ffffff;
-    border: 1px solid #e8e8f0;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(100,80,200,0.07);
+    border: 1px solid #ececf5;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(100,80,200,0.06);
     display: flex;
     flex-direction: column;
   }
-  .trust-badge-item {
+  .tb-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 12px;
-    padding: 14px 20px;
+    text-align: center;
+    padding: 24px 20px;
+    gap: 10px;
   }
-  .trust-badge-divider-h {
-    height: 1px;
-    background: #e8e8f0;
-    margin: 0 16px;
-  }
-  .trust-badge-divider-v {
-    display: none;
-    width: 1px;
-    background: #e8e8f0;
-    margin: 12px 0;
-  }
-  .trust-badge-icon {
-    width: 40px;
-    height: 40px;
+  .tb-icon-wrap {
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
-    background: rgba({{ section.settings.icon_color_rgb }}, 0.1);
+    background: rgba({{ section.settings.icon_color_rgb }}, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
   }
-  .trust-badge-title {
+  .tb-title {
     font-weight: 700;
-    font-size: 13px;
+    font-size: 15px;
     color: #1a1a18;
     line-height: 1.3;
   }
-  .trust-badge-sub {
-    font-size: 11px;
-    color: #7a7a72;
-    margin-top: 2px;
+  .tb-sub {
+    font-size: 13px;
+    color: {{ section.settings.icon_color }};
+    line-height: 1.4;
   }
+  .tb-divider-h {
+    height: 1px;
+    background: #ececf5;
+    margin: 0 20px;
+  }
+  .tb-divider-v { display: none; }
 
-  @media (min-width: 480px) {
-    .trust-badges-box {
+  @media (min-width: 540px) {
+    .tb-box {
       flex-direction: row;
       align-items: stretch;
     }
-    .trust-badge-item {
+    .tb-item {
       flex: 1;
-      padding: 16px 16px;
+      padding: 28px 16px;
     }
-    .trust-badge-divider-h { display: none; }
-    .trust-badge-divider-v { display: block; }
+    .tb-divider-h { display: none; }
+    .tb-divider-v {
+      display: block;
+      width: 1px;
+      background: #ececf5;
+      margin: 20px 0;
+      flex-shrink: 0;
+    }
   }
 </style>
 
-<div class="trust-badges-wrap">
-  <div class="trust-badges-box">
+<div class="tb-wrap">
+  <div class="tb-box">
 
-    <!-- Envío Gratis -->
-    <div class="trust-badge-item">
-      <div class="trust-badge-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{ section.settings.icon_color }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <div class="tb-item">
+      <div class="tb-icon-wrap">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="{{ section.settings.icon_color }}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
           <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
         </svg>
       </div>
-      <div>
-        <div class="trust-badge-title">{{ section.settings.badge1_title }}</div>
-        <div class="trust-badge-sub">{{ section.settings.badge1_sub }}</div>
-      </div>
+      <div class="tb-title">{{ section.settings.badge1_title }}</div>
+      <div class="tb-sub">{{ section.settings.badge1_sub }}</div>
     </div>
 
-    <div class="trust-badge-divider-h"></div>
-    <div class="trust-badge-divider-v"></div>
+    <div class="tb-divider-h"></div>
+    <div class="tb-divider-v"></div>
 
-    <!-- Pagas al Recibir -->
-    <div class="trust-badge-item">
-      <div class="trust-badge-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{ section.settings.icon_color }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <div class="tb-item">
+      <div class="tb-icon-wrap">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="{{ section.settings.icon_color }}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <rect x="1" y="4" width="22" height="16" rx="2"/>
           <line x1="1" y1="10" x2="23" y2="10"/>
         </svg>
       </div>
-      <div>
-        <div class="trust-badge-title">{{ section.settings.badge2_title }}</div>
-        <div class="trust-badge-sub">{{ section.settings.badge2_sub }}</div>
-      </div>
+      <div class="tb-title">{{ section.settings.badge2_title }}</div>
+      <div class="tb-sub">{{ section.settings.badge2_sub }}</div>
     </div>
 
-    <div class="trust-badge-divider-h"></div>
-    <div class="trust-badge-divider-v"></div>
+    <div class="tb-divider-h"></div>
+    <div class="tb-divider-v"></div>
 
-    <!-- Garantía -->
-    <div class="trust-badge-item">
-      <div class="trust-badge-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{ section.settings.icon_color }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <div class="tb-item">
+      <div class="tb-icon-wrap">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="{{ section.settings.icon_color }}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
           <polyline points="9 12 11 14 15 10"/>
         </svg>
       </div>
-      <div>
-        <div class="trust-badge-title">{{ section.settings.badge3_title }}</div>
-        <div class="trust-badge-sub">{{ section.settings.badge3_sub }}</div>
-      </div>
+      <div class="tb-title">{{ section.settings.badge3_title }}</div>
+      <div class="tb-sub">{{ section.settings.badge3_sub }}</div>
     </div>
 
   </div>
@@ -163,13 +157,13 @@
     {
       "type": "color",
       "id": "icon_color",
-      "label": "Color de íconos",
+      "label": "Color de íconos y subtítulos",
       "default": "#6B5CE7"
     },
     {
       "type": "text",
       "id": "icon_color_rgb",
-      "label": "Color íconos en RGB (para fondo circular)",
+      "label": "Color íconos en RGB (fondo circular)",
       "default": "107,92,231"
     },
     {
@@ -185,7 +179,7 @@
       "min": 300,
       "max": 900,
       "step": 20,
-      "default": 640
+      "default": 700
     },
     {
       "type": "range",
