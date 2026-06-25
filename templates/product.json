@@ -118,6 +118,7 @@
         "benefit_6h3kaz": {
           "type": "benefit",
           "settings": {
+            "icon_img": "shopify://shop_images/Texto.png",
             "icon_emoji": "✓",
             "title": "0 conexión a luz.",
             "description": "",
@@ -379,6 +380,21 @@
         "text_color": "#5a5a52",
         "py": 24
       }
+    },
+    "1782416128197779a6": {
+      "type": "apps",
+      "blocks": {
+        "releasit_cod_form_button_app_block_tg4BMT": {
+          "type": "shopify://apps/releasit-cod-form/blocks/button-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "releasit_cod_form_button_app_block_tg4BMT"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -387,6 +403,7 @@
     "lp-trust-badges",
     "lp_divider_jg7UjN",
     "lp-description",
+    "1782416128197779a6",
     "div-2",
     "lp-benefits",
     "div-3",
