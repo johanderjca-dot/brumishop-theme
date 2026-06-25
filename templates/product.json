@@ -248,6 +248,13 @@
     "lp-testimonials": {
       "type": "lp-testimonials",
       "blocks": {
+        "photo_Fbb3kA": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/Gemini_Generated_Image_vnh79ovnh79ovnh7_e4ffc692-d876-4304-af46-df87a9688706.png",
+            "alt": ""
+          }
+        },
         "photo_VLq9pp": {
           "type": "photo",
           "settings": {
@@ -271,6 +278,7 @@
         }
       },
       "block_order": [
+        "photo_Fbb3kA",
         "photo_VLq9pp",
         "photo_3XV4pg",
         "photo_yLhcdK"
