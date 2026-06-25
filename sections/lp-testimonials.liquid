@@ -66,48 +66,24 @@
     </div>
   </div>
 
-  {% if section.blocks.size > 1 %}
-    <div class="ct-dots" id="ct-dots-{{ section.id }}">
-      {% for block in section.blocks %}
-        {% if block.settings.photo != blank %}
-          <button class="ct-dot {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}"></button>
-        {% endif %}
-      {% endfor %}
-    </div>
-  {% endif %}
 </section>
 
 <script>
 (function(){
   var track = document.getElementById('ct-track-{{ section.id }}');
-  var dots  = document.querySelectorAll('#ct-dots-{{ section.id }} .ct-dot');
   if (!track) return;
   var total   = {{ section.blocks.size }};
   var perView = {{ section.settings.per_view }};
   var current = 0;
-  var timer;
 
   function goTo(i) {
     var max = Math.max(0, total - perView);
     current = Math.min(Math.max((i + total) % total, 0), max);
     var slideW = track.children[0] ? track.children[0].offsetWidth + {{ section.settings.gap }} : 0;
     track.style.transform = 'translateX(-' + (current * slideW) + 'px)';
-    dots.forEach(function(d, idx){ d.classList.toggle('active', idx === current); });
   }
 
-  function startAuto() {
-    timer = setInterval(function(){ goTo(current + 1); }, {{ section.settings.speed }}000);
-  }
-
-  dots.forEach(function(d){
-    d.addEventListener('click', function(){
-      clearInterval(timer);
-      goTo(parseInt(d.dataset.index));
-      startAuto();
-    });
-  });
-
-  startAuto();
+  setInterval(function(){ goTo(current + 1); }, {{ section.settings.speed }}000);
 })();
 </script>
 {% endif %}
