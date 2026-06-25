@@ -1,0 +1,160 @@
+<div style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 16px;">
+  <div style="
+    max-width:{{ section.settings.max_width }}px;
+    margin:0 auto;
+    background:#ffffff;
+    border:1px solid #e8e8f0;
+    border-radius:12px;
+    box-shadow:0 2px 12px rgba(100,80,200,0.07);
+    display:flex;
+    align-items:stretch;
+  ">
+
+    <!-- Envío Gratis -->
+    <div style="flex:1; display:flex; align-items:center; gap:12px; padding:16px 20px;">
+      <div style="
+        width:40px; height:40px; border-radius:50%;
+        background:rgba({{ section.settings.icon_color_rgb }},0.1);
+        display:flex; align-items:center; justify-content:center;
+        flex-shrink:0;
+      ">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{ section.settings.icon_color }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+          <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+        </svg>
+      </div>
+      <div>
+        <div style="font-weight:700; font-size:13px; color:#1a1a18; line-height:1.3;">{{ section.settings.badge1_title }}</div>
+        <div style="font-size:11px; color:#7a7a72; margin-top:1px;">{{ section.settings.badge1_sub }}</div>
+      </div>
+    </div>
+
+    <div style="width:1px; background:#e8e8f0; margin:12px 0;"></div>
+
+    <!-- Pagas al Recibir -->
+    <div style="flex:1; display:flex; align-items:center; gap:12px; padding:16px 20px;">
+      <div style="
+        width:40px; height:40px; border-radius:50%;
+        background:rgba({{ section.settings.icon_color_rgb }},0.1);
+        display:flex; align-items:center; justify-content:center;
+        flex-shrink:0;
+      ">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{ section.settings.icon_color }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="4" width="22" height="16" rx="2"/>
+          <line x1="1" y1="10" x2="23" y2="10"/>
+        </svg>
+      </div>
+      <div>
+        <div style="font-weight:700; font-size:13px; color:#1a1a18; line-height:1.3;">{{ section.settings.badge2_title }}</div>
+        <div style="font-size:11px; color:#7a7a72; margin-top:1px;">{{ section.settings.badge2_sub }}</div>
+      </div>
+    </div>
+
+    <div style="width:1px; background:#e8e8f0; margin:12px 0;"></div>
+
+    <!-- Garantía -->
+    <div style="flex:1; display:flex; align-items:center; gap:12px; padding:16px 20px;">
+      <div style="
+        width:40px; height:40px; border-radius:50%;
+        background:rgba({{ section.settings.icon_color_rgb }},0.1);
+        display:flex; align-items:center; justify-content:center;
+        flex-shrink:0;
+      ">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{ section.settings.icon_color }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <polyline points="9 12 11 14 15 10"/>
+        </svg>
+      </div>
+      <div>
+        <div style="font-weight:700; font-size:13px; color:#1a1a18; line-height:1.3;">{{ section.settings.badge3_title }}</div>
+        <div style="font-size:11px; color:#7a7a72; margin-top:1px;">{{ section.settings.badge3_sub }}</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Trust Badges",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge1_title",
+      "label": "Badge 1 — Título",
+      "default": "Envío Gratis"
+    },
+    {
+      "type": "text",
+      "id": "badge1_sub",
+      "label": "Badge 1 — Subtítulo",
+      "default": "Entrega en 24-48h (Todo RD)"
+    },
+    {
+      "type": "text",
+      "id": "badge2_title",
+      "label": "Badge 2 — Título",
+      "default": "Pagas al Recibir"
+    },
+    {
+      "type": "text",
+      "id": "badge2_sub",
+      "label": "Badge 2 — Subtítulo",
+      "default": "Efectivo o Transferencia"
+    },
+    {
+      "type": "text",
+      "id": "badge3_title",
+      "label": "Badge 3 — Título",
+      "default": "Garantía de 30 Días"
+    },
+    {
+      "type": "text",
+      "id": "badge3_sub",
+      "label": "Badge 3 — Subtítulo",
+      "default": "Pídelo con confianza"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Color de íconos",
+      "default": "#6B5CE7"
+    },
+    {
+      "type": "text",
+      "id": "icon_color_rgb",
+      "label": "Color íconos en RGB (para fondo circular)",
+      "default": "107,92,231"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Fondo de sección",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Ancho máximo (px)",
+      "min": 300,
+      "max": 900,
+      "step": 20,
+      "default": 640
+    },
+    {
+      "type": "range",
+      "id": "py",
+      "label": "Espacio vertical (px)",
+      "min": 0,
+      "max": 48,
+      "step": 4,
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trust Badges"
+    }
+  ]
+}
+{% endschema %}

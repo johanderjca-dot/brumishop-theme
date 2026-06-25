@@ -31,22 +31,20 @@
         "bg_below": "#ffffff"
       }
     },
-    "lp-text-box": {
-      "type": "lp-text-box",
+    "lp-trust-badges": {
+      "type": "lp-trust-badges",
       "settings": {
-        "text": "<p><strong>🚘 ENVIO GRATIS A TODO RD</strong></p>",
-        "align": "center",
-        "max_width": 300,
-        "py": 0,
-        "px": 0,
-        "box_pad": 8,
-        "radius": 0,
-        "border_width": 0,
+        "badge1_title": "Envío Gratis",
+        "badge1_sub": "Entrega en 24-48h (Todo RD)",
+        "badge2_title": "Pagas al Recibir",
+        "badge2_sub": "Efectivo o Transferencia",
+        "badge3_title": "Garantía de 30 Días",
+        "badge3_sub": "Pídelo con confianza",
+        "icon_color": "#6B5CE7",
+        "icon_color_rgb": "107,92,231",
         "bg_color": "#ffffff",
-        "box_bg": "#ffffff",
-        "border_color": "#000000",
-        "text_color": "#db9d00",
-        "font_size": 16
+        "max_width": 640,
+        "py": 8
       }
     },
     "lp_divider_jg7UjN": {
@@ -393,7 +391,7 @@
   "order": [
     "lp-hero",
     "div-1",
-    "lp-text-box",
+    "lp-trust-badges",
     "lp_divider_jg7UjN",
     "lp-description",
     "div-2",
