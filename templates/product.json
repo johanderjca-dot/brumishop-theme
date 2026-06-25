@@ -12,10 +12,10 @@
     "lp-hero": {
       "type": "lp-hero",
       "settings": {
-        "pt": 0,
         "max_height": 420,
         "max_height_mobile": 340,
         "fit": "contain",
+        "pt": 0,
         "thumb_size": 60,
         "speed": 3,
         "bg_color": "#ffffff"
@@ -34,14 +34,11 @@
     "lp-trust-badges": {
       "type": "lp-trust-badges",
       "settings": {
+        "badge1_icon": "shopify://shop_images/Diseno_sin_titulo-3.png",
         "badge1_title": "Envío Gratis",
         "badge1_sub": "Entrega en 24-48h (Todo RD)",
         "badge2_title": "Pagas al Recibir",
         "badge2_sub": "Efectivo o Transferencia",
-        "badge3_title": "Garantía de 30 Días",
-        "badge3_sub": "Pídelo con confianza",
-        "icon_color": "#6B5CE7",
-        "icon_color_rgb": "107,92,231",
         "bg_color": "#ffffff",
         "max_width": 640,
         "py": 8
@@ -201,15 +198,15 @@
         "review_GiQC6J"
       ],
       "settings": {
-        "columns": "3",
+        "speed": 4,
         "card_radius": 8,
+        "py": 24,
         "bg_color": "#ffffff",
         "card_bg": "#fafaf6",
         "card_border": "#e8e8e2",
         "star_color": "#f4a327",
         "heading_color": "#1a1a18",
-        "text_color": "#5a5a52",
-        "py": 24
+        "text_color": "#5a5a52"
       }
     },
     "lp-shipping": {
