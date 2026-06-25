@@ -26,8 +26,9 @@
       {% endif %}
     </div>
     {% if section.settings.rating_text != blank %}
-      <a href="#resenas" style="display:inline-flex; align-items:center; text-decoration:none; margin-top:8px; font-size:{{ section.settings.star_size }}px; color:{{ section.settings.star_color }};">
-        {{ section.settings.rating_text }}
+      <a href="#resenas" style="display:inline-flex; align-items:center; gap:6px; text-decoration:none; margin-top:{{ section.settings.rating_gap }}px;">
+        <span style="color:{{ section.settings.star_color }}; font-size:{{ section.settings.star_size }}px; letter-spacing:2px; line-height:1;">★★★★★</span>
+        <em style="font-size:{{ section.settings.star_size | minus: 2 }}px; color:#6a6a62; font-style:italic;">{{ section.settings.rating_text }}</em>
       </a>
     {% endif %}
   </div>
@@ -44,9 +45,10 @@
     { "type": "select", "id": "title_weight", "label": "Peso del título", "options": [{"value":"400","label":"Normal"},{"value":"600","label":"Semi-bold"},{"value":"700","label":"Bold"}], "default": "700" },
     { "type": "range", "id": "title_gap", "label": "Espacio título-texto (px)", "min": 4, "max": 32, "step": 2, "default": 8 },
     { "type": "header", "content": "Reseñas" },
-    { "type": "text", "id": "rating_text", "label": "Estrellas y reseñas", "placeholder": "★★★★★  127 reseñas", "info": "Escribe las estrellas y el texto que quieras mostrar. Vacío = oculto." },
+    { "type": "text", "id": "rating_text", "label": "Texto de reseñas (ej: 127 reseñas)", "info": "Las ★★★★★ se ponen solas. Escribe solo el texto, ej: 127 reseñas. Vacío = oculto." },
     { "type": "range", "id": "star_size", "label": "Tamaño (px)", "min": 10, "max": 28, "step": 1, "default": 14 },
-    { "type": "color", "id": "star_color", "label": "Color", "default": "#F4A327" },
+    { "type": "color", "id": "star_color", "label": "Color estrellas", "default": "#F4A327" },
+    { "type": "range", "id": "rating_gap", "label": "Espacio encima (px)", "min": 0, "max": 32, "step": 2, "default": 8 },
     { "type": "header", "content": "Contenido" },
     {
       "type": "richtext",
