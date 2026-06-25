@@ -19,32 +19,6 @@
     background: {{ section.settings.bg_color }};
   }
 
-  /* Thumbnails */
-  .lp-thumbs {
-    display: flex;
-    gap: 6px;
-    padding: 6px 0 0;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-  .lp-thumbs::-webkit-scrollbar { display: none; }
-  .lp-thumb {
-    flex: 0 0 {{ section.settings.thumb_size }}px;
-    height: {{ section.settings.thumb_size }}px;
-    border-radius: 4px;
-    overflow: hidden;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: border-color .2s;
-    background: {{ section.settings.bg_color }};
-  }
-  .lp-thumb.active { border-color: #1a1a18; }
-  .lp-thumb img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
   /* Desktop banner */
   .lp-desktop-banner { display: none; }
   @media (min-width: 640px) {
@@ -88,17 +62,6 @@
       </div>
     </div>
 
-    <!-- Miniaturas -->
-    {% if img_count > 1 %}
-      <div class="lp-thumbs" id="lp-thumbs-{{ section.id }}">
-        {% for image in images %}
-          <div class="lp-thumb {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}">
-            <img src="{{ image | image_url: width: 160 }}" alt="{{ product.title | escape }}" loading="lazy">
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-
   {% else %}
     <div style="background:#E8E8E2; height:{{ section.settings.max_height }}px; display:flex; align-items:center; justify-content:center;">
       <p style="color:#a0a09a; font-size:0.875rem;">Sube imágenes al producto en Shopify Admin.</p>
@@ -110,35 +73,15 @@
 {% if img_count > 1 %}
 <script>
 (function(){
-  var track  = document.getElementById('lp-hero-track-{{ section.id }}');
-  var thumbs = document.querySelectorAll('#lp-thumbs-{{ section.id }} .lp-thumb');
+  var track = document.getElementById('lp-hero-track-{{ section.id }}');
   if (!track) return;
-
-  var total   = {{ img_count }};
+  var total = {{ img_count }};
   var current = 0;
-  var timer;
-
   function goTo(i) {
     current = (i + total) % total;
     track.style.transform = 'translateX(-' + (current * 100) + '%)';
-    thumbs.forEach(function(t, idx) { t.classList.toggle('active', idx === current); });
-    // scroll thumbnail into view
-    if (thumbs[current]) thumbs[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
   }
-
-  function startAuto() {
-    timer = setInterval(function(){ goTo(current + 1); }, {{ section.settings.speed }}000);
-  }
-
-  thumbs.forEach(function(t) {
-    t.addEventListener('click', function(){
-      clearInterval(timer);
-      goTo(parseInt(t.dataset.index));
-      startAuto();
-    });
-  });
-
-  startAuto();
+  setInterval(function(){ goTo(current + 1); }, {{ section.settings.speed }}000);
 })();
 </script>
 {% endif %}
