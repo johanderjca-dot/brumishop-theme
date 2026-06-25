@@ -109,7 +109,7 @@
         "max_width": 700,
         "line_color": "#d0d0c8",
         "bg_above": "#ffffff",
-        "bg_below": "#FFFFFF"
+        "bg_below": "#ffffff"
       }
     },
     "lp-benefits": {
@@ -169,12 +169,12 @@
         "icon_gap": 8,
         "item_title_size": 15,
         "item_desc_size": 14,
-        "box_border_color": "#FFFFFF",
+        "box_border_color": "#ffffff",
         "box_radius": 8,
         "box_pad": 20,
         "pt": 4,
         "pb": 4,
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "heading_color": "#1a1a18",
         "text_color": "#5a5a52"
       }
@@ -186,7 +186,7 @@
         "max_width": 700,
         "line_color": "#d0d0c8",
         "bg_above": "#fafaf6",
-        "bg_below": "#FFFFFF"
+        "bg_below": "#ffffff"
       }
     },
     "lp-offer": {
@@ -379,21 +379,6 @@
         "text_color": "#5a5a52",
         "py": 24
       }
-    },
-    "1781498424f948e012": {
-      "type": "apps",
-      "blocks": {
-        "releasit_cod_form_button_app_block_DgC6DN": {
-          "type": "shopify://apps/releasit-cod-form/blocks/button-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "releasit_cod_form_button_app_block_DgC6DN"
-      ],
-      "settings": {}
     }
   },
   "order": [
@@ -411,7 +396,6 @@
     "lp-policies",
     "lp-problem-solution",
     "lp-faq",
-    "lp-testimonials",
-    "1781498424f948e012"
+    "lp-testimonials"
   ]
 }
