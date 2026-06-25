@@ -380,23 +380,6 @@
         "py": 24
       }
     },
-    "lp-sticky-btn": {
-      "type": "lp-sticky-btn",
-      "settings": {
-        "btn_text": "Ordenar",
-        "btn_bg": "#1a1a18",
-        "btn_color": "#ffffff",
-        "btn_font_size": 16,
-        "btn_py": 16,
-        "btn_px": 48,
-        "btn_radius": 6,
-        "btn_max_width": 480,
-        "bar_bg": "#ffffff",
-        "bar_py": 12,
-        "bar_px": 16,
-        "bar_height": 80
-      }
-    },
     "1781498424f948e012": {
       "type": "apps",
       "blocks": {
@@ -429,7 +412,6 @@
     "lp-problem-solution",
     "lp-faq",
     "lp-testimonials",
-    "lp-sticky-btn",
     "1781498424f948e012"
   ]
 }
