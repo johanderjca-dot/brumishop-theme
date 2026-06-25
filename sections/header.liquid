@@ -54,7 +54,7 @@
     <div class="max-w-[1320px] mx-auto px-4 md:px-6 flex items-center justify-center gap-6 md:gap-8 h-10 whitespace-nowrap">
       {% for link in linklists[section.settings.menu].links %}
         <a href="{{ link.url }}"
-           class="text-xs tracking-wide transition-colors flex-shrink-0 {% if link.active %}text-[#5a7a40] font-medium{% else %}text-[#5a5a52] hover:text-[#1a1a18]{% endif %}">
+           class="text-xs tracking-wide transition-all duration-200 hover:scale-110 flex-shrink-0 {% if link.active %}text-[#5a7a40] font-medium{% else %}text-[#5a5a52] hover:text-[#1a1a18]{% endif %}">
           {{ link.title }}
         </a>
       {% endfor %}
