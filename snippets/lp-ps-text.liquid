@@ -1,8 +1,3 @@
-{% if block.settings.problem_label != blank %}
-  <span style="font-size:0.65rem; font-weight:700; letter-spacing:0.2em; color:{{ section.settings.problem_color }}; text-transform:uppercase;">
-    {{ block.settings.problem_label }}
-  </span>
-{% endif %}
 {% if block.settings.problem_title != blank %}
   <h3 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.5rem,2.5vw,2.25rem); font-weight:600; color:{{ section.settings.heading_color }}; margin:0.5rem 0 0.75rem; line-height:1.2;">
     {{ block.settings.problem_title }}
@@ -14,11 +9,6 @@
   </p>
 {% endif %}
 
-{% if block.settings.solution_label != blank %}
-  <span style="font-size:0.65rem; font-weight:700; letter-spacing:0.2em; color:{{ section.settings.solution_color }}; text-transform:uppercase;">
-    {{ block.settings.solution_label }}
-  </span>
-{% endif %}
 {% if block.settings.solution_title != blank %}
   <h3 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.5rem,2.5vw,2.25rem); font-weight:600; color:{{ section.settings.heading_color }}; margin:0.5rem 0 0.75rem; line-height:1.2;">
     {{ block.settings.solution_title }}
