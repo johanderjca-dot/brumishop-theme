@@ -109,7 +109,7 @@
         "max_width": 700,
         "line_color": "#d0d0c8",
         "bg_above": "#ffffff",
-        "bg_below": "#fafaf6"
+        "bg_below": "#FFFFFF"
       }
     },
     "lp-benefits": {
@@ -174,7 +174,7 @@
         "box_pad": 20,
         "pt": 4,
         "pb": 4,
-        "bg_color": "#FEFEFE",
+        "bg_color": "#FFFFFF",
         "heading_color": "#1a1a18",
         "text_color": "#5a5a52"
       }
@@ -186,7 +186,7 @@
         "max_width": 700,
         "line_color": "#d0d0c8",
         "bg_above": "#fafaf6",
-        "bg_below": "#ffffff"
+        "bg_below": "#FFFFFF"
       }
     },
     "lp-offer": {
