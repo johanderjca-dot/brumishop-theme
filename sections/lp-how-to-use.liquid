@@ -1,107 +1,117 @@
-{% assign show = true %}
-{% if section.settings.image == blank and section.settings.require_image %}{% assign show = false %}{% endif %}
+{% if section.blocks.size > 0 %}
+<style>
+  .htu-wrap {
+    background: {{ section.settings.bg_color }};
+    padding: {{ section.settings.pt }}px {{ section.settings.px }}px {{ section.settings.pb }}px;
+  }
+  .htu-title {
+    font-size: {{ section.settings.title_size }}px;
+    font-weight: 700;
+    color: {{ section.settings.title_color }};
+    text-align: {{ section.settings.title_align }};
+    margin: 0 0 {{ section.settings.title_gap }}px;
+  }
+  .htu-grid {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.cols_mobile }}, 1fr);
+    gap: {{ section.settings.gap }}px;
+  }
+  @media (min-width: 640px) {
+    .htu-grid {
+      grid-template-columns: repeat({{ section.settings.cols_desktop }}, 1fr);
+    }
+  }
+  .htu-item {
+    position: relative;
+    border-radius: {{ section.settings.radius }}px;
+    overflow: hidden;
+    line-height: 0;
+  }
+  .htu-item img {
+    width: 100%;
+    height: {{ section.settings.photo_height }}px;
+    object-fit: cover;
+    display: block;
+  }
+  .htu-step {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: {{ section.settings.step_bg }};
+    color: {{ section.settings.step_color }};
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+</style>
 
-{% if show %}
-<section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0;">
-
-  {% if section.settings.layout == 'fullwidth' %}
-    <!-- Full-width image with optional overlay text -->
-    <div style="position:relative;">
-      {% if section.settings.image != blank %}
-        <img src="{{ section.settings.image | image_url: width: 2000 }}"
-             alt="{{ section.settings.title | escape }}"
-             style="width:100%; max-height:{{ section.settings.img_height }}px; object-fit:{{ section.settings.img_fit }}; display:block;">
-      {% else %}
-        <div style="background:#E8E8E2; height:{{ section.settings.img_height }}px; display:flex; align-items:center; justify-content:center;">
-          <p style="color:#a0a09a;">Sube una imagen de cómo se usa el producto</p>
-        </div>
-      {% endif %}
-      {% if section.settings.title != blank or section.settings.description != blank %}
-        <div style="position:absolute; inset:0; background:rgba(0,0,0,{{ section.settings.overlay_opacity | divided_by: 100.0 }}); display:flex; align-items:center; justify-content:{{ section.settings.text_x }};">
-          <div style="text-align:{{ section.settings.text_align }}; padding:2rem; max-width:640px;">
-            {% if section.settings.title != blank %}
-              <h2 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.75rem,4vw,3.5rem); font-weight:600; color:#fff; margin-bottom:0.75rem; line-height:1.15;">
-                {{ section.settings.title }}
-              </h2>
-            {% endif %}
-            {% if section.settings.description != blank %}
-              <p style="font-size:1rem; color:rgba(255,255,255,0.82); line-height:1.7;">{{ section.settings.description }}</p>
-            {% endif %}
-          </div>
-        </div>
-      {% endif %}
-    </div>
-
-  {% else %}
-    <!-- Split layout (image + text side by side) -->
-    <div style="max-width:1320px; margin:0 auto; padding:0 1.5rem; display:grid; grid-template-columns:{% if section.settings.layout == 'image-left' %}{{ section.settings.img_col }}fr {{ section.settings.text_col }}fr{% else %}{{ section.settings.text_col }}fr {{ section.settings.img_col }}fr{% endif %}; gap:3rem; align-items:center;">
-
-      {% if section.settings.layout == 'image-left' %}
-        <!-- Image -->
-        <div>
-          {% if section.settings.image != blank %}
-            <img src="{{ section.settings.image | image_url: width: 1200 }}"
-                 alt="{{ section.settings.title | escape }}"
-                 style="width:100%; border-radius:{{ section.settings.img_radius }}px; object-fit:{{ section.settings.img_fit }}; max-height:{{ section.settings.img_height }}px;">
-          {% else %}
-            <div style="background:#E8E8E2; height:400px; border-radius:{{ section.settings.img_radius }}px; display:flex; align-items:center; justify-content:center;">
-              <p style="color:#a0a09a; font-size:0.875rem;">Sube la imagen en el editor</p>
-            </div>
-          {% endif %}
-        </div>
-        <!-- Text -->
-        <div>{% render 'lp-how-to-use-text', section: section %}</div>
-      {% else %}
-        <!-- Text -->
-        <div>{% render 'lp-how-to-use-text', section: section %}</div>
-        <!-- Image -->
-        <div>
-          {% if section.settings.image != blank %}
-            <img src="{{ section.settings.image | image_url: width: 1200 }}"
-                 alt="{{ section.settings.title | escape }}"
-                 style="width:100%; border-radius:{{ section.settings.img_radius }}px; object-fit:{{ section.settings.img_fit }}; max-height:{{ section.settings.img_height }}px;">
-          {% else %}
-            <div style="background:#E8E8E2; height:400px; border-radius:{{ section.settings.img_radius }}px; display:flex; align-items:center; justify-content:center;">
-              <p style="color:#a0a09a; font-size:0.875rem;">Sube la imagen en el editor</p>
-            </div>
-          {% endif %}
-        </div>
-      {% endif %}
-
-    </div>
+<section class="htu-wrap">
+  {% if section.settings.title != blank %}
+    <p class="htu-title">{{ section.settings.title }}</p>
   {% endif %}
 
+  <div class="htu-grid">
+    {% for block in section.blocks %}
+      {% if block.settings.photo != blank %}
+        <div class="htu-item" {{ block.shopify_attributes }}>
+          <img src="{{ block.settings.photo | image_url: width: 600 }}"
+               alt="{{ block.settings.alt | default: 'Paso ' | append: forloop.index | escape }}"
+               loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+          {% if section.settings.show_steps %}
+            <div class="htu-step">{{ forloop.index }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 </section>
 {% endif %}
 
 {% schema %}
 {
-  "name": "9 — Cómo Usarlo",
+  "name": "Cómo Usarla",
   "settings": [
-    { "type": "header", "content": "Imagen" },
-    { "type": "image_picker", "id": "image", "label": "Imagen de cómo usar el producto" },
-    { "type": "range", "id": "img_height", "label": "Altura máxima de la imagen (px)", "min": 200, "max": 900, "step": 20, "default": 500 },
-    { "type": "select", "id": "img_fit", "label": "Ajuste de imagen", "options": [{"value":"cover","label":"Recortar (llenar)"},{"value":"contain","label":"Completa"}], "default": "cover" },
-    { "type": "range", "id": "img_radius", "label": "Bordes redondeados imagen (px, solo layouts con texto)", "min": 0, "max": 24, "step": 2, "default": 4 },
-    { "type": "header", "content": "Textos" },
-    { "type": "text", "id": "eyebrow", "label": "Etiqueta (texto pequeño arriba)", "default": "MODO DE USO" },
-    { "type": "text", "id": "title", "label": "Título", "default": "¿Cómo se usa?" },
-    { "type": "richtext", "id": "description", "label": "Descripción" },
-    { "type": "header", "content": "Layout" },
-    { "type": "select", "id": "layout", "label": "Diseño", "options": [{"value":"image-left","label":"Imagen a la izquierda"},{"value":"image-right","label":"Imagen a la derecha"},{"value":"fullwidth","label":"Imagen ancho completo (texto encima)"}], "default": "image-right" },
-    { "type": "range", "id": "img_col", "label": "Proporción imagen (solo layouts laterales)", "min": 1, "max": 3, "step": 1, "default": 1, "info": "1=mismo espacio, 2=imagen 2× más grande que texto" },
-    { "type": "range", "id": "text_col", "label": "Proporción texto", "min": 1, "max": 3, "step": 1, "default": 1 },
-    { "type": "header", "content": "Si usas imagen de fondo completa" },
-    { "type": "range", "id": "overlay_opacity", "label": "Oscuridad del fondo (0=transparente, 70=oscuro)", "min": 0, "max": 80, "step": 5, "default": 40 },
-    { "type": "select", "id": "text_x", "label": "Posición horizontal del texto", "options": [{"value":"flex-start","label":"Izquierda"},{"value":"center","label":"Centro"},{"value":"flex-end","label":"Derecha"}], "default": "center" },
-    { "type": "select", "id": "text_align", "label": "Alineación del texto", "options": [{"value":"left","label":"Izquierda"},{"value":"center","label":"Centro"}], "default": "center" },
-    { "type": "header", "content": "Sección" },
-    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#F8F7F3" },
-    { "type": "color", "id": "eyebrow_color", "label": "Color etiqueta", "default": "#5a7a40" },
-    { "type": "color", "id": "heading_color", "label": "Color título", "default": "#1a1a18" },
-    { "type": "color", "id": "text_color", "label": "Color descripción", "default": "#5a5a52" },
-    { "type": "range", "id": "py", "label": "Espacio vertical (px)", "min": 0, "max": 120, "step": 8, "default": 72 }
+    { "type": "text", "id": "title", "label": "Título (opcional)", "default": "¿Cómo se usa?" },
+    { "type": "range", "id": "title_size", "label": "Tamaño título (px)", "min": 14, "max": 36, "step": 1, "default": 20 },
+    { "type": "color", "id": "title_color", "label": "Color título", "default": "#1a1a18" },
+    { "type": "select", "id": "title_align", "label": "Alineación título", "options": [{"value":"left","label":"Izquierda"},{"value":"center","label":"Centro"}], "default": "left" },
+    { "type": "range", "id": "title_gap", "label": "Espacio título-fotos (px)", "min": 4, "max": 32, "step": 2, "default": 12 },
+
+    { "type": "header", "content": "Fotos" },
+    { "type": "range", "id": "cols_mobile", "label": "Columnas en móvil", "min": 1, "max": 3, "step": 1, "default": 2 },
+    { "type": "range", "id": "cols_desktop", "label": "Columnas en desktop", "min": 2, "max": 6, "step": 1, "default": 4 },
+    { "type": "range", "id": "photo_height", "label": "Alto de foto (px)", "min": 80, "max": 400, "step": 10, "default": 160 },
+    { "type": "range", "id": "radius", "label": "Bordes redondeados (px)", "min": 0, "max": 24, "step": 2, "default": 8 },
+    { "type": "range", "id": "gap", "label": "Espacio entre fotos (px)", "min": 4, "max": 24, "step": 2, "default": 8 },
+
+    { "type": "header", "content": "Número de paso" },
+    { "type": "checkbox", "id": "show_steps", "label": "Mostrar número de paso", "default": false },
+    { "type": "color", "id": "step_bg", "label": "Fondo del número", "default": "#1a1a18" },
+    { "type": "color", "id": "step_color", "label": "Color del número", "default": "#ffffff" },
+
+    { "type": "header", "content": "Espaciado y fondo" },
+    { "type": "color", "id": "bg_color", "label": "Fondo sección", "default": "#ffffff" },
+    { "type": "range", "id": "pt", "label": "Espacio superior (px)", "min": 0, "max": 48, "step": 4, "default": 16 },
+    { "type": "range", "id": "pb", "label": "Espacio inferior (px)", "min": 0, "max": 48, "step": 4, "default": 16 },
+    { "type": "range", "id": "px", "label": "Margen lateral (px)", "min": 0, "max": 32, "step": 2, "default": 16 }
   ],
-  "presets": [{ "name": "9 — Cómo Usarlo" }]
+  "max_blocks": 12,
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Foto",
+      "settings": [
+        { "type": "image_picker", "id": "photo", "label": "Foto del paso" },
+        { "type": "text", "id": "alt", "label": "Texto alternativo (opcional)" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Cómo Usarla" }]
 }
 {% endschema %}

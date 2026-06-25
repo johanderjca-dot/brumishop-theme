@@ -197,6 +197,10 @@
         "text_color": "#5a5a52"
       }
     },
+    "lp-how-to-use": {
+      "type": "lp-how-to-use",
+      "settings": {}
+    },
     "lp-offer": {
       "type": "lp-offer",
       "settings": {
@@ -515,6 +519,7 @@
     "1782416128197779a6",
     "div-2",
     "lp-benefits",
+    "lp-how-to-use",
     "lp-offer",
     "lp-reviews",
     "lp-testimonials",
