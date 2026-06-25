@@ -1,134 +1,146 @@
 {% if section.blocks.size > 0 %}
-<section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.py }}px 0; border-top:2px solid {{ section.settings.accent_color }};">
-  <div style="max-width:1320px; margin:0 auto; padding:0 1.5rem;">
+<style>
+  .ct-wrap {
+    background: {{ section.settings.bg_color }};
+    padding: {{ section.settings.pt }}px {{ section.settings.px }}px {{ section.settings.pb }}px;
+  }
+  .ct-label {
+    font-size: {{ section.settings.label_size }}px;
+    font-weight: 700;
+    color: {{ section.settings.label_color }};
+    margin: 0 0 {{ section.settings.label_gap }}px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .ct-slider-wrap { overflow: hidden; }
+  .ct-track {
+    display: flex;
+    gap: {{ section.settings.gap }}px;
+    transition: transform 0.45s cubic-bezier(0.23,1,0.32,1);
+    will-change: transform;
+  }
+  .ct-slide {
+    flex: 0 0 calc((100% - {{ section.settings.gap | times: section.settings.per_view | minus: section.settings.gap }}px) / {{ section.settings.per_view }});
+    border-radius: {{ section.settings.radius }}px;
+    overflow: hidden;
+    line-height: 0;
+  }
+  .ct-slide img {
+    width: 100%;
+    height: {{ section.settings.photo_height }}px;
+    object-fit: cover;
+    display: block;
+  }
+  .ct-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .ct-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #c8c8c0;
+    border: none; padding: 0; cursor: pointer;
+    transition: background .2s, transform .2s;
+  }
+  .ct-dot.active { background: {{ section.settings.label_color }}; transform: scale(1.3); }
+</style>
 
-    <!-- Header -->
-    <div style="text-align:center; margin-bottom:1.5rem;">
-      {% if section.settings.badge_text != blank %}
-        <div style="display:inline-flex; align-items:center; gap:0.4rem; background:{{ section.settings.accent_color }}; color:#fff; font-size:0.65rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; padding:0.35rem 0.85rem; border-radius:50px; margin-bottom:1rem;">
-          {{ section.settings.badge_text }}
-        </div>
-      {% endif %}
-      {% if section.settings.title != blank %}
-        <h2 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.75rem,3vw,2.75rem); font-weight:600; color:{{ section.settings.heading_color }}; margin-bottom:0.5rem;">
-          {{ section.settings.title }}
-        </h2>
-      {% endif %}
-      {% if section.settings.subtitle != blank %}
-        <p style="font-size:0.9rem; color:{{ section.settings.text_color }}; max-width:56ch; margin:0 auto;">
-          {{ section.settings.subtitle }}
-        </p>
-      {% endif %}
-    </div>
+<section class="ct-wrap">
+  {% if section.settings.label != blank %}
+    <p class="ct-label">{{ section.settings.label }}</p>
+  {% endif %}
 
-    <!-- Testimonials grid -->
-    <div style="display:grid; grid-template-columns:repeat({{ section.settings.columns }},1fr); gap:1.5rem;">
+  <div class="ct-slider-wrap">
+    <div class="ct-track" id="ct-track-{{ section.id }}">
       {% for block in section.blocks %}
-        <div {{ block.shopify_attributes }}
-             style="background:{{ section.settings.card_bg }}; border:1px solid {{ section.settings.card_border }}; border-radius:{{ section.settings.card_radius }}px; padding:1.25rem; position:relative;">
-
-          <!-- Verified badge -->
-          {% if block.settings.verified %}
-            <div style="position:absolute; top:1.25rem; right:1.25rem; background:#EEF0E7; color:{{ section.settings.accent_color }}; font-size:0.6rem; font-weight:700; padding:0.2rem 0.55rem; border-radius:50px; letter-spacing:0.1em; text-transform:uppercase;">
-              ✓ Verificado
-            </div>
-          {% endif %}
-
-          <!-- Stars -->
-          <div style="color:{{ section.settings.star_color }}; font-size:0.9rem; margin-bottom:0.5rem; letter-spacing:0.08em;">
-            {% assign stars = block.settings.rating %}
-            {% for i in (1..5) %}{% if i <= stars %}★{% else %}☆{% endif %}{% endfor %}
+        {% if block.settings.photo != blank %}
+          <div class="ct-slide" {{ block.shopify_attributes }}>
+            <img src="{{ block.settings.photo | image_url: width: 600 }}"
+                 alt="{{ block.settings.alt | default: 'Cliente usando el producto' | escape }}"
+                 loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
           </div>
-
-          <!-- Quote -->
-          {% if block.settings.testimonial != blank %}
-            <p style="font-size:0.875rem; color:{{ section.settings.text_color }}; line-height:1.6; margin-bottom:0.85rem; font-style:italic;">
-              "{{ block.settings.testimonial }}"
-            </p>
-          {% endif %}
-
-          <!-- Person -->
-          <div style="display:flex; align-items:center; gap:0.85rem;">
-            {% if block.settings.photo != blank %}
-              <img src="{{ block.settings.photo | image_url: width: 100 }}" alt="{{ block.settings.name }}"
-                   style="width:44px; height:44px; border-radius:50%; object-fit:cover; flex-shrink:0;">
-            {% else %}
-              <div style="width:44px; height:44px; border-radius:50%; background:{{ section.settings.card_border }}; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-weight:700; color:{{ section.settings.heading_color }}; font-size:1rem;">
-                {{ block.settings.name | slice: 0 | upcase }}
-              </div>
-            {% endif %}
-            <div>
-              <p style="font-size:0.8rem; font-weight:700; color:{{ section.settings.heading_color }}; margin:0;">{{ block.settings.name }}</p>
-              {% if block.settings.title_role != blank %}
-                <p style="font-size:0.72rem; color:#a0a09a; margin:0.1rem 0 0;">{{ block.settings.title_role }}</p>
-              {% endif %}
-              {% if block.settings.date != blank %}
-                <p style="font-size:0.7rem; color:#c0c0ba; margin:0.1rem 0 0;">{{ block.settings.date }}</p>
-              {% endif %}
-            </div>
-          </div>
-
-          <!-- Product image (optional) -->
-          {% if block.settings.product_photo != blank %}
-            <div style="margin-top:1.25rem; padding-top:1.25rem; border-top:1px solid {{ section.settings.card_border }};">
-              <img src="{{ block.settings.product_photo | image_url: width: 200 }}" alt="Foto del producto del cliente"
-                   style="width:72px; height:72px; object-fit:cover; border-radius:4px; display:block;">
-            </div>
-          {% endif %}
-
-        </div>
+        {% endif %}
       {% endfor %}
     </div>
-
   </div>
+
+  {% if section.blocks.size > 1 %}
+    <div class="ct-dots" id="ct-dots-{{ section.id }}">
+      {% for block in section.blocks %}
+        {% if block.settings.photo != blank %}
+          <button class="ct-dot {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}"></button>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
 </section>
+
+<script>
+(function(){
+  var track = document.getElementById('ct-track-{{ section.id }}');
+  var dots  = document.querySelectorAll('#ct-dots-{{ section.id }} .ct-dot');
+  if (!track) return;
+  var total   = {{ section.blocks.size }};
+  var perView = {{ section.settings.per_view }};
+  var current = 0;
+  var timer;
+
+  function goTo(i) {
+    var max = Math.max(0, total - perView);
+    current = Math.min(Math.max((i + total) % total, 0), max);
+    var slideW = track.children[0] ? track.children[0].offsetWidth + {{ section.settings.gap }} : 0;
+    track.style.transform = 'translateX(-' + (current * slideW) + 'px)';
+    dots.forEach(function(d, idx){ d.classList.toggle('active', idx === current); });
+  }
+
+  function startAuto() {
+    timer = setInterval(function(){ goTo(current + 1); }, {{ section.settings.speed }}000);
+  }
+
+  dots.forEach(function(d){
+    d.addEventListener('click', function(){
+      clearInterval(timer);
+      goTo(parseInt(d.dataset.index));
+      startAuto();
+    });
+  });
+
+  startAuto();
+})();
+</script>
 {% endif %}
 
 {% schema %}
 {
-  "name": "Testimonios Verificados",
+  "name": "Fotos Clientes",
   "settings": [
-    { "type": "header", "content": "Encabezado" },
-    { "type": "text", "id": "badge_text", "label": "Badge sobre el título", "default": "✓ Testimonios reales de clientes" },
-    { "type": "text", "id": "title", "label": "Título", "default": "Esto dicen quienes ya lo tienen" },
-    { "type": "text", "id": "subtitle", "label": "Subtítulo" },
-    { "type": "header", "content": "Cuadrícula" },
-    { "type": "select", "id": "columns", "label": "Columnas", "options": [{"value":"1","label":"1"},{"value":"2","label":"2"},{"value":"3","label":"3"}], "default": "3" },
-    { "type": "range", "id": "card_radius", "label": "Bordes redondeados tarjeta (px)", "min": 0, "max": 24, "step": 2, "default": 10 },
-    { "type": "header", "content": "Colores" },
-    { "type": "color", "id": "bg_color", "label": "Fondo sección", "default": "#F8F7F3" },
-    { "type": "color", "id": "card_bg", "label": "Fondo tarjeta", "default": "#FFFFFF" },
-    { "type": "color", "id": "card_border", "label": "Borde tarjeta", "default": "#E8E8E2" },
-    { "type": "color", "id": "accent_color", "label": "Color acento (borde superior + badge)", "default": "#5a7a40" },
-    { "type": "color", "id": "star_color", "label": "Color estrellas", "default": "#F4A327" },
-    { "type": "color", "id": "heading_color", "label": "Color nombres", "default": "#1a1a18" },
-    { "type": "color", "id": "text_color", "label": "Color texto", "default": "#5a5a52" },
-    { "type": "range", "id": "py", "label": "Espacio vertical (px)", "min": 24, "max": 120, "step": 4, "default": 40 }
+    { "type": "text", "id": "label", "label": "Título", "default": "Imágenes clientes:" },
+    { "type": "range", "id": "label_size", "label": "Tamaño título (px)", "min": 10, "max": 24, "step": 1, "default": 13 },
+    { "type": "color", "id": "label_color", "label": "Color título", "default": "#1a1a18" },
+    { "type": "range", "id": "label_gap", "label": "Espacio título-fotos (px)", "min": 4, "max": 32, "step": 2, "default": 12 },
+    { "type": "range", "id": "per_view", "label": "Fotos visibles a la vez", "min": 1, "max": 4, "step": 1, "default": 2 },
+    { "type": "range", "id": "photo_height", "label": "Alto de foto (px)", "min": 120, "max": 500, "step": 10, "default": 260 },
+    { "type": "range", "id": "radius", "label": "Bordes redondeados (px)", "min": 0, "max": 24, "step": 2, "default": 8 },
+    { "type": "range", "id": "gap", "label": "Espacio entre fotos (px)", "min": 4, "max": 24, "step": 2, "default": 8 },
+    { "type": "range", "id": "speed", "label": "Velocidad auto-slide (seg)", "min": 2, "max": 10, "step": 1, "default": 4 },
+    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#ffffff" },
+    { "type": "range", "id": "pt", "label": "Espacio superior (px)", "min": 0, "max": 48, "step": 4, "default": 16 },
+    { "type": "range", "id": "pb", "label": "Espacio inferior (px)", "min": 0, "max": 48, "step": 4, "default": 16 },
+    { "type": "range", "id": "px", "label": "Margen lateral (px)", "min": 0, "max": 32, "step": 2, "default": 16 }
   ],
-  "max_blocks": 12,
+  "max_blocks": 20,
   "blocks": [
     {
-      "type": "testimonial",
-      "name": "Testimonio",
+      "type": "photo",
+      "name": "Foto cliente",
       "settings": [
-        { "type": "range", "id": "rating", "label": "Estrellas", "min": 1, "max": 5, "step": 1, "default": 5 },
-        { "type": "textarea", "id": "testimonial", "label": "Testimonio", "default": "Este producto cambió mi rutina por completo. Lo recomiendo a cualquiera que quiera ver resultados reales." },
-        { "type": "text", "id": "name", "label": "Nombre completo", "default": "María García" },
-        { "type": "text", "id": "title_role", "label": "Ciudad o cargo (opcional)", "default": "Santo Domingo, RD" },
-        { "type": "text", "id": "date", "label": "Fecha de la reseña (opcional)", "default": "Mayo 2025" },
-        { "type": "image_picker", "id": "photo", "label": "Foto de perfil del cliente" },
-        { "type": "image_picker", "id": "product_photo", "label": "Foto del producto en uso (opcional)" },
-        { "type": "checkbox", "id": "verified", "label": "Mostrar 'Verificado'", "default": true }
+        { "type": "image_picker", "id": "photo", "label": "Foto" },
+        { "type": "text", "id": "alt", "label": "Texto alternativo (opcional)" }
       ]
     }
   ],
-  "presets": [{
-    "name": "Testimonios Verificados",
-    "blocks": [
-      { "type": "testimonial", "settings": { "rating": 5, "testimonial": "Llevaba meses buscando algo que realmente funcionara. Este producto superó mis expectativas desde el primer día.", "name": "Laura Méndez", "title_role": "Cliente frecuente", "date": "Junio 2025", "verified": true } },
-      { "type": "testimonial", "settings": { "rating": 5, "testimonial": "Excelente calidad y llega rápido. Ya es la tercera vez que lo compro. No volvería a buscar otra marca.", "name": "Roberto Díaz", "title_role": "Santiago, RD", "date": "Mayo 2025", "verified": true } },
-      { "type": "testimonial", "settings": { "rating": 5, "testimonial": "Me lo recomendó una amiga y la verdad superó todo lo que esperaba. Definitivamente lo recomiendo.", "name": "Camila Torres", "title_role": "La Romana, RD", "date": "Abril 2025", "verified": true } }
-    ]
-  }]
+  "presets": [{ "name": "Fotos Clientes" }]
 }
 {% endschema %}
