@@ -13,6 +13,11 @@
               border-radius:{{ section.settings.radius }}px;
               padding:{{ section.settings.box_pad }}px;
               text-align:{{ section.settings.align }};">
+    {% if section.settings.title != blank %}
+      <div style="font-size:{{ section.settings.title_size }}px; font-weight:{{ section.settings.title_weight }}; color:{{ section.settings.title_color }}; margin-bottom:{{ section.settings.title_gap }}px; line-height:1.2;">
+        {{ section.settings.title }}
+      </div>
+    {% endif %}
     <div class="lp-desc-content" style="font-size:{{ section.settings.font_size }}px; color:{{ section.settings.text_color }}; font-family:{{ section.settings.font_family }};">
       {% if section.settings.content != blank %}
         {{ section.settings.content }}
@@ -27,6 +32,13 @@
 {
   "name": "2 — Descripción",
   "settings": [
+    { "type": "header", "content": "Título" },
+    { "type": "text", "id": "title", "label": "Título (opcional)" },
+    { "type": "range", "id": "title_size", "label": "Tamaño del título (px)", "min": 14, "max": 48, "step": 1, "default": 22 },
+    { "type": "color", "id": "title_color", "label": "Color del título", "default": "#1a1a18" },
+    { "type": "select", "id": "title_weight", "label": "Peso del título", "options": [{"value":"400","label":"Normal"},{"value":"600","label":"Semi-bold"},{"value":"700","label":"Bold"}], "default": "700" },
+    { "type": "range", "id": "title_gap", "label": "Espacio título-texto (px)", "min": 4, "max": 32, "step": 2, "default": 8 },
+    { "type": "header", "content": "Contenido" },
     {
       "type": "richtext",
       "id": "content",

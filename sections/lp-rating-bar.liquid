@@ -1,0 +1,82 @@
+<style>
+  .rb-wrap {
+    background: {{ section.settings.bg_color }};
+    padding: {{ section.settings.py }}px 16px;
+  }
+  .rb-inner {
+    max-width: {{ section.settings.max_width }}px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .rb-stars {
+    color: {{ section.settings.star_color }};
+    font-size: {{ section.settings.star_size }}px;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+  .rb-score {
+    font-weight: 700;
+    font-size: {{ section.settings.score_size }}px;
+    color: {{ section.settings.text_color }};
+    line-height: 1;
+  }
+  .rb-count {
+    font-size: {{ section.settings.count_size }}px;
+    color: {{ section.settings.count_color }};
+    line-height: 1;
+  }
+  .rb-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .rb-link:hover .rb-count { text-decoration: underline; }
+</style>
+
+<div class="rb-wrap">
+  <div class="rb-inner">
+    {% assign score = section.settings.score %}
+    {% assign full  = score | floor %}
+    {% assign has_half = false %}
+    {% assign decimal = score | minus: full %}
+    {% if decimal >= 0.3 %}{% assign has_half = true %}{% endif %}
+
+    <a class="rb-link" href="#{{ section.settings.reviews_anchor }}">
+      <span class="rb-stars">
+        {% for i in (1..5) %}
+          {% if i <= full %}★{% elsif i == full | plus: 1 and has_half %}½{% else %}☆{% endif %}
+        {% endfor %}
+      </span>
+      <span class="rb-score">{{ section.settings.score }}</span>
+      <span class="rb-count">({{ section.settings.review_count }} reseñas)</span>
+    </a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Rating Bar",
+  "settings": [
+    { "type": "header", "content": "Puntuación" },
+    { "type": "text", "id": "score", "label": "Calificación (ej: 4.8)", "default": "4.8" },
+    { "type": "range", "id": "review_count", "label": "Número de reseñas", "min": 1, "max": 9999, "step": 1, "default": 127 },
+    { "type": "text", "id": "reviews_anchor", "label": "ID de la sección de reseñas (para el enlace)", "default": "resenas", "info": "Escribe el ID del elemento HTML al que quieres enlazar, sin el #" },
+    { "type": "header", "content": "Tamaños" },
+    { "type": "range", "id": "star_size", "label": "Tamaño estrellas (px)", "min": 12, "max": 32, "step": 1, "default": 18 },
+    { "type": "range", "id": "score_size", "label": "Tamaño calificación (px)", "min": 12, "max": 28, "step": 1, "default": 15 },
+    { "type": "range", "id": "count_size", "label": "Tamaño contador (px)", "min": 10, "max": 20, "step": 1, "default": 13 },
+    { "type": "header", "content": "Colores" },
+    { "type": "color", "id": "star_color", "label": "Color estrellas", "default": "#F4A327" },
+    { "type": "color", "id": "text_color", "label": "Color calificación", "default": "#1a1a18" },
+    { "type": "color", "id": "count_color", "label": "Color contador", "default": "#6a6a62" },
+    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#ffffff" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "max_width", "label": "Ancho máximo (px)", "min": 200, "max": 900, "step": 20, "default": 600 },
+    { "type": "range", "id": "py", "label": "Espacio vertical (px)", "min": 0, "max": 32, "step": 2, "default": 4 }
+  ],
+  "presets": [{ "name": "Rating Bar" }]
+}
+{% endschema %}
