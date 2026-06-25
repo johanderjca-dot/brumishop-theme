@@ -45,8 +45,17 @@
     display: block;
   }
 
-  /* Responsive */
-  @media (max-width: 640px) {
+  /* Desktop: cover para llenar el ancho completo */
+  @media (min-width: 640px) {
+    .lp-hero-slide img {
+      object-fit: cover;
+      width: 100%;
+      max-height: {{ section.settings.max_height }}px;
+    }
+  }
+
+  /* Mobile: mantener igual */
+  @media (max-width: 639px) {
     .lp-hero-slide img { max-height: {{ section.settings.max_height_mobile }}px; }
     .lp-thumb { flex: 0 0 {{ section.settings.thumb_size | minus: 10 }}px; height: {{ section.settings.thumb_size | minus: 10 }}px; }
   }
