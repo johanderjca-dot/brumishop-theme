@@ -18,11 +18,6 @@
         {{ section.settings.title }}
       </div>
     {% endif %}
-    {% if section.settings.rating_text != blank %}
-      <a href="#resenas" style="display:inline-flex; align-items:center; text-decoration:none; margin-bottom:{{ section.settings.title_gap }}px; font-size:{{ section.settings.star_size }}px; color:{{ section.settings.star_color }};">
-        {{ section.settings.rating_text }}
-      </a>
-    {% endif %}
     <div class="lp-desc-content" style="font-size:{{ section.settings.font_size }}px; color:{{ section.settings.text_color }}; font-family:{{ section.settings.font_family }};">
       {% if section.settings.content != blank %}
         {{ section.settings.content }}
@@ -30,6 +25,11 @@
         {{ product.description }}
       {% endif %}
     </div>
+    {% if section.settings.rating_text != blank %}
+      <a href="#resenas" style="display:inline-flex; align-items:center; text-decoration:none; margin-top:8px; font-size:{{ section.settings.star_size }}px; color:{{ section.settings.star_color }};">
+        {{ section.settings.rating_text }}
+      </a>
+    {% endif %}
   </div>
 </section>
 
