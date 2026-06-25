@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -16,8 +16,8 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['DM Sans', 'system-ui', 'sans-serif'],
-            display: ['Cormorant Garamond', 'Georgia', 'serif']
+            sans: ['Fira Sans', 'system-ui', 'sans-serif'],
+            display: ['Fira Sans', 'system-ui', 'sans-serif']
           }
         }
       }
@@ -27,7 +27,7 @@
   {{ content_for_header }}
   {{ 'theme.css' | asset_url | stylesheet_tag }}
 </head>
-<body class="bg-white text-[#1a1a18] overflow-x-hidden antialiased">
+<body class="bg-white text-[#1a1a18] overflow-x-hidden antialiased" style="font-family: 'Fira Sans', system-ui, sans-serif;">
 
   {% section 'announcement-bar' %}
   {% section 'header' %}
