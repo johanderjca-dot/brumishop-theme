@@ -11,39 +11,48 @@
 
 <section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.pt }}px {{ section.settings.px }}px {{ section.settings.pb }}px;">
 
-  <!-- Fila precio -->
-  <div style="display:flex; align-items:baseline; gap:0.6rem; flex-wrap:wrap; justify-content:center; margin-bottom:{% if has_fake %}0.35rem{% else %}0{% endif %};">
-    <span style="font-size:{{ section.settings.price_size }}px; font-weight:700; color:{{ section.settings.price_color }}; line-height:1;">
-      {{ cv.price | money }}
-    </span>
-    {% if has_fake %}
-      <span style="font-size:{{ section.settings.price_size | times: 0.6 | round }}px; color:#a0a09a; text-decoration:line-through; line-height:1;">
-        {{ fake_cents | money }}
-      </span>
-    {% elsif cv.compare_at_price > cv.price %}
-      <span style="font-size:{{ section.settings.price_size | times: 0.6 | round }}px; color:#a0a09a; text-decoration:line-through; line-height:1;">
-        {{ cv.compare_at_price | money }}
-      </span>
-    {% endif %}
-  </div>
+  <style>
+    .lp-offer-inner { text-align: center; }
+    .lp-offer-row   { justify-content: center; }
+    @media (min-width: 640px) {
+      .lp-offer-inner { text-align: left; }
+      .lp-offer-row   { justify-content: flex-start; }
+    }
+  </style>
 
-  <!-- Badge ahorro -->
-  {% if has_fake %}
-    <div style="display:flex; justify-content:center; margin-bottom:{% if section.settings.urgency_qty > 0 %}0.35rem{% else %}0{% endif %};">
-      <div style="display:inline-flex; align-items:center; background:{{ section.settings.savings_bg }}; border-radius:4px; padding:0.2rem 0.6rem;">
+  <div class="lp-offer-inner">
+    <!-- Fila precio -->
+    <div class="lp-offer-row" style="display:flex; align-items:baseline; gap:0.6rem; flex-wrap:wrap; margin-bottom:{% if has_fake %}0.35rem{% else %}0{% endif %};">
+      <span style="font-size:{{ section.settings.price_size }}px; font-weight:700; color:{{ section.settings.price_color }}; line-height:1;">
+        {{ cv.price | money }}
+      </span>
+      {% if has_fake %}
+        <span style="font-size:{{ section.settings.price_size | times: 0.6 | round }}px; color:#a0a09a; text-decoration:line-through; line-height:1;">
+          {{ fake_cents | money }}
+        </span>
+      {% elsif cv.compare_at_price > cv.price %}
+        <span style="font-size:{{ section.settings.price_size | times: 0.6 | round }}px; color:#a0a09a; text-decoration:line-through; line-height:1;">
+          {{ cv.compare_at_price | money }}
+        </span>
+      {% endif %}
+    </div>
+
+    <!-- Badge ahorro -->
+    {% if has_fake %}
+      <div style="display:inline-flex; align-items:center; background:{{ section.settings.savings_bg }}; border-radius:4px; padding:0.2rem 0.6rem; margin-bottom:{% if section.settings.urgency_qty > 0 %}0.35rem{% else %}0{% endif %};">
         <span style="color:{{ section.settings.savings_color }}; font-size:0.75rem; font-weight:700;">
           Ahorra {{ savings_cents | money }}
         </span>
       </div>
-    </div>
-  {% endif %}
+    {% endif %}
 
-  <!-- Urgencia -->
-  {% if section.settings.urgency_qty > 0 %}
-    <p style="font-size:0.78rem; color:{{ section.settings.urgency_color }}; margin:0; font-weight:600; text-align:center;">
-      {{ section.settings.urgency_prefix | strip }} {{ section.settings.urgency_qty }} {{ section.settings.urgency_suffix | strip }}
-    </p>
-  {% endif %}
+    <!-- Urgencia -->
+    {% if section.settings.urgency_qty > 0 %}
+      <p style="font-size:0.78rem; color:{{ section.settings.urgency_color }}; margin:0; font-weight:600;">
+        {{ section.settings.urgency_prefix | strip }} {{ section.settings.urgency_qty }} {{ section.settings.urgency_suffix | strip }}
+      </p>
+    {% endif %}
+  </div>
 
 </section>
 
