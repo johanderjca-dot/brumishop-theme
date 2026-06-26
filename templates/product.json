@@ -517,7 +517,7 @@
         "title_gap": 12,
         "cols_mobile": 1,
         "cols_desktop": 1,
-        "photo_height": 280,
+        "photo_height": 560,
         "radius": 8,
         "gap": 8,
         "show_steps": false,
