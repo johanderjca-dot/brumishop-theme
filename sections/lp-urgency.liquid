@@ -1,0 +1,239 @@
+<section style="background:{{ section.settings.bg_color }}; padding:{{ section.settings.pt }}px {{ section.settings.px }}px {{ section.settings.pb }}px;">
+
+  <style>
+    .lpu-block {
+      background: {{ section.settings.card_bg }};
+      border: 1px solid {{ section.settings.card_border }};
+      border-radius: {{ section.settings.card_radius }}px;
+      padding: 14px 16px;
+    }
+    .lpu-block + .lpu-block { margin-top: 10px; }
+
+    /* Countdown */
+    .lpu-badge {
+      display: inline-block;
+      background: {{ section.settings.badge_bg }};
+      color: {{ section.settings.badge_color }};
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .lpu-cd-label {
+      font-size: 0.85rem;
+      color: {{ section.settings.label_color }};
+      margin: 0 0 10px;
+      font-weight: 400;
+    }
+    .lpu-cd-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .lpu-cd-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: {{ section.settings.timer_bg }};
+      border-radius: 6px;
+      min-width: 52px;
+      padding: 8px 10px 6px;
+    }
+    .lpu-cd-num {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: {{ section.settings.timer_color }};
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+    .lpu-cd-name {
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      color: {{ section.settings.timer_label_color }};
+      margin-top: 3px;
+      font-weight: 600;
+    }
+    .lpu-cd-suffix {
+      font-size: 0.82rem;
+      color: {{ section.settings.label_color }};
+      font-weight: 400;
+    }
+
+    /* Social proof */
+    .lpu-sp-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .lpu-avatars {
+      display: flex;
+      flex-shrink: 0;
+    }
+    .lpu-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 2px solid {{ section.settings.card_bg }};
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6rem;
+      font-weight: 700;
+      color: #fff;
+      margin-left: -8px;
+      flex-shrink: 0;
+    }
+    .lpu-avatars .lpu-avatar:first-child { margin-left: 0; }
+    .lpu-sp-text { flex: 1; }
+    .lpu-sp-main {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: {{ section.settings.sp_main_color }};
+      margin: 0 0 2px;
+      line-height: 1.3;
+    }
+    .lpu-sp-sub {
+      font-size: 0.78rem;
+      color: {{ section.settings.sp_sub_color }};
+      margin: 0;
+      line-height: 1.3;
+    }
+  </style>
+
+  <!-- BLOQUE 1: CONTADOR REGRESIVO -->
+  {% if section.settings.show_countdown %}
+  <div class="lpu-block">
+    {% if section.settings.badge_text != blank %}
+      <div class="lpu-badge">{{ section.settings.badge_text }}</div>
+    {% endif %}
+    {% if section.settings.cd_label != blank %}
+      <p class="lpu-cd-label">{{ section.settings.cd_label }}</p>
+    {% endif %}
+    <div class="lpu-cd-row">
+      <div class="lpu-cd-unit">
+        <span class="lpu-cd-num" id="lpu-hours">00</span>
+        <span class="lpu-cd-name">{{ section.settings.label_h }}</span>
+      </div>
+      <div class="lpu-cd-unit">
+        <span class="lpu-cd-num" id="lpu-mins">00</span>
+        <span class="lpu-cd-name">{{ section.settings.label_m }}</span>
+      </div>
+      <div class="lpu-cd-unit">
+        <span class="lpu-cd-num" id="lpu-secs">00</span>
+        <span class="lpu-cd-name">{{ section.settings.label_s }}</span>
+      </div>
+      {% if section.settings.cd_suffix != blank %}
+        <span class="lpu-cd-suffix">{{ section.settings.cd_suffix }}</span>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- BLOQUE 3: COMPRADORES ACTIVOS -->
+  {% if section.settings.show_viewers %}
+  <div class="lpu-block">
+    <div class="lpu-sp-row">
+      <div class="lpu-avatars">
+        <div class="lpu-avatar" style="background:#7C6FCD;">{{ section.settings.av1 }}</div>
+        <div class="lpu-avatar" style="background:#4A90D9;">{{ section.settings.av2 }}</div>
+        <div class="lpu-avatar" style="background:#5C9E6E;">+{{ section.settings.av_extra }}</div>
+      </div>
+      <div class="lpu-sp-text">
+        <p class="lpu-sp-main">{{ section.settings.viewers_qty }} {{ section.settings.viewers_text }}</p>
+        <p class="lpu-sp-sub">{{ section.settings.cart_qty }} {{ section.settings.cart_text }}</p>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+</section>
+
+<script>
+(function() {
+  var hoursEl = document.getElementById('lpu-hours');
+  var minsEl  = document.getElementById('lpu-mins');
+  var secsEl  = document.getElementById('lpu-secs');
+  if (!hoursEl) return;
+
+  var KEY      = 'lpu_end_{{ section.id }}';
+  var DURATION = {{ section.settings.cd_hours }} * 3600 + {{ section.settings.cd_minutes }} * 60;
+
+  var stored = sessionStorage.getItem(KEY);
+  var end;
+  if (stored) {
+    end = parseInt(stored, 10);
+    if (isNaN(end) || end <= Date.now()) {
+      end = Date.now() + DURATION * 1000;
+      sessionStorage.setItem(KEY, end);
+    }
+  } else {
+    end = Date.now() + DURATION * 1000;
+    sessionStorage.setItem(KEY, end);
+  }
+
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+  function tick() {
+    var diff = Math.max(0, Math.floor((end - Date.now()) / 1000));
+    var h = Math.floor(diff / 3600);
+    var m = Math.floor((diff % 3600) / 60);
+    var s = diff % 60;
+    hoursEl.textContent = pad(h);
+    minsEl.textContent  = pad(m);
+    secsEl.textContent  = pad(s);
+    if (diff > 0) setTimeout(tick, 1000);
+  }
+  tick();
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Urgencia",
+  "settings": [
+    { "type": "header", "content": "── CONTADOR REGRESIVO ──────────" },
+    { "type": "checkbox", "id": "show_countdown", "label": "Mostrar contador", "default": true },
+    { "type": "text", "id": "badge_text", "label": "Badge (ej: OFERTA ESPECIAL)", "default": "OFERTA ESPECIAL" },
+    { "type": "text", "id": "cd_label", "label": "Texto antes del contador", "default": "El precio sube en:" },
+    { "type": "range", "id": "cd_hours", "label": "Horas del contador", "min": 0, "max": 23, "step": 1, "default": 4 },
+    { "type": "range", "id": "cd_minutes", "label": "Minutos del contador", "min": 0, "max": 59, "step": 1, "default": 0 },
+    { "type": "text", "id": "cd_suffix", "label": "Texto después del contador", "default": "para terminar" },
+    { "type": "text", "id": "label_h", "label": "Etiqueta horas", "default": "HORAS" },
+    { "type": "text", "id": "label_m", "label": "Etiqueta minutos", "default": "MIN" },
+    { "type": "text", "id": "label_s", "label": "Etiqueta segundos", "default": "SEG" },
+
+    { "type": "header", "content": "── COMPRADORES ACTIVOS ─────────" },
+    { "type": "checkbox", "id": "show_viewers", "label": "Mostrar compradores activos", "default": true },
+    { "type": "text", "id": "av1", "label": "Iniciales avatar 1", "default": "MF" },
+    { "type": "text", "id": "av2", "label": "Iniciales avatar 2", "default": "JL" },
+    { "type": "range", "id": "av_extra", "label": "Número extra avatares (+N)", "min": 1, "max": 99, "step": 1, "default": 9 },
+    { "type": "range", "id": "viewers_qty", "label": "Personas viendo ahora", "min": 1, "max": 999, "step": 1, "default": 12 },
+    { "type": "text", "id": "viewers_text", "label": "Texto viendo", "default": "personas están viendo esto ahora" },
+    { "type": "range", "id": "cart_qty", "label": "Añadieron al carrito", "min": 1, "max": 99, "step": 1, "default": 3 },
+    { "type": "text", "id": "cart_text", "label": "Texto carrito", "default": "lo añadieron al carrito en la última hora" },
+
+    { "type": "header", "content": "── COLORES ─────────────────────" },
+    { "type": "color", "id": "bg_color", "label": "Fondo sección", "default": "#ffffff" },
+    { "type": "color", "id": "card_bg", "label": "Fondo tarjeta", "default": "#ffffff" },
+    { "type": "color", "id": "card_border", "label": "Borde tarjeta", "default": "#e8e8e2" },
+    { "type": "color", "id": "badge_bg", "label": "Fondo badge", "default": "#FEF9C3" },
+    { "type": "color", "id": "badge_color", "label": "Color texto badge", "default": "#854D0E" },
+    { "type": "color", "id": "timer_bg", "label": "Fondo bloque timer", "default": "#1a1a18" },
+    { "type": "color", "id": "timer_color", "label": "Color números timer", "default": "#ffffff" },
+    { "type": "color", "id": "timer_label_color", "label": "Color etiquetas timer (HORAS, MIN…)", "default": "#a0a09a" },
+    { "type": "color", "id": "label_color", "label": "Color texto descriptivo", "default": "#4a4a45" },
+    { "type": "color", "id": "sp_main_color", "label": "Color texto principal compradores", "default": "#1a1a18" },
+    { "type": "color", "id": "sp_sub_color", "label": "Color subtexto compradores", "default": "#6b6b65" },
+
+    { "type": "header", "content": "── ESPACIADO ───────────────────" },
+    { "type": "range", "id": "pt", "label": "Espacio superior (px)", "min": 0, "max": 48, "step": 2, "default": 8 },
+    { "type": "range", "id": "pb", "label": "Espacio inferior (px)", "min": 0, "max": 48, "step": 2, "default": 8 },
+    { "type": "range", "id": "px", "label": "Margen lateral (px)", "min": 0, "max": 32, "step": 2, "default": 16 },
+    { "type": "range", "id": "card_radius", "label": "Bordes redondeados tarjeta (px)", "min": 0, "max": 20, "step": 2, "default": 10 }
+  ],
+  "presets": [{ "name": "Urgencia" }]
+}
+{% endschema %}
