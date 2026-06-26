@@ -85,7 +85,7 @@
         "star_size": 14,
         "star_color": "#f4a327",
         "rating_gap": 8,
-        "content": "<p>Potencia en cada giro. </p><p>Motor potente, cuchillas de acero inoxidable y diseño para el uso diario.</p>",
+        "content": "<p>Potencia en cada giro. </p>",
         "font_family": "'DM Sans', sans-serif",
         "align": "left",
         "font_size": 16,
@@ -100,6 +100,24 @@
         "box_bg": "#ffffff",
         "border_color": "#e8e8e2",
         "text_color": "#000000"
+      }
+    },
+    "lp-offer": {
+      "type": "lp-offer",
+      "settings": {
+        "price_size": 20,
+        "price_color": "#1a1a18",
+        "fake_price_amount": 2500,
+        "savings_bg": "#f0fff4",
+        "savings_color": "#2d7a3a",
+        "urgency_qty": 17,
+        "urgency_prefix": "⚡ Últimas",
+        "urgency_suffix": "unidades disponibles",
+        "urgency_color": "#c0392b",
+        "pt": 8,
+        "pb": 8,
+        "px": 16,
+        "bg_color": "#ffffff"
       }
     },
     "1782416128197779a6": {
@@ -195,24 +213,6 @@
         "bg_color": "#ffffff",
         "heading_color": "#1a1a18",
         "text_color": "#5a5a52"
-      }
-    },
-    "lp-offer": {
-      "type": "lp-offer",
-      "settings": {
-        "price_size": 20,
-        "price_color": "#1a1a18",
-        "fake_price_amount": 2500,
-        "savings_bg": "#f0fff4",
-        "savings_color": "#2d7a3a",
-        "urgency_qty": 17,
-        "urgency_prefix": "⚡ Últimas",
-        "urgency_suffix": "unidades disponibles",
-        "urgency_color": "#c0392b",
-        "pt": 8,
-        "pb": 8,
-        "px": 16,
-        "bg_color": "#ffffff"
       }
     },
     "lp-reviews": {
@@ -515,9 +515,9 @@
         "title_color": "#1a1a18",
         "title_align": "left",
         "title_gap": 12,
-        "cols_mobile": 1,
-        "cols_desktop": 1,
-        "photo_height": 560,
+        "cols_mobile": 2,
+        "cols_desktop": 4,
+        "photo_height": 160,
         "radius": 8,
         "gap": 8,
         "show_steps": false,
@@ -562,10 +562,10 @@
     "lp-trust-badges",
     "lp_divider_jg7UjN",
     "lp-description",
+    "lp-offer",
+    "lp-benefits",
     "1782416128197779a6",
     "div-2",
-    "lp-benefits",
-    "lp-offer",
     "lp-reviews",
     "lp-testimonials",
     "apps_KDqhzb",
