@@ -197,13 +197,6 @@
         "text_color": "#5a5a52"
       }
     },
-    "lp-how-to-use": {
-      "type": "lp-how-to-use",
-      "settings": {
-        "cols_mobile": 1,
-        "cols_desktop": 1
-      }
-    },
     "lp-offer": {
       "type": "lp-offer",
       "settings": {
@@ -427,7 +420,7 @@
         "sep_gap": 4,
         "item_gap": 0,
         "speed": 20,
-        "bg_color": "#F4EF88",
+        "bg_color": "#f4ef88",
         "border_color": "#e0e0da",
         "border_width": 1,
         "py": 10
@@ -486,6 +479,56 @@
       ],
       "settings": {}
     },
+    "lp-how-to-use": {
+      "type": "lp-how-to-use",
+      "blocks": {
+        "step_4KQkhN": {
+          "type": "step",
+          "settings": {
+            "photo": "shopify://shop_images/1.png",
+            "alt": ""
+          }
+        },
+        "step_7nJja6": {
+          "type": "step",
+          "settings": {
+            "photo": "shopify://shop_images/2.png",
+            "alt": ""
+          }
+        },
+        "step_4LgrRJ": {
+          "type": "step",
+          "settings": {
+            "photo": "shopify://shop_images/3.png",
+            "alt": ""
+          }
+        }
+      },
+      "block_order": [
+        "step_4KQkhN",
+        "step_7nJja6",
+        "step_4LgrRJ"
+      ],
+      "settings": {
+        "title": "¿Cómo se usa?",
+        "title_size": 20,
+        "title_color": "#1a1a18",
+        "title_align": "left",
+        "title_gap": 12,
+        "cols_mobile": 2,
+        "cols_desktop": 4,
+        "photo_height": 160,
+        "radius": 8,
+        "gap": 8,
+        "show_steps": false,
+        "step_bg": "#1a1a18",
+        "step_color": "#ffffff",
+        "bg_color": "#ffffff",
+        "pt": 16,
+        "pb": 16,
+        "px": 16
+      }
+    },
     "lp-faq": {
       "type": "lp-faq",
       "blocks": {
@@ -522,7 +565,6 @@
     "1782416128197779a6",
     "div-2",
     "lp-benefits",
-    "lp-how-to-use",
     "lp-offer",
     "lp-reviews",
     "lp-testimonials",
@@ -532,6 +574,7 @@
     "lp-ticker",
     "lp-problem-solution",
     "apps_AzMUa7",
+    "lp-how-to-use",
     "lp-faq"
   ]
 }
