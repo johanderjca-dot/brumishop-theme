@@ -12,14 +12,9 @@
     margin: 0 0 {{ section.settings.title_gap }}px;
   }
   .htu-grid {
-    display: grid;
-    grid-template-columns: repeat({{ section.settings.cols_mobile }}, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: {{ section.settings.gap }}px;
-  }
-  @media (min-width: 640px) {
-    .htu-grid {
-      grid-template-columns: repeat({{ section.settings.cols_desktop }}, 1fr);
-    }
   }
   .htu-item {
     position: relative;
