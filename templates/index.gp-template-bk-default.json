@@ -1,0 +1,210 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero-slider": {
+      "type": "hero-slider",
+      "blocks": {
+        "slide-1": {
+          "type": "slide",
+          "settings": {
+            "bg_color": "#f8f7f2",
+            "text_align": "left",
+            "text_padding_left": 7,
+            "title_size": 4.5,
+            "title": "Todo lo que Necesitas, Aquí",
+            "subtitle": "Productos seleccionados con calidad garantizada. Encuentra exactamente lo que buscas.",
+            "price_text": "Desde 1499DOP",
+            "button_label": "Comprar Ahora",
+            "button_url": "shopify://collections/all",
+            "image": "shopify://shop_images/LOGO_FINAL_7.png",
+            "image_max_width": 100,
+            "image_max_height": 320
+          }
+        }
+      },
+      "block_order": [
+        "slide-1"
+      ],
+      "settings": {
+        "min_height": 300
+      }
+    },
+    "category-cards": {
+      "type": "category-cards",
+      "blocks": {
+        "card-1": {
+          "type": "card",
+          "settings": {
+            "bg_color": "#ffffff",
+            "title": "Nuevas Llegadas",
+            "subtitle": "Recién agregados",
+            "button_label": "Comprar Ahora",
+            "button_url": ""
+          }
+        },
+        "card-2": {
+          "type": "card",
+          "settings": {
+            "bg_color": "#eef0e7",
+            "title": "¿Qué Hay de Nuevo?",
+            "subtitle": "Descúbrelo primero",
+            "button_label": "Explorar",
+            "button_url": ""
+          }
+        },
+        "card-3": {
+          "type": "card",
+          "settings": {
+            "bg_color": "#f2ede6",
+            "title": "Lleva 2 Paga 1",
+            "subtitle": "Oferta limitada",
+            "button_label": "Ver Ofertas",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "card-1",
+        "card-2",
+        "card-3"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "product-carousel": {
+      "type": "product-carousel",
+      "settings": {
+        "eyebrow": "NUESTRA TIENDA",
+        "title": "Productos destacados",
+        "collection": "",
+        "products_to_show": 12,
+        "btn_label": "Ver producto →",
+        "card_width": 240,
+        "gap": 16,
+        "card_radius": 8,
+        "bg_color": "#ffffff",
+        "card_bg": "#ffffff",
+        "card_border": "#e8e8e2",
+        "img_bg": "#f8f7f3",
+        "heading_color": "#1a1a18",
+        "accent_color": "#5a7a40",
+        "btn_bg": "#1a1a18",
+        "btn_color": "#ffffff",
+        "py": 48
+      }
+    },
+    "why-us-vs": {
+      "type": "why-us-vs",
+      "blocks": {
+        "f1": {
+          "type": "feature",
+          "settings": {
+            "feature": "Envío gratis",
+            "we_have": true,
+            "we_detail": "En pedidos desde $50",
+            "they_have": false,
+            "they_detail": "Siempre pagan envío"
+          }
+        },
+        "f2": {
+          "type": "feature",
+          "settings": {
+            "feature": "Garantía de devolución",
+            "we_have": true,
+            "we_detail": "Si aplica",
+            "they_have": false,
+            "they_detail": ""
+          }
+        },
+        "f3": {
+          "type": "feature",
+          "settings": {
+            "feature": "Pago contra entrega",
+            "we_have": true,
+            "we_detail": "Paga cuando recibes",
+            "they_have": false,
+            "they_detail": "Solo pago anticipado"
+          }
+        },
+        "f4": {
+          "type": "feature",
+          "settings": {
+            "feature": "Soporte al cliente",
+            "we_have": true,
+            "we_detail": "WhatsApp 24/7",
+            "they_have": true,
+            "they_detail": "Solo en horario comercial"
+          }
+        },
+        "f5": {
+          "type": "feature",
+          "settings": {
+            "feature": "Productos verificados",
+            "we_have": true,
+            "we_detail": "Revisamos cada pedido",
+            "they_have": false,
+            "they_detail": ""
+          }
+        },
+        "f6": {
+          "type": "feature",
+          "settings": {
+            "feature": "Precios competitivos",
+            "we_have": true,
+            "we_detail": "Los mejores precios del mercado",
+            "they_have": true,
+            "they_detail": "Precios variables"
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6"
+      ],
+      "settings": {
+        "eyebrow": "NUESTRA VENTAJA",
+        "title": "¿Por qué elegirnos?",
+        "subtitle": "No solo vendemos productos — garantizamos calidad, rapidez y una experiencia personalizada",
+        "layout": "cards",
+        "our_label": "BrumiShop",
+        "comp_label": "La competencia",
+        "btn_label": "",
+        "btn_url": "",
+        "btn_bg": "#000000",
+        "btn_color": "#ffffff",
+        "bg_color": "#fafaf6",
+        "comp_bg": "#f0f0ea",
+        "accent_color": "#db9d00",
+        "border_color": "#e8e8e2",
+        "heading_color": "#1a1a18",
+        "text_color": "#6a6a62",
+        "py": 88
+      }
+    },
+    "brand-marquee": {
+      "type": "brand-marquee",
+      "settings": {
+        "text": "ENVÍO RÁPIDO, CALIDAD GARANTIZADA, PRECIOS JUSTOS, PRODUCTOS VERIFICADOS, DEVOLUCIÓN FÁCIL, PAGOS SEGUROS, SOPORTE REAL, STOCK PERMANENTE"
+      }
+    }
+  },
+  "order": [
+    "hero-slider",
+    "category-cards",
+    "product-carousel",
+    "why-us-vs",
+    "brand-marquee"
+  ]
+}

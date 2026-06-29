@@ -1,0 +1,67 @@
+{% comment %}
+	GEMPAGES BUILDER (https://apps.shopify.com/gempages)
+
+	You SHOULD NOT modify source code in this file because
+	It is automatically generated from GEMPAGES BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!DOCTYPE html>
+<html lang="{{ request.locale.iso_code }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page_title }} — {{ shop.name }}</title>
+  <meta name="description" content="{{ page_description | escape }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Open Sans', 'system-ui', 'sans-serif'],
+            display: ['Open Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  {{ content_for_header }}
+  {{ 'theme.css' | asset_url | stylesheet_tag }}
+  <style>
+    [class*="releasit"] button,
+    [class*="releasit"] a,
+    [id*="releasit"] button,
+    [id*="releasit"] a,
+    .rc-btn, .rc-button, .cod-btn {
+      font-size: 14px !important;
+      padding-top: 8px !important;
+      padding-bottom: 8px !important;
+      min-height: unset !important;
+      height: auto !important;
+    }
+    /* quitar posición fija del sticky bar de Releasit */
+    [class*="releasit"][style*="position: fixed"],
+    [class*="releasit"][style*="position:fixed"],
+    [id*="releasit"][style*="position: fixed"],
+    [id*="releasit"][style*="position:fixed"],
+    .rc-sticky-bar, .rc-sticky, .rc-fixed-bar {
+      position: static !important;
+      bottom: unset !important;
+      left: unset !important;
+      right: unset !important;
+      z-index: unset !important;
+      box-shadow: none !important;
+    }
+  </style>
+</head>
+<body>
+<div class="gem-container">
+	{{ content_for_layout }}
+</div><!-- end .gem-container --></body>
+</html>
