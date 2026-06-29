@@ -82,7 +82,13 @@
         "type": "shopify://apps/releasit-cod-form/blocks/app-embed/72faf214-4174-4fec-886b-0d0e8d3af9a2",
         "disabled": false,
         "settings": {}
+      },
+      "626184775593427627": {
+        "type": "shopify://apps//blocks/embed-gp-script-head/20b379d4-1b20-474c-a6ca-665c331919f3",
+        "disabled": false,
+        "settings": {}
       }
     }
-  }
+  },
+  "presets": null
 }
