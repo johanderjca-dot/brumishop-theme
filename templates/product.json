@@ -554,6 +554,43 @@
         "heading_color": "#1a1a18",
         "text_color": "#5a5a52"
       }
+    },
+    "lp-urgency": {
+      "type": "lp-urgency",
+      "settings": {
+        "show_countdown": true,
+        "badge_text": "OFERTA ESPECIAL",
+        "cd_label": "Precio vuelve a RD$ 2,500 en:",
+        "cd_hours": 4,
+        "cd_minutes": 0,
+        "cd_suffix": "para terminar",
+        "label_h": "HORAS",
+        "label_m": "MIN",
+        "label_s": "SEG",
+        "show_viewers": true,
+        "av1": "MF",
+        "av2": "JL",
+        "av_extra": 9,
+        "viewers_qty": 12,
+        "viewers_text": "personas están viendo esto ahora",
+        "cart_qty": 3,
+        "cart_text": "lo añadieron al carrito en la última hora",
+        "bg_color": "#ffffff",
+        "card_bg": "#ffffff",
+        "card_border": "#e8e8e2",
+        "badge_bg": "#FEF9C3",
+        "badge_color": "#854D0E",
+        "timer_bg": "#1a1a18",
+        "timer_color": "#ffffff",
+        "timer_label_color": "#a0a09a",
+        "label_color": "#4a4a45",
+        "sp_main_color": "#1a1a18",
+        "sp_sub_color": "#6b6b65",
+        "pt": 8,
+        "pb": 8,
+        "px": 16,
+        "card_radius": 10
+      }
     }
   },
   "order": [
@@ -575,6 +612,7 @@
     "lp-problem-solution",
     "apps_AzMUa7",
     "lp-how-to-use",
-    "lp-faq"
+    "lp-faq",
+    "lp-urgency"
   ]
 }
