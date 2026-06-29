@@ -28,7 +28,7 @@
     "apps_AzMUa7",
     "lp-how-to-use",
     "lp-faq",
-    "17827619212a4e2ef8"
+    "lp-urgency"
   ],
   "sections": {
     "1782416128197779a6": {
@@ -46,44 +46,42 @@
       "settings": {},
       "type": "apps"
     },
-    "17827619212a4e2ef8": {
-      "block_order": [
-        "ai_gen_block_5a0eb63_HwWQL6"
-      ],
-      "blocks": {
-        "ai_gen_block_5a0eb63_HwWQL6": {
-          "blocks": {},
-          "settings": {
-            "background_color": "#F2EBC4",
-            "border_radius": 8,
-            "desktop_width_percent": 100,
-            "end_date": "2026-07-15",
-            "end_time": "23:59",
-            "icon": "🔥",
-            "icon_size": 20,
-            "show_icon": true,
-            "show_stock": true,
-            "show_timer": true,
-            "stock_bg_color": "#ff4444",
-            "stock_size": 12,
-            "stock_text": "¡Solo quedan 5 unidades!",
-            "stock_text_color": "#ffffff",
-            "subtitle": "Aprovecha este descuento antes de que termine",
-            "subtitle_size": 12,
-            "text_color": "#000000",
-            "timer_bg_color": "#5a7a40",
-            "timer_border_radius": 6,
-            "timer_label_size": 10,
-            "timer_number_size": 20,
-            "timer_text_color": "#ffffff",
-            "title": "¡Oferta por tiempo limitado!",
-            "title_size": 16
-          },
-          "type": "ai_gen_block_5a0eb63"
-        }
+    "lp-urgency": {
+      "settings": {
+        "show_countdown": true,
+        "badge_text": "OFERTA ESPECIAL",
+        "cd_label": "Precio vuelve a RD$ 2,500 en:",
+        "cd_hours": 4,
+        "cd_minutes": 0,
+        "cd_suffix": "para terminar",
+        "label_h": "HORAS",
+        "label_m": "MIN",
+        "label_s": "SEG",
+        "show_viewers": true,
+        "av1": "MF",
+        "av2": "JL",
+        "av_extra": 9,
+        "viewers_qty": 12,
+        "viewers_text": "personas están viendo esto ahora",
+        "cart_qty": 3,
+        "cart_text": "lo añadieron al carrito en la última hora",
+        "bg_color": "#ffffff",
+        "card_bg": "#ffffff",
+        "card_border": "#e8e8e2",
+        "badge_bg": "#FEF9C3",
+        "badge_color": "#854D0E",
+        "timer_bg": "#1a1a18",
+        "timer_color": "#ffffff",
+        "timer_label_color": "#a0a09a",
+        "label_color": "#4a4a45",
+        "sp_main_color": "#1a1a18",
+        "sp_sub_color": "#6b6b65",
+        "pt": 8,
+        "pb": 8,
+        "px": 16,
+        "card_radius": 10
       },
-      "settings": {},
-      "type": "_blocks"
+      "type": "lp-urgency"
     },
     "apps_AzMUa7": {
       "block_order": [
