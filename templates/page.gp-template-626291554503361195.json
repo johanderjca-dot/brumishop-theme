@@ -1,0 +1,61 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_626291634446795351": {
+      "settings": {
+        "checksum": "1f63c953a7794cde5e6aac659d2aff5b89bfe524285ba7384b94931788fac5c4_1_1_1_0__1",
+        "gg17K6Sh9fD_label": "<p>Button</p>",
+        "gg19brvWJqW_text": "<p>Lorem ipsum dolor sit amet, consectetur</p>",
+        "ggACvdduDyr_text": "<p>3</p>",
+        "ggVuoF-f672_text": "<p>1</p>",
+        "gg_EPIJHLvd_text": "<p>Lorem ipsum dolor sit amet, consectetur</p>",
+        "ggfdypYtinY_text": "<p>2</p>",
+        "ggi1N5jRjo6_text": "<p>$105.99</p>",
+        "ggiT_AKBtpg_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-4a90c64f-3ab5-407c-ae19-2ad77c5cfdc3.jpg?v=1717136563",
+        "ggiT_AKBtpg_background_desktop_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
+        "ggiT_AKBtpg_background_desktop_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggiT_AKBtpg_background_mobile_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-d575d240-78d1-41ab-9867-97b36ef1cc51.png?v=1717138314",
+        "ggiT_AKBtpg_background_mobile_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggnj-Y8FRaV_text": "<p>Lorem ipsum dolor sit amet, consectetur</p>",
+        "ggptZMZgfR1_label": "Add to Cart",
+        "ggwzX1D80gp_text": "<p>Rated 4.5/5 Based on 895 Reviews</p>",
+        "ggzLQgfXuIP_text": "Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry",
+        "section_preload": "true"
+      },
+      "type": "gp-section-626291634446795351"
+    },
+    "gp_section_626291935581045335": {
+      "settings": {
+        "checksum": "771936b19048f4c8063f948b34ef0a06aa63f13aeafa68df0ef15ff2e653265f_1_1_1_0__1",
+        "ggA_JlV5Ecv_text": "<p>Lorem ipsum dolor sit amet, consectetur&nbsp;</p>",
+        "ggF0UNZBz-G_displayContent": "{percent_discount} off",
+        "ggPsdWjFh4h_errorMessage": "Cannot add product to cart",
+        "ggPsdWjFh4h_label": "Add to cart",
+        "ggPsdWjFh4h_outOfStockLabel": "Out of stock",
+        "ggPsdWjFh4h_successMessage": "Add product to cart successfully",
+        "ggPsdWjFh4h_unavailableLabel": "Unavailable",
+        "ggZKrhU528v_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "ggbE4vn6xmo_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "ggbg7_N1HbG_text": "<p>2,500+ Verified Reviews!</p>",
+        "ggbkomdhqh4_childItem_0": "<p>Material</p>",
+        "ggbkomdhqh4_childItem_1": "<p>Comfort guarantee&nbsp;</p>",
+        "ggbkomdhqh4_childItem_2": "<p>Shipping</p>",
+        "ggnTjCfeoie_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "section_preload": "true"
+      },
+      "type": "gp-section-626291935581045335"
+    }
+  },
+  "order": [
+    "gp_section_626291634446795351",
+    "gp_section_626291935581045335"
+  ]
+}
