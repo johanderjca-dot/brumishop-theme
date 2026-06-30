@@ -1,0 +1,37 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_626292364675122029": {
+      "settings": {
+        "checksum": "75d472ec711f3cbc6bca02f2cd22c240624ebf87f251fc3d6b228a25d853df09_1_1_1_0__1",
+        "gg92g6NZbvO_childItem_0": "<p>Material</p>",
+        "gg92g6NZbvO_childItem_1": "<p>Comfort guarantee&nbsp;</p>",
+        "gg92g6NZbvO_childItem_2": "<p>Shipping</p>",
+        "ggE3EyG6_3K_displayContent": "{percent_discount} off",
+        "ggJy9bY9mcA_text": "<p>2,500+ Verified Reviews!</p>",
+        "ggPwVQQGxov_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "ggaNqGEoViV_errorMessage": "Cannot add product to cart",
+        "ggaNqGEoViV_label": "Add to cart",
+        "ggaNqGEoViV_outOfStockLabel": "Out of stock",
+        "ggaNqGEoViV_successMessage": "Add product to cart successfully",
+        "ggaNqGEoViV_unavailableLabel": "Unavailable",
+        "ggatQbLMBed_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "gguRURM2aeV_text": "<p>Lorem ipsum dolor sit amet, consectetur&nbsp;</p>",
+        "ggvAZkR8VJ5_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "section_preload": "true"
+      },
+      "type": "gp-section-626292364675122029"
+    }
+  },
+  "order": [
+    "gp_section_626292364675122029"
+  ]
+}
