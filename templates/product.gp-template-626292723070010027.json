@@ -296,9 +296,9 @@
     },
     "gp_section_626292815747351127": {
       "settings": {
-        "checksum": "7ffa17452511e45085eccba923f9b152157adce2fb3f14fb056586a2ec02b072_1_1_1_0__1",
+        "checksum": "6240041dc8c6a794c789cfd8d7459d656f1941405ea718f7527d559955b5b00c_1_1_1_0__1",
         "ggFBq98ml-O_text": "<p>Una maquina!!</p>",
-        "ggHDBrtUPTZ_text": "<p>Compradora Recurrente</p>",
+        "ggHDBrtUPTZ_text": "<p>Verificada</p>",
         "ggL5NhzyWFh_text": "<p>Al principio estaba dudosa por el tamaño, pero la <strong>Licuamax</strong> superó mis expectativas. Tiene muchísima fuerza: tritura el hielo y las frutas congeladas sin ningún problema. Me la llevo muchísimo para el trabajo y el gimnasio porque no pesa nada y la batería dura un montón. Además, se limpia rapidísimo, solo le echas un chin de agua con jabón, la prendes y listo. De verdad que es una excelente inversión para resolver rápido en el día a día. ¡Apoyen lo local, que este producto es de lo mío!</p>",
         "ggRnjL1-Efv_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/nh_3.png",
         "ggtE7H-ik_C_text": "<p>Stephanie Galea</p>",
@@ -312,12 +312,28 @@
         "gOzmyMPLvyUmv_srcSet_desktop_src": "https://ucarecdn.com/ee6d5074-1640-4cc7-8933-47c8589c3dee/-/format/auto/"
       },
       "type": "gp-section-626309351186891351"
+    },
+    "gp_section_626324296012137259": {
+      "settings": {
+        "checksum": "016188402dde15ce69fe3eea36acc4b8a6b13fbe39d55b729bb211a808e7e499_1_1_1_0__1",
+        "ggXYkzpro7T_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo.jpg",
+        "ggXYkzpro7T_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/LICUAMAX-100.jpg?v=1782790726",
+        "section_preload": "true"
+      },
+      "type": "gp-section-626324296012137259"
+    },
+    "gp_section_626324390199427671": {
+      "settings": {
+        "checksum": "b048b7c6858604360f99012554386b27f2584a848c0146cffac6baac426cd164_1_1_1_0__1"
+      },
+      "type": "gp-section-626324390199427671"
     }
   },
   "order": [
     "gp_section_626292728791040877",
     "gp_section_626292729311134295",
     "gp_section_626292815747351127",
+    "gp_section_626324296012137259",
     "gp_section_626292729294357079",
     "gp_section_626292728958812971",
     "gp_section_626292728992367469",
@@ -326,6 +342,7 @@
     "gp_section_626292729395020375",
     "gp_section_626292729395020459",
     "gp_section_626292729260802731",
-    "gp_section_626309351186891351"
+    "gp_section_626309351186891351",
+    "gp_section_626324390199427671"
   ]
 }
