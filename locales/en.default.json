@@ -12,15 +12,6 @@
     "title": "Cart",
     "empty": "Your cart is empty"
   },
-  "general": {
-    "search": "Search",
-    "close": "Close"
-  },
-  "products": {
-    "add_to_cart": "Add to cart",
-    "sold_out": "Sold out",
-    "unavailable": "Unavailable"
-  },
   "gempages": {
     "Carousel": {
       "no_slider": "No Slider"
@@ -66,5 +57,14 @@
     "Breadcrumb": {
       "home": "Home"
     }
+  },
+  "general": {
+    "search": "Search",
+    "close": "Close"
+  },
+  "products": {
+    "add_to_cart": "Add to cart",
+    "sold_out": "Sold out",
+    "unavailable": "Unavailable"
   }
 }
