@@ -9,16 +9,6 @@
  */
 {
   "sections": {
-    "gp_section_626292728791040599": {
-      "settings": {
-        "checksum": "d3f7427d5336a9bd355a83de55a35e6df2593eb4b710082f9c53d92462b8adcc_1_1_1_0__1",
-        "ggaZq5jYZZR_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Group_1171277530.png",
-        "ggaZq5jYZZR_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/BRUMISHOPLOGO.png?v=1782763301",
-        "ggaZq5jYZZR_srcSet_tablet_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-2d0d734f-5405-4c8a-8614-38ad4ae4ff69.png",
-        "section_preload": "true"
-      },
-      "type": "gp-section-626292728791040599"
-    },
     "gp_section_626292728791040877": {
       "settings": {
         "checksum": "dbccfe99a42e35c41b5abc8ba3e31ee31e84b3f87fb7a9dd58b891cdef6cb92a_1_1_1_0__1",
@@ -183,50 +173,20 @@
     },
     "gp_section_626292729311134295": {
       "settings": {
-        "checksum": "5d187772893a186460cb3633d522594a2c1ed2c538b0cb323691919f494709c5_1_1_1_0__1",
-        "gg4ivWvk06u_text": "<p>Free Gift - Premium Mixing Spoon</p>",
+        "checksum": "ef89341f7d3132e368abca70ed0cdd7df959e24495b4e4b8f5b767fc578f31b6_1_1_1_0__1",
         "gg8aSnNdFFI_text": "<p>200+ clientes satisfechos</p>",
-        "ggB93Wc4Par_text": "<p>&nbsp; &nbsp;Most Popular &nbsp;&nbsp;</p>",
-        "ggD_WgWfU3y_text": "<p>$0</p>",
-        "ggG0flTq6Zc_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171281092.png",
-        "ggILDePruBS_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/33335_b9233952-bdd0-457e-a748-932b50e6d6fa.png",
-        "ggJU7laVyIj_text": "<p>$0</p>",
-        "ggJyaZoKxMg_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/33335_b9233952-bdd0-457e-a748-932b50e6d6fa.png",
-        "ggKHRvSp0gY_text": "<p>Free Gift - Collagen Recipe eBook</p>",
-        "ggM9Lt3tkwI_text": "<p>$0</p>",
-        "ggOjmI334RT_displayContent": "Sale {percent_discount} off",
-        "ggQDiEfOcfG_text": "<p>&nbsp; &nbsp;Best Deal 🔥 &nbsp;&nbsp;</p>",
-        "ggX65I_WAyf_text": "<p>$0</p>",
-        "ggXJtI06mQ1_text": "<p>($27.96 per bottle)</p>",
+        "ggWHtn1zRm9_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo.jpg",
+        "ggWHtn1zRm9_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/enviogratis-100.jpg?v=1782831084",
         "ggYPcnWu3g8_childItem_0": "<p>10,000mg Marine Collagen Peptides</p>",
         "ggYPcnWu3g8_childItem_1": "<p>Enhanced with Vitamin C + Hyaluronic A</p>",
         "ggYPcnWu3g8_childItem_2": "<p>Neutral taste, dissolves instantly</p>",
-        "ggZDRXFCAQe_text": "<p>Free Gift - Collagen Recipe eBook</p>",
-        "ggZzt5y5NaA_text": "<p>Value:</p>",
-        "gg_8ltwqB-K_displayContent": "Sale {percent_discount} off",
-        "gg_Pox3iZHt_text": "Pack 1",
-        "gg_wr1p1Rs9_displayContent": "Sale {percent_discount} off",
-        "ggc-7BDS5Y8_text": "<p>($27.96 per bottle)</p>",
-        "ggdUNUaDuCk_text": "<p>$0</p>",
-        "ggdW1_XCYrG_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/33335_b9233952-bdd0-457e-a748-932b50e6d6fa.png",
-        "ggfus7y_cJJ_text": "<p>($27.96 per bottle)</p>",
         "ggiAEBUopFB_errorMessage": "Cannot add product to cart",
         "ggiAEBUopFB_label": "Add to cart",
         "ggiAEBUopFB_outOfStockLabel": "Out of stock",
         "ggiAEBUopFB_successMessage": "Add product to cart successfully",
         "ggiAEBUopFB_unavailableLabel": "Unavailable",
         "ggiAEBUopFB_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
-        "ggiNrqPfR8i_text": "<p>Free Gift - Premium Mixing Spoon</p>",
-        "ggqISDNhI_W_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171281093.png",
-        "ggqaPYVg1fn_text": "<p>Pack 2</p>",
-        "ggqhBDvN7uB_text": "<p>Pack 3</p>",
-        "ggrtgyRt_Vn_text": "<p>Free Gift - Collagen Recipe eBook</p>",
-        "ggsxEWlkWgY_text": "<p>Free Gift - Travel Collagen Sachets</p>",
-        "ggtipiuQyvO_text": "<p>$0</p>",
-        "ggtrV3yslIU_text": "<p>It is a long / established/ will / 123</p>",
-        "ggujCGfNkmy_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171281094.png",
-        "ggwKB8g6d2n_text": "<p>You Pay:</p>",
-        "ggxeOl_PpWr_displayContent": "Sale {percent_discount} off",
+        "ggjc87eM3Ln_text": "<p>Licua Max</p>",
         "ggy3hwPCL04_text": "<p>Calidad en todas partes ✨</p>",
         "section_preload": "true"
       },
@@ -348,12 +308,21 @@
         "section_preload": "true"
       },
       "type": "gp-section-626292815747351127"
+    },
+    "gp_section_626295092952433323": {
+      "settings": {
+        "checksum": "4a14dfe51606c1e645600a4ef3c7e3d6ed067b95d5e6f3380dc59d135416ae64_1_1_1_0__1",
+        "ggx4lXLS5_5_alt": "Alt Image",
+        "ggx4lXLS5_5_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/myimage_ff47406c-ab6c-404f-886f-fbc28dfe7c40.jpg",
+        "ggx4lXLS5_5_title": "Image Title"
+      },
+      "type": "gp-section-626295092952433323"
     }
   },
   "order": [
-    "gp_section_626292728791040599",
     "gp_section_626292728791040877",
     "gp_section_626292729311134295",
+    "gp_section_626295092952433323",
     "gp_section_626292815747351127",
     "gp_section_626292729294357079",
     "gp_section_626292728958812971",
