@@ -173,15 +173,16 @@
     },
     "gp_section_626292729311134295": {
       "settings": {
-        "checksum": "1e189b35d852e2578c09b60607a6900ac0252ebad1f69ac48c5385c446bad686_1_1_1_0__1",
+        "checksum": "a5d69deb9d3d16c1ddac5e11e81c4d51f4fd293b97ce327d5b424808374d26ea_1_1_1_0__1",
         "gg42qTI3LHs_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo.jpg",
         "gg42qTI3LHs_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/PAGA_2.png?v=1782837120",
         "gg5BEe6-jz3_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo.jpg",
         "gg5BEe6-jz3_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Post_de_Instagram_Envio_Gratis_emprendimiento_estilo_3D_amarillo_1200_x_420_px.png?v=1782836284",
         "gg8aSnNdFFI_text": "<p>200+ clientes satisfechos</p>",
-        "ggYPcnWu3g8_childItem_0": "<p>10,000mg Marine Collagen Peptides</p>",
-        "ggYPcnWu3g8_childItem_1": "<p>Enhanced with Vitamin C + Hyaluronic A</p>",
-        "ggYPcnWu3g8_childItem_2": "<p>Neutral taste, dissolves instantly</p>",
+        "ggUrynkg39z_displayContent": "Sale {percent_discount} off",
+        "ggYPcnWu3g8_childItem_0": "<p class=\"\">0 Conexión a Luz</p>",
+        "ggYPcnWu3g8_childItem_1": "<p class=\"\">Porciones individuales</p>",
+        "ggYPcnWu3g8_childItem_2": "<p>Alta Calidad</p>",
         "ggjc87eM3Ln_text": "<p>Licua Max</p>",
         "ggy3hwPCL04_text": "<p>Calidad en todas partes ✨</p>",
         "section_preload": "true"
@@ -304,6 +305,13 @@
         "section_preload": "true"
       },
       "type": "gp-section-626292815747351127"
+    },
+    "gp_section_626309351186891351": {
+      "settings": {
+        "checksum": "a09ec05663215b2bbf8d9f033b3608093b7df5ed3c5919fd02b46aa72464d676_1_1_1_0__1",
+        "gOzmyMPLvyUmv_srcSet_desktop_src": "https://ucarecdn.com/ee6d5074-1640-4cc7-8933-47c8589c3dee/-/format/auto/"
+      },
+      "type": "gp-section-626309351186891351"
     }
   },
   "order": [
@@ -317,6 +325,7 @@
     "gp_section_626292729277580141",
     "gp_section_626292729395020375",
     "gp_section_626292729395020459",
-    "gp_section_626292729260802731"
+    "gp_section_626292729260802731",
+    "gp_section_626309351186891351"
   ]
 }
