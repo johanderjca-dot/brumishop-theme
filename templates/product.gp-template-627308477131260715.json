@@ -200,23 +200,10 @@
     },
     "gp_section_627308483707929175": {
       "settings": {
-        "checksum": "9c38d44895c26be6f1d520a48486915b8405081171cb2747e92ab92b40a7510c_1_1_1_0__1",
+        "checksum": "a2a608f88c28fb2dfb1794e6758a643065ff926d161a3131976087fa8000f893_1_1_1_0__1",
         "gg6xYDSirKD_viewLessText": "Show less",
         "gg6xYDSirKD_viewMoreText": "Show more",
-        "gg8t0vlxeFJ_errorMessage": "Cannot add product to cart",
-        "gg8t0vlxeFJ_label": "Add",
-        "gg8t0vlxeFJ_outOfStockLabel": "Out Of Stock",
-        "gg8t0vlxeFJ_successMessage": "Add product to cart successfully",
-        "gg8t0vlxeFJ_unavailableLabel": "Unavailable",
-        "gg8t0vlxeFJ_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
-        "ggHzn6II7Cq_text": "<p>All Your Dental Needs</p>",
         "ggOU6x_JHoR_text": "Quantity",
-        "ggjZ022p9b0_errorMessage": "Cannot add product to cart",
-        "ggjZ022p9b0_label": "Add to cart",
-        "ggjZ022p9b0_outOfStockLabel": "Out of stock",
-        "ggjZ022p9b0_successMessage": "Add product to cart successfully",
-        "ggjZ022p9b0_unavailableLabel": "Unavailable",
-        "ggjZ022p9b0_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
         "section_preload": "true"
       },
       "type": "gp-section-627308483707929175"
