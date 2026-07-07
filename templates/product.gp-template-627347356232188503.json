@@ -1,0 +1,289 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_627347376733946667": {
+      "settings": {
+        "checksum": "843424556f9b42e6ffc18127eac07e76a189351cc2891c5142b623ea78ee211c_1_1_1_0__1",
+        "gg-M-z4mEFN_text": "<p>Improve Mobility</p>",
+        "ggKYX3T5o9Q_text": "<p>Boost Wellness</p>",
+        "ggKvi0amERi_text": "<p>Support Vitality</p>",
+        "section_preload": "true"
+      },
+      "type": "gp-section-627347376733946667"
+    },
+    "gp_section_627347376851386967": {
+      "settings": {
+        "checksum": "b48a147eb97ce47e1cb5ccb5ed1ad2066baf8e95bba6911d6c974b63bc833af6_1_1_1_0__1",
+        "gg4dlVkO0jq_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-dc5ca1ca-85f7-4883-839b-79bce9ef9586.png",
+        "ggHCPK-Z7ED_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-a377caca-ff52-4ae2-bc6c-30716a04acd6.png",
+        "ggK3WKY7P8i_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-fb402c3a-a247-471b-9793-5c0340ac70a9.png",
+        "ggK3WKY7P8i_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-d3a73b6c-6984-4a47-95e5-4e0cb5ea8c1e.png",
+        "ggLavp0uQNG_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-63ed7e8e-5751-4a75-bfc0-8fe265830bd8.png",
+        "ggMFhHKgYS0_text": "<p><span style=\"background-color:rgba(255,255,255,0);\">From Care to Joy</span></p>",
+        "ggZrkJU8ick_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-1da409d3-4b75-4c4a-aafe-9511039ecb91.png",
+        "gg_nfX1zthB_text": "Trusted by Thousands of Happy Pets &amp; Loving Owners 😻",
+        "ggdjw4eEfL8_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-0483a9a2-8817-4c88-80c9-469d35ec1e92.png",
+        "ggxC_vPl0Yu_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-bdaf9f90-a08e-4e66-bf1e-9c229548ef8c.png",
+        "section_preload": "true"
+      },
+      "type": "gp-section-627347376851386967"
+    },
+    "gp_section_627347376918495831": {
+      "settings": {
+        "checksum": "c974511b6201bd118007a69e8743d66885f98da85ab613ca16ab1344f0b01d48_1_1_1_0__1",
+        "ggDXBXL-Q_e_text": "Watch Their Wellness Journey",
+        "ggGGO_1IETF_html5Url": "https://cdn.shopify.com/videos/c/o/v/2cd3deb506b54b009063f7270ab5cf2e.mp4",
+        "ggGGO_1IETF_poster_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-62e06eb4-9c8b-48eb-972a-a50b9ee5f289.jpg",
+        "ggGGO_1IETF_vimeoUrl": "https://vimeo.com/1095883398",
+        "ggGGO_1IETF_youtubeUrl": "https://www.youtube.com/watch?v=drIt4RH_kyQ",
+        "ggO_Va72l1o_text": "<p><span style=\"background-color:rgba(254,159,124,0);\">Feel the difference</span></p>",
+        "ggpJkhYnpYc_html5Url": "https://cdn.shopify.com/videos/c/o/v/2cd3deb506b54b009063f7270ab5cf2e.mp4",
+        "ggpJkhYnpYc_poster_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-abd91465-51aa-48b4-aa3b-a95607b9dfd4.jpg",
+        "ggpJkhYnpYc_vimeoUrl": "https://vimeo.com/1095883398",
+        "ggpJkhYnpYc_youtubeUrl": "https://www.youtube.com/watch?v=drIt4RH_kyQ",
+        "ggzK3qfY_3u_html5Url": "https://cdn.shopify.com/videos/c/o/v/2cd3deb506b54b009063f7270ab5cf2e.mp4",
+        "ggzK3qfY_3u_poster_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-80ede537-3375-4a72-9bfc-f82e2c2baff1.jpg",
+        "ggzK3qfY_3u_vimeoUrl": "https://vimeo.com/1095883398",
+        "ggzK3qfY_3u_youtubeUrl": "https://www.youtube.com/watch?v=drIt4RH_kyQ"
+      },
+      "type": "gp-section-627347376918495831"
+    },
+    "gp_section_627347376918496043": {
+      "settings": {
+        "checksum": "3fd0a53e75adb3f915a314f9ffe2729d24e81172508efac6fcfb8cabb41d2345_1_1_1_0__1",
+        "gg4z749hRUe_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-e42075d3-1c2a-41c6-9eb5-3ad6450bc8a9.png",
+        "ggHCsidld05_label": "<p>Follow Us</p>",
+        "ggSZnahBn-d_text": "<p>Join the community</p>",
+        "gghboTYAfT7_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-c1488aac-ea83-43b7-9fea-b2f95bd34594.png",
+        "ggzf8hAbSMh_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-d7a1a602-71c7-46c3-9456-31fb6c34d0f3.png"
+      },
+      "type": "gp-section-627347376918496043"
+    },
+    "gp_section_627347376935273325": {
+      "settings": {
+        "checksum": "cbe1f1e84193d3a871765ed15653655bb5d7a7e4530b51e48e60cfc7f39d3aba_1_1_1_0__1",
+        "gg287637nxC_text": "Frequently Asked Questions",
+        "ggCkXSee5N-_childItem_0": "<p>How many chews should my pet take per day?</p>",
+        "ggCkXSee5N-_childItem_1": "<p>Is Wildgem safe for all breeds?</p>",
+        "ggCkXSee5N-_childItem_2": "<p>How long until I see results?</p>",
+        "ggCkXSee5N-_childItem_3": "<p>Can I combine different Wildgem formulas?</p>",
+        "ggDDsxQaDhC_childItem_0": "<p>support@wildgempets.com</p>",
+        "ggFa7kKPEdQ_text": "<p>Most pets only need 1–2 soft chews daily, depending on their weight. Always start with the recommended dose on the label.</p>",
+        "gggepxUHu7H_text": "<p>Yes! Our formulas are vet-approved and crafted to be safe for all dog and cat breeds over 6 months old.</p>",
+        "ggldwTjsik-_text": "<p><span style=\"background-color:rgba(254, 159, 124, 0);\">Got Questions?</span></p>",
+        "ggqEel6gcBb_text": "<p>Absolutely. Each variant targets a different need, and they can be safely combined as long as daily dosage is followed.</p>",
+        "ggwGSQFuH64_text": "<p>Many pet owners notice improvements in mood, mobility, or digestion within 2–3 weeks of consistent use.</p>",
+        "ggyeccpAS62_label": "<p>Back to Offer</p>"
+      },
+      "type": "gp-section-627347376935273325"
+    },
+    "gp_section_627347376952050347": {
+      "settings": {
+        "checksum": "f729910843cab7aea90d491fc3fcfdecdf7c7f220cdf38037c3fc9523df217bf_1_1_1_0__1",
+        "gg0zQ7mE6vn_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-762669bf-c0d4-41a3-8fc4-c835555dae7d.png",
+        "gg1PfNtic-6_label": "FAQ&nbsp;",
+        "ggDo0Kuu__5_label": "Delivery Information",
+        "ggOK1W1C33Q_text": "<p>Copyright © 2025 GemPages.</p>",
+        "ggUDIAYR3ps_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-f20d9943-7c65-42da-87bd-dd7209ee237f.png",
+        "ggZzsUZmbay_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-f12df0fc-9708-4fbf-82a8-601f2f0d70ef.png",
+        "gg_aEpix_SR_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-9b75870f-ca0f-4a2e-8cfa-4cab8c390344.png",
+        "ggkFcRrtGAj_label": "Contact Us",
+        "ggsseAGe5Go_label": "Return &amp; Exchange&nbsp;",
+        "ggzmyipaB1K_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-1cd135b4-e229-45c0-8552-08ed7005ead1.png"
+      },
+      "type": "gp-section-627347376952050347"
+    },
+    "gp_section_627347376952050475": {
+      "settings": {
+        "checksum": "cb61a4faf790ded910093fe456fb397663b967497fdd6422f82dd516cdcfa217_1_1_1_0__1",
+        "gg2XcMnWGTn_text": "<p>Stay Consistent for Best Results</p>",
+        "ggUGRQ5-ROq_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-b83d9026-ec2b-4674-bcfa-727e0376c3a5.png",
+        "ggX_ICNFhZu_text": "<p>Give Daily</p>",
+        "gg_Gbit2PoN_text": "<p>Simply give your pet 1 soft chew during their regular meal time to make it easy and enjoyable—most pets take it like a treat!</p>",
+        "gg_Q0sxKwuK_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-cb1d5711-6392-46f9-bd40-ff95822e708c.png",
+        "ggbdJhHkG1u_text": "<p>Continue serving the chews every day to maintain steady support and let the ingredients work gradually for long-term wellness.</p>",
+        "ggjITJb_luj_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-537c4574-10af-4421-abfb-7951891e04d1.png",
+        "ggqM5JkHijH_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-aa8f1ed7-6615-41d8-8035-6d5e239ce34c.png",
+        "ggxKLxgzD_I_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-83cf4395-f9b3-43f4-ac0e-bbe4f3e277fd.png"
+      },
+      "type": "gp-section-627347376952050475"
+    },
+    "gp_section_627347377019159211": {
+      "settings": {
+        "checksum": "4a2d8a46e7c6f429565dd009ab85c38f3b3bdf290a30647c9d084453a68972bd_1_1_1_0__1",
+        "gg20Lc7l3z-_text": "Proof of Pure Care",
+        "gg7s7TyMG3C_text": "<p><span style=\"background-color:rgba(254,159,124,0);\">Trust in Every Chew</span></p>",
+        "ggB_gssVgAU_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-0ce61e0d-de93-475b-bade-0129b734f739.jpg",
+        "ggFXAAh8HB8_text": "<p>Quality</p><p>Guaranteed</p>",
+        "ggJVLz9B3px_text": "<p>Lab-tested for consistent safe results</p>",
+        "ggL42OoQ6t6_text": "<p>Verified ingredients for total confidence</p>",
+        "ggPHeEzbmG2_text": "<p>Quality assurance you can trust</p>",
+        "ggQHtZl8ZRN_text": "<p>Made under strict safety standards</p>",
+        "ggW74_ddH2e_text": "<p>Premium Standard</p>",
+        "ggYCAwCSw_f_text": "<p>Certified quality for peace of mind</p>",
+        "gg_2ovjy4Ye_text": "<p>Vet-Approved</p>",
+        "ggeHeUu3mfa_text": "<p>Premium care you can rely on</p>",
+        "ggexhfSinBi_text": "<p>Safe Formula</p>",
+        "ggoUW2C52Gc_text": "<p>Lab-Tested</p>",
+        "ggs6AjDRkmM_text": "<p>After a few days of using the calming formula, the usual restlessness began to fade. Instead of hiding or pacing, there was a new sense of ease in every movement. Soft tail wags and gentle eye contact slowly replaced stress, making everyday moments feel peaceful again.</p>",
+        "gguzfV-9h2U_text": "<p>Trusted formula backed by experts</p>",
+        "ggv-Fh7xXqG_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-6de5c0db-83cd-4b24-8f04-6b3f0ca49097.webp",
+        "ggwYfj_EP72_text": "<p>Risk-Free</p>"
+      },
+      "type": "gp-section-627347377019159211"
+    },
+    "gp_section_627347377035936621": {
+      "settings": {
+        "checksum": "2ab3366bb28d9638336f27938ed2e9255dc88df592e3b725cd2ebd9461aa6f62_1_1_1_0__1",
+        "gg29Yx1LmcG_label": "<p>Delivery Every 30 Days</p>",
+        "gg2wdN8FYnF_text": "<p>Quantity</p>",
+        "gg6jLcoy9to_errorMessage": "Cannot add product to cart",
+        "gg6jLcoy9to_label": "Add to cart",
+        "gg6jLcoy9to_outOfStockLabel": "Out of stock",
+        "gg6jLcoy9to_successMessage": "Add product to cart successfully",
+        "gg6jLcoy9to_unavailableLabel": "Unavailable",
+        "gg6jLcoy9to_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
+        "gg7QMxmUbwG_text": "<p>2,500+ Verified Reviews!</p>",
+        "ggA60bX9gdV_label": "<p>Delivery Every 60 Days</p>",
+        "ggCy8UJ8iCj_text": "<p>$34.99</p>",
+        "ggHDIGw27Nc_text": "<p>Subscribe &amp; save 10%</p>",
+        "ggHaeJJIJcv_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-1a6cb7b2-83b4-4f3f-8b1c-58e694c285be.jpg",
+        "ggI5CF069nx_label": "<p>Delivery Every 60 Days</p>",
+        "ggNEuPNRI80_text": "<p>$34.99</p>",
+        "ggOSOqjhgM8_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-7f27681f-797f-4dee-bac4-b85518461696.png",
+        "ggPGPTi0rqF_text": "<p>$31.49</p>",
+        "ggPeicRkydh_text": "<p>$31.49</p>",
+        "ggULBdwJ-GY_text": "<p>One-time purchase</p>",
+        "ggXV_3qg0zz_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-79972f48-667f-42d0-a858-9c748da57068.png",
+        "ggZHgJT-v-p_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-50576910-49f7-4ca6-9684-eab855df947e.png",
+        "gg_R-9dgo74_text": "<p>FREE SHIPPING ON ALL ORDER OVER 90$</p>",
+        "ggbtf-zI9hz_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-a739e588-df2a-4412-b6b9-9fd0010151fa.png",
+        "ggenvgpXzLj_label": "<p>Delivery Every 90 Days</p>",
+        "gghHYW2qTMF_text": "<p>Subscribe &amp; save 10%</p>",
+        "gghs84kBMi6_label": "<p>Delivery Every 30 Days</p>",
+        "ggnDSoQfsc4_text": "<p>30-day money-back guarantee</p>",
+        "ggqtmMM2UbZ_childItem_0": "<p>Delivery Every 30 Days</p>",
+        "ggrv9lT2QGM_label": "<p>Delivery Every 90 Days</p>",
+        "ggtSx4idSr8_text": "<p>Purchase Type</p>",
+        "ggvoQSM0450_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-c4b8628c-4f06-40e9-915f-d730337df1e5.png",
+        "ggwoaN9vOfy_childItem_0": "<p>Delivery Every 30 Days</p>",
+        "ggxglrDGq5N_text": "<p>One-time purchase</p>",
+        "ggzgRgoCTMY_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-1aaba532-a221-4682-955d-9ddfeeef0a57.png",
+        "section_preload": "true"
+      },
+      "type": "gp-section-627347377035936621"
+    },
+    "gp_section_627347377203708587": {
+      "settings": {
+        "checksum": "a5b3734a684368cb022d64c8395780bb0fd85ad86118421be02e1b0dba772167_1_1_1_0__1",
+        "gg5f18zZUef_text": "<p>Daniel H.</p>",
+        "gg6WEO2wjkr_text": "<p>Verified Buyer</p>",
+        "ggBRTi9iVEP_text": "<p>“After just two weeks, my corgi started moving more comfortably and even jumped on the couch again 🐾. I didn’t expect such a quick change, but Wildgem truly surprised me. Seeing him playful again made my day!”</p>",
+        "ggDxgt4MS6E_text": "<p>“I wanted something made in the USA with clean ingredients, and Wildgem checked every box ✅. My golden retriever thinks it’s a snack, and I get peace of mind knowing it actually supports his joints.”</p>",
+        "ggJa2CLlhZG_text": "<p>Sarah M.</p>",
+        "ggN8VC7kd9N_text": "<p>Jason P.</p>",
+        "ggPcCzHi0Lv_text": "<p><span style=\"background-color:rgba(254, 159, 124, 0);\">Real Pet Parents Speak</span></p>",
+        "ggU9ztMJCLd_text": "<p>Verified Buyer</p>",
+        "ggV74amSv_k_text": "<p>15/10/2025</p>",
+        "ggVDjnMOURy_text": "<p>“Digestive issues were a daily struggle, but after using Wildgem, my dog’s appetite improved and bloating disappeared 🍽️. He looks more comfortable and even wags his tail at meal time again!”</p>",
+        "ggXASppynNI_text": "<p>Verified Buyer</p>",
+        "ggYElrREFbQ_text": "<p>Verified Buyer</p>",
+        "ggZGTjs_AMb_text": "<p>15/10/2025</p>",
+        "ggaRKOA3quz_text": "<p>Verified Buyer</p>",
+        "ggdoZUlQprI_text": "<p>15/10/2025</p>",
+        "gggMudcLrfW_text": "<p>Olivia K.</p>",
+        "ggiNbw6HU7l_text": "Loved by Pet Owners",
+        "ggionYV3x8V_text": "<p>15/10/2025</p>",
+        "ggipl2etYxD_text": "<p>Emily R.</p>",
+        "ggk9TSgQ-PQ_text": "<p>“My dog gets anxious during storms, but with the calming formula, he settles much faster 🌿. I love that I can give him something natural without feeling guilty or worried about side effects.”</p>",
+        "ggnD8KPSTsj_text": "<p>15/10/2025</p>",
+        "ggstBWPh8qn_text": "<p>“My senior cat used to avoid stairs, but now she goes up without hesitation 😺. The chews are soft and easy for her to eat. Finally, a supplement that feels like a treat instead of medicine!”</p>"
+      },
+      "type": "gp-section-627347377203708587"
+    },
+    "gp_section_627347377220485719": {
+      "settings": {
+        "checksum": "f08dbbacec982dcab2bd34bc1e2842f8cee3a72a034979ce05de41623494d2ee_1_1_1_0__1",
+        "gg0TTpEZQH8_text": "<p>18g</p>",
+        "gg1CjsOzlaS_text": "<p>Passionflower Powder</p>",
+        "gg1eSJE-fb4_text": "<p>9</p>",
+        "gg2o1p4D5Ky_text": "<p>15g</p>",
+        "gg3d9HYX_H1_text": "<p>8g</p>",
+        "gg4U1bz41id_text": "<p>Nutritional Facts (per 30 Chews / 90g Total)</p>",
+        "gg5I3xqkdlu_text": "<p>Prebiotic Fiber</p>",
+        "gg5OHHEIV2J_text": "<p>10g</p>",
+        "gg5Rzu1q7FW_text": "<p>Collagen Peptides</p>",
+        "gg6uVrvU94p_text": "Every Chew Packed<br>with Goodness",
+        "gg8P1B8ygku_text": "<p>Chondroitin</p>",
+        "gg8muRP_Q0s_text": "<p>Chamomile Extract</p>",
+        "ggEPWNSFwVA_text": "<p>Chicken Protein</p>",
+        "ggGzYUz3gr2_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-6335387c-0095-4c42-8188-3cca1a9256b7.png",
+        "ggHdlOvGBFy_text": "<p>Ashwagandha Root</p>",
+        "ggIpe2CLizj_text": "<p>Enriched with zinc and vitamins to strengthen daily immunity and overall wellness.</p>",
+        "ggJTfNPq6CS_childItem_0": "<p>GutBoost - Digestive &amp; Immunity Support</p>",
+        "ggLhlDfmz9V_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-0542fb50-c887-4511-bafc-460ea93bfddb.png",
+        "ggM2V6Wmm9H_text": "<p>8g</p>",
+        "ggN6u64S8iL_text": "<p>Each chew delivers targeted joint-nourishing nutrients for daily comfort.</p>",
+        "ggNdeLJJJLE_text": "<p>Specially crafted for pets struggling with stiffness or reduced mobility.</p>",
+        "ggOycUkYq77_text": "<p><span style=\"background-color:rgba(255,255,255,0);\">See What Goes Into Each Formula</span></p>",
+        "ggQSkFjeJo8_text": "<p>10g</p>",
+        "ggQZ0eoE3s3_text": "<p>Perfect for pets dealing with separation anxiety, loud noises, or restlessness.</p>",
+        "ggQp6Xkrumf_text": "<p>18</p>",
+        "ggSkcVETCqI_text": "<p>8g</p>",
+        "ggUY3X5mSLC_text": "<p>Pumpkin Powder</p>",
+        "ggXbtiyZoyq_text": "<p>Enriched with salmon oil and turmeric to help reduce stiffness and promote active movement.</p>",
+        "ggYNm_m7ghX_text": "<p>12g</p>",
+        "ggZOOTN5qno_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-23cbb3b0-1e64-4e20-a3a1-0eb5bd3f5a35.png",
+        "gga1tPspPvZ_text": "<p>Glucosamine</p>",
+        "ggadkIxY0Kz_text": "<p>Nutritional Facts (per 30 Chews / 90g Total)</p>",
+        "ggbuq_rYXAm_text": "<p>12</p>",
+        "ggeIkYcwnjP_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-5d6b833a-c774-441f-8a3d-1ca26dcd08ee.png",
+        "ggevVTib8xC_text": "<p>L-Tryptophan</p>",
+        "ggg4O8eREio_text": "<p>Formulated to nourish joints and support smooth mobility with glucosamine and collagen peptides.</p>",
+        "ggg4ak9v3uk_text": "<p>Designed for pets experiencing digestive imbalance or sensitive stomachs.</p>",
+        "gggP2zjv4Q3_text": "<p>10g</p>",
+        "gghdJ9x6QoO_childItem_0": "<p>Flex Chew - Mobility &amp; Joint Health</p>",
+        "gghtA3Qgpq6_text": "<p>Crafted with calming botanicals like chamomile and passionflower to ease stress and restlessness.</p>",
+        "ggj86QWHQov_text": "<p>10g</p>",
+        "ggjIdUMnrkS_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-49409bb6-ecce-4a91-9a47-836bda59aefe.png",
+        "ggk0en69KOv_text": "<p>Nutritional Facts (per 30 Chews / 90g Total)</p>",
+        "ggl4kDucJNo_text": "<p>Zinc &amp; Vitamin Complex</p>",
+        "ggls9bxGZDH_text": "<p>L-Tryptophan and ashwagandha help promote relaxation while keeping pets emotionally balanced.</p>",
+        "gglwp66gZa8_text": "<p>14g</p>",
+        "ggmJjRjukDb_text": "<p>Combines pumpkin and probiotics to support a healthy gut and regular digestion.</p>",
+        "ggmYmkFGzOI_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-fc58d7c3-e7af-456f-95c2-e8a00e1b5d1e.png",
+        "ggn5MzQS9Ru_childItem_0": "<p>CalmBite - Calming &amp; Stress Relief</p>",
+        "ggnCwdqRovU_text": "<p>Each chew supports gut health and strengthens immune response naturally.</p>",
+        "ggoWHQVXcwY_text": "<p>20g</p>",
+        "ggpQqNXS4Gc_text": "<p>Salmon Oil</p>",
+        "ggpxS5h6rCl_text": "<p>Each chew promotes relaxation without causing drowsiness.</p>",
+        "ggqjK-vJYT5_text": "<p>Probiotic Blend</p>",
+        "ggqvtqfFPlA_text": "<p>Peanut Butter Protein</p>",
+        "ggrz9WxbeUR_text": "<p>Turmeric Extract</p>",
+        "section_preload": "true"
+      },
+      "type": "gp-section-627347377220485719"
+    }
+  },
+  "order": [
+    "gp_section_627347377035936621",
+    "gp_section_627347376733946667",
+    "gp_section_627347377220485719",
+    "gp_section_627347376851386967",
+    "gp_section_627347376952050475",
+    "gp_section_627347377019159211",
+    "gp_section_627347376918495831",
+    "gp_section_627347377203708587",
+    "gp_section_627347376935273325",
+    "gp_section_627347376918496043",
+    "gp_section_627347376952050347"
+  ]
+}
