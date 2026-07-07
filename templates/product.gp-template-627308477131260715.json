@@ -9,227 +9,207 @@
  */
 {
   "sections": {
-    "gp_section_627308483137503915": {
-      "type": "gp-section-627308483137503915",
-      "settings": {
-        "section_preload": "true",
-        "checksum": "445d583734b2ff7452bcecc4050831b3af9a386fca9b698b47f1998bdb7f5007_1_1_1_0__1",
-        "ggpDO3IdX72_text": "<p>ENVIO GRATIS A TODO RD</p>"
-      }
-    },
     "gp_section_627308482986508971": {
-      "type": "gp-section-627308482986508971",
       "settings": {
-        "section_preload": "true",
         "checksum": "bc237bb174c780c30bf2e14b64880dd3555a771f866bf11502962331254806b7_1_1_1_0__1",
-        "ggo-Nole94T_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/ARTIFLEX.svg?v=1783435101"
-      }
-    },
-    "gp_section_627308483707929175": {
-      "type": "gp-section-627308483707929175",
-      "settings": {
-        "section_preload": "true",
-        "checksum": "aa7c2d57ce69465a2beb3e64c05051f8f6019aee5ffc938fd269ff7eb394aabc_1_1_1_0__1",
-        "gg6xYDSirKD_viewMoreText": "Show more",
-        "gg6xYDSirKD_viewLessText": "Show less",
-        "ggtiNJY75VW_text": "<p>+200 clientes.</p>",
-        "ggdCF4j6r-o_displayContent": "Sale {percent_discount} off",
-        "ggOU6x_JHoR_text": "<p>Cantidad:</p>"
-      }
-    },
-    "gp_section_627308483204612973": {
-      "type": "gp-section-627308483204612973",
-      "settings": {
-        "section_preload": "false",
-        "checksum": "a69cc325b45c0b8d27c877172b0451ffc0a89978aad12fdc36316e214760dd43_1_1_1_0__1",
-        "ggHKN2ZoNWi_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280648.png",
-        "ggHKN2ZoNWi_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/WhatsApp_Image_2026-06-30_at_3.31.42_PM.jpg?v=1782848368",
-        "ggSKPZ0wFfO_text": "<p><strong>Stephanie Galea</strong></p>",
-        "ggwMEFlnTn5_text": "<p>Usuario Verificado</p>",
-        "ggqLthYy_OM_text": "<p>A pesar de que tengo solo 30 años ya había estado sufriendo de dolores de articulación, y esta crema no solo me alivió, me ayudó mucho con mi piel tambien. </p>",
-        "ggoNntKaPck_text": "<p>😍</p>",
-        "ggg8dhBubhu_text": "<p>🌟</p>",
-        "ggrE4Aq9GNR_text": "<p>🍀</p>",
-        "ggF6GsMZbc8_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280650_85a7dfd6-5237-4161-8b20-19ab16cf32de.png",
-        "ggfCQJOZdu-_text": "<p><strong>Jason Reed</strong></p>",
-        "ggKL56KcdnT_text": "<p>Verified Buyer</p>",
-        "ggbEhN0otrm_text": "<p>I didn’t expect such a difference, but Gsmile proved it fast. The deep clean feels <span style=\"background-color:#B7FFFA;\"><strong>professionally done</strong></span>, and my breath stays <span style=\"background-color:#B7FFFA;\"><strong>fresh for hours</strong></span> without trying.</p>",
-        "ggT9jAnTxTA_text": "<p>💖</p>",
-        "ggMEDlu2O_v_text": "<p>😘</p>",
-        "ggKCe80AcWf_text": "<p>✨</p>",
-        "ggBjsnZZtGF_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280648.png",
-        "gg-bV-Re4Gy_text": "<p><strong>Emily Carter</strong></p>",
-        "ggamr6QkSjh_text": "<p>Verified Buyer</p>",
-        "ggGllZE6fib_text": "<p>Gsmile has made brushing feel effortless. My teeth feel <span style=\"background-color:#C1FFFD;\"><strong>noticeably cleaner</strong></span> every day, and the gentle power gives me <span style=\"background-color:#C1FFFD;\"><strong>surprising comfort</strong></span> even on sensitive mornings.</p>",
-        "ggBMT1TX_ru_text": "<p>😍</p>",
-        "ggzfWUx8GOl_text": "<p>🌟</p>",
-        "ggXjhurDoLb_text": "<p>🍀</p>",
-        "gg4-3V7CNpE_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280650_85a7dfd6-5237-4161-8b20-19ab16cf32de.png",
-        "gg3C3yek08D_text": "<p><strong>Jason Reed</strong></p>",
-        "ggRPyP_9VkZ_text": "<p>Verified Buyer</p>",
-        "ggCojlOO9Mr_text": "<p>I didn’t expect such a difference, but Gsmile proved it fast. The deep clean feels <span style=\"background-color:#B7FFFA;\"><strong>professionally done</strong></span>, and my breath stays <span style=\"background-color:#B7FFFA;\"><strong>fresh for hours</strong></span> without trying.</p>",
-        "gg6rNqArLcz_text": "<p>💖</p>",
-        "ggWRLQoXn15_text": "<p>😘</p>",
-        "gglDBneii9j_text": "<p>✨</p>"
-      }
+        "ggo-Nole94T_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/ARTIFLEX.svg?v=1783435101",
+        "section_preload": "true"
+      },
+      "type": "gp-section-627308482986508971"
     },
     "gp_section_627308482986574507": {
-      "type": "gp-section-627308482986574507",
       "settings": {
-        "section_preload": "true",
         "checksum": "798133e477644be9a42ccd5f88cc320e7cbd0781cbc89b7bcf759ad713983e84_1_1_1_0__1",
-        "ggRo949N3Mv_text": "Upgrade Your Daily Oral Care",
-        "ggFGVBsDbyz_text": "<p>Cleaner teeth, healthier gums, and effortless routines with Gsmile every day.</p>",
-        "ggIspNKKv56_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/shutterstock_2528209245_1.png",
         "gg86tSTT-iy_text": "Powerful Targeted Cleaning",
-        "ggfWP3TLof8_text": "<p>Reaches tight spaces and removes plaque easily. Fast, effective, and gentle.</p>",
-        "gguu0qaXWg-_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/shutterstock_2509475481_1.png",
-        "ggQo3EWAaoG_text": "Compact Travel Friendly Design",
-        "gg_2ubSy6Gb_text": "<p>Slim and lightweight for home or travel. Store or carry effortlessly.</p>",
-        "ggtflHpxvAA_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/shutterstock_2528209243_1.png",
+        "ggFGVBsDbyz_text": "<p>Cleaner teeth, healthier gums, and effortless routines with Gsmile every day.</p>",
         "ggGLv8VdaKA_text": "Long-Lasting Reliable Battery",
-        "ggpb40D5asC_text": "<p>Extended battery for daily use. No frequent charging, fully dependable.</p>"
-      }
+        "ggIspNKKv56_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/shutterstock_2528209245_1.png",
+        "ggQo3EWAaoG_text": "Compact Travel Friendly Design",
+        "ggRo949N3Mv_text": "Upgrade Your Daily Oral Care",
+        "gg_2ubSy6Gb_text": "<p>Slim and lightweight for home or travel. Store or carry effortlessly.</p>",
+        "ggfWP3TLof8_text": "<p>Reaches tight spaces and removes plaque easily. Fast, effective, and gentle.</p>",
+        "ggpb40D5asC_text": "<p>Extended battery for daily use. No frequent charging, fully dependable.</p>",
+        "ggtflHpxvAA_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/shutterstock_2528209243_1.png",
+        "gguu0qaXWg-_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/shutterstock_2509475481_1.png",
+        "section_preload": "true"
+      },
+      "type": "gp-section-627308482986574507"
     },
-    "gp_section_627308483271721559": {
-      "type": "gp-section-627308483271721559",
+    "gp_section_627308483137503915": {
       "settings": {
-        "section_preload": "true",
-        "checksum": "027185750ca8fa7198f072fe5cb769b135b432fe33b2642db3cac843eebc646f_1_1_1_0__1",
-        "ggMToGRz2cS_text": "Happy Customers, Real Smiles",
-        "gglmXUyIhgh_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280652.png",
-        "ggbAFiKDdm7_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/wcp2.png",
-        "ggD2NfBjFyv_text": "<p>Gsmile Water Flosser </p>",
-        "ggcLBXT0YU0_text": "<p>$123.00 </p>",
-        "gg3COTL3xSf_label": "<p>Buy </p>",
-        "ggtiK-CXLAb_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280651.png",
-        "ggKNVyEydQ9_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/wcp2.png",
-        "ggXQWin3GHo_text": "<p>Gsmile Water Flosser</p>",
-        "ggLN3yc-Dm-_text": "<p>$123.00 </p>",
-        "ggL9LH0CNa0_label": "<p>Buy </p>",
-        "ggg9MbsKNtZ_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280653.png",
-        "ggnjXrCr7-3_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/wcp2.png",
-        "ggvwI8B5M4g_text": "<p>Gsmile Water Flosser</p>",
-        "ggauFgrtWqM_text": "<p>$123.00 </p>",
-        "ggCYft18Fss_label": "<p>Buy </p>",
-        "gg1IipUCILl_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280654.png",
-        "ggGJSGsFnXM_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/wcp2.png",
-        "ggvmVhtLZS2_text": "<p>Gsmile Water Flosser </p>",
-        "ggysJbb7xZV_text": "<p>$123.00 </p>",
-        "gg5JDr8HFy7_label": "<p>Buy </p>",
-        "ggQ4B4W99Ju_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280652.png",
-        "ggcpkVClLEn_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/wcp2.png",
-        "ggMqtBjrfKJ_text": "<p>Gsmile Water Flosser </p>",
-        "ggEhecFAUKG_text": "<p>$123.00 </p>",
-        "ggP8r4GLezx_label": "<p>Buy Now</p>"
-      }
+        "checksum": "445d583734b2ff7452bcecc4050831b3af9a386fca9b698b47f1998bdb7f5007_1_1_1_0__1",
+        "ggpDO3IdX72_text": "<p>ENVIO GRATIS A TODO RD</p>",
+        "section_preload": "true"
+      },
+      "type": "gp-section-627308483137503915"
     },
     "gp_section_627308483154281047": {
-      "type": "gp-section-627308483154281047",
       "settings": {
-        "section_preload": "true",
         "checksum": "80e19cb9900f4fd8b74e05518d463b0133faf889399bd8d41908b0928d0ac863_1_1_1_0__1",
         "gg-RCaaZyaG_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_34.png",
-        "gg-RCaaZyaG_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_61.png"
-      }
-    },
-    "gp_section_627308483254944555": {
-      "type": "gp-section-627308483254944555",
-      "settings": {
-        "section_preload": "false",
-        "checksum": "b878f098f969e26c261efeb2969a155051d77ae6716f46d0ad9d7393fed4fbfe_1_1_1_0__1",
-        "ggcwpEtSVwt_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280648.png",
-        "gg57IdG_QBK_text": "Bright Daily Smiles Shine After Use",
-        "ggrggzYy_FQ_text": "<p>Gsmile keeps my teeth clean and gums healthy every day.</p>",
-        "gguva53FI3X_label": "<p><u>Buy Now</u></p>",
-        "ggntTo8SPBD_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280649.png",
-        "ggWWXlAWm1J_text": "Effortless Flossing, Maximum Comfort",
-        "ggETO2NdFGq_text": "<p>I enjoy gentle, thorough cleaning with Gsmile, perfect for gums.</p>",
-        "ggrXIgSQXh0_label": "<p><u>Buy Now</u></p>",
-        "ggQjm8Zaiwa_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280650_85a7dfd6-5237-4161-8b20-19ab16cf32de.png",
-        "ggs3wywkRIO_text": "Confident Smiles Every Morning",
-        "ggK3Ro0IgL0_text": "<p>Using Gsmile daily gives me fresh breath and sparkling.</p>",
-        "ggHmaUyEtE-_label": "<p><u>Buy Now</u></p>",
-        "gg65dCcSX0O_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280648.png",
-        "ggDA_tte8bU_text": "Bright Daily Smiles Shine After Use",
-        "ggP25QxEU_U_text": "<p>Gsmile keeps my teeth clean and gums healthy every day.</p>",
-        "gg3K2Lg1Di8_label": "<p><u>Buy Now</u></p>"
-      }
-    },
-    "gp_section_627308483187835691": {
-      "type": "gp-section-627308483187835691",
-      "settings": {
-        "section_preload": "false",
-        "checksum": "32271317c592f99f1a67f3f21a16d7204d7e64d03108e531935714911f050c3f_1_1_1_0__1",
-        "ggAdwwOyetj_text": "Discover Gsmile Key Advantages Today",
-        "ggrJE_I_MS6_text": "<p>Enjoy cleaner teeth, healthier gums, and easier daily oral care routines everywhere.</p>",
-        "gggAOw7hPZR_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280656.png",
-        "ggoqCy0H37z_text": "Powerful Plaque Removal System",
-        "ggLeU1JQGIV_text": "<p>Gsmile’s water jet reaches deep, removing plaque effortlessly. Teeth feel cleaner, gums healthier, flossing easier.</p>",
-        "ggV4P-mDy9N_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280658_d2d47594-5969-4222-8c90-5a7e04f49df2.png",
-        "ggixKnzoqj2_text": "Long-Lasting Rechargeable Battery",
-        "ggRkA9NVKGz_text": "<p>The rechargeable battery delivers 30 minutes consistent power. Floss anywhere without worrying.</p>",
-        "ggwc2SvMnqZ_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280655.png",
-        "ggBSSvY8Hjn_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280657.png",
-        "ggUi3ZPJx0M_text": "Compact Travel Friendly Design",
-        "ggjyeIyT253_text": "<p>Slim and lightweight, Gsmile fits any bathroom or bag. Take it anywhere, enjoy flossing.</p>",
-        "ggZNAqVk8rg_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280659.png",
-        "ggMdGfaTbXM_text": "Dentist Recommended For Everyone",
-        "ggxabs6eIBs_text": "<p>Clinically designed to support gum health while cleaning teeth. Trusted professionals, Gsmile maintains hygiene effectively.</p>"
-      }
+        "gg-RCaaZyaG_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_61.png",
+        "section_preload": "true"
+      },
+      "type": "gp-section-627308483154281047"
     },
     "gp_section_627308483187835479": {
-      "type": "gp-section-627308483187835479",
       "settings": {
-        "section_preload": "false",
         "checksum": "f6024a9537b6e8515257d61af40d4095cb6613536ee72a85b16fc5f329d8e4f2_1_1_1_0__1",
-        "ggWRoQI2K_D_text": "FAQs",
+        "gg1Ovdn3ezF_text": "<p>The rechargeable battery lasts up to 30 minutes of continuous use, enough for multiple sessions.</p>",
+        "gg9487Pj5C1_text": "<p>Gsmile comes with 3 ready-to-use tips, which can be swapped easily for different needs.</p>",
         "ggBOIbE9tXC_text": "<p>Got questions? We’ve got answer...</p>",
+        "ggD2WDv80hi_text": "<p>Yes! Its compact, lightweight design makes it perfect for travel and easy to pack.</p>",
         "ggGRMYFEc-I_childItem_0": "<p>How long does the battery last on a single charge?</p>",
         "ggGRMYFEc-I_childItem_1": "<p>Can I take Gsmile when I travel?</p>",
         "ggGRMYFEc-I_childItem_2": "<p>Is Gsmile safe for sensitive gums?</p>",
         "ggGRMYFEc-I_childItem_3": "<p>How many nozzles come with the Gsmile water flosser?</p>",
         "ggGRMYFEc-I_childItem_4": "<p>Does it remove plaque better than traditional floss?</p>",
         "ggGRMYFEc-I_childItem_5": "<p>How often should I use the Gsmile water flosser?</p>",
-        "gg1Ovdn3ezF_text": "<p>The rechargeable battery lasts up to 30 minutes of continuous use, enough for multiple sessions.</p>",
-        "ggD2WDv80hi_text": "<p>Yes! Its compact, lightweight design makes it perfect for travel and easy to pack.</p>",
+        "ggWRoQI2K_D_text": "FAQs",
         "ggdLseVBeKv_text": "<p>Absolutely. The water pressure is gentle yet effective, suitable even for sensitive gums.</p>",
-        "gg9487Pj5C1_text": "<p>Gsmile comes with 3 ready-to-use tips, which can be swapped easily for different needs.</p>",
         "ggiygJVPX4J_text": "<p>Yes, the targeted water jet reaches tight spaces and removes plaque more effectively than string floss.</p>",
         "ggur6bbjHEM_text": "<p>For optimal oral health, use Gsmile once daily, ideally before bedtime, for cleaner teeth and healthier gums.</p>"
-      }
+      },
+      "type": "gp-section-627308483187835479"
+    },
+    "gp_section_627308483187835691": {
+      "settings": {
+        "checksum": "32271317c592f99f1a67f3f21a16d7204d7e64d03108e531935714911f050c3f_1_1_1_0__1",
+        "ggAdwwOyetj_text": "Discover Gsmile Key Advantages Today",
+        "ggBSSvY8Hjn_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280657.png",
+        "ggLeU1JQGIV_text": "<p>Gsmile’s water jet reaches deep, removing plaque effortlessly. Teeth feel cleaner, gums healthier, flossing easier.</p>",
+        "ggMdGfaTbXM_text": "Dentist Recommended For Everyone",
+        "ggRkA9NVKGz_text": "<p>The rechargeable battery delivers 30 minutes consistent power. Floss anywhere without worrying.</p>",
+        "ggUi3ZPJx0M_text": "Compact Travel Friendly Design",
+        "ggV4P-mDy9N_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280658_d2d47594-5969-4222-8c90-5a7e04f49df2.png",
+        "ggZNAqVk8rg_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280659.png",
+        "gggAOw7hPZR_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280656.png",
+        "ggixKnzoqj2_text": "Long-Lasting Rechargeable Battery",
+        "ggjyeIyT253_text": "<p>Slim and lightweight, Gsmile fits any bathroom or bag. Take it anywhere, enjoy flossing.</p>",
+        "ggoqCy0H37z_text": "Powerful Plaque Removal System",
+        "ggrJE_I_MS6_text": "<p>Enjoy cleaner teeth, healthier gums, and easier daily oral care routines everywhere.</p>",
+        "ggwc2SvMnqZ_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280655.png",
+        "ggxabs6eIBs_text": "<p>Clinically designed to support gum health while cleaning teeth. Trusted professionals, Gsmile maintains hygiene effectively.</p>"
+      },
+      "type": "gp-section-627308483187835691"
+    },
+    "gp_section_627308483204612973": {
+      "settings": {
+        "checksum": "ef80f93dd37f204a6185960048e2b8dc3c33f3e1fc0010b91a8a8ece903df8ae_1_1_1_0__1",
+        "gg-bV-Re4Gy_text": "<p><strong>Emily Carter</strong></p>",
+        "gg3C3yek08D_text": "<p><strong>Jason Reed</strong></p>",
+        "gg4-3V7CNpE_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280650_85a7dfd6-5237-4161-8b20-19ab16cf32de.png",
+        "gg6rNqArLcz_text": "<p>💖</p>",
+        "gg7u3y1wMZi_text": "<p>Usuario Verificado</p>",
+        "ggBMT1TX_ru_text": "<p>😍</p>",
+        "ggBjsnZZtGF_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280648.png",
+        "ggCojlOO9Mr_text": "<p>I didn’t expect such a difference, but Gsmile proved it fast. The deep clean feels <span style=\"background-color:#B7FFFA;\"><strong>professionally done</strong></span>, and my breath stays <span style=\"background-color:#B7FFFA;\"><strong>fresh for hours</strong></span> without trying.</p>",
+        "ggF6GsMZbc8_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Male9.jpg?v=1783436772",
+        "ggGllZE6fib_text": "<p>Gsmile has made brushing feel effortless. My teeth feel <span style=\"background-color:#C1FFFD;\"><strong>noticeably cleaner</strong></span> every day, and the gentle power gives me <span style=\"background-color:#C1FFFD;\"><strong>surprising comfort</strong></span> even on sensitive mornings.</p>",
+        "ggHKN2ZoNWi_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/WhatsApp_Image_2026-06-30_at_3.31.42_PM.jpg?v=1782848368",
+        "ggHKN2ZoNWi_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/WhatsApp_Image_2026-06-30_at_3.31.42_PM.jpg?v=1782848368",
+        "ggKCe80AcWf_text": "<p>✨</p>",
+        "ggMEDlu2O_v_text": "<p>😘</p>",
+        "ggRPyP_9VkZ_text": "<p>Verified Buyer</p>",
+        "ggSKPZ0wFfO_text": "<p><strong>Stephanie Galea</strong></p>",
+        "ggT9jAnTxTA_text": "<p>💖</p>",
+        "ggWRLQoXn15_text": "<p>😘</p>",
+        "ggXjhurDoLb_text": "<p>🍀</p>",
+        "ggamr6QkSjh_text": "<p>Verified Buyer</p>",
+        "ggbEhN0otrm_text": "<p>Corro diariamente, y desde que uso este producto, mis articulaciones me han agradecido.</p>",
+        "ggfCQJOZdu-_text": "<p><strong>German Garrido</strong></p>",
+        "ggg8dhBubhu_text": "<p>🌟</p>",
+        "gglDBneii9j_text": "<p>✨</p>",
+        "ggoNntKaPck_text": "<p>😍</p>",
+        "ggqLthYy_OM_text": "<p>A pesar de que tengo solo 30 años ya había estado sufriendo de dolores de articulación, y esta crema no solo me alivió, me ayudó mucho con mi piel tambien.&nbsp;</p>",
+        "ggrE4Aq9GNR_text": "<p>🍀</p>",
+        "ggwMEFlnTn5_text": "<p>Usuario Verificado</p>",
+        "ggzfWUx8GOl_text": "<p>🌟</p>"
+      },
+      "type": "gp-section-627308483204612973"
     },
     "gp_section_627308483254944427": {
-      "type": "gp-section-627308483254944427",
       "settings": {
-        "section_preload": "false",
         "checksum": "5e37e1c89ff9137a5c60462c3269c6b4ca1b19568dfa8cec756584a22deb408e_1_1_1_0__1",
         "gg4Ivivo2mk_label": "FAQ ",
-        "ggH2WHQ6DVz_label": "Delivery Information",
-        "ggum9NSoJPX_label": "Return &amp; Exchange ",
-        "ggidDn_kvLC_label": "Contact Us",
-        "ggJ51u7Uhzg_text": "<p>Copyright © 2025 GemPages.</p>",
-        "gggdx9PtIXX_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-9b75870f-ca0f-4a2e-8cfa-4cab8c390344.png",
         "gg7F0CO_yzn_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-f20d9943-7c65-42da-87bd-dd7209ee237f.png",
-        "gglbNcVCbXG_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-f12df0fc-9708-4fbf-82a8-601f2f0d70ef.png",
+        "ggA4d07_Gu0_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-1cd135b4-e229-45c0-8552-08ed7005ead1.png",
+        "ggH2WHQ6DVz_label": "Delivery Information",
+        "ggJ51u7Uhzg_text": "<p>Copyright © 2025 GemPages.</p>",
         "ggRnwx7nyNh_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-762669bf-c0d4-41a3-8fc4-c835555dae7d.png",
-        "ggA4d07_Gu0_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-1cd135b4-e229-45c0-8552-08ed7005ead1.png"
-      }
-    },
-    "17834365390c55be03": {
-      "type": "apps",
-      "blocks": {
-        "releasit_cod_form_button_app_block_hgKwyW": {
-          "type": "shopify://apps/releasit-cod-form/blocks/button-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
+        "gggdx9PtIXX_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-9b75870f-ca0f-4a2e-8cfa-4cab8c390344.png",
+        "ggidDn_kvLC_label": "Contact Us",
+        "gglbNcVCbXG_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-f12df0fc-9708-4fbf-82a8-601f2f0d70ef.png",
+        "ggum9NSoJPX_label": "Return &amp; Exchange "
       },
-      "block_order": [
-        "releasit_cod_form_button_app_block_hgKwyW"
-      ],
-      "settings": {}
+      "type": "gp-section-627308483254944427"
+    },
+    "gp_section_627308483254944555": {
+      "settings": {
+        "checksum": "b878f098f969e26c261efeb2969a155051d77ae6716f46d0ad9d7393fed4fbfe_1_1_1_0__1",
+        "gg3K2Lg1Di8_label": "<p><u>Buy Now</u></p>",
+        "gg57IdG_QBK_text": "Bright Daily Smiles Shine After Use",
+        "gg65dCcSX0O_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280648.png",
+        "ggDA_tte8bU_text": "Bright Daily Smiles Shine After Use",
+        "ggETO2NdFGq_text": "<p>I enjoy gentle, thorough cleaning with Gsmile, perfect for gums.</p>",
+        "ggHmaUyEtE-_label": "<p><u>Buy Now</u></p>",
+        "ggK3Ro0IgL0_text": "<p>Using Gsmile daily gives me fresh breath and sparkling.</p>",
+        "ggP25QxEU_U_text": "<p>Gsmile keeps my teeth clean and gums healthy every day.</p>",
+        "ggQjm8Zaiwa_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280650_85a7dfd6-5237-4161-8b20-19ab16cf32de.png",
+        "ggWWXlAWm1J_text": "Effortless Flossing, Maximum Comfort",
+        "ggcwpEtSVwt_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280648.png",
+        "ggntTo8SPBD_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280649.png",
+        "ggrXIgSQXh0_label": "<p><u>Buy Now</u></p>",
+        "ggrggzYy_FQ_text": "<p>Gsmile keeps my teeth clean and gums healthy every day.</p>",
+        "ggs3wywkRIO_text": "Confident Smiles Every Morning",
+        "gguva53FI3X_label": "<p><u>Buy Now</u></p>"
+      },
+      "type": "gp-section-627308483254944555"
+    },
+    "gp_section_627308483271721559": {
+      "settings": {
+        "checksum": "027185750ca8fa7198f072fe5cb769b135b432fe33b2642db3cac843eebc646f_1_1_1_0__1",
+        "gg1IipUCILl_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280654.png",
+        "gg3COTL3xSf_label": "<p>Buy </p>",
+        "gg5JDr8HFy7_label": "<p>Buy </p>",
+        "ggCYft18Fss_label": "<p>Buy </p>",
+        "ggD2NfBjFyv_text": "<p>Gsmile Water Flosser </p>",
+        "ggEhecFAUKG_text": "<p>$123.00 </p>",
+        "ggGJSGsFnXM_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/wcp2.png",
+        "ggKNVyEydQ9_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/wcp2.png",
+        "ggL9LH0CNa0_label": "<p>Buy </p>",
+        "ggLN3yc-Dm-_text": "<p>$123.00 </p>",
+        "ggMToGRz2cS_text": "Happy Customers, Real Smiles",
+        "ggMqtBjrfKJ_text": "<p>Gsmile Water Flosser </p>",
+        "ggP8r4GLezx_label": "<p>Buy Now</p>",
+        "ggQ4B4W99Ju_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280652.png",
+        "ggXQWin3GHo_text": "<p>Gsmile Water Flosser</p>",
+        "ggauFgrtWqM_text": "<p>$123.00 </p>",
+        "ggbAFiKDdm7_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/wcp2.png",
+        "ggcLBXT0YU0_text": "<p>$123.00 </p>",
+        "ggcpkVClLEn_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/wcp2.png",
+        "ggg9MbsKNtZ_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280653.png",
+        "gglmXUyIhgh_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280652.png",
+        "ggnjXrCr7-3_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/wcp2.png",
+        "ggtiK-CXLAb_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280651.png",
+        "ggvmVhtLZS2_text": "<p>Gsmile Water Flosser </p>",
+        "ggvwI8B5M4g_text": "<p>Gsmile Water Flosser</p>",
+        "ggysJbb7xZV_text": "<p>$123.00 </p>",
+        "section_preload": "true"
+      },
+      "type": "gp-section-627308483271721559"
+    },
+    "gp_section_627308483707929175": {
+      "settings": {
+        "checksum": "aa7c2d57ce69465a2beb3e64c05051f8f6019aee5ffc938fd269ff7eb394aabc_1_1_1_0__1",
+        "gg6xYDSirKD_viewLessText": "Show less",
+        "gg6xYDSirKD_viewMoreText": "Show more",
+        "ggOU6x_JHoR_text": "<p>Cantidad:</p>",
+        "ggdCF4j6r-o_displayContent": "Sale {percent_discount} off",
+        "ggtiNJY75VW_text": "<p>+200 clientes.</p>",
+        "section_preload": "true"
+      },
+      "type": "gp-section-627308483707929175"
     }
   },
   "order": [
@@ -237,7 +217,6 @@
     "gp_section_627308482986508971",
     "gp_section_627308483707929175",
     "gp_section_627308483204612973",
-    "17834365390c55be03",
     "gp_section_627308482986574507",
     "gp_section_627308483271721559",
     "gp_section_627308483154281047",
