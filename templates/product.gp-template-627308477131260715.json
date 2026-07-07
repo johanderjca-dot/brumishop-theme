@@ -95,7 +95,7 @@
     },
     "gp_section_627308483204612973": {
       "settings": {
-        "checksum": "24659448ac5a9a910775f4a0b0f7b6848d000d54e584f5c5806deda5077fab01_1_1_1_0__1",
+        "checksum": "a69cc325b45c0b8d27c877172b0451ffc0a89978aad12fdc36316e214760dd43_1_1_1_0__1",
         "gg-bV-Re4Gy_text": "<p><strong>Emily Carter</strong></p>",
         "gg3C3yek08D_text": "<p><strong>Jason Reed</strong></p>",
         "gg4-3V7CNpE_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280650_85a7dfd6-5237-4161-8b20-19ab16cf32de.png",
@@ -106,11 +106,12 @@
         "ggF6GsMZbc8_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280650_85a7dfd6-5237-4161-8b20-19ab16cf32de.png",
         "ggGllZE6fib_text": "<p>Gsmile has made brushing feel effortless. My teeth feel <span style=\"background-color:#C1FFFD;\"><strong>noticeably cleaner</strong></span> every day, and the gentle power gives me <span style=\"background-color:#C1FFFD;\"><strong>surprising comfort</strong></span> even on sensitive mornings.</p>",
         "ggHKN2ZoNWi_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/Frame_1171280648.png",
+        "ggHKN2ZoNWi_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/WhatsApp_Image_2026-06-30_at_3.31.42_PM.jpg?v=1782848368",
         "ggKCe80AcWf_text": "<p>✨</p>",
         "ggKL56KcdnT_text": "<p>Verified Buyer</p>",
         "ggMEDlu2O_v_text": "<p>😘</p>",
         "ggRPyP_9VkZ_text": "<p>Verified Buyer</p>",
-        "ggSKPZ0wFfO_text": "<p><strong>Emily Carter</strong></p>",
+        "ggSKPZ0wFfO_text": "<p><strong>Stephanie Galea</strong></p>",
         "ggT9jAnTxTA_text": "<p>💖</p>",
         "ggWRLQoXn15_text": "<p>😘</p>",
         "ggXjhurDoLb_text": "<p>🍀</p>",
@@ -120,9 +121,9 @@
         "ggg8dhBubhu_text": "<p>🌟</p>",
         "gglDBneii9j_text": "<p>✨</p>",
         "ggoNntKaPck_text": "<p>😍</p>",
-        "ggqLthYy_OM_text": "<p>Gsmile has made brushing feel effortless. My teeth feel <span style=\"background-color:#C1FFFD;\"><strong>noticeably cleaner</strong></span> every day, and the gentle power gives me <span style=\"background-color:#C1FFFD;\"><strong>surprising comfort</strong></span> even on sensitive mornings.</p>",
+        "ggqLthYy_OM_text": "<p>A pesar de que tengo solo 30 años ya había estado sufriendo de dolores de articulación, y esta crema no solo me alivió, me ayudó mucho con mi piel tambien.&nbsp;</p>",
         "ggrE4Aq9GNR_text": "<p>🍀</p>",
-        "ggwMEFlnTn5_text": "<p>Verified Buyer</p>",
+        "ggwMEFlnTn5_text": "<p>Usuario Verificado</p>",
         "ggzfWUx8GOl_text": "<p>🌟</p>"
       },
       "type": "gp-section-627308483204612973"
@@ -200,10 +201,12 @@
     },
     "gp_section_627308483707929175": {
       "settings": {
-        "checksum": "a2a608f88c28fb2dfb1794e6758a643065ff926d161a3131976087fa8000f893_1_1_1_0__1",
+        "checksum": "aa7c2d57ce69465a2beb3e64c05051f8f6019aee5ffc938fd269ff7eb394aabc_1_1_1_0__1",
         "gg6xYDSirKD_viewLessText": "Show less",
         "gg6xYDSirKD_viewMoreText": "Show more",
-        "ggOU6x_JHoR_text": "Quantity",
+        "ggOU6x_JHoR_text": "<p>Cantidad:</p>",
+        "ggdCF4j6r-o_displayContent": "Sale {percent_discount} off",
+        "ggtiNJY75VW_text": "<p>+200 clientes.</p>",
         "section_preload": "true"
       },
       "type": "gp-section-627308483707929175"
@@ -213,12 +216,12 @@
     "gp_section_627308483137503915",
     "gp_section_627308482986508971",
     "gp_section_627308483707929175",
+    "gp_section_627308483204612973",
     "gp_section_627308482986574507",
     "gp_section_627308483271721559",
     "gp_section_627308483154281047",
     "gp_section_627308483254944555",
     "gp_section_627308483187835691",
-    "gp_section_627308483204612973",
     "gp_section_627308483187835479",
     "gp_section_627308483254944427"
   ]
