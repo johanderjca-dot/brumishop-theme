@@ -193,10 +193,11 @@
     },
     "gp_section_627347377220485719": {
       "settings": {
-        "checksum": "aa74bfaec98d29cd6dfedafef0f769dfdad99ea7652e499aa49c687351b4bd0d_1_1_1_0__1",
+        "checksum": "ad69fba5ec8926dbe3a025a429e0cb9574e744879ae1d674de2d81a68b2d2b7c_1_1_1_0__1",
         "gg6uVrvU94p_text": "Esto es lo que nos hace únicos:",
         "ggOycUkYq77_text": "<p><span style=\"background-color:rgba(255,255,255,0);\">Aquí no hay trucos, solo buenos ingredientes.</span></p>",
         "ggzO1DzDdqz_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Why_choose_us.png",
+        "ggzO1DzDdqz_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Why_choose_us_1.png",
         "ggzO1DzDdqz_srcSet_tablet_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Why_choose_us.png",
         "section_preload": "true"
       },
