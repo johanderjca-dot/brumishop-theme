@@ -21,7 +21,7 @@
     },
     "gp_section_627347376851386967": {
       "settings": {
-        "checksum": "addb6b99c8add6f68060506247cbb76b7c3ff6c02edd512dcaff5aa48b4cede9_1_1_1_0__1",
+        "checksum": "61ca3d1c74296cbf1e38d05e69e42a124dd8183d572f546d7b2485af08c76693_1_1_1_0__1",
         "gg4dlVkO0jq_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/katherine_galea.png",
         "gg4dlVkO0jq_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/katherine_galea.png",
         "ggHCPK-Z7ED_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-a377caca-ff52-4ae2-bc6c-30716a04acd6.png",
@@ -148,6 +148,28 @@
         "ggxX7ind5lN_background_mobile_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4"
       },
       "type": "gp-section-627457803111367467"
+    },
+    "gp_section_627461358354432905": {
+      "settings": {
+        "checksum": "81405a41eb573d46f9f38b0d50686036d97c506ca86a05a5b35e9d14d47af37d_1_1_1_0__1",
+        "gg9xt6syqSM_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/vecteezy_skin-renewal-procedures_80866914_efd73326-1e0e-4b66-8ae4-cfd35f159b91.jpg",
+        "gg9xt6syqSM_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/vecteezy_spalike-scene-with-woman-and-sugar-scrub-woman-enjoying_75572153_afd83190-37c6-4580-8bdc-03688ca75b99.jpg",
+        "ggEAMkwVrIw_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/vecteezy_spalike-scene-with-woman-and-sugar-scrub-woman-enjoying_75572153_afd83190-37c6-4580-8bdc-03688ca75b99.jpg",
+        "ggEAMkwVrIw_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/vecteezy_skin-renewal-procedures_80866914_efd73326-1e0e-4b66-8ae4-cfd35f159b91.jpg",
+        "ggEeRtfUifb_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Gemini_Generated_Image_28sj1b28sj1b28sj_b9d1f215-390d-4724-986f-32c4ccc6af0f.png",
+        "ggEeRtfUifb_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/small-vecteezy_woman-applying-skincare-in-a-bright-bathroom-with-modern_67813361_small_55eec98b-ff66-4926-b35e-ff83065c83b3.jpg?v=1783520796",
+        "ggFWgjgeF7p_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/vecteezy_masseur-apply-a-mud-scrub-to-a-woman-s-legs-the-peeling_80929972_5ce8314b-47c0-4a80-b8d2-8a659f9cb031.jpg",
+        "ggFWgjgeF7p_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/vecteezy_masseur-apply-a-mud-scrub-to-a-woman-s-legs-the-peeling_80929972_5ce8314b-47c0-4a80-b8d2-8a659f9cb031.jpg",
+        "ggHUkox4cHi_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Rutina.png?v=1783520477",
+        "ggJsit3HVQe_text": "La confianza de miles de personas con piel más suave y radiante 😻",
+        "ggQiiotGPum_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/katherine_galea.png",
+        "ggQiiotGPum_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/katherine_galea.png",
+        "ggYl_7A8Leb_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-a377caca-ff52-4ae2-bc6c-30716a04acd6.png",
+        "ggYl_7A8Leb_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Gemini_Generated_Image_28sj1b28sj1b28sj.png?v=1783520920",
+        "ggYl_7A8Leb_srcSet_tablet_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/small-vecteezy_woman-applying-skincare-in-a-bright-bathroom-with-modern_67813361_small_eeea2bfc-2a74-4a76-a98e-b150aab3d453.jpg",
+        "ggzP5guOkdl_text": "<p><span style=\"background-color:rgba(255,255,255,0);\">De piel opaca a piel radiante.</span></p>"
+      },
+      "type": "gp-section-627461358354432905"
     }
   },
   "order": [
@@ -157,6 +179,7 @@
     "gp_section_627454315916690007",
     "gp_section_627347377220485719",
     "gp_section_627457803111367467",
+    "gp_section_627461358354432905",
     "gp_section_627347376935273325",
     "gp_section_627347376918496043"
   ]
