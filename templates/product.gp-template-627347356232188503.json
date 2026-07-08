@@ -21,7 +21,7 @@
     },
     "gp_section_627347376851386967": {
       "settings": {
-        "checksum": "9aeda8ddcc83931b15333cbf58c0e6a1e7a25a3603ac6f0b465f291a022f6eb1_1_1_1_0__1",
+        "checksum": "075b1a2e519d4630c610f42c9a2fffac0171c6d2bfbb1e0a5f17d4d48ade999d_1_1_1_0__1",
         "gg4dlVkO0jq_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-dc5ca1ca-85f7-4883-839b-79bce9ef9586.png",
         "gg4dlVkO0jq_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/katherine_galea.png",
         "ggHCPK-Z7ED_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-a377caca-ff52-4ae2-bc6c-30716a04acd6.png",
@@ -234,12 +234,19 @@
         "section_preload": "true"
       },
       "type": "gp-section-627347377220485719"
+    },
+    "gp_section_627454315916690007": {
+      "settings": {
+        "checksum": "a2a672212329d3f765263a7306f3201eeee24c1645dbd3cecbcb8c7f28684701_1_1_1_0__1"
+      },
+      "type": "gp-section-627454315916690007"
     }
   },
   "order": [
     "gp_section_627347377035936621",
     "gp_section_627347376733946667",
     "gp_section_627347376851386967",
+    "gp_section_627454315916690007",
     "gp_section_627347377220485719",
     "gp_section_627347376952050475",
     "gp_section_627347377019159211",
