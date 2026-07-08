@@ -141,7 +141,7 @@
     },
     "gp_section_627347377035936621": {
       "settings": {
-        "checksum": "79a31224aa05440d11bf0a62e1a0fe2d84bbb158b3166572da1999f328422b41_1_1_1_0__1",
+        "checksum": "8b4d3ee394e8d3d1ebd6e3c8c248b445ef03967394ccc6fbb2ed9b19b4723784_1_1_1_0__1",
         "gg7QMxmUbwG_text": "<p>120 reseñas verificadas</p>",
         "gg99SwaDTS1_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Dull_Blue_White_3D_Illustration_Cash_On_Delivery_Service_Instagram_Post_1200_x_420_px.png?v=1783514638",
         "gg99SwaDTS1_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Dull_Blue_White_3D_Illustration_Cash_On_Delivery_Service_Instagram_Post_1200_x_420_px.png?v=1783514638",
@@ -243,7 +243,8 @@
         "ggpxS5h6rCl_text": "<p>Each chew promotes relaxation without causing drowsiness.</p>",
         "ggqjK-vJYT5_text": "<p>Probiotic Blend</p>",
         "ggqvtqfFPlA_text": "<p>Peanut Butter Protein</p>",
-        "ggrz9WxbeUR_text": "<p>Turmeric Extract</p>"
+        "ggrz9WxbeUR_text": "<p>Turmeric Extract</p>",
+        "section_preload": "true"
       },
       "type": "gp-section-627347377220485719"
     }
