@@ -45,13 +45,13 @@
       {%- liquid
         if request.page_type == 'product'
           if 'static' == 'static'
-            if 'latest' == 'latest'
+            if '8950327836870' == 'latest'
               paginate collections.all.products by 100000
                 assign product = collections.all.products | sort: 'created_at' | reverse | first
               endpaginate
             else
-              assign product = all_products['']
-              assign productId = 'latest' | times: 1
+              assign product = all_products['artiflex']
+              assign productId = '8950327836870' | times: 1
               if product == empty or product == null
                 paginate collections.all.products by 100000
                   for item in collections.all.products
@@ -64,13 +64,13 @@
             endif
           endif
         else
-          if 'latest' == 'latest'
+          if '8950327836870' == 'latest'
             paginate collections.all.products by 100000
               assign product = collections.all.products | sort: 'created_at'| reverse | first
             endpaginate
           else
-            assign product = all_products['']
-            assign productId = 'latest' | times: 1
+            assign product = all_products['artiflex']
+            assign productId = '8950327836870' | times: 1
             if product == empty or product == null
               paginate collections.all.products by 100000
                 for item in collections.all.products
@@ -1231,7 +1231,7 @@
       role="presentation"
       data-id="g1YI32Hmtf"
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:center"
-      class="gp-group/image gp-relative force-publish-1783447084243 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto g1YI32Hmtf"
+      class="gp-group/image gp-relative force-publish-1783515285635 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto g1YI32Hmtf"
     >
       <div
         
@@ -1269,7 +1269,7 @@
       role="presentation"
       data-id="gvJDw7O5uQ"
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:center"
-      class="gp-group/image gp-relative force-publish-1783447084244 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gvJDw7O5uQ"
+      class="gp-group/image gp-relative force-publish-1783515285636 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gvJDw7O5uQ"
     >
       <div
         
