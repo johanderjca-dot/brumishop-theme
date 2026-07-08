@@ -1130,95 +1130,13 @@
       style="--jc:start"
       class="gvIJtutBQw gp-relative gp-flex gp-flex-col"
     >
-      <div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_PRODUCT;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l);--mb-mobile:0px" class="g-nMb4U8sV ">
-      {% unless product %}<p>{{ 'gempages.ProductTitle.product_not_found' | t }}</p>{% else %}
-      <gp-product-title
-        gp-data='{"setting":{"linkProduct":false},"uid":"g-nMb4U8sV"}'
-      >
-        
-    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-    <div data-id="g-nMb4U8sV"
-        class="g-nMb4U8sV"
-        style="--dynamic-source-color:#F4F4F4"
-      >
-      <div  >
-        <h2
-          data-gp-text
-          class=" gp-text-instant"
-          style="--w:100%;--tdt:auto;--ts:none;--ta:left;--ta-mobile:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:#294C43;--fs:normal;--ff:var(--g-font-heading, heading);--weight:700;--size:32px;--size-tablet:24px;--size-mobile:22px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--tt:none;word-break:break-word;overflow:hidden"
-        >
-          {{ product.title }}
-        </h2>
-      </div>
-    </div>
-    
-      </gp-product-title>
-      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-title-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
-    {% endunless %}
-      </div><div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_PRODUCT;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l);--mb-mobile:3px" class="g6xYDSirKD ">
-      {% if product.description == blank %}{% else %}
-    <gp-product-description
-      data-id="g6xYDSirKD"
-      class="gp-product-description undefined"
-      gp-data='{"setting":{"lineClamp":{"desktop":3},"hasLineClamp":{"desktop":true},"viewMoreText":"{{ section.settings.gg6xYDSirKD_viewMoreText }}","viewLessText":"{{ section.settings.gg6xYDSirKD_viewLessText }}","enableViewMoreIcon":true},"textStyle":{"--ts":"none","--c":"#294C43","--fs":"normal","--ff":"var(--g-font-body, body)","--weight":"400","--size":"16px","--size-tablet":"16px","--size-mobile":"14px","--lh":"150%","--lh-tablet":"150%","--lh-mobile":"150%","--ls":"normal","--ls-tablet":"normal","--ls-mobile":"normal","--maxh":"calc(3 * 1lh)","--maxh-tablet":"calc(3 * 1lh)","--maxh-mobile":"calc(3 * 1lh)","--line-clamp":3,"--line-clamp-tablet":3,"--line-clamp-mobile":3}}'
-      data-view-more-text="{{ section.settings.gg6xYDSirKD_viewMoreText }}"
-      data-view-less-text="{{ section.settings.gg6xYDSirKD_viewLessText }}"
-    >
-      <style>
-      .p-description-wrapper.gp-p-description-text * {
-        color: inherit;
-        line-height: inherit !important;
-      }</style>
-      <style>
-   .gp-p-description-text > :not(ol, ul, table, div, style, script) {
-      display: inline !important;
-    }
-
-    .gp-p-description-text > :not(ol, ul, table, div, style, script)::after {
-      content: "";
-      display: block; /* đảm bảo xuống dòng trên Safari/iOS */
-    }
-    .gp-p-description-text > table {
-      box-shadow: none;
-    }
-  </style>
-      <div class="gp-rotate-180 gp-hidden" ></div>
-      {% unless product %}<p>Product not found</p>{% else %}<div data-gp-text class="gp-relative  gp-p-description-text gp-break-words safari:[&_p]:gp-inline safari:[&_p]:after:gp-whitespace-pre p-description-wrapper gp-text-g-text-2 data-[browser=safari]:after:gp-content-[' '] data-[browser=safari]:after:gp-absolute data-[browser=safari]:after:gp-left-0 data-[browser=safari]:after:gp-right-0 data-[browser=safari]:after:gp-bottom-0 data-[browser=safari]:after:gp-w-full data-[browser=safari]:after:gp-h-1/2 data-[browser=safari]:after:gp-bg-gradient-to-t data-[browser=safari]:after:gp-from-white" style="--ts:none;--c:#294C43;--fs:normal;--ff:var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--maxh:calc(3 * 1lh);--maxh-tablet:calc(3 * 1lh);--maxh-mobile:calc(3 * 1lh);--line-clamp:3;--line-clamp-tablet:3;--line-clamp-mobile:3">
-          {{product.description}}
-        </div>
-        {% unless product.description == blank %}<button type="button" class="p-description-show-more gp-items-center gp-mt-4 gp-w-full gp-transition-all hover:gp-opacity-80 " style="--fs:normal;--ff:var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--c:#294C43;--d:inline-flex;--d-mobile:inline-flex;--d-tablet:inline-flex">
-          <span class="gp-show-more-text">
-            {{ section.settings.gg6xYDSirKD_viewMoreText }}
-          </span>
-          <span class="gp-show-more-icon gp-ml-1"><svg height="1em" width="1em" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM11 11L10.2929 11.7071C10.6834 12.0976 11.3166 12.0976 11.7071 11.7071L11 11ZM21.7071 1.70711C22.0976 1.31658 22.0976 0.683417 21.7071 0.292893C21.3166 -0.0976311 20.6834 -0.0976311 20.2929 0.292893L21.7071 1.70711ZM0.292893 1.70711L10.2929 11.7071L11.7071 10.2929L1.70711 0.292893L0.292893 1.70711ZM11.7071 11.7071L21.7071 1.70711L20.2929 0.292893L10.2929 10.2929L11.7071 11.7071Z"
-              fill="currentColor"/>
-        </svg></span>
-          </button>{% endunless %}{% endunless %}
-    </gp-product-description>
-
-    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-description-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
-  {% endif %}
-      </div>
-    
-
-    
-
-    
-    <gp-row gp-data='{"background":{},"uid":"gr4vDKLXEh"}' data-id="gr4vDKLXEh" id="gr4vDKLXEh" data-same-height-subgrid-container class="gr4vDKLXEh gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--mb:var(--g-s-l);--pt:var(--g-s-l);--pl:var(--g-s-l);--pb:var(--g-s-l);--pr:var(--g-s-l);--mb-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--cg:16px;--rg:0px;--gtc:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--h:auto;--pc:start">
-      
-
-      <div
-      data-same-height-display-contents
-      style="--jc:start"
-      class="gPMoIaMdbt gp-relative gp-flex gp-flex-col"
-    >
       
     
 
     
 
     
-    <gp-row gp-data='{"background":{},"uid":"gyGhfMZgz_"}' data-id="gyGhfMZgz_" id="gyGhfMZgz_" data-same-height-subgrid-container class="gyGhfMZgz_ gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--cg:16px;--cg-mobile:0px;--rg:16px;--rg-tablet:16px;--rg-mobile:0px;--gtc:minmax(0, 6fr) minmax(0, 6fr);--gtc-mobile:minmax(0, 6fr) minmax(0, 6fr);--w:var(--g-ct-w, 1200px);--h:auto;--pc:start">
+    <gp-row gp-data='{"background":{},"uid":"gyGhfMZgz_"}' data-id="gyGhfMZgz_" id="gyGhfMZgz_" data-same-height-subgrid-container class="gyGhfMZgz_ gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--mb:var(--g-s-l);--mb-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--cg:16px;--cg-mobile:0px;--rg:16px;--rg-tablet:16px;--rg-mobile:0px;--gtc:minmax(0, 6fr) minmax(0, 6fr);--gtc-mobile:minmax(0, 6fr) minmax(0, 6fr);--w:var(--g-ct-w, 1200px);--h:auto;--h-mobile:auto;--pc:start">
       
 
       <div
@@ -1231,7 +1149,7 @@
       role="presentation"
       data-id="g1YI32Hmtf"
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:center"
-      class="gp-group/image gp-relative force-publish-1783515326179 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto g1YI32Hmtf"
+      class="gp-group/image gp-relative force-publish-1783515573934 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto g1YI32Hmtf"
     >
       <div
         
@@ -1268,8 +1186,8 @@
     <div
       role="presentation"
       data-id="gvJDw7O5uQ"
-      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:center"
-      class="gp-group/image gp-relative force-publish-1783515326180 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gvJDw7O5uQ"
+      style="--mb-mobile:0px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:center"
+      class="gp-group/image gp-relative force-publish-1783515573934 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gvJDw7O5uQ"
     >
       <div
         
@@ -1302,13 +1220,32 @@
       
     </gp-row>
   
-  
+  <div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_PRODUCT;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l);--mb-mobile:0px" class="g-nMb4U8sV ">
+      {% unless product %}<p>{{ 'gempages.ProductTitle.product_not_found' | t }}</p>{% else %}
+      <gp-product-title
+        gp-data='{"setting":{"linkProduct":false},"uid":"g-nMb4U8sV"}'
+      >
+        
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="g-nMb4U8sV"
+        class="g-nMb4U8sV"
+        style="--dynamic-source-color:#F4F4F4"
+      >
+      <div  >
+        <h2
+          data-gp-text
+          class=" gp-text-instant"
+          style="--w:100%;--tdt:auto;--ts:none;--ta:left;--ta-mobile:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:#294C43;--fs:normal;--ff:var(--g-font-heading, heading);--weight:700;--size:32px;--size-tablet:24px;--size-mobile:22px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--tt:none;word-break:break-word;overflow:hidden"
+        >
+          {{ product.title }}
+        </h2>
+      </div>
     </div>
-
-      
-    </gp-row>
-  
-  
+    
+      </gp-product-title>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-title-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    {% endunless %}
+      </div>
     
 
     
@@ -1432,7 +1369,50 @@
       
     </gp-row>
   
-  <div gp-el-wrapper  class="gsX3_nBJwT ">
+  <div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_PRODUCT;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l);--mb-mobile:3px" class="g6xYDSirKD ">
+      {% if product.description == blank %}{% else %}
+    <gp-product-description
+      data-id="g6xYDSirKD"
+      class="gp-product-description undefined"
+      gp-data='{"setting":{"lineClamp":{"desktop":3},"hasLineClamp":{"desktop":true},"viewMoreText":"{{ section.settings.gg6xYDSirKD_viewMoreText }}","viewLessText":"{{ section.settings.gg6xYDSirKD_viewLessText }}","enableViewMoreIcon":true},"textStyle":{"--ts":"none","--c":"#294C43","--fs":"normal","--ff":"var(--g-font-body, body)","--weight":"400","--size":"16px","--size-tablet":"16px","--size-mobile":"14px","--lh":"150%","--lh-tablet":"150%","--lh-mobile":"150%","--ls":"normal","--ls-tablet":"normal","--ls-mobile":"normal","--maxh":"calc(3 * 1lh)","--maxh-tablet":"calc(3 * 1lh)","--maxh-mobile":"calc(3 * 1lh)","--line-clamp":3,"--line-clamp-tablet":3,"--line-clamp-mobile":3}}'
+      data-view-more-text="{{ section.settings.gg6xYDSirKD_viewMoreText }}"
+      data-view-less-text="{{ section.settings.gg6xYDSirKD_viewLessText }}"
+    >
+      <style>
+      .p-description-wrapper.gp-p-description-text * {
+        color: inherit;
+        line-height: inherit !important;
+      }</style>
+      <style>
+   .gp-p-description-text > :not(ol, ul, table, div, style, script) {
+      display: inline !important;
+    }
+
+    .gp-p-description-text > :not(ol, ul, table, div, style, script)::after {
+      content: "";
+      display: block; /* đảm bảo xuống dòng trên Safari/iOS */
+    }
+    .gp-p-description-text > table {
+      box-shadow: none;
+    }
+  </style>
+      <div class="gp-rotate-180 gp-hidden" ></div>
+      {% unless product %}<p>Product not found</p>{% else %}<div data-gp-text class="gp-relative  gp-p-description-text gp-break-words safari:[&_p]:gp-inline safari:[&_p]:after:gp-whitespace-pre p-description-wrapper gp-text-g-text-2 data-[browser=safari]:after:gp-content-[' '] data-[browser=safari]:after:gp-absolute data-[browser=safari]:after:gp-left-0 data-[browser=safari]:after:gp-right-0 data-[browser=safari]:after:gp-bottom-0 data-[browser=safari]:after:gp-w-full data-[browser=safari]:after:gp-h-1/2 data-[browser=safari]:after:gp-bg-gradient-to-t data-[browser=safari]:after:gp-from-white" style="--ts:none;--c:#294C43;--fs:normal;--ff:var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--maxh:calc(3 * 1lh);--maxh-tablet:calc(3 * 1lh);--maxh-mobile:calc(3 * 1lh);--line-clamp:3;--line-clamp-tablet:3;--line-clamp-mobile:3">
+          {{product.description}}
+        </div>
+        {% unless product.description == blank %}<button type="button" class="p-description-show-more gp-items-center gp-mt-4 gp-w-full gp-transition-all hover:gp-opacity-80 " style="--fs:normal;--ff:var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--c:#294C43;--d:inline-flex;--d-mobile:inline-flex;--d-tablet:inline-flex">
+          <span class="gp-show-more-text">
+            {{ section.settings.gg6xYDSirKD_viewMoreText }}
+          </span>
+          <span class="gp-show-more-icon gp-ml-1"><svg height="1em" width="1em" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM11 11L10.2929 11.7071C10.6834 12.0976 11.3166 12.0976 11.7071 11.7071L11 11ZM21.7071 1.70711C22.0976 1.31658 22.0976 0.683417 21.7071 0.292893C21.3166 -0.0976311 20.6834 -0.0976311 20.2929 0.292893L21.7071 1.70711ZM0.292893 1.70711L10.2929 11.7071L11.7071 10.2929L1.70711 0.292893L0.292893 1.70711ZM11.7071 11.7071L21.7071 1.70711L20.2929 0.292893L10.2929 10.2929L11.7071 11.7071Z"
+              fill="currentColor"/>
+        </svg></span>
+          </button>{% endunless %}{% endunless %}
+    </gp-product-description>
+
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-description-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  {% endif %}
+      </div><div gp-el-wrapper  class="gsX3_nBJwT ">
       
     {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
     <gp-icon-list
@@ -1862,7 +1842,7 @@
     "name": "Section 3",
     "tag": "section",
     "class": "gps-627308483707929175 gps gpsil",
-    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/mkazm4-w0/apps/gempages-cro/app/shopify/edit?pageType=GP_PRODUCT&editorId=627308477131260715&sectionId=627308483707929175)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"false"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"gg6xYDSirKD_viewMoreText","label":"gg6xYDSirKD_viewMoreText","default":"Show more"},{"type":"html","id":"gg6xYDSirKD_viewLessText","label":"gg6xYDSirKD_viewLessText","default":"Show less"},{"type":"html","id":"gg1YI32Hmtf_srcSet_desktop_src","label":"gg1YI32Hmtf_srcSet_desktop_src","default":"https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Post_de_Instagram_Envio_Gratis_emprendimiento_estilo_3D_amarillo_1200_x_420_px.png?v=1782836284"},{"type":"html","id":"gg1YI32Hmtf_srcSet_mobile_src","label":"gg1YI32Hmtf_srcSet_mobile_src","default":"https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Post_de_Instagram_Envio_Gratis_emprendimiento_estilo_3D_amarillo_1200_x_420_px.png?v=1782836284"},{"type":"html","id":"ggvJDw7O5uQ_srcSet_desktop_src","label":"ggvJDw7O5uQ_srcSet_desktop_src","default":"https://cdn.shopify.com/s/files/1/0746/0061/2038/files/PAGA_2.png?v=1782837120"},{"type":"html","id":"ggvJDw7O5uQ_srcSet_mobile_src","label":"ggvJDw7O5uQ_srcSet_mobile_src","default":"https://cdn.shopify.com/s/files/1/0746/0061/2038/files/PAGA_2.png?v=1782837120"},{"type":"html","id":"ggtiNJY75VW_text","label":"ggtiNJY75VW_text","default":"<p>+200 clientes.</p>"},{"type":"html","id":"ggsX3_nBJwT_childItem_0","label":"ggsX3_nBJwT_childItem_0","default":"<p><strong>Absorción rápida</strong></p>"},{"type":"html","id":"ggsX3_nBJwT_childItem_1","label":"ggsX3_nBJwT_childItem_1","default":"<p><strong>Apto para todas las edades</strong></p>"},{"type":"html","id":"ggsX3_nBJwT_childItem_2","label":"ggsX3_nBJwT_childItem_2","default":"<p><strong>Fácil de aplicar</strong>,</p>"},{"type":"html","id":"ggdCF4j6r-o_displayContent","label":"ggdCF4j6r-o_displayContent","default":"Sale {percent_discount} off"}],
+    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/mkazm4-w0/apps/gempages-cro/app/shopify/edit?pageType=GP_PRODUCT&editorId=627308477131260715&sectionId=627308483707929175)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"false"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"gg1YI32Hmtf_srcSet_desktop_src","label":"gg1YI32Hmtf_srcSet_desktop_src","default":"https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Post_de_Instagram_Envio_Gratis_emprendimiento_estilo_3D_amarillo_1200_x_420_px.png?v=1782836284"},{"type":"html","id":"gg1YI32Hmtf_srcSet_mobile_src","label":"gg1YI32Hmtf_srcSet_mobile_src","default":"https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Post_de_Instagram_Envio_Gratis_emprendimiento_estilo_3D_amarillo_1200_x_420_px.png?v=1782836284"},{"type":"html","id":"ggvJDw7O5uQ_srcSet_desktop_src","label":"ggvJDw7O5uQ_srcSet_desktop_src","default":"https://cdn.shopify.com/s/files/1/0746/0061/2038/files/PAGA_2.png?v=1782837120"},{"type":"html","id":"ggvJDw7O5uQ_srcSet_mobile_src","label":"ggvJDw7O5uQ_srcSet_mobile_src","default":"https://cdn.shopify.com/s/files/1/0746/0061/2038/files/PAGA_2.png?v=1782837120"},{"type":"html","id":"ggtiNJY75VW_text","label":"ggtiNJY75VW_text","default":"<p>+200 clientes.</p>"},{"type":"html","id":"gg6xYDSirKD_viewMoreText","label":"gg6xYDSirKD_viewMoreText","default":"Show more"},{"type":"html","id":"gg6xYDSirKD_viewLessText","label":"gg6xYDSirKD_viewLessText","default":"Show less"},{"type":"html","id":"ggsX3_nBJwT_childItem_0","label":"ggsX3_nBJwT_childItem_0","default":"<p><strong>Absorción rápida</strong></p>"},{"type":"html","id":"ggsX3_nBJwT_childItem_1","label":"ggsX3_nBJwT_childItem_1","default":"<p><strong>Apto para todas las edades</strong></p>"},{"type":"html","id":"ggsX3_nBJwT_childItem_2","label":"ggsX3_nBJwT_childItem_2","default":"<p><strong>Fácil de aplicar</strong>,</p>"},{"type":"html","id":"ggdCF4j6r-o_displayContent","label":"ggdCF4j6r-o_displayContent","default":"Sale {percent_discount} off"}],
     "blocks": [{"type": "@app"}],
     "locales": {}
   }
