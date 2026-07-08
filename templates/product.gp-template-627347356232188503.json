@@ -69,7 +69,7 @@
     },
     "gp_section_627347377035936621": {
       "settings": {
-        "checksum": "9ce1549588c3869357330a292992808a2e05ab576c3789e9fd3fd84beaaf0b0b_1_1_1_0__1",
+        "checksum": "b1ad2633e4bab838bd2d50b5714e1a46d8ff44df6b1f40ccaf01faf61ff91a1c_1_1_1_0__1",
         "gg7QMxmUbwG_text": "<p>120 reseñas verificadas</p>",
         "gg99SwaDTS1_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Dull_Blue_White_3D_Illustration_Cash_On_Delivery_Service_Instagram_Post_1200_x_420_px.png?v=1783514638",
         "gg99SwaDTS1_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Dull_Blue_White_3D_Illustration_Cash_On_Delivery_Service_Instagram_Post_1200_x_420_px.png?v=1783514638",
@@ -105,7 +105,7 @@
     },
     "gp_section_627457803111367467": {
       "settings": {
-        "checksum": "55efbe4f97caf8928e215a717797ecb198c3dc690d694dbbf611d15b7029c4bd_1_1_1_0__1",
+        "checksum": "26d6ca4fe1f4cfdc8a81c204cad921448e0bce446a90a2143d283af9d7fc58cd_1_1_1_0__1",
         "gg-WxrGAaXo_text": "<p>5/5</p>",
         "gg-x6vXb5UN_text": "<p>\"Ya soy team Piel de Perla desde el primer frasco 💖 amo pertenecer a esta comunidad de chicas que se cuidan la piel bien.\"</p>",
         "gg04_kAiM8v_background_desktop_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
@@ -165,6 +165,12 @@
         "ggtxYTxGjE__srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/vecteezy_close-up-of-a-woman-holding-her-arm-applying-coffee-body_8383709.jpg"
       },
       "type": "gp-section-627462123731026479"
+    },
+    "gp_section_627463509545845613": {
+      "settings": {
+        "checksum": "c401c8ab0e6cd6951cf5a1081f51512e543f23341fb9fa1b33b0eb757a6c1945_1_1_1_0__1"
+      },
+      "type": "gp-section-627463509545845613"
     }
   },
   "order": [
@@ -173,6 +179,7 @@
     "gp_section_627347376851386967",
     "gp_section_627454315916690007",
     "gp_section_627347377220485719",
+    "gp_section_627463509545845613",
     "gp_section_627457803111367467",
     "gp_section_627462123731026479",
     "gp_section_627347376935273325",
