@@ -71,6 +71,9 @@
       {%-if variant == empty or variant == null -%}
         {%- assign variant = product.selected_or_first_available_variant -%}
       {%- endif -%}
+      {% unless isSettingSameHeightProductList %}
+        {%- assign isSettingSameHeightProductList = false -%}
+      {% endunless %}
     
       <gp-product
         data-uid="gvpbpudLyK"
