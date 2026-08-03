@@ -1,0 +1,199 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_631263463791919911": {
+      "settings": {
+        "checksum": "3459c8ddb6887ca7e3ba5f66a002dd79fd2e4a08a3024a381111104575efa886_1_1_1_0__1",
+        "gg-2r7gKdqt_dayLabel": "Days",
+        "gg-2r7gKdqt_hourLabel": "Hours",
+        "gg-2r7gKdqt_minuteLabel": "Mins",
+        "gg-2r7gKdqt_secondLabel": "Secs",
+        "gg-2r7gKdqt_weekLabel": "Weeks",
+        "ggdbjXJXeXz_text": "<p><strong>20% de descuento por apertura. Envio Gratis a todo RD.</strong></p>",
+        "section_preload": "true"
+      },
+      "type": "gp-section-631263463791919911"
+    },
+    "gp_section_631263463791985447": {
+      "settings": {
+        "checksum": "d6bdd0bf2bc4ae98bbdc65656405da74ef0347b3c7d68c2d52d0e0073b032d18_1_1_1_0__1",
+        "ggCfK5S38rP_text": "<strong>¿Vientre Hinchado? Desinflámate.</strong>",
+        "ggIQgcutk8c_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/EDICIONES_SHOPIFY_c4390e3d-01bd-4d6d-b9c6-ef420314a48e.png",
+        "ggIQgcutk8c_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/EDICIONES_SHOPIFY_c4390e3d-01bd-4d6d-b9c6-ef420314a48e.png",
+        "ggIQgcutk8c_srcSet_tablet_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/EDICIONES_SHOPIFY_c4390e3d-01bd-4d6d-b9c6-ef420314a48e.png",
+        "ggieEMxHcBL_text": "<p>Amaneces plana y a las 6PM pareces otra persona — eso no es grasa, es retención e hinchazón. La maltodextrina indigestible y la fibra de chía actúan como drenaje natural, ayudando a tu cuerpo a soltar lo que no necesita, mientras el HCA de la Garcinia Cambogia bloquea la formación de más grasa. Sin dietas extremas ni filtros: es la fórmula, no la suerte.</p>"
+      },
+      "type": "gp-section-631263463791985447"
+    },
+    "gp_section_631263463792050983": {
+      "settings": {
+        "checksum": "c70c0c894d89b3bcf8a11dafa4b335b8500ab6d22287ce3af5dd065de83270f6_1_1_1_0__1",
+        "gg-b53GThPM_text": "<p>Piensas en comida todo el día aunque acabas de comer. Eso tiene nombre: food noise. El HCA de la Garcinia Cambogia ayuda a calmarlo desde adentro — no es fuerza de voluntad, es química. <strong>Ordénalo y vive la experiencia.</strong></p>",
+        "gg5sVcpfy0b_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_1.svg",
+        "gg5sVcpfy0b_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_1.svg",
+        "gg8qAe1GLwb_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/woman-stands-indoors-with-hands-resting-on-stomach-2026-03-10-03-57-58-utc.jpg",
+        "gg8qAe1GLwb_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/woman-stands-indoors-with-hands-resting-on-stomach-2026-03-10-03-57-58-utc.jpg",
+        "ggKzhcWBGYT_text": "<p><strong>Ataca Los Tres. Empieza Hoy.</strong></p>",
+        "ggWbtGvFBXI_text": "<p>Food noise, antojos, hinchazón — los tres se atacan con 1 stick al día. 10 sticks, 10 días. <strong>No esperes al lunes que nunca llega. Ordena ahora.</strong></p>",
+        "ggaWuzGOBid_text": "<p>El Ruido Que No Te Deja En Paz.</p>",
+        "ggacXAXxdIQ_text": "<p><strong>La Panza Que No Es Tuya.</strong></p>",
+        "ggbibVdkua9_text": "<p><strong>El Antojo Que Siempre Gana A Las 9PM.</strong></p>",
+        "ggf3MRdtQa0_text": "<p>Ya sabes cómo termina: picando algo que no necesitabas, otra vez. La fibra de chía se expande y te llena entre comidas. <strong>Pídelo hoy y siente la diferencia esta misma noche.</strong></p>",
+        "ggmGLcFL_Rd_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/point-of-view-pov-from-inside-refrigerator-hungry-2026-03-24-11-24-16-utc.jpg",
+        "ggmGLcFL_Rd_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/point-of-view-pov-from-inside-refrigerator-hungry-2026-03-24-11-24-16-utc.jpg",
+        "ggq-kHTjaBS_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/woman-eats-takeout-while-sitting-on-couch-2026-03-19-02-01-16-utc.jpg",
+        "ggq-kHTjaBS_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/woman-eats-takeout-while-sitting-on-couch-2026-03-19-02-01-16-utc.jpg",
+        "ggxmuDx7ixN_text": "<p>Amaneces plana y a las 6PM pareces otra persona. No es grasa, es hinchazón. La maltodextrina indigestible te desinflama desde adentro. <strong>Consíguelo y compruébalo tú misma.</strong></p>"
+      },
+      "type": "gp-section-631263463792050983"
+    },
+    "gp_section_631263463792116519": {
+      "settings": {
+        "checksum": "07d6e7661e4e9814175d5858bbb568fe4512b221e8a61b63821e534dcfe2ce61_1_1_1_0__1",
+        "gg1Y3eZQpmP_html5Url": "https://cdn.shopify.com/videos/c/o/v/99f1a8fb7a5d48b3b5b1b784ca014ccc.mp4",
+        "gg1Y3eZQpmP_vimeoUrl": "https://vimeo.com/1095883398",
+        "gg1Y3eZQpmP_youtubeUrl": "https://www.youtube.com/watch?v=drIt4RH_kyQ",
+        "gg37EJzL77K_text": "<p>Ellas ya lo usaron.:</p>",
+        "gg9Pgxw0lKe_text": "<p>15 días de garantía.</p>",
+        "ggAZwipdbwY_html5Url": "https://cdn.shopify.com/videos/c/o/v/fe49de3b373841cf8e98843948023327.mp4",
+        "ggAZwipdbwY_vimeoUrl": "https://vimeo.com/1095883398",
+        "ggAZwipdbwY_youtubeUrl": "https://www.youtube.com/watch?v=drIt4RH_kyQ",
+        "ggD415tp0cd_displayContent": "{percent_discount} de descuento",
+        "ggHwajHZ6GX_childItem_0": "<p>Garantia</p>",
+        "ggHwajHZ6GX_childItem_1": "<p>Envío&nbsp;</p>",
+        "ggTkS0yOQc5_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Dull_Blue_White_3D_Illustration_Cash_On_Delivery_Service_Instagram_Post_1200_x_420_px.png?v=1783514638",
+        "ggTkS0yOQc5_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Post_de_Instagram_Envio_Gratis_emprendimiento_estilo_3D_amarillo_1200_x_420_px_40b48f3d-5606-49de-a5fe-085497d0b8e0.png",
+        "ggTkS0yOQc5_srcSet_tablet_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Dull_Blue_White_3D_Illustration_Cash_On_Delivery_Service_Instagram_Post_1200_x_420_px.png?v=1783514638",
+        "ggTvbeQLRPr_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Post_de_Instagram_Envio_Gratis_emprendimiento_estilo_3D_amarillo_1200_x_420_px_1.png?v=1783514617",
+        "ggTvbeQLRPr_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Dull_Blue_White_3D_Illustration_Cash_On_Delivery_Service_Instagram_Post_1200_x_420_px_78549a5d-b74a-4cb9-a359-3b97c132dd28.png",
+        "ggTvbeQLRPr_srcSet_tablet_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Post_de_Instagram_Envio_Gratis_emprendimiento_estilo_3D_amarillo_1200_x_420_px_1.png?v=1783514617",
+        "ggVUoJewYkN_childItem_0": "<p><strong>Reduce la absorción de carbohidratos que se convierten en grasa.</strong></p>",
+        "ggVUoJewYkN_childItem_1": "<p><strong>Ayuda a evitar el bajón de energía después de comer dulces o harinas.</strong></p>",
+        "ggVUoJewYkN_childItem_2": "<p>La fibra se expande en tu estómago para que comas menos sin sentir que te falta algo.</p>",
+        "ggWW_5jtl_9_html5Url": "https://cdn.shopify.com/videos/c/o/v/5d386af6ffb14516b47bad9bb2a1e1b8.mp4",
+        "ggWW_5jtl_9_vimeoUrl": "https://vimeo.com/1095883398",
+        "ggWW_5jtl_9_youtubeUrl": "https://www.youtube.com/watch?v=drIt4RH_kyQ",
+        "ggiV67YOTZu_text": "<p>(250 Reseñas) #1 en ventas en TIKTOK</p>",
+        "ggk3GL-8Peh_text": "<p>Envio gratis a todo RD, en un tiempo de 3 a 5 días.&nbsp;</p>",
+        "section_preload": "true"
+      },
+      "type": "gp-section-631263463792116519"
+    },
+    "gp_section_631263463792182055": {
+      "settings": {
+        "checksum": "6606786d47dbd6944fa3a7728a23f80846ca9397b41c2b24ebb515472fbe05c9_1_1_1_0__1",
+        "gg1qACgpPjD_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/WhatsApp_Image_2026-06-30_at_3.31.42_PM.jpg?v=1782848368",
+        "gg3mAsZB6gt_text": "<p>&nbsp; Verificada &nbsp;</p>",
+        "gg4UFuN7muw_text": "<p>Food Noise</p>",
+        "gg4fC0qQyf9_text": "<p>Daniela</p>",
+        "gg534wLLZrT_text": "<p>Antojos bajo control</p>",
+        "gg8Ne9JFbh0_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/indicador-slider-vino.svg",
+        "gg8Ne9JFbh0_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/indicador-slider-vino.svg",
+        "gg8Ne9JFbh0_srcSet_tablet_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/indicador-slider-vino.svg",
+        "gg95FUKS3B2_text": "<p>Mira el cambio real cuando le ganas a tus antojos.</p>",
+        "ggATNQUQYXa_text": "<p>Me lo tomo siempre después del almuerzo y es como si me apagara el botón de seguir picando toda la tarde. Antes a las 3PM ya andaba buscando algo dulce, ahora ni lo pienso.</p>",
+        "ggGewZS2QlC_text": "<p>Estreñida, pesada y estancada</p>",
+        "ggGfj78Cpov_text": "<p>20/04/2026</p>",
+        "ggK87Fj8B2R_text": "<p>03/05/2025</p>",
+        "ggLTuuT41NG_text": "<i>\"Del Antojo Al Control. Sin Dudas.\"</i>",
+        "ggMi_Uq8jr5_text": "<p>Vientre plano y ligero</p>",
+        "ggWGSUWlGH5_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/indicador-slider-vino.svg",
+        "ggWGSUWlGH5_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/indicador-slider-vino.svg",
+        "ggWGSUWlGH5_srcSet_tablet_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/indicador-slider-vino.svg",
+        "ggX91MHlNgY_text": "<p>&nbsp; Verificada &nbsp;</p>",
+        "ggXjeiXldXh_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/indicador-slider-vino.svg",
+        "ggXjeiXldXh_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/indicador-slider-vino.svg",
+        "ggXjeiXldXh_srcSet_tablet_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/indicador-slider-vino.svg",
+        "ggZsl7X-btF_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Green_and_Beige_Minimalist_Skincare_Product_Presentation_2.png",
+        "gg_90rpPI23_text": "<p>Lo del food noise es real. Antes no paraba de pensar en comida, ahora ni me acuerdo de picar entre comidas.</p>",
+        "ggc_JM1iCNy_text": "<p>28/06/20256</p>",
+        "ggchPENEDkd_text": "<p>Emily</p>",
+        "gge9oQ7lYiS_text": "<p>Alejandra</p>",
+        "ggfi1CwXi5z_text": "<p>&nbsp; Verificada &nbsp;</p>",
+        "ggfkWdLYjvG_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/indicador-slider-vino.svg",
+        "ggfkWdLYjvG_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/indicador-slider-vino.svg",
+        "ggfkWdLYjvG_srcSet_tablet_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/indicador-slider-vino.svg",
+        "gghw0LMrBKv_text": "<p>Antojos</p>",
+        "ggiYM20PDDr_text": "<p>Amanecía hinchada todos los días. Con esto se me bajó la hinchazón desde la primera semana.</p>",
+        "ggjjerb9cAR_text": "<p>Mente en calma, sin ese ruido</p>",
+        "ggtKECBRQ7__srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Female10.jpg?v=1783437945",
+        "ggtKECBRQ7__srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Female10.jpg?v=1783437945",
+        "ggtKECBRQ7__srcSet_tablet_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Female10.jpg",
+        "gguUiJni1-e_text": "<p>Picando dulce a cada rato</p>",
+        "gguYk5N3Dtz_text": "<p>Hinchada e incómoda, no baja ni con dieta</p>",
+        "ggv7YNrQhVy_text": "<p>Vas al baño como reloj</p>",
+        "ggvdLr2pdYV_text": "<p>Digestión</p>",
+        "ggvyfDsjZTM_text": "<p>Barriga Hinchada</p>",
+        "ggz3UidY7YM_text": "<p>Pensando en comida todo el día</p>",
+        "section_preload": "true"
+      },
+      "type": "gp-section-631263463792182055"
+    },
+    "gp_section_631263463792247591": {
+      "settings": {
+        "checksum": "5b1811507aafcab098068fb70e80a91318c77688f772e7a1d492db527723f5c7_1_1_1_0__1",
+        "gg9u77dTjCD_text": "<p>Pagas contra entrega — lo revisas cuando lo tienes en tus manos, y solo pagas si decides quedarte con él. <strong>Envío gratis en toda República Dominicana.</strong></p>",
+        "ggOU-Jv_nKh_text": "<p>Muchas clientas notan menos hinchazón y mejor descanso en los primeros días. Para desinflamar y controlar los antojos, lo ideal es tomarlo constante de 2 a 4 semanas. Cada cuerpo responde distinto.</p>",
+        "ggRz9B31MqI_text": "<p>Es un suplemento natural, vegano y sin azúcar. Si estás embarazada, lactando, tomas medicamentos o tienes alguna condición (como enfermedad renal), consulta a tu médico antes de usarlo.</p>",
+        "ggcHmMAP1kf_text": "Trae unas 113 tomas — más de 3 meses tomándolo a diario. Te sale a menos de lo que cuesta un café.",
+        "ggjYq42AQ3u_text": "<p>No. Lleva magnesio glicinato, que es suave con el estómago. Ayuda a regular tu digestión sin ser un laxante agresivo. Empieza con la dosis indicada (2 cucharaditas) y tu cuerpo se ajusta solito.</p>",
+        "ggtaXQaDnaU_childItem_0": "<p><strong>¿Qué pasa si hago el pedido y no me gusta al recibirlo?</strong></p>",
+        "ggtaXQaDnaU_childItem_1": "<p><strong>¿En cuánto tiempo veo resultados?</strong></p>",
+        "ggtaXQaDnaU_childItem_2": "<p><strong>¿Me va a caer mal o me va a dar diarrea?</strong></p>",
+        "ggtaXQaDnaU_childItem_3": "<p><strong>¿Cómo se toma? ¿Sabe feo?</strong></p>",
+        "ggtaXQaDnaU_childItem_4": "<p><strong>¿Es seguro? ¿Tiene efectos secundarios?</strong></p>",
+        "ggtaXQaDnaU_childItem_5": "<p><strong>¿Cuánto me dura un envase?</strong></p>",
+        "ggth4bzU94G_text": "<p>Nada de pastillas. Es un polvo efervescente sabor frambuesa-limón que se disuelve en agua y sabe a refresco. Lo sirves, hace fizz y lo tomas. Fácil y rico.</p>",
+        "ggy2-FW0hRb_text": "Preguntas",
+        "section_preload": "true"
+      },
+      "type": "gp-section-631263463792247591"
+    },
+    "gp_section_631263463792313127": {
+      "settings": {
+        "checksum": "578766a22f3d5fc3917a393f100c28d39a213d6acc859ea3eb084a1ece87d012_1_1_1_0__1",
+        "section_preload": "true"
+      },
+      "type": "gp-section-631263463792313127"
+    },
+    "gp_section_631263463792378663": {
+      "settings": {
+        "checksum": "5f7c79a53d50a5d6725de26dfc1c8340adc758bfb2c48f1604261ac6bebeed20_1_1_1_0__1"
+      },
+      "type": "gp-section-631263463792378663"
+    },
+    "gp_section_631263463792444199": {
+      "settings": {
+        "checksum": "327df45fed3263986d2b22cc18cb6c0978fe9e6780edd614bdbcb18f84e5fd31_1_1_1_0__1",
+        "section_preload": "true"
+      },
+      "type": "gp-section-631263463792444199"
+    },
+    "gp_section_631263463792509735": {
+      "settings": {
+        "checksum": "3c214c7b7a91d20be08e894203010251c7991b0783d2196e405be6b0a968cf22_1_1_1_0__1"
+      },
+      "type": "gp-section-631263463792509735"
+    }
+  },
+  "order": [
+    "gp_section_631263463791919911",
+    "gp_section_631263463792116519",
+    "gp_section_631263463792313127",
+    "gp_section_631263463791985447",
+    "gp_section_631263463792050983",
+    "gp_section_631263463792378663",
+    "gp_section_631263463792182055",
+    "gp_section_631263463792444199",
+    "gp_section_631263463792247591",
+    "gp_section_631263463792509735"
+  ]
+}
