@@ -16,14 +16,22 @@
         "type": "announcement-bar",
         "settings": {
           "text": "PAGA CONTRA ENTREGA  ·  NUEVOS PRODUCTOS CADA SEMANA",
-          "bg_color": "#F4EF88"
+          "bold": false,
+          "italic": false,
+          "uppercase": true,
+          "font_size": 12,
+          "letter_spacing": 1,
+          "speed": 25,
+          "py": 10,
+          "bg_color": "#f4ef88",
+          "text_color": "#1a1a18"
         }
       },
       "header": {
         "type": "header",
         "settings": {
-          "logo": "shopify://shop_images/LOGO_FINAL.svg",
-          "logo_height": 64,
+          "logo": "shopify://shop_images/BRUMISHOPLOGO_4eb9ca6e-8c28-4282-950d-53805e699389.png",
+          "logo_height": 20,
           "menu": "main-menu"
         }
       },
