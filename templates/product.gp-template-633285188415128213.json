@@ -19,13 +19,13 @@
     },
     "gp_section_633285196367528533": {
       "settings": {
-        "checksum": "f11c8568a559801c2f29859800db01d48d1e36ac417d249522c8ec0b3560a07a_1_1_1_0__1",
-        "gg-8iYrIj4r_childItem_0": "<p>Safe for daily use</p>",
-        "gg-8iYrIj4r_childItem_1": "<p>Suitable for all skin</p>",
+        "checksum": "36a55885af490ac41824d9f3b0ae1db56ff00b10f9bcdeb2b6ab4649bc9fc307_1_1_1_0__1",
+        "gg-8iYrIj4r_childItem_0": "<p>Uso diario, todas las noches</p>",
+        "gg-8iYrIj4r_childItem_1": "<p>Para todo tipo de piel</p>",
         "gg-8iYrIj4r_childItem_2": "<p>Lightweight and non greasy</p>",
-        "gg2csqmnjDS_label": "<p>Get yours now</p>",
         "gg_ui_nCykJ_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Gemini_Generated_Image_thpl1dthpl1dthpl.png",
-        "ggj1TlwV4h-_text": "Got questions?"
+        "gg_ui_nCykJ_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/PRUEBA-MECADONA-CREAM_02.jpg_1.jpg",
+        "ggj1TlwV4h-_text": "¿Tienes dudas?"
       },
       "type": "gp-section-633285196367528533"
     },
@@ -54,38 +54,23 @@
     },
     "gp_section_633285196384306149": {
       "settings": {
-        "checksum": "e24b88ee8aac572fd595d6ee7950a8309b8e9864d678df9f92e6f00c08fbfa6b_1_1_1_0__1",
-        "gg2-Klp2dPs_childItem_0": "<p>Can I use this sunscreen every day?</p>",
-        "gg2-Klp2dPs_childItem_1": "<p>Is it suitable for sensitive skin?</p>",
-        "gg2-Klp2dPs_childItem_2": "<p>Will it leave a white cast?</p>",
-        "gg2-Klp2dPs_childItem_3": "<p>Can I use it under makeup?</p>",
-        "gg2-Klp2dPs_childItem_4": "<p>How often should I reapply?</p>",
-        "gg2-Klp2dPs_childItem_5": "<p>Does it feel greasy on the skin?</p>",
-        "gg3FzvCM4Ah_text": "<p>You should reapply every two hours or after sweating swimming or towel drying</p>",
-        "ggDlQnSR81B_text": "<p>No, it blends smoothly into the skin and works well on all skin tones</p>",
-        "ggGMXlNODb__text": "<p>Yes, it has a lightweight texture that sits well under makeup without pilling</p>",
-        "ggZXKhhrdd6_text": "<p>Yes, it is designed for daily use and works well as the final step in your skincare routine</p>",
-        "ggetEbQHLza_text": "<p>No, it absorbs quickly and leaves a light comfortable finish</p>",
-        "ggklWV4cPtx_text": "<p>Yes, the formula is gentle and supports the skin barrier without causing irritation</p>",
-        "ggrdetKhm81_text": "<p>More questions? <a href=\"#\"><span style=\"color:#002C70;\"><strong><u>See our full FAQ</u></strong></span></a></p>"
+        "checksum": "28afb5a008021ef6e2f6b429ebe4cb2339691d353c0b0ec96802c7350c4dc18f_1_1_1_0__1",
+        "gg2-Klp2dPs_childItem_0": "<p>¿El envío es gratis?</p>",
+        "gg2-Klp2dPs_childItem_1": "<p>¿La puedo usar todas las noches?</p>",
+        "gg2-Klp2dPs_childItem_2": "<p>¿La puedo usar de día?</p>",
+        "gg2-Klp2dPs_childItem_3": "<p>¿Sirve para piel sensible?</p>",
+        "gg2-Klp2dPs_childItem_4": "<p>¿La puedo usar si estoy embarazada o dando pecho?</p>",
+        "gg2-Klp2dPs_childItem_5": "<p>¿En cuánto tiempo veo resultados?</p>",
+        "gg2-Klp2dPs_childItem_6": "<p>¿Cuánto me dura un tubo?</p>",
+        "gg3FzvCM4Ah_text": "<p>Consulta con tu médico antes de usarla. Contiene retinol, y durante el embarazo y la lactancia se recomienda evitarlo.</p>",
+        "ggDlQnSR81B_text": "<p>Es mejor de noche. Contiene retinol, que deja la piel más sensible al sol. De día usa siempre protector solar.</p>",
+        "ggGMXlNODb__text": "<p>Sí. Tiene certificación Dermatest 10/10 y está formulada para piel sensible. Si es tu primera vez usando retinol, aplícala cada dos noches durante la primera semana para que tu piel se acostumbre.</p>",
+        "ggZXKhhrdd6_text": "<p>Sí. Enviamos gratis a toda la República Dominicana y puedes pagar cuando recibas tu pedido. Entrega entre 1 y 5 días laborables.</p>",
+        "ggetEbQHLza_text": "<p>A las 2 semanas las manchas se ven hasta 23.5% menos visibles. Las líneas de expresión y la firmeza toman entre 4 y 8 semanas de uso constante.</p>",
+        "gghX0bk8Vc3_text": "<p>Unos 2 meses y medio con uso nocturno diario.</p>",
+        "ggklWV4cPtx_text": "<p>Sí, está hecha para uso diario. Se aplica de noche como último paso, después de limpiar la cara.</p>"
       },
       "type": "gp-section-633285196384306149"
-    },
-    "gp_section_633285196384306154": {
-      "settings": {
-        "checksum": "bdd466f357180edb0a136ffa4c9bb2a6b0677e7f40f8dad835fd7ec6552e988e_1_1_1_0__1",
-        "gg0Rtki_dSM_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-9b75870f-ca0f-4a2e-8cfa-4cab8c390344.png",
-        "gg6W09yzeFC_label": "FAQ&nbsp;",
-        "gg8bE62qlos_label": "Return &amp; Exchange&nbsp;",
-        "ggAIA7mzL5d_label": "Delivery Information",
-        "ggE3CkRNyDE_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-f20d9943-7c65-42da-87bd-dd7209ee237f.png",
-        "ggGPaKRN8At_label": "Contact Us",
-        "ggM-IF7RQbx_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-1cd135b4-e229-45c0-8552-08ed7005ead1.png",
-        "ggW6bDaQem-_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-f12df0fc-9708-4fbf-82a8-601f2f0d70ef.png",
-        "ggXUVTJS_qA_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-762669bf-c0d4-41a3-8fc4-c835555dae7d.png",
-        "ggb3zC80hmT_text": "<p>Copyright © 2026 GemPages.</p>"
-      },
-      "type": "gp-section-633285196384306154"
     },
     "gp_section_633285196401083365": {
       "settings": {
@@ -242,7 +227,6 @@
     "gp_section_633285196484969445",
     "gp_section_633299027739280021",
     "gp_section_633285196367528533",
-    "gp_section_633285196384306149",
-    "gp_section_633285196384306154"
+    "gp_section_633285196384306149"
   ]
 }
