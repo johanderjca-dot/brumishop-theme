@@ -1,0 +1,270 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_633285196233310869": {
+      "settings": {
+        "checksum": "5416118809c73ff823c920ad615f73576fca73148f4953954030b54417afb7e8_1_1_1_0__1",
+        "ggy4Kr-0GHS_text": "<p>ENVÍO GRATIS A TODA REPÚBLICA DOMINICANA</p>",
+        "section_preload": "true"
+      },
+      "type": "gp-section-633285196233310869"
+    },
+    "gp_section_633285196250088021": {
+      "settings": {
+        "checksum": "c72fc46ef2c7072c2449158168a64d27216659ad4dbf6aa5f379aa25deef6680_1_1_1_0__1",
+        "ggE4ZyQeJ6R_label": "<p>Get yours now</p>",
+        "ggM5wSIbSYB_text": "Your daily shield starts here",
+        "ggeCdQYe8Hh_text": "<p>Protect hydrate and strengthen your skin with one simple step every day</p>",
+        "ggm1F2eeDJL_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171281011_4312f678-dc41-4331-8e17-bd6505bbafb1.png",
+        "ggm1F2eeDJL_background_mobile_image_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171281048_c2a978ff-3f15-461b-9927-51f769a6b887.png"
+      },
+      "type": "gp-section-633285196250088021"
+    },
+    "gp_section_633285196367528533": {
+      "settings": {
+        "checksum": "f11c8568a559801c2f29859800db01d48d1e36ac417d249522c8ec0b3560a07a_1_1_1_0__1",
+        "gg-8iYrIj4r_childItem_0": "<p>Safe for daily use</p>",
+        "gg-8iYrIj4r_childItem_1": "<p>Suitable for all skin</p>",
+        "gg-8iYrIj4r_childItem_2": "<p>Lightweight and non greasy</p>",
+        "gg2csqmnjDS_label": "<p>Get yours now</p>",
+        "gg_ui_nCykJ_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Gemini_Generated_Image_thpl1dthpl1dthpl.png",
+        "ggj1TlwV4h-_text": "Got questions?"
+      },
+      "type": "gp-section-633285196367528533"
+    },
+    "gp_section_633285196367528597": {
+      "settings": {
+        "checksum": "107312f2a7d537f29a5d6c8552a1106a30b9cf3795f04a33ac4409d03a60f4b1_1_1_1_0__1",
+        "gg2HYotgCtU_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171281008_5c873f0a-03b9-40a9-a686-7a61fa576060.png",
+        "gg2PkqTrqlg_text": "Soothes and supports skin recovery",
+        "gg2nGqrRDEX_text": "Hyaluronic Acid&nbsp;",
+        "gg6ZTUT2ema_text": "Powered by skin-loving ingredients&nbsp;",
+        "gg73dVdaco1_text": "Deeply hydrates and locks in moisture",
+        "gg9OcWxn4SV_text": "Shields skin from harmful UVA and UVB rays",
+        "ggDZcvvjJRc_label": "<p>Get yours now</p>",
+        "ggQYtavBzk2_text": "Lemon Extract&nbsp;",
+        "ggT5ngkHZp2_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171281005.png",
+        "ggg-m7VH7a0_text": "Protects skin from environmental stressors",
+        "ggh6yWRS-rv_text": "Centella Asiatica",
+        "ggmZw0B6dnh_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171281006_75930de2-71c8-47a3-8829-fc7e54f3dcb6.png",
+        "ggoQ0OZXpdE_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171281009.png",
+        "ggooB6UJAnf_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171281007.png",
+        "ggqHZHbXqES_text": "Vitamin E&nbsp;",
+        "ggx9IQv4pwn_text": "Zinc Oxide&nbsp;",
+        "ggybpangOn8_text": "Brightens and refreshes tired, dull skin",
+        "section_preload": "true"
+      },
+      "type": "gp-section-633285196367528597"
+    },
+    "gp_section_633285196384305749": {
+      "settings": {
+        "checksum": "2eb6817268b2d48b37adbdb1e321a369b64943d1671004950d39f9737d0d1acd_1_1_1_0__1",
+        "gg8DGkTdBt5_label": "<p>Get yours now</p>",
+        "ggUwgxGCzHU_text": "Daily Protection",
+        "ggW5CzI0ogX_text": "<p>Daily care</p>",
+        "ggWATJFsXkQ_text": "Protect your skin from UV rays while keeping it smooth and comfortable all day&nbsp;",
+        "ggY_rk-sg49_text": "Everything your skin needs for protection hydration and long lasting comfort",
+        "ggd9J1Nwfof_text": "Absorbs quickly with a light feel and no greasy residue on your skin&nbsp;",
+        "gghkZAslt-h_text": "Lightweight Formula",
+        "ggkqnzpUjFx_text": "Helps maintain moisture and supports healthier skin with daily use&nbsp;",
+        "ggrps9NcvUw_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171281010_c076ef55-5c4c-4eba-ae59-1e52bbc624b1.png",
+        "ggrps9NcvUw_background_mobile_image_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171281049.png",
+        "ggrrKb8MF4g_text": "Better sun protection daily&nbsp;",
+        "ggxOa-I34zh_text": "Skin Nourishment"
+      },
+      "type": "gp-section-633285196384305749"
+    },
+    "gp_section_633285196384306149": {
+      "settings": {
+        "checksum": "e24b88ee8aac572fd595d6ee7950a8309b8e9864d678df9f92e6f00c08fbfa6b_1_1_1_0__1",
+        "gg2-Klp2dPs_childItem_0": "<p>Can I use this sunscreen every day?</p>",
+        "gg2-Klp2dPs_childItem_1": "<p>Is it suitable for sensitive skin?</p>",
+        "gg2-Klp2dPs_childItem_2": "<p>Will it leave a white cast?</p>",
+        "gg2-Klp2dPs_childItem_3": "<p>Can I use it under makeup?</p>",
+        "gg2-Klp2dPs_childItem_4": "<p>How often should I reapply?</p>",
+        "gg2-Klp2dPs_childItem_5": "<p>Does it feel greasy on the skin?</p>",
+        "gg3FzvCM4Ah_text": "<p>You should reapply every two hours or after sweating swimming or towel drying</p>",
+        "ggDlQnSR81B_text": "<p>No, it blends smoothly into the skin and works well on all skin tones</p>",
+        "ggGMXlNODb__text": "<p>Yes, it has a lightweight texture that sits well under makeup without pilling</p>",
+        "ggZXKhhrdd6_text": "<p>Yes, it is designed for daily use and works well as the final step in your skincare routine</p>",
+        "ggetEbQHLza_text": "<p>No, it absorbs quickly and leaves a light comfortable finish</p>",
+        "ggklWV4cPtx_text": "<p>Yes, the formula is gentle and supports the skin barrier without causing irritation</p>",
+        "ggrdetKhm81_text": "<p>More questions? <a href=\"#\"><span style=\"color:#002C70;\"><strong><u>See our full FAQ</u></strong></span></a></p>"
+      },
+      "type": "gp-section-633285196384306149"
+    },
+    "gp_section_633285196384306154": {
+      "settings": {
+        "checksum": "bdd466f357180edb0a136ffa4c9bb2a6b0677e7f40f8dad835fd7ec6552e988e_1_1_1_0__1",
+        "gg0Rtki_dSM_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-9b75870f-ca0f-4a2e-8cfa-4cab8c390344.png",
+        "gg6W09yzeFC_label": "FAQ&nbsp;",
+        "gg8bE62qlos_label": "Return &amp; Exchange&nbsp;",
+        "ggAIA7mzL5d_label": "Delivery Information",
+        "ggE3CkRNyDE_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-f20d9943-7c65-42da-87bd-dd7209ee237f.png",
+        "ggGPaKRN8At_label": "Contact Us",
+        "ggM-IF7RQbx_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-1cd135b4-e229-45c0-8552-08ed7005ead1.png",
+        "ggW6bDaQem-_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-f12df0fc-9708-4fbf-82a8-601f2f0d70ef.png",
+        "ggXUVTJS_qA_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-762669bf-c0d4-41a3-8fc4-c835555dae7d.png",
+        "ggb3zC80hmT_text": "<p>Copyright © 2026 GemPages.</p>"
+      },
+      "type": "gp-section-633285196384306154"
+    },
+    "gp_section_633285196401083365": {
+      "settings": {
+        "checksum": "85fb922e64f680bd196701b64436a460a56897cb163d300876682705ecc64b30_1_1_1_0__1",
+        "gg7xJBUrAEw_text": "Reapply every two hours especially after sweating swimming or towel drying to maintain protection",
+        "ggA0mGuHPT2_text": "<p>Reapply</p>",
+        "ggH8GoWQWBU_text": "<p>Step 3</p>",
+        "ggLM1_mCcaN_text": "Keep protection active&nbsp;",
+        "ggLR4r3Mdeh_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171280986_ee03c5d7-764a-4d64-aaae-757cb96de4b3.png",
+        "ggNegCHC7_c_text": "Use every morning as the final step of your skincare routine for best long term results",
+        "ggOPbuF02Gc_text": "Start with clean skin",
+        "ggRTcZfJzEi_text": "<p>Daily use</p>",
+        "ggXR73ratPv_text": "<p>Prep skin</p>",
+        "ggcSaojvtpI_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171280985_35ebb4c2-b12c-480e-8827-a3f15170224b.png",
+        "ggdJzLXaJxB_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171280987.png",
+        "ggiutTjfPcx_text": "Apply a generous amount evenly on clean skin before sun exposure for daily protection",
+        "ggkegH7wzfr_text": "How to use GemShield sunscreen&nbsp;",
+        "ggoQMqerfj-_text": "<p>Step 1</p>",
+        "ggqv0Zi92Mn_text": "Make it a habit&nbsp;",
+        "ggwhfvoDZ28_text": "<p>Step 2</p>"
+      },
+      "type": "gp-section-633285196401083365"
+    },
+    "gp_section_633285196484969445": {
+      "settings": {
+        "checksum": "14f1eb4ef828c7afd8037151ebf1b6a56cf489d9f35a92c97c980b42e2b4f1fa_1_1_1_0__1",
+        "ggA17j5y2Gn_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Group_1171277522.png",
+        "ggIEKMPdnAE_text": "Non greasy texture",
+        "ggM5Q4vgLpp_text": "<p>Best quality&nbsp;</p>",
+        "ggMngWkkk4h_text": "See the difference clearly&nbsp;",
+        "ggTOhx0nneV_text": "Skin barrier support",
+        "ggVRIulraue_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/nvv2.png",
+        "ggVRIulraue_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/nvv2.png",
+        "ggZ7sbwITkq_text": "<p>Low quality</p>",
+        "gg_ebT0Tfpk_text": "<p>Others</p>",
+        "ggeoc9fO0_-_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/cnv.png",
+        "gggvyPIHLh-_text": "Compare GemShield with others and discover better protection and comfort",
+        "gghbUy8TUs9_text": "No white cast&nbsp;",
+        "ggoXTXvqmEy_text": "Broad spectrum protection&nbsp;",
+        "ggsvUZqwSao_text": "Deep skin hydration&nbsp;",
+        "ggx7c3kPnFl_text": "Lightweight skin feel &nbsp;"
+      },
+      "type": "gp-section-633285196484969445"
+    },
+    "gp_section_633285196568855530": {
+      "settings": {
+        "checksum": "5ba20aa5628da36d39eae5cf40ec180a56f7bd7bf8afc1aa38c1e04cf4c04cfe_1_1_1_0__1",
+        "gg0D8fmahr-_text": "<p>Verified Buyer</p>",
+        "gg3vCh2fcJp_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171280984_f3045031-fddd-4b51-ab26-f1886d7a8aa3.png",
+        "gg6m2jVxIu-_text": "<p>Ava Mitchell</p>",
+        "gg6zUjqdzjv_text": "<p>This sunscreen feels so light on my skin</p>",
+        "ggBbUaMW4NL_text": "<p>Pick your choice</p>",
+        "ggCPmOxi9OC_text": "<p>&nbsp; &nbsp; For Traveller ☀️&nbsp;</p>",
+        "ggEE2Ri2l3Q_text": "<ul><li>Arrugas, manchas y poros: los tres en una sola pasada.</li><li>Llega donde llegues con la cara hablando por ti.</li><li>Eficiencia, dale un stop a las arrugas y a las imperfeciones.</li></ul>",
+        "ggLCECS55c2_text": "<p>From Instagram</p>",
+        "ggLtUqq950y_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-c4b8628c-4f06-40e9-915f-d730337df1e5.png",
+        "ggLyqLNZ4TW_displayContent": "Sale {percent_discount} off",
+        "ggN31KEXnTi_html5Url": "https://cdn.shopify.com/videos/c/o/v/2cd3deb506b54b009063f7270ab5cf2e.mp4",
+        "ggN31KEXnTi_poster_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Gemini_Generated_Image_1kfm6w1kfm6w1kfm_1.png",
+        "ggN31KEXnTi_vimeoUrl": "https://vimeo.com/1095883398",
+        "ggN31KEXnTi_youtubeUrl": "https://www.youtube.com/watch?v=drIt4RH_kyQ",
+        "ggP9chTr_93_text": "@laura",
+        "ggPea3GkLDR_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/nh_3.png",
+        "ggR7jH5kZV4_text": "Pack 1",
+        "ggSQ1SLClhI_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Object.png",
+        "ggUcoI5vcZ0_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-50576910-49f7-4ca6-9684-eab855df947e.png",
+        "ggVIivhMHWs_text": "<p>For trial</p>",
+        "ggZAsWLrr6q_text": "Trusted by GemShield Users",
+        "ggZn0D5BklY_errorMessage": "Cannot add product to cart",
+        "ggZn0D5BklY_label": "Add to cart",
+        "ggZn0D5BklY_outOfStockLabel": "Out of stock",
+        "ggZn0D5BklY_successMessage": "Add product to cart successfully",
+        "ggZn0D5BklY_unavailableLabel": "Unavailable",
+        "ggZn0D5BklY_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
+        "ggajrPkL6hQ_text": "@sophie",
+        "ggbnWGEpAgF_text": "<p>30-day money-back guarantee</p>",
+        "ggfeViuTzCn_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171280983.png",
+        "ggg4oFrA848_html5Url": "https://cdn.shopify.com/videos/c/o/v/2cd3deb506b54b009063f7270ab5cf2e.mp4",
+        "ggg4oFrA848_poster_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Gemini_Generated_Image_632wbt632wbt632w.png",
+        "ggg4oFrA848_vimeoUrl": "https://vimeo.com/1095883398",
+        "ggg4oFrA848_youtubeUrl": "https://www.youtube.com/watch?v=drIt4RH_kyQ",
+        "ggj4B19C8rW_text": "@john",
+        "ggmYXT3SOvZ_text": "<p>\"I love how it keeps my skin hydrated and protected without feeling heavy or greasy throughout the day\"</p>",
+        "ggnWJFuM9zu_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-1aaba532-a221-4682-955d-9ddfeeef0a57.png",
+        "ggq-ByAMBPG_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-79972f48-667f-42d0-a858-9c748da57068.png",
+        "ggrp4AYJ887_text": "<p>Pack 3</p>",
+        "ggs6T1U8RMZ_text": "<p>120,000+ clientas felices <strong>(Valoración 4.9/5)</strong></p>",
+        "ggtJSep6ply_text": "<p>&nbsp;COMPRAS VERIFICADAS &nbsp;</p>",
+        "gguBOl-62lC_html5Url": "https://cdn.shopify.com/videos/c/o/v/2cd3deb506b54b009063f7270ab5cf2e.mp4",
+        "gguBOl-62lC_poster_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Gemini_Generated_Image_v4ry0tv4ry0tv4ry_1.png",
+        "gguBOl-62lC_vimeoUrl": "https://vimeo.com/1095883398",
+        "gguBOl-62lC_youtubeUrl": "https://www.youtube.com/watch?v=drIt4RH_kyQ",
+        "gguTlpJnexk_text": "<p>Great value</p>",
+        "gguxqeTZLsG_text": "<p>Derm-tested formula designed to protect, nourish, and support your skin with every use</p>",
+        "ggxTAmzcE9D_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-a739e588-df2a-4412-b6b9-9fd0010151fa.png",
+        "section_preload": "true"
+      },
+      "type": "gp-section-633285196568855530"
+    },
+    "gp_section_633285196585632746": {
+      "settings": {
+        "checksum": "e7a5e53f0bd8130086bea65692656a4c6206271a17811d3c2c1c01672b77e8db_1_1_1_0__1",
+        "gg02lNVdndg_text": "<p>Chloe</p>",
+        "gg39foaVu5q_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/tytyt.png",
+        "gg3G_XGZsWc_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171280991.png",
+        "gg667dOylPV_text": "<p>Purchased on July 8th, 2026</p>",
+        "ggDB3Fl5Ipw_text": "<p>Verified Buyer</p>",
+        "ggEkSzrKB1c_text": "<p>Sophia</p>",
+        "ggEnLT84Oxw_text": "<p>After using it daily my skin feels softer more even and I no longer worry about sun damage during the day</p>",
+        "ggGX_DcxJna_text": "<p>GemShield Sunscreen&nbsp;</p>",
+        "ggGvZxQs5-S_text": "<p>Verified Buyer</p>",
+        "ggISgrH_J6g_text": "<p>Verified Buyer</p>",
+        "ggJdJqNepMj_text": "<p>Buy 3, get 20% off + 2 free gifts</p>",
+        "ggLQH34BrcH_text": "<p>\"Finally found the perfect sunscreen\"</p>",
+        "ggOJ_J_B4fY_text": "What our customers are saying",
+        "ggPV8SOByjb_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171280989.png",
+        "ggQw8GkItkH_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171280992.png",
+        "ggSSRjmHzWq_text": "<p>Purchased on March 12th, 2026</p>",
+        "ggUGBE2XiPA_text": "<p>Purchased on July 8th, 2026</p>",
+        "ggW-mCS0sju_text": "<p>\"This sunscreen feels amazing on\"</p>",
+        "ggXz93vH6uJ_text": "<p>Buy 3, get 20% off + 2 free gifts</p>",
+        "ggY7EKfMsT__text": "<p>GemShield Sunscreen&nbsp;</p>",
+        "gg_Ce_YjNkR_text": "<p>Verified Buyer</p>",
+        "gg_le-94lWa_text": "<p>It blends so smoothly into my skin without any white cast and works perfectly under my daily makeup routine</p>",
+        "ggcDPxmGfiP_text": "<p>GemShield Sunscreen&nbsp;</p>",
+        "ggcjCCz-U8J_text": "<p>Buy 3, get 20% off + 2 free gifts</p>",
+        "ggf_HQYTMJi_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/tytyt.png",
+        "gggOvUBAn4b_text": "<p>Olivia&nbsp;</p>",
+        "ggjonGqci6C_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/tytyt.png",
+        "ggkltfVVnsN_text": "<p>I love how lightweight it feels on my skin and it keeps me hydrated and protected all day long</p>",
+        "gglKxt-xZdV_text": "<p>\"My skin looks healthier already\"</p>",
+        "ggsJuphJMvy_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171280993.png",
+        "ggvWFWQ8F98_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171280988_8b6ba451-dda6-494e-88c6-2372b11c246d.png",
+        "ggztIAw9juy_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0946/3011/7697/files/Frame_1171280990.png"
+      },
+      "type": "gp-section-633285196585632746"
+    }
+  },
+  "order": [
+    "gp_section_633285196233310869",
+    "gp_section_633285196568855530",
+    "gp_section_633285196367528597",
+    "gp_section_633285196401083365",
+    "gp_section_633285196585632746",
+    "gp_section_633285196384305749",
+    "gp_section_633285196484969445",
+    "gp_section_633285196250088021",
+    "gp_section_633285196367528533",
+    "gp_section_633285196384306149",
+    "gp_section_633285196384306154"
+  ]
+}
