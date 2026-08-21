@@ -1,0 +1,197 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_633841732592600045": {
+      "settings": {
+        "checksum": "adad10c32a9136cb4b5da07e937a83059387060e8564b5faa0362b022edd687f_1_1_1_0__1",
+        "section_preload": "true"
+      },
+      "type": "gp-section-633841732592600045"
+    },
+    "gp_section_633842174319919884": {
+      "settings": {
+        "checksum": "a3943334cc15653c738ec2319e04a14c41fb74e8cdff22a0fe9a4a18de76d9da_1_1_1_0__1",
+        "gg0A0csuybv_label": "<p>Explore Now</p>",
+        "ggOUviTcNQb_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-53e5bbdd-6ab8-4dd4-aba3-bcaa492e1c3f.webp",
+        "ggOUviTcNQb_background_desktop_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
+        "ggOUviTcNQb_background_desktop_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggOUviTcNQb_background_mobile_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-3057c3de-0f86-4744-a6a4-46ba414e8f9f.webp",
+        "ggOUviTcNQb_background_mobile_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
+        "ggOUviTcNQb_background_mobile_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4"
+      },
+      "type": "gp-section-633842174319919884"
+    },
+    "gp_section_633842174420583405": {
+      "settings": {
+        "checksum": "c6a745d89d555e084c1e75ebced24f39f109061afb425edb9679ae8424f71d87_1_1_1_0__1",
+        "ggG_X1qjjPy_text": "Best Sellers",
+        "ggjJDmOa8es_errorMessage": "Cannot add product to cart",
+        "ggjJDmOa8es_label": "Add To Cart",
+        "ggjJDmOa8es_outOfStockLabel": "Out Of Stock",
+        "ggjJDmOa8es_successMessage": "Add product to cart successfully",
+        "ggjJDmOa8es_unavailableLabel": "Unavailable",
+        "ggjJDmOa8es_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
+        "ggr-mSvjocI_viewLessText": "Show less",
+        "ggr-mSvjocI_viewMoreText": "Show more"
+      },
+      "type": "gp-section-633842174420583405"
+    },
+    "gp_section_633842174504469079": {
+      "settings": {
+        "checksum": "a0985eadc1c753b6f076becb13c2ff371e397fca9eda0937b1d9177452a7a03a_1_1_1_0__1",
+        "gg2cig-ZQGZ_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-359b7a8b-59fa-43fc-8c35-2ad9e7579e30.webp",
+        "ggDmGWMJ-IZ_text": "<p>Enjoy Having Fun</p>",
+        "ggIoU6QXTQo_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-19d43998-fffa-4966-ae67-70e974ab3f02.webp",
+        "ggsbAczL66f_text": "<p>Enjoy Having Fun</p>"
+      },
+      "type": "gp-section-633842174504469079"
+    },
+    "gp_section_633842174521246258": {
+      "settings": {
+        "checksum": "da9099011f6e5f9a7a24a01335565fd2ab8d46156212c1bc173ff05f1f7ec520_1_1_1_0__1",
+        "ggEuj9NE2SC_html5Url": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggEuj9NE2SC_poster_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-805fa4d9-6cb6-46a5-a173-ea7f3aa2496e.webp",
+        "ggEuj9NE2SC_vimeoUrl": "https://vimeo.com/347119375",
+        "ggEuj9NE2SC_youtubeUrl": "https://www.youtube.com/watch?v=cyzh48XRS4M",
+        "ggT4jyzj2t5_text": "<p>Charlotte</p>",
+        "gg_rGtH8tvy_text": "<p>FOUNDER STORY</p>",
+        "ggbs7ZyxxeT_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-af37b79a-36bf-4534-b0f6-1278672a9ffe.webp",
+        "ggd1D0zX9Ee_text": "Elevate Your Style",
+        "ggx9-dnfu5G_text": "<p>As a lifelong denim devotee, I've designed the Denim Essentials Collection to be the ultimate expression of premium quality and timeless style. Every garment is meticulously crafted using the finest materials and time-honored techniques, empowering you to elevate your everyday look with exceptional denim.</p>"
+      },
+      "type": "gp-section-633842174521246258"
+    },
+    "gp_section_633842174588355159": {
+      "settings": {
+        "checksum": "323d9de0662c780bc569569102996c84ac2ec638c62993ce37a72a1066d185ea_1_1_1_0__1",
+        "gg4KjJNAxll_text": "You May Also Like",
+        "ggQhQVdb8FE_errorMessage": "Cannot add product to cart",
+        "ggQhQVdb8FE_label": "Add To Cart",
+        "ggQhQVdb8FE_outOfStockLabel": "Out Of Stock",
+        "ggQhQVdb8FE_successMessage": "Add product to cart successfully",
+        "ggQhQVdb8FE_unavailableLabel": "Unavailable",
+        "ggQhQVdb8FE_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
+        "ggzuy4ZE4Gy_viewLessText": "Show less",
+        "ggzuy4ZE4Gy_viewMoreText": "Show more"
+      },
+      "type": "gp-section-633842174588355159"
+    },
+    "gp_section_633842174605132338": {
+      "settings": {
+        "checksum": "27494487131516a6dc45398b8c77319247c07dddab0fed36a64437699536dcb1_1_1_1_0__1",
+        "gg0ft8wWXo1_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-ad2d7aa1-5811-41c6-8c3e-455b4dad4fcc.webp",
+        "gg8j3DMPxWN_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-2c86673d-a1e0-4254-8377-86103e80edb8.webp",
+        "ggEYlkxWWjl_text": "Follow Us",
+        "ggP1DiKUo4D_label": "<p>@gemdenim.design</p>",
+        "ggXdR8kIsim_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-500f8b2c-4808-4645-84e6-59a2a4bf9315.webp",
+        "ggk1l0eSHz2_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-65b2c82b-85bd-4194-bc00-b2de6865a35f.webp",
+        "ggtRMg6XS4T_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-0abf88ba-70d5-4bf0-8e1b-a1fbaeba65a0.webp"
+      },
+      "type": "gp-section-633842174605132338"
+    },
+    "gp_section_633842174605132556": {
+      "settings": {
+        "checksum": "5f432a0b9656d16c988bc245f15c2395644fb1e3b901ee946533d04a0b34ec55_1_1_1_0__1",
+        "gg0DhTi_t8v_text": "Denim Jackets",
+        "gg4BXv7K19N_label": "<p>View Jackets</p>",
+        "gg7pnzk5d9p_text": "Denim bags",
+        "ggCia4_kD45_text": "<p>Premium denim tote crafted with durable quality and timeless, effortless style.</p>",
+        "ggEvT1ace3J_label": "<p>View Bags</p>",
+        "ggSDNZMZcbH_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-73abf961-1edd-410b-8791-0016b98acea6.webp",
+        "ggbjC2pt9vK_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-c419247b-4bf1-4f76-a27c-d9aacff1a959.webp",
+        "ggivTH3IpIw_text": "<p>Rugged yet polished jacket designed with sturdy fabric and a clean, contemporary silhouette</p>",
+        "ggoQQ8IYq_f_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-3b8de358-1f38-4557-9111-bf3642193b83.webp",
+        "ggqE9rn1le8_text": "Denim jeans",
+        "ggsY_5WOp1z_text": "<p>Expertly tailored jeans offering long-lasting strength and a refined, versatile look.</p>",
+        "ggxrk-woH8I_label": "<p>View Jeans</p>"
+      },
+      "type": "gp-section-633842174605132556"
+    },
+    "gp_section_633842174605132781": {
+      "settings": {
+        "checksum": "1f484a591b5221c5e09cff5ef7f39c9d9cf68dcf6ea4eff24a6ed163ed82951f_1_1_1_0__1",
+        "gg8Qwvi4Lbx_text": "Subcribe &amp; Sale off 10%",
+        "ggGSSiUhCB-_text": "<p>Sign up for exclusive content, special prizes, and latest update</p>",
+        "ggNLtfRW1AZ_errorMessage": "Can’t send email. Please try again later.",
+        "ggNLtfRW1AZ_successMessage": "Thanks for contacting us. We'll get back to you as soon as possible.",
+        "gghAgcqoRu1_placeholder": "Enter your email",
+        "gguwFOL7eej_label": "Submit"
+      },
+      "type": "gp-section-633842174605132781"
+    },
+    "gp_section_633842174605198317": {
+      "settings": {
+        "checksum": "5e35528b9f3a2cea1a5c7ea262eb0f3dc7acd6289fcc6554cc6bb781eb1bc261_1_1_1_0__1",
+        "gg4t2vN0uu3_label": "<p>Read More</p>",
+        "ggB-Mt2DU0c_text": "<p>A Guide to Finding Your Perfect Fit</p>",
+        "ggDBKWDz_1m_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-02605405-19d5-4a7a-88f3-718decd1a8a3.webp",
+        "ggHZqMslEk9_label": "<p>Read More</p>",
+        "ggKpCksPN___text": "<p>Conscious Fashion for a Better Future</p>",
+        "ggS1eJAJH5r_text": "Blogs",
+        "ggTPN3nKT-s_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-a22c8fa8-1953-4a7f-8a23-844924705416.webp",
+        "ggUjTa6cdPx_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-beb59b3d-ee62-436f-a970-441c8b1d8dfd.webp",
+        "ggX4hQIm0eF_text": "<p>January 10, 2024 | Written by Maria Chen</p>",
+        "ggd7ya-IL3t_text": "<p>Tips for Washing Your Favorite Jeans</p>",
+        "ggiaXW0im2T_label": "<p>Read More</p>",
+        "ggivCUVlz57_text": "<p>April 22, 2024 | Written by Jordan Lee</p>",
+        "ggrawUL67_l_text": "<p>August 15, 2024 | Written by Alex Johnson</p>"
+      },
+      "type": "gp-section-633842174605198317"
+    },
+    "gp_section_633842174689018418": {
+      "settings": {
+        "checksum": "ddb8b1ef3d419eab976cae259fb5940723d5505630e55b341387cf542f251bfb_1_1_1_0__1",
+        "gg1kLyCPlVk_label": "<p>Contact Us</p>",
+        "gg9lUqbC9FT_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-2beb58ad-7a13-436d-8274-e3f502f9aba2.png",
+        "ggNR0smN85y_label": "<p>Delivery Information</p>",
+        "ggSRU8S-MXu_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-c1742c1b-c4b4-4e63-84fe-6fd4a1cd2408.png",
+        "ggZEe5cOnd1_label": "<p>FAQ&nbsp;</p>",
+        "ggeKFFn-rbK_label": "<p>Return &amp; Exchange&nbsp;</p>",
+        "ggfQayigd7Q_text": "<p>Copyright © 2024 GemPages.&nbsp;</p>",
+        "ggh1jRFKloS_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-57cdde83-bbec-45ee-81be-64ad9a555129.png",
+        "ggsm7rP0I3A_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-026b411a-142d-4eba-88e6-e1d66d668bac.png",
+        "ggtYaOF7YG7_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-9135bf91-ae7c-405a-bc8b-71fdcf5cfdb5.png"
+      },
+      "type": "gp-section-633842174689018418"
+    },
+    "gp_section_633842174689018455": {
+      "settings": {
+        "checksum": "39244bcb3f7f41526e5d74d2df728dc887d0d3169a1a38e12101d9eb180b88c2_1_1_1_0__1",
+        "gg6ac_Ivf0Z_childItem_0": "<p>Verified Buyer</p>",
+        "gg97LKZi_zu_text": "<p><strong>Ken K </strong>| Customer</p>",
+        "ggLdx-rxsCi_text": "<p>As a lifelong denim devotee, I've proudly designed the exceptional Denim Essentials Line - expertly crafted with the finest premium fabrics to elegantly elevate everyday style.</p>",
+        "ggM7MBBk9bP_text": "<p><strong>Ava </strong>| Customer</p>",
+        "ggSgTT3QyJG_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-750e25ac-e8aa-4307-b901-e141233b3fba.webp",
+        "ggSgTT3QyJG_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-750e25ac-e8aa-4307-b901-e141233b3fba.webp",
+        "ggjdMhq6vjS_childItem_0": "<p>Verified Buyer</p>",
+        "ggkuyuQM9Ne_text": "Hear from Our Customers",
+        "ggnUlljzrOH_text": "<p>With a lifelong passion for denim, I’ve proudly created the exceptional Denim Essentials Line, crafted with premium fabrics to elevate everyday style with elegance.</p>",
+        "ggx-BRyGpU5_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-bd8b02c8-a567-4d05-a6af-f9042937a94e.webp",
+        "ggx-BRyGpU5_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-bd8b02c8-a567-4d05-a6af-f9042937a94e.webp"
+      },
+      "type": "gp-section-633842174689018455"
+    }
+  },
+  "order": [
+    "gp_section_633841732592600045",
+    "gp_section_633842174319919884",
+    "gp_section_633842174420583405",
+    "gp_section_633842174605132556",
+    "gp_section_633842174521246258",
+    "gp_section_633842174504469079",
+    "gp_section_633842174588355159",
+    "gp_section_633842174605132338",
+    "gp_section_633842174689018455",
+    "gp_section_633842174605198317",
+    "gp_section_633842174605132781",
+    "gp_section_633842174689018418"
+  ]
+}
