@@ -25,7 +25,8 @@
         "ggOUviTcNQb_background_desktop_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
         "ggOUviTcNQb_background_mobile_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-3057c3de-0f86-4744-a6a4-46ba414e8f9f.webp",
         "ggOUviTcNQb_background_mobile_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
-        "ggOUviTcNQb_background_mobile_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4"
+        "ggOUviTcNQb_background_mobile_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "section_preload": "true"
       },
       "type": "gp-section-633842174319919884"
     },
@@ -40,7 +41,8 @@
         "ggjJDmOa8es_unavailableLabel": "Unavailable",
         "ggjJDmOa8es_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
         "ggr-mSvjocI_viewLessText": "Show less",
-        "ggr-mSvjocI_viewMoreText": "Show more"
+        "ggr-mSvjocI_viewMoreText": "Show more",
+        "section_preload": "true"
       },
       "type": "gp-section-633842174420583405"
     },
