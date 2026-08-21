@@ -520,7 +520,7 @@
     >
       
     <gp-button
-      gp-data='{"btnLink":{"link":"#","target":"_self"}}'
+      gp-data='{"btnLink":{"link":"/products/maxcalm","target":"_self","type":"open-page"}}'
       
       class="gp-flex gp-flex-col"
     >
@@ -552,15 +552,11 @@
     
     
   }</style>
-        <a
-            class="gp-trigger-button-link gp-hidden"
-            href=#
-            target=_self
-          ></a>
+        
         <a
           data-id="gz-uK8InRn" dataId="gz-uK8InRn" data-state="idle" aria-label="<p>BIENESTAR</p>"
           
-          href="#" target="_self"
+          href="{{ request.origin }}{{ routes.root_url | split: '/' | join: '/' }}/products/maxcalm" target="_self"
           style="--w:Auto;--w-tablet:Auto;--w-mobile:Auto;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:var(--g-s-l);--pb:var(--g-s-l);--pl-mobile:20px;--pr-mobile:20px;--pt-mobile:11px;--pb-mobile:10px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--hvr-bblr:0px;--hvr-bbrr:0px;--hvr-btlr:0px;--hvr-btrr:0px;--shadow:none;--hvr-bg:#242424;--bg:#ffffff;--hvr-c:#ffffff;--c:#242424;--ff:var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:16px;--size-mobile:14px;--lh:130%;--lh-tablet:130%;--lh-mobile:180%;--ls:0px;--tt:uppercase"
           class="gz-uK8InRn gp-text-center gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30 "
         >
