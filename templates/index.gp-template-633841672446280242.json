@@ -9,191 +9,230 @@
  */
 {
   "sections": {
-    "gp_section_633841732592600045": {
+    "gp_section_633843071464768493": {
       "settings": {
-        "checksum": "adad10c32a9136cb4b5da07e937a83059387060e8564b5faa0362b022edd687f_1_1_1_0__1",
+        "checksum": "c84698391d2aea10d87264afcd9aea81e08094b193c24a9c4207a3d7ed4f0f84_1_1_1_0__1",
+        "gg7439ZHqX8_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-b5acd940-1bac-43e8-82fe-f20ab1e86ea0.webp",
+        "gg7439ZHqX8_background_desktop_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
+        "gg7439ZHqX8_background_desktop_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "gg7439ZHqX8_background_mobile_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-7a70fec8-f558-450a-a9bb-08e3b51caf5f.webp",
+        "gg7439ZHqX8_background_mobile_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
+        "gg7439ZHqX8_background_mobile_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggAVysW7_yh_text": "Pure Beauty. Ethical Mindset",
+        "ggDBMA_BHYB_text": "<p>Skin-friendly vegan makeup that's clean, multitasking, and sustainably packaged.</p>",
+        "ggDhWefJHNA_text": "Clean Beauty. Clear Conscience.",
+        "ggUEfUiwBk8_label": "<p>SHOP NOW</p>",
+        "ggapfJMWzlC_text": "<p>Clean, vegan, multitasking makeup that’s skin loving and sustainable from product to pack.</p>",
+        "ggb3BB2NvwD_label": "<p>SHOP NOW</p>",
+        "ggx0It6Ei20_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-30b5a1c5-e35e-4e3a-8aa2-32cbcd8d6f2f.webp",
+        "ggx0It6Ei20_background_desktop_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
+        "ggx0It6Ei20_background_desktop_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggx0It6Ei20_background_mobile_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-718afb33-173e-4b16-bf25-4f01fb42e765.webp",
+        "ggx0It6Ei20_background_mobile_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
+        "ggx0It6Ei20_background_mobile_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
         "section_preload": "true"
       },
-      "type": "gp-section-633841732592600045"
+      "type": "gp-section-633843071464768493"
     },
-    "gp_section_633842174319919884": {
+    "gp_section_633843071598985815": {
       "settings": {
-        "checksum": "a3943334cc15653c738ec2319e04a14c41fb74e8cdff22a0fe9a4a18de76d9da_1_1_1_0__1",
-        "gg0A0csuybv_label": "<p>Explore Now</p>",
-        "ggOUviTcNQb_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-53e5bbdd-6ab8-4dd4-aba3-bcaa492e1c3f.webp",
-        "ggOUviTcNQb_background_desktop_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
-        "ggOUviTcNQb_background_desktop_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
-        "ggOUviTcNQb_background_mobile_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-3057c3de-0f86-4744-a6a4-46ba414e8f9f.webp",
-        "ggOUviTcNQb_background_mobile_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
-        "ggOUviTcNQb_background_mobile_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
-        "section_preload": "true"
+        "checksum": "c323656089377a4525d79234de4514b01bc56fa170b963ec3f05ba611c695f30_1_1_1_0__1",
+        "gg4MCj_628e_label": "<p>Shop Lips</p>",
+        "ggBrwLz0EUe_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-cfbf7ea5-0b3c-48ad-950d-a71a263b55ba.webp",
+        "ggBrwLz0EUe_background_desktop_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
+        "ggBrwLz0EUe_background_desktop_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggBrwLz0EUe_background_mobile_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-caa2b47a-bccc-4381-aa9a-4239612b32ba.webp",
+        "ggBrwLz0EUe_background_mobile_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
+        "ggBrwLz0EUe_background_mobile_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggBxa79Rbr9_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-2e3f53f7-d2e4-467b-9450-ceaf30b35d21.webp",
+        "ggBxa79Rbr9_background_desktop_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
+        "ggBxa79Rbr9_background_desktop_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggBxa79Rbr9_background_mobile_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-6dc786c6-f59a-412d-b9f8-eb2f64c29053.webp",
+        "ggBxa79Rbr9_background_mobile_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
+        "ggBxa79Rbr9_background_mobile_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggqPg0KyPLm_label": "<p>Shop Eyes</p>",
+        "ggxlKNx-AI-_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-6e912061-2cff-48cc-bf70-d7a805b83ef0.webp",
+        "ggxlKNx-AI-_background_desktop_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
+        "ggxlKNx-AI-_background_desktop_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggz-uK8InRn_label": "<p>Shop Face</p>"
       },
-      "type": "gp-section-633842174319919884"
+      "type": "gp-section-633843071598985815"
     },
-    "gp_section_633842174420583405": {
+    "gp_section_633843071598985996": {
       "settings": {
-        "checksum": "c6a745d89d555e084c1e75ebced24f39f109061afb425edb9679ae8424f71d87_1_1_1_0__1",
-        "ggG_X1qjjPy_text": "Best Sellers",
-        "ggjJDmOa8es_errorMessage": "Cannot add product to cart",
-        "ggjJDmOa8es_label": "Add To Cart",
-        "ggjJDmOa8es_outOfStockLabel": "Out Of Stock",
-        "ggjJDmOa8es_successMessage": "Add product to cart successfully",
-        "ggjJDmOa8es_unavailableLabel": "Unavailable",
-        "ggjJDmOa8es_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
-        "ggr-mSvjocI_viewLessText": "Show less",
-        "ggr-mSvjocI_viewMoreText": "Show more",
-        "section_preload": "true"
+        "checksum": "445bbdbf65a7f172995f0b62c974eb517368dd9e84ae1d61c8b7f686d148b372_1_1_1_0__1",
+        "gg7eE1UBuqO_text": "Shop our Best Sellers",
+        "ggeWJavhWcT_viewLessText": "Show less",
+        "ggeWJavhWcT_viewMoreText": "Show more"
       },
-      "type": "gp-section-633842174420583405"
+      "type": "gp-section-633843071598985996"
     },
-    "gp_section_633842174504469079": {
+    "gp_section_633843071699649292": {
       "settings": {
-        "checksum": "a0985eadc1c753b6f076becb13c2ff371e397fca9eda0937b1d9177452a7a03a_1_1_1_0__1",
-        "gg2cig-ZQGZ_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-359b7a8b-59fa-43fc-8c35-2ad9e7579e30.webp",
-        "ggDmGWMJ-IZ_text": "<p>Enjoy Having Fun</p>",
-        "ggIoU6QXTQo_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-19d43998-fffa-4966-ae67-70e974ab3f02.webp",
-        "ggsbAczL66f_text": "<p>Enjoy Having Fun</p>"
+        "checksum": "2834e5d415e0d6c9cf8a84331a8c5a47d1c8ea6fea064e487b90126987b8bbfc_1_1_1_0__1",
+        "gg23VXOGwm6_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0703/5214/2562/files/gempages_518090459516502570-fd204759-bd9d-4564-9e30-3ff2facb72de.png",
+        "ggX__O0pCzb_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0703/5214/2562/files/gempages_518090459516502570-fd204759-bd9d-4564-9e30-3ff2facb72de.png",
+        "ggaYqIl1LoR_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0703/5214/2562/files/gempages_518090459516502570-fd204759-bd9d-4564-9e30-3ff2facb72de.png",
+        "ggdzCvSufGs_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0703/5214/2562/files/gempages_518090459516502570-fd204759-bd9d-4564-9e30-3ff2facb72de.png",
+        "ggim1XhBD_p_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0703/5214/2562/files/gempages_518090459516502570-fd204759-bd9d-4564-9e30-3ff2facb72de.png",
+        "ggnbAtczJYD_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0703/5214/2562/files/gempages_518090459516502570-fd204759-bd9d-4564-9e30-3ff2facb72de.png",
+        "ggobgoZlzYN_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0703/5214/2562/files/gempages_518090459516502570-fd204759-bd9d-4564-9e30-3ff2facb72de.png",
+        "ggtSjwvXFPf_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0703/5214/2562/files/gempages_518090459516502570-fd204759-bd9d-4564-9e30-3ff2facb72de.png"
       },
-      "type": "gp-section-633842174504469079"
+      "type": "gp-section-633843071699649292"
     },
-    "gp_section_633842174521246258": {
+    "gp_section_633843071699649517": {
       "settings": {
-        "checksum": "da9099011f6e5f9a7a24a01335565fd2ab8d46156212c1bc173ff05f1f7ec520_1_1_1_0__1",
-        "ggEuj9NE2SC_html5Url": "https://media.w3.org/2010/05/sintel/trailer.mp4",
-        "ggEuj9NE2SC_poster_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-805fa4d9-6cb6-46a5-a173-ea7f3aa2496e.webp",
-        "ggEuj9NE2SC_vimeoUrl": "https://vimeo.com/347119375",
-        "ggEuj9NE2SC_youtubeUrl": "https://www.youtube.com/watch?v=cyzh48XRS4M",
-        "ggT4jyzj2t5_text": "<p>Charlotte</p>",
-        "gg_rGtH8tvy_text": "<p>FOUNDER STORY</p>",
-        "ggbs7ZyxxeT_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-af37b79a-36bf-4534-b0f6-1278672a9ffe.webp",
-        "ggd1D0zX9Ee_text": "Elevate Your Style",
-        "ggx9-dnfu5G_text": "<p>As a lifelong denim devotee, I've designed the Denim Essentials Collection to be the ultimate expression of premium quality and timeless style. Every garment is meticulously crafted using the finest materials and time-honored techniques, empowering you to elevate your everyday look with exceptional denim.</p>"
+        "checksum": "58e8edb04772e5b4c9ff6fe3ead75c8dbb07298d6f058a3f69227dd518135da7_1_1_1_0__1",
+        "gg1oTTnb1zu_text": "Flawless Finish with Our Makeup Sponges",
+        "gg6crhLIYjR_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-7c361c84-f185-4c21-9820-3077b1449fb3.webp",
+        "ggE7lZCKBxH_label": "<p>Try it now</p>",
+        "ggOcVL1KObE_text": "<p>Discover the secret to an impeccable, airbrushed complexion with our luxurious Makeup Sponges. Expertly designed to seamlessly blend and build coverage, achieving a flawless, professionally-applied finish has never been easier.</p>"
       },
-      "type": "gp-section-633842174521246258"
+      "type": "gp-section-633843071699649517"
     },
-    "gp_section_633842174588355159": {
+    "gp_section_633843071800312370": {
       "settings": {
-        "checksum": "323d9de0662c780bc569569102996c84ac2ec638c62993ce37a72a1066d185ea_1_1_1_0__1",
-        "gg4KjJNAxll_text": "You May Also Like",
-        "ggQhQVdb8FE_errorMessage": "Cannot add product to cart",
-        "ggQhQVdb8FE_label": "Add To Cart",
-        "ggQhQVdb8FE_outOfStockLabel": "Out Of Stock",
-        "ggQhQVdb8FE_successMessage": "Add product to cart successfully",
-        "ggQhQVdb8FE_unavailableLabel": "Unavailable",
-        "ggQhQVdb8FE_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
-        "ggzuy4ZE4Gy_viewLessText": "Show less",
-        "ggzuy4ZE4Gy_viewMoreText": "Show more"
+        "checksum": "78da2a39cfdaaaa35324fc6c50de52ab9f293049b51fe213a8aa1c456dd4daa2_1_1_1_0__1",
+        "ggG4ezBWK4K_html5Url": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggG4ezBWK4K_poster_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-fb26b456-bf4a-4d1b-b5ff-d999e0f3d064.webp",
+        "ggG4ezBWK4K_vimeoUrl": "https://vimeo.com/347119375",
+        "ggG4ezBWK4K_youtubeUrl": "https://www.youtube.com/shorts/iO8oW6CRiRk",
+        "ggRYvsCf0au_text": "What people are saying",
+        "ggWvkhKWt_U_html5Url": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggWvkhKWt_U_poster_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-615efea7-6579-47ca-8d68-2dccf67b2696.webp",
+        "ggWvkhKWt_U_vimeoUrl": "https://vimeo.com/347119375",
+        "ggWvkhKWt_U_youtubeUrl": "https://www.youtube.com/shorts/RVzEiptQS3A",
+        "ggg4Ysulg1r_html5Url": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggg4Ysulg1r_poster_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-32f88ad8-0299-4e8e-bd4c-8165d402012e.webp",
+        "ggg4Ysulg1r_vimeoUrl": "https://vimeo.com/347119375",
+        "ggg4Ysulg1r_youtubeUrl": "https://www.youtube.com/shorts/iO8oW6CRiRk",
+        "ggrCTDEA8ry_html5Url": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggrCTDEA8ry_poster_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-f9da6e90-979a-42c2-a39a-30072d5f1c3e.webp",
+        "ggrCTDEA8ry_vimeoUrl": "https://vimeo.com/347119375",
+        "ggrCTDEA8ry_youtubeUrl": "https://www.youtube.com/shorts/iO8oW6CRiRk",
+        "ggrXazgttEQ_html5Url": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggrXazgttEQ_poster_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-c0979fdd-6594-4dd4-ba36-fa1c56dd2ff7.webp",
+        "ggrXazgttEQ_vimeoUrl": "https://vimeo.com/347119375",
+        "ggrXazgttEQ_youtubeUrl": "https://www.youtube.com/shorts/gzC0Rec45vQ"
       },
-      "type": "gp-section-633842174588355159"
+      "type": "gp-section-633843071800312370"
     },
-    "gp_section_633842174605132338": {
+    "gp_section_633843071817089586": {
       "settings": {
-        "checksum": "27494487131516a6dc45398b8c77319247c07dddab0fed36a64437699536dcb1_1_1_1_0__1",
-        "gg0ft8wWXo1_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-ad2d7aa1-5811-41c6-8c3e-455b4dad4fcc.webp",
-        "gg8j3DMPxWN_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-2c86673d-a1e0-4254-8377-86103e80edb8.webp",
-        "ggEYlkxWWjl_text": "Follow Us",
-        "ggP1DiKUo4D_label": "<p>@gemdenim.design</p>",
-        "ggXdR8kIsim_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-500f8b2c-4808-4645-84e6-59a2a4bf9315.webp",
-        "ggk1l0eSHz2_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-65b2c82b-85bd-4194-bc00-b2de6865a35f.webp",
-        "ggtRMg6XS4T_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-0abf88ba-70d5-4bf0-8e1b-a1fbaeba65a0.webp"
+        "checksum": "33811d9977ed02ad73bf0ea21f4b9cf2c15c122056079eb2b2e239db83d48b83_1_1_1_0__1",
+        "gg82KgkB2ae_text": "1,200+",
+        "ggLt83hdruq_text": "<p>Curated Beauty and Wellness Essentials</p>",
+        "ggfXnkIYUrG_text": "<p>Trusted 5-Star Ratings from Satisfied Clients</p>",
+        "ggkFXnsf2SF_text": "500k+",
+        "ggmqF1Xxt4i_text": "3+years",
+        "ggq0mnGM8fb_text": "<p>Empowering you to nurture and revitalize!</p>"
       },
-      "type": "gp-section-633842174605132338"
+      "type": "gp-section-633843071817089586"
     },
-    "gp_section_633842174605132556": {
+    "gp_section_633843071817089623": {
       "settings": {
-        "checksum": "5f432a0b9656d16c988bc245f15c2395644fb1e3b901ee946533d04a0b34ec55_1_1_1_0__1",
-        "gg0DhTi_t8v_text": "Denim Jackets",
-        "gg4BXv7K19N_label": "<p>View Jackets</p>",
-        "gg7pnzk5d9p_text": "Denim bags",
-        "ggCia4_kD45_text": "<p>Premium denim tote crafted with durable quality and timeless, effortless style.</p>",
-        "ggEvT1ace3J_label": "<p>View Bags</p>",
-        "ggSDNZMZcbH_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-73abf961-1edd-410b-8791-0016b98acea6.webp",
-        "ggbjC2pt9vK_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-c419247b-4bf1-4f76-a27c-d9aacff1a959.webp",
-        "ggivTH3IpIw_text": "<p>Rugged yet polished jacket designed with sturdy fabric and a clean, contemporary silhouette</p>",
-        "ggoQQ8IYq_f_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-3b8de358-1f38-4557-9111-bf3642193b83.webp",
-        "ggqE9rn1le8_text": "Denim jeans",
-        "ggsY_5WOp1z_text": "<p>Expertly tailored jeans offering long-lasting strength and a refined, versatile look.</p>",
-        "ggxrk-woH8I_label": "<p>View Jeans</p>"
+        "checksum": "7011669fb5df61d874571e5de86bf14f254812b32d6d814cf04b171c46457e12_1_1_1_0__1",
+        "gg4aH0Kb7Qc_text": "<p>Inspired by the expertise of founder Emma Peters, Aleph offers a personalized approach to finding your perfect match. Take our specialized quiz or book a one-on-one color consultation.</p>",
+        "ggEp2Oj7gHu_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-01fcaa19-94a7-4efb-baa1-b62c0548f710.webp",
+        "ggKpXeRV-GJ_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-b50dabbd-5287-44a7-80f1-2b58d4801660.webp",
+        "ggtC7X4xOtL_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-d79ff500-da13-4fab-bebc-e31b40777f77.webp",
+        "ggxU-xQj7mT_label": "<p>Get Started</p>",
+        "ggzDgG0GMVH_text": "Find the perfect shade for you",
+        "ggztZf60u3Z_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-a8612da1-8803-4ab5-9fba-6eab0f29d938.webp"
       },
-      "type": "gp-section-633842174605132556"
+      "type": "gp-section-633843071817089623"
     },
-    "gp_section_633842174605132781": {
+    "gp_section_633843071817089804": {
       "settings": {
-        "checksum": "1f484a591b5221c5e09cff5ef7f39c9d9cf68dcf6ea4eff24a6ed163ed82951f_1_1_1_0__1",
-        "gg8Qwvi4Lbx_text": "Subcribe &amp; Sale off 10%",
-        "ggGSSiUhCB-_text": "<p>Sign up for exclusive content, special prizes, and latest update</p>",
-        "ggNLtfRW1AZ_errorMessage": "Can’t send email. Please try again later.",
-        "ggNLtfRW1AZ_successMessage": "Thanks for contacting us. We'll get back to you as soon as possible.",
-        "gghAgcqoRu1_placeholder": "Enter your email",
-        "gguwFOL7eej_label": "Submit"
+        "checksum": "e7bac2f8d4a80a926cf5d49349767b6b48d4fcbd5d7bd320b965875b21c28e12_1_1_1_0__1",
+        "gg7HYpMmtNd_text": "Top Picks",
+        "ggWGGQbhoBt_viewLessText": "Show less",
+        "ggWGGQbhoBt_viewMoreText": "Show more",
+        "ggXFjsujj_x_errorMessage": "Cannot add product to cart",
+        "ggXFjsujj_x_label": "Add To cart",
+        "ggXFjsujj_x_outOfStockLabel": "Out Of Stock",
+        "ggXFjsujj_x_successMessage": "Add product to cart successfully",
+        "ggXFjsujj_x_unavailableLabel": "Unavailable",
+        "ggXFjsujj_x_variantSelectionRequiredMessage": "Please select a variant to add product to cart"
       },
-      "type": "gp-section-633842174605132781"
+      "type": "gp-section-633843071817089804"
     },
-    "gp_section_633842174605198317": {
+    "gp_section_633843071817090029": {
       "settings": {
-        "checksum": "5e35528b9f3a2cea1a5c7ea262eb0f3dc7acd6289fcc6554cc6bb781eb1bc261_1_1_1_0__1",
-        "gg4t2vN0uu3_label": "<p>Read More</p>",
-        "ggB-Mt2DU0c_text": "<p>A Guide to Finding Your Perfect Fit</p>",
-        "ggDBKWDz_1m_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-02605405-19d5-4a7a-88f3-718decd1a8a3.webp",
-        "ggHZqMslEk9_label": "<p>Read More</p>",
-        "ggKpCksPN___text": "<p>Conscious Fashion for a Better Future</p>",
-        "ggS1eJAJH5r_text": "Blogs",
-        "ggTPN3nKT-s_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-a22c8fa8-1953-4a7f-8a23-844924705416.webp",
-        "ggUjTa6cdPx_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-beb59b3d-ee62-436f-a970-441c8b1d8dfd.webp",
-        "ggX4hQIm0eF_text": "<p>January 10, 2024 | Written by Maria Chen</p>",
-        "ggd7ya-IL3t_text": "<p>Tips for Washing Your Favorite Jeans</p>",
-        "ggiaXW0im2T_label": "<p>Read More</p>",
-        "ggivCUVlz57_text": "<p>April 22, 2024 | Written by Jordan Lee</p>",
-        "ggrawUL67_l_text": "<p>August 15, 2024 | Written by Alex Johnson</p>"
+        "checksum": "1fa207206d577f6542d0c0ba954a544b590ff0cbcd382a3158af5667a6b6d149_1_1_1_0__1",
+        "gg0iF3jwXJy_text": "<p>Welcome to our premier cosmetics destination, where quality, innovation, and personalized service converge to elevate your beauty routine.</p>",
+        "gg1ENCBIhV3_text": "<p>184 Main Rd E, St Albans VIC<br>3021, Australia</p>",
+        "gg5A0Qv74yl_label": "<p>Look Up Order</p>",
+        "gg5wer4uKQk_text": "<p>Copyright © 2024 GemPages. All Rights Reserved.</p>",
+        "ggAA7QPsUpV_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-f6120ccc-35a3-411a-98e7-ebc32155d76b.png",
+        "ggEN1YVTE2U_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-a5d3e3e5-7d72-4432-b5a3-0931b055f81e.png",
+        "ggNZMoA_I6u_text": "Get In Touch",
+        "ggP5AeY2Et2_text": "Support",
+        "ggTxqDdV5Tz_label": "<p>support@gmail.com</p>",
+        "ggVQyi0s0sz_text": "GemBeauty",
+        "ggZjJVT3Vlb_label": "<p>FAQs</p>",
+        "ggZwbkkQ2vB_label": "<p>Privacy Policy</p>",
+        "gga6NiYvXQI_label": "<p>Terms of Service</p>",
+        "ggnScWiblDB_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-8f28f8d5-5be0-490b-ba3a-7db708bd9095.png",
+        "ggrMR4Qlwr-_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-e7ff4c07-2020-4737-ac8b-cd96657cccbd.png",
+        "ggsYGq5MQSt_text": "<p>+391(0)35 2568</p>",
+        "ggyH0V1UCUx_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-9e4366fb-0ce1-4fc2-9802-2d560de4b45b.png"
       },
-      "type": "gp-section-633842174605198317"
+      "type": "gp-section-633843071817090029"
     },
-    "gp_section_633842174689018418": {
+    "gp_section_633843071817155159": {
       "settings": {
-        "checksum": "ddb8b1ef3d419eab976cae259fb5940723d5505630e55b341387cf542f251bfb_1_1_1_0__1",
-        "gg1kLyCPlVk_label": "<p>Contact Us</p>",
-        "gg9lUqbC9FT_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-2beb58ad-7a13-436d-8274-e3f502f9aba2.png",
-        "ggNR0smN85y_label": "<p>Delivery Information</p>",
-        "ggSRU8S-MXu_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-c1742c1b-c4b4-4e63-84fe-6fd4a1cd2408.png",
-        "ggZEe5cOnd1_label": "<p>FAQ&nbsp;</p>",
-        "ggeKFFn-rbK_label": "<p>Return &amp; Exchange&nbsp;</p>",
-        "ggfQayigd7Q_text": "<p>Copyright © 2024 GemPages.&nbsp;</p>",
-        "ggh1jRFKloS_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-57cdde83-bbec-45ee-81be-64ad9a555129.png",
-        "ggsm7rP0I3A_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-026b411a-142d-4eba-88e6-e1d66d668bac.png",
-        "ggtYaOF7YG7_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-9135bf91-ae7c-405a-bc8b-71fdcf5cfdb5.png"
+        "checksum": "82a7f15b37e9ed04f1db8622496bff13eb26e1557f9d7c6f104de036fd6b7958_1_1_1_0__1",
+        "ggE2-xMn-GJ_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-2c9694be-b2b8-4c60-9bae-b99d1d3129bb.webp",
+        "gghcTHhNJrz_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-aea92cb0-5afc-4fcc-b405-3367b481e47f.webp",
+        "ggkJd4zISTc_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-cdfc2a87-d879-4f0e-bc57-2f20d66136d8.webp",
+        "ggnfgWefP1R_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-0a3d3edc-a5ec-4cfb-9e1c-eec3ae20b121.webp",
+        "ggqs0Xeu9C6_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-b739c2c8-7332-4121-946b-e72bbcda6186.webp",
+        "ggtigPCQMuZ_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-6893d69e-e414-46e1-b3c0-e827fd98e38e.webp"
       },
-      "type": "gp-section-633842174689018418"
+      "type": "gp-section-633843071817155159"
     },
-    "gp_section_633842174689018455": {
+    "gp_section_633843071817155340": {
       "settings": {
-        "checksum": "39244bcb3f7f41526e5d74d2df728dc887d0d3169a1a38e12101d9eb180b88c2_1_1_1_0__1",
-        "gg6ac_Ivf0Z_childItem_0": "<p>Verified Buyer</p>",
-        "gg97LKZi_zu_text": "<p><strong>Ken K </strong>| Customer</p>",
-        "ggLdx-rxsCi_text": "<p>As a lifelong denim devotee, I've proudly designed the exceptional Denim Essentials Line - expertly crafted with the finest premium fabrics to elegantly elevate everyday style.</p>",
-        "ggM7MBBk9bP_text": "<p><strong>Ava </strong>| Customer</p>",
-        "ggSgTT3QyJG_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-750e25ac-e8aa-4307-b901-e141233b3fba.webp",
-        "ggSgTT3QyJG_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-750e25ac-e8aa-4307-b901-e141233b3fba.webp",
-        "ggjdMhq6vjS_childItem_0": "<p>Verified Buyer</p>",
-        "ggkuyuQM9Ne_text": "Hear from Our Customers",
-        "ggnUlljzrOH_text": "<p>With a lifelong passion for denim, I’ve proudly created the exceptional Denim Essentials Line, crafted with premium fabrics to elevate everyday style with elegance.</p>",
-        "ggx-BRyGpU5_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-bd8b02c8-a567-4d05-a6af-f9042937a94e.webp",
-        "ggx-BRyGpU5_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-bd8b02c8-a567-4d05-a6af-f9042937a94e.webp"
+        "checksum": "67b2cfe921f3ada3010f7596aab16f7a196f17346e53fbfad7b741b4dfd11258_1_1_1_0__1",
+        "ggIwpfT4p_Y_text": "Your Perfect Match",
+        "ggSegQxoK6m_viewLessText": "Show less",
+        "ggSegQxoK6m_viewMoreText": "Show more",
+        "ggXNfVr0oXo_errorMessage": "Cannot add product to cart",
+        "ggXNfVr0oXo_label": "Add To cart",
+        "ggXNfVr0oXo_outOfStockLabel": "Out Of Stock",
+        "ggXNfVr0oXo_successMessage": "Add product to cart successfully",
+        "ggXNfVr0oXo_unavailableLabel": "Unavailable",
+        "ggXNfVr0oXo_variantSelectionRequiredMessage": "Please select a variant to add product to cart"
       },
-      "type": "gp-section-633842174689018455"
+      "type": "gp-section-633843071817155340"
+    },
+    "gp_section_633843071850644018": {
+      "settings": {
+        "checksum": "85b12d26a6045d30046c32f33e79a3fab9d5518b0dca29dcc772cedf0db1f0b4_1_1_1_0__1",
+        "gg7f7bARG3N_placeholder": "Enter your email",
+        "ggOgEpSuDlF_text": "<p>Signup to receive info on our latest releases and sales!</p>",
+        "ggUi7B1JKpr_errorMessage": "Can’t send email. Please try again later.",
+        "ggUi7B1JKpr_successMessage": "Thanks for contacting us. We'll get back to you as soon as possible.",
+        "ggtFCdVh8bF_text": "Sign Up to Stay in The Know"
+      },
+      "type": "gp-section-633843071850644018"
     }
   },
   "order": [
-    "gp_section_633841732592600045",
-    "gp_section_633842174319919884",
-    "gp_section_633842174420583405",
-    "gp_section_633842174605132556",
-    "gp_section_633842174521246258",
-    "gp_section_633842174504469079",
-    "gp_section_633842174588355159",
-    "gp_section_633842174605132338",
-    "gp_section_633842174689018455",
-    "gp_section_633842174605198317",
-    "gp_section_633842174605132781",
-    "gp_section_633842174689018418"
+    "gp_section_633843071464768493",
+    "gp_section_633843071598985996",
+    "gp_section_633843071598985815",
+    "gp_section_633843071699649292",
+    "gp_section_633843071817089623",
+    "gp_section_633843071800312370",
+    "gp_section_633843071817089586",
+    "gp_section_633843071817155340",
+    "gp_section_633843071817089804",
+    "gp_section_633843071699649517",
+    "gp_section_633843071850644018",
+    "gp_section_633843071817155159",
+    "gp_section_633843071817090029"
   ]
 }
