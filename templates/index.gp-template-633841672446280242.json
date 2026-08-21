@@ -101,13 +101,13 @@
     },
     "gp_section_633843071817089623": {
       "settings": {
-        "checksum": "7011669fb5df61d874571e5de86bf14f254812b32d6d814cf04b171c46457e12_1_1_1_0__1",
-        "gg4aH0Kb7Qc_text": "<p>Inspired by the expertise of founder Emma Peters, Aleph offers a personalized approach to finding your perfect match. Take our specialized quiz or book a one-on-one color consultation.</p>",
+        "checksum": "925ac6257bb00fcccce0a2fb4c1d07b147384ce924cdcaa6cf1530e7e653ea12_1_1_1_0__1",
+        "gg4aH0Kb7Qc_text": "<p>Responde 3 preguntas rápidas y te decimos qué producto es para ti — piel, cuerpo o calma.</p>",
         "ggEp2Oj7gHu_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-01fcaa19-94a7-4efb-baa1-b62c0548f710.webp",
         "ggKpXeRV-GJ_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-b50dabbd-5287-44a7-80f1-2b58d4801660.webp",
         "ggtC7X4xOtL_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-d79ff500-da13-4fab-bebc-e31b40777f77.webp",
-        "ggxU-xQj7mT_label": "<p>Get Started</p>",
-        "ggzDgG0GMVH_text": "Find the perfect shade for you",
+        "ggxU-xQj7mT_label": "<p>EMPEZAR</p>",
+        "ggzDgG0GMVH_text": "Encuentra lo que tu cuerpo necesita",
         "ggztZf60u3Z_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-a8612da1-8803-4ab5-9fba-6eab0f29d938.webp"
       },
       "type": "gp-section-633843071817089623"
@@ -187,6 +187,12 @@
         "ggtFCdVh8bF_text": "Sign Up to Stay in The Know"
       },
       "type": "gp-section-633843071850644018"
+    },
+    "gp_section_633859172793844717": {
+      "settings": {
+        "checksum": "38df979f0feb1280bf3c443887fde0b65348c89ec0dcc9f607db3ace4512577b_1_1_1_0__1"
+      },
+      "type": "gp-section-633859172793844717"
     }
   },
   "order": [
@@ -201,6 +207,7 @@
     "gp_section_633843071699649517",
     "gp_section_633843071850644018",
     "gp_section_633843071817155159",
-    "gp_section_633843071817090029"
+    "gp_section_633843071817090029",
+    "gp_section_633859172793844717"
   ]
 }
