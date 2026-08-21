@@ -11,22 +11,18 @@
   "sections": {
     "gp_section_633843071464768493": {
       "settings": {
-        "checksum": "c84698391d2aea10d87264afcd9aea81e08094b193c24a9c4207a3d7ed4f0f84_1_1_1_0__1",
-        "gg7439ZHqX8_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-b5acd940-1bac-43e8-82fe-f20ab1e86ea0.webp",
-        "gg7439ZHqX8_background_desktop_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
-        "gg7439ZHqX8_background_desktop_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "checksum": "26623d98ef50f146ac21f470b1f2c46fde64172042bda945b12426a7c9ad7a50_1_1_1_0__1",
+        "gg7439ZHqX8_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_1.png",
         "gg7439ZHqX8_background_mobile_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-7a70fec8-f558-450a-a9bb-08e3b51caf5f.webp",
         "gg7439ZHqX8_background_mobile_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
         "gg7439ZHqX8_background_mobile_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
-        "ggAVysW7_yh_text": "Pure Beauty. Ethical Mindset",
-        "ggDBMA_BHYB_text": "<p>Skin-friendly vegan makeup that's clean, multitasking, and sustainably packaged.</p>",
-        "ggDhWefJHNA_text": "Clean Beauty. Clear Conscience.",
-        "ggUEfUiwBk8_label": "<p>SHOP NOW</p>",
-        "ggapfJMWzlC_text": "<p>Clean, vegan, multitasking makeup that’s skin loving and sustainable from product to pack.</p>",
-        "ggb3BB2NvwD_label": "<p>SHOP NOW</p>",
-        "ggx0It6Ei20_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-30b5a1c5-e35e-4e3a-8aa2-32cbcd8d6f2f.webp",
-        "ggx0It6Ei20_background_desktop_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
-        "ggx0It6Ei20_background_desktop_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggAVysW7_yh_text": "Resultados que se notan.",
+        "ggDBMA_BHYB_text": "<p>Cuídate por dentro y por fuera, a tu manera.</p>",
+        "ggDhWefJHNA_text": "Tu cuerpo, otra vez bajo control.",
+        "ggUEfUiwBk8_label": "<p>VER PRODUCTOS</p>",
+        "ggapfJMWzlC_text": "<p>Piel, cuerpo y calma — sin dietas, sin rutinas de 10 pasos.</p>",
+        "ggb3BB2NvwD_label": "<p>VER PRODUCTOS</p>",
+        "ggx0It6Ei20_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_2.png",
         "ggx0It6Ei20_background_mobile_image_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-718afb33-173e-4b16-bf25-4f01fb42e765.webp",
         "ggx0It6Ei20_background_mobile_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
         "ggx0It6Ei20_background_mobile_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
@@ -60,10 +56,8 @@
     },
     "gp_section_633843071598985996": {
       "settings": {
-        "checksum": "445bbdbf65a7f172995f0b62c974eb517368dd9e84ae1d61c8b7f686d148b372_1_1_1_0__1",
-        "gg7eE1UBuqO_text": "Shop our Best Sellers",
-        "ggeWJavhWcT_viewLessText": "Show less",
-        "ggeWJavhWcT_viewMoreText": "Show more"
+        "checksum": "f5a9c0ad07f2a284ab55bdf537ec436e03ad5518539cea8fd4d2d6fe5dd8920d_1_1_1_0__1",
+        "gg7eE1UBuqO_text": "Nuestros más vendidos."
       },
       "type": "gp-section-633843071598985996"
     },
