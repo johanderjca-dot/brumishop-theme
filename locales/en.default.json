@@ -62,11 +62,6 @@
     "search": "Search",
     "close": "Close"
   },
-  "products": {
-    "add_to_cart": "Add to cart",
-    "sold_out": "Sold out",
-    "unavailable": "Unavailable"
-  },
   "pagefly": {
     "products": {
       "product": {
@@ -111,5 +106,10 @@
       "signup_form_success": "We will send you an email right before we open!",
       "password_link": "Enter using password"
     }
+  },
+  "products": {
+    "add_to_cart": "Add to cart",
+    "sold_out": "Sold out",
+    "unavailable": "Unavailable"
   }
 }
