@@ -9,8 +9,26 @@
  */
 {
   "current": {
+    "blocks": {
+      "13669795325273674392": {
+        "disabled": false,
+        "settings": {},
+        "type": "shopify://apps/releasit-cod-form/blocks/app-embed/72faf214-4174-4fec-886b-0d0e8d3af9a2"
+      },
+      "626184775593427627": {
+        "disabled": false,
+        "settings": {},
+        "type": "shopify://apps/gemx-cro/blocks/gemx-theme-helper/d5fea089-2b8e-4af7-a4da-76b975b021c7"
+      },
+      "pagefly-page-builder": {
+        "disabled": false,
+        "settings": {},
+        "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200"
+      }
+    },
     "color_accent": "#5a7a40",
     "color_announcement_bg": "#F2EBC4",
+    "content_for_index": [],
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -82,24 +100,6 @@
           "text_color": "#6a6a62",
           "border_color": "#e8e8e2"
         }
-      }
-    },
-    "content_for_index": [],
-    "blocks": {
-      "13669795325273674392": {
-        "type": "shopify://apps/releasit-cod-form/blocks/app-embed/72faf214-4174-4fec-886b-0d0e8d3af9a2",
-        "disabled": false,
-        "settings": {}
-      },
-      "626184775593427627": {
-        "type": "shopify://apps//blocks/embed-gp-script-head/20b379d4-1b20-474c-a6ca-665c331919f3",
-        "disabled": false,
-        "settings": {}
-      },
-      "pagefly-page-builder": {
-        "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
-        "disabled": false,
-        "settings": {}
       }
     }
   },
