@@ -8,638 +8,6 @@
  * ------------------------------------------------------------
  */
 {
-  "sections": {
-    "1782416128197779a6": {
-      "type": "apps",
-      "blocks": {
-        "releasit_cod_form_button_app_block_tg4BMT": {
-          "type": "shopify://apps/releasit-cod-form/blocks/button-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "releasit_cod_form_button_app_block_tg4BMT"
-      ],
-      "settings": {}
-    },
-    "17827619212a4e2ef8": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_5a0eb63_HwWQL6": {
-          "type": "ai_gen_block_5a0eb63",
-          "settings": {
-            "show_icon": true,
-            "icon": "🔥",
-            "title": "¡Oferta por tiempo limitado!",
-            "subtitle": "Aprovecha este descuento antes de que termine",
-            "show_timer": true,
-            "end_date": "2026-07-15",
-            "end_time": "23:59",
-            "show_stock": true,
-            "stock_text": "¡Solo quedan 5 unidades!",
-            "desktop_width_percent": 100,
-            "border_radius": 8,
-            "background_color": "#F2EBC4",
-            "text_color": "#000000",
-            "timer_bg_color": "#5a7a40",
-            "timer_text_color": "#ffffff",
-            "stock_bg_color": "#ff4444",
-            "stock_text_color": "#ffffff",
-            "icon_size": 20,
-            "title_size": 16,
-            "subtitle_size": 12,
-            "timer_number_size": 20,
-            "timer_label_size": 10,
-            "stock_size": 12,
-            "timer_border_radius": 6
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_5a0eb63_HwWQL6"
-      ],
-      "settings": {}
-    },
-    "apps_AzMUa7": {
-      "type": "apps",
-      "blocks": {
-        "releasit_cod_form_button_app_block_dp7cKQ": {
-          "type": "shopify://apps/releasit-cod-form/blocks/button-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "releasit_cod_form_button_app_block_dp7cKQ"
-      ],
-      "settings": {}
-    },
-    "apps_KDqhzb": {
-      "type": "apps",
-      "blocks": {
-        "releasit_cod_form_button_app_block_VbteNY": {
-          "type": "shopify://apps/releasit-cod-form/blocks/button-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "releasit_cod_form_button_app_block_VbteNY"
-      ],
-      "settings": {}
-    },
-    "div-1": {
-      "type": "lp-divider",
-      "settings": {
-        "py": 6,
-        "max_width": 700,
-        "line_color": "#d0d0c8",
-        "bg_above": "#ffffff",
-        "bg_below": "#ffffff"
-      }
-    },
-    "div-2": {
-      "type": "lp-divider",
-      "settings": {
-        "py": 6,
-        "max_width": 700,
-        "line_color": "#d0d0c8",
-        "bg_above": "#ffffff",
-        "bg_below": "#ffffff"
-      }
-    },
-    "gp_shopify_original_section_626182171551335211": {
-      "type": "gp-section-626182171551335211",
-      "settings": {
-        "checksum": ""
-      }
-    },
-    "gp_shopify_original_section_626182937028592493": {
-      "type": "gp-section-626182937028592493",
-      "settings": {
-        "checksum": ""
-      }
-    },
-    "gp_shopify_original_section_626183537602593645": {
-      "type": "gp-section-626183537602593645",
-      "settings": {
-        "checksum": ""
-      }
-    },
-    "gp_shopify_original_section_626183622243648365": {
-      "type": "gp-section-626183622243648365",
-      "settings": {
-        "checksum": "",
-        "gguOsYKbjoo_text": "<p>2,500+ Verified Reviews!</p>",
-        "ggp1yWt3B6p_displayContent": "{percent_discount} off",
-        "ggs7kSxkbU5_text": "<p>Lorem ipsum dolor sit amet, consectetur&nbsp;</p>",
-        "ggpmE34yC1i_label": "Add to cart",
-        "ggpmE34yC1i_outOfStockLabel": "Out of stock",
-        "ggpmE34yC1i_unavailableLabel": "Unavailable",
-        "ggpmE34yC1i_successMessage": "Add product to cart successfully",
-        "ggpmE34yC1i_errorMessage": "Cannot add product to cart",
-        "ggPMOWB09-5_childItem_0": "<p>Material</p>",
-        "ggPMOWB09-5_childItem_1": "<p>Comfort guarantee&nbsp;</p>",
-        "ggPMOWB09-5_childItem_2": "<p>Shipping</p>",
-        "ggAYla6VbE2_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "ggm8hR7hMF6_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "ggHfDzRTZZI_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-      }
-    },
-    "gp_shopify_original_section_626184888000709485": {
-      "type": "gp-section-626184888000709485",
-      "settings": {
-        "section_preload": "true",
-        "checksum": ""
-      }
-    },
-    "lp-benefits": {
-      "type": "lp-benefits",
-      "blocks": {
-        "benefit_6h3kaz": {
-          "type": "benefit",
-          "settings": {
-            "icon_img": "shopify://shop_images/Texto.png",
-            "icon_emoji": "✓",
-            "title": "0 conexión a luz.",
-            "description": "",
-            "show_box": false,
-            "box_bg": "#ffffff"
-          }
-        },
-        "benefit_7hhXRx": {
-          "type": "benefit",
-          "settings": {
-            "icon_img": "shopify://shop_images/Texto-3.png",
-            "icon_emoji": "✓",
-            "title": "Alta calidad",
-            "description": "",
-            "show_box": false,
-            "box_bg": "#ffffff"
-          }
-        },
-        "benefit_EqcdRj": {
-          "type": "benefit",
-          "settings": {
-            "icon_img": "shopify://shop_images/Texto-2.png",
-            "icon_emoji": "✓",
-            "title": "Para porciones individuales",
-            "description": "",
-            "show_box": false,
-            "box_bg": "#ffffff"
-          }
-        },
-        "benefit_HFXBUJ": {
-          "type": "benefit",
-          "settings": {
-            "icon_emoji": "✓",
-            "title": "Llevalo donde sea, en donde sea.",
-            "description": "",
-            "show_box": false,
-            "box_bg": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "benefit_6h3kaz",
-        "benefit_EqcdRj",
-        "benefit_7hhXRx",
-        "benefit_HFXBUJ"
-      ],
-      "settings": {
-        "columns": "1",
-        "gap": 4,
-        "icon_size": 16,
-        "icon_gap": 8,
-        "item_title_size": 15,
-        "item_desc_size": 14,
-        "box_border_color": "#ffffff",
-        "box_radius": 8,
-        "box_pad": 20,
-        "pt": 4,
-        "pb": 4,
-        "bg_color": "#ffffff",
-        "heading_color": "#1a1a18",
-        "text_color": "#5a5a52"
-      }
-    },
-    "lp-description": {
-      "type": "lp-description",
-      "settings": {
-        "title": "LicuaMax",
-        "title_size": 22,
-        "title_color": "#1a1a18",
-        "title_weight": "700",
-        "title_gap": 8,
-        "rating_text": "127 reseñas",
-        "star_size": 14,
-        "star_color": "#f4a327",
-        "rating_gap": 8,
-        "content": "<p>Potencia en cada giro. </p>",
-        "font_family": "'DM Sans', sans-serif",
-        "align": "left",
-        "font_size": 16,
-        "max_width": 1200,
-        "px": 16,
-        "pt": 0,
-        "pb": 0,
-        "box_pad": 0,
-        "radius": 0,
-        "border_width": 0,
-        "bg_color": "#ffffff",
-        "box_bg": "#ffffff",
-        "border_color": "#e8e8e2",
-        "text_color": "#000000"
-      }
-    },
-    "lp-faq": {
-      "type": "lp-faq",
-      "blocks": {
-        "question_XQijMT": {
-          "type": "question",
-          "settings": {
-            "question": "¿Cuánto tarda en llegar mi pedido?",
-            "answer": "<p>Los pedidos se procesan en 1-2 días hábiles. El tiempo de entrega es de 3-5 días hábiles dependiendo de tu ubicación.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "question_XQijMT"
-      ],
-      "settings": {
-        "title": "Preguntas frecuentes",
-        "subtitle": "",
-        "title_align": "left",
-        "max_width": 780,
-        "py": 24,
-        "bg_color": "#ffffff",
-        "border_color": "#e8e8e2",
-        "heading_color": "#1a1a18",
-        "text_color": "#5a5a52"
-      }
-    },
-    "lp-hero": {
-      "type": "lp-hero",
-      "blocks": {
-        "slide_FaknUK": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Firefly_seed343835.png",
-            "alt": ""
-          }
-        },
-        "slide_PNjjXJ": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Firefly_Gemini_Flash_ahora_con_el_mismo_fondo_usa_la-_facil_uso_y_llevala_contigo_a_donde_sea_603505.png",
-            "alt": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide_PNjjXJ",
-        "slide_FaknUK"
-      ],
-      "settings": {
-        "max_height": 420,
-        "max_height_mobile": 340,
-        "pt": 0,
-        "speed": 3,
-        "bg_color": "#ffffff"
-      }
-    },
-    "lp-how-to-use": {
-      "type": "lp-how-to-use",
-      "blocks": {
-        "step_4KQkhN": {
-          "type": "step",
-          "settings": {
-            "photo": "shopify://shop_images/1.png",
-            "alt": ""
-          }
-        },
-        "step_4LgrRJ": {
-          "type": "step",
-          "settings": {
-            "photo": "shopify://shop_images/3.png",
-            "alt": ""
-          }
-        },
-        "step_7nJja6": {
-          "type": "step",
-          "settings": {
-            "photo": "shopify://shop_images/2.png",
-            "alt": ""
-          }
-        }
-      },
-      "block_order": [
-        "step_4KQkhN",
-        "step_7nJja6",
-        "step_4LgrRJ"
-      ],
-      "settings": {
-        "title": "¿Cómo se usa?",
-        "title_size": 20,
-        "title_color": "#1a1a18",
-        "title_align": "left",
-        "title_gap": 12,
-        "cols_mobile": 2,
-        "cols_desktop": 4,
-        "photo_height": 160,
-        "radius": 8,
-        "gap": 8,
-        "show_steps": false,
-        "step_bg": "#1a1a18",
-        "step_color": "#ffffff",
-        "bg_color": "#ffffff",
-        "pt": 16,
-        "pb": 16,
-        "px": 16
-      }
-    },
-    "lp-offer": {
-      "type": "lp-offer",
-      "settings": {
-        "price_size": 20,
-        "price_color": "#1a1a18",
-        "fake_price_amount": 2500,
-        "savings_bg": "#f0fff4",
-        "savings_color": "#2d7a3a",
-        "urgency_qty": 17,
-        "urgency_prefix": "⚡ Últimas",
-        "urgency_suffix": "unidades disponibles",
-        "urgency_color": "#c0392b",
-        "pt": 8,
-        "pb": 8,
-        "px": 16,
-        "bg_color": "#ffffff"
-      }
-    },
-    "lp-policies": {
-      "type": "lp-policies",
-      "blocks": {
-        "policy_774JgH": {
-          "type": "policy",
-          "settings": {
-            "icon": "↩",
-            "title": "Política de devoluciones",
-            "content": "<p>Aceptamos devoluciones dentro de los 30 días posteriores a la compra. El producto debe estar en su estado original sin uso.</p><p>Para iniciar una devolución, contáctanos por WhatsApp o correo electrónico.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "policy_774JgH"
-      ],
-      "settings": {
-        "title": "",
-        "title_align": "left",
-        "max_width": 780,
-        "py": 0,
-        "bg_color": "#ffffff",
-        "border_color": "#e8e8e2",
-        "heading_color": "#1a1a18",
-        "text_color": "#5a5a52"
-      }
-    },
-    "lp-problem-solution": {
-      "type": "lp-problem-solution",
-      "blocks": {
-        "block_QUMQJ3": {
-          "type": "block",
-          "settings": {
-            "problem_label": "EL PROBLEMA",
-            "problem_title": "",
-            "problem_text": "Muchos productos en el mercado prometen resultados pero no los cumplen. Pierdes dinero y tiempo sin ver mejoras reales.",
-            "solution_label": "LA SOLUCIÓN",
-            "solution_title": "Nuestro producto sí funciona — garantizado",
-            "solution_text": "Desde la primera vez, notarás su calidad de batidos y querrás llevarlo donde sea.",
-            "show_btn": false,
-            "btn_text": "Quiero este producto",
-            "btn_bg": "#1a1a18",
-            "btn_color": "#ffffff",
-            "btn_radius": 4,
-            "image": "shopify://shop_images/Espanol.png",
-            "img_radius": 8,
-            "img_height": 300
-          }
-        }
-      },
-      "block_order": [
-        "block_QUMQJ3"
-      ],
-      "settings": {
-        "py": 24,
-        "bg_odd": "#ffffff",
-        "bg_even": "#fafaf6",
-        "border_color": "#e8e8e2",
-        "problem_color": "#c0392b",
-        "solution_color": "#5a7a40",
-        "heading_color": "#1a1a18",
-        "text_color": "#5a5a52",
-        "img_bg": "#f0f0ea"
-      }
-    },
-    "lp-reviews": {
-      "type": "lp-reviews",
-      "blocks": {
-        "review_GiQC6J": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "review_text": "Increíble producto, superó todas mis expectativas. Lo recomiendo al 100%.",
-            "name": "María G.",
-            "location": "Santo Domingo, RD",
-            "avatar": "shopify://shop_images/a7928580-0ee2-433a-ad6b-e6753a80c416.jpg",
-            "verified": true
-          }
-        }
-      },
-      "block_order": [
-        "review_GiQC6J"
-      ],
-      "settings": {
-        "speed": 4,
-        "card_radius": 8,
-        "py": 24,
-        "bg_color": "#ffffff",
-        "card_bg": "#fafaf6",
-        "card_border": "#e8e8e2",
-        "star_color": "#f4a327",
-        "heading_color": "#1a1a18",
-        "text_color": "#5a5a52"
-      }
-    },
-    "lp-shipping": {
-      "type": "lp-shipping",
-      "blocks": {
-        "item_8a9C43": {
-          "type": "item",
-          "settings": {
-            "icon": "📦",
-            "title": "Envío gratis",
-            "description": "Entrega en 3-5 días hábiles a todo el país."
-          }
-        }
-      },
-      "block_order": [
-        "item_8a9C43"
-      ],
-      "settings": {
-        "icon": "🚚",
-        "title": "Información de envío",
-        "max_width": 780,
-        "py": 0,
-        "bg_color": "#ffffff",
-        "border_color": "#e8e8e2",
-        "icon_color": "#5a7a40",
-        "heading_color": "#1a1a18",
-        "text_color": "#6a6a62"
-      }
-    },
-    "lp-testimonials": {
-      "type": "lp-testimonials",
-      "blocks": {
-        "photo_3XV4pg": {
-          "type": "photo",
-          "settings": {
-            "photo": "shopify://shop_images/White_and_Beige_Minimal_Clean_Skincare_Product_Benefits_Instagram_Post.png",
-            "alt": ""
-          }
-        },
-        "photo_Fbb3kA": {
-          "type": "photo",
-          "settings": {
-            "photo": "shopify://shop_images/Gemini_Generated_Image_vnh79ovnh79ovnh7_e4ffc692-d876-4304-af46-df87a9688706.png",
-            "alt": ""
-          }
-        },
-        "photo_VLq9pp": {
-          "type": "photo",
-          "settings": {
-            "photo": "shopify://shop_images/White_and_Beige_Minimal_Clean_Skincare_Product_Benefits_Instagram_Post-3.png",
-            "alt": ""
-          }
-        },
-        "photo_yLhcdK": {
-          "type": "photo",
-          "settings": {
-            "photo": "shopify://shop_images/White_and_Beige_Minimal_Clean_Skincare_Product_Benefits_Instagram_Post-2.png",
-            "alt": ""
-          }
-        }
-      },
-      "block_order": [
-        "photo_Fbb3kA",
-        "photo_VLq9pp",
-        "photo_3XV4pg",
-        "photo_yLhcdK"
-      ],
-      "settings": {
-        "label": "ya ellos han probado:",
-        "label_size": 13,
-        "label_color": "#1a1a18",
-        "label_gap": 12,
-        "per_view": 2,
-        "photo_height": 150,
-        "radius": 8,
-        "gap": 8,
-        "speed": 4,
-        "bg_color": "#f8f7f3",
-        "pt": 16,
-        "pb": 16,
-        "px": 16
-      }
-    },
-    "lp-ticker": {
-      "type": "lp-ticker",
-      "blocks": {
-        "item_HUi8g9": {
-          "type": "item",
-          "settings": {
-            "text": "FACIL DE LAVAR"
-          }
-        },
-        "ticker_1": {
-          "type": "item",
-          "settings": {
-            "text": "LISTO EN 30 SEGUNDOS"
-          }
-        },
-        "ticker_2": {
-          "type": "item",
-          "settings": {
-            "text": "CARGA FACIL"
-          }
-        },
-        "ticker_3": {
-          "type": "item",
-          "settings": {
-            "text": "Garantía de satisfacción"
-          }
-        },
-        "ticker_4": {
-          "type": "item",
-          "settings": {
-            "text": "LO TOMAS DESDE EL MISMO FRASCO"
-          }
-        }
-      },
-      "block_order": [
-        "item_HUi8g9",
-        "ticker_1",
-        "ticker_2",
-        "ticker_3",
-        "ticker_4"
-      ],
-      "settings": {
-        "font_size": 13,
-        "font_weight": "600",
-        "uppercase": true,
-        "letter_spacing": 8,
-        "text_color": "#1a1a18",
-        "separator": "✦",
-        "sep_color": "#000000",
-        "sep_size": 14,
-        "sep_gap": 4,
-        "item_gap": 0,
-        "speed": 20,
-        "bg_color": "#f4ef88",
-        "border_color": "#e0e0da",
-        "border_width": 1,
-        "py": 10
-      }
-    },
-    "lp-trust-badges": {
-      "type": "lp-trust-badges",
-      "settings": {
-        "badge1_icon": "shopify://shop_images/Diseno_sin_titulo-6.png",
-        "badge1_title": "Envío Gratis",
-        "badge1_sub": "Entrega en 24-48h (Todo RD)",
-        "badge2_icon": "shopify://shop_images/Diseno_sin_titulo-7.png",
-        "badge2_title": "Pagas al Recibir",
-        "badge2_sub": "Efectivo o Transferencia",
-        "bg_color": "#ffffff",
-        "max_width": 640,
-        "py": 8
-      }
-    },
-    "lp_divider_jg7UjN": {
-      "type": "lp-divider",
-      "settings": {
-        "py": 6,
-        "max_width": 700,
-        "line_color": "#d0d0c8",
-        "bg_above": "#ffffff",
-        "bg_below": "#ffffff"
-      }
-    }
-  },
   "order": [
     "gp_shopify_original_section_626184888000709485",
     "gp_shopify_original_section_626183537602593645",
@@ -666,5 +34,637 @@
     "lp-how-to-use",
     "lp-faq",
     "17827619212a4e2ef8"
-  ]
+  ],
+  "sections": {
+    "1782416128197779a6": {
+      "block_order": [
+        "releasit_cod_form_button_app_block_tg4BMT"
+      ],
+      "blocks": {
+        "releasit_cod_form_button_app_block_tg4BMT": {
+          "settings": {
+            "product": "{{product}}"
+          },
+          "type": "shopify://apps/releasit-cod-form/blocks/button-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2"
+        }
+      },
+      "settings": {},
+      "type": "apps"
+    },
+    "17827619212a4e2ef8": {
+      "block_order": [
+        "ai_gen_block_5a0eb63_HwWQL6"
+      ],
+      "blocks": {
+        "ai_gen_block_5a0eb63_HwWQL6": {
+          "blocks": {},
+          "settings": {
+            "background_color": "#F2EBC4",
+            "border_radius": 8,
+            "desktop_width_percent": 100,
+            "end_date": "2026-07-15",
+            "end_time": "23:59",
+            "icon": "🔥",
+            "icon_size": 20,
+            "show_icon": true,
+            "show_stock": true,
+            "show_timer": true,
+            "stock_bg_color": "#ff4444",
+            "stock_size": 12,
+            "stock_text": "¡Solo quedan 5 unidades!",
+            "stock_text_color": "#ffffff",
+            "subtitle": "Aprovecha este descuento antes de que termine",
+            "subtitle_size": 12,
+            "text_color": "#000000",
+            "timer_bg_color": "#5a7a40",
+            "timer_border_radius": 6,
+            "timer_label_size": 10,
+            "timer_number_size": 20,
+            "timer_text_color": "#ffffff",
+            "title": "¡Oferta por tiempo limitado!",
+            "title_size": 16
+          },
+          "type": "ai_gen_block_5a0eb63"
+        }
+      },
+      "settings": {},
+      "type": "_blocks"
+    },
+    "apps_AzMUa7": {
+      "block_order": [
+        "releasit_cod_form_button_app_block_dp7cKQ"
+      ],
+      "blocks": {
+        "releasit_cod_form_button_app_block_dp7cKQ": {
+          "settings": {
+            "product": "{{product}}"
+          },
+          "type": "shopify://apps/releasit-cod-form/blocks/button-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2"
+        }
+      },
+      "settings": {},
+      "type": "apps"
+    },
+    "apps_KDqhzb": {
+      "block_order": [
+        "releasit_cod_form_button_app_block_VbteNY"
+      ],
+      "blocks": {
+        "releasit_cod_form_button_app_block_VbteNY": {
+          "settings": {
+            "product": "{{product}}"
+          },
+          "type": "shopify://apps/releasit-cod-form/blocks/button-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2"
+        }
+      },
+      "settings": {},
+      "type": "apps"
+    },
+    "div-1": {
+      "settings": {
+        "bg_above": "#ffffff",
+        "bg_below": "#ffffff",
+        "line_color": "#d0d0c8",
+        "max_width": 700,
+        "py": 6
+      },
+      "type": "lp-divider"
+    },
+    "div-2": {
+      "settings": {
+        "bg_above": "#ffffff",
+        "bg_below": "#ffffff",
+        "line_color": "#d0d0c8",
+        "max_width": 700,
+        "py": 6
+      },
+      "type": "lp-divider"
+    },
+    "gp_shopify_original_section_626182171551335211": {
+      "settings": {
+        "checksum": ""
+      },
+      "type": "gp-section-626182171551335211"
+    },
+    "gp_shopify_original_section_626182937028592493": {
+      "settings": {
+        "checksum": ""
+      },
+      "type": "gp-section-626182937028592493"
+    },
+    "gp_shopify_original_section_626183537602593645": {
+      "settings": {
+        "checksum": ""
+      },
+      "type": "gp-section-626183537602593645"
+    },
+    "gp_shopify_original_section_626183622243648365": {
+      "settings": {
+        "checksum": "",
+        "ggAYla6VbE2_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "ggHfDzRTZZI_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "ggPMOWB09-5_childItem_0": "<p>Material</p>",
+        "ggPMOWB09-5_childItem_1": "<p>Comfort guarantee&nbsp;</p>",
+        "ggPMOWB09-5_childItem_2": "<p>Shipping</p>",
+        "ggm8hR7hMF6_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "ggp1yWt3B6p_displayContent": "{percent_discount} off",
+        "ggpmE34yC1i_errorMessage": "Cannot add product to cart",
+        "ggpmE34yC1i_label": "Add to cart",
+        "ggpmE34yC1i_outOfStockLabel": "Out of stock",
+        "ggpmE34yC1i_successMessage": "Add product to cart successfully",
+        "ggpmE34yC1i_unavailableLabel": "Unavailable",
+        "ggs7kSxkbU5_text": "<p>Lorem ipsum dolor sit amet, consectetur&nbsp;</p>",
+        "gguOsYKbjoo_text": "<p>2,500+ Verified Reviews!</p>"
+      },
+      "type": "gp-section-626183622243648365"
+    },
+    "gp_shopify_original_section_626184888000709485": {
+      "settings": {
+        "checksum": "",
+        "section_preload": "true"
+      },
+      "type": "gp-section-626184888000709485"
+    },
+    "lp-benefits": {
+      "block_order": [
+        "benefit_6h3kaz",
+        "benefit_EqcdRj",
+        "benefit_7hhXRx",
+        "benefit_HFXBUJ"
+      ],
+      "blocks": {
+        "benefit_6h3kaz": {
+          "settings": {
+            "box_bg": "#ffffff",
+            "description": "",
+            "icon_emoji": "✓",
+            "icon_img": "shopify://shop_images/Texto.png",
+            "show_box": false,
+            "title": "0 conexión a luz."
+          },
+          "type": "benefit"
+        },
+        "benefit_7hhXRx": {
+          "settings": {
+            "box_bg": "#ffffff",
+            "description": "",
+            "icon_emoji": "✓",
+            "icon_img": "shopify://shop_images/Texto-3.png",
+            "show_box": false,
+            "title": "Alta calidad"
+          },
+          "type": "benefit"
+        },
+        "benefit_EqcdRj": {
+          "settings": {
+            "box_bg": "#ffffff",
+            "description": "",
+            "icon_emoji": "✓",
+            "icon_img": "shopify://shop_images/Texto-2.png",
+            "show_box": false,
+            "title": "Para porciones individuales"
+          },
+          "type": "benefit"
+        },
+        "benefit_HFXBUJ": {
+          "settings": {
+            "box_bg": "#ffffff",
+            "description": "",
+            "icon_emoji": "✓",
+            "show_box": false,
+            "title": "Llevalo donde sea, en donde sea."
+          },
+          "type": "benefit"
+        }
+      },
+      "settings": {
+        "bg_color": "#ffffff",
+        "box_border_color": "#ffffff",
+        "box_pad": 20,
+        "box_radius": 8,
+        "columns": "1",
+        "gap": 4,
+        "heading_color": "#1a1a18",
+        "icon_gap": 8,
+        "icon_size": 16,
+        "item_desc_size": 14,
+        "item_title_size": 15,
+        "pb": 4,
+        "pt": 4,
+        "text_color": "#5a5a52"
+      },
+      "type": "lp-benefits"
+    },
+    "lp-description": {
+      "settings": {
+        "align": "left",
+        "bg_color": "#ffffff",
+        "border_color": "#e8e8e2",
+        "border_width": 0,
+        "box_bg": "#ffffff",
+        "box_pad": 0,
+        "content": "<p>Potencia en cada giro. </p>",
+        "font_family": "'DM Sans', sans-serif",
+        "font_size": 16,
+        "max_width": 1200,
+        "pb": 0,
+        "pt": 0,
+        "px": 16,
+        "radius": 0,
+        "rating_gap": 8,
+        "rating_text": "127 reseñas",
+        "star_color": "#f4a327",
+        "star_size": 14,
+        "text_color": "#000000",
+        "title": "LicuaMax",
+        "title_color": "#1a1a18",
+        "title_gap": 8,
+        "title_size": 22,
+        "title_weight": "700"
+      },
+      "type": "lp-description"
+    },
+    "lp-faq": {
+      "block_order": [
+        "question_XQijMT"
+      ],
+      "blocks": {
+        "question_XQijMT": {
+          "settings": {
+            "answer": "<p>Los pedidos se procesan en 1-2 días hábiles. El tiempo de entrega es de 3-5 días hábiles dependiendo de tu ubicación.</p>",
+            "question": "¿Cuánto tarda en llegar mi pedido?"
+          },
+          "type": "question"
+        }
+      },
+      "settings": {
+        "bg_color": "#ffffff",
+        "border_color": "#e8e8e2",
+        "heading_color": "#1a1a18",
+        "max_width": 780,
+        "py": 24,
+        "subtitle": "",
+        "text_color": "#5a5a52",
+        "title": "Preguntas frecuentes",
+        "title_align": "left"
+      },
+      "type": "lp-faq"
+    },
+    "lp-hero": {
+      "block_order": [
+        "slide_PNjjXJ",
+        "slide_FaknUK"
+      ],
+      "blocks": {
+        "slide_FaknUK": {
+          "settings": {
+            "alt": "",
+            "image": "shopify://shop_images/Firefly_seed343835.png"
+          },
+          "type": "slide"
+        },
+        "slide_PNjjXJ": {
+          "settings": {
+            "alt": "",
+            "image": "shopify://shop_images/Firefly_Gemini_Flash_ahora_con_el_mismo_fondo_usa_la-_facil_uso_y_llevala_contigo_a_donde_sea_603505.png"
+          },
+          "type": "slide"
+        }
+      },
+      "settings": {
+        "bg_color": "#ffffff",
+        "max_height": 420,
+        "max_height_mobile": 340,
+        "pt": 0,
+        "speed": 3
+      },
+      "type": "lp-hero"
+    },
+    "lp-how-to-use": {
+      "block_order": [
+        "step_4KQkhN",
+        "step_7nJja6",
+        "step_4LgrRJ"
+      ],
+      "blocks": {
+        "step_4KQkhN": {
+          "settings": {
+            "alt": "",
+            "photo": "shopify://shop_images/1.png"
+          },
+          "type": "step"
+        },
+        "step_4LgrRJ": {
+          "settings": {
+            "alt": "",
+            "photo": "shopify://shop_images/3.png"
+          },
+          "type": "step"
+        },
+        "step_7nJja6": {
+          "settings": {
+            "alt": "",
+            "photo": "shopify://shop_images/2.png"
+          },
+          "type": "step"
+        }
+      },
+      "settings": {
+        "bg_color": "#ffffff",
+        "cols_desktop": 4,
+        "cols_mobile": 2,
+        "gap": 8,
+        "pb": 16,
+        "photo_height": 160,
+        "pt": 16,
+        "px": 16,
+        "radius": 8,
+        "show_steps": false,
+        "step_bg": "#1a1a18",
+        "step_color": "#ffffff",
+        "title": "¿Cómo se usa?",
+        "title_align": "left",
+        "title_color": "#1a1a18",
+        "title_gap": 12,
+        "title_size": 20
+      },
+      "type": "lp-how-to-use"
+    },
+    "lp-offer": {
+      "settings": {
+        "bg_color": "#ffffff",
+        "fake_price_amount": 2500,
+        "pb": 8,
+        "price_color": "#1a1a18",
+        "price_size": 20,
+        "pt": 8,
+        "px": 16,
+        "savings_bg": "#f0fff4",
+        "savings_color": "#2d7a3a",
+        "urgency_color": "#c0392b",
+        "urgency_prefix": "⚡ Últimas",
+        "urgency_qty": 17,
+        "urgency_suffix": "unidades disponibles"
+      },
+      "type": "lp-offer"
+    },
+    "lp-policies": {
+      "block_order": [
+        "policy_774JgH"
+      ],
+      "blocks": {
+        "policy_774JgH": {
+          "settings": {
+            "content": "<p>Aceptamos devoluciones dentro de los 30 días posteriores a la compra. El producto debe estar en su estado original sin uso.</p><p>Para iniciar una devolución, contáctanos por WhatsApp o correo electrónico.</p>",
+            "icon": "↩",
+            "title": "Política de devoluciones"
+          },
+          "type": "policy"
+        }
+      },
+      "settings": {
+        "bg_color": "#ffffff",
+        "border_color": "#e8e8e2",
+        "heading_color": "#1a1a18",
+        "max_width": 780,
+        "py": 0,
+        "text_color": "#5a5a52",
+        "title": "",
+        "title_align": "left"
+      },
+      "type": "lp-policies"
+    },
+    "lp-problem-solution": {
+      "block_order": [
+        "block_QUMQJ3"
+      ],
+      "blocks": {
+        "block_QUMQJ3": {
+          "settings": {
+            "btn_bg": "#1a1a18",
+            "btn_color": "#ffffff",
+            "btn_radius": 4,
+            "btn_text": "Quiero este producto",
+            "image": "shopify://shop_images/Espanol.png",
+            "img_height": 300,
+            "img_radius": 8,
+            "problem_label": "EL PROBLEMA",
+            "problem_text": "Muchos productos en el mercado prometen resultados pero no los cumplen. Pierdes dinero y tiempo sin ver mejoras reales.",
+            "problem_title": "",
+            "show_btn": false,
+            "solution_label": "LA SOLUCIÓN",
+            "solution_text": "Desde la primera vez, notarás su calidad de batidos y querrás llevarlo donde sea.",
+            "solution_title": "Nuestro producto sí funciona — garantizado"
+          },
+          "type": "block"
+        }
+      },
+      "settings": {
+        "bg_even": "#fafaf6",
+        "bg_odd": "#ffffff",
+        "border_color": "#e8e8e2",
+        "heading_color": "#1a1a18",
+        "img_bg": "#f0f0ea",
+        "problem_color": "#c0392b",
+        "py": 24,
+        "solution_color": "#5a7a40",
+        "text_color": "#5a5a52"
+      },
+      "type": "lp-problem-solution"
+    },
+    "lp-reviews": {
+      "block_order": [
+        "review_GiQC6J"
+      ],
+      "blocks": {
+        "review_GiQC6J": {
+          "settings": {
+            "avatar": "shopify://shop_images/a7928580-0ee2-433a-ad6b-e6753a80c416.jpg",
+            "location": "Santo Domingo, RD",
+            "name": "María G.",
+            "rating": 5,
+            "review_text": "Increíble producto, superó todas mis expectativas. Lo recomiendo al 100%.",
+            "verified": true
+          },
+          "type": "review"
+        }
+      },
+      "settings": {
+        "bg_color": "#ffffff",
+        "card_bg": "#fafaf6",
+        "card_border": "#e8e8e2",
+        "card_radius": 8,
+        "heading_color": "#1a1a18",
+        "py": 24,
+        "speed": 4,
+        "star_color": "#f4a327",
+        "text_color": "#5a5a52"
+      },
+      "type": "lp-reviews"
+    },
+    "lp-shipping": {
+      "block_order": [
+        "item_8a9C43"
+      ],
+      "blocks": {
+        "item_8a9C43": {
+          "settings": {
+            "description": "Entrega en 3-5 días hábiles a todo el país.",
+            "icon": "📦",
+            "title": "Envío gratis"
+          },
+          "type": "item"
+        }
+      },
+      "settings": {
+        "bg_color": "#ffffff",
+        "border_color": "#e8e8e2",
+        "heading_color": "#1a1a18",
+        "icon": "🚚",
+        "icon_color": "#5a7a40",
+        "max_width": 780,
+        "py": 0,
+        "text_color": "#6a6a62",
+        "title": "Información de envío"
+      },
+      "type": "lp-shipping"
+    },
+    "lp-testimonials": {
+      "block_order": [
+        "photo_Fbb3kA",
+        "photo_VLq9pp",
+        "photo_3XV4pg",
+        "photo_yLhcdK"
+      ],
+      "blocks": {
+        "photo_3XV4pg": {
+          "settings": {
+            "alt": "",
+            "photo": "shopify://shop_images/White_and_Beige_Minimal_Clean_Skincare_Product_Benefits_Instagram_Post.png"
+          },
+          "type": "photo"
+        },
+        "photo_Fbb3kA": {
+          "settings": {
+            "alt": "",
+            "photo": "shopify://shop_images/Gemini_Generated_Image_vnh79ovnh79ovnh7_e4ffc692-d876-4304-af46-df87a9688706.png"
+          },
+          "type": "photo"
+        },
+        "photo_VLq9pp": {
+          "settings": {
+            "alt": "",
+            "photo": "shopify://shop_images/White_and_Beige_Minimal_Clean_Skincare_Product_Benefits_Instagram_Post-3.png"
+          },
+          "type": "photo"
+        },
+        "photo_yLhcdK": {
+          "settings": {
+            "alt": "",
+            "photo": "shopify://shop_images/White_and_Beige_Minimal_Clean_Skincare_Product_Benefits_Instagram_Post-2.png"
+          },
+          "type": "photo"
+        }
+      },
+      "settings": {
+        "bg_color": "#f8f7f3",
+        "gap": 8,
+        "label": "ya ellos han probado:",
+        "label_color": "#1a1a18",
+        "label_gap": 12,
+        "label_size": 13,
+        "pb": 16,
+        "per_view": 2,
+        "photo_height": 150,
+        "pt": 16,
+        "px": 16,
+        "radius": 8,
+        "speed": 4
+      },
+      "type": "lp-testimonials"
+    },
+    "lp-ticker": {
+      "block_order": [
+        "item_HUi8g9",
+        "ticker_1",
+        "ticker_2",
+        "ticker_3",
+        "ticker_4"
+      ],
+      "blocks": {
+        "item_HUi8g9": {
+          "settings": {
+            "text": "FACIL DE LAVAR"
+          },
+          "type": "item"
+        },
+        "ticker_1": {
+          "settings": {
+            "text": "LISTO EN 30 SEGUNDOS"
+          },
+          "type": "item"
+        },
+        "ticker_2": {
+          "settings": {
+            "text": "CARGA FACIL"
+          },
+          "type": "item"
+        },
+        "ticker_3": {
+          "settings": {
+            "text": "Garantía de satisfacción"
+          },
+          "type": "item"
+        },
+        "ticker_4": {
+          "settings": {
+            "text": "LO TOMAS DESDE EL MISMO FRASCO"
+          },
+          "type": "item"
+        }
+      },
+      "settings": {
+        "bg_color": "#f4ef88",
+        "border_color": "#e0e0da",
+        "border_width": 1,
+        "font_size": 13,
+        "font_weight": "600",
+        "item_gap": 0,
+        "letter_spacing": 8,
+        "py": 10,
+        "sep_color": "#000000",
+        "sep_gap": 4,
+        "sep_size": 14,
+        "separator": "✦",
+        "speed": 20,
+        "text_color": "#1a1a18",
+        "uppercase": true
+      },
+      "type": "lp-ticker"
+    },
+    "lp-trust-badges": {
+      "settings": {
+        "badge1_icon": "shopify://shop_images/Diseno_sin_titulo-6.png",
+        "badge1_sub": "Entrega en 24-48h (Todo RD)",
+        "badge1_title": "Envío Gratis",
+        "badge2_icon": "shopify://shop_images/Diseno_sin_titulo-7.png",
+        "badge2_sub": "Efectivo o Transferencia",
+        "badge2_title": "Pagas al Recibir",
+        "bg_color": "#ffffff",
+        "max_width": 640,
+        "py": 8
+      },
+      "type": "lp-trust-badges"
+    },
+    "lp_divider_jg7UjN": {
+      "settings": {
+        "bg_above": "#ffffff",
+        "bg_below": "#ffffff",
+        "line_color": "#d0d0c8",
+        "max_width": 700,
+        "py": 6
+      },
+      "type": "lp-divider"
+    }
+  }
 }
