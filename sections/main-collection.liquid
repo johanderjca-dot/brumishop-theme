@@ -1,0 +1,34 @@
+{%- paginate collection.products by 24 -%}
+<section class="collection page-width">
+  <header class="collection__head">
+    <h1>{{ collection.title }}</h1>
+    {%- if collection.description != blank -%}
+      <div class="rte collection__desc">{{ collection.description }}</div>
+    {%- endif -%}
+  </header>
+
+  <div class="grid grid--{{ section.settings.columns }}">
+    {%- for product in collection.products -%}
+      {% render 'product-card', product: product %}
+    {%- else -%}
+      <p>No hay productos en esta colección todavía.</p>
+    {%- endfor -%}
+  </div>
+
+  {%- if paginate.pages > 1 -%}
+    <nav class="pagination">
+      {%- if paginate.previous -%}<a href="{{ paginate.previous.url }}">← Anterior</a>{%- endif -%}
+      {%- if paginate.next -%}<a href="{{ paginate.next.url }}">Siguiente →</a>{%- endif -%}
+    </nav>
+  {%- endif -%}
+</section>
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "Colección",
+  "settings": [
+    { "type": "range", "id": "columns", "min": 2, "max": 5, "step": 1, "label": "Columnas en escritorio", "default": 4 }
+  ]
+}
+{% endschema %}

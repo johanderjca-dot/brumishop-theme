@@ -1,0 +1,11 @@
+<article class="page-width section-pad article">
+  <h1 class="h1">{{ article.title }}</h1>
+  <p class="article__meta">{{ article.published_at | date: '%d/%m/%Y' }}</p>
+  {%- if article.image -%}
+    <img src="{{ article.image | image_url: width: 1400 }}" alt="" width="1400" height="800" loading="lazy">
+  {%- endif -%}
+  <div class="rte">{{ article.content }}</div>
+</article>
+{% schema %}
+{ "name": "Artículo" }
+{% endschema %}

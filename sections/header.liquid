@@ -1,0 +1,130 @@
+{{ 'component-header.css' | asset_url | stylesheet_tag }}
+
+<header class="header" data-header>
+  <div class="header__inner page-width">
+
+    <button class="header__burger" type="button" aria-label="Menú" data-drawer-open>
+      <span></span><span></span><span></span>
+    </button>
+
+    {%- if section.settings.layout == 'logo_center' -%}
+      <nav class="header__nav header__nav--left" role="navigation">
+        {%- for link in section.settings.menu.links -%}
+          <a class="header__link" href="{{ link.url }}">{{ link.title }}</a>
+        {%- endfor -%}
+      </nav>
+    {%- endif -%}
+
+    <div class="header__logo {% if section.settings.layout == 'logo_center' %}header__logo--center{% endif %}">
+      <a href="{{ routes.root_url }}" aria-label="{{ shop.name }}">
+        {%- if section.settings.logo != blank -%}
+          <img
+            class="header__logo-img header__logo-img--dark"
+            src="{{ section.settings.logo | image_url: width: 600 }}"
+            alt="{{ shop.name | escape }}"
+            width="{{ section.settings.logo.width }}"
+            height="{{ section.settings.logo.height }}"
+            style="max-width: {{ section.settings.logo_width }}px"
+            loading="eager">
+          {%- if section.settings.logo_light != blank -%}
+            <img
+              class="header__logo-img header__logo-img--light"
+              src="{{ section.settings.logo_light | image_url: width: 600 }}"
+              alt="{{ shop.name | escape }}"
+              width="{{ section.settings.logo_light.width }}"
+              height="{{ section.settings.logo_light.height }}"
+              style="max-width: {{ section.settings.logo_width }}px"
+              loading="eager">
+          {%- endif -%}
+        {%- else -%}
+          <span class="header__wordmark">{{ shop.name }}</span>
+        {%- endif -%}
+      </a>
+    </div>
+
+    {%- if section.settings.layout != 'logo_center' -%}
+      <nav class="header__nav" role="navigation">
+        {%- for link in section.settings.menu.links -%}
+          {%- if link.links.size > 0 -%}
+            <details class="header__dropdown">
+              <summary class="header__link">{{ link.title }} {% render 'icon-caret' %}</summary>
+              <div class="header__submenu">
+                {%- for child in link.links -%}
+                  <a href="{{ child.url }}">{{ child.title }}</a>
+                {%- endfor -%}
+              </div>
+            </details>
+          {%- else -%}
+            <a class="header__link" href="{{ link.url }}">{{ link.title }}</a>
+          {%- endif -%}
+        {%- endfor -%}
+      </nav>
+    {%- endif -%}
+
+    <div class="header__actions">
+      {%- if section.settings.show_search -%}
+        <a class="header__icon" href="{{ routes.search_url }}" aria-label="Buscar">{% render 'icon-search' %}</a>
+      {%- endif -%}
+      {%- if shop.customer_accounts_enabled and section.settings.show_account -%}
+        <a class="header__icon" href="{{ routes.account_url }}" aria-label="Cuenta">{% render 'icon-account' %}</a>
+      {%- endif -%}
+      <a class="header__icon header__cart" href="{{ routes.cart_url }}" aria-label="Carrito">
+        {% render 'icon-cart' %}
+        <span class="header__cart-count" data-cart-count>{{ cart.item_count }}</span>
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<div class="header-spacer" aria-hidden="true"></div>
+
+<div class="drawer" data-drawer hidden>
+  <div class="drawer__overlay" data-drawer-close></div>
+  <div class="drawer__panel">
+    <button class="drawer__close" type="button" aria-label="Cerrar" data-drawer-close>&times;</button>
+    <nav class="drawer__nav">
+      {%- for link in section.settings.menu.links -%}
+        {%- if link.links.size > 0 -%}
+          <details>
+            <summary>{{ link.title }} {% render 'icon-caret' %}</summary>
+            <div class="drawer__sub">
+              {%- for child in link.links -%}
+                <a href="{{ child.url }}">{{ child.title }}</a>
+              {%- endfor -%}
+            </div>
+          </details>
+        {%- else -%}
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        {%- endif -%}
+      {%- endfor -%}
+    </nav>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Encabezado",
+  "settings": [
+    { "type": "header", "content": "Logo" },
+    { "type": "image_picker", "id": "logo", "label": "Logo (oscuro)", "info": "Se usa sobre fondo claro" },
+    { "type": "image_picker", "id": "logo_light", "label": "Logo (claro / blanco)", "info": "Se usa cuando el encabezado está transparente sobre el video" },
+    { "type": "range", "id": "logo_width", "min": 60, "max": 320, "step": 10, "unit": "px", "label": "Ancho del logo", "default": 140 },
+
+    { "type": "header", "content": "Navegación" },
+    { "type": "link_list", "id": "menu", "label": "Menú", "default": "main-menu" },
+    {
+      "type": "select", "id": "layout", "label": "Distribución", "default": "logo_left",
+      "options": [
+        { "value": "logo_left", "label": "Logo a la izquierda" },
+        { "value": "logo_center", "label": "Logo al centro" }
+      ]
+    },
+
+    { "type": "header", "content": "Iconos" },
+    { "type": "checkbox", "id": "show_search", "label": "Mostrar búsqueda", "default": true },
+    { "type": "checkbox", "id": "show_account", "label": "Mostrar cuenta", "default": true }
+  ],
+  "enabled_on": { "groups": ["header"] }
+}
+{% endschema %}

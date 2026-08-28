@@ -1,0 +1,10 @@
+<section class="page-width section-pad center" style="max-width:520px">
+  <h1 class="h1">Tarjeta de regalo</h1>
+  <p>Valor: <strong>{{ gift_card.initial_value | money }}</strong></p>
+  {%- if gift_card.expired -%}<p class="muted">Esta tarjeta expiró.</p>{%- endif -%}
+  <p style="font-size:22px;letter-spacing:3px;border:1px solid var(--line);border-radius:12px;padding:16px">
+    {{ gift_card.code | format_code }}
+  </p>
+  <p>Saldo disponible: {{ gift_card.balance | money }}</p>
+  <a class="btn btn--primary" href="{{ shop.url }}">Ir a la tienda</a>
+</section>

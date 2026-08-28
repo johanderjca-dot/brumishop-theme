@@ -1,0 +1,170 @@
+{%- liquid
+  assign h = section.settings.height
+  assign has_native = false
+  if section.settings.video != blank
+    assign has_native = true
+  endif
+-%}
+
+<section
+  class="vhero vhero--{{ h }}"
+  {% if h == 'custom' %}style="--vhero-h: {{ section.settings.height_custom }}vh; --vhero-h-mobile: {{ section.settings.height_custom_mobile }}vh;"{% endif %}
+  data-video-hero>
+
+  <div class="vhero__media">
+    {%- if has_native -%}
+      {{ section.settings.video
+        | video_tag:
+          image_size: '1920x',
+          autoplay: true,
+          loop: true,
+          muted: true,
+          controls: false,
+          playsinline: true,
+          class: 'vhero__video'
+      }}
+
+    {%- elsif section.settings.video_url != blank -%}
+      <div class="vhero__embed" data-embed data-src="{{ section.settings.video_url.type }}">
+        {%- if section.settings.poster != blank -%}
+          <img
+            class="vhero__poster"
+            src="{{ section.settings.poster | image_url: width: 1920 }}"
+            srcset="{{ section.settings.poster | image_url: width: 750 }} 750w,
+                    {{ section.settings.poster | image_url: width: 1100 }} 1100w,
+                    {{ section.settings.poster | image_url: width: 1920 }} 1920w"
+            sizes="100vw"
+            alt=""
+            width="{{ section.settings.poster.width }}"
+            height="{{ section.settings.poster.height }}"
+            fetchpriority="high">
+        {%- endif -%}
+        <iframe
+          class="vhero__iframe"
+          src="{% if section.settings.video_url.type == 'youtube' %}https://www.youtube-nocookie.com/embed/{{ section.settings.video_url.id }}?autoplay=1&mute=1&loop=1&playlist={{ section.settings.video_url.id }}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1{% else %}https://player.vimeo.com/video/{{ section.settings.video_url.id }}?autoplay=1&muted=1&loop=1&background=1{% endif %}"
+          title="{{ section.settings.heading | escape }}"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          loading="lazy"></iframe>
+      </div>
+
+    {%- elsif section.settings.image != blank -%}
+      <img
+        class="vhero__img"
+        src="{{ section.settings.image | image_url: width: 1920 }}"
+        srcset="{{ section.settings.image | image_url: width: 750 }} 750w,
+                {{ section.settings.image | image_url: width: 1100 }} 1100w,
+                {{ section.settings.image | image_url: width: 1920 }} 1920w"
+        sizes="100vw"
+        alt="{{ section.settings.image.alt | escape }}"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}"
+        fetchpriority="high">
+
+    {%- else -%}
+      <div class="vhero__placeholder">
+        {{ 'hero-apparel-1' | placeholder_svg_tag: 'vhero__img' }}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.overlay > 0 -%}
+      <div class="vhero__overlay" style="opacity: {{ section.settings.overlay | divided_by: 100.0 }}"></div>
+    {%- endif -%}
+  </div>
+
+  {%- if section.settings.heading != blank or section.settings.subheading != blank or section.settings.btn1_label != blank -%}
+    <div class="vhero__content vhero__content--{{ section.settings.align }} vhero__content--v-{{ section.settings.valign }}">
+      <div class="page-width">
+        <div class="vhero__box" style="--vhero-text: {{ section.settings.text_color }}">
+
+          {%- if section.settings.eyebrow != blank -%}
+            <p class="vhero__eyebrow">{{ section.settings.eyebrow }}</p>
+          {%- endif -%}
+
+          {%- if section.settings.heading != blank -%}
+            <h1 class="vhero__heading" style="--vhero-size: {{ section.settings.heading_size }}px; --vhero-size-mobile: {{ section.settings.heading_size_mobile }}px">
+              {{ section.settings.heading }}
+            </h1>
+          {%- endif -%}
+
+          {%- if section.settings.subheading != blank -%}
+            <div class="vhero__sub">{{ section.settings.subheading }}</div>
+          {%- endif -%}
+
+          {%- if section.settings.btn1_label != blank or section.settings.btn2_label != blank -%}
+            <div class="vhero__buttons">
+              {%- if section.settings.btn1_label != blank -%}
+                <a class="btn btn--primary" href="{{ section.settings.btn1_url | default: '#' }}">{{ section.settings.btn1_label }}</a>
+              {%- endif -%}
+              {%- if section.settings.btn2_label != blank -%}
+                <a class="btn btn--ghost" href="{{ section.settings.btn2_url | default: '#' }}">{{ section.settings.btn2_label }}</a>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Video de portada",
+  "tag": "section",
+  "class": "section-vhero",
+  "settings": [
+    { "type": "header", "content": "Medio" },
+    { "type": "video", "id": "video", "label": "Video subido a Shopify", "info": "Lo mejor para clips cortos. Se reproduce sin sonido y en bucle." },
+    { "type": "video_url", "id": "video_url", "label": "O un enlace de YouTube / Vimeo", "accept": ["youtube", "vimeo"], "info": "Se usa solo si no subiste un video arriba." },
+    { "type": "image_picker", "id": "poster", "label": "Imagen de portada del video", "info": "Se ve mientras el video carga. Muy recomendada." },
+    { "type": "image_picker", "id": "image", "label": "O solo una imagen", "info": "Se usa si no hay video." },
+
+    { "type": "header", "content": "Tamaño" },
+    {
+      "type": "select", "id": "height", "label": "Altura", "default": "large",
+      "options": [
+        { "value": "medium", "label": "Media (60% de pantalla)" },
+        { "value": "large", "label": "Grande (80% de pantalla)" },
+        { "value": "full", "label": "Pantalla completa" },
+        { "value": "custom", "label": "Personalizada" }
+      ]
+    },
+    { "type": "range", "id": "height_custom", "min": 30, "max": 100, "step": 5, "unit": "vh", "label": "Altura en escritorio", "default": 80 },
+    { "type": "range", "id": "height_custom_mobile", "min": 40, "max": 100, "step": 5, "unit": "vh", "label": "Altura en móvil", "default": 90 },
+    { "type": "range", "id": "overlay", "min": 0, "max": 80, "step": 5, "unit": "%", "label": "Oscurecer el video", "default": 25, "info": "Ayuda a que el texto y el menú se lean." },
+
+    { "type": "header", "content": "Texto" },
+    { "type": "text", "id": "eyebrow", "label": "Etiqueta pequeña" },
+    { "type": "text", "id": "heading", "label": "Titular", "default": "Todo lo que buscas" },
+    { "type": "range", "id": "heading_size", "min": 28, "max": 110, "step": 2, "unit": "px", "label": "Tamaño del titular (escritorio)", "default": 64 },
+    { "type": "range", "id": "heading_size_mobile", "min": 22, "max": 60, "step": 2, "unit": "px", "label": "Tamaño del titular (móvil)", "default": 34 },
+    { "type": "richtext", "id": "subheading", "label": "Subtítulo", "default": "<p>Pagas al recibir. Envío gratis a todo el país.</p>" },
+    { "type": "color", "id": "text_color", "label": "Color del texto", "default": "#FFFFFF" },
+    {
+      "type": "select", "id": "align", "label": "Alineación horizontal", "default": "left",
+      "options": [
+        { "value": "left", "label": "Izquierda" },
+        { "value": "center", "label": "Centro" },
+        { "value": "right", "label": "Derecha" }
+      ]
+    },
+    {
+      "type": "select", "id": "valign", "label": "Alineación vertical", "default": "center",
+      "options": [
+        { "value": "top", "label": "Arriba" },
+        { "value": "center", "label": "Centro" },
+        { "value": "bottom", "label": "Abajo" }
+      ]
+    },
+
+    { "type": "header", "content": "Botones" },
+    { "type": "text", "id": "btn1_label", "label": "Botón 1 — texto", "default": "Ver productos" },
+    { "type": "url", "id": "btn1_url", "label": "Botón 1 — enlace" },
+    { "type": "text", "id": "btn2_label", "label": "Botón 2 — texto" },
+    { "type": "url", "id": "btn2_url", "label": "Botón 2 — enlace" }
+  ],
+  "presets": [{ "name": "Video de portada" }]
+}
+{% endschema %}

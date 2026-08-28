@@ -1,0 +1,42 @@
+{%- liquid
+  assign on_sale = false
+  if product.compare_at_price > product.price
+    assign on_sale = true
+  endif
+-%}
+
+<a class="card" href="{{ product.url }}">
+  <div class="card__media">
+    {%- if product.featured_image -%}
+      <img
+        src="{{ product.featured_image | image_url: width: 600 }}"
+        srcset="{{ product.featured_image | image_url: width: 300 }} 300w,
+                {{ product.featured_image | image_url: width: 600 }} 600w,
+                {{ product.featured_image | image_url: width: 900 }} 900w"
+        sizes="(min-width: 990px) 25vw, 50vw"
+        alt="{{ product.featured_image.alt | default: product.title | escape }}"
+        width="{{ product.featured_image.width }}"
+        height="{{ product.featured_image.height }}"
+        loading="lazy">
+    {%- else -%}
+      {{ 'product-1' | placeholder_svg_tag: 'card__placeholder' }}
+    {%- endif -%}
+
+    {%- if on_sale and product.available -%}
+      {%- assign pct = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price -%}
+      <span class="card__badge">-{{ pct }}%</span>
+    {%- endif -%}
+
+    {%- unless product.available -%}
+      <span class="card__sold-out">Agotado</span>
+    {%- endunless -%}
+  </div>
+
+  <div class="card__body">
+    <h3 class="card__title">{{ product.title }}</h3>
+    <div class="card__price">
+      <strong>{{ product.price | money }}</strong>
+      {%- if on_sale -%}<s>{{ product.compare_at_price | money }}</s>{%- endif -%}
+    </div>
+  </div>
+</a>

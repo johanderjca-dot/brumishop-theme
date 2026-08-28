@@ -1,0 +1,33 @@
+<section class="section-pad">
+  <div class="page-width">
+    <div class="section-head-row">
+      {%- if section.settings.heading != blank -%}<h2 class="h2">{{ section.settings.heading }}</h2>{%- endif -%}
+      {%- if section.settings.collection != blank -%}
+        <a class="link-more" href="{{ section.settings.collection.url }}">Ver todo →</a>
+      {%- endif -%}
+    </div>
+    <div class="grid grid--{{ section.settings.columns }}">
+      {%- for product in section.settings.collection.products limit: section.settings.limit -%}
+        {% render 'product-card', product: product %}
+      {%- else -%}
+        {%- for i in (1..4) -%}
+          <div class="card">{{ 'product-1' | placeholder_svg_tag }}</div>
+        {%- endfor -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Colección destacada",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Título", "default": "Lo más vendido" },
+    { "type": "collection", "id": "collection", "label": "Colección" },
+    { "type": "range", "id": "limit", "min": 2, "max": 12, "step": 1, "label": "Cuántos productos", "default": 4 },
+    { "type": "range", "id": "columns", "min": 2, "max": 5, "step": 1, "label": "Columnas en escritorio", "default": 4 }
+  ],
+  "presets": [{ "name": "Colección destacada" }]
+}
+{% endschema %}

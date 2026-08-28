@@ -1,0 +1,21 @@
+{
+  "type": "footer",
+  "name": "Pie de página",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "menu1": { "type": "menu", "settings": { "heading": "Tienda", "menu": "main-menu" } },
+        "menu2": { "type": "menu", "settings": { "heading": "Ayuda", "menu": "footer" } },
+        "texto": { "type": "text", "settings": { "heading": "Contacto", "content": "<p>Escríbenos por WhatsApp. Respondemos rápido.</p>" } }
+      },
+      "block_order": ["menu1", "menu2", "texto"],
+      "settings": {
+        "logo_width": 160,
+        "tagline": "Todo lo que buscas, en tu puerta.",
+        "show_payment": false
+      }
+    }
+  },
+  "order": ["footer"]
+}

@@ -1,0 +1,21 @@
+<section class="page-width section-pad">
+  <h1 class="h1">Mi cuenta</h1>
+  <p><a href="{{ routes.account_logout_url }}">Cerrar sesión</a> · <a href="{{ routes.account_addresses_url }}">Mis direcciones</a></p>
+
+  <h2 class="h2" style="margin-top:32px">Pedidos</h2>
+  {%- if customer.orders.size > 0 -%}
+    <div class="cart__items">
+      {%- for order in customer.orders -%}
+        <div class="cart__item" style="grid-template-columns:1fr auto">
+          <div class="cart__item-info">
+            <a href="{{ order.customer_url }}">Pedido {{ order.name }}</a>
+            <span>{{ order.created_at | date: '%d/%m/%Y' }} · {{ order.financial_status_label }}</span>
+          </div>
+          <strong>{{ order.total_price | money }}</strong>
+        </div>
+      {%- endfor -%}
+    </div>
+  {%- else -%}
+    <p>Todavía no tienes pedidos.</p>
+  {%- endif -%}
+</section>

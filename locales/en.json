@@ -1,0 +1,32 @@
+{
+  "accessibility": {
+    "skip_to_content": "Skip to content",
+    "close": "Close",
+    "menu": "Menu",
+    "search": "Search",
+    "cart": "Cart",
+    "account": "Account"
+  },
+  "general": {
+    "sold_out": "Sold out",
+    "free_shipping": "Free shipping",
+    "cod": "Pay on delivery"
+  },
+  "products": {
+    "add_to_cart": "Add to cart",
+    "buy_now": "Order now",
+    "quantity": "Quantity"
+  },
+  "cart": {
+    "title": "Your cart",
+    "empty": "Your cart is empty.",
+    "total": "Total",
+    "checkout": "Checkout",
+    "update": "Update"
+  },
+  "search": {
+    "title": "Search",
+    "placeholder": "What are you looking for?",
+    "results": "result(s)"
+  }
+}

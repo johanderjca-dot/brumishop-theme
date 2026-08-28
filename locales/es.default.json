@@ -1,0 +1,32 @@
+{
+  "accessibility": {
+    "skip_to_content": "Ir al contenido",
+    "close": "Cerrar",
+    "menu": "Menú",
+    "search": "Buscar",
+    "cart": "Carrito",
+    "account": "Cuenta"
+  },
+  "general": {
+    "sold_out": "Agotado",
+    "free_shipping": "Envío gratis",
+    "cod": "Paga al recibir"
+  },
+  "products": {
+    "add_to_cart": "Agregar al carrito",
+    "buy_now": "Ordenar ahora",
+    "quantity": "Cantidad"
+  },
+  "cart": {
+    "title": "Tu carrito",
+    "empty": "Tu carrito está vacío.",
+    "total": "Total",
+    "checkout": "Finalizar compra",
+    "update": "Actualizar"
+  },
+  "search": {
+    "title": "Buscar",
+    "placeholder": "¿Qué estás buscando?",
+    "results": "resultado(s)"
+  }
+}

@@ -1,0 +1,12 @@
+<section class="page-width section-pad" style="max-width:520px">
+  <h1 class="h1">Crear cuenta</h1>
+  {%- form 'create_customer' -%}
+    {{ form.errors | default_errors }}
+    <p><label for="RegFirst">Nombre</label><input type="text" name="customer[first_name]" id="RegFirst"></p>
+    <p><label for="RegLast">Apellido</label><input type="text" name="customer[last_name]" id="RegLast"></p>
+    <p><label for="RegEmail">Correo</label><input type="email" name="customer[email]" id="RegEmail" autocomplete="email" required></p>
+    <p><label for="RegPass">Contraseña</label><input type="password" name="customer[password]" id="RegPass" autocomplete="new-password"></p>
+    <p><button type="submit" class="btn btn--primary btn--full">Crear cuenta</button></p>
+  {%- endform -%}
+  <p style="margin-top:20px"><a href="{{ routes.account_login_url }}">Ya tengo cuenta</a></p>
+</section>

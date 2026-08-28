@@ -1,0 +1,32 @@
+{
+  "type": "header",
+  "name": "Encabezado",
+  "sections": {
+    "announcement": {
+      "type": "announcement-bar",
+      "blocks": {
+        "a1": { "type": "item", "settings": { "text": "Paga al recibir" } },
+        "a2": { "type": "item", "settings": { "text": "Envío gratis a todo el país" } },
+        "a3": { "type": "item", "settings": { "text": "Entrega 24-48h" } }
+      },
+      "block_order": ["a1", "a2", "a3"],
+      "settings": {
+        "bg": "#151515",
+        "ink": "#FFFFFF",
+        "scroll": true,
+        "speed": 30
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_width": 140,
+        "menu": "main-menu",
+        "layout": "logo_left",
+        "show_search": true,
+        "show_account": true
+      }
+    }
+  },
+  "order": ["announcement", "header"]
+}

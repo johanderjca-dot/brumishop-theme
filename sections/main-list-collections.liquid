@@ -1,0 +1,27 @@
+<section class="page-width section-pad">
+  <h1 class="h2">{{ section.settings.heading | default: 'Categorías' }}</h1>
+  <div class="grid grid--{{ section.settings.columns }}">
+    {%- for collection in collections -%}
+      <a class="cat-card" href="{{ collection.url }}">
+        <div class="cat-card__media">
+          {%- if collection.featured_image -%}
+            <img src="{{ collection.featured_image | image_url: width: 600 }}" alt="{{ collection.title | escape }}" width="400" height="400" loading="lazy">
+          {%- else -%}
+            {{ 'collection-1' | placeholder_svg_tag }}
+          {%- endif -%}
+        </div>
+        <span class="cat-card__title">{{ collection.title }}</span>
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Lista de colecciones",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Título", "default": "Categorías" },
+    { "type": "range", "id": "columns", "min": 2, "max": 6, "step": 1, "label": "Columnas", "default": 4 }
+  ]
+}
+{% endschema %}

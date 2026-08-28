@@ -1,0 +1,21 @@
+<section class="page-width section-pad">
+  <h1 class="h1">Pedido {{ order.name }}</h1>
+  <p class="muted">{{ order.created_at | date: '%d/%m/%Y' }}</p>
+
+  <div class="cart__items">
+    {%- for line_item in order.line_items -%}
+      <div class="cart__item" style="grid-template-columns:80px 1fr auto">
+        {%- if line_item.image -%}<img src="{{ line_item.image | image_url: width: 200 }}" alt="" width="80" height="80" loading="lazy">{%- else -%}<span></span>{%- endif -%}
+        <div class="cart__item-info">
+          <span>{{ line_item.title }}</span>
+          <span class="muted">Cantidad: {{ line_item.quantity }}</span>
+        </div>
+        <strong>{{ line_item.final_line_price | money }}</strong>
+      </div>
+    {%- endfor -%}
+  </div>
+
+  <p style="margin-top:20px"><strong>Total: {{ order.total_price | money }}</strong></p>
+  <p>{{ order.shipping_address | format_address }}</p>
+  <p><a href="{{ routes.account_url }}">← Volver a mi cuenta</a></p>
+</section>

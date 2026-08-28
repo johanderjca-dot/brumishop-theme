@@ -1,0 +1,44 @@
+{
+  "sections": {
+    "hero": {
+      "type": "video-hero",
+      "settings": {
+        "height": "large",
+        "height_custom": 80,
+        "height_custom_mobile": 90,
+        "overlay": 25,
+        "eyebrow": "BRUMISHOP",
+        "heading": "Todo lo que buscas",
+        "heading_size": 64,
+        "heading_size_mobile": 34,
+        "subheading": "<p>Pagas al recibir. Envío gratis a todo el país.</p>",
+        "text_color": "#FFFFFF",
+        "align": "left",
+        "valign": "center",
+        "btn1_label": "Ver productos"
+      }
+    },
+    "categorias": {
+      "type": "category-tiles",
+      "blocks": {
+        "t1": { "type": "tile", "settings": { "title": "Belleza", "cta": "Ver" } },
+        "t2": { "type": "tile", "settings": { "title": "Hogar", "cta": "Ver" } },
+        "t3": { "type": "tile", "settings": { "title": "Tecnología", "cta": "Ver" } }
+      },
+      "block_order": ["t1", "t2", "t3"],
+      "settings": {
+        "heading": "Compra por categoría",
+        "columns": 3
+      }
+    },
+    "destacados": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "Lo más vendido",
+        "limit": 4,
+        "columns": 4
+      }
+    }
+  },
+  "order": ["hero", "categorias", "destacados"]
+}

@@ -1,0 +1,24 @@
+<section class="page-width section-pad">
+  <h1 class="h1">Mis direcciones</h1>
+  <p><a href="{{ routes.account_url }}">← Volver a mi cuenta</a></p>
+
+  {%- paginate customer.addresses by 10 -%}
+    {%- for address in customer.addresses -%}
+      <div style="border-bottom:1px solid var(--line);padding:16px 0">
+        {{ address | format_address }}
+      </div>
+    {%- endfor -%}
+  {%- endpaginate -%}
+
+  <h2 class="h2" style="margin-top:32px">Agregar dirección</h2>
+  {%- form 'customer_address', customer.new_address -%}
+    {{ form.errors | default_errors }}
+    <p><label>Nombre</label>{{ form.first_name }}</p>
+    <p><label>Apellido</label>{{ form.last_name }}</p>
+    <p><label>Dirección</label>{{ form.address1 }}</p>
+    <p><label>Ciudad</label>{{ form.city }}</p>
+    <p><label>País</label>{{ form.country }}</p>
+    <p><label>Teléfono</label>{{ form.phone }}</p>
+    <p><button type="submit" class="btn btn--primary">Guardar</button></p>
+  {%- endform -%}
+</section>

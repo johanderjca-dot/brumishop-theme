@@ -1,0 +1,28 @@
+<section class="page-width section-pad" style="max-width:520px">
+  <h1 class="h1">Iniciar sesión</h1>
+
+  {%- form 'customer_login' -%}
+    {{ form.errors | default_errors }}
+    <p><label for="CustomerEmail">Correo</label>
+      <input type="email" name="customer[email]" id="CustomerEmail" autocomplete="email" required></p>
+    {%- if form.password_needed -%}
+      <p><label for="CustomerPassword">Contraseña</label>
+        <input type="password" name="customer[password]" id="CustomerPassword" autocomplete="current-password"></p>
+      <p><a href="#recover">¿Olvidaste tu contraseña?</a></p>
+    {%- endif -%}
+    <p><button type="submit" class="btn btn--primary btn--full">Entrar</button></p>
+  {%- endform -%}
+
+  <p style="margin-top:24px"><a href="{{ routes.account_register_url }}">Crear una cuenta</a></p>
+
+  <div id="recover" style="margin-top:40px">
+    <h2 class="h2">Recuperar contraseña</h2>
+    {%- form 'recover_customer_password' -%}
+      {{ form.errors | default_errors }}
+      {%- if form.posted_successfully? -%}<p>Te enviamos un correo con las instrucciones.</p>{%- endif -%}
+      <p><label for="RecoverEmail">Correo</label>
+        <input type="email" name="email" id="RecoverEmail" autocomplete="email" required></p>
+      <p><button type="submit" class="btn btn--outline">Enviar</button></p>
+    {%- endform -%}
+  </div>
+</section>

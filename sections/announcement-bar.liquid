@@ -1,0 +1,46 @@
+{%- if section.blocks.size > 0 -%}
+<div class="announcement" style="--ann-bg: {{ section.settings.bg }}; --ann-ink: {{ section.settings.ink }};">
+  <div class="announcement__track {% if section.settings.scroll %}announcement__track--scroll{% endif %}"
+       style="--ann-speed: {{ section.settings.speed }}s">
+    {%- for i in (1..2) -%}
+      <div class="announcement__group" {% if i == 2 %}aria-hidden="true"{% endif %}>
+        {%- for block in section.blocks -%}
+          <span class="announcement__item" {{ block.shopify_attributes }}>
+            {%- if block.settings.link != blank -%}
+              <a href="{{ block.settings.link }}">{{ block.settings.text }}</a>
+            {%- else -%}
+              {{ block.settings.text }}
+            {%- endif -%}
+          </span>
+        {%- endfor -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Barra de anuncio",
+  "settings": [
+    { "type": "color", "id": "bg", "label": "Fondo", "default": "#151515" },
+    { "type": "color", "id": "ink", "label": "Texto", "default": "#FFFFFF" },
+    { "type": "checkbox", "id": "scroll", "label": "Texto en movimiento", "default": true },
+    { "type": "range", "id": "speed", "min": 10, "max": 60, "step": 5, "unit": "s", "label": "Velocidad", "default": 30 }
+  ],
+  "blocks": [
+    { "type": "item", "name": "Mensaje", "settings": [
+      { "type": "text", "id": "text", "label": "Texto", "default": "Envío gratis a todo el país" },
+      { "type": "url", "id": "link", "label": "Enlace" }
+    ]}
+  ],
+  "default": {
+    "blocks": [
+      { "type": "item", "settings": { "text": "Paga al recibir" } },
+      { "type": "item", "settings": { "text": "Envío gratis a todo el país" } },
+      { "type": "item", "settings": { "text": "Entrega 24-48h" } }
+    ]
+  },
+  "enabled_on": { "groups": ["header"] }
+}
+{% endschema %}
