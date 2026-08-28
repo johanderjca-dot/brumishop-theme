@@ -463,8 +463,6 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 /* enlace "Ver todo" al final de la sección */
 .cat-viewall {
   margin-top: 32px;
-  padding-top: 20px;
-  border-top: 1px solid var(--ink);
   text-align: center;
 }
 .cat-viewall__link {
