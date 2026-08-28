@@ -12,10 +12,10 @@
     "hero": {
       "type": "video-hero",
       "settings": {
-        "video": "shopify://files/videos/movilprueba.mov",
+        "video": "shopify://files/videos/0827(2).mov",
         "video_mobile": "shopify://files/videos/movilll.mov",
         "video_url": "",
-        "height": "large",
+        "height": "full",
         "height_custom": 75,
         "position_x": 0,
         "position_y": 0,
