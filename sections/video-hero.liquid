@@ -5,6 +5,10 @@
   if section.settings.video != blank
     assign has_native = true
   endif
+  assign has_mobile_video = false
+  if section.settings.video_mobile != blank
+    assign has_mobile_video = true
+  endif
 -%}
 
 <section
@@ -21,16 +25,32 @@
 
   <div class="vhero__media">
     {%- if has_native -%}
-      {{ section.settings.video
-        | video_tag:
-          image_size: '1920x',
-          autoplay: true,
-          loop: true,
-          muted: true,
-          controls: false,
-          playsinline: true,
-          class: 'vhero__video'
-      }}
+      <div class="vhero__video-wrap vhero__video-wrap--desktop{% if has_mobile_video %} vhero__video-wrap--has-mobile{% endif %}">
+        {{ section.settings.video
+          | video_tag:
+            image_size: '1920x',
+            autoplay: true,
+            loop: true,
+            muted: true,
+            controls: false,
+            playsinline: true,
+            class: 'vhero__video'
+        }}
+      </div>
+      {%- if has_mobile_video -%}
+        <div class="vhero__video-wrap vhero__video-wrap--mobile">
+          {{ section.settings.video_mobile
+            | video_tag:
+              image_size: '1080x',
+              autoplay: true,
+              loop: true,
+              muted: true,
+              controls: false,
+              playsinline: true,
+              class: 'vhero__video'
+          }}
+        </div>
+      {%- endif -%}
 
     {%- elsif section.settings.video_url != blank -%}
       <div class="vhero__embed" data-embed data-src="{{ section.settings.video_url.type }}">
@@ -124,7 +144,8 @@
   "class": "section-vhero",
   "settings": [
     { "type": "header", "content": "Medio" },
-    { "type": "video", "id": "video", "label": "Video subido a Shopify", "info": "Lo mejor para clips cortos. Se reproduce sin sonido y en bucle." },
+    { "type": "video", "id": "video", "label": "Video — escritorio", "info": "Lo mejor para clips cortos. Se reproduce sin sonido y en bucle." },
+    { "type": "video", "id": "video_mobile", "label": "Video — móvil (opcional)", "info": "Si lo subes, reemplaza al de escritorio en pantallas pequeñas. Ideal para un clip grabado en vertical o cuadrado en vez de recortar el mismo video horizontal." },
     { "type": "video_url", "id": "video_url", "label": "O un enlace de YouTube / Vimeo", "accept": ["youtube", "vimeo"], "info": "Se usa solo si no subiste un video arriba." },
     { "type": "image_picker", "id": "poster", "label": "Imagen de portada del video", "info": "Se ve mientras el video carga. Muy recomendada." },
     { "type": "image_picker", "id": "image", "label": "O solo una imagen", "info": "Se usa si no hay video." },

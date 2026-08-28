@@ -292,6 +292,14 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   object-position: var(--vhero-pos-x, 50%) var(--vhero-pos-y, 50%);
 }
 .vhero__video, .vhero__placeholder { width: 100%; height: 100%; }
+
+/* video de escritorio vs. móvil (si el merchant sube uno específico para cada uno) */
+.vhero__video-wrap { position: absolute; inset: 0; width: 100%; height: 100%; }
+.vhero__video-wrap--mobile { display: none; }
+@media (max-width: 749px) {
+  .vhero__video-wrap--mobile { display: block; }
+  .vhero__video-wrap--desktop.vhero__video-wrap--has-mobile { display: none; }
+}
 .vhero__placeholder svg { width: 100%; height: 100%; object-fit: cover; }
 
 .vhero__embed { position: absolute; inset: 0; overflow: hidden; }
