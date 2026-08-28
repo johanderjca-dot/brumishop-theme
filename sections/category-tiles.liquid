@@ -46,6 +46,14 @@
       <button class="tiles-carousel__nav tiles-carousel__nav--prev" type="button" data-tiles-prev aria-label="Categoría anterior">{% render 'icon-caret' %}</button>
       <button class="tiles-carousel__nav tiles-carousel__nav--next" type="button" data-tiles-next aria-label="Siguiente categoría">{% render 'icon-caret' %}</button>
     </div>
+
+    {%- if section.settings.show_view_all -%}
+      <div class="cat-viewall">
+        <a class="cat-viewall__link" href="{{ section.settings.view_all_url | default: routes.collections_url }}">
+          {{ section.settings.view_all_label | default: 'Ver todo' }}
+        </a>
+      </div>
+    {%- endif -%}
   </div>
 </section>
 
@@ -56,7 +64,12 @@
   "settings": [
     { "type": "text", "id": "eyebrow", "label": "Etiqueta pequeña (opcional)", "default": "Descubre" },
     { "type": "text", "id": "heading", "label": "Título de la sección", "default": "Compra por categoría" },
-    { "type": "range", "id": "columns", "min": 2, "max": 5, "step": 1, "label": "Tarjetas visibles en escritorio", "default": 5, "info": "El resto se desliza en el carrusel." }
+    { "type": "range", "id": "columns", "min": 2, "max": 5, "step": 1, "label": "Tarjetas visibles en escritorio", "default": 5, "info": "El resto se desliza en el carrusel." },
+
+    { "type": "header", "content": "\"Ver todo\"" },
+    { "type": "checkbox", "id": "show_view_all", "label": "Mostrar enlace \"Ver todo\" al final", "default": true },
+    { "type": "text", "id": "view_all_label", "label": "Texto", "default": "Ver todo" },
+    { "type": "url", "id": "view_all_url", "label": "Enlace (opcional)", "info": "Si lo dejas vacío, enlaza a la página de todas las colecciones." }
   ],
   "blocks": [
     { "type": "tile", "name": "Categoría", "settings": [

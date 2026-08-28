@@ -460,6 +460,23 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   .tiles-carousel__nav { display: flex; }
 }
 
+/* enlace "Ver todo" al final de la sección */
+.cat-viewall {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--ink);
+  text-align: center;
+}
+.cat-viewall__link {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--ink);
+}
+
 .tile { position: relative; display: block; overflow: hidden; border-radius: var(--card-radius); }
 .tile:hover { opacity: 1; }
 .tile__media { position: relative; aspect-ratio: 3 / 4; background: var(--bg-alt); }
