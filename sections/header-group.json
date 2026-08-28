@@ -14,6 +14,13 @@
     "announcement": {
       "type": "announcement-bar",
       "blocks": {
+        "item_iYHUkg": {
+          "type": "item",
+          "settings": {
+            "text": "ACEPTAMOS TARJETAS / TRANSFERENCIAS",
+            "link": ""
+          }
+        },
         "a1": {
           "type": "item",
           "settings": {
@@ -37,12 +44,13 @@
         }
       },
       "block_order": [
+        "item_iYHUkg",
         "a1",
         "a2",
         "a3"
       ],
       "settings": {
-        "bg": "#FBFAF6",
+        "bg": "#fbfaf6",
         "ink": "#000000",
         "scroll": true,
         "speed": 30

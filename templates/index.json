@@ -13,6 +13,7 @@
       "type": "video-hero",
       "settings": {
         "video": "shopify://files/videos/0827(1).mov",
+        "video_mobile": "shopify://files/videos/movilll.mov",
         "video_url": "",
         "height": "full",
         "height_custom": 30,
@@ -40,18 +41,101 @@
     "categorias": {
       "type": "category-tiles",
       "blocks": {
-        "t1": { "type": "tile", "settings": { "title": "Belleza / Skincare", "cta": "Ver", "url": "/collections/belleza-skincare" } },
-        "t2": { "type": "tile", "settings": { "title": "Post-Operatorio / Fajas", "cta": "Ver", "url": "/collections/post-operatorio-fajas" } },
-        "t3": { "type": "tile", "settings": { "title": "Salud / Suplementos", "cta": "Ver", "url": "/collections/salud-suplementos" } },
-        "t4": { "type": "tile", "settings": { "title": "Maternidad / Bebé", "cta": "Ver", "url": "/collections/maternidad-bebe-1" } },
-        "t5": { "type": "tile", "settings": { "title": "Hogar / Organización", "cta": "Ver", "url": "/collections/hogar-organizacion" } },
-        "t6": { "type": "tile", "settings": { "title": "Cocina / Electrodomésticos", "cta": "Ver", "url": "/collections/cocina-electrodomesticos" } },
-        "t7": { "type": "tile", "settings": { "title": "Tecnología", "cta": "Ver", "url": "/collections/tecnologia" } },
-        "t8": { "type": "tile", "settings": { "title": "Mascotas", "cta": "Ver", "url": "/collections/mascotas" } },
-        "t9": { "type": "tile", "settings": { "title": "Cabello", "cta": "Ver", "url": "/collections/cabello" } },
-        "t10": { "type": "tile", "settings": { "title": "Fitness / Peso", "cta": "Ver", "url": "/collections/fitness-peso" } }
+        "t1": {
+          "type": "tile",
+          "settings": {
+            "image": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_4.png",
+            "image_hover": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_6.png",
+            "title": "Belleza / Skincare",
+            "cta": "Ver",
+            "url": "/collections/belleza-skincare"
+          }
+        },
+        "t2": {
+          "type": "tile",
+          "settings": {
+            "title": "Post-Operatorio / Fajas",
+            "cta": "Ver",
+            "url": "/collections/post-operatorio-fajas"
+          }
+        },
+        "t3": {
+          "type": "tile",
+          "settings": {
+            "title": "Salud / Suplementos",
+            "cta": "Ver",
+            "url": "/collections/salud-suplementos"
+          }
+        },
+        "t4": {
+          "type": "tile",
+          "settings": {
+            "title": "Maternidad / Bebé",
+            "cta": "Ver",
+            "url": "/collections/maternidad-bebe-1"
+          }
+        },
+        "t5": {
+          "type": "tile",
+          "settings": {
+            "title": "Hogar / Organización",
+            "cta": "Ver",
+            "url": "/collections/hogar-organizacion"
+          }
+        },
+        "t6": {
+          "type": "tile",
+          "settings": {
+            "title": "Cocina / Electrodomésticos",
+            "cta": "Ver",
+            "url": "/collections/cocina-electrodomesticos"
+          }
+        },
+        "t7": {
+          "type": "tile",
+          "settings": {
+            "title": "Tecnología",
+            "cta": "Ver",
+            "url": "/collections/tecnologia"
+          }
+        },
+        "t8": {
+          "type": "tile",
+          "settings": {
+            "title": "Mascotas",
+            "cta": "Ver",
+            "url": "/collections/mascotas"
+          }
+        },
+        "t9": {
+          "type": "tile",
+          "settings": {
+            "title": "Cabello",
+            "cta": "Ver",
+            "url": "/collections/cabello"
+          }
+        },
+        "t10": {
+          "type": "tile",
+          "settings": {
+            "title": "Fitness / Peso",
+            "cta": "Ver",
+            "url": "/collections/fitness-peso"
+          }
+        }
       },
-      "block_order": ["t1", "t2", "t3", "t4", "t5", "t6", "t7", "t8", "t9", "t10"],
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7",
+        "t8",
+        "t9",
+        "t10"
+      ],
       "settings": {
         "heading": "Compra por categoría",
         "columns": 5
