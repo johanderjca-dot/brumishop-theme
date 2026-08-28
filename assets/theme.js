@@ -37,6 +37,9 @@
       var y = window.scrollY;
       var stuck = hero ? (hero.getBoundingClientRect().bottom <= wrap.offsetHeight) : (y > 4);
       wrap.classList.toggle('is-stuck', stuck);
+      // recién cargada la página (scroll 0): video nítido, sin blur.
+      // el vidrio esmerilado solo entra al empezar a deslizar.
+      wrap.classList.toggle('at-top', y <= 0);
       if (y > lastY && y > hideAt) {
         wrap.classList.add('site-header--hidden');
       } else {
