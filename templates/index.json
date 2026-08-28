@@ -133,6 +133,8 @@
         "t10": {
           "type": "tile",
           "settings": {
+            "image": "shopify://shop_images/e88c2073-91e8-4dfe-948d-53e50deb3f1b-2026-08-28.png",
+            "image_hover": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_10.png",
             "title": "Fitness / Peso",
             "cta": "Ver",
             "url": "/collections/fitness-peso"
