@@ -479,37 +479,24 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 
 .tile { position: relative; display: block; overflow: hidden; border-radius: var(--card-radius); }
 .tile:hover { opacity: 1; }
-.tile__media { position: relative; aspect-ratio: 3 / 4; background: var(--bg-alt); }
+.tile__media { position: relative; aspect-ratio: 3 / 4; background: var(--bg-alt); transition: background .35s ease; }
 .tile__img {
   position: absolute; inset: 0;
   width: 100%; height: 100%; object-fit: cover;
   transition: transform .5s ease, opacity .35s ease;
 }
-/* al hacer hover, la base se apaga por completo (si la imagen de hover
-   tiene transparencia, como un recorte tipo "gota", no debe verse la
-   base por detrás) y la de hover se revela sola encima */
+/* al hacer hover, la base se apaga por completo y el fondo de la tarjeta
+   se vuelve transparente: si la imagen de hover tiene transparencia
+   (ej. un recorte tipo "gota"), debe quedar flotando sola, sin ningún
+   color ni cuadro detrás */
 .tile:hover .tile__img--base,
 .tile:focus-visible .tile__img--base { opacity: 0; transform: scale(1.05); }
+.tile:hover .tile__media,
+.tile:focus-visible .tile__media { background: transparent; }
 
 .tile__img--hover { opacity: 0; z-index: 1; }
 .tile:hover .tile__img--hover,
 .tile:focus-visible .tile__img--hover { opacity: 1; transform: scale(1.05); }
-
-/* círculo de color detrás de la imagen de hover (para recortes con
-   fondo transparente, como una gota o un producto sin fondo) */
-.tile__hover-bg {
-  position: absolute;
-  left: 50%; top: 50%;
-  width: 78%;
-  aspect-ratio: 1 / 1;
-  transform: translate(-50%, -50%) scale(.85);
-  border-radius: 50%;
-  background: var(--tile-hover-bg, var(--bg-alt));
-  opacity: 0;
-  transition: opacity .35s ease, transform .5s ease;
-}
-.tile:hover .tile__hover-bg,
-.tile:focus-visible .tile__hover-bg { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 
 .tile::after {
   content: ""; position: absolute; inset: 0; z-index: 1;

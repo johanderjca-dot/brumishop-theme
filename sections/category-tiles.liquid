@@ -27,7 +27,6 @@
                 {{ 'collection-2' | placeholder_svg_tag: 'tile__img tile__img--base' }}
               {%- endif -%}
               {%- if block.settings.image_hover != blank -%}
-                <div class="tile__hover-bg" style="--tile-hover-bg: {{ block.settings.hover_bg | default: '#DCE7EE' }}"></div>
                 <img class="tile__img tile__img--hover"
                      src="{{ block.settings.image_hover | image_url: width: 900 }}"
                      srcset="{{ block.settings.image_hover | image_url: width: 450 }} 450w, {{ block.settings.image_hover | image_url: width: 900 }} 900w"
@@ -76,7 +75,6 @@
     { "type": "tile", "name": "Categoría", "settings": [
       { "type": "image_picker", "id": "image", "label": "Imagen" },
       { "type": "image_picker", "id": "image_hover", "label": "Imagen al pasar el cursor (opcional)", "info": "Si la subes, la imagen cambia a esta al pasar el cursor (o al tocar en móvil). El título y el enlace siempre muestran la categoría, nunca un producto." },
-      { "type": "color", "id": "hover_bg", "label": "Color del círculo (al pasar el cursor)", "info": "Se ve detrás de la imagen de hover — ideal si esa imagen tiene fondo transparente (ej. un recorte tipo \"gota\")." },
       { "type": "text", "id": "title", "label": "Título", "default": "Belleza" },
       { "type": "text", "id": "cta", "label": "Llamada", "default": "Ver" },
       { "type": "url", "id": "url", "label": "Enlace" }
