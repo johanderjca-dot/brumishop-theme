@@ -14,6 +14,11 @@
     var spacer = doc.querySelector('.header-spacer');
     var hideAt = 24; // no ocultar hasta pasar la altura del propio bloque
 
+    // en la portada con header transparente, "is-stuck" no debe activarse
+    // apenas se mueve el scroll: hay que esperar a que el video del hero
+    // realmente haya desaparecido detrás del header.
+    var hero = doc.body.classList.contains('header-transparent') ? doc.querySelector('.vhero') : null;
+
     function setSpacer() {
       var h = wrap.offsetHeight;
       doc.documentElement.style.setProperty('--header-total-h', h + 'px');
@@ -30,7 +35,8 @@
 
     function update() {
       var y = window.scrollY;
-      wrap.classList.toggle('is-stuck', y > 4);
+      var stuck = hero ? (hero.getBoundingClientRect().bottom <= wrap.offsetHeight) : (y > 4);
+      wrap.classList.toggle('is-stuck', stuck);
       if (y > lastY && y > hideAt) {
         wrap.classList.add('site-header--hidden');
       } else {
