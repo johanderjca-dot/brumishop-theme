@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "accessibility": {
     "skip_to_content": "Skip to content",
@@ -6,6 +15,13 @@
     "search": "Search",
     "cart": "Cart",
     "account": "Account"
+  },
+  "cart": {
+    "title": "Your cart",
+    "empty": "Your cart is empty.",
+    "total": "Total",
+    "checkout": "Checkout",
+    "update": "Update"
   },
   "general": {
     "sold_out": "Sold out",
@@ -16,13 +32,6 @@
     "add_to_cart": "Add to cart",
     "buy_now": "Order now",
     "quantity": "Quantity"
-  },
-  "cart": {
-    "title": "Your cart",
-    "empty": "Your cart is empty.",
-    "total": "Total",
-    "checkout": "Checkout",
-    "update": "Update"
   },
   "search": {
     "title": "Search",

@@ -1,7 +1,15 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "transparent_header": true,
-
     "color_bg": "#FBFAF6",
     "color_bg_alt": "#EFEDE6",
     "color_ink": "#151515",
@@ -9,17 +17,22 @@
     "color_line": "#DCDAD2",
     "color_accent": "#151515",
     "color_accent_ink": "#FFFFFF",
-
     "type_body_font": "assistant_n4",
     "type_heading_font": "assistant_n7",
     "type_heading_scale": 100,
     "type_heading_tracking": 0.5,
     "type_heading_uppercase": "uppercase",
-
     "page_width": 1400,
     "section_padding": 56,
     "button_radius": 10,
-    "card_radius": 12
+    "card_radius": 12,
+    "blocks": {
+      "626184775593427627": {
+        "type": "shopify://apps//blocks/embed-gp-script-head/20b379d4-1b20-474c-a6ca-665c331919f3",
+        "disabled": false,
+        "settings": {}
+      }
+    }
   },
   "presets": {
     "BrumiShop": {

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="{{ settings.color_bg }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+
+    <title>
+      {%- if template.name == 'index' -%}
+        {{ shop.name }}{% if page_title != shop.name %} — {{ page_title }}{% endif %}
+      {%- else -%}
+        {{ page_title }} — {{ shop.name }}
+      {%- endif -%}
+    </title>
+
+    {%- if page_description -%}
+      <meta name="description" content="{{ page_description | escape }}">
+    {%- endif -%}
+
+    {%- render 'meta-tags' -%}
+
+    <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+
+    {{ content_for_header }}
+
+    {%- liquid
+      assign body_font = settings.type_body_font
+      assign heading_font = settings.type_heading_font
+    -%}
+
+    {% style %}
+      {{ body_font | font_face: font_display: 'swap' }}
+      {{ body_font | font_modify: 'weight', 'bold' | font_face: font_display: 'swap' }}
+      {{ heading_font | font_face: font_display: 'swap' }}
+      {{ heading_font | font_modify: 'weight', 'bold' | font_face: font_display: 'swap' }}
+
+      :root {
+        --font-body: {{ body_font.family }}, {{ body_font.fallback_families }};
+        --font-body-weight: {{ body_font.weight }};
+        --font-heading: {{ heading_font.family }}, {{ heading_font.fallback_families }};
+        --font-heading-weight: {{ heading_font.weight }};
+
+        --heading-scale: {{ settings.type_heading_scale | divided_by: 100.0 }};
+        --heading-tracking: {{ settings.type_heading_tracking }}px;
+        --heading-transform: {{ settings.type_heading_uppercase | default: 'none' }};
+
+        --bg: {{ settings.color_bg }};
+        --bg-alt: {{ settings.color_bg_alt }};
+        --ink: {{ settings.color_ink }};
+        --muted: {{ settings.color_muted }};
+        --line: {{ settings.color_line }};
+        --accent: {{ settings.color_accent }};
+        --accent-ink: {{ settings.color_accent_ink }};
+
+        --btn-radius: {{ settings.button_radius }}px;
+        --card-radius: {{ settings.card_radius }}px;
+        --page-max: {{ settings.page_width }}px;
+        --section-pad: {{ settings.section_padding }}px;
+        --header-h: 68px;
+      }
+      @media (min-width: 990px) {
+        :root { --header-h: 82px; }
+      }
+    {% endstyle %}
+
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'theme.js' | asset_url }}" defer></script>
+  </head>
+
+  <body class="template-{{ template.name }}{% if template.name == 'index' and settings.transparent_header %} header-transparent{% endif %}">
+    <a class="skip-link" href="#MainContent">{{ 'accessibility.skip_to_content' | t }}</a>
+
+    {% sections 'header-group' %}
+
+    <main id="MainContent" role="main">
+      {{ content_for_layout }}
+    </main>
+
+    
+
+    <div id="CartDrawerRoot"></div>
+  </body>
+</html>
