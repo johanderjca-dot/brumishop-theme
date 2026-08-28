@@ -512,7 +512,14 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .tile:hover .tile__media,
 .tile:focus-visible .tile__media { background: transparent; }
 
-.tile__img--hover { opacity: 0; z-index: 1; }
+/* la imagen de hover se ve completa y flotando (no recortada a todo el
+   cuadro): más pequeña, con espacio alrededor, sin llenar el marco */
+.tile__img--hover {
+  opacity: 0; z-index: 1;
+  inset: 9%;
+  width: 82%; height: 82%;
+  object-fit: contain;
+}
 .tile:hover .tile__img--hover,
 .tile:focus-visible .tile__img--hover { opacity: 1; transform: scale(1.05); }
 
@@ -520,11 +527,21 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   content: ""; position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0) 55%);
   pointer-events: none;
+  transition: opacity .3s ease;
 }
+/* en hover queremos la imagen limpia, sin ese degradado oscuro encima */
+.tile:hover::after,
+.tile:focus-visible::after { opacity: 0; }
+
 .tile__body {
   position: absolute; left: 16px; right: 16px; bottom: 14px; z-index: 2;
   display: grid; gap: 4px; color: #fff;
+  transition: color .3s ease;
 }
+/* sin el degradado oscuro detrás, el texto pasa a oscuro para seguir
+   leyéndose sobre el fondo transparente/claro */
+.tile:hover .tile__body,
+.tile:focus-visible .tile__body { color: var(--ink); }
 .tile__title { font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
 .tile__cta { font-size: 12px; opacity: .85; }
 
