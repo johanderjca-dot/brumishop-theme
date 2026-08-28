@@ -1,9 +1,0 @@
-{% if block.settings.image != blank %}
-  <img src="{{ block.settings.image | image_url: width: 1000 }}"
-       alt="{{ block.settings.problem_title | escape }}"
-       style="width:100%; max-height:{{ block.settings.img_height }}px; object-fit:cover; border-radius:{{ block.settings.img_radius }}px; display:block;">
-{% else %}
-  <div style="background:{{ section.settings.img_bg }}; height:{{ block.settings.img_height }}px; border-radius:{{ block.settings.img_radius }}px; display:flex; align-items:center; justify-content:center;">
-    <p style="color:#a0a09a; font-size:0.8rem;">Sube la imagen en el editor</p>
-  </div>
-{% endif %}
