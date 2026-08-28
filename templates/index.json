@@ -74,6 +74,8 @@
         "t4": {
           "type": "tile",
           "settings": {
+            "image": "shopify://shop_images/85e94602-4fba-4fde-aed8-9d92f4019e8f-2026-08-28.png",
+            "image_hover": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_3.png",
             "title": "Maternidad / Bebé",
             "cta": "Ver",
             "url": "/collections/maternidad-bebe-1"
@@ -82,6 +84,8 @@
         "t5": {
           "type": "tile",
           "settings": {
+            "image": "shopify://shop_images/books-and-file-folders-with-decorative-item-on-cre-2026-03-27-00-45-29-utc.jpg",
+            "image_hover": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_4.png",
             "title": "Hogar / Organización",
             "cta": "Ver",
             "url": "/collections/hogar-organizacion"
