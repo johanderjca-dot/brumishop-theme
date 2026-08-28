@@ -1,0 +1,35 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_634592349061645062": {
+      "settings": {
+        "checksum": "8418ec3319d295cd7e1f4f6e0abc66c13ab8c74eafd70a03b6176cce24bc8f78_1_1_1_0__1",
+        "gg0eTgdw5HX_text": "<p>100% Money-Back</p>",
+        "gg8HxUjwMv4_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/432750572815254551-f2f77318-14fc-47f8-99ac-2a4612510277.svg",
+        "gg9s_HDH9Ww_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/432750572815254551-e5125dd1-a438-4f9e-8a8c-69bc47f9cb73.svg",
+        "ggCEj_ie1Kf_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/432750572815254551-55e4a0fd-8097-43be-86e3-ee3bab9028b0.svg",
+        "ggTA2uDWM-H_text": "<p>Free Shipping</p>",
+        "ggmM9QCQN2k_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_6.png",
+        "ggmM9QCQN2k_background_mobile_image_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_6.png",
+        "ggqx_ybwCmV_text": "<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>",
+        "ggtjBP7jG_X_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/432750572815254551-86e3c9c3-3d38-47ca-8a24-ccf9e66a76bf.svg",
+        "gguBvZh9eXj_text": "GRACIAS!",
+        "gguoDTN4EQi_text": "<p>Satisfaction Guaranteed</p>",
+        "ggxg7Yb-4LY_text": "<p>24/7 Support</p>",
+        "section_preload": "true"
+      },
+      "type": "gp-section-634592349061645062"
+    }
+  },
+  "order": [
+    "gp_section_634592349061645062"
+  ]
+}
