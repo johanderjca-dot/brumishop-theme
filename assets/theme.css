@@ -460,9 +460,29 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   .tiles-carousel__nav { display: flex; }
 }
 
+/* barra de progreso del carrusel: indica en qué parte estás y cuánto
+   falta, para poder volver al inicio si hace falta */
+.tiles-carousel__progress {
+  position: relative;
+  height: 2px;
+  margin-top: 24px;
+  background: var(--line);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.tiles-carousel__progress-fill {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 20%;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: left .1s linear, width .1s linear;
+}
+
 /* enlace "Ver todo" al final de la sección */
 .cat-viewall {
-  margin-top: 32px;
+  margin-top: 20px;
   text-align: center;
 }
 .cat-viewall__link {

@@ -45,6 +45,10 @@
 
       <button class="tiles-carousel__nav tiles-carousel__nav--prev" type="button" data-tiles-prev aria-label="Categoría anterior">{% render 'icon-caret' %}</button>
       <button class="tiles-carousel__nav tiles-carousel__nav--next" type="button" data-tiles-next aria-label="Siguiente categoría">{% render 'icon-caret' %}</button>
+
+      <div class="tiles-carousel__progress" aria-hidden="true">
+        <div class="tiles-carousel__progress-fill" data-tiles-progress></div>
+      </div>
     </div>
 
     {%- if section.settings.show_view_all -%}

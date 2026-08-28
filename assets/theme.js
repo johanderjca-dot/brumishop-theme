@@ -153,6 +153,7 @@
       var track = root.querySelector('[data-tiles-track]');
       var prev = root.querySelector('[data-tiles-prev]');
       var next = root.querySelector('[data-tiles-next]');
+      var progress = root.querySelector('[data-tiles-progress]');
       if (!track) return;
 
       function step() {
@@ -163,9 +164,18 @@
         return first.getBoundingClientRect().width + gap;
       }
       function update() {
-        if (!prev || !next) return;
-        prev.disabled = track.scrollLeft < 8;
-        next.disabled = track.scrollLeft > track.scrollWidth - track.clientWidth - 8;
+        if (prev) prev.disabled = track.scrollLeft < 8;
+        if (next) next.disabled = track.scrollLeft > track.scrollWidth - track.clientWidth - 8;
+
+        if (progress) {
+          var scrollable = track.scrollWidth - track.clientWidth;
+          // qué fracción del carrusel se ve a la vez (ancho del "thumb")
+          var visible = Math.min(1, track.clientWidth / track.scrollWidth);
+          var thumb = Math.max(visible * 100, 10); // % , mínimo visible
+          var traveled = scrollable > 0 ? track.scrollLeft / scrollable : 0;
+          progress.style.width = thumb + '%';
+          progress.style.left = (traveled * (100 - thumb)) + '%';
+        }
       }
       if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
       if (next) next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
