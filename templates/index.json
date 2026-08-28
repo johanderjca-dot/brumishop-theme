@@ -12,13 +12,13 @@
     "hero": {
       "type": "video-hero",
       "settings": {
-        "video": "shopify://files/videos/0827(1).mov",
+        "video": "shopify://files/videos/0827(2).mov",
         "video_mobile": "shopify://files/videos/movilll.mov",
         "video_url": "",
         "height": "full",
-        "height_custom": 30,
-        "position_x": 50,
-        "position_y": 45,
+        "height_custom": 75,
+        "position_x": 0,
+        "position_y": 0,
         "ratio_mobile": "tall",
         "height_custom_mobile": 40,
         "position_x_mobile": 50,
@@ -137,6 +137,7 @@
         "t10"
       ],
       "settings": {
+        "eyebrow": "Descubre",
         "heading": "Compra por categoría",
         "columns": 5
       }
