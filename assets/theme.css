@@ -280,6 +280,16 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
     aspect-ratio: auto;
     min-height: calc(var(--vhero-h) * 1vh);
   }
+
+  /* En escritorio, "vh" solo depende del alto de pantalla, no del ancho:
+     en un monitor ultra-ancho eso recorta el video de forma muy distinta
+     que en uno angosto. Para que el encuadre se vea igual sin importar
+     la forma de la pantalla, el alto se calcula por proporción (relativo
+     al ancho) y el vh queda solo como tope mínimo/máximo. */
+  .vhero--medium { aspect-ratio: 21 / 9; min-height: 44vh; max-height: 70vh; }
+  .vhero--large  { aspect-ratio: 16 / 9; min-height: 55vh; max-height: 92vh; }
+  .vhero--full   { aspect-ratio: 16 / 9; min-height: 70vh; max-height: 100vh; }
+  /* "Personalizada" se deja tal cual (control manual por vh) */
 }
 
 /* cuando el header es transparente, el video sube por debajo de él */
