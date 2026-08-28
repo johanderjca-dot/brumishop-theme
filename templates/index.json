@@ -44,8 +44,8 @@
         "t1": {
           "type": "tile",
           "settings": {
-            "image": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_4.png",
-            "image_hover": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_6.png",
+            "image": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_1.png",
+            "image_hover": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post.png",
             "title": "Belleza / Skincare",
             "cta": "Ver",
             "url": "/collections/belleza-skincare"
@@ -137,9 +137,9 @@
         "t10"
       ],
       "settings": {
-        "eyebrow": "Descubre",
-        "heading": "Compra por categoría",
-        "columns": 5
+        "eyebrow": "UNA SOLA TIENDA, UNA SOLA ENTREGA",
+        "heading": "ESCOGE POR DÓNDE EMPEZAR",
+        "columns": 4
       }
     },
     "destacados": {
