@@ -10,7 +10,7 @@
 {
   "current": {
     "transparent_header": true,
-    "color_bg": "#FBFAF6",
+    "color_bg": "#FFFFFF",
     "color_bg_alt": "#EFEDE6",
     "color_ink": "#151515",
     "color_muted": "#7A7A7A",
@@ -30,7 +30,7 @@
   "presets": {
     "BrumiShop": {
       "transparent_header": true,
-      "color_bg": "#FBFAF6",
+      "color_bg": "#FFFFFF",
       "color_bg_alt": "#EFEDE6",
       "color_ink": "#151515",
       "color_muted": "#7A7A7A",
