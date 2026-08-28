@@ -15,7 +15,7 @@
         "video": "shopify://files/videos/0827(1).mov",
         "video_mobile": "shopify://files/videos/movilll.mov",
         "video_url": "",
-        "height": "full",
+        "height": "large",
         "height_custom": 30,
         "position_x": 50,
         "position_y": 45,
@@ -137,6 +137,7 @@
         "t10"
       ],
       "settings": {
+        "eyebrow": "Descubre",
         "heading": "Compra por categoría",
         "columns": 5
       }
