@@ -64,6 +64,7 @@
         "t3": {
           "type": "tile",
           "settings": {
+            "image_hover": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_2_0340f7cf-07fa-4bc8-a589-20eb12abee36.png",
             "title": "Salud / Suplementos",
             "cta": "Ver",
             "url": "/collections/salud-suplementos"
