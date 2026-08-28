@@ -262,10 +262,22 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .vhero--large  { --vhero-h: 80; --vhero-h-mobile: 88; }
 .vhero--full   { --vhero-h: 100; --vhero-h-mobile: 100; }
 
-/* en móvil: cuadrado (1:1), no una franja alta tipo reel */
+/* tamaño en móvil: proporción elegida en el editor (por defecto, cuadrada) */
 .vhero { aspect-ratio: 1 / 1; }
+.vhero--ratio-square  { aspect-ratio: 1 / 1; }
+.vhero--ratio-portrait{ aspect-ratio: 4 / 5; }
+.vhero--ratio-tall    { aspect-ratio: 9 / 16; }
+.vhero--ratio-custom  { aspect-ratio: auto; min-height: calc(var(--vhero-h-mobile, 90) * 1vh); }
+
 @media (min-width: 750px) {
-  .vhero { aspect-ratio: auto; min-height: calc(var(--vhero-h) * 1vh); }
+  .vhero,
+  .vhero--ratio-square,
+  .vhero--ratio-portrait,
+  .vhero--ratio-tall,
+  .vhero--ratio-custom {
+    aspect-ratio: auto;
+    min-height: calc(var(--vhero-h) * 1vh);
+  }
 }
 
 /* cuando el header es transparente, el video sube por debajo de él */
@@ -277,15 +289,19 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .vhero__media video,
 .vhero__media .vhero__video video {
   width: 100%; height: 100%; object-fit: cover;
+  object-position: var(--vhero-pos-x, 50%) var(--vhero-pos-y, 50%);
 }
 .vhero__video, .vhero__placeholder { width: 100%; height: 100%; }
 .vhero__placeholder svg { width: 100%; height: 100%; object-fit: cover; }
 
 .vhero__embed { position: absolute; inset: 0; overflow: hidden; }
-.vhero__poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.vhero__poster {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  object-position: var(--vhero-pos-x, 50%) var(--vhero-pos-y, 50%);
+}
 .vhero__iframe {
   position: absolute;
-  top: 50%; left: 50%;
+  top: var(--vhero-pos-y, 50%); left: var(--vhero-pos-x, 50%);
   width: 100vw;
   height: 56.25vw;          /* 16:9 */
   min-height: 100%;
@@ -293,6 +309,18 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   transform: translate(-50%, -50%);
   border: 0;
   pointer-events: none;
+}
+
+@media (max-width: 749px) {
+  .vhero__media img,
+  .vhero__media video,
+  .vhero__media .vhero__video video,
+  .vhero__poster {
+    object-position: var(--vhero-pos-x-mobile, 50%) var(--vhero-pos-y-mobile, 50%);
+  }
+  .vhero__iframe {
+    top: var(--vhero-pos-y-mobile, 50%); left: var(--vhero-pos-x-mobile, 50%);
+  }
 }
 
 .vhero__overlay { position: absolute; inset: 0; background: #000; }

@@ -1,5 +1,6 @@
 {%- liquid
   assign h = section.settings.height
+  assign ratio_mobile = section.settings.ratio_mobile
   assign has_native = false
   if section.settings.video != blank
     assign has_native = true
@@ -7,8 +8,15 @@
 -%}
 
 <section
-  class="vhero vhero--{{ h }}"
-  {% if h == 'custom' %}style="--vhero-h: {{ section.settings.height_custom }}vh; --vhero-h-mobile: {{ section.settings.height_custom_mobile }}vh;"{% endif %}
+  class="vhero vhero--{{ h }} vhero--ratio-{{ ratio_mobile }}"
+  style="
+    --vhero-pos-x: {{ section.settings.position_x }}%;
+    --vhero-pos-y: {{ section.settings.position_y }}%;
+    --vhero-pos-x-mobile: {{ section.settings.position_x_mobile }}%;
+    --vhero-pos-y-mobile: {{ section.settings.position_y_mobile }}%;
+    {%- if h == 'custom' %} --vhero-h: {{ section.settings.height_custom }}vh;{% endif %}
+    {%- if ratio_mobile == 'custom' %} --vhero-h-mobile: {{ section.settings.height_custom_mobile }}vh;{% endif %}
+  "
   data-video-hero>
 
   <div class="vhero__media">
@@ -121,7 +129,7 @@
     { "type": "image_picker", "id": "poster", "label": "Imagen de portada del video", "info": "Se ve mientras el video carga. Muy recomendada." },
     { "type": "image_picker", "id": "image", "label": "O solo una imagen", "info": "Se usa si no hay video." },
 
-    { "type": "header", "content": "Tamaño" },
+    { "type": "header", "content": "Tamaño — escritorio" },
     {
       "type": "select", "id": "height", "label": "Altura", "default": "large",
       "options": [
@@ -131,8 +139,28 @@
         { "value": "custom", "label": "Personalizada" }
       ]
     },
-    { "type": "range", "id": "height_custom", "min": 30, "max": 100, "step": 5, "unit": "vh", "label": "Altura en escritorio", "default": 80 },
-    { "type": "range", "id": "height_custom_mobile", "min": 40, "max": 100, "step": 5, "unit": "vh", "label": "Altura en móvil", "default": 90 },
+    { "type": "range", "id": "height_custom", "min": 30, "max": 100, "step": 5, "unit": "vh", "label": "Altura en escritorio (si es personalizada)", "default": 80 },
+
+    { "type": "header", "content": "Encuadre — escritorio", "info": "Qué parte del video queda visible al recortarse." },
+    { "type": "range", "id": "position_x", "min": 0, "max": 100, "step": 5, "unit": "%", "label": "Posición horizontal", "default": 50 },
+    { "type": "range", "id": "position_y", "min": 0, "max": 100, "step": 5, "unit": "%", "label": "Posición vertical", "default": 50 },
+
+    { "type": "header", "content": "Tamaño — móvil" },
+    {
+      "type": "select", "id": "ratio_mobile", "label": "Proporción en móvil", "default": "square",
+      "options": [
+        { "value": "square", "label": "Cuadrada (1:1)" },
+        { "value": "portrait", "label": "Vertical (4:5)" },
+        { "value": "tall", "label": "Alta (9:16)" },
+        { "value": "custom", "label": "Personalizada (altura libre)" }
+      ]
+    },
+    { "type": "range", "id": "height_custom_mobile", "min": 40, "max": 100, "step": 5, "unit": "vh", "label": "Altura en móvil (si es personalizada)", "default": 90 },
+
+    { "type": "header", "content": "Encuadre — móvil", "info": "Qué parte del video queda visible al recortarse." },
+    { "type": "range", "id": "position_x_mobile", "min": 0, "max": 100, "step": 5, "unit": "%", "label": "Posición horizontal", "default": 50 },
+    { "type": "range", "id": "position_y_mobile", "min": 0, "max": 100, "step": 5, "unit": "%", "label": "Posición vertical", "default": 50 },
+
     { "type": "range", "id": "overlay", "min": 0, "max": 80, "step": 5, "unit": "%", "label": "Oscurecer el video", "default": 25, "info": "Ayuda a que el texto y el menú se lean." },
 
     { "type": "header", "content": "Texto" },
