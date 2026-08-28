@@ -491,9 +491,25 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .tile:hover .tile__img--base,
 .tile:focus-visible .tile__img--base { opacity: 0; transform: scale(1.05); }
 
-.tile__img--hover { opacity: 0; }
+.tile__img--hover { opacity: 0; z-index: 1; }
 .tile:hover .tile__img--hover,
 .tile:focus-visible .tile__img--hover { opacity: 1; transform: scale(1.05); }
+
+/* círculo de color detrás de la imagen de hover (para recortes con
+   fondo transparente, como una gota o un producto sin fondo) */
+.tile__hover-bg {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 78%;
+  aspect-ratio: 1 / 1;
+  transform: translate(-50%, -50%) scale(.85);
+  border-radius: 50%;
+  background: var(--tile-hover-bg, var(--bg-alt));
+  opacity: 0;
+  transition: opacity .35s ease, transform .5s ease;
+}
+.tile:hover .tile__hover-bg,
+.tile:focus-visible .tile__hover-bg { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 
 .tile::after {
   content: ""; position: absolute; inset: 0; z-index: 1;
