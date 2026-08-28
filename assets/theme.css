@@ -258,7 +258,7 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   --vhero-h: 80;
   --vhero-h-mobile: 90;
   /* línea divisoria pegada al video, separándolo de la sección siguiente */
-  border-bottom: 5px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
 }
 .vhero--medium { --vhero-h: 60; --vhero-h-mobile: 70; }
 .vhero--large  { --vhero-h: 80; --vhero-h-mobile: 88; }
