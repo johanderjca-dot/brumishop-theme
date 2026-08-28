@@ -54,6 +54,8 @@
         "t2": {
           "type": "tile",
           "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_kj4s5kj4s5kj4s5k.jpg",
+            "image_hover": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_1_f72ff664-1f0d-4856-816e-b8562d37cf7f.png",
             "title": "Post-Operatorio / Fajas",
             "cta": "Ver",
             "url": "/collections/post-operatorio-fajas"
@@ -139,7 +141,10 @@
       "settings": {
         "eyebrow": "UNA SOLA TIENDA, UNA SOLA ENTREGA",
         "heading": "ESCOGE POR DÓNDE EMPEZAR",
-        "columns": 4
+        "columns": 4,
+        "show_view_all": true,
+        "view_all_label": "Ver todo",
+        "view_all_url": ""
       }
     },
     "destacados": {
