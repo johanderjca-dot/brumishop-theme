@@ -285,10 +285,12 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
      en un monitor ultra-ancho eso recorta el video de forma muy distinta
      que en uno angosto. Para que el encuadre se vea igual sin importar
      la forma de la pantalla, el alto se calcula por proporción (relativo
-     al ancho) y el vh queda solo como tope mínimo/máximo. */
-  .vhero--medium { aspect-ratio: 21 / 9; min-height: 44vh; max-height: 70vh; }
-  .vhero--large  { aspect-ratio: 16 / 9; min-height: 55vh; max-height: 92vh; }
-  .vhero--full   { aspect-ratio: 16 / 9; min-height: 70vh; max-height: 100vh; }
+     al ancho); el max-height es solo un freno de emergencia para
+     monitores ultra-anchos extremos (32:9), no un tope que recorte en
+     pantallas normales o anchas comunes. */
+  .vhero--medium { aspect-ratio: 21 / 9; min-height: 40vh; max-height: 100vh; }
+  .vhero--large  { aspect-ratio: 16 / 9; min-height: 50vh; max-height: 140vh; }
+  .vhero--full   { aspect-ratio: 16 / 9; min-height: 60vh; max-height: 150vh; }
   /* "Personalizada" se deja tal cual (control manual por vh) */
 }
 
