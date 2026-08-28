@@ -125,6 +125,7 @@
           "type": "tile",
           "settings": {
             "image": "shopify://shop_images/smiling-young-woman-with-long-brown-hair-2026-03-19-21-57-48-utc.jpg",
+            "image_hover": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_9.png",
             "title": "Cabello",
             "cta": "Ver",
             "url": "/collections/cabello"
