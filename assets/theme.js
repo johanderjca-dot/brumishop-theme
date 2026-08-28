@@ -138,6 +138,34 @@
     });
   }
 
+  /* ---------- carrusel de categorías ---------- */
+  function initCarousels() {
+    doc.querySelectorAll('[data-tiles-carousel]').forEach(function (root) {
+      var track = root.querySelector('[data-tiles-track]');
+      var prev = root.querySelector('[data-tiles-prev]');
+      var next = root.querySelector('[data-tiles-next]');
+      if (!track) return;
+
+      function step() {
+        var first = track.querySelector('.tile');
+        if (!first) return track.clientWidth * 0.8;
+        var style = getComputedStyle(track);
+        var gap = parseFloat(style.columnGap || style.gap || 0) || 0;
+        return first.getBoundingClientRect().width + gap;
+      }
+      function update() {
+        if (!prev || !next) return;
+        prev.disabled = track.scrollLeft < 8;
+        next.disabled = track.scrollLeft > track.scrollWidth - track.clientWidth - 8;
+      }
+      if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+      if (next) next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+      track.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    });
+  }
+
   /* ---------- contador del carrito ---------- */
   function initCartCount() {
     doc.querySelectorAll('[data-cart-count]').forEach(function (el) {
@@ -153,6 +181,7 @@
     initGallery();
     initStickyBuy();
     initCartCount();
+    initCarousels();
   }
 
   if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', boot);
