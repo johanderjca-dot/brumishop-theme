@@ -94,6 +94,8 @@
         "t6": {
           "type": "tile",
           "settings": {
+            "image": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_6.png",
+            "image_hover": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_5.png",
             "title": "Cocina / Electrodomésticos",
             "cta": "Ver",
             "url": "/collections/cocina-electrodomesticos"
