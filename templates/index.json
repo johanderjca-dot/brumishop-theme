@@ -44,6 +44,8 @@
         "t1": {
           "type": "tile",
           "settings": {
+            "image": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_4.png",
+            "image_hover": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_6.png",
             "title": "Belleza / Skincare",
             "cta": "Ver",
             "url": "/collections/belleza-skincare"
