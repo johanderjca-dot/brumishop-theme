@@ -11,17 +11,11 @@
   "sections": {
     "gp_section_633843071464768493": {
       "settings": {
-        "checksum": "f5972af47230453d5e18effe985e80bb622681f6dd1b61b37654f36306403f91_1_1_1_0__1",
-        "gg7439ZHqX8_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_1.png",
-        "gg7439ZHqX8_background_mobile_image_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_1.png",
-        "ggAVysW7_yh_text": "Resultados que se notan.",
-        "ggDBMA_BHYB_text": "<p>Cuídate por dentro y por fuera, a tu manera.</p>",
-        "ggDhWefJHNA_text": "Tu cuerpo, otra vez bajo control.",
-        "ggUEfUiwBk8_label": "<p>VER PRODUCTOS</p>",
-        "ggapfJMWzlC_text": "<p>Piel, cuerpo y calma — sin dietas, sin rutinas de 10 pasos.</p>",
-        "ggb3BB2NvwD_label": "<p>VER PRODUCTOS</p>",
-        "ggx0It6Ei20_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_2.png",
-        "ggx0It6Ei20_background_mobile_image_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_2.png",
+        "checksum": "357046e4a6e2d7bb17b21b34a2e09716e508e8e1cf45a62815d4790a7731c7d1_1_1_1_0__1",
+        "ggCDjbJCs-P_html5Url": "https://cdn.shopify.com/videos/c/o/v/8d2c6ed88f93445ca5329a6a50ebebc6.mov",
+        "ggCDjbJCs-P_vimeoUrl": "https://vimeo.com/1095883398",
+        "ggCDjbJCs-P_youtubeUrl": "https://www.youtube.com/watch?v=NfASaHFN1zg",
+        "ggeUEn9jv5y_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0746/0061/2038/files/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_1.png",
         "section_preload": "true"
       },
       "type": "gp-section-633843071464768493"
@@ -122,12 +116,6 @@
         "ggtigPCQMuZ_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/gempages_432750572815254551-6893d69e-e414-46e1-b3c0-e827fd98e38e.webp"
       },
       "type": "gp-section-633843071817155159"
-    },
-    "gp_section_633859172793844717": {
-      "settings": {
-        "checksum": "38df979f0feb1280bf3c443887fde0b65348c89ec0dcc9f607db3ace4512577b_1_1_1_0__1"
-      },
-      "type": "gp-section-633859172793844717"
     }
   },
   "order": [
@@ -138,7 +126,6 @@
     "gp_section_633843071800312370",
     "gp_section_633843071817089586",
     "gp_section_633843071699649517",
-    "gp_section_633843071817155159",
-    "gp_section_633859172793844717"
+    "gp_section_633843071817155159"
   ]
 }
