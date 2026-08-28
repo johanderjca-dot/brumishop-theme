@@ -1,31 +1,70 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
       "type": "video-hero",
       "settings": {
+        "video": "shopify://files/videos/0827(1).mov",
+        "video_url": "",
         "height": "large",
-        "height_custom": 80,
-        "height_custom_mobile": 90,
-        "overlay": 25,
-        "eyebrow": "BRUMISHOP",
+        "height_custom": 30,
+        "height_custom_mobile": 40,
+        "overlay": 15,
+        "eyebrow": "",
         "heading": "Todo lo que buscas",
-        "heading_size": 64,
+        "heading_size": 48,
         "heading_size_mobile": 34,
         "subheading": "<p>Pagas al recibir. Envío gratis a todo el país.</p>",
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "align": "left",
         "valign": "center",
-        "btn1_label": "Ver productos"
+        "btn1_label": "Ver productos",
+        "btn1_url": "",
+        "btn2_label": "",
+        "btn2_url": ""
       }
     },
     "categorias": {
       "type": "category-tiles",
       "blocks": {
-        "t1": { "type": "tile", "settings": { "title": "Belleza", "cta": "Ver" } },
-        "t2": { "type": "tile", "settings": { "title": "Hogar", "cta": "Ver" } },
-        "t3": { "type": "tile", "settings": { "title": "Tecnología", "cta": "Ver" } }
+        "t1": {
+          "type": "tile",
+          "settings": {
+            "title": "Belleza",
+            "cta": "Ver",
+            "url": ""
+          }
+        },
+        "t2": {
+          "type": "tile",
+          "settings": {
+            "title": "Hogar",
+            "cta": "Ver",
+            "url": ""
+          }
+        },
+        "t3": {
+          "type": "tile",
+          "settings": {
+            "title": "Tecnología",
+            "cta": "Ver",
+            "url": ""
+          }
+        }
       },
-      "block_order": ["t1", "t2", "t3"],
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
       "settings": {
         "heading": "Compra por categoría",
         "columns": 3
@@ -35,10 +74,15 @@
       "type": "featured-collection",
       "settings": {
         "heading": "Lo más vendido",
+        "collection": "",
         "limit": 4,
         "columns": 4
       }
     }
   },
-  "order": ["hero", "categorias", "destacados"]
+  "order": [
+    "hero",
+    "categorias",
+    "destacados"
+  ]
 }

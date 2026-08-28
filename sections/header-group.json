@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "header",
   "name": "Encabezado",
@@ -5,14 +14,36 @@
     "announcement": {
       "type": "announcement-bar",
       "blocks": {
-        "a1": { "type": "item", "settings": { "text": "Paga al recibir" } },
-        "a2": { "type": "item", "settings": { "text": "Envío gratis a todo el país" } },
-        "a3": { "type": "item", "settings": { "text": "Entrega 24-48h" } }
+        "a1": {
+          "type": "item",
+          "settings": {
+            "text": "Paga al recibir",
+            "link": ""
+          }
+        },
+        "a2": {
+          "type": "item",
+          "settings": {
+            "text": "Envío gratis a todo el país",
+            "link": ""
+          }
+        },
+        "a3": {
+          "type": "item",
+          "settings": {
+            "text": "Entrega 24-48h",
+            "link": ""
+          }
+        }
       },
-      "block_order": ["a1", "a2", "a3"],
+      "block_order": [
+        "a1",
+        "a2",
+        "a3"
+      ],
       "settings": {
         "bg": "#151515",
-        "ink": "#FFFFFF",
+        "ink": "#ffffff",
         "scroll": true,
         "speed": 30
       }
@@ -20,6 +51,8 @@
     "header": {
       "type": "header",
       "settings": {
+        "logo": "shopify://shop_images/BRUMISHOPLOGO_4eb9ca6e-8c28-4282-950d-53805e699389.png",
+        "logo_light": "shopify://shop_images/Diseno_sin_titulo_5.png",
         "logo_width": 140,
         "menu": "main-menu",
         "layout": "logo_left",
@@ -28,5 +61,8 @@
       }
     }
   },
-  "order": ["announcement", "header"]
+  "order": [
+    "announcement",
+    "header"
+  ]
 }
