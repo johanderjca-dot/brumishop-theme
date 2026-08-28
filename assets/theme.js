@@ -6,33 +6,48 @@
 
   var doc = document;
 
-  /* ---------- encabezado: transparente -> sólido al bajar ---------- */
+  /* ---------- encabezado: banner + nav, glass al bajar, se oculta al deslizar ---------- */
   function initHeader() {
-    var header = doc.querySelector('[data-header]');
-    if (!header) return;
+    var wrap = doc.querySelector('[data-site-header]');
+    if (!wrap) return;
 
-    var threshold = 40;
+    var spacer = doc.querySelector('.header-spacer');
+    var hideAt = 24; // no ocultar hasta pasar la altura del propio bloque
+
+    function setSpacer() {
+      var h = wrap.offsetHeight;
+      doc.documentElement.style.setProperty('--header-total-h', h + 'px');
+
+      if (!spacer) return;
+      var main = doc.getElementById('MainContent');
+      var first = main && main.firstElementChild;
+      var heroFirst = doc.body.classList.contains('header-transparent') && first && first.querySelector('.vhero');
+      spacer.style.height = heroFirst ? '0px' : h + 'px';
+    }
+
+    var lastY = window.scrollY;
     var ticking = false;
 
     function update() {
-      header.classList.toggle('is-stuck', window.scrollY > threshold);
+      var y = window.scrollY;
+      wrap.classList.toggle('is-stuck', y > 4);
+      if (y > lastY && y > hideAt) {
+        wrap.classList.add('site-header--hidden');
+      } else {
+        wrap.classList.remove('site-header--hidden');
+      }
+      lastY = y;
       ticking = false;
     }
+
     window.addEventListener('scroll', function () {
       if (!ticking) { window.requestAnimationFrame(update); ticking = true; }
     }, { passive: true });
-    update();
+    window.addEventListener('resize', setSpacer);
+    doc.addEventListener('shopify:section:load', setSpacer);
 
-    // Si el header es transparente pero la primera sección NO es el video,
-    // hay que empujar el contenido para que no quede debajo del header.
-    if (doc.body.classList.contains('header-transparent')) {
-      var main = doc.getElementById('MainContent');
-      var first = main && main.firstElementChild;
-      var spacer = doc.querySelector('.header-spacer');
-      if (spacer && (!first || !first.querySelector('.vhero'))) {
-        spacer.style.height = 'var(--header-h)';
-      }
-    }
+    setSpacer();
+    update();
   }
 
   /* ---------- cajón de navegación móvil ---------- */

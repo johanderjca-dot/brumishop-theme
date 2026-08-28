@@ -26,6 +26,9 @@
     {%- render 'meta-tags' -%}
 
     <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..900&display=swap" rel="stylesheet">
 
     {{ content_for_header }}
 
@@ -35,16 +38,11 @@
     -%}
 
     {% style %}
-      {{ body_font | font_face: font_display: 'swap' }}
-      {{ body_font | font_modify: 'weight', 'bold' | font_face: font_display: 'swap' }}
-      {{ heading_font | font_face: font_display: 'swap' }}
-      {{ heading_font | font_modify: 'weight', 'bold' | font_face: font_display: 'swap' }}
-
       :root {
-        --font-body: {{ body_font.family }}, {{ body_font.fallback_families }};
-        --font-body-weight: {{ body_font.weight }};
-        --font-heading: {{ heading_font.family }}, {{ heading_font.fallback_families }};
-        --font-heading-weight: {{ heading_font.weight }};
+        --font-body: 'Google Sans Flex', {{ body_font.fallback_families }};
+        --font-body-weight: 400;
+        --font-heading: 'Google Sans Flex', {{ heading_font.fallback_families }};
+        --font-heading-weight: 700;
 
         --heading-scale: {{ settings.type_heading_scale | divided_by: 100.0 }};
         --heading-tracking: {{ settings.type_heading_tracking }}px;
@@ -63,9 +61,10 @@
         --page-max: {{ settings.page_width }}px;
         --section-pad: {{ settings.section_padding }}px;
         --header-h: 68px;
+        --header-total-h: 108px;
       }
       @media (min-width: 990px) {
-        :root { --header-h: 82px; }
+        :root { --header-h: 82px; --header-total-h: 122px; }
       }
     {% endstyle %}
 
@@ -76,7 +75,10 @@
   <body class="template-{{ template.name }}{% if template.name == 'index' and settings.transparent_header %} header-transparent{% endif %}">
     <a class="skip-link" href="#MainContent">{{ 'accessibility.skip_to_content' | t }}</a>
 
-    {% sections 'header-group' %}
+    <div class="site-header-wrap" data-site-header>
+      {% sections 'header-group' %}
+    </div>
+    <div class="header-spacer" aria-hidden="true"></div>
 
     <main id="MainContent" role="main">
       {{ content_for_layout }}

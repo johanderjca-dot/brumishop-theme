@@ -268,8 +268,8 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 }
 
 /* cuando el header es transparente, el video sube por debajo de él */
-.header-transparent .vhero { margin-top: calc(var(--header-h) * -1); }
-.header-transparent .vhero__content { padding-top: var(--header-h); }
+.header-transparent .vhero { margin-top: calc(var(--header-total-h) * -1); }
+.header-transparent .vhero__content { padding-top: var(--header-total-h); }
 
 .vhero__media { position: absolute; inset: 0; }
 .vhero__media img,
