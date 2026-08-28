@@ -42,8 +42,8 @@
         "a3"
       ],
       "settings": {
-        "bg": "#151515",
-        "ink": "#ffffff",
+        "bg": "#FFFFFF",
+        "ink": "#000000",
         "scroll": true,
         "speed": 30
       }
