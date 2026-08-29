@@ -581,10 +581,12 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .features__media img, .features__media svg, .features__media video { width: 100%; height: auto; display: block; border-radius: var(--card-radius); }
 
 /* el video con canal alfa no es compatible con la mayoría de navegadores
-   móviles (sale negro) — en pantallas chicas se oculta por completo,
-   sin dejar hueco vacío */
+   móviles (sale negro) — en pantallas chicas se reemplaza por la imagen
+   de respaldo */
+.features__alpha-poster { display: none; }
 @media (max-width: 749px) {
-  .features__media:has(.features__alpha-video) { display: none; }
+  .features__alpha-video { display: none; }
+  .features__alpha-poster { display: block; }
 }
 .features__items { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px 20px; width: 100%; }
 
