@@ -1,0 +1,65 @@
+<section class="mqb" style="--mqb-h: {{ section.settings.height }}vh; --mqb-h-mobile: {{ section.settings.height_mobile }}vh;">
+  <div class="mqb__media">
+    {%- if section.settings.image != blank -%}
+      <img class="mqb__img"
+           src="{{ section.settings.image | image_url: width: 1920 }}"
+           srcset="{{ section.settings.image | image_url: width: 750 }} 750w,
+                   {{ section.settings.image | image_url: width: 1200 }} 1200w,
+                   {{ section.settings.image | image_url: width: 1920 }} 1920w"
+           sizes="100vw"
+           alt="{{ section.settings.image.alt | escape }}"
+           width="{{ section.settings.image.width }}" height="{{ section.settings.image.height }}"
+           loading="lazy">
+    {%- else -%}
+      {{ 'lifestyle-1' | placeholder_svg_tag: 'mqb__img' }}
+    {%- endif -%}
+    {%- if section.settings.overlay > 0 -%}
+      <div class="mqb__overlay" style="opacity: {{ section.settings.overlay | divided_by: 100.0 }}"></div>
+    {%- endif -%}
+  </div>
+
+  {%- if section.settings.text != blank -%}
+    <div class="mqb__marquee" style="--mqb-text-color: {{ section.settings.text_color }}">
+      <div class="mqb__track" style="--mqb-speed: {{ section.settings.speed }}s">
+        {%- for i in (1..2) -%}
+          <div class="mqb__group" {% if i == 2 %}aria-hidden="true"{% endif %}>
+            <span class="mqb__text">{{ section.settings.text }}</span>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- if section.settings.btn_label != blank -%}
+    <div class="mqb__cta">
+      <a class="btn btn--outline btn--sm" href="{{ section.settings.btn_url | default: '#' }}">{{ section.settings.btn_label }}</a>
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Banner con marquee",
+  "tag": "section",
+  "class": "section-mqb",
+  "settings": [
+    { "type": "header", "content": "Imagen" },
+    { "type": "image_picker", "id": "image", "label": "Imagen de fondo" },
+    { "type": "range", "id": "overlay", "min": 0, "max": 80, "step": 5, "unit": "%", "label": "Oscurecer la imagen", "default": 15 },
+
+    { "type": "header", "content": "Tamaño" },
+    { "type": "range", "id": "height", "min": 30, "max": 100, "step": 5, "unit": "vh", "label": "Altura en escritorio", "default": 60 },
+    { "type": "range", "id": "height_mobile", "min": 30, "max": 100, "step": 5, "unit": "vh", "label": "Altura en móvil", "default": 50 },
+
+    { "type": "header", "content": "Texto en movimiento" },
+    { "type": "text", "id": "text", "label": "Texto", "default": "Tu bienestar, nuestra prioridad" },
+    { "type": "color", "id": "text_color", "label": "Color del texto", "default": "#FFFFFF" },
+    { "type": "range", "id": "speed", "min": 8, "max": 60, "step": 2, "unit": "s", "label": "Velocidad", "default": 20 },
+
+    { "type": "header", "content": "Botón" },
+    { "type": "text", "id": "btn_label", "label": "Texto del botón", "default": "Comprar ahora" },
+    { "type": "url", "id": "btn_url", "label": "Enlace del botón" }
+  ],
+  "presets": [{ "name": "Banner con texto en movimiento" }]
+}
+{% endschema %}

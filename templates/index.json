@@ -163,6 +163,19 @@
         "view_all_url": ""
       }
     },
+    "marquee": {
+      "type": "marquee-banner",
+      "settings": {
+        "overlay": 15,
+        "height": 60,
+        "height_mobile": 50,
+        "text": "Tu bienestar, nuestra prioridad",
+        "text_color": "#ffffff",
+        "speed": 20,
+        "btn_label": "Comprar ahora",
+        "btn_url": ""
+      }
+    },
     "destacados": {
       "type": "featured-collection",
       "settings": {
@@ -176,6 +189,7 @@
   "order": [
     "hero",
     "categorias",
+    "marquee",
     "destacados"
   ]
 }
