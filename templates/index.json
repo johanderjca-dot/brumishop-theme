@@ -234,7 +234,8 @@
       "settings": {
         "eyebrow": "",
         "heading": "Calidad respaldada por la ciencia",
-        "bg_color": "#FFFFFF"
+        "video": "shopify://files/videos/0.0.mov",
+        "bg_color": "#ffffff"
       }
     },
     "vitrina": {
