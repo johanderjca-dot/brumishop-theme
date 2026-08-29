@@ -565,12 +565,10 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .features__media img, .features__media svg, .features__media video { width: 100%; height: auto; display: block; border-radius: var(--card-radius); }
 
 /* el video con canal alfa no es compatible con la mayoría de navegadores
-   móviles (sale negro) — en pantallas chicas se muestra la imagen de
-   respaldo en su lugar, y el video se oculta */
-.features__alpha-poster { display: none; }
+   móviles (sale negro) — en pantallas chicas se oculta por completo,
+   sin dejar hueco vacío */
 @media (max-width: 749px) {
-  .features__alpha-video { display: none; }
-  .features__alpha-poster { display: block; }
+  .features__media:has(.features__alpha-video) { display: none; }
 }
 .features__items { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px 20px; width: 100%; }
 
@@ -658,6 +656,7 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .reviews__carousel { position: relative; }
 .reviews__track {
   display: flex;
+  align-items: stretch;
   gap: 20px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -689,8 +688,14 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   gap: 16px;
 }
 
-.review-card__headline { font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: .3px; margin: 0; }
-.review-card__text { font-size: 14px; line-height: 1.6; color: var(--muted); margin: 0; }
+.review-card__headline {
+  font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: .3px; margin: 0;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;
+}
+.review-card__text {
+  font-size: 14px; line-height: 1.6; color: var(--muted); margin: 0;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden;
+}
 
 .review-card__author { display: flex; align-items: center; gap: 10px; }
 .review-card__avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex: 0 0 auto; }

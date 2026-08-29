@@ -14,15 +14,12 @@
     <div class="features__wrap">
       <div class="features__media">
         {%- if section.settings.video_alpha_url != blank -%}
+          {%- comment -%} el video con canal alfa no funciona en la mayoría de
+            navegadores móviles (sale negro) — se oculta en pantallas
+            chicas, ver .features__alpha-video en el CSS {%- endcomment -%}
           <video class="features__alpha-video" autoplay muted loop playsinline>
             <source src="{{ section.settings.video_alpha_url }}">
           </video>
-          {%- if section.settings.video_alpha_poster_url != blank -%}
-            {%- comment -%} el video con canal alfa no funciona en la mayoría de
-              navegadores móviles (sale negro) — en móvil se muestra esta
-              imagen fija en su lugar, ver .features__alpha-video en el CSS {%- endcomment -%}
-            <img class="features__alpha-poster" src="{{ section.settings.video_alpha_poster_url }}" alt="" width="900" height="506" loading="lazy">
-          {%- endif -%}
         {%- elsif section.settings.video != blank -%}
           {{ section.settings.video
             | video_tag:
@@ -77,7 +74,6 @@
     { "type": "image_picker", "id": "image", "label": "Imagen central" },
     { "type": "video", "id": "video", "label": "Video central (opcional)", "info": "Si lo subes, reemplaza a la imagen. Se reproduce sin sonido y en bucle." },
     { "type": "text", "id": "video_alpha_url", "label": "URL de video con fondo transparente (opcional)", "info": "Para videos con canal alfa (fondo transparente) — Shopify no los soporta si los subes aquí arriba, porque los vuelve a codificar y pierde la transparencia. Sube el archivo .webm a Configuración → Archivos (no aquí), copia su enlace y pégalo en este campo. Si lo llenas, reemplaza a todo lo demás." },
-    { "type": "text", "id": "video_alpha_poster_url", "label": "Imagen de respaldo para móvil (URL, opcional)", "info": "El video con canal alfa no funciona en la mayoría de navegadores de celular (sale negro). Sube una imagen PNG con fondo transparente (un cuadro del video sirve) por el mismo método que el video, y pega su enlace aquí — se usa solo en pantallas pequeñas." },
     { "type": "color", "id": "bg_color", "label": "Color de fondo", "default": "#FBF6EE" }
   ],
   "blocks": [
