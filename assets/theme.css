@@ -563,6 +563,15 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .features__wrap { display: flex; flex-direction: column; gap: 32px; align-items: center; }
 .features__media { width: 100%; max-width: 620px; }
 .features__media img, .features__media svg, .features__media video { width: 100%; height: auto; display: block; border-radius: var(--card-radius); }
+
+/* el video con canal alfa no es compatible con la mayoría de navegadores
+   móviles (sale negro) — en pantallas chicas se muestra la imagen de
+   respaldo en su lugar, y el video se oculta */
+.features__alpha-poster { display: none; }
+@media (max-width: 749px) {
+  .features__alpha-video { display: none; }
+  .features__alpha-poster { display: block; }
+}
 .features__items { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px 20px; width: 100%; }
 
 .features__item { text-align: center; display: grid; justify-items: center; gap: 12px; }
@@ -616,6 +625,13 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   border-bottom: 1px solid var(--line);
   padding: 14px 0;
   margin-top: 32px;
+}
+/* en móvil, entre el final de reseñas y el inicio de la siguiente
+   sección quedaba demasiado espacio (dos section-pad completos
+   sumados) — se recorta a algo más razonable */
+@media (max-width: 749px) {
+  .reviews { padding-bottom: 28px; }
+  .mission { padding-top: 28px; }
 }
 .reviews__trust-track { display: flex; white-space: nowrap; }
 .reviews__trust-group {
@@ -974,7 +990,7 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   overflow: hidden;
 }
 .footer__wordmark-huge--logo {
-  padding: 24px 5% 0;
+  padding: 0 5%;
   overflow: visible;
   white-space: normal;
 }

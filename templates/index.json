@@ -236,6 +236,7 @@
         "heading": "EL ESTÁNDAR DE NUESTRA MARCA",
         "video": "shopify://files/videos/0.0.mov",
         "video_alpha_url": "https://cdn.jsdelivr.net/gh/johanderjca-dot/brumishop-media@main/trust-badge.webm",
+        "video_alpha_poster_url": "https://cdn.jsdelivr.net/gh/johanderjca-dot/brumishop-media@main/trust-badge-poster.png",
         "bg_color": "#ffffff"
       }
     },
