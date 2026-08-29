@@ -312,7 +312,7 @@
             "rating": 5,
             "avatar": "shopify://shop_images/WhatsApp_Image_2026-06-30_at_3.31.42_PM.jpg",
             "author": "- James K, cliente verificado",
-            "product": "cutting-jelly"
+            "product": "maxcalm"
           }
         },
         "r3": {
@@ -322,7 +322,7 @@
             "text": "Me encanta que sean productos de calidad. Después de un mes de uso diario me siento con más energía y mejor en general.",
             "rating": 5,
             "author": "- Anna W, cliente verificada",
-            "product": "timereverse-cream"
+            "product": "cutting-jelly"
           }
         },
         "r4": {
@@ -331,7 +331,8 @@
             "headline": "La mejor adición a mi rutina",
             "text": "Lo uso todos los días y ya es parte de mi rutina. Lo recomiendo totalmente.",
             "rating": 5,
-            "author": "- Lisa B, cliente verificada"
+            "author": "- Lisa B, cliente verificada",
+            "product": ""
           }
         }
       },
