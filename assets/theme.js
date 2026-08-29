@@ -147,14 +147,50 @@
     });
   }
 
-  /* ---------- carrusel de categorías ---------- */
+  /* ---------- carrusel de categorías (loop infinito) ---------- */
   function initCarousels() {
     doc.querySelectorAll('[data-tiles-carousel]').forEach(function (root) {
       var track = root.querySelector('[data-tiles-track]');
       var prev = root.querySelector('[data-tiles-prev]');
       var next = root.querySelector('[data-tiles-next]');
       var progress = root.querySelector('[data-tiles-progress]');
-      if (!track) return;
+      if (!track || track.dataset.loopReady) return;
+
+      var originals = Array.prototype.slice.call(track.children);
+      var loopWidth = 0;
+
+      // clona las tarjetas y las pone antes/después de las reales, así
+      // siempre hay contenido hacia donde deslizar en ambas direcciones
+      if (originals.length > 1) {
+        function cloneSet() {
+          return originals.map(function (el) {
+            var clone = el.cloneNode(true);
+            clone.setAttribute('aria-hidden', 'true');
+            clone.querySelectorAll('a, button, input, select, textarea').forEach(function (f) {
+              f.setAttribute('tabindex', '-1');
+            });
+            return clone;
+          });
+        }
+
+        var firstOriginal = track.firstElementChild;
+        cloneSet().forEach(function (el) { track.insertBefore(el, firstOriginal); });
+        cloneSet().forEach(function (el) { track.appendChild(el); });
+        track.dataset.loopReady = 'true';
+      }
+
+      // recalcula el ancho de "una vuelta" (cambia con el tamaño de
+      // pantalla, porque el ancho de cada tarjeta también cambia)
+      function remeasure() {
+        if (!originals.length || originals.length < 2) return;
+        var w = firstOriginal.offsetLeft - track.firstElementChild.offsetLeft;
+        if (w > 10) {
+          loopWidth = w;
+          track.scrollLeft = loopWidth + (track.scrollLeft % loopWidth || 0);
+        } else {
+          loopWidth = 0;
+        }
+      }
 
       function step() {
         var first = track.querySelector('.tile');
@@ -163,24 +199,52 @@
         var gap = parseFloat(style.columnGap || style.gap || 0) || 0;
         return first.getBoundingClientRect().width + gap;
       }
-      function update() {
-        if (prev) prev.disabled = track.scrollLeft < 8;
-        if (next) next.disabled = track.scrollLeft > track.scrollWidth - track.clientWidth - 8;
 
-        if (progress) {
-          var scrollable = track.scrollWidth - track.clientWidth;
-          // qué fracción del carrusel se ve a la vez (ancho del "thumb")
-          var visible = Math.min(1, track.clientWidth / track.scrollWidth);
-          var thumb = Math.max(visible * 100, 10); // % , mínimo visible
-          var traveled = scrollable > 0 ? track.scrollLeft / scrollable : 0;
-          progress.style.width = thumb + '%';
-          progress.style.left = (traveled * (100 - thumb)) + '%';
+      // si el scroll entró en la zona clonada, lo reubica sin animación
+      // en el punto equivalente del tramo real — invisible para el usuario
+      function loopCheck() {
+        if (!loopWidth) return;
+        if (track.scrollLeft < loopWidth * 0.5) {
+          track.scrollLeft += loopWidth;
+        } else if (track.scrollLeft > loopWidth * 1.5) {
+          track.scrollLeft -= loopWidth;
         }
       }
+
+      function update() {
+        loopCheck();
+
+        if (prev) prev.disabled = false;
+        if (next) next.disabled = false;
+
+        if (progress) {
+          if (loopWidth) {
+            var pos = track.scrollLeft - loopWidth;
+            var scrollable = Math.max(loopWidth - track.clientWidth, 1);
+            var visible = Math.min(1, track.clientWidth / loopWidth);
+            var thumb = Math.max(visible * 100, 10);
+            var traveled = Math.min(Math.max(pos / scrollable, 0), 1);
+            progress.style.width = thumb + '%';
+            progress.style.left = (traveled * (100 - thumb)) + '%';
+          } else {
+            var totalScrollable = track.scrollWidth - track.clientWidth;
+            var visibleFrac = Math.min(1, track.clientWidth / track.scrollWidth);
+            var thumbFrac = Math.max(visibleFrac * 100, 10);
+            var traveledFrac = totalScrollable > 0 ? track.scrollLeft / totalScrollable : 0;
+            progress.style.width = thumbFrac + '%';
+            progress.style.left = (traveledFrac * (100 - thumbFrac)) + '%';
+          }
+        }
+      }
+      var ticking = false;
       if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
       if (next) next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
-      track.addEventListener('scroll', update, { passive: true });
-      window.addEventListener('resize', update);
+      track.addEventListener('scroll', function () {
+        if (!ticking) { window.requestAnimationFrame(function () { update(); ticking = false; }); ticking = true; }
+      }, { passive: true });
+      window.addEventListener('resize', function () { remeasure(); update(); });
+
+      remeasure();
       update();
     });
   }
