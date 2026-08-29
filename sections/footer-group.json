@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "footer",
   "name": "Pie de página",
@@ -5,17 +14,40 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "menu1": { "type": "menu", "settings": { "heading": "Tienda", "menu": "main-menu" } },
-        "menu2": { "type": "menu", "settings": { "heading": "Ayuda", "menu": "footer" } },
-        "texto": { "type": "text", "settings": { "heading": "Contacto", "content": "<p>Escríbenos por WhatsApp. Respondemos rápido.</p>" } }
+        "menu1": {
+          "type": "menu",
+          "settings": {
+            "heading": "Tienda",
+            "menu": "main-menu"
+          }
+        },
+        "menu2": {
+          "type": "menu",
+          "settings": {
+            "heading": "Ayuda",
+            "menu": "footer"
+          }
+        },
+        "texto": {
+          "type": "text",
+          "settings": {
+            "heading": "Contacto",
+            "content": "<p>+18498822513</p><p>hola@casabrumi.com</p><p>@brumishop</p>"
+          }
+        }
       },
-      "block_order": ["menu1", "menu2", "texto"],
+      "block_order": [
+        "menu1",
+        "menu2",
+        "texto"
+      ],
       "settings": {
-        "logo_width": 160,
-        "tagline": "Todo lo que buscas, en tu puerta.",
-        "show_payment": false
+        "show_payment": false,
+        "wordmark": "BrumiShop"
       }
     }
   },
-  "order": ["footer"]
+  "order": [
+    "footer"
+  ]
 }
