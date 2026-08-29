@@ -1,3 +1,9 @@
+/*
+ * ------------------------------------------------------------
+ * Restaurado: este archivo faltaba en el tema en vivo, causando
+ * error 404 en cualquier producto sin plantilla personalizada.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {

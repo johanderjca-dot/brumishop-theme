@@ -5,41 +5,63 @@
 <section class="spot" data-spotlight>
   <div class="spot__left" data-spot-left>
     <div class="spot__slides" data-spot-slides>
-      {%- for block in producto_blocks -%}
-        {%- liquid
-          assign p = block.settings.product
-          assign title = block.settings.title_override | default: p.title
-          assign price = block.settings.price_override
-          if price == blank and p != blank
-            assign price = p.price | money
-          endif
-          assign link = block.settings.product.url | default: '#'
-        -%}
-        <div class="spot__slide{% if forloop.first %} is-active{% endif %}"
-             data-spot-slide
-             data-bg="{{ block.settings.bg_color }}"
-             {{ block.shopify_attributes }}>
-          <div class="spot__media">
-            {%- if block.settings.image != blank -%}
-              <img src="{{ block.settings.image | image_url: width: 700 }}"
-                   srcset="{{ block.settings.image | image_url: width: 400 }} 400w, {{ block.settings.image | image_url: width: 700 }} 700w"
-                   sizes="(min-width: 750px) 32vw, 60vw"
-                   alt="{{ title | escape }}"
-                   width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}"
-                   loading="lazy">
-            {%- else -%}
-              {{ 'product-1' | placeholder_svg_tag: 'spot__media-placeholder' }}
-            {%- endif -%}
-          </div>
-          <div class="spot__info">
-            {%- if title != blank -%}<p class="spot__title">{{ title }}</p>{%- endif -%}
-            {%- if price != blank -%}<p class="spot__price">{{ price }}</p>{%- endif -%}
-          </div>
-          {%- if block.settings.btn_label != blank -%}
-            <a class="btn btn--outline btn--full spot__cta" href="{{ link }}">{{ block.settings.btn_label }}</a>
+      {%- assign slide_open = false -%}
+      {%- assign producto_index = 0 -%}
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+
+        {%- when 'producto' -%}
+          {%- if slide_open -%}
+            </div></div>
           {%- endif -%}
-        </div>
+          {%- assign slide_open = true -%}
+          {%- assign producto_index = producto_index | plus: 1 -%}
+          {%- liquid
+            assign p = block.settings.product
+            assign title = block.settings.title_override | default: p.title
+            assign price = block.settings.price_override
+            if price == blank and p != blank
+              assign price = p.price | money
+            endif
+            assign link = block.settings.product.url | default: '#'
+          -%}
+          <div class="spot__slide{% if producto_index == 1 %} is-active{% endif %}"
+               data-spot-slide
+               data-bg="{{ block.settings.bg_color }}"
+               {{ block.shopify_attributes }}>
+            <div class="spot__media">
+              {%- if block.settings.image != blank -%}
+                <img src="{{ block.settings.image | image_url: width: 700 }}"
+                     srcset="{{ block.settings.image | image_url: width: 400 }} 400w, {{ block.settings.image | image_url: width: 700 }} 700w"
+                     sizes="(min-width: 750px) 32vw, 60vw"
+                     alt="{{ title | escape }}"
+                     width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}"
+                     loading="lazy">
+              {%- else -%}
+                {{ 'product-1' | placeholder_svg_tag: 'spot__media-placeholder' }}
+              {%- endif -%}
+            </div>
+            <div class="spot__info">
+              {%- if title != blank -%}<p class="spot__title">{{ title }}</p>{%- endif -%}
+              {%- if price != blank -%}<p class="spot__price">{{ price }}</p>{%- endif -%}
+            </div>
+            {%- if block.settings.btn_label != blank -%}
+              <a class="btn btn--outline btn--full spot__cta" href="{{ link }}">{{ block.settings.btn_label }}</a>
+            {%- endif -%}
+            {%- comment -%} cualquier bloque de app (ej. Releasit COD) que se
+              agregue justo después de este producto en el editor se
+              renderiza aquí adentro, para que aparezca/desaparezca junto
+              con este slide {%- endcomment -%}
+            <div class="spot__app">
+
+        {%- when '@app' -%}
+          {%- render block -%}
+
+        {%- endcase -%}
       {%- endfor -%}
+      {%- if slide_open -%}
+        </div></div>
+      {%- endif -%}
     </div>
 
     {%- if producto_blocks.size > 1 -%}
@@ -98,7 +120,8 @@
 
       { "type": "header", "content": "Botón" },
       { "type": "text", "id": "btn_label", "label": "Texto del botón", "default": "Comprar ahora, pagar en casa" }
-    ]}
+    ]},
+    { "type": "@app" }
   ],
   "presets": [{
     "name": "Vitrina de productos",

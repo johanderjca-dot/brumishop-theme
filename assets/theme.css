@@ -497,6 +497,8 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .spot__price { font-size: 14px; font-weight: 700; margin: 0; opacity: .9; }
 
 .spot__cta { max-width: 280px; background: #fff; color: var(--ink); border-color: #fff; }
+.spot__app:empty { display: none; }
+.spot__app { max-width: 280px; margin-top: 10px; }
 
 .spot__dots {
   position: absolute; left: 32px; bottom: 32px; z-index: 2;
