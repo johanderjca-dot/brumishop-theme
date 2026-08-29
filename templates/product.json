@@ -12,7 +12,6 @@
         "titulo": { "type": "title", "settings": {} },
         "estrellas": { "type": "rating", "settings": { "text": "Valoración 4.9/5" } },
         "precio": { "type": "price", "settings": {} },
-        "app": { "type": "@app" },
         "confianza": {
           "type": "trust",
           "settings": {
@@ -23,7 +22,7 @@
         },
         "descripcion": { "type": "description", "settings": {} }
       },
-      "block_order": ["titulo", "estrellas", "precio", "app", "confianza", "descripcion"],
+      "block_order": ["titulo", "estrellas", "precio", "confianza", "descripcion"],
       "settings": {
         "sticky_bar": true,
         "sticky_label": "Ordenar ahora"
