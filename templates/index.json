@@ -190,29 +190,29 @@
         "b2": {
           "type": "beneficio",
           "settings": {
-            "title": "Efectividad garantizada",
-            "text": "Nuestras fórmulas están hechas para maximizar potencia y absorción."
+            "title": "MATERIALES PREMIUM",
+            "text": "Cada artículo cumple con estrictas pruebas de calidad en sus acabados y materiales antes de llegar a ti."
           }
         },
         "b3": {
           "type": "beneficio",
           "settings": {
-            "title": "Vegano",
-            "text": "Mantenemos el más alto estándar: 100% vegano, libre de crueldad animal."
+            "title": "TRANSACCIÓN SEGURA",
+            "text": "Pasarela de pago cifrada con tecnología de nivel bancario para proteger la privacidad de tus datos."
           }
         },
         "b4": {
           "type": "beneficio",
           "settings": {
-            "title": "Ingredientes de calidad",
-            "text": "Nos comprometemos a usar ingredientes naturales respaldados por la ciencia."
+            "title": "ATENCIÓN CONCIERGE",
+            "text": "Soporte humano y prioritario por WhatsApp para resolver cualquier duda antes, durante y después de tu compra."
           }
         },
         "b5": {
           "type": "beneficio",
           "settings": {
-            "title": "Probado por terceros",
-            "text": "Sometemos cada ingrediente a los más altos estándares de calidad."
+            "title": "ENVÍO PRIORITARIO",
+            "text": "Empaque de protección de alta gama con rastreo en tiempo real directamente hasta tu puerta."
           }
         },
         "b6": {
@@ -234,7 +234,7 @@
       "settings": {
         "eyebrow": "",
         "heading": "Calidad respaldada por la ciencia",
-        "bg_color": "#fbf6ee"
+        "bg_color": "#FFFFFF"
       }
     },
     "vitrina": {
