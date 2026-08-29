@@ -18,23 +18,25 @@
     {%- endif -%}
   </div>
 
-  {%- if section.settings.text != blank -%}
-    <div class="mqb__marquee" style="--mqb-text-color: {{ section.settings.text_color }}">
-      <div class="mqb__track" style="--mqb-speed: {{ section.settings.speed }}s">
-        {%- for i in (1..2) -%}
-          <div class="mqb__group" {% if i == 2 %}aria-hidden="true"{% endif %}>
-            <span class="mqb__text">{{ section.settings.text }}</span>
-          </div>
-        {%- endfor -%}
+  <div class="mqb__inner">
+    {%- if section.settings.text != blank -%}
+      <div class="mqb__marquee" style="--mqb-text-color: {{ section.settings.text_color }}">
+        <div class="mqb__track" style="--mqb-speed: {{ section.settings.speed }}s">
+          {%- for i in (1..2) -%}
+            <div class="mqb__group" {% if i == 2 %}aria-hidden="true"{% endif %}>
+              <span class="mqb__text">{{ section.settings.text }}</span>
+            </div>
+          {%- endfor -%}
+        </div>
       </div>
-    </div>
-  {%- endif -%}
+    {%- endif -%}
 
-  {%- if section.settings.btn_label != blank -%}
-    <div class="mqb__cta">
-      <a class="btn btn--outline btn--sm" href="{{ section.settings.btn_url | default: '#' }}">{{ section.settings.btn_label }}</a>
-    </div>
-  {%- endif -%}
+    {%- if section.settings.btn_label != blank -%}
+      <div class="mqb__cta">
+        <a class="btn btn--outline btn--sm" href="{{ section.settings.btn_url | default: '#' }}">{{ section.settings.btn_label }}</a>
+      </div>
+    {%- endif -%}
+  </div>
 </section>
 
 {% schema %}
