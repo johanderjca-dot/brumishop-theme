@@ -302,6 +302,57 @@
     });
   }
 
+  /* ---------- carrusel de reseñas: la tarjeta más cercana al centro se enfoca ---------- */
+  function initReviews() {
+    doc.querySelectorAll('[data-reviews]').forEach(function (root) {
+      var track = root.querySelector('[data-reviews-track]');
+      var cards = Array.prototype.slice.call(root.querySelectorAll('[data-review]'));
+      var prev = root.querySelector('[data-reviews-prev]');
+      var next = root.querySelector('[data-reviews-next]');
+      var dots = Array.prototype.slice.call(root.querySelectorAll('[data-reviews-dot]'));
+      if (!track || !cards.length) return;
+
+      var ticking = false;
+
+      function closestIndex() {
+        var trackRect = track.getBoundingClientRect();
+        var center = trackRect.left + trackRect.width / 2;
+        var best = 0, bestDist = Infinity;
+        cards.forEach(function (card, i) {
+          var r = card.getBoundingClientRect();
+          var dist = Math.abs((r.left + r.width / 2) - center);
+          if (dist < bestDist) { bestDist = dist; best = i; }
+        });
+        return best;
+      }
+
+      function update() {
+        var idx = closestIndex();
+        cards.forEach(function (c, i) { c.classList.toggle('is-focused', i === idx); });
+        dots.forEach(function (d, i) { d.classList.toggle('is-active', i === idx); });
+      }
+
+      function goTo(i) {
+        i = Math.max(0, Math.min(cards.length - 1, i));
+        var trackRect = track.getBoundingClientRect();
+        var cardRect = cards[i].getBoundingClientRect();
+        var delta = (cardRect.left + cardRect.width / 2) - (trackRect.left + trackRect.width / 2);
+        track.scrollBy({ left: delta, behavior: 'smooth' });
+      }
+
+      dots.forEach(function (d, i) { d.addEventListener('click', function () { goTo(i); }); });
+      if (prev) prev.addEventListener('click', function () { goTo(closestIndex() - 1); });
+      if (next) next.addEventListener('click', function () { goTo(closestIndex() + 1); });
+
+      track.addEventListener('scroll', function () {
+        if (!ticking) { window.requestAnimationFrame(function () { update(); ticking = false; }); ticking = true; }
+      }, { passive: true });
+      window.addEventListener('resize', update);
+
+      update();
+    });
+  }
+
   /* ---------- arranque ---------- */
   function boot() {
     initHeader();
@@ -312,6 +363,7 @@
     initCartCount();
     initCarousels();
     initSpotlight();
+    initReviews();
   }
 
   if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', boot);

@@ -1,0 +1,114 @@
+<section class="section-pad reviews" data-reviews>
+  {%- if section.settings.trust_text != blank -%}
+    <div class="reviews__trust">
+      <div class="reviews__trust-track" style="--trust-speed: {{ section.settings.trust_speed }}s">
+        {%- for i in (1..2) -%}
+          <div class="reviews__trust-group" {% if i == 2 %}aria-hidden="true"{% endif %}>
+            {%- assign trust_words = section.settings.trust_text | split: '|' -%}
+            {%- for word in trust_words -%}
+              <span class="reviews__trust-item">{{ word | strip }}</span>
+            {%- endfor -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  <div class="page-width">
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank -%}
+      <div class="cat-head">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="cat-head__eyebrow">{{ section.settings.eyebrow }}</p>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="cat-head__title">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+
+  <div class="reviews__carousel">
+    <div class="reviews__track" data-reviews-track>
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign p = block.settings.product
+          assign rtitle = block.settings.title_override | default: p.title
+          assign rprice = block.settings.price_override
+          if rprice == blank and p != blank
+            assign rprice = p.price | money
+          endif
+        -%}
+        <div class="review" data-review {{ block.shopify_attributes }}>
+          <div class="review__media">
+            {%- if block.settings.image != blank -%}
+              <img src="{{ block.settings.image | image_url: width: 600 }}"
+                   srcset="{{ block.settings.image | image_url: width: 400 }} 400w, {{ block.settings.image | image_url: width: 600 }} 600w"
+                   sizes="(min-width: 990px) 22vw, 60vw"
+                   alt=""
+                   width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}"
+                   loading="lazy">
+            {%- else -%}
+              {{ 'lifestyle-1' | placeholder_svg_tag }}
+            {%- endif -%}
+          </div>
+          {%- if rtitle != blank -%}
+            <a class="review__product" href="{{ p.url | default: '#' }}">
+              <span class="review__product-thumb">
+                {%- if p.featured_image -%}
+                  <img src="{{ p.featured_image | image_url: width: 120 }}" alt="" loading="lazy" width="60" height="60">
+                {%- elsif block.settings.image != blank -%}
+                  <img src="{{ block.settings.image | image_url: width: 120 }}" alt="" loading="lazy" width="60" height="60">
+                {%- endif -%}
+              </span>
+              <span class="review__product-info">
+                <span class="review__product-title">{{ rtitle }}</span>
+                {%- if rprice != blank -%}<span class="review__product-price">{{ rprice }}</span>{%- endif -%}
+              </span>
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <button class="tiles-carousel__nav tiles-carousel__nav--prev" type="button" data-reviews-prev aria-label="Reseña anterior">{% render 'icon-caret' %}</button>
+    <button class="tiles-carousel__nav tiles-carousel__nav--next" type="button" data-reviews-next aria-label="Siguiente reseña">{% render 'icon-caret' %}</button>
+  </div>
+
+  {%- if section.blocks.size > 1 -%}
+    <div class="page-width">
+      <div class="reviews__dots">
+        {%- for block in section.blocks -%}
+          <button class="reviews__dot{% if forloop.first %} is-active{% endif %}" type="button" data-reviews-dot aria-label="Ver reseña {{ forloop.index }}"></button>
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Carrusel de reseñas",
+  "tag": "section",
+  "settings": [
+    { "type": "header", "content": "Franja de confianza (opcional)" },
+    { "type": "text", "id": "trust_text", "label": "Palabras (separadas por \"|\")", "default": "Hecho con calidad | Envío a todo el país | Recomendado por clientes", "info": "Ej: Hecho en RD | 5 años de experiencia | Miles de clientes felices" },
+    { "type": "range", "id": "trust_speed", "min": 8, "max": 60, "step": 2, "unit": "s", "label": "Velocidad", "default": 24 },
+
+    { "type": "header", "content": "Título" },
+    { "type": "text", "id": "eyebrow", "label": "Etiqueta pequeña (opcional)" },
+    { "type": "text", "id": "heading", "label": "Título", "default": "Tiendas reales, recomendaciones reales" }
+  ],
+  "blocks": [
+    { "type": "resena", "name": "Reseña", "settings": [
+      { "type": "image_picker", "id": "image", "label": "Foto de la reseña" },
+      { "type": "product", "id": "product", "label": "Producto relacionado (opcional)", "info": "Si lo eliges, se usan su nombre, precio, enlace e imagen automáticamente." },
+      { "type": "text", "id": "title_override", "label": "Nombre del producto (opcional)" },
+      { "type": "text", "id": "price_override", "label": "Precio (opcional)" }
+    ]}
+  ],
+  "presets": [{
+    "name": "Carrusel de reseñas",
+    "blocks": [ { "type": "resena" }, { "type": "resena" }, { "type": "resena" }, { "type": "resena" } ]
+  }]
+}
+{% endschema %}
