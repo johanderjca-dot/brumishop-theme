@@ -483,13 +483,15 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   opacity: 0;
   pointer-events: none;
   transition: opacity .4s ease;
 }
 .spot__slide.is-active { opacity: 1; pointer-events: auto; }
 
-.spot__media { max-width: 260px; margin-bottom: 24px; }
+.spot__media { max-width: 340px; margin-bottom: 24px; }
 .spot__media img, .spot__media-placeholder { width: 100%; height: auto; display: block; }
 
 .spot__info { margin-bottom: 20px; }
@@ -501,10 +503,10 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .spot__app { max-width: 280px; margin-top: 10px; }
 
 .spot__dots {
-  position: absolute; left: 32px; bottom: 32px; z-index: 2;
-  display: flex; gap: 8px;
+  position: absolute; left: 0; right: 0; bottom: 32px; z-index: 2;
+  display: flex; justify-content: center; gap: 8px;
 }
-@media (min-width: 750px) { .spot__dots { left: 48px; bottom: 40px; } }
+@media (min-width: 750px) { .spot__dots { bottom: 40px; } }
 .spot__dot {
   width: 7px; height: 7px; border-radius: 50%;
   background: currentColor; opacity: .35;
