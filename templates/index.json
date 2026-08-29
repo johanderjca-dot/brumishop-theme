@@ -235,6 +235,7 @@
         "eyebrow": "",
         "heading": "Calidad respaldada por la ciencia",
         "video": "shopify://files/videos/0.0.mov",
+        "video_alpha_url": "https://cdn.jsdelivr.net/gh/johanderjca-dot/brumishop-media@main/trust-badge.webm",
         "bg_color": "#ffffff"
       }
     },
