@@ -246,8 +246,8 @@
           "type": "producto",
           "settings": {
             "product": "timereverse-cream",
-            "image": "shopify://shop_images/Post_de_Instagram_Nuevo_Producto_Natural_Verde_8.png",
-            "bg_color": "#fa6868",
+            "image": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_14.png",
+            "bg_color": "#6C1936",
             "title_override": "",
             "price_override": "",
             "image_lifestyle": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_7.png",
@@ -259,8 +259,8 @@
           "type": "producto",
           "settings": {
             "product": "maxcalm",
-            "image": "shopify://shop_images/relaxing_2026-07-17_20-10-51_66aded07.jpg",
-            "bg_color": "#f04438",
+            "image": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_13.png",
+            "bg_color": "#6A87B0",
             "title_override": "",
             "price_override": "",
             "image_lifestyle": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_5.png",
@@ -273,7 +273,7 @@
           "settings": {
             "product": "cutting-jelly",
             "image": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_1.svg",
-            "bg_color": "#DF9994",
+            "bg_color": "#B6474C",
             "title_override": "",
             "price_override": "",
             "image_lifestyle": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_8.png",
@@ -297,6 +297,7 @@
         "r1": {
           "type": "resena",
           "settings": {
+            "image": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_11.png",
             "product": "maxcalm",
             "title_override": "",
             "price_override": ""
