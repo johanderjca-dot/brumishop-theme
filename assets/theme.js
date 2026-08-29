@@ -333,7 +333,8 @@
       }
 
       function goTo(i) {
-        i = Math.max(0, Math.min(cards.length - 1, i));
+        // loop: pasar del último vuelve al primero, y viceversa
+        i = ((i % cards.length) + cards.length) % cards.length;
         var trackRect = track.getBoundingClientRect();
         var cardRect = cards[i].getBoundingClientRect();
         var delta = (cardRect.left + cardRect.width / 2) - (trackRect.left + trackRect.width / 2);

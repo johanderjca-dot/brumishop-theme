@@ -973,6 +973,19 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   white-space: nowrap;
   overflow: hidden;
 }
+.footer__wordmark-huge--logo {
+  padding: 24px 5% 0;
+  overflow: visible;
+  white-space: normal;
+}
+.footer__wordmark-huge--logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+  margin: 0 auto;
+}
 
 /* ---------- paginación ---------- */
 

@@ -95,7 +95,14 @@
       </div>
     </div>
 
-    {%- if section.settings.wordmark != blank -%}
+    {%- if section.settings.wordmark_logo != blank -%}
+      <div class="footer__wordmark-huge footer__wordmark-huge--logo">
+        <img src="{{ section.settings.wordmark_logo | image_url: width: 1600 }}"
+             alt="{{ shop.name | escape }}"
+             width="{{ section.settings.wordmark_logo.width }}" height="{{ section.settings.wordmark_logo.height }}"
+             loading="lazy">
+      </div>
+    {%- elsif section.settings.wordmark != blank -%}
       <div class="footer__wordmark-huge">{{ section.settings.wordmark }}</div>
     {%- endif -%}
   </div>
@@ -106,7 +113,8 @@
   "name": "Pie de página",
   "settings": [
     { "type": "checkbox", "id": "show_payment", "label": "Mostrar métodos de pago", "default": true },
-    { "type": "text", "id": "wordmark", "label": "Nombre grande al final", "default": "BrumiShop", "info": "Se muestra enorme, de borde a borde, al final del pie de página." }
+    { "type": "image_picker", "id": "wordmark_logo", "label": "Logo grande al final (opcional)", "info": "Si lo subes, reemplaza al nombre de texto — se muestra enorme, de borde a borde." },
+    { "type": "text", "id": "wordmark", "label": "Nombre grande al final (si no hay logo)", "default": "BrumiShop", "info": "Se muestra enorme, de borde a borde, al final del pie de página." }
   ],
   "blocks": [
     { "type": "menu", "name": "Menú", "settings": [
