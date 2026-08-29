@@ -563,28 +563,39 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .features__media img, .features__media svg, .features__media video { width: 100%; height: auto; display: block; border-radius: var(--card-radius); }
 .features__items { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px 20px; width: 100%; }
 
-.features__item { text-align: center; display: grid; justify-items: center; gap: 10px; }
+.features__item { text-align: center; display: grid; justify-items: center; gap: 12px; }
 .features__icon {
-  width: 60px; height: 60px;
+  width: 68px; height: 68px;
   border: 1px solid var(--line);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  padding: 14px;
+  padding: 16px;
 }
 .features__icon img, .features__icon svg { width: 100%; height: 100%; object-fit: contain; }
-.features__title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin: 0; }
-.features__desc { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.5; }
+.features__title { font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin: 0; }
+.features__desc { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.55; }
 
 @media (min-width: 990px) {
   .features__wrap {
     display: grid;
-    grid-template-columns: 0.8fr 1.6fr 0.8fr;
+    grid-template-columns: 1fr 1.2fr 1fr;
     grid-template-areas: "b1 img b4" "b2 img b5" "b3 img b6";
-    gap: 48px;
+    gap: 32px;
     align-items: center;
   }
-  .features__media { grid-area: img; max-width: none; }
+  /* el video/imagen se desborda visualmente sobre las columnas de texto
+     (es transparente, así que no las tapa de verdad) para verse grande
+     sin quitarle espacio real a los textos */
+  .features__media {
+    grid-area: img;
+    max-width: none;
+    width: 145%;
+    margin: 0 -22.5%;
+    position: relative;
+    z-index: 0;
+  }
   .features__items { display: contents; }
+  .features__items .features__item { position: relative; z-index: 1; }
   .features__items .features__item:nth-of-type(1) { grid-area: b1; }
   .features__items .features__item:nth-of-type(2) { grid-area: b2; }
   .features__items .features__item:nth-of-type(3) { grid-area: b3; }
