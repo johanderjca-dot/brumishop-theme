@@ -654,19 +654,24 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   .reviews__track { padding: 0 40px; gap: 24px; }
 }
 
-.review-card {
+.review-item {
   flex: 0 0 auto;
   width: 78%;
   scroll-snap-align: start;
-  background: var(--bg-alt);
-  border-radius: var(--card-radius);
-  padding: 24px;
   display: grid;
   align-content: start;
   gap: 16px;
 }
-@media (min-width: 560px) { .review-card { width: 54%; } }
-@media (min-width: 990px) { .review-card { width: 30%; } }
+@media (min-width: 560px) { .review-item { width: 54%; } }
+@media (min-width: 990px) { .review-item { width: 30%; } }
+
+.review-card {
+  background: var(--bg-alt);
+  border-radius: var(--card-radius);
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+}
 
 .review-card__headline { font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: .3px; margin: 0; }
 .review-card__text { font-size: 14px; line-height: 1.6; color: var(--muted); margin: 0; }
@@ -680,7 +685,6 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 
 .review-card__product {
   display: flex; align-items: center; gap: 12px;
-  margin-top: 4px;
   padding: 10px 14px;
   border: 1px solid var(--ink);
   border-radius: 14px;
