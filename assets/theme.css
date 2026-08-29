@@ -495,7 +495,7 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 
 .spot__media {
   max-width: 340px;
-  max-height: 220px;
+  max-height: 260px;
   margin-bottom: 24px;
   display: flex;
   align-items: center;
@@ -503,7 +503,7 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 }
 .spot__media img, .spot__media-placeholder {
   max-width: 100%;
-  max-height: 220px;
+  max-height: 260px;
   width: auto;
   height: auto;
   display: block;
