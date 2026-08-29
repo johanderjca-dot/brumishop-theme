@@ -297,34 +297,37 @@
         "r1": {
           "type": "resena",
           "settings": {
-            "image": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_11.png",
-            "product": "maxcalm",
-            "title_override": "",
-            "price_override": ""
+            "headline": "Más energía en 2 semanas",
+            "text": "Estaba escéptica al principio, pero después de dos semanas noté la diferencia. Tengo más energía en las tardes y mejoré mi rendimiento.",
+            "rating": 5,
+            "author": "- Sarah M, cliente verificada"
           }
         },
         "r2": {
           "type": "resena",
           "settings": {
-            "product": "cutting-jelly",
-            "title_override": "",
-            "price_override": ""
+            "headline": "Por fin algo que funciona",
+            "text": "Había probado muchos suplementos antes, pero este es el primero con el que realmente siento resultados. Me recupero más rápido y me siento más fuerte.",
+            "rating": 5,
+            "author": "- James K, cliente verificado"
           }
         },
         "r3": {
           "type": "resena",
           "settings": {
-            "product": "timereverse-cream",
-            "title_override": "",
-            "price_override": ""
+            "headline": "Excelente calidad",
+            "text": "Me encanta que sean productos de calidad. Después de un mes de uso diario me siento con más energía y mejor en general.",
+            "rating": 5,
+            "author": "- Anna W, cliente verificada"
           }
         },
         "r4": {
           "type": "resena",
           "settings": {
-            "product": "maxcalm",
-            "title_override": "",
-            "price_override": ""
+            "headline": "La mejor adición a mi rutina",
+            "text": "Lo uso todos los días y ya es parte de mi rutina. Lo recomiendo totalmente.",
+            "rating": 5,
+            "author": "- Lisa B, cliente verificada"
           }
         }
       },
