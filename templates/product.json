@@ -1,5 +1,14 @@
 /*
  * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+/*
+ * ------------------------------------------------------------
  * Restaurado: este archivo faltaba en el tema en vivo, causando
  * error 404 en cualquier producto sin plantilla personalizada.
  * ------------------------------------------------------------
@@ -12,7 +21,6 @@
         "titulo": { "type": "title", "settings": {} },
         "estrellas": { "type": "rating", "settings": { "text": "Valoración 4.9/5" } },
         "precio": { "type": "price", "settings": {} },
-        "app": { "type": "@app" },
         "confianza": {
           "type": "trust",
           "settings": {
@@ -23,7 +31,7 @@
         },
         "descripcion": { "type": "description", "settings": {} }
       },
-      "block_order": ["titulo", "estrellas", "precio", "app", "confianza", "descripcion"],
+      "block_order": ["titulo", "estrellas", "precio", "confianza", "descripcion"],
       "settings": {
         "sticky_bar": true,
         "sticky_label": "Ordenar ahora"
