@@ -608,14 +608,14 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 
 /* ---------- carrusel de reseñas ---------- */
 
-/* mini-marquee de confianza, arriba del título */
+/* mini-marquee de confianza, debajo del carrusel */
 .reviews__trust {
   overflow: hidden;
   white-space: nowrap;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   padding: 14px 0;
-  margin-bottom: 32px;
+  margin-top: 32px;
 }
 .reviews__trust-track { display: flex; white-space: nowrap; }
 .reviews__trust-group {
