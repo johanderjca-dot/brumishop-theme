@@ -180,17 +180,61 @@
     "beneficios": {
       "type": "benefits-icons",
       "blocks": {
-        "b1": { "type": "beneficio", "settings": { "title": "Sin transgénicos", "text": "Evaluamos cuidadosamente cada ingrediente para que sea 100% libre de transgénicos." } },
-        "b2": { "type": "beneficio", "settings": { "title": "Efectividad garantizada", "text": "Nuestras fórmulas están hechas para maximizar potencia y absorción." } },
-        "b3": { "type": "beneficio", "settings": { "title": "Vegano", "text": "Mantenemos el más alto estándar: 100% vegano, libre de crueldad animal." } },
-        "b4": { "type": "beneficio", "settings": { "title": "Ingredientes de calidad", "text": "Nos comprometemos a usar ingredientes naturales respaldados por la ciencia." } },
-        "b5": { "type": "beneficio", "settings": { "title": "Probado por terceros", "text": "Sometemos cada ingrediente a los más altos estándares de calidad." } },
-        "b6": { "type": "beneficio", "settings": { "title": "Sin metales pesados", "text": "Garantizamos pureza total: libre de metales pesados." } }
+        "b1": {
+          "type": "beneficio",
+          "settings": {
+            "title": "PRUEBA SIN RIESGO",
+            "text": "Cuentas desde 2 hasta 30 días de garantía. Si el producto no supera tus expectativas, gestionamos tu devolución sin complicaciones."
+          }
+        },
+        "b2": {
+          "type": "beneficio",
+          "settings": {
+            "title": "Efectividad garantizada",
+            "text": "Nuestras fórmulas están hechas para maximizar potencia y absorción."
+          }
+        },
+        "b3": {
+          "type": "beneficio",
+          "settings": {
+            "title": "Vegano",
+            "text": "Mantenemos el más alto estándar: 100% vegano, libre de crueldad animal."
+          }
+        },
+        "b4": {
+          "type": "beneficio",
+          "settings": {
+            "title": "Ingredientes de calidad",
+            "text": "Nos comprometemos a usar ingredientes naturales respaldados por la ciencia."
+          }
+        },
+        "b5": {
+          "type": "beneficio",
+          "settings": {
+            "title": "Probado por terceros",
+            "text": "Sometemos cada ingrediente a los más altos estándares de calidad."
+          }
+        },
+        "b6": {
+          "type": "beneficio",
+          "settings": {
+            "title": "Sin metales pesados",
+            "text": "Garantizamos pureza total: libre de metales pesados."
+          }
+        }
       },
-      "block_order": ["b1", "b2", "b3", "b4", "b5", "b6"],
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6"
+      ],
       "settings": {
+        "eyebrow": "",
         "heading": "Calidad respaldada por la ciencia",
-        "bg_color": "#FBF6EE"
+        "bg_color": "#fbf6ee"
       }
     },
     "vitrina": {
@@ -244,32 +288,85 @@
     "resenas": {
       "type": "reviews-carousel",
       "blocks": {
-        "r1": { "type": "resena", "settings": { "product": "maxcalm", "title_override": "", "price_override": "" } },
-        "r2": { "type": "resena", "settings": { "product": "cutting-jelly", "title_override": "", "price_override": "" } },
-        "r3": { "type": "resena", "settings": { "product": "timereverse-cream", "title_override": "", "price_override": "" } },
-        "r4": { "type": "resena", "settings": { "product": "maxcalm", "title_override": "", "price_override": "" } }
+        "r1": {
+          "type": "resena",
+          "settings": {
+            "product": "maxcalm",
+            "title_override": "",
+            "price_override": ""
+          }
+        },
+        "r2": {
+          "type": "resena",
+          "settings": {
+            "product": "cutting-jelly",
+            "title_override": "",
+            "price_override": ""
+          }
+        },
+        "r3": {
+          "type": "resena",
+          "settings": {
+            "product": "timereverse-cream",
+            "title_override": "",
+            "price_override": ""
+          }
+        },
+        "r4": {
+          "type": "resena",
+          "settings": {
+            "product": "maxcalm",
+            "title_override": "",
+            "price_override": ""
+          }
+        }
       },
-      "block_order": ["r1", "r2", "r3", "r4"],
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
       "settings": {
         "trust_text": "Hecho con calidad | Envío a todo el país | Recomendado por clientes",
         "trust_speed": 24,
+        "eyebrow": "",
         "heading": "Tiendas reales, recomendaciones reales"
       }
     },
     "mision": {
       "type": "mission-split",
+      "blocks": {
+        "m1": {
+          "type": "item",
+          "settings": {
+            "text": "Refinado por expertos para el máximo rendimiento."
+          }
+        },
+        "m2": {
+          "type": "item",
+          "settings": {
+            "text": "Suplementos elaborados con precisión."
+          }
+        },
+        "m3": {
+          "type": "item",
+          "settings": {
+            "text": "Diseñado para elevar tu bienestar al instante."
+          }
+        }
+      },
+      "block_order": [
+        "m1",
+        "m2",
+        "m3"
+      ],
       "settings": {
         "eyebrow": "Nuestra misión",
         "heading": "Hay ciencia detrás de la ciencia.",
         "link_label": "Leer más",
         "link_url": ""
-      },
-      "blocks": {
-        "m1": { "type": "item", "settings": { "text": "Refinado por expertos para el máximo rendimiento." } },
-        "m2": { "type": "item", "settings": { "text": "Suplementos elaborados con precisión." } },
-        "m3": { "type": "item", "settings": { "text": "Diseñado para elevar tu bienestar al instante." } }
-      },
-      "block_order": ["m1", "m2", "m3"]
+      }
     },
     "destacados": {
       "type": "featured-collection",
