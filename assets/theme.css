@@ -470,7 +470,7 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .spot__left {
   position: relative;
   overflow: hidden;
-  min-height: 560px;
+  min-height: 620px;
   padding: 44px 32px 76px;
   color: #fff;
   transition: background-color .4s ease;
@@ -495,7 +495,7 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 
 .spot__media {
   max-width: 340px;
-  max-height: 260px;
+  max-height: 300px;
   margin-bottom: 24px;
   display: flex;
   align-items: center;
@@ -503,7 +503,7 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 }
 .spot__media img, .spot__media-placeholder {
   max-width: 100%;
-  max-height: 260px;
+  max-height: 300px;
   width: auto;
   height: auto;
   display: block;
