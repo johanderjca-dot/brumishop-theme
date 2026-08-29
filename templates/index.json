@@ -166,14 +166,14 @@
     "marquee": {
       "type": "marquee-banner",
       "settings": {
-        "image": "shopify://shop_images/man-on-phone-holding-cardboard-box-indoors-2026-01-08-07-01-05-utc.jpg",
+        "image": "shopify://shop_images/Diseno_sin_titulo_7.png",
         "overlay": 15,
         "height": 80,
         "height_mobile": 50,
-        "text": "Tu bienestar, nuestra prioridad",
+        "text": "COMODIDAD • TU BIENESTAR, REDEFINIDO.",
         "text_color": "#ffffff",
         "speed": 20,
-        "btn_label": "Comprar ahora",
+        "btn_label": "ver nuevos productos",
         "btn_url": ""
       }
     },
@@ -184,7 +184,7 @@
           "type": "producto",
           "settings": {
             "product": "timereverse-cream",
-            "bg_color": "#FA6868",
+            "bg_color": "#fa6868",
             "title_override": "",
             "price_override": "",
             "headline": "¡Descúbrelo!",
