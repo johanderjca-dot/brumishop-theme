@@ -41,6 +41,19 @@
               </div>
             </div>
           </div>
+          {%- if block.settings.product != blank -%}
+            <a class="review-card__product" href="{{ block.settings.product.url }}">
+              {%- if block.settings.product.featured_image -%}
+                <span class="review-card__product-thumb">
+                  <img src="{{ block.settings.product.featured_image | image_url: width: 80 }}" alt="" width="36" height="36" loading="lazy">
+                </span>
+              {%- endif -%}
+              <span class="review-card__product-info">
+                <span class="review-card__product-title">{{ block.settings.product.title }}</span>
+                <span class="review-card__product-price">{{ block.settings.product.price | money }}</span>
+              </span>
+            </a>
+          {%- endif -%}
         </div>
       {%- endfor -%}
     </div>
@@ -94,7 +107,8 @@
       { "type": "textarea", "id": "text", "label": "Texto de la reseña", "default": "Escribe aquí lo que dijo tu cliente sobre el producto." },
       { "type": "range", "id": "rating", "min": 1, "max": 5, "step": 1, "label": "Estrellas", "default": 5 },
       { "type": "image_picker", "id": "avatar", "label": "Foto del cliente (opcional)" },
-      { "type": "text", "id": "author", "label": "Nombre", "default": "- Cliente verificado" }
+      { "type": "text", "id": "author", "label": "Nombre", "default": "- Cliente verificado" },
+      { "type": "product", "id": "product", "label": "Producto relacionado (opcional)", "info": "Si lo eliges, aparece un enlace al producto debajo de la reseña." }
     ]}
   ],
   "presets": [{

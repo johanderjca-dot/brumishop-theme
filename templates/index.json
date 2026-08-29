@@ -300,7 +300,8 @@
             "headline": "Más energía en 2 semanas",
             "text": "Estaba escéptica al principio, pero después de dos semanas noté la diferencia. Tengo más energía en las tardes y mejoré mi rendimiento.",
             "rating": 5,
-            "author": "- Sarah M, cliente verificada"
+            "author": "- Sarah M, cliente verificada",
+            "product": "maxcalm"
           }
         },
         "r2": {
@@ -309,7 +310,8 @@
             "headline": "Por fin algo que funciona",
             "text": "Había probado muchos suplementos antes, pero este es el primero con el que realmente siento resultados. Me recupero más rápido y me siento más fuerte.",
             "rating": 5,
-            "author": "- James K, cliente verificado"
+            "author": "- James K, cliente verificado",
+            "product": "cutting-jelly"
           }
         },
         "r3": {
@@ -318,7 +320,8 @@
             "headline": "Excelente calidad",
             "text": "Me encanta que sean productos de calidad. Después de un mes de uso diario me siento con más energía y mejor en general.",
             "rating": 5,
-            "author": "- Anna W, cliente verificada"
+            "author": "- Anna W, cliente verificada",
+            "product": "timereverse-cream"
           }
         },
         "r4": {
