@@ -42,7 +42,9 @@
         "texto"
       ],
       "settings": {
-        "show_payment": false
+        "show_payment": false,
+        "wordmark_logo": "shopify://shop_images/Diseno_sin_titulo_5.png",
+        "wordmark": "BrumiShop"
       }
     }
   },
