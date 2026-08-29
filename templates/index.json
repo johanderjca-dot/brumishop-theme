@@ -166,8 +166,9 @@
     "marquee": {
       "type": "marquee-banner",
       "settings": {
+        "image": "shopify://shop_images/man-listening-to-music-with-headphones-smiling-2026-03-24-02-26-09-utc.jpg",
         "overlay": 15,
-        "height": 60,
+        "height": 80,
         "height_mobile": 50,
         "text": "Tu bienestar, nuestra prioridad",
         "text_color": "#ffffff",
