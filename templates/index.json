@@ -177,6 +177,33 @@
         "btn_url": ""
       }
     },
+    "vitrina": {
+      "type": "product-spotlight",
+      "blocks": {
+        "p1": {
+          "type": "producto",
+          "settings": {
+            "product": "maxcalm",
+            "bg_color": "#F04438",
+            "headline": "Mata el cortisol.",
+            "btn_label": "Comprar ahora, pagar en casa"
+          }
+        },
+        "p2": {
+          "type": "producto",
+          "settings": {
+            "product": "cutting-jelly",
+            "bg_color": "#1D6F5C",
+            "headline": "El Ozempic coreano.",
+            "btn_label": "Comprar ahora, pagar en casa"
+          }
+        }
+      },
+      "block_order": ["p1", "p2"],
+      "settings": {
+        "overlay": 30
+      }
+    },
     "destacados": {
       "type": "featured-collection",
       "settings": {
@@ -191,6 +218,7 @@
     "hero",
     "categorias",
     "marquee",
+    "vitrina",
     "destacados"
   ]
 }

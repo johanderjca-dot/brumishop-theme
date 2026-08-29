@@ -256,6 +256,52 @@
     });
   }
 
+  /* ---------- vitrina de productos: producto + imagen/titular sincronizados ---------- */
+  function initSpotlight() {
+    doc.querySelectorAll('[data-spotlight]').forEach(function (root) {
+      if (root.dataset.spotReady) return;
+      root.dataset.spotReady = 'true';
+
+      var left = root.querySelector('[data-spot-left]');
+      var track = root.querySelector('[data-spot-slides]');
+      var slides = Array.prototype.slice.call(root.querySelectorAll('[data-spot-slide]'));
+      var rightSlides = Array.prototype.slice.call(root.querySelectorAll('[data-spot-right-slide]'));
+      var dots = Array.prototype.slice.call(root.querySelectorAll('[data-spot-dot]'));
+      var prevBtn = root.querySelector('[data-spot-prev]');
+      var nextBtn = root.querySelector('[data-spot-next]');
+      if (!slides.length) return;
+
+      var index = 0;
+
+      function go(i) {
+        index = ((i % slides.length) + slides.length) % slides.length;
+        slides.forEach(function (s, n) { s.classList.toggle('is-active', n === index); });
+        rightSlides.forEach(function (s, n) { s.classList.toggle('is-active', n === index); });
+        dots.forEach(function (d, n) { d.classList.toggle('is-active', n === index); });
+        if (left) left.style.backgroundColor = slides[index].getAttribute('data-bg') || '';
+      }
+
+      dots.forEach(function (d, n) {
+        d.addEventListener('click', function () { go(n); });
+      });
+      if (prevBtn) prevBtn.addEventListener('click', function () { go(index - 1); });
+      if (nextBtn) nextBtn.addEventListener('click', function () { go(index + 1); });
+
+      if (track) {
+        var startX = null;
+        track.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+        track.addEventListener('touchend', function (e) {
+          if (startX === null) return;
+          var dx = e.changedTouches[0].clientX - startX;
+          if (Math.abs(dx) > 40) go(dx < 0 ? index + 1 : index - 1);
+          startX = null;
+        }, { passive: true });
+      }
+
+      go(0);
+    });
+  }
+
   /* ---------- arranque ---------- */
   function boot() {
     initHeader();
@@ -265,6 +311,7 @@
     initStickyBuy();
     initCartCount();
     initCarousels();
+    initSpotlight();
   }
 
   if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', boot);

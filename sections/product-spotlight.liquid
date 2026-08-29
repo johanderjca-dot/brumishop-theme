@@ -1,0 +1,108 @@
+{%- liquid
+  assign producto_blocks = section.blocks | where: 'type', 'producto'
+-%}
+
+<section class="spot" data-spotlight>
+  <div class="spot__left" data-spot-left>
+    <div class="spot__slides" data-spot-slides>
+      {%- for block in producto_blocks -%}
+        {%- liquid
+          assign p = block.settings.product
+          assign title = block.settings.title_override | default: p.title
+          assign price = block.settings.price_override
+          if price == blank and p != blank
+            assign price = p.price | money
+          endif
+          assign link = block.settings.product.url | default: '#'
+        -%}
+        <div class="spot__slide{% if forloop.first %} is-active{% endif %}"
+             data-spot-slide
+             data-bg="{{ block.settings.bg_color }}"
+             {{ block.shopify_attributes }}>
+          <div class="spot__media">
+            {%- if block.settings.image != blank -%}
+              <img src="{{ block.settings.image | image_url: width: 700 }}"
+                   srcset="{{ block.settings.image | image_url: width: 400 }} 400w, {{ block.settings.image | image_url: width: 700 }} 700w"
+                   sizes="(min-width: 750px) 32vw, 60vw"
+                   alt="{{ title | escape }}"
+                   width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}"
+                   loading="lazy">
+            {%- else -%}
+              {{ 'product-1' | placeholder_svg_tag: 'spot__media-placeholder' }}
+            {%- endif -%}
+          </div>
+          <div class="spot__info">
+            {%- if title != blank -%}<p class="spot__title">{{ title }}</p>{%- endif -%}
+            {%- if price != blank -%}<p class="spot__price">{{ price }}</p>{%- endif -%}
+          </div>
+          {%- if block.settings.btn_label != blank -%}
+            <a class="btn btn--outline btn--full spot__cta" href="{{ link }}">{{ block.settings.btn_label }}</a>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {%- if producto_blocks.size > 1 -%}
+      <div class="spot__dots" data-spot-dots>
+        {%- for block in producto_blocks -%}
+          <button class="spot__dot{% if forloop.first %} is-active{% endif %}" type="button" data-spot-dot aria-label="Ver producto {{ forloop.index }}"></button>
+        {%- endfor -%}
+      </div>
+      <button class="spot__nav spot__nav--prev" type="button" data-spot-prev aria-label="Producto anterior">{% render 'icon-caret' %}</button>
+      <button class="spot__nav spot__nav--next" type="button" data-spot-next aria-label="Siguiente producto">{% render 'icon-caret' %}</button>
+    {%- endif -%}
+  </div>
+
+  <div class="spot__right">
+    {%- for block in producto_blocks -%}
+      <div class="spot__right-slide{% if forloop.first %} is-active{% endif %}" data-spot-right-slide>
+        <div class="spot__right-media">
+          {%- if block.settings.image_lifestyle != blank -%}
+            <img src="{{ block.settings.image_lifestyle | image_url: width: 1400 }}"
+                 srcset="{{ block.settings.image_lifestyle | image_url: width: 750 }} 750w, {{ block.settings.image_lifestyle | image_url: width: 1400 }} 1400w"
+                 sizes="(min-width: 750px) 50vw, 100vw"
+                 alt=""
+                 width="{{ block.settings.image_lifestyle.width }}" height="{{ block.settings.image_lifestyle.height }}"
+                 loading="lazy">
+          {%- else -%}
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'spot__right-placeholder' }}
+          {%- endif -%}
+          <div class="spot__right-overlay" style="opacity: {{ section.settings.overlay | divided_by: 100.0 }}"></div>
+        </div>
+        {%- if block.settings.headline != blank -%}
+          <h2 class="spot__right-headline">{{ block.settings.headline }}</h2>
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Vitrina de productos",
+  "tag": "section",
+  "settings": [
+    { "type": "range", "id": "overlay", "min": 0, "max": 80, "step": 5, "unit": "%", "label": "Oscurecer imagen derecha", "default": 30 }
+  ],
+  "blocks": [
+    { "type": "producto", "name": "Producto", "settings": [
+      { "type": "product", "id": "product", "label": "Producto de Shopify (opcional)", "info": "Si lo eliges, se usan su nombre, precio y enlace automáticamente." },
+      { "type": "image_picker", "id": "image", "label": "Imagen del producto", "info": "Idealmente con fondo transparente." },
+      { "type": "color", "id": "bg_color", "label": "Color de fondo", "default": "#F04438" },
+      { "type": "text", "id": "title_override", "label": "Nombre (opcional)", "info": "Sobreescribe el nombre del producto elegido." },
+      { "type": "text", "id": "price_override", "label": "Precio (opcional)", "info": "Ej: Desde $39.99 — sobreescribe el precio del producto elegido." },
+
+      { "type": "header", "content": "Lado derecho" },
+      { "type": "image_picker", "id": "image_lifestyle", "label": "Imagen de estilo de vida" },
+      { "type": "text", "id": "headline", "label": "Titular", "default": "¡Descúbrelo!" },
+
+      { "type": "header", "content": "Botón" },
+      { "type": "text", "id": "btn_label", "label": "Texto del botón", "default": "Comprar ahora, pagar en casa" }
+    ]}
+  ],
+  "presets": [{
+    "name": "Vitrina de productos",
+    "blocks": [ { "type": "producto" }, { "type": "producto" } ]
+  }]
+}
+{% endschema %}
