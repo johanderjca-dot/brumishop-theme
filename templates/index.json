@@ -247,7 +247,7 @@
           "settings": {
             "product": "timereverse-cream",
             "image": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_14.png",
-            "bg_color": "#6C1936",
+            "bg_color": "#6c1936",
             "title_override": "",
             "price_override": "",
             "image_lifestyle": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_7.png",
@@ -260,7 +260,7 @@
           "settings": {
             "product": "maxcalm",
             "image": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_13.png",
-            "bg_color": "#6A87B0",
+            "bg_color": "#6a87b0",
             "title_override": "",
             "price_override": "",
             "image_lifestyle": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_5.png",
@@ -273,7 +273,7 @@
           "settings": {
             "product": "cutting-jelly",
             "image": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_1.svg",
-            "bg_color": "#B6474C",
+            "bg_color": "#b6474c",
             "title_override": "",
             "price_override": "",
             "image_lifestyle": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_8.png",
@@ -300,8 +300,7 @@
             "headline": "Más energía en 2 semanas",
             "text": "Estaba escéptica al principio, pero después de dos semanas noté la diferencia. Tengo más energía en las tardes y mejoré mi rendimiento.",
             "rating": 5,
-            "author": "- Sarah M, cliente verificada",
-            "product": "maxcalm"
+            "author": "- Sarah M, cliente verificada"
           }
         },
         "r2": {
@@ -310,8 +309,8 @@
             "headline": "Por fin algo que funciona",
             "text": "Había probado muchos suplementos antes, pero este es el primero con el que realmente siento resultados. Me recupero más rápido y me siento más fuerte.",
             "rating": 5,
-            "author": "- James K, cliente verificado",
-            "product": "cutting-jelly"
+            "avatar": "shopify://shop_images/WhatsApp_Image_2026-06-30_at_3.31.42_PM.jpg",
+            "author": "- James K, cliente verificado"
           }
         },
         "r3": {
@@ -320,8 +319,7 @@
             "headline": "Excelente calidad",
             "text": "Me encanta que sean productos de calidad. Después de un mes de uso diario me siento con más energía y mejor en general.",
             "rating": 5,
-            "author": "- Anna W, cliente verificada",
-            "product": "timereverse-cream"
+            "author": "- Anna W, cliente verificada"
           }
         },
         "r4": {
