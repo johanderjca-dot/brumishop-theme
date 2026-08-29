@@ -358,19 +358,19 @@
         "m1": {
           "type": "item",
           "settings": {
-            "text": "Refinado por expertos para el máximo rendimiento."
+            "text": "Selección curada para elevar tu estilo de vida."
           }
         },
         "m2": {
           "type": "item",
           "settings": {
-            "text": "Suplementos elaborados con precisión."
+            "text": "Materiales de alto estándar enfocados en la durabilidad."
           }
         },
         "m3": {
           "type": "item",
           "settings": {
-            "text": "Diseñado para elevar tu bienestar al instante."
+            "text": "Funcionalidad e innovación en una sola tienda."
           }
         }
       },
@@ -380,9 +380,10 @@
         "m3"
       ],
       "settings": {
-        "eyebrow": "Nuestra misión",
-        "heading": "Hay ciencia detrás de la ciencia.",
-        "link_label": "Leer más",
+        "image": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_15.png",
+        "eyebrow": "NUESTRO COMPROMISO",
+        "heading": "CALIDAD Y DISEÑO EN CADA DETALLE.",
+        "link_label": "",
         "link_url": ""
       }
     },
@@ -390,7 +391,7 @@
       "type": "featured-collection",
       "settings": {
         "heading": "Lo más vendido",
-        "collection": "",
+        "collection": "belleza-skincare",
         "limit": 4,
         "columns": 4
       }
