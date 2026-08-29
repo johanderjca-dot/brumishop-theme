@@ -392,6 +392,9 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   position: relative;
   overflow: hidden;
   min-height: var(--mqb-h-mobile, 50vh);
+  /* mismas líneas divisorias que el video del hero */
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
 }
 @media (min-width: 750px) {
   .mqb { min-height: var(--mqb-h, 60vh); }
