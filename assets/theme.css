@@ -459,6 +459,7 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .spot {
   display: grid;
   grid-template-columns: 1fr;
+  overflow-x: hidden;
   border-top: 1px solid var(--ink);
   border-bottom: 1px solid var(--ink);
 }
@@ -495,7 +496,7 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .spot__media img, .spot__media-placeholder { width: 100%; height: auto; display: block; }
 
 .spot__info { margin-bottom: 20px; }
-.spot__title { font-size: 16px; font-weight: 600; margin: 0 0 4px; }
+.spot__title { font-size: 16px; font-weight: 600; margin: 0 0 4px; word-break: break-word; }
 .spot__price { font-size: 14px; font-weight: 700; margin: 0; opacity: .9; }
 
 .spot__cta { max-width: 280px; background: #fff; color: var(--ink); border-color: #fff; }
