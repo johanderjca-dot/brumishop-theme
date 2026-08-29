@@ -246,9 +246,11 @@
           "type": "producto",
           "settings": {
             "product": "timereverse-cream",
+            "image": "shopify://shop_images/Post_de_Instagram_Nuevo_Producto_Natural_Verde_8.png",
             "bg_color": "#fa6868",
             "title_override": "",
             "price_override": "",
+            "image_lifestyle": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_7.png",
             "headline": "¡Descúbrelo!",
             "btn_label": "Comprar ahora, pagar en casa"
           }
@@ -257,7 +259,7 @@
           "type": "producto",
           "settings": {
             "product": "maxcalm",
-            "image": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_9.png",
+            "image": "shopify://shop_images/relaxing_2026-07-17_20-10-51_66aded07.jpg",
             "bg_color": "#f04438",
             "title_override": "",
             "price_override": "",
@@ -270,9 +272,11 @@
           "type": "producto",
           "settings": {
             "product": "cutting-jelly",
-            "bg_color": "#1d6f5c",
+            "image": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_1.svg",
+            "bg_color": "#DF9994",
             "title_override": "",
             "price_override": "",
+            "image_lifestyle": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_8.png",
             "headline": "El Ozempic coreano.",
             "btn_label": "Comprar ahora, pagar en casa"
           }
