@@ -13,7 +13,17 @@
 
     <div class="features__wrap">
       <div class="features__media">
-        {%- if section.settings.image != blank -%}
+        {%- if section.settings.video != blank -%}
+          {{ section.settings.video
+            | video_tag:
+              image_size: '900x',
+              autoplay: true,
+              loop: true,
+              muted: true,
+              controls: false,
+              playsinline: true
+          }}
+        {%- elsif section.settings.image != blank -%}
           <img src="{{ section.settings.image | image_url: width: 900 }}"
                srcset="{{ section.settings.image | image_url: width: 500 }} 500w, {{ section.settings.image | image_url: width: 900 }} 900w"
                sizes="(min-width: 990px) 30vw, 70vw"
@@ -55,6 +65,7 @@
     { "type": "text", "id": "eyebrow", "label": "Etiqueta pequeña (opcional)" },
     { "type": "text", "id": "heading", "label": "Título", "default": "Calidad respaldada por la ciencia" },
     { "type": "image_picker", "id": "image", "label": "Imagen central" },
+    { "type": "video", "id": "video", "label": "Video central (opcional)", "info": "Si lo subes, reemplaza a la imagen. Se reproduce sin sonido y en bucle." },
     { "type": "color", "id": "bg_color", "label": "Color de fondo", "default": "#FBF6EE" }
   ],
   "blocks": [
