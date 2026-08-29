@@ -166,7 +166,7 @@
     "marquee": {
       "type": "marquee-banner",
       "settings": {
-        "image": "shopify://shop_images/man-listening-to-music-with-headphones-smiling-2026-03-24-02-26-09-utc.jpg",
+        "image": "shopify://shop_images/man-on-phone-holding-cardboard-box-indoors-2026-01-08-07-01-05-utc.jpg",
         "overlay": 15,
         "height": 80,
         "height_mobile": 50,
@@ -180,11 +180,26 @@
     "vitrina": {
       "type": "product-spotlight",
       "blocks": {
+        "producto_LnRNRA": {
+          "type": "producto",
+          "settings": {
+            "product": "timereverse-cream",
+            "bg_color": "#FA6868",
+            "title_override": "",
+            "price_override": "",
+            "headline": "¡Descúbrelo!",
+            "btn_label": "Comprar ahora, pagar en casa"
+          }
+        },
         "p1": {
           "type": "producto",
           "settings": {
             "product": "maxcalm",
-            "bg_color": "#F04438",
+            "image": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_9.png",
+            "bg_color": "#f04438",
+            "title_override": "",
+            "price_override": "",
+            "image_lifestyle": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_5.png",
             "headline": "Mata el cortisol.",
             "btn_label": "Comprar ahora, pagar en casa"
           }
@@ -193,15 +208,21 @@
           "type": "producto",
           "settings": {
             "product": "cutting-jelly",
-            "bg_color": "#1D6F5C",
+            "bg_color": "#1d6f5c",
+            "title_override": "",
+            "price_override": "",
             "headline": "El Ozempic coreano.",
             "btn_label": "Comprar ahora, pagar en casa"
           }
         }
       },
-      "block_order": ["p1", "p2"],
+      "block_order": [
+        "producto_LnRNRA",
+        "p1",
+        "p2"
+      ],
       "settings": {
-        "overlay": 30
+        "overlay": 5
       }
     },
     "destacados": {
