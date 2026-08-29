@@ -32,7 +32,7 @@
           "type": "text",
           "settings": {
             "heading": "Contacto",
-            "content": "<p>+18498822513</p><p>hola@casabrumi.com</p><p>@brumishop</p>"
+            "content": "<p>Escríbenos por WhatsApp. Respondemos rápido.</p>"
           }
         }
       },
@@ -42,8 +42,7 @@
         "texto"
       ],
       "settings": {
-        "show_payment": false,
-        "wordmark": "BrumiShop"
+        "show_payment": false
       }
     }
   },
