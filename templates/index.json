@@ -190,36 +190,36 @@
         "b2": {
           "type": "beneficio",
           "settings": {
-            "title": "MATERIALES PREMIUM",
-            "text": "Cada artículo cumple con estrictas pruebas de calidad en sus acabados y materiales antes de llegar a ti."
+            "title": "MATERIALES SELECCIONADOS",
+            "text": "Cada pieza supera estrictos controles de calidad en sus acabados para garantizar estética superior y alta durabilidad."
           }
         },
         "b3": {
           "type": "beneficio",
           "settings": {
-            "title": "TRANSACCIÓN SEGURA",
-            "text": "Pasarela de pago cifrada con tecnología de nivel bancario para proteger la privacidad de tus datos."
+            "title": "PAGO CONTRA ENTREGA",
+            "text": "Realiza tu pedido con total tranquilidad y liquida el pago únicamente cuando recibas el paquete en la puerta de tu casa."
           }
         },
         "b4": {
           "type": "beneficio",
           "settings": {
             "title": "ATENCIÓN CONCIERGE",
-            "text": "Soporte humano y prioritario por WhatsApp para resolver cualquier duda antes, durante y después de tu compra."
+            "text": "Asistencia personalizada y prioritaria vía WhatsApp para acompañarte antes, durante y después de tu compra."
           }
         },
         "b5": {
           "type": "beneficio",
           "settings": {
             "title": "ENVÍO PRIORITARIO",
-            "text": "Empaque de protección de alta gama con rastreo en tiempo real directamente hasta tu puerta."
+            "text": "Embalaje de protección de calidad con seguimiento detallado en tiempo real hasta su entrega."
           }
         },
         "b6": {
           "type": "beneficio",
           "settings": {
-            "title": "Sin metales pesados",
-            "text": "Garantizamos pureza total: libre de metales pesados."
+            "title": "MÉTODOS FLEXIBLES",
+            "text": "Aceptamos todas las tarjetas de crédito, débito y transferencias con procesamiento instantáneo."
           }
         }
       },
@@ -233,7 +233,7 @@
       ],
       "settings": {
         "eyebrow": "",
-        "heading": "Calidad respaldada por la ciencia",
+        "heading": "EL ESTÁNDAR DE NUESTRA MARCA",
         "video": "shopify://files/videos/0.0.mov",
         "video_alpha_url": "https://cdn.jsdelivr.net/gh/johanderjca-dot/brumishop-media@main/trust-badge.webm",
         "bg_color": "#ffffff"
