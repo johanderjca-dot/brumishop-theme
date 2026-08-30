@@ -14,16 +14,17 @@
     <div class="features__wrap">
       <div class="features__media">
         {%- if section.settings.video_alpha_url != blank -%}
-          {%- comment -%} el video con canal alfa no funciona en la mayoría de
-            navegadores móviles (sale negro) — en pantallas chicas se
-            reemplaza por la imagen de respaldo, ver .features__alpha-video
-            / .features__alpha-poster en el CSS {%- endcomment -%}
-          <video class="features__alpha-video" autoplay muted loop playsinline>
-            <source src="{{ section.settings.video_alpha_url }}">
+          {%- comment -%} dos formatos para que el fondo transparente funcione
+            en todos lados: HEVC/.mov es lo que soportan Safari e iOS,
+            WebM/VP9 es lo que soportan Chrome/Firefox/Edge. El navegador
+            elige el que sí entiende. {%- endcomment -%}
+          <video class="features__alpha-video" autoplay muted loop playsinline
+            {%- if section.settings.video_alpha_poster_url != blank %} poster="{{ section.settings.video_alpha_poster_url }}"{% endif %}>
+            {%- if section.settings.video_alpha_hevc_url != blank -%}
+              <source src="{{ section.settings.video_alpha_hevc_url }}" type="video/quicktime">
+            {%- endif -%}
+            <source src="{{ section.settings.video_alpha_url }}" type="video/webm">
           </video>
-          {%- if section.settings.video_alpha_poster_url != blank -%}
-            <img class="features__alpha-poster" src="{{ section.settings.video_alpha_poster_url }}" alt="{{ section.settings.heading | escape }}" width="900" height="506" loading="lazy">
-          {%- endif -%}
         {%- elsif section.settings.video != blank -%}
           {{ section.settings.video
             | video_tag:
@@ -77,8 +78,9 @@
     { "type": "text", "id": "heading", "label": "Título", "default": "Calidad respaldada por la ciencia" },
     { "type": "image_picker", "id": "image", "label": "Imagen central" },
     { "type": "video", "id": "video", "label": "Video central (opcional)", "info": "Si lo subes, reemplaza a la imagen. Se reproduce sin sonido y en bucle." },
-    { "type": "text", "id": "video_alpha_url", "label": "URL de video con fondo transparente (opcional)", "info": "Para videos con canal alfa (fondo transparente) — Shopify no los soporta si los subes aquí arriba, porque los vuelve a codificar y pierde la transparencia. Sube el archivo .webm a Configuración → Archivos (no aquí), copia su enlace y pégalo en este campo. Si lo llenas, reemplaza a todo lo demás." },
-    { "type": "text", "id": "video_alpha_poster_url", "label": "Imagen de respaldo para móvil (URL)", "info": "El video con fondo transparente no funciona en la mayoría de celulares. En pantallas chicas se muestra esta imagen en su lugar." },
+    { "type": "text", "id": "video_alpha_url", "label": "URL de video .webm con fondo transparente (opcional)", "info": "Para Chrome, Firefox y Edge. Shopify no soporta estos videos si los subes aquí arriba, porque los vuelve a codificar y pierde la transparencia. Sube el archivo a Configuración → Archivos (no aquí), copia su enlace y pégalo en este campo. Si lo llenas, reemplaza a todo lo demás." },
+    { "type": "text", "id": "video_alpha_hevc_url", "label": "URL de video .mov (HEVC) con fondo transparente (opcional)", "info": "Para Safari e iPhone/iPad, que no soportan el .webm de arriba. Sube el archivo .mov a Configuración → Archivos y pega su enlace aquí." },
+    { "type": "text", "id": "video_alpha_poster_url", "label": "Imagen mientras carga el video (URL, opcional)", "info": "Se muestra un instante mientras el video se descarga." },
     { "type": "color", "id": "bg_color", "label": "Color de fondo", "default": "#FBF6EE" }
   ],
   "blocks": [
