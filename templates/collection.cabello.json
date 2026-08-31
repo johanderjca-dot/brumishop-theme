@@ -12,6 +12,8 @@
     "hero": {
       "type": "video-hero",
       "settings": {
+        "video": "shopify://files/videos/0831.mov",
+        "video_url": "",
         "height": "custom",
         "height_custom": 45,
         "position_x": 50,
