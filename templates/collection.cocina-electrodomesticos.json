@@ -23,7 +23,7 @@
         "position_x_mobile": 50,
         "position_y_mobile": 50,
         "overlay": 15,
-        "eyebrow": "★★★★★ Amado por miles de clientas",
+        "eyebrow": "★★★★★ Amado por miles",
         "heading": "COCINA / ELECTRODOMÉSTICOS",
         "heading_size": 56,
         "heading_size_mobile": 32,
@@ -40,10 +40,10 @@
     "statement": {
       "type": "statement",
       "settings": {
-        "bg_color": "#f7f4ee",
+        "bg_color": "#FFFFFF",
         "text_color": "#151515",
-        "eyebrow": "COMPRA SEGURA",
-        "heading": "Productos originales, pensados para hacer tu día a día más fácil"
+        "eyebrow": "EXPLORA NUESTRA COLECCIÓN",
+        "heading": "CALIDAD Y ESTILO EN CADA DETALLE"
       }
     },
     "main": {
