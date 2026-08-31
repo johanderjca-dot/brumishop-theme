@@ -4,11 +4,11 @@
       "type": "video-hero",
       "settings": {
         "height": "custom",
-        "height_custom": 45,
+        "height_custom": 55,
         "position_x": 50,
         "position_y": 50,
         "ratio_mobile": "custom",
-        "height_custom_mobile": 45,
+        "height_custom_mobile": 55,
         "position_x_mobile": 50,
         "position_y_mobile": 50,
         "overlay": 15,
