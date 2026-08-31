@@ -1,0 +1,35 @@
+{
+  "sections": {
+    "hero": {
+      "type": "video-hero",
+      "settings": {
+        "height": "large",
+        "height_custom": 75,
+        "position_x": 50,
+        "position_y": 50,
+        "ratio_mobile": "tall",
+        "height_custom_mobile": 60,
+        "position_x_mobile": 50,
+        "position_y_mobile": 50,
+        "overlay": 15,
+        "eyebrow": "",
+        "heading": "MASCOTAS",
+        "heading_size": 56,
+        "heading_size_mobile": 32,
+        "subheading": "",
+        "text_color": "#ffffff",
+        "align": "center",
+        "valign": "center",
+        "btn1_label": "",
+        "btn2_label": ""
+      }
+    },
+    "main": {
+      "type": "main-collection"
+    }
+  },
+  "order": [
+    "hero",
+    "main"
+  ]
+}

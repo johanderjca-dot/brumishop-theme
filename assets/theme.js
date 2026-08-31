@@ -354,6 +354,26 @@
     });
   }
 
+  /* ---------- video de portada: botón pausar/reproducir ---------- */
+  function initVideoHeroPause() {
+    doc.querySelectorAll('[data-video-hero]').forEach(function (hero) {
+      var btn = hero.querySelector('[data-vhero-pause]');
+      if (!btn) return;
+      var videos = hero.querySelectorAll('video');
+      var pauseIcon = btn.querySelector('.vhero__pause-icon--pause');
+      var playIcon = btn.querySelector('.vhero__pause-icon--play');
+      var playing = true;
+
+      btn.addEventListener('click', function () {
+        playing = !playing;
+        videos.forEach(function (v) { playing ? v.play() : v.pause(); });
+        pauseIcon.hidden = !playing;
+        playIcon.hidden = playing;
+        btn.setAttribute('aria-label', playing ? 'Pausar video' : 'Reproducir video');
+      });
+    });
+  }
+
   /* ---------- arranque ---------- */
   function boot() {
     initHeader();
@@ -365,6 +385,7 @@
     initCarousels();
     initSpotlight();
     initReviews();
+    initVideoHeroPause();
   }
 
   if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', boot);

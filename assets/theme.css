@@ -347,6 +347,18 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 
 .vhero__overlay { position: absolute; inset: 0; background: #000; }
 
+.vhero__pause {
+  position: absolute; top: 20px; left: 20px; z-index: 3;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border: 0; border-radius: 8px;
+  background: rgba(255,255,255,.5);
+  color: #151515;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+.vhero__pause:hover { background: rgba(255,255,255,.7); }
+
 .vhero__content {
   position: relative;
   z-index: 2;
