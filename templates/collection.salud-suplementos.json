@@ -1,23 +1,14 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "hero": {
       "type": "video-hero",
       "settings": {
-        "height": "large",
-        "height_custom": 75,
+        "height": "custom",
+        "height_custom": 45,
         "position_x": 50,
         "position_y": 50,
-        "ratio_mobile": "tall",
-        "height_custom_mobile": 60,
+        "ratio_mobile": "custom",
+        "height_custom_mobile": 45,
         "position_x_mobile": 50,
         "position_y_mobile": 50,
         "overlay": 15,
@@ -35,7 +26,9 @@
     },
     "main": {
       "type": "main-collection",
-      "settings": {}
+      "settings": {
+        "show_title": false
+      }
     }
   },
   "order": [

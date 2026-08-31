@@ -101,13 +101,6 @@
     {%- endif -%}
   </div>
 
-  {%- if has_native -%}
-    <button type="button" class="vhero__pause" data-vhero-pause aria-label="Pausar video">
-      <svg class="vhero__pause-icon vhero__pause-icon--pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5" y="4" width="5" height="16" rx="1"/><rect x="14" y="4" width="5" height="16" rx="1"/></svg>
-      <svg class="vhero__pause-icon vhero__pause-icon--play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" hidden><path d="M7 4.5v15l13-7.5-13-7.5Z"/></svg>
-    </button>
-  {%- endif -%}
-
   {%- if section.settings.heading != blank or section.settings.subheading != blank or section.settings.btn1_label != blank -%}
     <div class="vhero__content vhero__content--{{ section.settings.align }} vhero__content--v-{{ section.settings.valign }}">
       <div class="page-width">
