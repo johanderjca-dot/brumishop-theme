@@ -3,10 +3,17 @@
 <section class="product page-width" data-product-section>
   <div class="product__grid">
 
-    <div class="product__media">
+    <div class="product__media" style="{% if section.settings.bg_color != blank %}--product-media-bg: {{ section.settings.bg_color }};{% endif %}">
       {%- if product.media.size > 0 -%}
         <div class="product__gallery" data-gallery>
           <div class="product__main-media">
+            {%- if section.settings.badge_text != blank -%}
+              <span class="product__media-badge">
+                {{ section.settings.badge_text }}
+                <span class="product__media-badge-stars">★★★★★</span>
+                {%- if section.settings.badge_rating != blank -%}<span class="product__media-badge-rating">{{ section.settings.badge_rating }}</span>{%- endif -%}
+              </span>
+            {%- endif -%}
             {%- for media in product.media limit: 1 -%}
               {%- if media.media_type == 'image' -%}
                 <img id="ProductMainImage"
@@ -20,6 +27,10 @@
                 {{ media | media_tag }}
               {%- endif -%}
             {%- endfor -%}
+            {%- if product.media.size > 1 -%}
+              <button type="button" class="product__media-nav product__media-nav--prev" data-gallery-prev aria-label="Imagen anterior">{% render 'icon-caret' %}</button>
+              <button type="button" class="product__media-nav product__media-nav--next" data-gallery-next aria-label="Siguiente imagen">{% render 'icon-caret' %}</button>
+            {%- endif -%}
           </div>
 
           {%- if product.media.size > 1 -%}
@@ -106,14 +117,17 @@
                 {%- unless product.has_only_default_variant -%}
                   <div class="product__variants">
                     {%- for option in product.options_with_values -%}
-                      <label class="product__option">
-                        <span>{{ option.name }}</span>
-                        <select name="options[{{ option.name | escape }}]" data-option-selector>
+                      <div class="product__option">
+                        <span class="product__option-label">{{ option.name }}</span>
+                        <div class="product__option-pills" role="radiogroup">
                           {%- for value in option.values -%}
-                            <option value="{{ value | escape }}" {% if option.selected_value == value %}selected{% endif %}>{{ value }}</option>
+                            <label class="product__pill{% if option.selected_value == value %} is-active{% endif %}">
+                              <input type="radio" name="options[{{ option.name | escape }}]" value="{{ value | escape }}" {% if option.selected_value == value %}checked{% endif %} data-option-selector>
+                              <span>{{ value }}</span>
+                            </label>
                           {%- endfor -%}
-                        </select>
-                      </label>
+                        </div>
+                      </div>
                     {%- endfor -%}
                   </div>
                 {%- endunless -%}
@@ -124,6 +138,55 @@
                   <span class="product__buy-sub">{{ block.settings.sublabel }}</span>
                 {%- endif -%}
               {%- endform -%}
+            </div>
+
+          {%- when 'purchase_card' -%}
+            <div class="product__purchase-card" {{ block.shopify_attributes }}>
+              {%- if block.settings.header_label != blank -%}
+                <div class="product__purchase-card-header">{{ block.settings.header_label }}</div>
+              {%- endif -%}
+              <div class="product__purchase-card-body">
+                <div class="product__price product__price--card">
+                  {%- if product.compare_at_price > product.price -%}
+                    <s class="product__price-was">{{ product.compare_at_price | money }}</s>
+                  {%- endif -%}
+                  <span class="product__price-now">{{ product.price | money }}</span>
+                  {%- if product.compare_at_price > product.price -%}
+                    {%- assign pct = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price -%}
+                    <span class="product__badge">-{{ pct }}%</span>
+                  {%- endif -%}
+                </div>
+                {%- if block.settings.item1 != blank or block.settings.item2 != blank or block.settings.item3 != blank -%}
+                  <ul class="product__trust">
+                    {%- if block.settings.item1 != blank -%}<li>{{ block.settings.item1 }}</li>{%- endif -%}
+                    {%- if block.settings.item2 != blank -%}<li>{{ block.settings.item2 }}</li>{%- endif -%}
+                    {%- if block.settings.item3 != blank -%}<li>{{ block.settings.item3 }}</li>{%- endif -%}
+                  </ul>
+                {%- endif -%}
+                {%- form 'product', product, class: 'product__form' -%}
+                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                  {%- unless product.has_only_default_variant -%}
+                    <div class="product__variants">
+                      {%- for option in product.options_with_values -%}
+                        <div class="product__option">
+                          <span class="product__option-label">{{ option.name }}</span>
+                          <div class="product__option-pills" role="radiogroup">
+                            {%- for value in option.values -%}
+                              <label class="product__pill{% if option.selected_value == value %} is-active{% endif %}">
+                                <input type="radio" name="options[{{ option.name | escape }}]" value="{{ value | escape }}" {% if option.selected_value == value %}checked{% endif %} data-option-selector>
+                                <span>{{ value }}</span>
+                              </label>
+                            {%- endfor -%}
+                          </div>
+                        </div>
+                      {%- endfor -%}
+                    </div>
+                  {%- endunless -%}
+                  <button type="submit" class="btn btn--primary btn--full" {% unless product.available %}disabled{% endunless %}>
+                    {%- if product.available -%}{{ block.settings.button_label | default: 'Comprar ahora, pagar en casa' }}{%- else -%}Agotado{%- endif -%}
+                  </button>
+                {%- endform -%}
+              </div>
             </div>
 
           {%- when 'collapsible' -%}
@@ -165,6 +228,11 @@
   "name": "Producto",
   "tag": "section",
   "settings": [
+    { "type": "header", "content": "Galería" },
+    { "type": "color", "id": "bg_color", "label": "Color de fondo de la galería (opcional)" },
+    { "type": "text", "id": "badge_text", "label": "Texto de la insignia sobre la imagen (opcional)", "default": "" },
+    { "type": "text", "id": "badge_rating", "label": "Calificación junto a las estrellas (opcional)", "default": "4.9/5.0" },
+
     { "type": "header", "content": "Barra fija de compra" },
     { "type": "checkbox", "id": "sticky_bar", "label": "Mostrar barra fija al bajar", "default": true, "info": "Aparece abajo con el producto, el precio y el botón. Sube mucho la conversión en móvil." },
     { "type": "text", "id": "sticky_label", "label": "Texto del botón fijo", "default": "Ordenar ahora" }
@@ -194,6 +262,16 @@
       ]
     },
     {
+      "type": "purchase_card", "name": "Caja de compra (tarjeta)", "limit": 1,
+      "settings": [
+        { "type": "text", "id": "header_label", "label": "Encabezado de la tarjeta", "default": "MEJOR VALOR" },
+        { "type": "text", "id": "button_label", "label": "Texto del botón", "default": "Comprar ahora, pagar en casa" },
+        { "type": "text", "id": "item1", "label": "Punto 1", "default": "Paga cuando lo recibes" },
+        { "type": "text", "id": "item2", "label": "Punto 2", "default": "Envío gratis a todo el país" },
+        { "type": "text", "id": "item3", "label": "Punto 3", "default": "Cambios sin complicaciones" }
+      ]
+    },
+    {
       "type": "collapsible", "name": "Acordeón",
       "settings": [
         { "type": "text", "id": "heading", "label": "Título", "default": "Cómo usarlo" },
@@ -207,10 +285,8 @@
       { "type": "rating" },
       { "type": "title" },
       { "type": "chips" },
-      { "type": "price" },
-      { "type": "buy_buttons" },
-      { "type": "trust" },
-      { "type": "description" }
+      { "type": "description" },
+      { "type": "purchase_card" }
     ]
   }
 }

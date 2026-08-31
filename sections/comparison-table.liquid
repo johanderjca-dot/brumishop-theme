@@ -1,0 +1,62 @@
+<section class="section-pad compare">
+  <div class="page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="compare__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    <div class="compare__images">
+      <div class="compare__image-box">
+        {%- if section.settings.image_us != blank -%}
+          <img src="{{ section.settings.image_us | image_url: width: 500 }}" alt="{{ section.settings.label_us | escape }}" width="{{ section.settings.image_us.width }}" height="{{ section.settings.image_us.height }}" loading="lazy">
+        {%- else -%}
+          {{ 'product-1' | placeholder_svg_tag }}
+        {%- endif -%}
+      </div>
+      <span class="compare__vs">VS</span>
+      <div class="compare__image-box">
+        {%- if section.settings.image_them != blank -%}
+          <img src="{{ section.settings.image_them | image_url: width: 500 }}" alt="{{ section.settings.label_them | escape }}" width="{{ section.settings.image_them.width }}" height="{{ section.settings.image_them.height }}" loading="lazy">
+        {%- else -%}
+          {{ 'product-1' | placeholder_svg_tag }}
+        {%- endif -%}
+      </div>
+    </div>
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="compare__rows">
+        {%- for block in section.blocks -%}
+          <div class="compare__row" {{ block.shopify_attributes }}>
+            <span class="compare__check compare__check--yes">{% render 'icon-checkmark' %}</span>
+            <span class="compare__label">{{ block.settings.text }}</span>
+            <span class="compare__check compare__check--no">✕</span>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Tabla comparativa",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Título", "default": "NOSOTROS VS. ELLOS" },
+    { "type": "image_picker", "id": "image_us", "label": "Imagen — nuestro producto" },
+    { "type": "text", "id": "label_us", "label": "Etiqueta — nuestro producto", "default": "Nuestro producto" },
+    { "type": "image_picker", "id": "image_them", "label": "Imagen — genérico" },
+    { "type": "text", "id": "label_them", "label": "Etiqueta — genérico", "default": "Genérico" }
+  ],
+  "blocks": [
+    { "type": "row", "name": "Punto de comparación", "settings": [
+      { "type": "text", "id": "text", "label": "Texto", "default": "Fórmula 100% vegana" }
+    ]}
+  ],
+  "presets": [{
+    "name": "Tabla comparativa",
+    "blocks": [
+      { "type": "row" }, { "type": "row" }, { "type": "row" }, { "type": "row" }
+    ]
+  }]
+}
+{% endschema %}

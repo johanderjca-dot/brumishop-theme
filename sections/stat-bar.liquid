@@ -1,0 +1,31 @@
+<div class="stat-bar" style="background: {{ section.settings.bg_color }}">
+  <div class="page-width stat-bar__row">
+    {%- for block in section.blocks -%}
+      <div class="stat-bar__item" {{ block.shopify_attributes }}>
+        <span class="stat-bar__number" style="color: {{ section.settings.text_color }}">{{ block.settings.number }}</span>
+        <span class="stat-bar__label" style="color: {{ section.settings.text_color }}">{{ block.settings.label }}</span>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Franja de estadísticas",
+  "tag": "section",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "Color de fondo", "default": "#151515" },
+    { "type": "color", "id": "text_color", "label": "Color del texto", "default": "#FFFFFF" }
+  ],
+  "blocks": [
+    { "type": "stat", "name": "Estadística", "settings": [
+      { "type": "text", "id": "number", "label": "Número", "default": "99%" },
+      { "type": "text", "id": "label", "label": "Etiqueta", "default": "Pureza" }
+    ]}
+  ],
+  "presets": [{
+    "name": "Franja de estadísticas",
+    "blocks": [ { "type": "stat" }, { "type": "stat" }, { "type": "stat" } ]
+  }]
+}
+{% endschema %}

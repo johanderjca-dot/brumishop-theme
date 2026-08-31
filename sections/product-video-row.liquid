@@ -1,0 +1,62 @@
+<div class="section-pad video-row">
+  <div class="page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="video-row__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="video-row__track">
+        {%- for block in section.blocks -%}
+          <a class="video-row__item" href="{{ block.settings.link_url | default: '#' }}" {{ block.shopify_attributes }}>
+            {%- if block.settings.video != blank -%}
+              {{ block.settings.video
+                | video_tag:
+                  image_size: '500x',
+                  autoplay: true,
+                  loop: true,
+                  muted: true,
+                  controls: false,
+                  playsinline: true,
+                  class: 'video-row__media'
+              }}
+            {%- elsif block.settings.image != blank -%}
+              <img class="video-row__media"
+                   src="{{ block.settings.image | image_url: width: 500 }}"
+                   alt="{{ block.settings.label | escape }}"
+                   width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}"
+                   loading="lazy">
+              <span class="video-row__play" aria-hidden="true">▶</span>
+            {%- else -%}
+              {{ 'lifestyle-1' | placeholder_svg_tag: 'video-row__media' }}
+            {%- endif -%}
+            {%- if block.settings.label != blank -%}
+              <span class="video-row__label">{{ block.settings.label }}</span>
+            {%- endif -%}
+          </a>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Fila de videos",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Título", "default": "MEJORA TU RUTINA DIARIA" }
+  ],
+  "blocks": [
+    { "type": "item", "name": "Video/imagen", "settings": [
+      { "type": "video", "id": "video", "label": "Video (opcional)" },
+      { "type": "image_picker", "id": "image", "label": "Imagen (si no hay video)" },
+      { "type": "text", "id": "label", "label": "Etiqueta (opcional)" },
+      { "type": "url", "id": "link_url", "label": "Enlace (opcional)" }
+    ]}
+  ],
+  "presets": [{
+    "name": "Fila de videos",
+    "blocks": [ { "type": "item" }, { "type": "item" }, { "type": "item" }, { "type": "item" }, { "type": "item" } ]
+  }]
+}
+{% endschema %}

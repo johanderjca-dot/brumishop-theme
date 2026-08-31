@@ -99,13 +99,38 @@
     var thumbs = doc.querySelectorAll('[data-thumb]');
     if (!main || !thumbs.length) return;
 
-    thumbs.forEach(function (btn, i) {
+    var thumbList = Array.prototype.slice.call(thumbs);
+    var index = 0;
+
+    function show(i) {
+      index = ((i % thumbList.length) + thumbList.length) % thumbList.length;
+      var btn = thumbList[index];
+      main.src = btn.getAttribute('data-thumb');
+      main.removeAttribute('srcset');
+      thumbList.forEach(function (b) { b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+    }
+
+    thumbList.forEach(function (btn, i) {
       if (i === 0) btn.classList.add('is-active');
-      btn.addEventListener('click', function () {
-        main.src = btn.getAttribute('data-thumb');
-        main.removeAttribute('srcset');
-        thumbs.forEach(function (b) { b.classList.remove('is-active'); });
-        btn.classList.add('is-active');
+      btn.addEventListener('click', function () { show(i); });
+    });
+
+    var prev = doc.querySelector('[data-gallery-prev]');
+    var next = doc.querySelector('[data-gallery-next]');
+    if (prev) prev.addEventListener('click', function () { show(index - 1); });
+    if (next) next.addEventListener('click', function () { show(index + 1); });
+  }
+
+  /* ---------- producto: pills de variantes ---------- */
+  function initVariantPills() {
+    doc.querySelectorAll('.product__option-pills').forEach(function (group) {
+      var inputs = group.querySelectorAll('input[type="radio"]');
+      inputs.forEach(function (input) {
+        input.addEventListener('change', function () {
+          group.querySelectorAll('.product__pill').forEach(function (p) { p.classList.remove('is-active'); });
+          input.closest('.product__pill').classList.add('is-active');
+        });
       });
     });
   }
@@ -380,6 +405,7 @@
     initDrawer();
     initDropdowns();
     initGallery();
+    initVariantPills();
     initStickyBuy();
     initCartCount();
     initCarousels();

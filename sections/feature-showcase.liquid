@@ -1,0 +1,62 @@
+<section class="showcase" style="background: {{ section.settings.bg_color }}">
+  <div class="showcase__media">
+    {%- if section.settings.image != blank -%}
+      <img src="{{ section.settings.image | image_url: width: 1600 }}" alt="" width="{{ section.settings.image.width }}" height="{{ section.settings.image.height }}" loading="lazy">
+    {%- endif -%}
+    <div class="showcase__blur"></div>
+  </div>
+
+  <div class="page-width showcase__content">
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="showcase__eyebrow" style="color: {{ section.settings.text_color }}">{{ section.settings.eyebrow }}</p>
+    {%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h2 class="showcase__heading" style="color: {{ section.settings.text_color }}">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    {%- if section.settings.text != blank -%}
+      <div class="showcase__text rte" style="color: {{ section.settings.text_color }}">{{ section.settings.text }}</div>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="showcase__grid">
+        {%- for block in section.blocks -%}
+          <div class="showcase__card" {{ block.shopify_attributes }}>
+            {%- if block.settings.image != blank -%}
+              <img src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.title | escape }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" loading="lazy">
+            {%- else -%}
+              {{ 'product-1' | placeholder_svg_tag }}
+            {%- endif -%}
+            {%- if block.settings.title != blank -%}
+              <span class="showcase__card-title">{{ block.settings.title }}</span>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Vitrina con fondo",
+  "tag": "section",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Imagen de fondo (se difumina)" },
+    { "type": "color", "id": "bg_color", "label": "Color de fondo", "default": "#1B2A3A" },
+    { "type": "color", "id": "text_color", "label": "Color del texto", "default": "#FFFFFF" },
+    { "type": "text", "id": "eyebrow", "label": "Etiqueta pequeña", "default": "INNOVACIÓN LÍDER" },
+    { "type": "text", "id": "heading", "label": "Titular", "default": "Comprobado clínicamente para un envejecimiento celular más saludable." },
+    { "type": "richtext", "id": "text", "label": "Texto (opcional)" }
+  ],
+  "blocks": [
+    { "type": "card", "name": "Tarjeta", "settings": [
+      { "type": "image_picker", "id": "image", "label": "Imagen" },
+      { "type": "text", "id": "title", "label": "Título", "default": "Beneficio" }
+    ]}
+  ],
+  "presets": [{
+    "name": "Vitrina con fondo",
+    "blocks": [ { "type": "card" }, { "type": "card" }, { "type": "card" } ]
+  }]
+}
+{% endschema %}
