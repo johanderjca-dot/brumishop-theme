@@ -33,7 +33,7 @@
         "align": "left",
         "valign": "center",
         "btn1_label": "Ver productos",
-        "btn1_url": "",
+        "btn1_url": "https://brumishop.com/collections/all",
         "btn2_label": "",
         "btn2_url": ""
       }
@@ -382,6 +382,9 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_15.png",
+        "image_position": "left",
+        "bg_color": "",
+        "text_color": "",
         "eyebrow": "NUESTRO COMPROMISO",
         "heading": "CALIDAD Y DISEÑO EN CADA DETALLE.",
         "link_label": "",
