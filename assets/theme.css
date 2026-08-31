@@ -372,7 +372,7 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .vhero__box { max-width: 640px; color: var(--vhero-text, #fff); }
 
 .vhero__eyebrow {
-  font-size: 15px; font-weight: 600; margin: 0 0 14px; opacity: .95;
+  font-size: 15px; font-weight: 400; margin: 0 0 4px; opacity: .95;
 }
 @media (min-width: 750px) {
   .vhero__eyebrow { font-size: 18px; }
