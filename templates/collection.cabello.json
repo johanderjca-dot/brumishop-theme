@@ -42,7 +42,8 @@
       }
     },
     "statement": {
-      "type": "statement"
+      "type": "statement",
+      "settings": {}
     }
   },
   "order": [

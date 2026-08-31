@@ -37,15 +37,21 @@
         "btn2_url": ""
       }
     },
+    "statement": {
+      "type": "statement",
+      "settings": {
+        "bg_color": "#FFFFFF",
+        "text_color": "#151515",
+        "eyebrow": "COMPRA SEGURA",
+        "heading": "Productos originales, pensados para hacer tu día a día más fácil"
+      }
+    },
     "main": {
       "type": "main-collection",
       "settings": {
         "show_title": false,
         "columns": 4
       }
-    },
-    "statement": {
-      "type": "statement"
     }
   },
   "order": [
