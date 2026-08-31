@@ -38,6 +38,15 @@
         "btn2_url": ""
       }
     },
+    "nuevos": {
+      "type": "new-arrivals",
+      "settings": {
+        "heading": "Nuevos productos",
+        "anchor": "nuevos",
+        "limit": 8,
+        "columns": 4
+      }
+    },
     "categorias": {
       "type": "category-tiles",
       "blocks": {
@@ -174,7 +183,7 @@
         "text_color": "#ffffff",
         "speed": 20,
         "btn_label": "ver nuevos productos",
-        "btn_url": ""
+        "btn_url": "#nuevos"
       }
     },
     "beneficios": {
@@ -403,6 +412,7 @@
   },
   "order": [
     "hero",
+    "nuevos",
     "categorias",
     "marquee",
     "beneficios",
