@@ -1,10 +1,21 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
       "type": "video-hero",
       "settings": {
-        "height": "large",
-        "height_custom": 75,
+        "video": "shopify://files/videos/SALUDBELLEZA.mov",
+        "video_url": "",
+        "height": "medium",
+        "height_custom": 60,
         "position_x": 50,
         "position_y": 50,
         "ratio_mobile": "tall",
@@ -21,12 +32,20 @@
         "align": "center",
         "valign": "center",
         "btn1_label": "",
-        "btn2_label": ""
+        "btn1_url": "",
+        "btn2_label": "",
+        "btn2_url": ""
       }
     },
     "main": {
-      "type": "main-collection"
+      "type": "main-collection",
+      "settings": {
+        "columns": 4
+      }
     }
   },
-  "order": ["hero", "main"]
+  "order": [
+    "hero",
+    "main"
+  ]
 }
