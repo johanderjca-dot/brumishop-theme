@@ -107,7 +107,17 @@
         <div class="vhero__box" style="--vhero-text: {{ section.settings.text_color }}">
 
           {%- if section.settings.eyebrow != blank -%}
-            <p class="vhero__eyebrow">{{ section.settings.eyebrow }}</p>
+            {%- liquid
+              assign eyebrow_first_word = section.settings.eyebrow | split: ' ' | first
+              assign eyebrow_rest = section.settings.eyebrow | remove_first: eyebrow_first_word | strip
+            -%}
+            <p class="vhero__eyebrow">
+              {%- if eyebrow_first_word contains '★' -%}
+                <span class="vhero__eyebrow-stars">{{ eyebrow_first_word }}</span> {{ eyebrow_rest }}
+              {%- else -%}
+                {{ section.settings.eyebrow }}
+              {%- endif -%}
+            </p>
           {%- endif -%}
 
           {%- if section.settings.heading != blank -%}
