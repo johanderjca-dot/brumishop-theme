@@ -379,6 +379,23 @@
     });
   }
 
+  /* ---------- colección: orden y filtros ---------- */
+  function initCollectionToolbar() {
+    var sortSelect = doc.querySelector('[data-sort-select]');
+    if (sortSelect) {
+      sortSelect.addEventListener('change', function () { sortSelect.form.submit(); });
+    }
+
+    var toggle = doc.querySelector('[data-filters-toggle]');
+    var panel = doc.querySelector('[data-filters-panel]');
+    if (toggle && panel) {
+      toggle.addEventListener('click', function () {
+        panel.hidden = !panel.hidden;
+        toggle.classList.toggle('is-active', !panel.hidden);
+      });
+    }
+  }
+
   /* ---------- arranque ---------- */
   function boot() {
     initHeader();
@@ -391,6 +408,7 @@
     initCarousels();
     initSpotlight();
     initReviews();
+    initCollectionToolbar();
   }
 
   if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', boot);

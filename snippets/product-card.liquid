@@ -3,6 +3,14 @@
   if product.compare_at_price > product.price
     assign on_sale = true
   endif
+
+  assign is_bestseller = false
+  for tag in product.tags
+    assign tag_down = tag | downcase
+    if tag_down == 'bestseller' or tag_down == 'best seller' or tag_down == 'mas vendido' or tag_down == 'más vendido' or tag_down == 'top seller'
+      assign is_bestseller = true
+    endif
+  endfor
 -%}
 
 <a class="card" href="{{ product.url }}">
@@ -22,7 +30,9 @@
       {{ 'product-1' | placeholder_svg_tag: 'card__placeholder' }}
     {%- endif -%}
 
-    {%- if on_sale and product.available -%}
+    {%- if is_bestseller -%}
+      <span class="card__badge card__badge--best">Más vendido</span>
+    {%- elsif on_sale and product.available -%}
       {%- assign pct = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price -%}
       <span class="card__badge">-{{ pct }}%</span>
     {%- endif -%}
@@ -33,6 +43,7 @@
   </div>
 
   <div class="card__body">
+    <span class="card__stars" aria-hidden="true">★★★★★</span>
     <h3 class="card__title">{{ product.title }}</h3>
     <div class="card__price">
       <strong>{{ product.price | money }}</strong>
