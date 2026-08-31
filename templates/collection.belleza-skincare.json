@@ -12,7 +12,9 @@
     "hero": {
       "type": "video-hero",
       "settings": {
-        "height": "large",
+        "video": "shopify://files/videos/SALUDBELLEZA.mov",
+        "video_url": "",
+        "height": "medium",
         "height_custom": 75,
         "position_x": 50,
         "position_y": 50,
@@ -30,12 +32,16 @@
         "align": "center",
         "valign": "center",
         "btn1_label": "",
-        "btn2_label": ""
+        "btn1_url": "",
+        "btn2_label": "",
+        "btn2_url": ""
       }
     },
     "main": {
       "type": "main-collection",
-      "settings": {}
+      "settings": {
+        "columns": 4
+      }
     }
   },
   "order": [
