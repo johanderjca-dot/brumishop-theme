@@ -27,64 +27,14 @@
         </select>
       </label>
     </form>
-
-    {%- if collection.filters.size > 0 -%}
-      <button type="button" class="collection__filters-toggle" data-filters-toggle>Filtrar</button>
-    {%- endif -%}
   </div>
 
   <div class="collection__layout">
-    {%- if collection.filters.size > 0 -%}
-      {%- liquid
-        assign any_filter_active = false
-        for filter in collection.filters
-          if filter.active_values.size > 0 or filter.min_value.value != nil or filter.max_value.value != nil
-            assign any_filter_active = true
-          endif
-        endfor
-      -%}
-      <aside class="collection__filters" data-filters-panel hidden>
-        <form method="get" action="{{ collection.url }}">
-          <input type="hidden" name="sort_by" value="{{ collection.sort_by }}">
-          {%- for filter in collection.filters -%}
-            <div class="collection__filter-group">
-              <p class="collection__filter-label">{{ filter.label }}</p>
-
-              {%- case filter.type -%}
-
-                {%- when 'price_range' -%}
-                  <div class="collection__filter-price">
-                    <input type="number" name="{{ filter.min_value.param_name }}" placeholder="Mín." value="{{ filter.min_value.value }}" min="0">
-                    <input type="number" name="{{ filter.max_value.param_name }}" placeholder="Máx." value="{{ filter.max_value.value }}" min="0">
-                  </div>
-
-                {%- else -%}
-                  <div class="collection__filter-options">
-                    {%- for value in filter.values -%}
-                      <label class="collection__filter-option{% if value.count == 0 and value.active == false %} is-disabled{% endif %}">
-                        <input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" {% if value.active %}checked{% endif %} {% if value.count == 0 and value.active == false %}disabled{% endif %}>
-                        <span>{{ value.label }} ({{ value.count }})</span>
-                      </label>
-                    {%- endfor -%}
-                  </div>
-
-              {%- endcase -%}
-            </div>
-          {%- endfor -%}
-
-          <button type="submit" class="btn btn--primary btn--full">Aplicar filtros</button>
-          {%- if any_filter_active -%}
-            <a class="collection__filters-clear" href="{{ collection.url }}">Quitar filtros</a>
-          {%- endif -%}
-        </form>
-      </aside>
-    {%- endif -%}
-
     <div class="grid grid--{{ section.settings.columns }} collection__grid">
       {%- for product in collection.products -%}
         {% render 'product-card', product: product %}
       {%- else -%}
-        <p>No hay productos en esta colección todavía.</p>
+        <p class="collection__empty">No hay productos en esta colección todavía.</p>
       {%- endfor -%}
     </div>
   </div>

@@ -1,0 +1,23 @@
+<section class="statement page-width" style="background: {{ section.settings.bg_color }}">
+  {%- if section.settings.eyebrow != blank -%}
+    <p class="statement__eyebrow" style="color: {{ section.settings.text_color }}">{{ section.settings.eyebrow }}</p>
+  {%- endif -%}
+  {%- if section.settings.heading != blank -%}
+    <h2 class="statement__heading" style="color: {{ section.settings.text_color }}">{{ section.settings.heading }}</h2>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Declaración",
+  "tag": "section",
+  "class": "section-statement",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "Color de fondo", "default": "#F7F4EE" },
+    { "type": "color", "id": "text_color", "label": "Color del texto", "default": "#151515" },
+    { "type": "text", "id": "eyebrow", "label": "Etiqueta pequeña", "default": "COMPRA SEGURA" },
+    { "type": "textarea", "id": "heading", "label": "Titular", "default": "Productos originales, pensados para hacer tu día a día más fácil" }
+  ],
+  "presets": [{ "name": "Declaración" }]
+}
+{% endschema %}

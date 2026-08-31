@@ -43,10 +43,14 @@
         "columns": 4,
         "show_title": false
       }
+    },
+    "statement": {
+      "type": "statement"
     }
   },
   "order": [
     "hero",
+    "statement",
     "main"
   ]
 }
