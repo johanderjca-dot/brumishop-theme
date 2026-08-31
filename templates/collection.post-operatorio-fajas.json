@@ -12,6 +12,8 @@
     "hero": {
       "type": "video-hero",
       "settings": {
+        "video": "shopify://files/videos/postoperatoriosfajas.mov",
+        "video_url": "",
         "height": "custom",
         "height_custom": 45,
         "position_x": 50,
@@ -21,7 +23,7 @@
         "position_x_mobile": 50,
         "position_y_mobile": 50,
         "overlay": 15,
-        "eyebrow": "★★★★★ Amado por miles de clientas",
+        "eyebrow": "★★★★★ Amado por miles",
         "heading": "POST-OPERATORIO / FAJAS",
         "heading_size": 56,
         "heading_size_mobile": 32,
@@ -30,18 +32,26 @@
         "align": "center",
         "valign": "center",
         "btn1_label": "",
-        "btn2_label": ""
+        "btn1_url": "",
+        "btn2_label": "",
+        "btn2_url": ""
+      }
+    },
+    "statement": {
+      "type": "statement",
+      "settings": {
+        "bg_color": "#f7f4ee",
+        "text_color": "#151515",
+        "eyebrow": "COMPRA SEGURA",
+        "heading": "Productos originales, pensados para hacer tu día a día más fácil"
       }
     },
     "main": {
       "type": "main-collection",
       "settings": {
-        "show_title": false
+        "show_title": false,
+        "columns": 4
       }
-    },
-    "statement": {
-      "type": "statement",
-      "settings": {}
     }
   },
   "order": [
