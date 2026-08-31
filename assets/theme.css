@@ -514,6 +514,7 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .spot__title { font-size: 16px; font-weight: 600; margin: 0 0 4px; word-break: break-word; }
 .spot__price { font-size: 14px; font-weight: 700; margin: 0; opacity: .9; }
 
+.spot__cta-form { display: contents; }
 .spot__cta { max-width: 280px; background: #fff; color: var(--ink); border-color: #fff; }
 .spot__app:empty { display: none; }
 .spot__app { max-width: 280px; margin-top: 10px; }
