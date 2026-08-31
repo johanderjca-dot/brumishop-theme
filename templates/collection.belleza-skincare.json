@@ -40,10 +40,10 @@
     "statement": {
       "type": "statement",
       "settings": {
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "text_color": "#151515",
-        "eyebrow": "COMPRA SEGURA",
-        "heading": "Productos originales, pensados para hacer tu día a día más fácil"
+        "eyebrow": "EXPLORA NUESTRA COLECCIÓN",
+        "heading": "CALIDAD Y ESTILO EN CADA DETALLE"
       }
     },
     "main": {
