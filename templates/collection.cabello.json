@@ -32,18 +32,26 @@
         "align": "center",
         "valign": "center",
         "btn1_label": "",
-        "btn2_label": ""
+        "btn1_url": "",
+        "btn2_label": "",
+        "btn2_url": ""
+      }
+    },
+    "statement": {
+      "type": "statement",
+      "settings": {
+        "bg_color": "#FFFFFF",
+        "text_color": "#151515",
+        "eyebrow": "EXPLORA NUESTRA COLECCIÓN",
+        "heading": "EXPLORA NUESTRA COLECCIÓN CALIDAD Y ESTILO EN CADA DETALLE"
       }
     },
     "main": {
       "type": "main-collection",
       "settings": {
-        "show_title": false
+        "show_title": false,
+        "columns": 4
       }
-    },
-    "statement": {
-      "type": "statement",
-      "settings": {}
     }
   },
   "order": [
