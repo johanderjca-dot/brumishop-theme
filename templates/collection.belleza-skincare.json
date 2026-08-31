@@ -12,7 +12,7 @@
     "hero": {
       "type": "video-hero",
       "settings": {
-        "video": "shopify://files/videos/SALUDBELLEZA.mov",
+        "video": "shopify://files/videos/0831.mov",
         "video_url": "",
         "height": "custom",
         "height_custom": 45,
@@ -24,7 +24,7 @@
         "position_y_mobile": 50,
         "overlay": 15,
         "eyebrow": "★★★★★ Amado por miles de clientas",
-        "heading": "BELLEZA / SKINCARE",
+        "heading": "cabello",
         "heading_size": 56,
         "heading_size_mobile": 32,
         "subheading": "",
