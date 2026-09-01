@@ -192,6 +192,14 @@
   margin-bottom: 10px;
 }
 .product__purchase-card-body { padding: 0; }
+
+.product--custom-bg .product__purchase-card {
+  --product-text: #151515;
+  color: var(--product-text);
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 20px;
+}
 .product__price--card { margin-bottom: 14px; }
 .product__purchase-card .product__trust { margin: 0 0 18px; }
 .product__purchase-card .product__variants { margin-bottom: 14px; }

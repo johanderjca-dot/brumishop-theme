@@ -37,7 +37,7 @@
         "compra": {
           "type": "purchase_card",
           "settings": {
-            "header_label": "MEJOR VALOR",
+            "header_label": "",
             "hide_button": true,
             "button_label": "Comprar ahora, pagar en casa",
             "item1": "Paga cuando lo recibes",
