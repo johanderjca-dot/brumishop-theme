@@ -27,7 +27,7 @@
 
 .product__main-media {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 4;
 }
 .product__main-media img {
   position: absolute; inset: 0;
