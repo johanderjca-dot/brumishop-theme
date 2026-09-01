@@ -194,9 +194,7 @@
 .product__purchase-card-body { padding: 0; }
 
 .product--custom-bg .product__purchase-card {
-  --product-text: #151515;
-  color: var(--product-text);
-  background: #fff;
+  border: 1px solid #fff;
   border-radius: var(--card-radius);
   padding: 20px;
 }
