@@ -1,0 +1,26 @@
+<div class="reviews__trust" style="{% if section.settings.bg_color != blank %}background: {{ section.settings.bg_color }};{% endif %}{% if section.settings.text_color != blank %} color: {{ section.settings.text_color }};{% endif %}">
+  <div class="reviews__trust-track" style="--trust-speed: {{ section.settings.speed }}s">
+    {%- for i in (1..2) -%}
+      <div class="reviews__trust-group" {% if i == 2 %}aria-hidden="true"{% endif %}>
+        {%- assign trust_words = section.settings.text | split: '|' -%}
+        {%- for word in trust_words -%}
+          <span class="reviews__trust-item">{{ word | strip }}</span>
+        {%- endfor -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Franja de confianza",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "text", "label": "Palabras (separadas por \"|\")", "default": "Made in USA | 20 años de investigación | #1 recomendado por doctores" },
+    { "type": "range", "id": "speed", "min": 8, "max": 60, "step": 2, "unit": "s", "label": "Velocidad", "default": 24 },
+    { "type": "color", "id": "bg_color", "label": "Color de fondo (opcional)" },
+    { "type": "color", "id": "text_color", "label": "Color del texto (opcional)" }
+  ],
+  "presets": [{ "name": "Franja de confianza" }]
+}
+{% endschema %}
