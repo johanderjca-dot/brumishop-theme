@@ -12,7 +12,7 @@
     "hero": {
       "type": "video-hero",
       "settings": {
-        "video": "shopify://files/videos/hogarorganizacion.mov",
+        "video": "shopify://files/videos/0831 (1).mov",
         "video_url": "",
         "height": "custom",
         "height_custom": 45,
@@ -40,7 +40,7 @@
     "statement": {
       "type": "statement",
       "settings": {
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "text_color": "#151515",
         "eyebrow": "EXPLORA NUESTRA COLECCIÓN",
         "heading": "CALIDAD Y ESTILO EN CADA DETALLE"
