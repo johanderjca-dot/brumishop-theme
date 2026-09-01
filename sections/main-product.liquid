@@ -1,6 +1,6 @@
 {{ 'section-product.css' | asset_url | stylesheet_tag }}
 
-<section class="product" data-product-section
+<section class="product{% if section.settings.bg_color != blank %} product--custom-bg{% endif %}" data-product-section
   style="{% if section.settings.bg_color != blank %}--product-bg: {{ section.settings.bg_color }};{% endif %}{% if section.settings.text_color != blank %} --product-text: {{ section.settings.text_color }};{% endif %}">
   <div class="product__grid page-width">
 
