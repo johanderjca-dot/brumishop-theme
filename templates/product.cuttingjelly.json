@@ -99,17 +99,10 @@
         "bg_color": "",
         "text_color": ""
       }
-    },
-    "videos": {
-      "type": "product-video-row",
-      "settings": {
-        "heading": "MEJORA TU RUTINA DIARIA"
-      }
     }
   },
   "order": [
     "main",
-    "confianza",
-    "videos"
+    "confianza"
   ]
 }
