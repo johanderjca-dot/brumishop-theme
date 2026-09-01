@@ -395,7 +395,7 @@
       "type": "featured-collection",
       "settings": {
         "heading": "Lo más vendido",
-        "collection": "belleza-skincare",
+        "collection": "mas-vendidos",
         "limit": 4,
         "columns": 4
       }
