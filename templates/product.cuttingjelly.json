@@ -29,8 +29,10 @@
           }
         },
         "descripcion": {
-          "type": "description",
-          "settings": {}
+          "type": "text",
+          "settings": {
+            "text": "<p>Le Dicen El Ozempic Coreano — Y Todo Internet Está Hablando De Esto</p>"
+          }
         },
         "compra": {
           "type": "purchase_card",
