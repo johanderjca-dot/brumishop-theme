@@ -188,11 +188,9 @@
                       {%- endfor -%}
                     </div>
                   {%- endunless -%}
-                  {%- unless block.settings.hide_button -%}
-                    <button type="submit" class="btn btn--primary btn--full" {% unless product.available %}disabled{% endunless %}>
-                      {%- if product.available -%}{{ block.settings.button_label | default: 'Comprar ahora, pagar en casa' }}{%- else -%}Agotado{%- endif -%}
-                    </button>
-                  {%- endunless -%}
+                  <button type="submit" class="btn btn--primary btn--full{% if block.settings.hide_button %} product__buy-hidden{% endif %}" {% unless product.available %}disabled{% endunless %}>
+                    {%- if product.available -%}{{ block.settings.button_label | default: 'Comprar ahora, pagar en casa' }}{%- else -%}Agotado{%- endif -%}
+                  </button>
                 {%- endform -%}
               </div>
             </div>
