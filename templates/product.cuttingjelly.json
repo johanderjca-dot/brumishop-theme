@@ -63,10 +63,17 @@
             "heading": "INGREDIENTES",
             "content": ""
           }
+        },
+        "eyebrow": {
+          "type": "eyebrow",
+          "settings": {
+            "text": "FÓRMULA COREANA"
+          }
         }
       },
       "block_order": [
         "estrellas",
+        "eyebrow",
         "titulo",
         "chips",
         "descripcion",
