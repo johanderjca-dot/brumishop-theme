@@ -46,20 +46,12 @@
               {%- if price != blank -%}<p class="spot__price">{{ price }}</p>{%- endif -%}
             </div>
             {%- if block.settings.btn_label != blank -%}
-              {%- if p != blank -%}
-                {%- comment -%} formulario real de agregar al carrito: Releasit
-                  detecta el enlace /rsi-btn-hook adentro y lo reemplaza por su
-                  propio botón "ORDENA AHORA", ya ligado a ESTE producto/variante
-                  específico (indicación de soporte de Releasit). {%- endcomment -%}
-                <form method="post" action="/cart/add" class="spot__cta-form">
-                  <input type="hidden" name="form_type" value="product">
-                  <input type="hidden" name="product-id" value="{{ p.id }}">
-                  <input type="hidden" name="id" value="{{ p.selected_or_first_available_variant.id }}">
-                  <a class="btn btn--outline btn--full spot__cta" href="/rsi-btn-hook">{{ block.settings.btn_label }}</a>
-                </form>
-              {%- else -%}
-                <a class="btn btn--outline btn--full spot__cta" href="{{ link }}">{{ block.settings.btn_label }}</a>
-              {%- endif -%}
+              {%- comment -%} Lleva a la página propia del producto, donde
+                Releasit solo tiene UN botón que atender. Con varios slides
+                de la Vitrina en la misma página, Releasit no distinguía
+                cuál /rsi-btn-hook pertenecía a cuál producto y mezclaba
+                el checkout entre ellos. {%- endcomment -%}
+              <a class="btn btn--outline btn--full spot__cta" href="{{ link }}">{{ block.settings.btn_label }}</a>
             {%- endif -%}
 
         {%- endcase -%}
