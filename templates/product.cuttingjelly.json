@@ -15,7 +15,7 @@
         "estrellas": {
           "type": "rating",
           "settings": {
-            "text": "40,000+ reseñas verificadas de 5 estrellas"
+            "text": "1,200+ reseñas verificadas de 5 estrellas"
           }
         },
         "titulo": {
@@ -54,14 +54,14 @@
           "type": "collapsible",
           "settings": {
             "heading": "¿CÓMO USARLO?",
-            "content": ""
+            "content": "<ul><li>1 stick al día, preferiblemente después de una comida (muchos lo comen después del almuerzo). Se abre y se come directo, como un popsicle — no necesita agua ni preparación.</li></ul>"
           }
         },
         "ingredientes": {
           "type": "collapsible",
           "settings": {
             "heading": "INGREDIENTES",
-            "content": ""
+            "content": "<p>Garcinia Cambogia, fibra de semillas de chía y maltodextrina indigestible. La fibra te ayuda a sentirte satisfecha entre comidas y apoya tu digestión; el HCA de la Garcinia Cambogia está asociado con el control del apetito.</p>"
           }
         }
       },
