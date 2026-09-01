@@ -1,4 +1,4 @@
-<div class="reviews__trust" style="{% if section.settings.bg_color != blank %}background: {{ section.settings.bg_color }};{% endif %}{% if section.settings.text_color != blank %} color: {{ section.settings.text_color }};{% endif %}">
+<div class="reviews__trust" style="margin-top: 0;{% if section.settings.bg_color != blank %} background: {{ section.settings.bg_color }};{% endif %}{% if section.settings.text_color != blank %} color: {{ section.settings.text_color }};{% endif %}">
   <div class="reviews__trust-track" style="--trust-speed: {{ section.settings.speed }}s">
     {%- for i in (1..2) -%}
       <div class="reviews__trust-group" {% if i == 2 %}aria-hidden="true"{% endif %}>
