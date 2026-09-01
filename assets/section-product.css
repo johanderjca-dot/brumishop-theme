@@ -9,6 +9,13 @@
   padding-bottom: var(--section-pad);
 }
 
+.product__breadcrumb {
+  font-size: 13px; color: var(--product-text, var(--muted));
+  margin-bottom: 20px; opacity: .85;
+}
+.product__breadcrumb a { color: inherit; text-decoration: none; }
+.product__breadcrumb a:hover { text-decoration: underline; }
+
 .product__grid { display: grid; gap: 28px; }
 @media (min-width: 990px) {
   .product__grid {

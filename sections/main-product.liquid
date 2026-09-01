@@ -2,6 +2,11 @@
 
 <section class="product{% if section.settings.bg_color != blank %} product--custom-bg{% endif %}" data-product-section
   style="{% if section.settings.bg_color != blank %}--product-bg: {{ section.settings.bg_color }};{% endif %}{% if section.settings.text_color != blank %} --product-text: {{ section.settings.text_color }};{% endif %}">
+  <nav class="product__breadcrumb page-width" aria-label="breadcrumb">
+    <a href="/">Inicio</a>
+    {%- if collection -%} / <a href="{{ collection.url }}">{{ collection.title }}</a>{%- endif -%}
+    / <span>{{ product.title }}</span>
+  </nav>
   <div class="product__grid page-width">
 
     <div class="product__media">
