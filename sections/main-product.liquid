@@ -1,9 +1,10 @@
 {{ 'section-product.css' | asset_url | stylesheet_tag }}
 
-<section class="product page-width" data-product-section>
-  <div class="product__grid">
+<section class="product" data-product-section
+  style="{% if section.settings.bg_color != blank %}--product-bg: {{ section.settings.bg_color }};{% endif %}{% if section.settings.text_color != blank %} --product-text: {{ section.settings.text_color }};{% endif %}">
+  <div class="product__grid page-width">
 
-    <div class="product__media" style="{% if section.settings.bg_color != blank %}--product-media-bg: {{ section.settings.bg_color }};{% endif %}">
+    <div class="product__media">
       {%- if product.media.size > 0 -%}
         <div class="product__gallery" data-gallery>
           <div class="product__main-media">
@@ -229,7 +230,8 @@
   "tag": "section",
   "settings": [
     { "type": "header", "content": "Galería" },
-    { "type": "color", "id": "bg_color", "label": "Color de fondo de la galería (opcional)" },
+    { "type": "color", "id": "bg_color", "label": "Color de fondo de toda la sección (opcional)" },
+    { "type": "color", "id": "text_color", "label": "Color del texto (opcional)", "info": "Úsalo cuando el fondo sea oscuro o intenso, para que el texto se siga leyendo bien." },
     { "type": "text", "id": "badge_text", "label": "Texto de la insignia sobre la imagen (opcional)" },
     { "type": "text", "id": "badge_rating", "label": "Calificación junto a las estrellas (opcional)", "default": "4.9/5.0" },
 
