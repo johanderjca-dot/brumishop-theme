@@ -75,7 +75,8 @@
         "ingredientes"
       ],
       "settings": {
-        "bg_color": "#AD191F",
+        "bg_color": "#ad191f",
+        "text_color": "#FFFFFF",
         "badge_text": "TOP",
         "badge_rating": "4.9/5.0",
         "sticky_bar": true,
