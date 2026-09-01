@@ -12,7 +12,7 @@
 
         {%- when 'producto' -%}
           {%- if slide_open -%}
-            </div>
+            </a>
           {%- endif -%}
           {%- assign slide_open = true -%}
           {%- assign producto_index = producto_index | plus: 1 -%}
@@ -25,15 +25,16 @@
             endif
             assign link = block.settings.product.url | default: '#'
           -%}
-          <div class="spot__slide{% if producto_index == 1 %} is-active{% endif %}"
-               data-spot-slide
-               data-bg="{{ block.settings.bg_color }}"
-               {{ block.shopify_attributes }}>
+          <a class="spot__slide{% if producto_index == 1 %} is-active{% endif %}"
+             href="{{ link }}"
+             data-spot-slide
+             data-bg="{{ block.settings.bg_color }}"
+             {{ block.shopify_attributes }}>
             <div class="spot__media">
               {%- if block.settings.image != blank -%}
-                <img src="{{ block.settings.image | image_url: width: 700 }}"
-                     srcset="{{ block.settings.image | image_url: width: 400 }} 400w, {{ block.settings.image | image_url: width: 700 }} 700w"
-                     sizes="(min-width: 750px) 32vw, 60vw"
+                <img src="{{ block.settings.image | image_url: width: 900 }}"
+                     srcset="{{ block.settings.image | image_url: width: 500 }} 500w, {{ block.settings.image | image_url: width: 900 }} 900w"
+                     sizes="(min-width: 750px) 40vw, 80vw"
                      alt="{{ title | escape }}"
                      width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}"
                      loading="lazy">
@@ -45,27 +46,11 @@
               {%- if title != blank -%}<p class="spot__title">{{ title }}</p>{%- endif -%}
               {%- if price != blank -%}<p class="spot__price">{{ price }}</p>{%- endif -%}
             </div>
-            {%- if block.settings.btn_label != blank -%}
-              {%- if p != blank -%}
-                {%- comment -%} formulario real de agregar al carrito: Releasit
-                  detecta el enlace /rsi-btn-hook adentro y lo reemplaza por su
-                  propio botón "ORDENA AHORA", ya ligado a ESTE producto/variante
-                  específico (indicación de soporte de Releasit). {%- endcomment -%}
-                <form method="post" action="/cart/add" class="spot__cta-form">
-                  <input type="hidden" name="form_type" value="product">
-                  <input type="hidden" name="product-id" value="{{ p.id }}">
-                  <input type="hidden" name="id" value="{{ p.selected_or_first_available_variant.id }}">
-                  <a class="btn btn--outline btn--full spot__cta" href="/rsi-btn-hook">{{ block.settings.btn_label }}</a>
-                </form>
-              {%- else -%}
-                <a class="btn btn--outline btn--full spot__cta" href="{{ link }}">{{ block.settings.btn_label }}</a>
-              {%- endif -%}
-            {%- endif -%}
 
         {%- endcase -%}
       {%- endfor -%}
       {%- if slide_open -%}
-        </div>
+        </a>
       {%- endif -%}
     </div>
 

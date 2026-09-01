@@ -495,32 +495,33 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   opacity: 0;
   pointer-events: none;
   transition: opacity .4s ease;
+  text-decoration: none;
+  color: inherit;
 }
 .spot__slide.is-active { opacity: 1; pointer-events: auto; }
 
 .spot__media {
-  max-width: 340px;
-  max-height: 300px;
-  margin-bottom: 24px;
+  width: 100%;
+  max-width: 440px;
+  max-height: 420px;
+  flex: 1;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .spot__media img, .spot__media-placeholder {
   max-width: 100%;
-  max-height: 300px;
+  max-height: 100%;
   width: auto;
   height: auto;
   display: block;
   object-fit: contain;
 }
 
-.spot__info { margin-bottom: 20px; }
+.spot__info { margin-bottom: 8px; }
 .spot__title { font-size: 16px; font-weight: 600; margin: 0 0 4px; word-break: break-word; }
 .spot__price { font-size: 14px; font-weight: 700; margin: 0; opacity: .9; }
-
-.spot__cta-form { display: contents; }
-.spot__cta { max-width: 280px; background: #fff; color: var(--ink); border-color: #fff; }
 .spot__app:empty { display: none; }
 .spot__app { max-width: 280px; margin-top: 10px; }
 
