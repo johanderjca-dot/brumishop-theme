@@ -1138,6 +1138,7 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .cart__item img { border-radius: 10px; object-fit: cover; }
 .cart__item-info { display: grid; gap: 5px; font-size: 14px; }
 .cart__item-info a { font-weight: 600; }
+.cart__item-remove { font-weight: 400 !important; font-size: 12px; color: var(--muted); text-decoration: underline; justify-self: start; }
 .cart__footer { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
 .cart__footer strong { margin-right: auto; font-size: 18px; }
 

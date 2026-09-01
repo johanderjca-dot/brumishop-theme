@@ -9,6 +9,7 @@
             <div class="cart__item-info">
               <a href="{{ item.url }}">{{ item.product.title }}</a>
               <span>{{ item.final_line_price | money }}</span>
+              <a href="{{ item.url_to_remove }}" class="cart__item-remove" aria-label="Eliminar {{ item.product.title }} del carrito">Eliminar</a>
             </div>
             <input type="number" name="updates[]" value="{{ item.quantity }}" min="0" aria-label="Cantidad">
           </div>
