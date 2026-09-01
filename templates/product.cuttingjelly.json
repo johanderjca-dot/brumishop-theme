@@ -25,7 +25,7 @@
         "chips": {
           "type": "chips",
           "settings": {
-            "items": "Garcinia Cambogia, HCA, Maltodextrina, Semillas de chía"
+            "items": "HCA, MALTODEXTRINA, CHIA,CALCIO"
           }
         },
         "descripcion": {
@@ -36,11 +36,11 @@
           "type": "purchase_card",
           "settings": {
             "header_label": "MEJOR VALOR",
+            "hide_button": true,
             "button_label": "Comprar ahora, pagar en casa",
             "item1": "Paga cuando lo recibes",
             "item2": "Envío gratis a todo el país",
-            "item3": "Cambios sin complicaciones",
-            "hide_button": true
+            "item3": "Cambios sin complicaciones"
           }
         },
         "beneficios": {
@@ -63,17 +63,10 @@
             "heading": "INGREDIENTES",
             "content": ""
           }
-        },
-        "eyebrow": {
-          "type": "eyebrow",
-          "settings": {
-            "text": "FÓRMULA COREANA"
-          }
         }
       },
       "block_order": [
         "estrellas",
-        "eyebrow",
         "titulo",
         "chips",
         "descripcion",
@@ -84,11 +77,20 @@
       ],
       "settings": {
         "bg_color": "#ad191f",
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "badge_text": "TOP",
         "badge_rating": "4.9/5.0",
         "sticky_bar": true,
         "sticky_label": "Ordenar ahora"
+      }
+    },
+    "confianza": {
+      "type": "trust-ticker",
+      "settings": {
+        "text": "Made in USA | 20 años de investigación | #1 recomendado por doctores",
+        "speed": 24,
+        "bg_color": "",
+        "text_color": ""
       }
     },
     "videos": {
@@ -329,9 +331,6 @@
         "p2"
       ],
       "settings": {}
-    },
-    "confianza": {
-      "type": "trust-ticker"
     }
   },
   "order": [
