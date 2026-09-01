@@ -188,9 +188,11 @@
                       {%- endfor -%}
                     </div>
                   {%- endunless -%}
-                  <button type="submit" class="btn btn--primary btn--full" {% unless product.available %}disabled{% endunless %}>
-                    {%- if product.available -%}{{ block.settings.button_label | default: 'Comprar ahora, pagar en casa' }}{%- else -%}Agotado{%- endif -%}
-                  </button>
+                  {%- unless block.settings.hide_button -%}
+                    <button type="submit" class="btn btn--primary btn--full" {% unless product.available %}disabled{% endunless %}>
+                      {%- if product.available -%}{{ block.settings.button_label | default: 'Comprar ahora, pagar en casa' }}{%- else -%}Agotado{%- endif -%}
+                    </button>
+                  {%- endunless -%}
                 {%- endform -%}
               </div>
             </div>
@@ -272,6 +274,7 @@
       "type": "purchase_card", "name": "Caja de compra (tarjeta)", "limit": 1,
       "settings": [
         { "type": "text", "id": "header_label", "label": "Encabezado de la tarjeta", "default": "MEJOR VALOR" },
+        { "type": "checkbox", "id": "hide_button", "label": "Ocultar este botón", "default": false, "info": "Actívalo si ya tienes el botón de Releasit (u otra app) para no duplicarlo." },
         { "type": "text", "id": "button_label", "label": "Texto del botón", "default": "Comprar ahora, pagar en casa" },
         { "type": "text", "id": "item1", "label": "Punto 1", "default": "Paga cuando lo recibes" },
         { "type": "text", "id": "item2", "label": "Punto 2", "default": "Envío gratis a todo el país" },

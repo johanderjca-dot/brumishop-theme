@@ -39,7 +39,8 @@
             "button_label": "Comprar ahora, pagar en casa",
             "item1": "Paga cuando lo recibes",
             "item2": "Envío gratis a todo el país",
-            "item3": "Cambios sin complicaciones"
+            "item3": "Cambios sin complicaciones",
+            "hide_button": true
           }
         },
         "beneficios": {
