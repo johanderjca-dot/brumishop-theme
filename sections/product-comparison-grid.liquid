@@ -1,4 +1,4 @@
-<section class="cgrid section-pad" style="{% if section.settings.bg_color != blank %}background: {{ section.settings.bg_color }};{% endif %}{% if section.settings.check_color != blank %} --cgrid-check: {{ section.settings.check_color }};{% endif %}">
+<section class="cgrid section-pad" style="{% if section.settings.bg_color != blank %}background: {{ section.settings.bg_color }};{% endif %}{% if section.settings.check_color != blank %} --cgrid-check: {{ section.settings.check_color }};{% endif %}{% if section.settings.check_icon_color != blank %} --cgrid-check-icon: {{ section.settings.check_icon_color }};{% endif %}">
   <div class="page-width">
     {%- if section.settings.eyebrow != blank -%}
       <p class="cgrid__eyebrow">{{ section.settings.eyebrow }}</p>
@@ -57,6 +57,7 @@
   "settings": [
     { "type": "color", "id": "bg_color", "label": "Color de fondo (opcional)", "default": "#FAF3EC" },
     { "type": "color", "id": "check_color", "label": "Color del círculo de check", "default": "#F5C518" },
+    { "type": "color", "id": "check_icon_color", "label": "Color del ícono (✓)", "default": "#151515" },
 
     { "type": "header", "content": "Título" },
     { "type": "text", "id": "eyebrow", "label": "Etiqueta pequeña", "default": "PLANT BASED" },
