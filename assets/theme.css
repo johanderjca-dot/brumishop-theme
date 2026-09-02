@@ -1396,7 +1396,11 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   .cgrid__table { grid-template-columns: 1.4fr repeat(4, 1fr); min-width: 560px; }
 }
 .cgrid__row { display: contents; }
+/* position:absolute saca este elemento del algoritmo de auto-colocación
+   del grid — si se deja como ítem normal, "reserva" la celda de columna 2
+   y empuja/descuadra el resto de celdas reales de cada fila */
 .cgrid__highlight-bg {
+  position: absolute; inset: 0;
   grid-column: 2; grid-row: 1 / -1;
   background: #FAF3EC; border-radius: var(--card-radius);
 }
