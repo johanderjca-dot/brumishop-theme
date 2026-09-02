@@ -638,7 +638,7 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   white-space: nowrap;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  padding: 6px 0;
+  padding: 8px 0;
   margin-top: 20px;
 }
 /* entre el final de reseñas y el inicio de la siguiente sección
@@ -1402,24 +1402,14 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 }
 @media (min-width: 750px) { .cgrid__cell--col { font-size: 11px; letter-spacing: .5px; } }
 .cgrid__cell--highlight {
-  position: relative;
-  background: #FAF3EC; border-radius: var(--card-radius) var(--card-radius) 0 0;
+  background: rgba(250, 243, 236, .55); border-radius: var(--card-radius) var(--card-radius) 0 0;
   color: var(--ink);
 }
 .cgrid__row:not(.cgrid__row--head) .cgrid__cell--highlight {
-  border-radius: 0; background: #FAF3EC;
+  border-radius: 0; background: rgba(250, 243, 236, .55);
 }
 .cgrid__row:last-child .cgrid__cell--highlight {
   border-radius: 0 0 var(--card-radius) var(--card-radius);
-}
-/* la línea divisoria de cada fila (border-bottom) cruza por encima de
-   la franja crema y la corta visualmente en pedazos — se tapa esa
-   línea justo en esta columna para que la franja se vea de un solo
-   tramo continuo, de arriba a abajo */
-.cgrid__row:not(:last-child) .cgrid__cell--highlight::after {
-  content: "";
-  position: absolute; left: 0; right: 0; bottom: -1px;
-  height: 1px; background: #FAF3EC;
 }
 .cgrid__check {
   display: inline-flex; align-items: center; justify-content: center;
