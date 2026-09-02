@@ -108,7 +108,7 @@
         "f1": {
           "type": "row",
           "settings": {
-            "label": "Característica",
+            "label": "Reduce absorción de carbohidratos",
             "check1": true,
             "check2": false,
             "check3": false,
@@ -118,37 +118,37 @@
         "f2": {
           "type": "row",
           "settings": {
-            "label": "Característica",
+            "label": "Controla antojos y apetito",
             "check1": true,
             "check2": false,
-            "check3": false,
+            "check3": true,
             "check4": false
           }
         },
         "f3": {
           "type": "row",
           "settings": {
-            "label": "Característica",
+            "label": "Mejora digestión",
             "check1": true,
-            "check2": false,
+            "check2": true,
             "check3": false,
-            "check4": false
+            "check4": true
           }
         },
         "f4": {
           "type": "row",
           "settings": {
-            "label": "Característica",
+            "label": "Formato listo para consumir",
             "check1": true,
-            "check2": false,
-            "check3": false,
+            "check2": true,
+            "check3": true,
             "check4": false
           }
         },
         "f5": {
           "type": "row",
           "settings": {
-            "label": "Característica",
+            "label": "Contiene Garcinia Cambogia",
             "check1": true,
             "check2": false,
             "check3": false,
@@ -158,11 +158,11 @@
         "f6": {
           "type": "row",
           "settings": {
-            "label": "Característica",
+            "label": "Fibra natural (semillas de chía)",
             "check1": true,
             "check2": false,
             "check3": false,
-            "check4": false
+            "check4": true
           }
         }
       },
