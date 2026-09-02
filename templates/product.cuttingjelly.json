@@ -135,7 +135,7 @@
       }
     },
     "comparacion": {
-      "type": "comparison-grid",
+      "type": "product-comparison-grid",
       "blocks": {
         "f1": {
           "type": "row",
