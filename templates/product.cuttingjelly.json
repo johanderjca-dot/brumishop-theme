@@ -263,15 +263,15 @@
         "stat_EVenQJ": {
           "type": "stat",
           "settings": {
-            "number": "99%",
-            "label": "Pureza"
+            "number": "97%",
+            "label": "Satisfacción"
           }
         },
         "stat_9kgNRk": {
           "type": "stat",
           "settings": {
-            "number": "99%",
-            "label": "Pureza"
+            "number": "95%",
+            "label": "Efectividad"
           }
         }
       },
@@ -343,6 +343,42 @@
         "eyebrow": "",
         "heading": "Únete a más de 1,200 clientes felices"
       }
+    },
+    "faq_accordion_6xBJq3": {
+      "type": "faq-accordion",
+      "blocks": {
+        "faq_iAXgnM": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Es seguro usar este producto?",
+            "answer": ""
+          }
+        },
+        "faq_GG9DFq": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Es seguro usar este producto?",
+            "answer": ""
+          }
+        },
+        "faq_9bThGg": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Es seguro usar este producto?",
+            "answer": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_iAXgnM",
+        "faq_GG9DFq",
+        "faq_9bThGg"
+      ],
+      "name": "Preguntas frecuentes",
+      "settings": {
+        "eyebrow": "Todo lo que necesitas saber",
+        "heading": "Preguntas frecuentes"
+      }
     }
   },
   "order": [
@@ -352,6 +388,7 @@
     "mision",
     "why_section_wXXwHV",
     "stat_bar_yy84Ad",
-    "reviews_carousel_nHyaqY"
+    "reviews_carousel_nHyaqY",
+    "faq_accordion_6xBJq3"
   ]
 }
