@@ -1404,10 +1404,20 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 /* color sólido (no rgba) a propósito: un fondo semitransparente
    choca con el border-bottom de cada fila y el navegador dibuja una
    costura/gap justo ahí, sobre todo en móvil — sólido evita ese
-   artefacto por completo mientras se ve igual de claro/sutil */
+   artefacto por completo mientras se ve igual de claro/sutil.
+   align-self: stretch es la causa real del "corte": .cgrid__row tiene
+   align-items:center, así que sin esto la celda se centra a SU PROPIA
+   altura (la del check, chiquita) dentro de una fila más alta (por la
+   etiqueta de 2 líneas en móvil), dejando espacio en blanco arriba y
+   abajo — la caja nunca toca los bordes de la fila. stretch la obliga
+   a llenar toda la altura de la fila, tocando la de arriba y abajo. */
 .cgrid__cell--highlight {
   background: #FCF8F5;
   color: var(--ink);
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* el redondeo se ve bien en escritorio (columna ancha) pero en móvil,
    con la columna angosta, el mismo radio se ve como una píldora suelta
