@@ -246,7 +246,8 @@
         "included_label": "Incluido",
         "guarantee": "Garantía de devolución de 30 días",
         "bg_color": "",
-        "text_color": ""
+        "text_color": "",
+        "btn_label": "COMPRAR AHORA"
       }
     }
   },

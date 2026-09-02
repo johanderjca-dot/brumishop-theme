@@ -35,6 +35,12 @@
       {%- if section.settings.guarantee != blank -%}
         <p class="why__guarantee">{% render 'icon-checkmark' %} {{ section.settings.guarantee }}</p>
       {%- endif -%}
+
+      {%- if section.settings.btn_label != blank -%}
+        <div class="why__cta">
+          <a class="btn btn--primary" href="#comprar">{{ section.settings.btn_label }}</a>
+        </div>
+      {%- endif -%}
     </div>
   </div>
 </section>
@@ -51,6 +57,7 @@
     { "type": "text", "id": "col2_label", "label": "Columna 2", "default": "Cápsulas:" },
     { "type": "text", "id": "included_label", "label": "Texto de \"incluido\"", "default": "Incluido" },
     { "type": "text", "id": "guarantee", "label": "Texto de garantía (opcional)", "default": "Garantía de devolución de 30 días" },
+    { "type": "text", "id": "btn_label", "label": "Texto del botón (opcional)", "info": "Lleva a la caja de compra (#comprar), donde está el botón real de Releasit." },
     { "type": "color", "id": "bg_color", "label": "Color de fondo (opcional)" },
     { "type": "color", "id": "text_color", "label": "Color del texto (opcional)" }
   ],

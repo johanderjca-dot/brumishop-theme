@@ -1349,6 +1349,7 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   display: flex; align-items: center; justify-content: center; gap: 8px;
   font-size: 13px; font-weight: 600; margin: 0;
 }
+.why__cta { text-align: center; margin-top: 18px; }
 
 /* ---------- tabla comparativa de 4 columnas ---------- */
 
