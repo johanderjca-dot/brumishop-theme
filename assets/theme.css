@@ -1401,15 +1401,12 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   text-transform: uppercase; color: var(--muted);
 }
 @media (min-width: 750px) { .cgrid__cell--col { font-size: 11px; letter-spacing: .5px; } }
+/* sin redondeo: en móvil la columna es angosta y el mismo radio que
+   se ve bien en escritorio ahí se nota como una píldora suelta,
+   desconectada de la fila de abajo — plano se ve igual en cualquier ancho */
 .cgrid__cell--highlight {
-  background: rgba(250, 243, 236, .55); border-radius: var(--card-radius) var(--card-radius) 0 0;
+  background: rgba(250, 243, 236, .55);
   color: var(--ink);
-}
-.cgrid__row:not(.cgrid__row--head) .cgrid__cell--highlight {
-  border-radius: 0; background: rgba(250, 243, 236, .55);
-}
-.cgrid__row:last-child .cgrid__cell--highlight {
-  border-radius: 0 0 var(--card-radius) var(--card-radius);
 }
 .cgrid__check {
   display: inline-flex; align-items: center; justify-content: center;
