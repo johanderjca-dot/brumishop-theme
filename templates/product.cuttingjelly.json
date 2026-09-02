@@ -97,7 +97,7 @@
       "type": "trust-ticker",
       "settings": {
         "text": "Made in USA | 20 años de investigación | #1 recomendado por doctores",
-        "speed": 24,
+        "speed": 60,
         "bg_color": "",
         "text_color": ""
       }
@@ -343,7 +343,7 @@
       "name": "Carrusel de reseñas",
       "settings": {
         "trust_text": "Hecho con calidad | Envío a todo el país | Recomendado por clientes",
-        "trust_speed": 24,
+        "trust_speed": 60,
         "eyebrow": "reseñas via whatsapp / web",
         "heading": "Únete a más de 1,200 clientes felices"
       }
