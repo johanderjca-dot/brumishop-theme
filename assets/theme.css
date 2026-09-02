@@ -643,9 +643,12 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 }
 /* entre el final de reseñas y el inicio de la siguiente sección
    quedaba demasiado espacio (dos section-pad completos sumados) —
-   se recorta a algo más razonable, en cualquier ancho */
-.reviews { padding-bottom: 4px; }
-.faq { padding-top: 8px; }
+   se recorta a algo más razonable, en cualquier ancho.
+   Selector compuesto (.section-pad.reviews / .section-pad.faq) para
+   ganarle en especificidad a la regla .section-pad de más abajo,
+   sin importar el orden en el archivo. */
+.section-pad.reviews { padding-bottom: 4px; }
+.section-pad.faq { padding-top: 8px; }
 @media (max-width: 749px) {
   .mission { padding-top: 28px; }
 }
