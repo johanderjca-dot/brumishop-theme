@@ -85,7 +85,7 @@
         "ingredientes"
       ],
       "settings": {
-        "bg_color": "#ad191f",
+        "bg_color": "#CF7573",
         "text_color": "#ffffff",
         "badge_text": "TOP",
         "badge_rating": "4.9/5.0",
@@ -176,7 +176,7 @@
       ],
       "settings": {
         "bg_color": "#ffffff",
-        "check_color": "#ad181f",
+        "check_color": "#CF7573",
         "check_icon_color": "#ffffff",
         "eyebrow": "CUTTING JELLY",
         "heading_1": "LA SOLUCIÓN DEFINITIVA PARA CONTROLAR TU APETITO",
@@ -245,8 +245,8 @@
         "col2_label": "Barra jelly:",
         "included_label": "Incluido",
         "guarantee": "Garantía de devolución de 30 días",
-        "bg_color": "",
-        "text_color": ""
+        "bg_color": "#FFFFFF",
+        "text_color": "#000000"
       }
     },
     "stat_bar_yy84Ad": {
