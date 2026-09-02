@@ -94,46 +94,6 @@
         "text_color": ""
       }
     },
-    "ingredientes-clave": {
-      "type": "ingredients-showcase",
-      "blocks": {
-        "i1": {
-          "type": "ingredient",
-          "settings": {}
-        },
-        "i2": {
-          "type": "ingredient",
-          "settings": {}
-        },
-        "i3": {
-          "type": "ingredient",
-          "settings": {}
-        },
-        "i4": {
-          "type": "ingredient",
-          "settings": {}
-        },
-        "i5": {
-          "type": "ingredient",
-          "settings": {}
-        },
-        "i6": {
-          "type": "ingredient",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "i1",
-        "i2",
-        "i3",
-        "i4",
-        "i5",
-        "i6"
-      ],
-      "settings": {
-        "heading": "INGREDIENTES CLAVE"
-      }
-    },
     "comparacion": {
       "type": "product-comparison-grid",
       "blocks": {
@@ -176,8 +136,6 @@
   "order": [
     "main",
     "confianza",
-    "ingredientes-clave",
     "comparacion"
   ]
 }
-
