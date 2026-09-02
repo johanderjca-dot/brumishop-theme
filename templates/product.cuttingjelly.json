@@ -51,6 +51,13 @@
             "item3": "Cambios sin complicaciones"
           }
         },
+        "collapsible_BPqCLy": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "BENEFICIOS",
+            "content": "<ul><li>Reduce la absorción de carbohidratos que se convierten en grasa.</li><li>Ayuda a evitar el bajón de energía después de comer dulces o harinas.</li><li>La fibra se expande en tu estómago para que comas menos sin sentir que te falta algo.</li></ul>"
+          }
+        },
         "como-usar": {
           "type": "collapsible",
           "settings": {
@@ -73,6 +80,7 @@
         "chips",
         "descripcion",
         "compra",
+        "collapsible_BPqCLy",
         "como-usar",
         "ingredientes"
       ],
