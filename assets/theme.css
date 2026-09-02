@@ -1386,6 +1386,9 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .cgrid__row:not(.cgrid__row--head) .cgrid__cell--highlight {
   border-radius: 0; background: #FAF3EC;
 }
+.cgrid__row:last-child .cgrid__cell--highlight {
+  border-radius: 0 0 var(--card-radius) var(--card-radius);
+}
 .cgrid__check {
   display: inline-flex; align-items: center; justify-content: center;
   width: 26px; height: 26px; border-radius: 50%;
