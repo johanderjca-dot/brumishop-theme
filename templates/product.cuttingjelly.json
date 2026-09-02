@@ -64,6 +64,13 @@
             "heading": "INGREDIENTES",
             "content": "<p>Garcinia Cambogia, fibra de semillas de chía y maltodextrina indigestible. La fibra te ayuda a sentirte satisfecha entre comidas y apoya tu digestión; el HCA de la Garcinia Cambogia está asociado con el control del apetito.</p>"
           }
+        },
+        "beneficios": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "BENEFICIOS",
+            "content": "<ul><li>Reduce la absorción de carbohidratos que se convierten en grasa.</li><li>Ayuda a evitar el bajón de energía después de comer dulces o harinas.</li><li>La fibra se expande en tu estómago para que comas menos sin sentir que te falta algo.</li></ul>"
+          }
         }
       },
       "block_order": [
@@ -73,6 +80,7 @@
         "chips",
         "descripcion",
         "compra",
+        "beneficios",
         "como-usar",
         "ingredientes"
       ],
