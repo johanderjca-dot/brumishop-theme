@@ -292,10 +292,11 @@
         "resena_LcyLfk": {
           "type": "resena",
           "settings": {
-            "headline": "Un resultado increíble",
-            "text": "Escribe aquí lo que dijo tu cliente sobre el producto.",
+            "headline": "me gusta",
+            "text": "Yo pense que era pa mujere na ma, pero eso me tiene de to",
             "rating": 5,
-            "author": "- Cliente verificado",
+            "avatar": "shopify://shop_images/Male9.jpg",
+            "author": "Carlos - Cliente verificado",
             "product": ""
           }
         },
@@ -303,29 +304,32 @@
           "type": "resena",
           "settings": {
             "headline": "Un resultado increíble",
-            "text": "Escribe aquí lo que dijo tu cliente sobre el producto.",
+            "text": "Compre mi paquete de 1 mes y no he dejado de usarlo un solo dia, funciona bien lo de la inflamación",
             "rating": 5,
-            "author": "- Cliente verificado",
+            "avatar": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_5.png",
+            "author": "Maria Elena - Cliente verificado",
             "product": ""
           }
         },
         "resena_aMQiVF": {
           "type": "resena",
           "settings": {
-            "headline": "Un resultado increíble",
-            "text": "Escribe aquí lo que dijo tu cliente sobre el producto.",
+            "headline": "si sirve",
+            "text": "Yo lo que tengo para decir es que muy bueno si",
             "rating": 5,
-            "author": "- Cliente verificado",
+            "avatar": "shopify://shop_images/WhatsApp_Image_2026-06-30_at_3.31.42_PM.jpg",
+            "author": "Ana Maria - Cliente verificado",
             "product": ""
           }
         },
         "resena_NezdJN": {
           "type": "resena",
           "settings": {
-            "headline": "Un resultado increíble",
-            "text": "Escribe aquí lo que dijo tu cliente sobre el producto.",
+            "headline": "voy al baño diario",
+            "text": "Bueno despues de eso yo como que voy mas seguido al baño",
             "rating": 5,
-            "author": "- Cliente verificado",
+            "avatar": "shopify://shop_images/Female10.jpg",
+            "author": "Luz - Cliente verificado",
             "product": ""
           }
         }
@@ -340,7 +344,7 @@
       "settings": {
         "trust_text": "Hecho con calidad | Envío a todo el país | Recomendado por clientes",
         "trust_speed": 24,
-        "eyebrow": "",
+        "eyebrow": "reseñas via whatsapp / web",
         "heading": "Únete a más de 1,200 clientes felices"
       }
     },
