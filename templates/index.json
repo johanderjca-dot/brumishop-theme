@@ -12,8 +12,8 @@
     "hero": {
       "type": "video-hero",
       "settings": {
-        "video": "shopify://files/videos/0827(2).mov",
-        "video_mobile": "shopify://files/videos/movilll.mov",
+        "video": "shopify://files/videos/hero-desktop-compressed.mp4",
+        "video_mobile": "shopify://files/videos/hero-mobile-compressed.mp4",
         "video_url": "",
         "height": "full",
         "height_custom": 75,
