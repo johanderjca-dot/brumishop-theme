@@ -151,6 +151,7 @@
   width: 40px; height: 40px;
   display: inline-flex; align-items: center; justify-content: center;
   position: relative;
+  border: 0; background: none; padding: 0; cursor: pointer;
 }
 .header__icon svg { width: 21px; height: 21px; }
 
