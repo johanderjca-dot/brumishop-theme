@@ -211,7 +211,8 @@
 </section>
 
 {%- if section.settings.sticky_bar -%}
-  <div class="sticky-buy" data-sticky-buy hidden>
+  <div class="sticky-buy" data-sticky-buy hidden
+    style="{% if section.settings.bg_color != blank %}--product-bg: {{ section.settings.bg_color }};{% endif %}{% if section.settings.text_color != blank %} --product-text: {{ section.settings.text_color }};{% endif %}">
     <div class="sticky-buy__inner page-width">
       <div class="sticky-buy__product">
         {%- if product.featured_image -%}

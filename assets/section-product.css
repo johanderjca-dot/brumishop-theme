@@ -233,7 +233,8 @@
   position: fixed;
   left: 0; right: 0; bottom: 0;
   z-index: 90;
-  background: var(--bg);
+  background: var(--product-bg, var(--bg));
+  color: var(--product-text, inherit);
   border-top: 1px solid var(--line);
   box-shadow: 0 -4px 20px rgba(0,0,0,.08);
   padding: 10px 0;
