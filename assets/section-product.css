@@ -185,7 +185,7 @@
   border: 0;
 }
 
-.product__purchase-card { margin: 8px 0 16px; }
+.product__purchase-card { margin: 8px 0 16px; scroll-margin-top: calc(var(--header-total-h) + 20px); }
 .product__purchase-card-header {
   color: var(--product-text, var(--ink));
   font-size: 12px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;

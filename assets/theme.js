@@ -159,16 +159,11 @@
     if (!cta) return;
 
     cta.addEventListener('click', function () {
-      // 1) si Releasit (u otra app) puso su botón, lo usamos
-      var appBtn = doc.querySelector('.product__block--app button, .product__block--app a[href], [id*="releasit"] button, .rsit-button');
-      if (appBtn) { appBtn.click(); return; }
-
-      // 2) si no, enviamos el formulario nativo
-      var form = doc.getElementById('ProductForm');
-      if (form) { form.requestSubmit ? form.requestSubmit() : form.submit(); return; }
-
-      // 3) último recurso: subir hasta la zona de compra
-      anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // sube hasta la caja de compra (donde vive el botón real de
+      // Releasit/checkout), en vez de intentar simular un clic sobre
+      // el botón de la app, que no siempre se puede detectar
+      var target = doc.querySelector('.product__purchase-card') || anchor;
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   }
 
