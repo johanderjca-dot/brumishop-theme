@@ -282,8 +282,66 @@
       ],
       "name": "Franja de estadísticas",
       "settings": {
-        "bg_color": "#CF7573",
+        "bg_color": "#cf7573",
         "text_color": "#ffffff"
+      }
+    },
+    "reviews_carousel_nHyaqY": {
+      "type": "reviews-carousel",
+      "blocks": {
+        "resena_LcyLfk": {
+          "type": "resena",
+          "settings": {
+            "headline": "Un resultado increíble",
+            "text": "Escribe aquí lo que dijo tu cliente sobre el producto.",
+            "rating": 5,
+            "author": "- Cliente verificado",
+            "product": ""
+          }
+        },
+        "resena_j4N6Fj": {
+          "type": "resena",
+          "settings": {
+            "headline": "Un resultado increíble",
+            "text": "Escribe aquí lo que dijo tu cliente sobre el producto.",
+            "rating": 5,
+            "author": "- Cliente verificado",
+            "product": ""
+          }
+        },
+        "resena_aMQiVF": {
+          "type": "resena",
+          "settings": {
+            "headline": "Un resultado increíble",
+            "text": "Escribe aquí lo que dijo tu cliente sobre el producto.",
+            "rating": 5,
+            "author": "- Cliente verificado",
+            "product": ""
+          }
+        },
+        "resena_NezdJN": {
+          "type": "resena",
+          "settings": {
+            "headline": "Un resultado increíble",
+            "text": "Escribe aquí lo que dijo tu cliente sobre el producto.",
+            "rating": 5,
+            "author": "- Cliente verificado",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "resena_LcyLfk",
+        "resena_j4N6Fj",
+        "resena_aMQiVF",
+        "resena_NezdJN"
+      ],
+      "name": "Carrusel de reseñas",
+      "settings": {
+        "trust_text": "Hecho con calidad | Envío a todo el país | Recomendado por clientes",
+        "trust_speed": 24,
+        "eyebrow": "",
+        "heading": "Únete a más de 1,200 clientes felices"
       }
     }
   },
@@ -293,6 +351,7 @@
     "comparacion",
     "mision",
     "why_section_wXXwHV",
-    "stat_bar_yy84Ad"
+    "stat_bar_yy84Ad",
+    "reviews_carousel_nHyaqY"
   ]
 }
