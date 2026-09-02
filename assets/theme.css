@@ -1419,9 +1419,12 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   align-items: center;
   justify-content: center;
 }
-/* el redondeo se ve bien en escritorio (columna ancha) pero en móvil,
-   con la columna angosta, el mismo radio se ve como una píldora suelta
-   desconectada de la fila de abajo — plano solo en móvil */
+/* con align-self:stretch la celda ya llena toda la fila, así que un
+   redondeo chico en las puntas (arriba del todo y abajo del todo) ya
+   no se ve como una píldora suelta — se puede usar en cualquier ancho */
+.cgrid__cell--highlight { border-radius: 6px 6px 0 0; }
+.cgrid__row:not(.cgrid__row--head) .cgrid__cell--highlight { border-radius: 0; }
+.cgrid__row:last-child .cgrid__cell--highlight { border-radius: 0 0 6px 6px; }
 @media (min-width: 750px) {
   .cgrid__cell--highlight { border-radius: var(--card-radius) var(--card-radius) 0 0; }
   .cgrid__row:not(.cgrid__row--head) .cgrid__cell--highlight { border-radius: 0; }
