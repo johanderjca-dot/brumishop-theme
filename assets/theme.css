@@ -1381,36 +1381,46 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   margin: 0 4px;
 }
 .cgrid__table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-/* .cgrid__table es el único grid real; cada .cgrid__row usa
-   display:contents para que sus celdas caigan directo en ese grid
-   compartido. Así la columna destacada puede pintarse como UNA sola
-   pieza (.cgrid__highlight-bg) de punta a punta en vez de una cajita
-   por fila — eliminando cualquier costura, redondeo o corte visible
-   entre filas, sobre todo notorio en móvil. */
-.cgrid__table {
-  display: grid; position: relative; align-items: center;
-  grid-template-columns: 130px repeat(4, 130px);
-  min-width: 650px;
+.cgrid__table { display: grid; min-width: 650px; }
+@media (min-width: 750px) {
+  .cgrid__table { min-width: 560px; }
+}
+.cgrid__row {
+  display: grid; grid-template-columns: 130px repeat(4, 130px);
+  align-items: center; border-bottom: 1px solid var(--line);
 }
 @media (min-width: 750px) {
-  .cgrid__table { grid-template-columns: 1.4fr repeat(4, 1fr); min-width: 560px; }
+  .cgrid__row { grid-template-columns: 1.4fr repeat(4, 1fr); }
 }
-.cgrid__row { display: contents; }
-.cgrid__highlight-bg {
-  grid-column: 2; grid-row: 1 / -1;
-  background: #FAF3EC; border-radius: var(--card-radius);
-}
-.cgrid__cell { padding: 12px 8px; font-size: 13px; text-align: center; position: relative; }
+.cgrid__row--head { border-bottom: 1px solid var(--line); }
+.cgrid__cell { padding: 12px 8px; font-size: 13px; text-align: center; }
 @media (min-width: 750px) { .cgrid__cell { padding: 14px 12px; } }
-.cgrid__cell:not(.cgrid__cell--highlight) { border-bottom: 1px solid var(--line); }
-.cgrid__row:last-child .cgrid__cell:not(.cgrid__cell--highlight) { border-bottom: none; }
 .cgrid__cell--label { text-align: left; font-weight: 600; }
 .cgrid__cell--col {
   font-size: 10px; line-height: 1.3; font-weight: 800; letter-spacing: .3px;
   text-transform: uppercase; color: var(--muted);
 }
 @media (min-width: 750px) { .cgrid__cell--col { font-size: 11px; letter-spacing: .5px; } }
-.cgrid__cell--highlight { color: var(--ink); }
+.cgrid__cell--highlight {
+  position: relative;
+  background: #FAF3EC; border-radius: var(--card-radius) var(--card-radius) 0 0;
+  color: var(--ink);
+}
+.cgrid__row:not(.cgrid__row--head) .cgrid__cell--highlight {
+  border-radius: 0; background: #FAF3EC;
+}
+.cgrid__row:last-child .cgrid__cell--highlight {
+  border-radius: 0 0 var(--card-radius) var(--card-radius);
+}
+/* la línea divisoria de cada fila (border-bottom) cruza por encima de
+   la franja crema y la corta visualmente en pedazos — se tapa esa
+   línea justo en esta columna para que la franja se vea de un solo
+   tramo continuo, de arriba a abajo */
+.cgrid__row:not(:last-child) .cgrid__cell--highlight::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: -1px;
+  height: 1px; background: #FAF3EC;
+}
 .cgrid__check {
   display: inline-flex; align-items: center; justify-content: center;
   width: 26px; height: 26px; border-radius: 50%;
