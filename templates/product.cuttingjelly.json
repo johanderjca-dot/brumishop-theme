@@ -97,10 +97,20 @@
     "comparacion": {
       "type": "product-comparison-grid",
       "blocks": {
+        "row_mqFFRc": {
+          "type": "row",
+          "settings": {
+            "label": "Evita bajones de energía",
+            "check1": true,
+            "check2": false,
+            "check3": false,
+            "check4": false
+          }
+        },
         "f1": {
           "type": "row",
           "settings": {
-            "label": "Característica",
+            "label": "Reduce absorción de carbohidratos",
             "check1": true,
             "check2": false,
             "check3": false,
@@ -110,55 +120,56 @@
         "f2": {
           "type": "row",
           "settings": {
-            "label": "Característica",
+            "label": "Controla antojos y apetito",
             "check1": true,
             "check2": false,
-            "check3": false,
+            "check3": true,
             "check4": false
           }
         },
         "f3": {
           "type": "row",
           "settings": {
-            "label": "Característica",
+            "label": "Mejora digestión",
             "check1": true,
-            "check2": false,
+            "check2": true,
             "check3": false,
-            "check4": false
+            "check4": true
           }
         },
         "f4": {
           "type": "row",
           "settings": {
-            "label": "Característica",
+            "label": "Formato listo para consumir",
             "check1": true,
-            "check2": false,
-            "check3": false,
+            "check2": true,
+            "check3": true,
             "check4": false
           }
         },
         "f5": {
           "type": "row",
           "settings": {
-            "label": "Característica",
+            "label": "Fibra natural (semillas de chía)",
             "check1": true,
             "check2": false,
             "check3": false,
-            "check4": false
+            "check4": true
           }
         },
         "f6": {
           "type": "row",
           "settings": {
-            "label": "Característica",
+            "label": "Sabor agradable",
             "check1": true,
             "check2": false,
-            "check3": false,
+            "check3": true,
             "check4": false
           }
         }
       },
       "block_order": [
+        "row_mqFFRc",
         "f1",
         "f2",
         "f3",
@@ -167,36 +178,23 @@
         "f6"
       ],
       "settings": {
-        "bg_color": "#FFFFFF",
-        "check_color": "#AD181F",
+        "bg_color": "#ffffff",
+        "check_color": "#ad181f",
+        "check_icon_color": "#FFFFFF",
         "eyebrow": "PLANT BASED",
         "heading_1": "DAILY",
         "heading_2": "SUPPLEMENTS WITH BENEFITS FOR YOU TO",
         "heading_3": "FEEL GOOD",
-        "col1_label": "NUESTRO PRODUCTO",
-        "col2_label": "COMPETIDOR A",
-        "col3_label": "COMPETIDOR B",
-        "col4_label": "COMPETIDOR C"
-      }
-    },
-    "mision": {
-      "type": "marquee-banner",
-      "settings": {
-        "overlay": 20,
-        "height": 60,
-        "height_mobile": 50,
-        "text": "TU SALUD EN BUENAS MANOS",
-        "text_color": "#FFFFFF",
-        "speed": 20,
-        "btn_label": "COMPRAR AHORA",
-        "btn_url": "#comprar"
+        "col1_label": "CUTTING JELLY",
+        "col2_label": "Digestivos Tradicionales",
+        "col3_label": "Gominolas de Control",
+        "col4_label": "FIBRA EN POLVO"
       }
     }
   },
   "order": [
     "main",
     "confianza",
-    "comparacion",
-    "mision"
+    "comparacion"
   ]
 }
