@@ -391,6 +391,59 @@
     }
   }
 
+  /* ---------- números que cuentan al entrar en pantalla ---------- */
+  function initStatBarCount() {
+    var bars = doc.querySelectorAll('[data-stat-bar]');
+    if (!bars.length) return;
+
+    function animateNumber(el) {
+      var target = el.getAttribute('data-count-target') || '';
+      var match = target.match(/^([\d.,]*\d)(.*)$/);
+      if (!match) { el.textContent = target; return; }
+
+      var numStr = match[1];
+      var suffix = match[2];
+      var hasCommas = numStr.indexOf(',') !== -1;
+      var cleanNum = numStr.replace(/,/g, '');
+      var decimals = cleanNum.indexOf('.') !== -1 ? cleanNum.split('.')[1].length : 0;
+      var endValue = parseFloat(cleanNum);
+      if (isNaN(endValue)) { el.textContent = target; return; }
+
+      var duration = 1400;
+      var start = null;
+
+      function format(value) {
+        var fixed = value.toFixed(decimals);
+        if (hasCommas) {
+          var parts = fixed.split('.');
+          parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+          fixed = parts.join('.');
+        }
+        return fixed + suffix;
+      }
+
+      function step(timestamp) {
+        if (start === null) start = timestamp;
+        var progress = Math.min((timestamp - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = format(endValue * eased);
+        if (progress < 1) window.requestAnimationFrame(step);
+      }
+      window.requestAnimationFrame(step);
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var numbers = entry.target.querySelectorAll('[data-stat-number]');
+        numbers.forEach(animateNumber);
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.4 });
+
+    bars.forEach(function (bar) { observer.observe(bar); });
+  }
+
   /* ---------- arranque ---------- */
   function boot() {
     initHeader();
@@ -404,6 +457,7 @@
     initSpotlight();
     initReviews();
     initCollectionToolbar();
+    initStatBarCount();
   }
 
   if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', boot);

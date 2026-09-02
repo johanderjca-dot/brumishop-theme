@@ -1,8 +1,8 @@
-<div class="stat-bar" style="background: {{ section.settings.bg_color }}">
+<div class="stat-bar" style="background: {{ section.settings.bg_color }}" data-stat-bar>
   <div class="page-width stat-bar__row">
     {%- for block in section.blocks -%}
       <div class="stat-bar__item" {{ block.shopify_attributes }}>
-        <span class="stat-bar__number" style="color: {{ section.settings.text_color }}">{{ block.settings.number }}</span>
+        <span class="stat-bar__number" style="color: {{ section.settings.text_color }}" data-stat-number data-count-target="{{ block.settings.number }}">{{ block.settings.number }}</span>
         <span class="stat-bar__label" style="color: {{ section.settings.text_color }}">{{ block.settings.label }}</span>
       </div>
     {%- endfor -%}
