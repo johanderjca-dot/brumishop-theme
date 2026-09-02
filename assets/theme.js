@@ -6,6 +6,17 @@
 
   var doc = document;
 
+  /* ---------- alt en la imagen de respaldo que video_tag genera dentro
+     de <video> — el filtro de Liquid solo acepta "alt" en la etiqueta
+     <video> (que no sirve de nada ahí), la <img> interna se queda sin
+     texto alternativo ---------- */
+  function initVideoFallbackAlt() {
+    doc.querySelectorAll('video[alt]').forEach(function (video) {
+      var img = video.querySelector('img:not([alt])');
+      if (img) img.setAttribute('alt', video.getAttribute('alt'));
+    });
+  }
+
   /* ---------- encabezado: banner + nav, glass al bajar, se oculta al deslizar ---------- */
   function initHeader() {
     var wrap = doc.querySelector('[data-site-header]');
@@ -597,6 +608,7 @@
 
   /* ---------- arranque ---------- */
   function boot() {
+    initVideoFallbackAlt();
     initHeader();
     initDrawer();
     initSearch();
