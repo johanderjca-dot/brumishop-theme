@@ -197,7 +197,7 @@
         "height_mobile": 50,
         "text": "TU SALUD EN BUENAS MANOS",
         "text_color": "#ffffff",
-        "speed": 20,
+        "speed": 60,
         "btn_label": "COMPRAR AHORA",
         "btn_url": "#comprar"
       }
