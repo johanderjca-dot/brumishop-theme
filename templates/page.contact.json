@@ -1,22 +1,60 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
       "type": "video-hero",
       "settings": {
+        "video": "shopify://files/videos/0902.mov",
+        "video_url": "",
+        "height": "medium",
+        "height_custom": 80,
+        "position_x": 50,
+        "position_y": 50,
+        "ratio_mobile": "square",
+        "height_custom_mobile": 90,
+        "position_x_mobile": 50,
+        "position_y_mobile": 50,
+        "overlay": 15,
+        "eyebrow": "",
         "heading": "Contacto",
+        "heading_size": 64,
+        "heading_size_mobile": 34,
         "subheading": "",
+        "text_color": "#ffffff",
         "align": "center",
         "valign": "center",
-        "height": "custom",
-        "height_custom": 32,
-        "overlay": 15,
         "btn1_label": "",
-        "btn2_label": ""
+        "btn1_url": "",
+        "btn2_label": "",
+        "btn2_url": ""
       }
     },
     "form": {
-      "type": "contact-form"
+      "type": "contact-form",
+      "settings": {
+        "bg_color": "#FFFFFF",
+        "text_color": "",
+        "heading": "Ponte en contacto con nosotros",
+        "text": "¿Tienes preguntas o necesitas ayuda? Completa el formulario y te responderemos lo antes posible.",
+        "label_name": "Nombre",
+        "label_phone": "Teléfono",
+        "label_email": "Correo electrónico",
+        "label_comment": "Mensaje",
+        "label_submit": "Enviar",
+        "success_text": "¡Gracias! Recibimos tu mensaje y te contactaremos pronto."
+      }
     }
   },
-  "order": ["hero", "form"]
+  "order": [
+    "hero",
+    "form"
+  ]
 }
