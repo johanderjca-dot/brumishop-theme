@@ -36,9 +36,17 @@
         <p class="why__guarantee">{% render 'icon-checkmark' %} {{ section.settings.guarantee }}</p>
       {%- endif -%}
 
-      {%- if section.settings.btn_label != blank -%}
+      {%- if section.settings.btn_label != blank and product != blank -%}
         <div class="why__cta">
-          <a class="btn btn--primary" href="#comprar">{{ section.settings.btn_label }}</a>
+          {%- comment -%} formulario real de agregar al carrito: Releasit
+            detecta el enlace /rsi-btn-hook adentro y lo reemplaza por su
+            propio botón, ligado a este mismo producto/variante. {%- endcomment -%}
+          <form method="post" action="/cart/add" class="why__cta-form">
+            <input type="hidden" name="form_type" value="product">
+            <input type="hidden" name="product-id" value="{{ product.id }}">
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+            <a class="btn btn--primary" href="/rsi-btn-hook">{{ section.settings.btn_label }}</a>
+          </form>
         </div>
       {%- endif -%}
     </div>
@@ -57,7 +65,7 @@
     { "type": "text", "id": "col2_label", "label": "Columna 2", "default": "Cápsulas:" },
     { "type": "text", "id": "included_label", "label": "Texto de \"incluido\"", "default": "Incluido" },
     { "type": "text", "id": "guarantee", "label": "Texto de garantía (opcional)", "default": "Garantía de devolución de 30 días" },
-    { "type": "text", "id": "btn_label", "label": "Texto del botón (opcional)", "info": "Lleva a la caja de compra (#comprar), donde está el botón real de Releasit." },
+    { "type": "text", "id": "btn_label", "label": "Texto del botón (opcional)", "info": "Botón real de Releasit — solo úsalo si el producto no tiene ya otro botón de Releasit visible en la página." },
     { "type": "color", "id": "bg_color", "label": "Color de fondo (opcional)" },
     { "type": "color", "id": "text_color", "label": "Color del texto (opcional)" }
   ],
