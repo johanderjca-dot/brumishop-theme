@@ -178,11 +178,25 @@
         "col3_label": "COMPETIDOR B",
         "col4_label": "COMPETIDOR C"
       }
+    },
+    "mision": {
+      "type": "marquee-banner",
+      "settings": {
+        "overlay": 20,
+        "height": 60,
+        "height_mobile": 50,
+        "text": "TU SALUD EN BUENAS MANOS",
+        "text_color": "#FFFFFF",
+        "speed": 20,
+        "btn_label": "COMPRAR AHORA",
+        "btn_url": "#comprar"
+      }
     }
   },
   "order": [
     "main",
     "confianza",
-    "comparacion"
+    "comparacion",
+    "mision"
   ]
 }

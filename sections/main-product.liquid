@@ -147,7 +147,7 @@
             </div>
 
           {%- when 'purchase_card' -%}
-            <div class="product__purchase-card" {{ block.shopify_attributes }}>
+            <div class="product__purchase-card" id="comprar" {{ block.shopify_attributes }}>
               {%- if block.settings.header_label != blank -%}
                 <div class="product__purchase-card-header">{{ block.settings.header_label }}</div>
               {%- endif -%}
