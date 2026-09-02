@@ -84,6 +84,99 @@
     });
   }
 
+  /* ---------- panel de búsqueda en vivo (sin ir a otra página) ---------- */
+  function initSearch() {
+    var overlay = doc.querySelector('[data-search]');
+    if (!overlay) return;
+
+    var input = overlay.querySelector('[data-search-input]');
+    var results = overlay.querySelector('[data-search-results]');
+    var predictiveUrl = overlay.getAttribute('data-predictive-url');
+    var lastQuery = '';
+    var debounceTimer = null;
+    var activeRequest = null;
+
+    function open() {
+      overlay.hidden = false;
+      requestAnimationFrame(function () { overlay.classList.add('is-open'); });
+      doc.body.style.overflow = 'hidden';
+      setTimeout(function () { input.focus(); }, 50);
+    }
+    function close() {
+      overlay.classList.remove('is-open');
+      doc.body.style.overflow = '';
+      setTimeout(function () { overlay.hidden = true; }, 280);
+    }
+
+    function money(cents) {
+      if (typeof cents !== 'number') return '';
+      return (cents / 100).toLocaleString(doc.documentElement.lang || 'es', {
+        style: 'currency', currency: (window.Shopify && Shopify.currency && Shopify.currency.active) || 'USD'
+      });
+    }
+
+    function render(products, query) {
+      if (!products.length) {
+        results.innerHTML = '<p class="search-overlay__hint">No encontramos resultados para &ldquo;' + query + '&rdquo;.</p>';
+        return;
+      }
+      var html = '<div class="search-overlay__list">';
+      products.forEach(function (p) {
+        var price = p.price != null ? p.price : (typeof p.price_min === 'number' ? money(p.price_min) : '');
+        html += '<a class="search-overlay__item" href="' + p.url + '">' +
+          (p.image ? '<img src="' + p.image + '" alt="" loading="lazy">' : '') +
+          '<span class="search-overlay__item-info">' +
+            '<span class="search-overlay__item-title">' + p.title + '</span>' +
+            (price ? '<span class="search-overlay__item-price">' + price + '</span>' : '') +
+          '</span>' +
+        '</a>';
+      });
+      html += '</div>';
+      html += '<a class="search-overlay__viewall" href="' + overlay.querySelector('form').action + '?q=' + encodeURIComponent(query) + '">Ver todos los resultados</a>';
+      results.innerHTML = html;
+    }
+
+    function search(query) {
+      if (!predictiveUrl) return;
+      if (activeRequest) activeRequest.abort();
+      var controller = ('AbortController' in window) ? new AbortController() : null;
+      activeRequest = controller;
+
+      fetch(predictiveUrl + '?q=' + encodeURIComponent(query) + '&resources[type]=product&resources[limit]=6&resources[options][unavailable_products]=last',
+        { signal: controller && controller.signal, headers: { Accept: 'application/json' } })
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          activeRequest = null;
+          var products = (data.resources && data.resources.results && data.resources.results.products) || [];
+          render(products, query);
+        })
+        .catch(function () { /* búsqueda cancelada o de red: no hacer nada */ });
+    }
+
+    input.addEventListener('input', function () {
+      var query = input.value.trim();
+      clearTimeout(debounceTimer);
+      if (query === lastQuery) return;
+      if (query.length < 2) {
+        results.innerHTML = '';
+        lastQuery = query;
+        return;
+      }
+      debounceTimer = setTimeout(function () {
+        lastQuery = query;
+        search(query);
+      }, 250);
+    });
+
+    doc.addEventListener('click', function (e) {
+      if (e.target.closest('[data-search-open]')) { e.preventDefault(); open(); }
+      else if (e.target.closest('[data-search-close]')) { e.preventDefault(); close(); }
+    });
+    doc.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !overlay.hidden) close();
+    });
+  }
+
   /* ---------- cerrar los menús desplegables al hacer clic fuera ---------- */
   function initDropdowns() {
     doc.addEventListener('click', function (e) {
@@ -498,6 +591,7 @@
   function boot() {
     initHeader();
     initDrawer();
+    initSearch();
     initDropdowns();
     initGallery();
     initVariantPills();

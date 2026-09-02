@@ -219,3 +219,63 @@
 .drawer__nav summary::-webkit-details-marker { display: none; }
 .drawer__sub { display: grid; gap: 2px; padding: 8px 0 12px 12px; }
 .drawer__sub a { padding: 9px 4px; font-size: 14px; }
+
+/* --- panel de búsqueda: se abre en el sitio, sin ir a otra página --- */
+.search-overlay { position: fixed; inset: 0; z-index: 130; }
+.search-overlay__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.45); }
+.search-overlay__panel {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  max-height: 100vh;
+  overflow-y: auto;
+  background: var(--bg);
+  color: var(--ink);
+  transform: translateY(-100%);
+  transition: transform .28s ease;
+}
+.search-overlay.is-open .search-overlay__panel { transform: translateY(0); }
+
+.search-overlay__form {
+  display: flex; align-items: center; gap: 12px;
+  max-width: 720px; margin: 0 auto;
+  padding: 20px 20px 16px;
+}
+.search-overlay__form .icon-search { width: 20px; height: 20px; flex: 0 0 auto; opacity: .6; }
+.search-overlay__input {
+  flex: 1; min-width: 0;
+  border: 0; border-bottom: 1px solid var(--line);
+  border-radius: 0; padding: 8px 2px;
+  font-size: 18px;
+}
+.search-overlay__input:focus { border-color: var(--ink); }
+.search-overlay__close {
+  background: none; border: 0;
+  font-size: 28px; line-height: 1;
+  padding: 0 0 0 8px; flex: 0 0 auto;
+}
+
+.search-overlay__results { max-width: 720px; margin: 0 auto; padding: 0 20px 24px; }
+.search-overlay__hint { color: var(--muted); font-size: 14px; padding: 8px 0; }
+.search-overlay__list { display: grid; gap: 4px; }
+.search-overlay__item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--line);
+}
+.search-overlay__item:last-child { border-bottom: 0; }
+.search-overlay__item img {
+  width: 52px; height: 52px; object-fit: cover; border-radius: 6px;
+  background: var(--bg-alt); flex: 0 0 auto;
+}
+.search-overlay__item-info { min-width: 0; display: grid; gap: 2px; }
+.search-overlay__item-title {
+  font-size: 14px; font-weight: 600;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.search-overlay__item-price { font-size: 13px; color: var(--muted); }
+.search-overlay__viewall {
+  display: block; text-align: center;
+  margin-top: 8px; padding: 12px 4px;
+  font-size: 13px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
+  border-top: 1px solid var(--line);
+}
