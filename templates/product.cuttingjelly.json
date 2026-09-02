@@ -101,10 +101,161 @@
         "bg_color": "",
         "text_color": ""
       }
+    },
+    "ingredientes-clave": {
+      "type": "ingredients-showcase",
+      "blocks": {
+        "i1": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Garcinia Cambogia (HCA)",
+            "text": "El HCA bloquea la formación de grasa y calma las ganas de comer sin parar."
+          }
+        },
+        "i2": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Maltodextrina indigestible",
+            "text": "Actúa como fibra que facilita la limpieza intestinal y baja la hinchazón."
+          }
+        },
+        "i3": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Semillas de chía",
+            "text": "Se expanden y aportan fibra, ayudándote a sentirte llena entre comidas."
+          }
+        },
+        "i4": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Calcio",
+            "text": "Aporta a la salud ósea como parte de tu rutina diaria."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {
+        "heading": "INGREDIENTES CLAVE"
+      }
+    },
+    "por-que": {
+      "type": "why-section",
+      "blocks": {
+        "b1": {
+          "type": "row",
+          "settings": {
+            "benefit": "Bloqueo de grasa (HCA)"
+          }
+        },
+        "b2": {
+          "type": "row",
+          "settings": {
+            "benefit": "Control de antojos"
+          }
+        },
+        "b3": {
+          "type": "row",
+          "settings": {
+            "benefit": "Digestión ligera"
+          }
+        },
+        "b4": {
+          "type": "row",
+          "settings": {
+            "benefit": "Sensación de saciedad"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "heading": "¿POR QUÉ CUTTING JELLY?",
+        "text": "<p>Cutting Jelly combina ingredientes naturales para ayudarte a sentirte satisfecha, con menos antojos y una digestión más ligera.</p>",
+        "col1_label": "Beneficio:",
+        "col2_label": "Incluido:",
+        "included_label": "Incluido",
+        "guarantee": "Cambios sin complicaciones"
+      }
+    },
+    "vitrina-fondo": {
+      "type": "feature-showcase",
+      "blocks": {
+        "c1": {
+          "type": "card",
+          "settings": {
+            "title": "Energía todo el día"
+          }
+        },
+        "c2": {
+          "type": "card",
+          "settings": {
+            "title": "Ingredientes naturales"
+          }
+        },
+        "c3": {
+          "type": "card",
+          "settings": {
+            "title": "Miles de clientas satisfechas"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "bg_color": "#6c1936",
+        "text_color": "#FFFFFF",
+        "eyebrow": "INNOVACIÓN LÍDER",
+        "heading": "Miles de resultados reales, no solo promesas."
+      }
+    },
+    "resenas": {
+      "type": "reviews-carousel",
+      "blocks": {
+        "r1": {
+          "type": "resena",
+          "settings": {}
+        },
+        "r2": {
+          "type": "resena",
+          "settings": {}
+        },
+        "r3": {
+          "type": "resena",
+          "settings": {}
+        },
+        "r4": {
+          "type": "resena",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "confianza"
+    "confianza",
+    "ingredientes-clave",
+    "por-que",
+    "vitrina-fondo",
+    "resenas"
   ]
 }

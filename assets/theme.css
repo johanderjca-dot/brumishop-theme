@@ -1301,3 +1301,51 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .split-banner__content { position: absolute; left: 24px; top: 24px; z-index: 1; display: grid; gap: 6px; }
 .split-banner__heading { color: #fff; font-weight: 800; font-size: 20px; text-transform: uppercase; }
 .split-banner__link { color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: underline; text-underline-offset: 4px; }
+
+/* ---------- ingredientes clave (imagen central + callouts) ---------- */
+
+.ingredients__heading {
+  text-align: center; font-size: 20px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: .5px; margin: 0 0 36px;
+}
+.ingredients__layout {
+  display: grid; gap: 32px; align-items: center;
+}
+@media (min-width: 750px) {
+  .ingredients__layout { grid-template-columns: 1fr 1.1fr 1fr; gap: 32px; }
+}
+.ingredients__col { display: grid; gap: 28px; text-align: center; }
+.ingredients__item h3 {
+  font-size: 14px; font-weight: 800; letter-spacing: .5px;
+  text-transform: uppercase; margin: 0 0 8px;
+}
+.ingredients__item p { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.5; }
+.ingredients__media img, .ingredients__placeholder { width: 100%; height: auto; display: block; }
+
+/* ---------- por qué este producto (imagen + tabla de beneficios) ---------- */
+
+.why__grid { display: grid; gap: 32px; }
+@media (min-width: 750px) {
+  .why__grid { grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+}
+.why__media img, .why__placeholder { width: 100%; height: auto; border-radius: var(--card-radius); display: block; }
+.why__heading {
+  text-align: center; font-size: 20px; font-weight: 800;
+  text-transform: uppercase; margin: 0 0 14px;
+}
+.why__text { text-align: center; margin-bottom: 20px; opacity: .85; }
+.why__table {
+  border: 1px solid var(--line); border-radius: var(--card-radius);
+  overflow: hidden; margin-bottom: 20px;
+}
+.why__table-head, .why__table-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  padding: 12px 16px; font-size: 13px;
+}
+.why__table-head { background: rgba(0,0,0,.08); font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
+.why__table-row:nth-child(odd) { background: rgba(0,0,0,.04); }
+.why__included { font-weight: 600; }
+.why__guarantee {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  font-size: 13px; font-weight: 600; margin: 0;
+}
