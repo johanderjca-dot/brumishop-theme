@@ -1401,8 +1401,12 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   text-transform: uppercase; color: var(--muted);
 }
 @media (min-width: 750px) { .cgrid__cell--col { font-size: 11px; letter-spacing: .5px; } }
+/* color sólido (no rgba) a propósito: un fondo semitransparente
+   choca con el border-bottom de cada fila y el navegador dibuja una
+   costura/gap justo ahí, sobre todo en móvil — sólido evita ese
+   artefacto por completo mientras se ve igual de claro/sutil */
 .cgrid__cell--highlight {
-  background: rgba(250, 243, 236, .55);
+  background: #FCF8F5;
   color: var(--ink);
 }
 /* el redondeo se ve bien en escritorio (columna ancha) pero en móvil,
