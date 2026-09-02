@@ -208,25 +208,25 @@
         "row_R4dT7x": {
           "type": "row",
           "settings": {
-            "benefit": "Beneficio"
+            "benefit": "Controla antojos y apetito"
           }
         },
         "row_7BRTgp": {
           "type": "row",
           "settings": {
-            "benefit": "Beneficio"
+            "benefit": "Evita bajones de energía"
           }
         },
         "row_BFaYMh": {
           "type": "row",
           "settings": {
-            "benefit": "Beneficio"
+            "benefit": "Reduce absorción de carbohidratos"
           }
         },
         "row_E49BFc": {
           "type": "row",
           "settings": {
-            "benefit": "Beneficio"
+            "benefit": "#1 en ventas en TikTok"
           }
         }
       },
@@ -242,7 +242,7 @@
         "heading": "¿POR QUÉ CUTTING JELLY?",
         "text": "",
         "col1_label": "Beneficio:",
-        "col2_label": "Cápsulas:",
+        "col2_label": "Barra jelly:",
         "included_label": "Incluido",
         "guarantee": "Garantía de devolución de 30 días",
         "bg_color": "",
