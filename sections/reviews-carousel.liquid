@@ -77,11 +77,13 @@
   {%- if section.settings.trust_text != blank -%}
     <div class="reviews__trust">
       <div class="reviews__trust-track" style="--trust-speed: {{ section.settings.trust_speed }}s">
+        {%- assign trust_words = section.settings.trust_text | split: '|' -%}
         {%- for i in (1..2) -%}
           <div class="reviews__trust-group" {% if i == 2 %}aria-hidden="true"{% endif %}>
-            {%- assign trust_words = section.settings.trust_text | split: '|' -%}
-            {%- for word in trust_words -%}
-              <span class="reviews__trust-item">{{ word | strip }}</span>
+            {%- for rep in (1..6) -%}
+              {%- for word in trust_words -%}
+                <span class="reviews__trust-item">{{ word | strip }}</span>
+              {%- endfor -%}
             {%- endfor -%}
           </div>
         {%- endfor -%}

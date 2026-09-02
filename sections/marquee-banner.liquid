@@ -24,7 +24,9 @@
         <div class="mqb__track" style="--mqb-speed: {{ section.settings.speed }}s">
           {%- for i in (1..2) -%}
             <div class="mqb__group" {% if i == 2 %}aria-hidden="true"{% endif %}>
-              <span class="mqb__text">{{ section.settings.text }}</span>
+              {%- for rep in (1..4) -%}
+                <span class="mqb__text">{{ section.settings.text }}</span>
+              {%- endfor -%}
             </div>
           {%- endfor -%}
         </div>
