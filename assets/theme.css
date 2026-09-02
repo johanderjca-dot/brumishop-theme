@@ -1349,3 +1349,37 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   display: flex; align-items: center; justify-content: center; gap: 8px;
   font-size: 13px; font-weight: 600; margin: 0;
 }
+
+/* ---------- tabla comparativa de 4 columnas ---------- */
+
+.cgrid__heading {
+  text-align: center; font-size: 22px; font-weight: 800;
+  text-transform: uppercase; margin: 0 0 32px;
+}
+.cgrid__table-wrap { overflow-x: auto; }
+.cgrid__table { display: grid; min-width: 560px; }
+.cgrid__row {
+  display: grid; grid-template-columns: 1.4fr repeat(4, 1fr);
+  align-items: center; border-bottom: 1px solid var(--line);
+}
+.cgrid__row--head { border-bottom: 1px solid var(--line); }
+.cgrid__cell { padding: 14px 12px; font-size: 13px; text-align: center; }
+.cgrid__cell--label { text-align: left; font-weight: 600; }
+.cgrid__cell--col {
+  font-size: 11px; font-weight: 800; letter-spacing: .5px;
+  text-transform: uppercase; color: var(--muted);
+}
+.cgrid__cell--highlight {
+  background: #fff; border-radius: var(--card-radius) var(--card-radius) 0 0;
+  color: var(--ink);
+}
+.cgrid__row:not(.cgrid__row--head) .cgrid__cell--highlight {
+  border-radius: 0; background: #fff;
+}
+.cgrid__check {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; border-radius: 50%;
+  font-size: 13px; font-weight: 700;
+}
+.cgrid__check--yes { background: var(--accent, #F5C518); color: #151515; }
+.cgrid__check--no { background: var(--bg-alt); color: var(--muted); }

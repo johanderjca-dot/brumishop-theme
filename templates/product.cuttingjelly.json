@@ -45,13 +45,6 @@
             "item3": "Cambios sin complicaciones"
           }
         },
-        "beneficios": {
-          "type": "collapsible",
-          "settings": {
-            "heading": "BENEFICIOS",
-            "content": "<ul><li>Reduce la absorción de carbohidratos que se convierten en grasa.</li><li>Ayuda a evitar el bajón de energía después de comer dulces o harinas.</li><li>La fibra se expande en tu estómago para que comas menos sin sentir que te falta algo.</li></ul>"
-          }
-        },
         "como-usar": {
           "type": "collapsible",
           "settings": {
@@ -80,7 +73,6 @@
         "chips",
         "descripcion",
         "compra",
-        "beneficios",
         "como-usar",
         "ingredientes"
       ],
@@ -141,11 +133,50 @@
       "settings": {
         "heading": "INGREDIENTES CLAVE"
       }
+    },
+    "comparacion": {
+      "type": "comparison-grid",
+      "blocks": {
+        "f1": {
+          "type": "row",
+          "settings": {}
+        },
+        "f2": {
+          "type": "row",
+          "settings": {}
+        },
+        "f3": {
+          "type": "row",
+          "settings": {}
+        },
+        "f4": {
+          "type": "row",
+          "settings": {}
+        },
+        "f5": {
+          "type": "row",
+          "settings": {}
+        },
+        "f6": {
+          "type": "row",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "main",
     "confianza",
-    "ingredientes-clave"
+    "ingredientes-clave",
+    "comparacion"
   ]
 }
