@@ -201,12 +201,46 @@
         "btn_label": "COMPRAR AHORA",
         "btn_url": "#comprar"
       }
+    },
+    "por-que": {
+      "type": "why-section",
+      "blocks": {
+        "b1": {
+          "type": "row",
+          "settings": {}
+        },
+        "b2": {
+          "type": "row",
+          "settings": {}
+        },
+        "b3": {
+          "type": "row",
+          "settings": {}
+        },
+        "b4": {
+          "type": "row",
+          "settings": {}
+        },
+        "b5": {
+          "type": "row",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "main",
     "confianza",
     "comparacion",
-    "mision"
+    "mision",
+    "por-que"
   ]
 }
