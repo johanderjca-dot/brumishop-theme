@@ -177,7 +177,7 @@
       "settings": {
         "bg_color": "#ffffff",
         "check_color": "#ad181f",
-        "check_icon_color": "#FFFFFF",
+        "check_icon_color": "#ffffff",
         "eyebrow": "CUTTING JELLY",
         "heading_1": "LA SOLUCIÓN DEFINITIVA PARA CONTROLAR TU APETITO",
         "heading_2": "",
@@ -201,12 +201,60 @@
         "btn_label": "COMPRAR AHORA",
         "btn_url": "#comprar"
       }
+    },
+    "why_section_wXXwHV": {
+      "type": "why-section",
+      "blocks": {
+        "row_R4dT7x": {
+          "type": "row",
+          "settings": {
+            "benefit": "Beneficio"
+          }
+        },
+        "row_7BRTgp": {
+          "type": "row",
+          "settings": {
+            "benefit": "Beneficio"
+          }
+        },
+        "row_BFaYMh": {
+          "type": "row",
+          "settings": {
+            "benefit": "Beneficio"
+          }
+        },
+        "row_E49BFc": {
+          "type": "row",
+          "settings": {
+            "benefit": "Beneficio"
+          }
+        }
+      },
+      "block_order": [
+        "row_R4dT7x",
+        "row_7BRTgp",
+        "row_BFaYMh",
+        "row_E49BFc"
+      ],
+      "name": "Por qué este producto",
+      "settings": {
+        "image": "shopify://shop_images/fresh-mangosteen-and-fruit-at-a-market-stall-2026-03-25-05-46-52-utc.jpg",
+        "heading": "¿POR QUÉ CUTTING JELLY?",
+        "text": "",
+        "col1_label": "Beneficio:",
+        "col2_label": "Cápsulas:",
+        "included_label": "Incluido",
+        "guarantee": "Garantía de devolución de 30 días",
+        "bg_color": "",
+        "text_color": ""
+      }
     }
   },
   "order": [
     "main",
     "confianza",
     "comparacion",
-    "mision"
+    "mision",
+    "why_section_wXXwHV"
   ]
 }
