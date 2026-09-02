@@ -351,32 +351,56 @@
     "faq_accordion_6xBJq3": {
       "type": "faq-accordion",
       "blocks": {
+        "faq_387zMa": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Qué pasa si hago el pedido y no me gusta al recibirlo?",
+            "answer": "<p>Pagas contra entrega — lo revisas cuando lo tienes en tus manos, y solo pagas si decides quedarte con él. <strong>Envío gratis en toda República Dominicana.</strong></p>"
+          }
+        },
+        "faq_rQA3Ld": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cómo y cuándo se come?",
+            "answer": "<p>1 stick al día, preferiblemente después de una comida (muchos lo comen después del almuerzo). Se abre y se come directo, como un popsicle — no necesita agua ni preparación.</p>"
+          }
+        },
         "faq_iAXgnM": {
           "type": "faq",
           "settings": {
-            "question": "¿Es seguro usar este producto?",
-            "answer": ""
+            "question": "¿Qué trae adentro y qué hace?",
+            "answer": "<p>Garcinia Cambogia, fibra de semillas de chía y maltodextrina indigestible. La fibra te ayuda a sentirte satisfecha entre comidas y apoya tu digestión; el HCA de la Garcinia Cambogia está asociado con el control del apetito.</p>"
           }
         },
         "faq_GG9DFq": {
           "type": "faq",
           "settings": {
-            "question": "¿Es seguro usar este producto?",
-            "answer": ""
+            "question": "¿Lo pueden comer los hombres también?",
+            "answer": "<p>Si, es un producto para el estomago de cualquier persona.</p>"
           }
         },
         "faq_9bThGg": {
           "type": "faq",
           "settings": {
-            "question": "¿Es seguro usar este producto?",
-            "answer": ""
+            "question": "¿Tiene contraindicaciones o alguien que no debería comerlo?",
+            "answer": "<p>Contiene pescado y leche (colágeno de pescado y proteína de leche) — si tienes alergia a estos, no lo consumas. No se recomienda en embarazo, lactancia, ni en niños. Si tienes alguna condición de hígado, riñón o corazón, o tomas medicamentos, consulta a tu médico antes de usarlo.</p>"
+          }
+        },
+        "faq_Nx8kYi": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cuánto dura una caja / cuál es el tiempo de duración?",
+            "answer": "<p>Cada caja trae 10 sticks — a razón de 1 al día, te dura <strong>10 días</strong> (tu rutina completa). No necesita refrigeración, se conserva a temperatura ambiente, y sin abrir tiene una vida útil larga (revisa la fecha de vencimiento impresa en tu caja específica, ya que puede variar por lote).</p>"
           }
         }
       },
       "block_order": [
+        "faq_387zMa",
+        "faq_rQA3Ld",
         "faq_iAXgnM",
         "faq_GG9DFq",
-        "faq_9bThGg"
+        "faq_9bThGg",
+        "faq_Nx8kYi"
       ],
       "name": "Preguntas frecuentes",
       "settings": {
