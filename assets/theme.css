@@ -1383,3 +1383,4 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 }
 .cgrid__check--yes { background: var(--accent, #F5C518); color: #151515; }
 .cgrid__check--no { background: var(--bg-alt); color: var(--muted); }
+/* sync-health-check */
