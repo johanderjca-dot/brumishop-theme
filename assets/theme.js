@@ -326,50 +326,100 @@
   function initReviews() {
     doc.querySelectorAll('[data-reviews]').forEach(function (root) {
       var track = root.querySelector('[data-reviews-track]');
-      var cards = Array.prototype.slice.call(root.querySelectorAll('[data-review]'));
+      var originals = Array.prototype.slice.call(root.querySelectorAll('[data-review]'));
       var prev = root.querySelector('[data-reviews-prev]');
       var next = root.querySelector('[data-reviews-next]');
       var dots = Array.prototype.slice.call(root.querySelectorAll('[data-reviews-dot]'));
-      if (!track || !cards.length) return;
+      if (!track || !originals.length) return;
 
-      var ticking = false;
+      var n = originals.length;
+      var loopWidth = 0;
 
-      function closestIndex() {
-        var trackRect = track.getBoundingClientRect();
-        var center = trackRect.left + trackRect.width / 2;
-        var best = 0, bestDist = Infinity;
-        cards.forEach(function (card, i) {
-          var r = card.getBoundingClientRect();
-          var dist = Math.abs((r.left + r.width / 2) - center);
-          if (dist < bestDist) { bestDist = dist; best = i; }
-        });
-        return best;
+      // clona las reseñas y las pone antes/después de las reales, así
+      // el carrusel siempre tiene contenido hacia donde deslizar en
+      // ambas direcciones y el loop se siente infinito (misma técnica
+      // que el carrusel de categorías)
+      if (n > 1) {
+        function cloneSet() {
+          return originals.map(function (el) {
+            var clone = el.cloneNode(true);
+            clone.setAttribute('aria-hidden', 'true');
+            clone.querySelectorAll('a, button, input, select, textarea').forEach(function (f) {
+              f.setAttribute('tabindex', '-1');
+            });
+            return clone;
+          });
+        }
+        var firstOriginal = track.firstElementChild;
+        cloneSet().forEach(function (el) { track.insertBefore(el, firstOriginal); });
+        cloneSet().forEach(function (el) { track.appendChild(el); });
       }
 
+      function step() {
+        var style = getComputedStyle(track);
+        var gap = parseFloat(style.columnGap || style.gap || 0) || 0;
+        return originals[0].getBoundingClientRect().width + gap;
+      }
+
+      function remeasure() {
+        if (n < 2) return;
+        var w = step() * n;
+        if (w > 10) {
+          loopWidth = w;
+          track.scrollLeft = loopWidth + (track.scrollLeft % loopWidth || 0);
+        } else {
+          loopWidth = 0;
+        }
+      }
+
+      // si el scroll entró en la zona clonada, lo reubica sin animación
+      // en el punto equivalente del tramo real — invisible para el usuario
+      function loopCheck() {
+        if (!loopWidth) return;
+        if (track.scrollLeft < loopWidth * 0.5) {
+          track.scrollLeft += loopWidth;
+        } else if (track.scrollLeft > loopWidth * 1.5) {
+          track.scrollLeft -= loopWidth;
+        }
+      }
+
+      function currentIndex() {
+        if (!loopWidth) {
+          var trackRect = track.getBoundingClientRect();
+          var center = trackRect.left + trackRect.width / 2;
+          var best = 0, bestDist = Infinity;
+          originals.forEach(function (card, i) {
+            var r = card.getBoundingClientRect();
+            var dist = Math.abs((r.left + r.width / 2) - center);
+            if (dist < bestDist) { bestDist = dist; best = i; }
+          });
+          return best;
+        }
+        var logicalPos = ((track.scrollLeft % loopWidth) + loopWidth) % loopWidth;
+        return Math.round(logicalPos / step()) % n;
+      }
+
+      var ticking = false;
       function update() {
-        var idx = closestIndex();
-        cards.forEach(function (c, i) { c.classList.toggle('is-focused', i === idx); });
+        loopCheck();
+        var idx = currentIndex();
         dots.forEach(function (d, i) { d.classList.toggle('is-active', i === idx); });
       }
 
       function goTo(i) {
-        // loop: pasar del último vuelve al primero, y viceversa
-        i = ((i % cards.length) + cards.length) % cards.length;
-        var trackRect = track.getBoundingClientRect();
-        var cardRect = cards[i].getBoundingClientRect();
-        var delta = (cardRect.left + cardRect.width / 2) - (trackRect.left + trackRect.width / 2);
-        track.scrollBy({ left: delta, behavior: 'smooth' });
+        track.scrollBy({ left: (i - currentIndex()) * step(), behavior: 'smooth' });
       }
 
       dots.forEach(function (d, i) { d.addEventListener('click', function () { goTo(i); }); });
-      if (prev) prev.addEventListener('click', function () { goTo(closestIndex() - 1); });
-      if (next) next.addEventListener('click', function () { goTo(closestIndex() + 1); });
+      if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+      if (next) next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
 
       track.addEventListener('scroll', function () {
         if (!ticking) { window.requestAnimationFrame(function () { update(); ticking = false; }); ticking = true; }
       }, { passive: true });
-      window.addEventListener('resize', update);
+      window.addEventListener('resize', function () { remeasure(); update(); });
 
+      remeasure();
       update();
     });
   }
