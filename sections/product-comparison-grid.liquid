@@ -1,7 +1,21 @@
-<section class="cgrid section-pad" style="{% if section.settings.bg_color != blank %}background: {{ section.settings.bg_color }};{% endif %}">
+<section class="cgrid section-pad" style="{% if section.settings.bg_color != blank %}background: {{ section.settings.bg_color }};{% endif %}{% if section.settings.check_color != blank %} --cgrid-check: {{ section.settings.check_color }};{% endif %}">
   <div class="page-width">
-    {%- if section.settings.heading != blank -%}
-      <h2 class="cgrid__heading">{{ section.settings.heading }}</h2>
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="cgrid__eyebrow">{{ section.settings.eyebrow }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.heading_1 != blank or section.settings.heading_2 != blank or section.settings.heading_3 != blank -%}
+      <h2 class="cgrid__heading">
+        {{ section.settings.heading_1 }}
+        {%- if section.settings.heading_image_1 != blank -%}
+          <img class="cgrid__heading-img" src="{{ section.settings.heading_image_1 | image_url: width: 100 }}" alt="" width="40" height="40" loading="lazy">
+        {%- endif -%}
+        {{ section.settings.heading_2 }}
+        {%- if section.settings.heading_image_2 != blank -%}
+          <img class="cgrid__heading-img" src="{{ section.settings.heading_image_2 | image_url: width: 100 }}" alt="" width="40" height="40" loading="lazy">
+        {%- endif -%}
+        {{ section.settings.heading_3 }}
+      </h2>
     {%- endif -%}
 
     <div class="cgrid__table-wrap">
@@ -41,8 +55,17 @@
   "name": "Tabla comparativa",
   "tag": "section",
   "settings": [
-    { "type": "text", "id": "heading", "label": "Título", "default": "COMPARACIÓN" },
     { "type": "color", "id": "bg_color", "label": "Color de fondo (opcional)", "default": "#FAF3EC" },
+    { "type": "color", "id": "check_color", "label": "Color del círculo de check", "default": "#F5C518" },
+
+    { "type": "header", "content": "Título" },
+    { "type": "text", "id": "eyebrow", "label": "Etiqueta pequeña", "default": "PLANT BASED" },
+    { "type": "text", "id": "heading_1", "label": "Titular — parte 1", "default": "DAILY" },
+    { "type": "image_picker", "id": "heading_image_1", "label": "Imagen incrustada 1 (opcional)" },
+    { "type": "text", "id": "heading_2", "label": "Titular — parte 2", "default": "SUPPLEMENTS WITH BENEFITS FOR YOU TO" },
+    { "type": "image_picker", "id": "heading_image_2", "label": "Imagen incrustada 2 (opcional)" },
+    { "type": "text", "id": "heading_3", "label": "Titular — parte 3", "default": "FEEL GOOD" },
+
     { "type": "header", "content": "Columnas" },
     { "type": "text", "id": "col1_label", "label": "Columna 1 (destacada — tu producto)", "default": "NUESTRO PRODUCTO" },
     { "type": "text", "id": "col2_label", "label": "Columna 2", "default": "COMPETIDOR A" },
