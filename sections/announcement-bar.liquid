@@ -2,16 +2,20 @@
 <div class="announcement" style="--ann-bg: {{ section.settings.bg }}; --ann-ink: {{ section.settings.ink }};">
   <div class="announcement__track {% if section.settings.scroll %}announcement__track--scroll{% endif %}"
        style="--ann-speed: {{ section.settings.speed }}s">
+    {%- assign ann_reps = 1 -%}
+    {%- if section.settings.scroll -%}{%- assign ann_reps = 4 -%}{%- endif -%}
     {%- for i in (1..2) -%}
       <div class="announcement__group" {% if i == 2 %}aria-hidden="true"{% endif %}>
-        {%- for block in section.blocks -%}
-          <span class="announcement__item" {{ block.shopify_attributes }}>
-            {%- if block.settings.link != blank -%}
-              <a href="{{ block.settings.link }}">{{ block.settings.text }}</a>
-            {%- else -%}
-              {{ block.settings.text }}
-            {%- endif -%}
-          </span>
+        {%- for rep in (1..ann_reps) -%}
+          {%- for block in section.blocks -%}
+            <span class="announcement__item" {% if rep == 1 %}{{ block.shopify_attributes }}{% endif %}>
+              {%- if block.settings.link != blank -%}
+                <a href="{{ block.settings.link }}">{{ block.settings.text }}</a>
+              {%- else -%}
+                {{ block.settings.text }}
+              {%- endif -%}
+            </span>
+          {%- endfor -%}
         {%- endfor -%}
       </div>
     {%- endfor -%}
