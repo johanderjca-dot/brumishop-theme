@@ -1,0 +1,82 @@
+<section class="section-pad contact-form-section">
+  <div class="page-width">
+    <div class="contact-form-section__inner">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="contact-form-section__heading">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.text != blank -%}
+        <p class="contact-form-section__text">{{ section.settings.text }}</p>
+      {%- endif -%}
+
+      {%- form 'contact', class: 'contact-form' -%}
+        {%- if form.posted_successfully? -%}
+          <p class="contact-form__message contact-form__message--success">
+            {{ section.settings.success_text }}
+          </p>
+        {%- endif -%}
+        {%- if form.errors -%}
+          <div class="contact-form__message contact-form__message--error">
+            <ul>
+              {%- for field in form.errors -%}
+                <li>
+                  {%- if field == 'form' -%}
+                    {{ form.errors.messages[field] }}
+                  {%- else -%}
+                    {{ form.errors.translated_fields[field] | capitalize }} {{ form.errors.messages[field] }}
+                  {%- endif -%}
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
+
+        <div class="contact-form__row">
+          <div class="contact-form__field">
+            <input type="text" name="contact[name]" id="ContactFormName"
+                   value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                   placeholder="{{ section.settings.label_name }}" autocomplete="name">
+          </div>
+          <div class="contact-form__field">
+            <input type="tel" name="contact[phone]" id="ContactFormPhone"
+                   value="{{ form.phone }}"
+                   placeholder="{{ section.settings.label_phone }}" autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="contact-form__field">
+          <input type="email" name="contact[email]" id="ContactFormEmail"
+                 value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                 placeholder="{{ section.settings.label_email }}*" autocomplete="email" required>
+        </div>
+
+        <div class="contact-form__field">
+          <textarea name="contact[body]" id="ContactFormMessage" rows="6"
+                    placeholder="{{ section.settings.label_comment }}">{{ form.body }}</textarea>
+        </div>
+
+        <div class="contact-form__submit">
+          <button type="submit" class="btn btn--primary">{{ section.settings.label_submit }}</button>
+        </div>
+      {%- endform -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Formulario de contacto",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Título", "default": "Ponte en contacto con nosotros" },
+    { "type": "textarea", "id": "text", "label": "Texto", "default": "¿Tienes preguntas o necesitas ayuda? Completa el formulario y te responderemos lo antes posible." },
+    { "type": "header", "content": "Campos del formulario" },
+    { "type": "text", "id": "label_name", "label": "Etiqueta — nombre", "default": "Nombre" },
+    { "type": "text", "id": "label_phone", "label": "Etiqueta — teléfono", "default": "Teléfono" },
+    { "type": "text", "id": "label_email", "label": "Etiqueta — correo", "default": "Correo electrónico" },
+    { "type": "text", "id": "label_comment", "label": "Etiqueta — mensaje", "default": "Mensaje" },
+    { "type": "text", "id": "label_submit", "label": "Texto del botón", "default": "Enviar" },
+    { "type": "text", "id": "success_text", "label": "Mensaje de éxito", "default": "¡Gracias! Recibimos tu mensaje y te contactaremos pronto." }
+  ],
+  "presets": [{ "name": "Formulario de contacto" }]
+}
+{% endschema %}

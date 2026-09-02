@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "heading": "Contacto",
+        "overlay": 15,
+        "height": 40,
+        "height_mobile": 32
+      }
+    },
+    "form": {
+      "type": "contact-form"
+    }
+  },
+  "order": ["hero", "form"]
+}
