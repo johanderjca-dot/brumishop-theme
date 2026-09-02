@@ -1,0 +1,16 @@
+<p>probe settings only</p>
+{% schema %}
+{
+  "name": "Tabla comparativa (4 columnas)",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Título", "default": "COMPARACIÓN" },
+    { "type": "color", "id": "bg_color", "label": "Color de fondo (opcional)", "default": "#FAF3EC" },
+    { "type": "header", "content": "Columnas" },
+    { "type": "text", "id": "col1_label", "label": "Columna 1 (destacada — tu producto)", "default": "NUESTRO PRODUCTO" },
+    { "type": "text", "id": "col2_label", "label": "Columna 2", "default": "COMPETIDOR A" },
+    { "type": "text", "id": "col3_label", "label": "Columna 3", "default": "COMPETIDOR B" },
+    { "type": "text", "id": "col4_label", "label": "Columna 4", "default": "COMPETIDOR C" }
+  ]
+}
+{% endschema %}
