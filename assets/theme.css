@@ -530,13 +530,20 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   display: flex; justify-content: center; gap: 8px;
 }
 @media (min-width: 750px) { .spot__dots { bottom: 40px; } }
+/* el punto visible se queda chico (7px); el botón crece a 24px
+   (mínimo recomendado para tocar) con el punto centrado adentro */
 .spot__dot {
-  width: 7px; height: 7px; border-radius: 50%;
+  width: 24px; height: 24px;
+  display: flex; align-items: center; justify-content: center;
+  background: none; border: 0; padding: 0; cursor: pointer;
+  margin: -8.5px;
+}
+.spot__dot::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%;
   background: currentColor; opacity: .35;
-  border: 0; padding: 0; cursor: pointer;
   transition: opacity .2s ease;
 }
-.spot__dot.is-active { opacity: 1; }
+.spot__dot.is-active::before { opacity: 1; }
 
 .spot__nav {
   display: none;
@@ -740,8 +747,17 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .review-card__product-price { font-size: 13px; font-weight: 600; color: var(--muted); }
 
 .reviews__dots { display: flex; justify-content: center; gap: 8px; margin-top: 28px; }
-.reviews__dot { width: 7px; height: 7px; border-radius: 50%; background: var(--ink); opacity: .3; border: 0; padding: 0; cursor: pointer; }
-.reviews__dot.is-active { opacity: 1; }
+/* punto visible chico (7px), botón con área de toque de 24px */
+.reviews__dot {
+  width: 24px; height: 24px; margin: -8.5px;
+  display: flex; align-items: center; justify-content: center;
+  background: none; border: 0; padding: 0; cursor: pointer;
+}
+.reviews__dot::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--ink); opacity: .3;
+}
+.reviews__dot.is-active::before { opacity: 1; }
 
 /* ---------- nuestra misión ---------- */
 

@@ -34,7 +34,10 @@
             muted: true,
             controls: false,
             playsinline: true,
-            class: 'vhero__video'
+            preload: 'auto',
+            class: 'vhero__video',
+            fetchpriority: 'high',
+            alt: section.settings.heading
         }}
       </div>
       {%- if has_mobile_video -%}
@@ -47,7 +50,10 @@
               muted: true,
               controls: false,
               playsinline: true,
-              class: 'vhero__video'
+              preload: 'auto',
+              class: 'vhero__video',
+              fetchpriority: 'high',
+              alt: section.settings.heading
           }}
         </div>
       {%- endif -%}

@@ -279,9 +279,13 @@
           return originals.map(function (el) {
             var clone = el.cloneNode(true);
             clone.setAttribute('aria-hidden', 'true');
-            clone.querySelectorAll('a, button, input, select, textarea').forEach(function (f) {
-              f.setAttribute('tabindex', '-1');
-            });
+            // el propio nodo clonado puede ser el foco (p. ej. <a class="tile">),
+            // no solo sus descendientes — querySelectorAll no se incluye a sí mismo
+            var focusable = clone.querySelectorAll('a, button, input, select, textarea');
+            if (clone.matches('a, button, input, select, textarea')) {
+              focusable = Array.prototype.slice.call(focusable).concat([clone]);
+            }
+            focusable.forEach(function (f) { f.setAttribute('tabindex', '-1'); });
             return clone;
           });
         }
@@ -437,9 +441,13 @@
           return originals.map(function (el) {
             var clone = el.cloneNode(true);
             clone.setAttribute('aria-hidden', 'true');
-            clone.querySelectorAll('a, button, input, select, textarea').forEach(function (f) {
-              f.setAttribute('tabindex', '-1');
-            });
+            // el propio nodo clonado puede ser el foco (p. ej. <a class="tile">),
+            // no solo sus descendientes — querySelectorAll no se incluye a sí mismo
+            var focusable = clone.querySelectorAll('a, button, input, select, textarea');
+            if (clone.matches('a, button, input, select, textarea')) {
+              focusable = Array.prototype.slice.call(focusable).concat([clone]);
+            }
+            focusable.forEach(function (f) { f.setAttribute('tabindex', '-1'); });
             return clone;
           });
         }
