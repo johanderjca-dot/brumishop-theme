@@ -1438,29 +1438,9 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .cgrid__check--yes { background: var(--cgrid-check, #F5C518); color: var(--cgrid-check-icon, #151515); }
 .cgrid__check--no { background: var(--bg-alt); color: var(--muted); }
 
-/* ---------- encabezado de página (hero con imagen) ---------- */
-
-.page-hero {
-  position: relative;
-  min-height: var(--page-hero-h-mobile, 32vh);
-  display: flex; align-items: center; justify-content: center;
-  overflow: hidden;
-}
-@media (min-width: 750px) { .page-hero { min-height: var(--page-hero-h, 40vh); } }
-.page-hero__media { position: absolute; inset: 0; }
-.page-hero__media img, .page-hero__placeholder { width: 100%; height: 100%; object-fit: cover; display: block; }
-.page-hero__overlay { position: absolute; inset: 0; background: #000; }
-.page-hero__heading {
-  position: relative; z-index: 1;
-  text-align: center;
-  font-size: clamp(34px, 8vw, 72px);
-  letter-spacing: 1px;
-  margin: 0; padding: 0 20px;
-}
-
 /* ---------- formulario de contacto ---------- */
 
-.contact-form-section { background: var(--bg-alt); }
+.contact-form-section { background: var(--contact-bg, var(--bg-alt)); color: var(--contact-text, inherit); }
 .contact-form-section__inner { max-width: 620px; margin: 0 auto; text-align: center; }
 .contact-form-section__heading { margin: 0 0 8px; }
 .contact-form-section__text { color: var(--muted); margin: 0 0 32px; }
