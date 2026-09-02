@@ -1335,7 +1335,6 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   border-radius: 0; display: block;
 }
 .why__content {
-  border: 1px solid var(--line); border-radius: var(--card-radius);
   padding: 28px 24px;
 }
 .why__heading {
