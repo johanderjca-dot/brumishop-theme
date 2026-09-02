@@ -18,6 +18,12 @@
             "text": "1,200+ reseñas verificadas de 5 estrellas"
           }
         },
+        "eyebrow": {
+          "type": "eyebrow",
+          "settings": {
+            "text": "FÓRMULA COREANA"
+          }
+        },
         "titulo": {
           "type": "title",
           "settings": {}
@@ -58,12 +64,6 @@
             "heading": "INGREDIENTES",
             "content": "<p>Garcinia Cambogia, fibra de semillas de chía y maltodextrina indigestible. La fibra te ayuda a sentirte satisfecha entre comidas y apoya tu digestión; el HCA de la Garcinia Cambogia está asociado con el control del apetito.</p>"
           }
-        },
-        "eyebrow": {
-          "type": "eyebrow",
-          "settings": {
-            "text": "FÓRMULA COREANA"
-          }
         }
       },
       "block_order": [
@@ -99,27 +99,63 @@
       "blocks": {
         "f1": {
           "type": "row",
-          "settings": {}
+          "settings": {
+            "label": "Característica",
+            "check1": true,
+            "check2": false,
+            "check3": false,
+            "check4": false
+          }
         },
         "f2": {
           "type": "row",
-          "settings": {}
+          "settings": {
+            "label": "Característica",
+            "check1": true,
+            "check2": false,
+            "check3": false,
+            "check4": false
+          }
         },
         "f3": {
           "type": "row",
-          "settings": {}
+          "settings": {
+            "label": "Característica",
+            "check1": true,
+            "check2": false,
+            "check3": false,
+            "check4": false
+          }
         },
         "f4": {
           "type": "row",
-          "settings": {}
+          "settings": {
+            "label": "Característica",
+            "check1": true,
+            "check2": false,
+            "check3": false,
+            "check4": false
+          }
         },
         "f5": {
           "type": "row",
-          "settings": {}
+          "settings": {
+            "label": "Característica",
+            "check1": true,
+            "check2": false,
+            "check3": false,
+            "check4": false
+          }
         },
         "f6": {
           "type": "row",
-          "settings": {}
+          "settings": {
+            "label": "Característica",
+            "check1": true,
+            "check2": false,
+            "check3": false,
+            "check4": false
+          }
         }
       },
       "block_order": [
@@ -130,7 +166,18 @@
         "f5",
         "f6"
       ],
-      "settings": {}
+      "settings": {
+        "bg_color": "#FFFFFF",
+        "check_color": "#AD181F",
+        "eyebrow": "PLANT BASED",
+        "heading_1": "DAILY",
+        "heading_2": "SUPPLEMENTS WITH BENEFITS FOR YOU TO",
+        "heading_3": "FEEL GOOD",
+        "col1_label": "NUESTRO PRODUCTO",
+        "col2_label": "COMPETIDOR A",
+        "col3_label": "COMPETIDOR B",
+        "col4_label": "COMPETIDOR C"
+      }
     }
   },
   "order": [
