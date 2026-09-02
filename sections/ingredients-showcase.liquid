@@ -7,7 +7,7 @@
     <div class="ingredients__layout">
       <div class="ingredients__col ingredients__col--left">
         {%- for block in section.blocks -%}
-          {%- assign is_even = block.index | modulo: 2 -%}
+          {%- assign is_even = forloop.index | modulo: 2 -%}
           {%- if is_even == 1 -%}
             <div class="ingredients__item" {{ block.shopify_attributes }}>
               {%- if block.settings.title != blank -%}<h3>{{ block.settings.title }}</h3>{%- endif -%}
@@ -32,7 +32,7 @@
 
       <div class="ingredients__col ingredients__col--right">
         {%- for block in section.blocks -%}
-          {%- assign is_even = block.index | modulo: 2 -%}
+          {%- assign is_even = forloop.index | modulo: 2 -%}
           {%- if is_even == 0 -%}
             <div class="ingredients__item" {{ block.shopify_attributes }}>
               {%- if block.settings.title != blank -%}<h3>{{ block.settings.title }}</h3>{%- endif -%}
