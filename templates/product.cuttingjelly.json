@@ -246,8 +246,43 @@
         "included_label": "Incluido",
         "guarantee": "Garantía de devolución de 30 días",
         "bg_color": "",
-        "text_color": "",
-        "btn_label": "COMPRAR AHORA"
+        "text_color": ""
+      }
+    },
+    "stat_bar_yy84Ad": {
+      "type": "stat-bar",
+      "blocks": {
+        "stat_F7XYpj": {
+          "type": "stat",
+          "settings": {
+            "number": "99%",
+            "label": "Pureza"
+          }
+        },
+        "stat_EVenQJ": {
+          "type": "stat",
+          "settings": {
+            "number": "99%",
+            "label": "Pureza"
+          }
+        },
+        "stat_9kgNRk": {
+          "type": "stat",
+          "settings": {
+            "number": "99%",
+            "label": "Pureza"
+          }
+        }
+      },
+      "block_order": [
+        "stat_F7XYpj",
+        "stat_EVenQJ",
+        "stat_9kgNRk"
+      ],
+      "name": "Franja de estadísticas",
+      "settings": {
+        "bg_color": "#AD181F",
+        "text_color": "#FFFFFF"
       }
     }
   },
@@ -256,6 +291,7 @@
     "confianza",
     "comparacion",
     "mision",
-    "why_section_wXXwHV"
+    "why_section_wXXwHV",
+    "stat_bar_yy84Ad"
   ]
 }
