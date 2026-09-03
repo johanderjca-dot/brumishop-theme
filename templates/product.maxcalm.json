@@ -263,8 +263,8 @@
         "stat_EVenQJ": {
           "type": "stat",
           "settings": {
-            "number": "97%",
-            "label": "Satisfacción"
+            "number": "113",
+            "label": "Porciones por envase"
           }
         },
         "stat_9kgNRk": {
@@ -282,7 +282,7 @@
       ],
       "name": "Franja de estadísticas",
       "settings": {
-        "bg_color": "#3FAAB9",
+        "bg_color": "#3faab9",
         "text_color": "#ffffff"
       }
     },
