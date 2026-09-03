@@ -42,10 +42,17 @@
 
     {%- render 'meta-tags', final_title: final_title, final_description: seo_description -%}
 
-    <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..900&display=swap" rel="stylesheet">
+    {%- comment -%}
+      La hoja de estilos de Google Fonts bloqueaba el render inicial
+      (~1,260ms). Se carga como "print" y se cambia a "all" cuando
+      termina, así el texto puede pintarse con la fuente de respaldo
+      mientras tanto en vez de esperarla.
+    {%- endcomment -%}
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..900&display=swap" rel="stylesheet"></noscript>
 
     {{ content_for_header }}
 
