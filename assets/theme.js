@@ -17,6 +17,39 @@
     });
   }
 
+  /* ---------- video del hero: solo carga/reproduce el que se ve ----------
+     cuando hay video de escritorio Y de móvil a la vez, ninguno trae
+     autoplay/preload por defecto (ver video-hero.liquid) — si no,
+     el navegador terminaba descargando los dos completos aunque uno
+     estuviera oculto con CSS. Aquí se decide cuál activar según el
+     ancho real de pantalla. */
+  function initHeroVideo() {
+    doc.querySelectorAll('.vhero__media').forEach(function (media) {
+      var wraps = media.querySelectorAll('.vhero__video-wrap');
+      if (wraps.length < 2) return;
+
+      var mq = window.matchMedia('(max-width: 749px)');
+
+      function sync() {
+        wraps.forEach(function (wrap) {
+          var video = wrap.querySelector('video');
+          if (!video) return;
+          var isMobileWrap = wrap.classList.contains('vhero__video-wrap--mobile');
+          var shouldPlay = isMobileWrap ? mq.matches : !mq.matches;
+          if (shouldPlay) {
+            if (video.preload !== 'auto') video.preload = 'auto';
+            if (video.paused) video.play().catch(function () {});
+          } else if (!video.paused) {
+            video.pause();
+          }
+        });
+      }
+
+      sync();
+      mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+    });
+  }
+
   /* ---------- encabezado: banner + nav, glass al bajar, se oculta al deslizar ---------- */
   function initHeader() {
     var wrap = doc.querySelector('[data-site-header]');
@@ -609,6 +642,7 @@
   /* ---------- arranque ---------- */
   function boot() {
     initVideoFallbackAlt();
+    initHeroVideo();
     initHeader();
     initDrawer();
     initSearch();

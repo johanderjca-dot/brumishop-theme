@@ -9,6 +9,13 @@
   if section.settings.video_mobile != blank
     assign has_mobile_video = true
   endif
+
+  assign desktop_autoplay = true
+  assign desktop_preload = 'metadata'
+  if has_mobile_video
+    assign desktop_autoplay = false
+    assign desktop_preload = 'none'
+  endif
 -%}
 
 <section
@@ -29,26 +36,35 @@
         {{ section.settings.video
           | video_tag:
             image_size: '1920x',
-            autoplay: true,
+            autoplay: desktop_autoplay,
             loop: true,
             muted: true,
             controls: false,
             playsinline: true,
+            preload: desktop_preload,
             class: 'vhero__video',
             fetchpriority: 'high',
             alt: section.settings.heading
         }}
       </div>
       {%- if has_mobile_video -%}
+        {%- comment -%}
+          Con video de escritorio Y móvil a la vez, sin esto el navegador
+          descargaba los DOS completos (uno oculto con CSS, pero igual
+          se autoreproducía) — ~11MB desperdiciados. Ninguno arranca
+          solo; el JS (initHeroVideo) decide cuál reproducir según el
+          ancho de pantalla real.
+        {%- endcomment -%}
         <div class="vhero__video-wrap vhero__video-wrap--mobile">
           {{ section.settings.video_mobile
             | video_tag:
               image_size: '1080x',
-              autoplay: true,
+              autoplay: false,
               loop: true,
               muted: true,
               controls: false,
               playsinline: true,
+              preload: 'none',
               class: 'vhero__video',
               fetchpriority: 'high',
               alt: section.settings.heading
