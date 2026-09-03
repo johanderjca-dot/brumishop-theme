@@ -172,7 +172,7 @@
         "height_mobile": 50,
         "text": "COMODIDAD • TU BIENESTAR, REDEFINIDO.",
         "text_color": "#ffffff",
-        "speed": 20,
+        "speed": 60,
         "btn_label": "ver nuevos productos",
         "btn_url": "shopify://collections/all"
       }
@@ -348,7 +348,7 @@
       ],
       "settings": {
         "trust_text": "Hecho con calidad | Envío a todo el país | Recomendado por clientes",
-        "trust_speed": 24,
+        "trust_speed": 60,
         "eyebrow": "",
         "heading": "ellos lo dicen:"
       }
