@@ -1,0 +1,338 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "estrellas": {
+          "type": "rating",
+          "settings": {
+            "text": "40,000+ reseñas verificadas de 5 estrellas"
+          }
+        },
+        "titulo": {
+          "type": "title",
+          "settings": {}
+        },
+        "chips": {
+          "type": "chips",
+          "settings": {
+            "items": ""
+          }
+        },
+        "descripcion": {
+          "type": "description",
+          "settings": {}
+        },
+        "compra": {
+          "type": "purchase_card",
+          "settings": {
+            "header_label": "MEJOR VALOR",
+            "button_label": "Comprar ahora, pagar en casa",
+            "item1": "Paga cuando lo recibes",
+            "item2": "Envío gratis a todo el país",
+            "item3": "Cambios sin complicaciones"
+          }
+        },
+        "beneficios": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "BENEFICIOS",
+            "content": ""
+          }
+        },
+        "como-usar": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "¿CÓMO USARLO?",
+            "content": ""
+          }
+        },
+        "ingredientes": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "INGREDIENTES",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "estrellas",
+        "titulo",
+        "chips",
+        "descripcion",
+        "compra",
+        "beneficios",
+        "como-usar",
+        "ingredientes"
+      ],
+      "settings": {
+        "bg_color": "#AD191F",
+        "badge_text": "TOP",
+        "badge_rating": "4.9\/5.0",
+        "sticky_bar": true,
+        "sticky_label": "Ordenar ahora"
+      }
+    },
+    "videos": {
+      "type": "product-video-row",
+      "settings": {
+        "heading": "MEJORA TU RUTINA DIARIA"
+      }
+    },
+    "marquee": {
+      "type": "marquee-banner",
+      "settings": {
+        "overlay": 15,
+        "height": 60,
+        "height_mobile": 45,
+        "text": "HECHO EN RD • CALIDAD GARANTIZADA • RECOMENDADO POR CLIENTES",
+        "text_color": "#ffffff",
+        "speed": 20,
+        "btn_label": "Comprar ahora",
+        "btn_url": ""
+      }
+    },
+    "editorial": {
+      "type": "editorial-banner",
+      "settings": {
+        "overlay": 20,
+        "eyebrow": "INNOVACIÓN LÍDER",
+        "heading": "Comprobado para apoyar resultados reales.",
+        "text": "",
+        "text_color": "#ffffff",
+        "align": "center"
+      }
+    },
+    "showcase": {
+      "type": "feature-showcase",
+      "blocks": {
+        "c1": {
+          "type": "card",
+          "settings": {
+            "title": "Beneficio 1"
+          }
+        },
+        "c2": {
+          "type": "card",
+          "settings": {
+            "title": "Beneficio 2"
+          }
+        },
+        "c3": {
+          "type": "card",
+          "settings": {
+            "title": "Beneficio 3"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "bg_color": "#1b2a3a",
+        "text_color": "#ffffff",
+        "eyebrow": "AVANZADO",
+        "heading": "Apoya tu bienestar desde el primer día.",
+        "text": ""
+      }
+    },
+    "compare": {
+      "type": "comparison-table",
+      "blocks": {
+        "r1": {
+          "type": "row",
+          "settings": {
+            "text": "Fórmula 100% vegana"
+          }
+        },
+        "r2": {
+          "type": "row",
+          "settings": {
+            "text": "Estudiado clínicamente"
+          }
+        },
+        "r3": {
+          "type": "row",
+          "settings": {
+            "text": "Sin azúcar ni rellenos"
+          }
+        },
+        "r4": {
+          "type": "row",
+          "settings": {
+            "text": "Etiquetado transparente"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "settings": {
+        "heading": "NOSOTROS VS. ELLOS",
+        "label_us": "Nuestro producto",
+        "label_them": "Genérico"
+      }
+    },
+    "mision": {
+      "type": "mission-split",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "text": "Energía todo el día"
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "text": "Balance hormonal"
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "text": "Renovación celular"
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3"
+      ],
+      "settings": {
+        "image_position": "right",
+        "bg_color": "#151515",
+        "text_color": "#ffffff",
+        "eyebrow": "AVANZADO",
+        "heading": "Apoya la producción de energía celular.",
+        "link_label": "",
+        "link_url": ""
+      }
+    },
+    "stats": {
+      "type": "stat-bar",
+      "blocks": {
+        "s1": {
+          "type": "stat",
+          "settings": {
+            "number": "+99%",
+            "label": "Pureza"
+          }
+        },
+        "s2": {
+          "type": "stat",
+          "settings": {
+            "number": "GMP",
+            "label": "Fabricado bajo norma GMP"
+          }
+        },
+        "s3": {
+          "type": "stat",
+          "settings": {
+            "number": "20+",
+            "label": "Años de investigación"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "settings": {
+        "bg_color": "#151515",
+        "text_color": "#ffffff"
+      }
+    },
+    "resenas": {
+      "type": "reviews-carousel",
+      "settings": {
+        "trust_text": "Hecho con calidad | Envío a todo el país | Recomendado por clientes",
+        "trust_speed": 24,
+        "eyebrow": "Tu salud en buenas manos",
+        "heading": "Historias reales, resultados reales"
+      }
+    },
+    "faq": {
+      "type": "faq-accordion",
+      "blocks": {
+        "q1": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Es seguro usar este producto?",
+            "answer": ""
+          }
+        },
+        "q2": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cómo debo guardar el producto?",
+            "answer": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2"
+      ],
+      "settings": {
+        "eyebrow": "Todo lo que necesitas saber",
+        "heading": "Preguntas frecuentes"
+      }
+    },
+    "split": {
+      "type": "split-banner-links",
+      "blocks": {
+        "p1": {
+          "type": "panel",
+          "settings": {
+            "heading": "Alivio del estrés",
+            "link_label": "Ver ahora",
+            "url": ""
+          }
+        },
+        "p2": {
+          "type": "panel",
+          "settings": {
+            "heading": "Refuerzo inmune",
+            "link_label": "Ver ahora",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "videos",
+    "marquee",
+    "editorial",
+    "showcase",
+    "compare",
+    "mision",
+    "stats",
+    "resenas",
+    "faq",
+    "split"
+  ]
+}
