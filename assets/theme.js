@@ -37,7 +37,13 @@
           var isMobileWrap = wrap.classList.contains('vhero__video-wrap--mobile');
           var shouldPlay = isMobileWrap ? mq.matches : !mq.matches;
           if (shouldPlay) {
-            if (video.preload !== 'auto') video.preload = 'auto';
+            if (video.preload !== 'auto') {
+              video.preload = 'auto';
+              // en preload="none" nada se descarga hasta llamar load()
+              // explícitamente — cambiar el atributo solo no alcanza,
+              // sobre todo en Safari.
+              video.load();
+            }
             if (video.paused) video.play().catch(function () {});
           } else if (!video.paused) {
             video.pause();
