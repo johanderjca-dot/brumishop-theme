@@ -166,7 +166,7 @@
     "marquee": {
       "type": "marquee-banner",
       "settings": {
-        "image": "shopify://shop_images/Diseno_sin_titulo_7.png",
+        "image": "shopify://shop_images/marquee-couch-optimized.jpg",
         "overlay": 15,
         "height": 80,
         "height_mobile": 50,
