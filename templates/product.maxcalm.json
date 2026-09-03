@@ -37,7 +37,7 @@
         "descripcion": {
           "type": "text",
           "settings": {
-            "text": "<p>Baja el cortisol. Cambia todo lo demás.</p>"
+            "text": "<ul><li>Baja el cortisol, cambia todo lo demás</li><li>Magnesio citrato y glicinato en una sola fórmula, sin azúcar añadida</li><li>100% vegano, sin gluten ni colorantes artificiales</li></ul>"
           }
         },
         "compra": {
