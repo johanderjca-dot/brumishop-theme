@@ -438,46 +438,50 @@
       var nextBtn = root.querySelector('[data-spot-next]');
       if (!slides.length) return;
 
+      if (!track) return;
       var index = 0;
 
+      // El deslizar en sí ahora lo maneja el scroll nativo del
+      // navegador (.spot__slide son ítems flex con scroll-snap, ver
+      // theme.css) — nada que se pueda quedar pegado a medias. Solo
+      // hace falta escuchar el scroll para sincronizar el resto
+      // (imagen de la derecha, color de fondo, puntos).
       function apply() {
-        slides.forEach(function (s, n) { s.classList.toggle('is-active', n === index); });
         rightSlides.forEach(function (s, n) { s.classList.toggle('is-active', n === index); });
         dots.forEach(function (d, n) { d.classList.toggle('is-active', n === index); });
         if (left) left.style.backgroundColor = slides[index].getAttribute('data-bg') || '';
       }
 
-      function go(i) {
-        index = ((i % slides.length) + slides.length) % slides.length;
-        // Safari a veces no anima/repinta un cambio de clase disparado
-        // sincrónicamente desde un evento touch — el texto se queda
-        // mezclado con el de la diapositiva anterior por un buen rato.
-        // Doble requestAnimationFrame es el arreglo estándar: deja que
-        // el navegador pinte el estado actual una vez antes de aplicar
-        // el cambio, así el cambio sí dispara la transición.
-        requestAnimationFrame(function () {
-          requestAnimationFrame(apply);
-        });
+      function currentIndex() {
+        if (!track.clientWidth) return index;
+        return Math.min(slides.length - 1, Math.max(0, Math.round(track.scrollLeft / track.clientWidth)));
       }
+
+      function goTo(i) {
+        var target = ((i % slides.length) + slides.length) % slides.length;
+        track.scrollTo({ left: target * track.clientWidth, behavior: 'smooth' });
+      }
+
+      var ticking = false;
+      track.addEventListener('scroll', function () {
+        if (!ticking) {
+          window.requestAnimationFrame(function () {
+            index = currentIndex();
+            apply();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, { passive: true });
 
       dots.forEach(function (d, n) {
-        d.addEventListener('click', function () { go(n); });
+        d.addEventListener('click', function () { goTo(n); });
       });
-      if (prevBtn) prevBtn.addEventListener('click', function () { go(index - 1); });
-      if (nextBtn) nextBtn.addEventListener('click', function () { go(index + 1); });
+      if (prevBtn) prevBtn.addEventListener('click', function () { goTo(index - 1); });
+      if (nextBtn) nextBtn.addEventListener('click', function () { goTo(index + 1); });
+      window.addEventListener('resize', function () { track.scrollLeft = index * track.clientWidth; });
 
-      if (track) {
-        var startX = null;
-        track.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
-        track.addEventListener('touchend', function (e) {
-          if (startX === null) return;
-          var dx = e.changedTouches[0].clientX - startX;
-          if (Math.abs(dx) > 40) go(dx < 0 ? index + 1 : index - 1);
-          startX = null;
-        }, { passive: true });
-      }
-
-      go(0);
+      apply();
     });
   }
 

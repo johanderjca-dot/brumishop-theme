@@ -488,26 +488,34 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
    horizontal lo maneja este JS, no hay que "esperar a ver" si es un
    scroll o la activación del enlace. Sin esto, Safari tarda un rato
    en resolver esa ambigüedad antes de pintar el cambio. */
-.spot__slides { position: relative; height: 100%; touch-action: pan-y; }
+/* Reescrito para usar scroll nativo con snap (como el resto de los
+   carruseles del sitio) en vez de un crossfade de opacidad disparado
+   por JS en touchend — ese enfoque se quedaba "pegado" un buen rato
+   en Safari (bug de repintado propio de WebKit al mezclar
+   transiciones CSS con gestos táctiles sobre un <a>). El scroll es
+   nativo del navegador, no hay nada que se pueda quedar a medias. */
+.spot__slides {
+  position: relative; height: 100%;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.spot__slides::-webkit-scrollbar { display: none; }
 .spot__slide {
-  position: absolute; inset: 0;
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .4s ease;
   text-decoration: none;
   color: inherit;
-  /* .spot__slide es un <a> — al sostener el dedo para deslizar,
-     iOS Safari interpreta un toque largo sobre el enlace y muestra
-     su vista previa nativa (una tarjeta fantasma con la página de
-     destino superpuesta). Esto la desactiva. */
   -webkit-touch-callout: none;
 }
-.spot__slide.is-active { opacity: 1; pointer-events: auto; }
 
 .spot__media {
   width: 100%;
