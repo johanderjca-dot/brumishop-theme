@@ -1475,3 +1475,8 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .contact-form__message--success { background: var(--bg); border: 1px solid var(--ink); }
 .contact-form__message--error { background: var(--bg); border: 1px solid var(--ink); }
 .contact-form__message ul { margin: 0; padding-left: 18px; }
+
+/* prueba: espacio entre el hero y "Escoge por dónde empezar" a 50px
+   (el estándar del tema es 56px) — solo esta sección, no el ajuste
+   global, que se usa en todo el sitio */
+.category-tiles-section { padding-top: 50px; }
