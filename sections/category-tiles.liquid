@@ -19,8 +19,8 @@
               {%- if block.settings.image != blank -%}
                 <img class="tile__img tile__img--base"
                      src="{{ block.settings.image | image_url: width: 900 }}"
-                     srcset="{{ block.settings.image | image_url: width: 200 }} 200w, {{ block.settings.image | image_url: width: 300 }} 300w, {{ block.settings.image | image_url: width: 450 }} 450w, {{ block.settings.image | image_url: width: 700 }} 700w, {{ block.settings.image | image_url: width: 900 }} 900w"
-                     sizes="(min-width: 750px) 20vw, (min-width: 560px) 36vw, 62vw"
+                     srcset="{{ block.settings.image | image_url: width: 200 }} 200w, {{ block.settings.image | image_url: width: 300 }} 300w, {{ block.settings.image | image_url: width: 450 }} 450w, {{ block.settings.image | image_url: width: 700 }} 700w, {{ block.settings.image | image_url: width: 900 }} 900w, {{ block.settings.image | image_url: width: 1400 }} 1400w"
+                     sizes="(min-width: 750px) {{ 100 | divided_by: section.settings.columns }}vw, (min-width: 560px) 36vw, 62vw"
                      alt="{{ block.settings.title | escape }}"
                      width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" loading="lazy">
               {%- else -%}
@@ -29,8 +29,8 @@
               {%- if block.settings.image_hover != blank -%}
                 <img class="tile__img tile__img--hover"
                      src="{{ block.settings.image_hover | image_url: width: 900 }}"
-                     srcset="{{ block.settings.image_hover | image_url: width: 200 }} 200w, {{ block.settings.image_hover | image_url: width: 300 }} 300w, {{ block.settings.image_hover | image_url: width: 450 }} 450w, {{ block.settings.image_hover | image_url: width: 700 }} 700w, {{ block.settings.image_hover | image_url: width: 900 }} 900w"
-                     sizes="(min-width: 750px) 20vw, (min-width: 560px) 36vw, 62vw"
+                     srcset="{{ block.settings.image_hover | image_url: width: 200 }} 200w, {{ block.settings.image_hover | image_url: width: 300 }} 300w, {{ block.settings.image_hover | image_url: width: 450 }} 450w, {{ block.settings.image_hover | image_url: width: 700 }} 700w, {{ block.settings.image_hover | image_url: width: 900 }} 900w, {{ block.settings.image_hover | image_url: width: 1400 }} 1400w"
+                     sizes="(min-width: 750px) {{ 100 | divided_by: section.settings.columns }}vw, (min-width: 560px) 36vw, 62vw"
                      alt=""
                      width="{{ block.settings.image_hover.width }}" height="{{ block.settings.image_hover.height }}" loading="lazy">
               {%- endif -%}
