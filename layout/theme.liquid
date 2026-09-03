@@ -11,19 +11,36 @@
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
 
-    <title>
-      {%- if template.name == 'index' -%}
-        {{ shop.name }}{% if page_title != shop.name %} — {{ page_title }}{% endif %}
-      {%- else -%}
-        {{ page_title }} — {{ shop.name }}
-      {%- endif -%}
-    </title>
+    {%- comment -%}
+      Respaldo del título/descripción de la portada: page_title y
+      page_description no están reflejando lo configurado en
+      Configuración > Tienda online > Preferencias en esta tienda, así
+      que se pone un texto por defecto directo aquí para que Google
+      siempre tenga algo útil, sin depender de eso.
+    {%- endcomment -%}
+    {%- assign home_title = 'BrumiShop | Belleza, hogar, tecnología y más en República Dominicana' -%}
+    {%- assign home_description = 'Encuentra belleza, salud, hogar, tecnología, mascotas y más en BrumiShop. Envío gratis a todo el país y paga al recibir. Entrega en 24-48h.' -%}
 
-    {%- if page_description -%}
-      <meta name="description" content="{{ page_description | escape }}">
+    {%- if template.name == 'index' -%}
+      {%- if page_title != blank and page_title != shop.name -%}
+        {%- assign final_title = shop.name | append: ' — ' | append: page_title -%}
+      {%- else -%}
+        {%- assign final_title = home_title -%}
+      {%- endif -%}
+    {%- else -%}
+      {%- assign final_title = page_title | append: ' — ' | append: shop.name -%}
+    {%- endif -%}
+    <title>{{ final_title }}</title>
+
+    {%- assign seo_description = page_description -%}
+    {%- if template.name == 'index' and seo_description == blank -%}
+      {%- assign seo_description = home_description -%}
+    {%- endif -%}
+    {%- if seo_description != blank -%}
+      <meta name="description" content="{{ seo_description | escape }}">
     {%- endif -%}
 
-    {%- render 'meta-tags' -%}
+    {%- render 'meta-tags', final_title: final_title, final_description: seo_description -%}
 
     <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
