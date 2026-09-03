@@ -138,17 +138,17 @@
         "f4": {
           "type": "row",
           "settings": {
-            "label": "Formato listo para consumir",
+            "label": "Mejora la digestión",
             "check1": true,
-            "check2": true,
+            "check2": false,
             "check3": true,
-            "check4": false
+            "check4": true
           }
         },
         "f5": {
           "type": "row",
           "settings": {
-            "label": "Contiene Garcinia Cambogia",
+            "label": "Alta absorción (citrato + glicinato)",
             "check1": true,
             "check2": false,
             "check3": false,
@@ -158,7 +158,7 @@
         "f6": {
           "type": "row",
           "settings": {
-            "label": "Fibra natural (semillas de chía)",
+            "label": "Formato listo para consumir",
             "check1": true,
             "check2": false,
             "check3": false,
