@@ -440,12 +440,24 @@
 
       var index = 0;
 
-      function go(i) {
-        index = ((i % slides.length) + slides.length) % slides.length;
+      function apply() {
         slides.forEach(function (s, n) { s.classList.toggle('is-active', n === index); });
         rightSlides.forEach(function (s, n) { s.classList.toggle('is-active', n === index); });
         dots.forEach(function (d, n) { d.classList.toggle('is-active', n === index); });
         if (left) left.style.backgroundColor = slides[index].getAttribute('data-bg') || '';
+      }
+
+      function go(i) {
+        index = ((i % slides.length) + slides.length) % slides.length;
+        // Safari a veces no anima/repinta un cambio de clase disparado
+        // sincrónicamente desde un evento touch — el texto se queda
+        // mezclado con el de la diapositiva anterior por un buen rato.
+        // Doble requestAnimationFrame es el arreglo estándar: deja que
+        // el navegador pinte el estado actual una vez antes de aplicar
+        // el cambio, así el cambio sí dispara la transición.
+        requestAnimationFrame(function () {
+          requestAnimationFrame(apply);
+        });
       }
 
       dots.forEach(function (d, n) {
