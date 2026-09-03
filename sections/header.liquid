@@ -19,6 +19,8 @@
           <img
             class="header__logo-img header__logo-img--dark"
             src="{{ section.settings.logo | image_url: width: 600 }}"
+            srcset="{{ section.settings.logo | image_url: width: 300 }} 300w, {{ section.settings.logo | image_url: width: 450 }} 450w, {{ section.settings.logo | image_url: width: 600 }} 600w"
+            sizes="{{ section.settings.logo_width }}px"
             alt="{{ shop.name | escape }}"
             width="{{ section.settings.logo.width }}"
             height="{{ section.settings.logo.height }}"
@@ -28,6 +30,8 @@
             <img
               class="header__logo-img header__logo-img--light"
               src="{{ section.settings.logo_light | image_url: width: 600 }}"
+              srcset="{{ section.settings.logo_light | image_url: width: 300 }} 300w, {{ section.settings.logo_light | image_url: width: 450 }} 450w, {{ section.settings.logo_light | image_url: width: 600 }} 600w"
+              sizes="{{ section.settings.logo_width }}px"
               alt="{{ shop.name | escape }}"
               width="{{ section.settings.logo_light.width }}"
               height="{{ section.settings.logo_light.height }}"

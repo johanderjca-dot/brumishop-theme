@@ -79,7 +79,7 @@
         <div class="spot__right-media">
           {%- if block.settings.image_lifestyle != blank -%}
             <img src="{{ block.settings.image_lifestyle | image_url: width: 1400 }}"
-                 srcset="{{ block.settings.image_lifestyle | image_url: width: 750 }} 750w, {{ block.settings.image_lifestyle | image_url: width: 1400 }} 1400w"
+                 srcset="{{ block.settings.image_lifestyle | image_url: width: 450 }} 450w, {{ block.settings.image_lifestyle | image_url: width: 750 }} 750w, {{ block.settings.image_lifestyle | image_url: width: 1400 }} 1400w"
                  sizes="(min-width: 750px) 50vw, 100vw"
                  alt=""
                  fetchpriority="high"
