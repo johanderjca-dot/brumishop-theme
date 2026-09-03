@@ -1479,4 +1479,10 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 /* prueba: espacio entre el hero y "Escoge por dónde empezar" a 50px
    (el estándar del tema es 56px) — solo esta sección, no el ajuste
    global, que se usa en todo el sitio */
-.category-tiles-section { padding-top: 40px; }
+.category-tiles-section { padding-top: 40px; padding-bottom: 40px; }
+/* mismo criterio para el resto de las secciones de la portada
+   (dejando fuera .reviews y .mission, que ya tenían un ajuste
+   propio hecho antes por una razón específica) */
+.benefits-section { padding-top: 40px; padding-bottom: 40px; }
+.featured-section { padding-top: 40px; padding-bottom: 40px; }
+.section-pad.reviews { padding-top: 40px; }
