@@ -497,6 +497,11 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   transition: opacity .4s ease;
   text-decoration: none;
   color: inherit;
+  /* sin esto la transición corre en el hilo principal en vez de la
+     GPU — en un dispositivo cargado se ve como si quedara "pegada"
+     con las dos imágenes/precios encimados por un buen rato */
+  will-change: opacity;
+  transform: translateZ(0);
 }
 .spot__slide.is-active { opacity: 1; pointer-events: auto; }
 
@@ -567,6 +572,8 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   position: absolute; inset: 0;
   opacity: 0;
   transition: opacity .4s ease;
+  will-change: opacity;
+  transform: translateZ(0);
 }
 .spot__right-slide.is-active { opacity: 1; }
 .spot__right-media { position: absolute; inset: 0; }
