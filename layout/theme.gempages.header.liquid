@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="{{ settings.color_bg }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+
+    {%- comment -%}
+      Respaldo del título/descripción de la portada: page_title y
+      page_description no están reflejando lo configurado en
+      Configuración > Tienda online > Preferencias en esta tienda, así
+      que se pone un texto por defecto directo aquí para que Google
+      siempre tenga algo útil, sin depender de eso.
+    {%- endcomment -%}
+    {%- assign home_title = 'BrumiShop | Belleza, hogar, tecnología y más en República Dominicana' -%}
+    {%- assign home_description = 'Encuentra belleza, salud, hogar, tecnología, mascotas y más en BrumiShop. Envío gratis a todo el país y paga al recibir. Entrega en 24-48h.' -%}
+
+    {%- if template.name == 'index' -%}
+      {%- if page_title != blank and page_title != shop.name -%}
+        {%- assign final_title = shop.name | append: ' — ' | append: page_title -%}
+      {%- else -%}
+        {%- assign final_title = home_title -%}
+      {%- endif -%}
+    {%- else -%}
+      {%- assign final_title = page_title | append: ' — ' | append: shop.name -%}
+    {%- endif -%}
+    <title>{{ final_title }}</title>
+
+    {%- assign seo_description = page_description -%}
+    {%- if template.name == 'index' and seo_description == blank -%}
+      {%- assign seo_description = home_description -%}
+    {%- endif -%}
+    {%- if seo_description != blank -%}
+      <meta name="description" content="{{ seo_description | escape }}">
+    {%- endif -%}
+
+    {%- render 'meta-tags', final_title: final_title, final_description: seo_description -%}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    {%- comment -%}
+      La hoja de estilos de Google Fonts bloqueaba el render inicial
+      (~1,260ms). Se carga como "print" y se cambia a "all" cuando
+      termina, así el texto puede pintarse con la fuente de respaldo
+      mientras tanto en vez de esperarla.
+    {%- endcomment -%}
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..900&display=swap" rel="stylesheet"></noscript>
+
+    {{ content_for_header }}
+
+    {%- liquid
+      assign body_font = settings.type_body_font
+      assign heading_font = settings.type_heading_font
+    -%}
+
+    {% style %}
+      :root {
+        --font-body: 'Google Sans Flex', {{ body_font.fallback_families }};
+        --font-body-weight: 400;
+        --font-heading: 'Google Sans Flex', {{ heading_font.fallback_families }};
+        --font-heading-weight: 700;
+
+        --heading-scale: {{ settings.type_heading_scale | divided_by: 100.0 }};
+        --heading-tracking: {{ settings.type_heading_tracking }}px;
+        --heading-transform: {{ settings.type_heading_uppercase | default: 'none' }};
+
+        --bg: {{ settings.color_bg }};
+        --bg-alt: {{ settings.color_bg_alt }};
+        --ink: {{ settings.color_ink }};
+        --muted: {{ settings.color_muted }};
+        --line: {{ settings.color_line }};
+        --accent: {{ settings.color_accent }};
+        --accent-ink: {{ settings.color_accent_ink }};
+
+        --btn-radius: {{ settings.button_radius }}px;
+        --card-radius: {{ settings.card_radius }}px;
+        --page-max: {{ settings.page_width }}px;
+        --section-pad: {{ settings.section_padding }}px;
+        --header-h: 68px;
+        --header-total-h: 108px;
+      }
+      @media (min-width: 990px) {
+        :root { --header-h: 82px; --header-total-h: 122px; }
+      }
+    {% endstyle %}
+
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'theme.js' | asset_url }}" defer></script>
+  </head>
+
+  <body class="template-{{ template.name }}{% if template.name == 'index' and settings.transparent_header %} header-transparent{% endif %}">
+    <a class="skip-link" href="#MainContent">{{ 'accessibility.skip_to_content' | t }}</a>
+
+    <div class="site-header-wrap" data-site-header>
+      {% sections 'header-group' %}
+    </div>
+    <div class="header-spacer" aria-hidden="true"></div>
+
+    <main id="MainContent" role="main">
+      {{ content_for_layout }}
+    </main>
+
+    
+
+    <div id="CartDrawerRoot"></div>
+  </body>
+</html>

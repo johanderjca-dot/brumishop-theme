@@ -23,21 +23,6 @@
     "checkout": "Checkout",
     "update": "Update"
   },
-  "general": {
-    "sold_out": "Sold out",
-    "free_shipping": "Free shipping",
-    "cod": "Pay on delivery"
-  },
-  "products": {
-    "add_to_cart": "Add to cart",
-    "buy_now": "Order now",
-    "quantity": "Quantity"
-  },
-  "search": {
-    "title": "Search",
-    "placeholder": "What are you looking for?",
-    "results": "result(s)"
-  },
   "gempages": {
     "Carousel": {
       "no_slider": "No Slider"
@@ -83,5 +68,20 @@
     "Breadcrumb": {
       "home": "Home"
     }
+  },
+  "general": {
+    "sold_out": "Sold out",
+    "free_shipping": "Free shipping",
+    "cod": "Pay on delivery"
+  },
+  "products": {
+    "add_to_cart": "Add to cart",
+    "buy_now": "Order now",
+    "quantity": "Quantity"
+  },
+  "search": {
+    "title": "Search",
+    "placeholder": "What are you looking for?",
+    "results": "result(s)"
   }
 }
