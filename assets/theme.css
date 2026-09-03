@@ -484,7 +484,11 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   .spot__left { padding: 56px 48px 88px; }
 }
 
-.spot__slides { position: relative; height: 100%; }
+/* touch-action: pan-y — le dice al navegador de entrada que el gesto
+   horizontal lo maneja este JS, no hay que "esperar a ver" si es un
+   scroll o la activación del enlace. Sin esto, Safari tarda un rato
+   en resolver esa ambigüedad antes de pintar el cambio. */
+.spot__slides { position: relative; height: 100%; touch-action: pan-y; }
 .spot__slide {
   position: absolute; inset: 0;
   display: flex;
