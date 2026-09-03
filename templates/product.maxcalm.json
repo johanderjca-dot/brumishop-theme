@@ -128,11 +128,11 @@
         "f3": {
           "type": "row",
           "settings": {
-            "label": "Mejora digestión",
+            "label": "Corta los antojos por estrés",
             "check1": true,
-            "check2": true,
+            "check2": false,
             "check3": false,
-            "check4": true
+            "check4": false
           }
         },
         "f4": {
