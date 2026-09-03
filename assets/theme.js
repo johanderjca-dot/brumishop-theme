@@ -25,8 +25,10 @@
      ancho real de pantalla. */
   function initHeroVideo() {
     doc.querySelectorAll('.vhero__media').forEach(function (media) {
+      if (media.dataset.heroVideoReady) return;
       var wraps = media.querySelectorAll('.vhero__video-wrap');
       if (wraps.length < 2) return;
+      media.dataset.heroVideoReady = 'true';
 
       var mq = window.matchMedia('(max-width: 749px)');
 
@@ -58,21 +60,24 @@
 
   /* ---------- encabezado: banner + nav, glass al bajar, se oculta al deslizar ---------- */
   function initHeader() {
-    var wrap = doc.querySelector('[data-site-header]');
-    if (!wrap) return;
+    if (!doc.querySelector('[data-site-header]')) return;
 
-    var spacer = doc.querySelector('.header-spacer');
     var hideAt = 24; // no ocultar hasta pasar la altura del propio bloque
+    var lastY = window.scrollY;
+    var ticking = false;
 
-    // en la portada con header transparente, "is-stuck" no debe activarse
-    // apenas se mueve el scroll: hay que esperar a que el video del hero
-    // realmente haya desaparecido detrás del header.
-    var hero = doc.body.classList.contains('header-transparent') ? doc.querySelector('.vhero') : null;
-
+    // wrap/spacer/hero se buscan de nuevo en cada llamada (en vez de
+    // guardarlos una sola vez) porque el editor de temas puede
+    // reemplazar el encabezado por uno nuevo al editar esa sección —
+    // así los listeners de abajo, que solo se atan una vez, siguen
+    // apuntando al encabezado vigente.
     function setSpacer() {
+      var wrap = doc.querySelector('[data-site-header]');
+      if (!wrap) return;
       var h = wrap.offsetHeight;
       doc.documentElement.style.setProperty('--header-total-h', h + 'px');
 
+      var spacer = doc.querySelector('.header-spacer');
       if (!spacer) return;
       var main = doc.getElementById('MainContent');
       var first = main && main.firstElementChild;
@@ -80,10 +85,13 @@
       spacer.style.height = heroFirst ? '0px' : h + 'px';
     }
 
-    var lastY = window.scrollY;
-    var ticking = false;
-
     function update() {
+      var wrap = doc.querySelector('[data-site-header]');
+      if (!wrap) return;
+      // en la portada con header transparente, "is-stuck" no debe activarse
+      // apenas se mueve el scroll: hay que esperar a que el video del hero
+      // realmente haya desaparecido detrás del header.
+      var hero = doc.body.classList.contains('header-transparent') ? doc.querySelector('.vhero') : null;
       var y = window.scrollY;
       var stuck = hero ? (hero.getBoundingClientRect().bottom <= wrap.offsetHeight) : (y > 4);
       wrap.classList.toggle('is-stuck', stuck);
@@ -99,20 +107,31 @@
       ticking = false;
     }
 
+    setSpacer();
+    update();
+
+    // los listeners de window/document se atan una sola vez por carga
+    // de página — si no, cada "shopify:section:load" del editor de
+    // temas (que dispara boot(), que llama a initHeader() otra vez)
+    // añadía otro listener más, incluyendo OTRO "shopify:section:load"
+    // que a su vez... esa acumulación sin límite es lo que iba dejando
+    // cada vez más lento (y finalmente colgado) el editor.
+    if (doc.documentElement.dataset.headerBound) return;
+    doc.documentElement.dataset.headerBound = 'true';
+
     window.addEventListener('scroll', function () {
       if (!ticking) { window.requestAnimationFrame(update); ticking = true; }
     }, { passive: true });
     window.addEventListener('resize', setSpacer);
     doc.addEventListener('shopify:section:load', setSpacer);
-
-    setSpacer();
-    update();
   }
 
   /* ---------- cajón de navegación móvil ---------- */
   function initDrawer() {
     var drawer = doc.querySelector('[data-drawer]');
     if (!drawer) return;
+    if (drawer.dataset.drawerReady) return;
+    drawer.dataset.drawerReady = 'true';
 
     function open() {
       drawer.hidden = false;
@@ -138,6 +157,8 @@
   function initSearch() {
     var overlay = doc.querySelector('[data-search]');
     if (!overlay) return;
+    if (overlay.dataset.searchReady) return;
+    overlay.dataset.searchReady = 'true';
 
     var input = overlay.querySelector('[data-search-input]');
     var results = overlay.querySelector('[data-search-results]');
@@ -229,6 +250,8 @@
 
   /* ---------- cerrar los menús desplegables al hacer clic fuera ---------- */
   function initDropdowns() {
+    if (doc.documentElement.dataset.dropdownsBound) return;
+    doc.documentElement.dataset.dropdownsBound = 'true';
     doc.addEventListener('click', function (e) {
       doc.querySelectorAll('.header__dropdown[open]').forEach(function (d) {
         if (!d.contains(e.target)) d.removeAttribute('open');
@@ -241,6 +264,8 @@
     var main = doc.getElementById('ProductMainImage');
     var thumbs = doc.querySelectorAll('[data-thumb]');
     if (!main || !thumbs.length) return;
+    if (main.dataset.galleryReady) return;
+    main.dataset.galleryReady = 'true';
 
     var thumbList = Array.prototype.slice.call(thumbs);
     var index = 0;
@@ -268,6 +293,8 @@
   /* ---------- producto: pills de variantes ---------- */
   function initVariantPills() {
     doc.querySelectorAll('.product__option-pills').forEach(function (group) {
+      if (group.dataset.pillsReady) return;
+      group.dataset.pillsReady = 'true';
       var inputs = group.querySelectorAll('input[type="radio"]');
       inputs.forEach(function (input) {
         input.addEventListener('change', function () {
@@ -282,6 +309,8 @@
   function initStickyBuy() {
     var bar = doc.querySelector('[data-sticky-buy]');
     if (!bar) return;
+    if (bar.dataset.stickyReady) return;
+    bar.dataset.stickyReady = 'true';
 
     var anchor = doc.querySelector('.product__info');
     if (!anchor) return;
@@ -494,6 +523,8 @@
       var next = root.querySelector('[data-reviews-next]');
       var dots = Array.prototype.slice.call(root.querySelectorAll('[data-reviews-dot]'));
       if (!track || !originals.length) return;
+      if (root.dataset.reviewsReady) return;
+      root.dataset.reviewsReady = 'true';
 
       var n = originals.length;
       var loopWidth = 0;
@@ -594,13 +625,15 @@
   /* ---------- colección: orden y filtros ---------- */
   function initCollectionToolbar() {
     var sortSelect = doc.querySelector('[data-sort-select]');
-    if (sortSelect) {
+    if (sortSelect && !sortSelect.dataset.toolbarReady) {
+      sortSelect.dataset.toolbarReady = 'true';
       sortSelect.addEventListener('change', function () { sortSelect.form.submit(); });
     }
 
     var toggle = doc.querySelector('[data-filters-toggle]');
     var panel = doc.querySelector('[data-filters-panel]');
-    if (toggle && panel) {
+    if (toggle && panel && !toggle.dataset.toolbarReady) {
+      toggle.dataset.toolbarReady = 'true';
       toggle.addEventListener('click', function () {
         panel.hidden = !panel.hidden;
         toggle.classList.toggle('is-active', !panel.hidden);
@@ -610,8 +643,11 @@
 
   /* ---------- números que cuentan al entrar en pantalla ---------- */
   function initStatBarCount() {
-    var bars = doc.querySelectorAll('[data-stat-bar]');
+    var bars = Array.prototype.filter.call(doc.querySelectorAll('[data-stat-bar]'), function (bar) {
+      return !bar.dataset.statReady;
+    });
     if (!bars.length) return;
+    bars.forEach(function (bar) { bar.dataset.statReady = 'true'; });
 
     function animateNumber(el) {
       var target = el.getAttribute('data-count-target') || '';
