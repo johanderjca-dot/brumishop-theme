@@ -196,7 +196,7 @@
 .product--custom-bg .product__purchase-card {
   border: 1px solid #fff;
   border-radius: var(--card-radius);
-  padding: 10px;
+  padding: 6px 10px;
 }
 .product__price--card { margin-bottom: 6px; }
 .product__purchase-card .product__trust { margin: 0 0 8px; }
