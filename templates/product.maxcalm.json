@@ -1,0 +1,422 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "estrellas": {
+          "type": "rating",
+          "settings": {
+            "text": "1,200+ reseñas verificadas de 5 estrellas"
+          }
+        },
+        "eyebrow": {
+          "type": "eyebrow",
+          "settings": {
+            "text": "FÓRMULA COREANA"
+          }
+        },
+        "titulo": {
+          "type": "title",
+          "settings": {}
+        },
+        "chips": {
+          "type": "chips",
+          "settings": {
+            "items": "HCA, MALTODEXTRINA, CHIA,CALCIO"
+          }
+        },
+        "descripcion": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Le Dicen El Ozempic Coreano — Y Todo Internet Está Hablando De Esto</p>"
+          }
+        },
+        "compra": {
+          "type": "purchase_card",
+          "settings": {
+            "header_label": "",
+            "hide_button": true,
+            "button_label": "Comprar ahora, pagar en casa",
+            "item1": "Paga cuando lo recibes",
+            "item2": "Envío gratis a todo el país",
+            "item3": "Cambios sin complicaciones"
+          }
+        },
+        "collapsible_BPqCLy": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "BENEFICIOS",
+            "content": "<ul><li>Reduce la absorción de carbohidratos que se convierten en grasa.</li><li>Ayuda a evitar el bajón de energía después de comer dulces o harinas.</li><li>La fibra se expande en tu estómago para que comas menos sin sentir que te falta algo.</li></ul>"
+          }
+        },
+        "como-usar": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "¿CÓMO USARLO?",
+            "content": "<ul><li>1 stick al día, preferiblemente después de una comida (muchos lo comen después del almuerzo). Se abre y se come directo, como un popsicle — no necesita agua ni preparación.</li></ul>"
+          }
+        },
+        "ingredientes": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "INGREDIENTES",
+            "content": "<p>Garcinia Cambogia, fibra de semillas de chía y maltodextrina indigestible. La fibra te ayuda a sentirte satisfecha entre comidas y apoya tu digestión; el HCA de la Garcinia Cambogia está asociado con el control del apetito.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "estrellas",
+        "eyebrow",
+        "titulo",
+        "chips",
+        "descripcion",
+        "compra",
+        "collapsible_BPqCLy",
+        "como-usar",
+        "ingredientes"
+      ],
+      "settings": {
+        "bg_color": "#cf7573",
+        "text_color": "#ffffff",
+        "badge_text": "TOP",
+        "badge_rating": "4.9/5.0",
+        "sticky_bar": true,
+        "sticky_label": "Ordenar ahora"
+      }
+    },
+    "confianza": {
+      "type": "trust-ticker",
+      "settings": {
+        "text": "Made in USA | 20 años de investigación | #1 recomendado por doctores",
+        "speed": 60,
+        "bg_color": "",
+        "text_color": ""
+      }
+    },
+    "comparacion": {
+      "type": "product-comparison-grid",
+      "blocks": {
+        "f1": {
+          "type": "row",
+          "settings": {
+            "label": "Reduce absorción de carbohidratos",
+            "check1": true,
+            "check2": false,
+            "check3": false,
+            "check4": false
+          }
+        },
+        "f2": {
+          "type": "row",
+          "settings": {
+            "label": "Controla antojos y apetito",
+            "check1": true,
+            "check2": false,
+            "check3": true,
+            "check4": false
+          }
+        },
+        "f3": {
+          "type": "row",
+          "settings": {
+            "label": "Mejora digestión",
+            "check1": true,
+            "check2": true,
+            "check3": false,
+            "check4": true
+          }
+        },
+        "f4": {
+          "type": "row",
+          "settings": {
+            "label": "Formato listo para consumir",
+            "check1": true,
+            "check2": true,
+            "check3": true,
+            "check4": false
+          }
+        },
+        "f5": {
+          "type": "row",
+          "settings": {
+            "label": "Contiene Garcinia Cambogia",
+            "check1": true,
+            "check2": false,
+            "check3": false,
+            "check4": false
+          }
+        },
+        "f6": {
+          "type": "row",
+          "settings": {
+            "label": "Fibra natural (semillas de chía)",
+            "check1": true,
+            "check2": false,
+            "check3": false,
+            "check4": true
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6"
+      ],
+      "settings": {
+        "bg_color": "#ffffff",
+        "check_color": "#cf7573",
+        "check_icon_color": "#ffffff",
+        "eyebrow": "CUTTING JELLY",
+        "heading_1": "LA SOLUCIÓN DEFINITIVA PARA CONTROLAR TU APETITO",
+        "heading_2": "",
+        "heading_3": "",
+        "col1_label": "NUESTRO PRODUCTO",
+        "col2_label": "Digestivos Tradicionales",
+        "col3_label": "Gominolas de Control",
+        "col4_label": "Fibra en Polvo"
+      }
+    },
+    "mision": {
+      "type": "marquee-banner",
+      "settings": {
+        "image": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_4.png",
+        "overlay": 20,
+        "height": 60,
+        "height_mobile": 50,
+        "text": "TU SALUD EN BUENAS MANOS",
+        "text_color": "#ffffff",
+        "speed": 60,
+        "btn_label": "COMPRAR AHORA",
+        "btn_url": "#comprar"
+      }
+    },
+    "why_section_wXXwHV": {
+      "type": "why-section",
+      "blocks": {
+        "row_R4dT7x": {
+          "type": "row",
+          "settings": {
+            "benefit": "Controla antojos y apetito"
+          }
+        },
+        "row_7BRTgp": {
+          "type": "row",
+          "settings": {
+            "benefit": "Evita bajones de energía"
+          }
+        },
+        "row_BFaYMh": {
+          "type": "row",
+          "settings": {
+            "benefit": "Reduce absorción de carbohidratos"
+          }
+        },
+        "row_E49BFc": {
+          "type": "row",
+          "settings": {
+            "benefit": "#1 en ventas en TikTok"
+          }
+        }
+      },
+      "block_order": [
+        "row_R4dT7x",
+        "row_7BRTgp",
+        "row_BFaYMh",
+        "row_E49BFc"
+      ],
+      "name": "Por qué este producto",
+      "settings": {
+        "image": "shopify://shop_images/fresh-mangosteen-and-fruit-at-a-market-stall-2026-03-25-05-46-52-utc.jpg",
+        "heading": "¿POR QUÉ CUTTING JELLY?",
+        "text": "",
+        "col1_label": "Beneficio:",
+        "col2_label": "Barra jelly:",
+        "included_label": "Incluido",
+        "guarantee": "Garantía de devolución de 30 días",
+        "btn_label": "COMPRAR AHORA",
+        "bg_color": "#ffffff",
+        "text_color": "#000000"
+      }
+    },
+    "stat_bar_yy84Ad": {
+      "type": "stat-bar",
+      "blocks": {
+        "stat_F7XYpj": {
+          "type": "stat",
+          "settings": {
+            "number": "99%",
+            "label": "Pureza"
+          }
+        },
+        "stat_EVenQJ": {
+          "type": "stat",
+          "settings": {
+            "number": "97%",
+            "label": "Satisfacción"
+          }
+        },
+        "stat_9kgNRk": {
+          "type": "stat",
+          "settings": {
+            "number": "95%",
+            "label": "Efectividad"
+          }
+        }
+      },
+      "block_order": [
+        "stat_F7XYpj",
+        "stat_EVenQJ",
+        "stat_9kgNRk"
+      ],
+      "name": "Franja de estadísticas",
+      "settings": {
+        "bg_color": "#cf7573",
+        "text_color": "#ffffff"
+      }
+    },
+    "reviews_carousel_nHyaqY": {
+      "type": "reviews-carousel",
+      "blocks": {
+        "resena_LcyLfk": {
+          "type": "resena",
+          "settings": {
+            "headline": "me gusta",
+            "text": "Yo pense que era pa mujere na ma, pero eso me tiene de to",
+            "rating": 5,
+            "avatar": "shopify://shop_images/Male9.jpg",
+            "author": "Carlos - Cliente verificado",
+            "product": ""
+          }
+        },
+        "resena_j4N6Fj": {
+          "type": "resena",
+          "settings": {
+            "headline": "Un resultado increíble",
+            "text": "Compre mi paquete de 1 mes y no he dejado de usarlo un solo dia, funciona bien lo de la inflamación",
+            "rating": 5,
+            "avatar": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_5.png",
+            "author": "Maria Elena - Cliente verificado",
+            "product": ""
+          }
+        },
+        "resena_aMQiVF": {
+          "type": "resena",
+          "settings": {
+            "headline": "si sirve",
+            "text": "Yo lo que tengo para decir es que muy bueno si",
+            "rating": 5,
+            "avatar": "shopify://shop_images/WhatsApp_Image_2026-06-30_at_3.31.42_PM.jpg",
+            "author": "Ana Maria - Cliente verificado",
+            "product": ""
+          }
+        },
+        "resena_NezdJN": {
+          "type": "resena",
+          "settings": {
+            "headline": "voy al baño diario",
+            "text": "Bueno despues de eso yo como que voy mas seguido al baño",
+            "rating": 5,
+            "avatar": "shopify://shop_images/Female10.jpg",
+            "author": "Luz - Cliente verificado",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "resena_LcyLfk",
+        "resena_j4N6Fj",
+        "resena_aMQiVF",
+        "resena_NezdJN"
+      ],
+      "name": "Carrusel de reseñas",
+      "settings": {
+        "trust_text": "Hecho con calidad | Envío a todo el país | Recomendado por clientes",
+        "trust_speed": 60,
+        "eyebrow": "reseñas via whatsapp / web",
+        "heading": "Únete a más de 1,200 clientes felices"
+      }
+    },
+    "faq_accordion_6xBJq3": {
+      "type": "faq-accordion",
+      "blocks": {
+        "faq_387zMa": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Qué pasa si hago el pedido y no me gusta al recibirlo?",
+            "answer": "<p>Pagas contra entrega — lo revisas cuando lo tienes en tus manos, y solo pagas si decides quedarte con él. <strong>Envío gratis en toda República Dominicana.</strong></p>"
+          }
+        },
+        "faq_rQA3Ld": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cómo y cuándo se come?",
+            "answer": "<p>1 stick al día, preferiblemente después de una comida (muchos lo comen después del almuerzo). Se abre y se come directo, como un popsicle — no necesita agua ni preparación.</p>"
+          }
+        },
+        "faq_iAXgnM": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Qué trae adentro y qué hace?",
+            "answer": "<p>Garcinia Cambogia, fibra de semillas de chía y maltodextrina indigestible. La fibra te ayuda a sentirte satisfecha entre comidas y apoya tu digestión; el HCA de la Garcinia Cambogia está asociado con el control del apetito.</p>"
+          }
+        },
+        "faq_GG9DFq": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Lo pueden comer los hombres también?",
+            "answer": "<p>Si, es un producto para el estomago de cualquier persona.</p>"
+          }
+        },
+        "faq_9bThGg": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Tiene contraindicaciones o alguien que no debería comerlo?",
+            "answer": "<p>Contiene pescado y leche (colágeno de pescado y proteína de leche) — si tienes alergia a estos, no lo consumas. No se recomienda en embarazo, lactancia, ni en niños. Si tienes alguna condición de hígado, riñón o corazón, o tomas medicamentos, consulta a tu médico antes de usarlo.</p>"
+          }
+        },
+        "faq_Nx8kYi": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cuánto dura una caja / cuál es el tiempo de duración?",
+            "answer": "<p>Cada caja trae 10 sticks — a razón de 1 al día, te dura <strong>10 días</strong> (tu rutina completa). No necesita refrigeración, se conserva a temperatura ambiente, y sin abrir tiene una vida útil larga (revisa la fecha de vencimiento impresa en tu caja específica, ya que puede variar por lote).</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_387zMa",
+        "faq_rQA3Ld",
+        "faq_iAXgnM",
+        "faq_GG9DFq",
+        "faq_9bThGg",
+        "faq_Nx8kYi"
+      ],
+      "name": "Preguntas frecuentes",
+      "settings": {
+        "eyebrow": "Todo lo que necesitas saber",
+        "heading": "Preguntas frecuentes"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "confianza",
+    "comparacion",
+    "mision",
+    "why_section_wXXwHV",
+    "stat_bar_yy84Ad",
+    "reviews_carousel_nHyaqY",
+    "faq_accordion_6xBJq3"
+  ]
+}
