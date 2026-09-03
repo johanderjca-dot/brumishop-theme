@@ -497,6 +497,11 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   transition: opacity .4s ease;
   text-decoration: none;
   color: inherit;
+  /* .spot__slide es un <a> — al sostener el dedo para deslizar,
+     iOS Safari interpreta un toque largo sobre el enlace y muestra
+     su vista previa nativa (una tarjeta fantasma con la página de
+     destino superpuesta). Esto la desactiva. */
+  -webkit-touch-callout: none;
 }
 .spot__slide.is-active { opacity: 1; pointer-events: auto; }
 
