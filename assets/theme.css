@@ -242,7 +242,11 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 
 .announcement__track--scroll { justify-content: flex-start; }
 .announcement__track--scroll .announcement__group {
-  animation: brumi-marquee var(--ann-speed, 30s) linear infinite;
+  /* el contenido se repite 4x por copia (ver announcement-bar.liquid)
+     para que el loop nunca deje un hueco vacío — sin este *4 la misma
+     "velocidad" recorrería 4x más texto en el mismo tiempo, viéndose
+     mucho más rápido de lo que el número sugiere. */
+  animation: brumi-marquee calc(var(--ann-speed, 30s) * 4) linear infinite;
 }
 @keyframes brumi-marquee {
   from { transform: translateX(0); }
@@ -436,7 +440,10 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .mqb__group {
   display: flex;
   flex-shrink: 0;
-  animation: mqb-marquee var(--mqb-speed, 20s) linear infinite;
+  /* texto repetido 4x por copia (ver marquee-banner.liquid) para que
+     no quede un hueco vacío en pantallas anchas — el *4 compensa esa
+     distancia extra para que la "velocidad" siga siendo la misma. */
+  animation: mqb-marquee calc(var(--mqb-speed, 20s) * 4) linear infinite;
 }
 .mqb__text {
   font-family: var(--font-heading);
@@ -680,7 +687,11 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  animation: mqb-marquee var(--trust-speed, 24s) linear infinite;
+  /* texto repetido 6x por copia (ver reviews-carousel.liquid y
+     trust-ticker.liquid) para que no quede un hueco vacío — el *6
+     compensa esa distancia extra para que la "velocidad" configurada
+     siga significando lo mismo que antes de repetir el texto. */
+  animation: mqb-marquee calc(var(--trust-speed, 24s) * 6) linear infinite;
 }
 .reviews__trust-item {
   font-size: 11px;
