@@ -44,6 +44,7 @@
                      srcset="{{ block.settings.image | image_url: width: 500 }} 500w, {{ block.settings.image | image_url: width: 900 }} 900w"
                      sizes="(min-width: 750px) 40vw, 80vw"
                      alt="{{ title | escape }}"
+                     fetchpriority="high"
                      width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}">
               {%- else -%}
                 {{ 'product-1' | placeholder_svg_tag: 'spot__media-placeholder' }}
@@ -81,6 +82,7 @@
                  srcset="{{ block.settings.image_lifestyle | image_url: width: 750 }} 750w, {{ block.settings.image_lifestyle | image_url: width: 1400 }} 1400w"
                  sizes="(min-width: 750px) 50vw, 100vw"
                  alt=""
+                 fetchpriority="high"
                  width="{{ block.settings.image_lifestyle.width }}" height="{{ block.settings.image_lifestyle.height }}">
           {%- else -%}
             {{ 'lifestyle-1' | placeholder_svg_tag: 'spot__right-placeholder' }}

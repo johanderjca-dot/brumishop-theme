@@ -446,11 +446,6 @@
         rightSlides.forEach(function (s, n) { s.classList.toggle('is-active', n === index); });
         dots.forEach(function (d, n) { d.classList.toggle('is-active', n === index); });
         if (left) left.style.backgroundColor = slides[index].getAttribute('data-bg') || '';
-        // Safari a veces no repinta tras un cambio de clase disparado
-        // desde un evento touch — se queda con el fotograma anterior
-        // hasta el siguiente toque. Forzar una lectura de layout aquí
-        // obliga al navegador a recalcular y pintar de una vez.
-        void root.offsetHeight;
       }
 
       dots.forEach(function (d, n) {
