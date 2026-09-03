@@ -21,7 +21,7 @@
         "eyebrow": {
           "type": "eyebrow",
           "settings": {
-            "text": "FÓRMULA COREANA"
+            "text": "FÓRMULA PATENTADA"
           }
         },
         "titulo": {
@@ -31,13 +31,13 @@
         "chips": {
           "type": "chips",
           "settings": {
-            "items": "magnesio, citrato, glicinato"
+            "items": "magnesio, citrato, glicinato,ALTA ABSORCIÓN"
           }
         },
         "descripcion": {
           "type": "text",
           "settings": {
-            "text": "<p>Le Dicen El Ozempic Coreano — Y Todo Internet Está Hablando De Esto</p>"
+            "text": "<p>Baja el cortisol. Cambia todo lo demás.</p>"
           }
         },
         "compra": {
