@@ -108,7 +108,7 @@
         "f1": {
           "type": "row",
           "settings": {
-            "label": "Reduce absorción de carbohidratos",
+            "label": "Baja el cortisol",
             "check1": true,
             "check2": false,
             "check3": false,
