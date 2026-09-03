@@ -31,7 +31,7 @@
         "chips": {
           "type": "chips",
           "settings": {
-            "items": "HCA, MALTODEXTRINA, CHIA,CALCIO"
+            "items": "magnesio, citrato, glicinato"
           }
         },
         "descripcion": {
@@ -85,7 +85,7 @@
         "ingredientes"
       ],
       "settings": {
-        "bg_color": "#3FAAB9",
+        "bg_color": "#3faab9",
         "text_color": "#ffffff",
         "badge_text": "TOP",
         "badge_rating": "4.9/5.0",
