@@ -1479,4 +1479,4 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 /* prueba: espacio entre el hero y "Escoge por dónde empezar" a 50px
    (el estándar del tema es 56px) — solo esta sección, no el ajuste
    global, que se usa en todo el sitio */
-.category-tiles-section { padding-top: 50px; }
+.category-tiles-section { padding-top: 45px; }
