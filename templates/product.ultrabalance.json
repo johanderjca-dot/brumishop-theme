@@ -15,7 +15,7 @@
         "estrellas": {
           "type": "rating",
           "settings": {
-            "text": "40,000+ reseñas verificadas de 5 estrellas"
+            "text": "1,200+ reseñas verificadas de 5 estrellas"
           }
         },
         "titulo": {
@@ -36,6 +36,7 @@
           "type": "purchase_card",
           "settings": {
             "header_label": "MEJOR VALOR",
+            "hide_button": false,
             "button_label": "Comprar ahora, pagar en casa",
             "item1": "Paga cuando lo recibes",
             "item2": "Envío gratis a todo el país",
@@ -75,7 +76,8 @@
         "ingredientes"
       ],
       "settings": {
-        "bg_color": "#AD191F",
+        "bg_color": "#ad191f",
+        "text_color": "#FFFFFF",
         "badge_text": "TOP",
         "badge_rating": "4.9/5.0",
         "sticky_bar": true,
