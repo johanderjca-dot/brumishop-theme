@@ -224,7 +224,7 @@
 .product__collapsible summary::after { content: "+"; font-size: 19px; font-weight: 400; }
 .product__collapsible[open] summary::after { content: "–"; }
 .product__collapsible .rte { padding-bottom: 16px; font-size: 14px; }
-.product__collapsible .rte p { margin: 0 0 10px; }
+.product__collapsible .rte p { margin: 0 0 5px; }
 .product__collapsible .rte p:last-child { margin-bottom: 0; }
 
 .product__divider { margin: 18px 0; }
