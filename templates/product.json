@@ -46,21 +46,21 @@
           "type": "collapsible",
           "settings": {
             "heading": "BENEFICIOS",
-            "content": ""
+            "content": "<ul><li>[Beneficio 1 — resultado concreto que el cliente obtiene]</li><li>[Beneficio 2 — resultado concreto que el cliente obtiene]</li><li>[Beneficio 3 — resultado concreto que el cliente obtiene]</li></ul>"
           }
         },
         "como-usar": {
           "type": "collapsible",
           "settings": {
             "heading": "¿CÓMO USARLO?",
-            "content": ""
+            "content": "<ul><li>[Paso o frecuencia de uso, en una frase simple y directa]</li></ul>"
           }
         },
         "ingredientes": {
           "type": "collapsible",
           "settings": {
             "heading": "INGREDIENTES",
-            "content": ""
+            "content": "<ul><li>[Ingrediente principal — qué hace en una frase corta]</li><li>[Ingrediente / dato adicional, ej. libre de gluten, azúcar, colorantes]</li></ul>"
           }
         }
       },
