@@ -187,11 +187,60 @@
         "col3_label": "Pastillas para el dolor",
         "col4_label": "Magnesio genérico"
       }
+    },
+    "why_section_jMR7qM": {
+      "type": "why-section",
+      "blocks": {
+        "row_DCjgd3": {
+          "type": "row",
+          "settings": {
+            "benefit": "Beneficio"
+          }
+        },
+        "row_eLDgNG": {
+          "type": "row",
+          "settings": {
+            "benefit": "Beneficio"
+          }
+        },
+        "row_xxxVxt": {
+          "type": "row",
+          "settings": {
+            "benefit": "Beneficio"
+          }
+        },
+        "row_imqhP8": {
+          "type": "row",
+          "settings": {
+            "benefit": "Beneficio"
+          }
+        }
+      },
+      "block_order": [
+        "row_DCjgd3",
+        "row_eLDgNG",
+        "row_xxxVxt",
+        "row_imqhP8"
+      ],
+      "name": "Por qué este producto",
+      "settings": {
+        "image": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_1_37e4dd26-23ad-4f69-b4fb-dc5930ec00d3.png",
+        "heading": "¿POR QUÉ ESTE PRODUCTO?",
+        "text": "",
+        "col1_label": "Beneficio:",
+        "col2_label": "Cápsulas:",
+        "included_label": "Incluido",
+        "guarantee": "Garantía de devolución de 30 días",
+        "btn_label": "",
+        "bg_color": "",
+        "text_color": ""
+      }
     }
   },
   "order": [
     "main",
     "trust_ticker_rEHUF7",
-    "product_comparison_grid_axaAeB"
+    "product_comparison_grid_axaAeB",
+    "why_section_jMR7qM"
   ]
 }
