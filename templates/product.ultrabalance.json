@@ -83,18 +83,12 @@
         "ingredientes"
       ],
       "settings": {
-        "bg_color": "#ad191f",
+        "bg_color": "#DEA5A7",
         "text_color": "#ffffff",
         "badge_text": "TOP",
         "badge_rating": "4.9/5.0",
         "sticky_bar": true,
         "sticky_label": "Ordenar ahora"
-      }
-    },
-    "videos": {
-      "type": "product-video-row",
-      "settings": {
-        "heading": "MEJORA TU RUTINA DIARIA"
       }
     },
     "marquee": {
@@ -333,7 +327,6 @@
   },
   "order": [
     "main",
-    "videos",
     "marquee",
     "editorial",
     "showcase",
