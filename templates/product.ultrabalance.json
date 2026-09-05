@@ -101,251 +101,97 @@
         "text_color": ""
       }
     },
-    "marquee": {
-      "type": "marquee-banner",
-      "settings": {
-        "overlay": 15,
-        "height": 60,
-        "height_mobile": 45,
-        "text": "HECHO EN RD • CALIDAD GARANTIZADA • RECOMENDADO POR CLIENTES",
-        "text_color": "#ffffff",
-        "speed": 20,
-        "btn_label": "Comprar ahora",
-        "btn_url": ""
-      }
-    },
-    "editorial": {
-      "type": "editorial-banner",
-      "settings": {
-        "overlay": 20,
-        "eyebrow": "INNOVACIÓN LÍDER",
-        "heading": "Comprobado para apoyar resultados reales.",
-        "text": "",
-        "text_color": "#ffffff",
-        "align": "center"
-      }
-    },
-    "showcase": {
-      "type": "feature-showcase",
+    "product_comparison_grid_axaAeB": {
+      "type": "product-comparison-grid",
       "blocks": {
-        "c1": {
-          "type": "card",
-          "settings": {
-            "title": "Beneficio 1"
-          }
-        },
-        "c2": {
-          "type": "card",
-          "settings": {
-            "title": "Beneficio 2"
-          }
-        },
-        "c3": {
-          "type": "card",
-          "settings": {
-            "title": "Beneficio 3"
-          }
-        }
-      },
-      "block_order": [
-        "c1",
-        "c2",
-        "c3"
-      ],
-      "settings": {
-        "bg_color": "#1b2a3a",
-        "text_color": "#ffffff",
-        "eyebrow": "AVANZADO",
-        "heading": "Apoya tu bienestar desde el primer día.",
-        "text": ""
-      }
-    },
-    "compare": {
-      "type": "comparison-table",
-      "blocks": {
-        "r1": {
+        "row_3rHmgm": {
           "type": "row",
           "settings": {
-            "text": "Fórmula 100% vegana"
+            "label": "Regula el ciclo con Mio-inositol",
+            "check1": true,
+            "check2": false,
+            "check3": false,
+            "check4": false
           }
         },
-        "r2": {
+        "row_DhpC6N": {
           "type": "row",
           "settings": {
-            "text": "Estudiado clínicamente"
+            "label": "Shatavari clínicamente estudiado",
+            "check1": true,
+            "check2": false,
+            "check3": false,
+            "check4": false
           }
         },
-        "r3": {
+        "row_kEb3ci": {
           "type": "row",
           "settings": {
-            "text": "Sin azúcar ni rellenos"
+            "label": "Reduce ansiedad y antojos",
+            "check1": true,
+            "check2": false,
+            "check3": true,
+            "check4": true
           }
         },
-        "r4": {
+        "row_krpb4e": {
           "type": "row",
           "settings": {
-            "text": "Etiquetado transparente"
+            "label": "Sin hormonas sintéticas",
+            "check1": true,
+            "check2": false,
+            "check3": true,
+            "check4": true
+          }
+        },
+        "row_wkQNhz": {
+          "type": "row",
+          "settings": {
+            "label": "Actúa en piel, ciclo, peso y ánimo a la vez",
+            "check1": true,
+            "check2": false,
+            "check3": false,
+            "check4": false
+          }
+        },
+        "row_QgeRaT": {
+          "type": "row",
+          "settings": {
+            "label": "Actúa en piel, ciclo, peso y ánimo a la vez",
+            "check1": true,
+            "check2": false,
+            "check3": false,
+            "check4": false
           }
         }
       },
       "block_order": [
-        "r1",
-        "r2",
-        "r3",
-        "r4"
+        "row_3rHmgm",
+        "row_DhpC6N",
+        "row_kEb3ci",
+        "row_krpb4e",
+        "row_wkQNhz",
+        "row_QgeRaT"
       ],
+      "name": "Tabla comparativa",
       "settings": {
-        "heading": "NOSOTROS VS. ELLOS",
-        "label_us": "Nuestro producto",
-        "label_them": "Genérico"
+        "bg_color": "#FFFFFF",
+        "check_color": "#DEA5A7",
+        "check_icon_color": "#FFFFFF",
+        "eyebrow": "PLANT BASED",
+        "heading_1": "DAILY",
+        "heading_2": "SUPPLEMENTS WITH BENEFITS FOR YOU TO",
+        "heading_3": "FEEL GOOD",
+        "col1_label": "NUESTRO PRODUCTO",
+        "col2_label": "Anticonceptivos",
+        "col3_label": "Pastillas para el dolor",
+        "col4_label": "Magnesio genérico"
       }
-    },
-    "mision": {
-      "type": "mission-split",
-      "blocks": {
-        "i1": {
-          "type": "item",
-          "settings": {
-            "text": "Energía todo el día"
-          }
-        },
-        "i2": {
-          "type": "item",
-          "settings": {
-            "text": "Balance hormonal"
-          }
-        },
-        "i3": {
-          "type": "item",
-          "settings": {
-            "text": "Renovación celular"
-          }
-        }
-      },
-      "block_order": [
-        "i1",
-        "i2",
-        "i3"
-      ],
-      "settings": {
-        "image_position": "right",
-        "bg_color": "#151515",
-        "text_color": "#ffffff",
-        "eyebrow": "AVANZADO",
-        "heading": "Apoya la producción de energía celular.",
-        "link_label": "",
-        "link_url": ""
-      }
-    },
-    "stats": {
-      "type": "stat-bar",
-      "blocks": {
-        "s1": {
-          "type": "stat",
-          "settings": {
-            "number": "+99%",
-            "label": "Pureza"
-          }
-        },
-        "s2": {
-          "type": "stat",
-          "settings": {
-            "number": "GMP",
-            "label": "Fabricado bajo norma GMP"
-          }
-        },
-        "s3": {
-          "type": "stat",
-          "settings": {
-            "number": "20+",
-            "label": "Años de investigación"
-          }
-        }
-      },
-      "block_order": [
-        "s1",
-        "s2",
-        "s3"
-      ],
-      "settings": {
-        "bg_color": "#151515",
-        "text_color": "#ffffff"
-      }
-    },
-    "resenas": {
-      "type": "reviews-carousel",
-      "settings": {
-        "trust_text": "Hecho con calidad | Envío a todo el país | Recomendado por clientes",
-        "trust_speed": 24,
-        "eyebrow": "Tu salud en buenas manos",
-        "heading": "Historias reales, resultados reales"
-      }
-    },
-    "faq": {
-      "type": "faq-accordion",
-      "blocks": {
-        "q1": {
-          "type": "faq",
-          "settings": {
-            "question": "¿Es seguro usar este producto?",
-            "answer": ""
-          }
-        },
-        "q2": {
-          "type": "faq",
-          "settings": {
-            "question": "¿Cómo debo guardar el producto?",
-            "answer": ""
-          }
-        }
-      },
-      "block_order": [
-        "q1",
-        "q2"
-      ],
-      "settings": {
-        "eyebrow": "Todo lo que necesitas saber",
-        "heading": "Preguntas frecuentes"
-      }
-    },
-    "split": {
-      "type": "split-banner-links",
-      "blocks": {
-        "p1": {
-          "type": "panel",
-          "settings": {
-            "heading": "Alivio del estrés",
-            "link_label": "Ver ahora",
-            "url": ""
-          }
-        },
-        "p2": {
-          "type": "panel",
-          "settings": {
-            "heading": "Refuerzo inmune",
-            "link_label": "Ver ahora",
-            "url": ""
-          }
-        }
-      },
-      "block_order": [
-        "p1",
-        "p2"
-      ],
-      "settings": {}
     }
   },
   "order": [
     "main",
     "trust_ticker_rEHUF7",
-    "marquee",
-    "editorial",
-    "showcase",
-    "compare",
-    "mision",
-    "stats",
-    "resenas",
-    "faq",
-    "split"
+    "product_comparison_grid_axaAeB"
   ]
 }
