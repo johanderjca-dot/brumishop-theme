@@ -271,6 +271,64 @@
         "bg_color": "#DEA5A7",
         "text_color": "#FFFFFF"
       }
+    },
+    "reviews_carousel_cGVcpG": {
+      "type": "reviews-carousel",
+      "blocks": {
+        "resena_q4fNx8": {
+          "type": "resena",
+          "settings": {
+            "headline": "Un resultado increíble",
+            "text": "Escribe aquí lo que dijo tu cliente sobre el producto.",
+            "rating": 5,
+            "author": "- Cliente verificado",
+            "product": ""
+          }
+        },
+        "resena_FUjnq7": {
+          "type": "resena",
+          "settings": {
+            "headline": "Un resultado increíble",
+            "text": "Escribe aquí lo que dijo tu cliente sobre el producto.",
+            "rating": 5,
+            "author": "- Cliente verificado",
+            "product": ""
+          }
+        },
+        "resena_RKazL9": {
+          "type": "resena",
+          "settings": {
+            "headline": "Un resultado increíble",
+            "text": "Escribe aquí lo que dijo tu cliente sobre el producto.",
+            "rating": 5,
+            "author": "- Cliente verificado",
+            "product": ""
+          }
+        },
+        "resena_QerwFg": {
+          "type": "resena",
+          "settings": {
+            "headline": "Un resultado increíble",
+            "text": "Escribe aquí lo que dijo tu cliente sobre el producto.",
+            "rating": 5,
+            "author": "- Cliente verificado",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "resena_q4fNx8",
+        "resena_FUjnq7",
+        "resena_RKazL9",
+        "resena_QerwFg"
+      ],
+      "name": "Carrusel de reseñas",
+      "settings": {
+        "trust_text": "Hecho con calidad | Envío a todo el país | Recomendado por clientes",
+        "trust_speed": 24,
+        "eyebrow": "",
+        "heading": "Únete a más de 1,200 clientes felices"
+      }
     }
   },
   "order": [
@@ -278,6 +336,7 @@
     "trust_ticker_rEHUF7",
     "product_comparison_grid_axaAeB",
     "why_section_GTJMtB",
-    "stat_bar_PVJWat"
+    "stat_bar_PVJWat",
+    "reviews_carousel_cGVcpG"
   ]
 }
