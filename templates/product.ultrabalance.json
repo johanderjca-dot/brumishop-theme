@@ -53,7 +53,7 @@
           "type": "collapsible",
           "settings": {
             "heading": "BENEFICIOS",
-            "content": "<p><strong>1. Contiene Myo-Inositol que restaura tu ciclo hormonal natural</strong><br/><br/>Reduce los andrógenos y equilibra la insulina. Tu período regresa regular sin anticonceptivos que tapen el problema.</p><p><strong>2. Contiene Magnesio que reduce ansiedad, antojos y cambios de humor</strong><br/><br/>Estabiliza tu sistema nervioso. Adiós a los picos de irritabilidad y los antojos descontrolados de azúcar.</p><p><strong>3. Contiene Shatavari clínico que apoya el equilibrio hormonal desde adentro</strong><br/><br/>Adaptógeno estudiado que regula el cortisol y los andrógenos. Tu cuerpo vuelve al balance.</p>"
+            "content": "<p><strong>1. Contiene Myo-Inositol que restaura tu ciclo hormonal natural</strong><br/>Reduce los andrógenos y equilibra la insulina. Tu período regresa regular sin anticonceptivos que tapen el problema.</p><p><strong>2. Contiene Magnesio que reduce ansiedad, antojos y cambios de humor</strong><br/>Estabiliza tu sistema nervioso. Adiós a los picos de irritabilidad y los antojos descontrolados de azúcar.</p><p><strong>3. Contiene Shatavari clínico que apoya el equilibrio hormonal desde adentro</strong><br/>Adaptógeno estudiado que regula el cortisol y los andrógenos. Tu cuerpo vuelve al balance.</p>"
           }
         },
         "como-usar": {
@@ -84,7 +84,7 @@
       ],
       "settings": {
         "bg_color": "#ad191f",
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "badge_text": "TOP",
         "badge_rating": "4.9/5.0",
         "sticky_bar": true,
