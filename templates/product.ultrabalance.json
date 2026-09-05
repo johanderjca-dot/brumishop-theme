@@ -235,12 +235,49 @@
         "bg_color": "",
         "text_color": ""
       }
+    },
+    "stat_bar_PVJWat": {
+      "type": "stat-bar",
+      "blocks": {
+        "stat_hrJtKi": {
+          "type": "stat",
+          "settings": {
+            "number": "5",
+            "label": "INGREDIENTES ACTIVOS"
+          }
+        },
+        "stat_QgQhRL": {
+          "type": "stat",
+          "settings": {
+            "number": "0%",
+            "label": "hormonas sintéticas"
+          }
+        },
+        "stat_AdEKfc": {
+          "type": "stat",
+          "settings": {
+            "number": "30",
+            "label": "días para resultados"
+          }
+        }
+      },
+      "block_order": [
+        "stat_hrJtKi",
+        "stat_QgQhRL",
+        "stat_AdEKfc"
+      ],
+      "name": "Franja de estadísticas",
+      "settings": {
+        "bg_color": "#DEA5A7",
+        "text_color": "#FFFFFF"
+      }
     }
   },
   "order": [
     "main",
     "trust_ticker_rEHUF7",
     "product_comparison_grid_axaAeB",
-    "why_section_GTJMtB"
+    "why_section_GTJMtB",
+    "stat_bar_PVJWat"
   ]
 }
