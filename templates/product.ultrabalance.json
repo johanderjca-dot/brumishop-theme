@@ -91,6 +91,16 @@
         "sticky_label": "Ordenar ahora"
       }
     },
+    "trust_ticker_rEHUF7": {
+      "type": "trust-ticker",
+      "name": "Franja de confianza",
+      "settings": {
+        "text": "| Ingredientes clínicamente estudiados | Mio-inositol, el activo más investigado para SOP | Sin hormonas sintéticas",
+        "speed": 24,
+        "bg_color": "",
+        "text_color": ""
+      }
+    },
     "marquee": {
       "type": "marquee-banner",
       "settings": {
@@ -327,6 +337,7 @@
   },
   "order": [
     "main",
+    "trust_ticker_rEHUF7",
     "marquee",
     "editorial",
     "showcase",
