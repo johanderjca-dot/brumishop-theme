@@ -773,6 +773,45 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .review-card__product-title { font-size: 13px; font-weight: 600; }
 .review-card__product-price { font-size: 13px; font-weight: 600; color: var(--muted); }
 
+/* ---------- reseñas: variante con foto grande ---------- */
+
+.review-photo-card { display: flex; flex-direction: column; gap: 14px; flex: 1; }
+
+.review-photo-card__media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  background: var(--bg-alt);
+}
+.review-photo-card__img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.review-photo-card__badge {
+  position: absolute; left: 10px; right: 10px; bottom: 10px;
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(251, 250, 246, .72);
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, .4);
+  border: 1px solid color-mix(in srgb, #fff 40%, transparent);
+}
+.review-photo-card__stars { display: flex; gap: 2px; color: #E0A83E; flex: 0 0 auto; }
+.review-photo-card__star.is-empty { color: var(--line); }
+.review-photo-card__name { font-size: 12px; font-weight: 600; margin: 0; }
+
+.review-photo-card__body { display: grid; gap: 10px; }
+.review-photo-card__headline {
+  font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: .3px; margin: 0;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;
+}
+.review-photo-card__text {
+  font-size: 14px; line-height: 1.6; color: var(--muted); margin: 0;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden;
+}
+
 .reviews__dots { display: flex; justify-content: center; gap: 0; margin-top: 28px; }
 /* punto visible chico (7px), botón con área de toque de 24px */
 .reviews__dot {

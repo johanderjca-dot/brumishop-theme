@@ -1,0 +1,134 @@
+<section class="section-pad reviews" data-reviews>
+  <div class="page-width">
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank -%}
+      <div class="cat-head">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="cat-head__eyebrow">{{ section.settings.eyebrow }}</p>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="cat-head__title">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+
+  <div class="reviews__carousel">
+    <div class="reviews__track" data-reviews-track>
+      {%- for block in section.blocks -%}
+        <div class="review-item" data-review {{ block.shopify_attributes }}>
+          <div class="review-photo-card">
+            <div class="review-photo-card__media">
+              {%- if block.settings.photo != blank -%}
+                <img class="review-photo-card__img"
+                     src="{{ block.settings.photo | image_url: width: 700 }}"
+                     srcset="{{ block.settings.photo | image_url: width: 400 }} 400w, {{ block.settings.photo | image_url: width: 700 }} 700w"
+                     sizes="(min-width: 990px) 30vw, (min-width: 560px) 54vw, 78vw"
+                     alt="{{ block.settings.author | escape }}"
+                     width="700" height="700" loading="lazy">
+              {%- else -%}
+                {{ 'lifestyle-1' | placeholder_svg_tag: 'review-photo-card__img review-photo-card__placeholder' }}
+              {%- endif -%}
+
+              {%- if block.settings.author != blank or block.settings.rating > 0 -%}
+                <div class="review-photo-card__badge">
+                  <div class="review-photo-card__stars" aria-hidden="true">
+                    {%- for i in (1..5) -%}
+                      <svg class="review-photo-card__star{% if i > block.settings.rating %} is-empty{% endif %}" width="12" height="12" viewBox="0 0 20 20">
+                        <path d="M10 1l2.6 5.9L19 7.6l-4.8 4.3L15.5 19 10 15.5 4.5 19l1.3-7.1L1 7.6l6.4-.7z" fill="currentColor"/>
+                      </svg>
+                    {%- endfor -%}
+                  </div>
+                  {%- if block.settings.author != blank -%}
+                    <p class="review-photo-card__name">{{ block.settings.author }}</p>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            </div>
+
+            <div class="review-photo-card__body">
+              {%- if block.settings.headline != blank -%}
+                <h3 class="review-photo-card__headline">{{ block.settings.headline }}</h3>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <p class="review-photo-card__text">{{ block.settings.text }}</p>
+              {%- endif -%}
+              {%- if block.settings.product != blank -%}
+                <a class="review-card__product" href="{{ block.settings.product.url }}">
+                  {%- if block.settings.product.featured_image -%}
+                    <span class="review-card__product-thumb">
+                      <img src="{{ block.settings.product.featured_image | image_url: width: 80 }}" alt="" width="36" height="36" loading="lazy">
+                    </span>
+                  {%- endif -%}
+                  <span class="review-card__product-info">
+                    <span class="review-card__product-title">{{ block.settings.product.title }}</span>
+                    <span class="review-card__product-price">{{ block.settings.product.price | money }}</span>
+                  </span>
+                </a>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <button class="tiles-carousel__nav tiles-carousel__nav--prev" type="button" data-reviews-prev aria-label="Reseña anterior">{% render 'icon-caret' %}</button>
+    <button class="tiles-carousel__nav tiles-carousel__nav--next" type="button" data-reviews-next aria-label="Siguiente reseña">{% render 'icon-caret' %}</button>
+  </div>
+
+  {%- if section.blocks.size > 1 -%}
+    <div class="page-width">
+      <div class="reviews__dots">
+        {%- for block in section.blocks -%}
+          <button class="reviews__dot{% if forloop.first %} is-active{% endif %}" type="button" data-reviews-dot aria-label="Ver reseña {{ forloop.index }}"></button>
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- if section.settings.trust_text != blank -%}
+    <div class="reviews__trust">
+      <div class="reviews__trust-track" style="--trust-speed: {{ section.settings.trust_speed }}s">
+        {%- assign trust_words = section.settings.trust_text | split: '|' -%}
+        {%- for i in (1..2) -%}
+          <div class="reviews__trust-group" {% if i == 2 %}aria-hidden="true"{% endif %}>
+            {%- for rep in (1..6) -%}
+              {%- for word in trust_words -%}
+                <span class="reviews__trust-item">{{ word | strip }}</span>
+              {%- endfor -%}
+            {%- endfor -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Carrusel de reseñas (foto)",
+  "tag": "section",
+  "settings": [
+    { "type": "header", "content": "Franja de confianza (opcional)" },
+    { "type": "text", "id": "trust_text", "label": "Palabras (separadas por \"|\")", "default": "Hecho con calidad | Envío a todo el país | Recomendado por clientes", "info": "Ej: Hecho en RD | 5 años de experiencia | Miles de clientes felices" },
+    { "type": "range", "id": "trust_speed", "min": 8, "max": 60, "step": 2, "unit": "s", "label": "Velocidad", "default": 24 },
+
+    { "type": "header", "content": "Título" },
+    { "type": "text", "id": "eyebrow", "label": "Etiqueta pequeña (opcional)" },
+    { "type": "text", "id": "heading", "label": "Título", "default": "Únete a más de 10,000 clientes felices" }
+  ],
+  "blocks": [
+    { "type": "resena", "name": "Reseña", "settings": [
+      { "type": "image_picker", "id": "photo", "label": "Foto del cliente" },
+      { "type": "text", "id": "headline", "label": "Título de la reseña (opcional)" },
+      { "type": "textarea", "id": "text", "label": "Texto de la reseña", "default": "Escribe aquí lo que dijo tu cliente sobre el producto." },
+      { "type": "range", "id": "rating", "min": 1, "max": 5, "step": 1, "label": "Estrellas", "default": 5 },
+      { "type": "text", "id": "author", "label": "Nombre", "default": "- Cliente verificado" },
+      { "type": "product", "id": "product", "label": "Producto relacionado (opcional)", "info": "Si lo eliges, aparece un enlace al producto debajo de la reseña." }
+    ]}
+  ],
+  "presets": [{
+    "name": "Carrusel de reseñas (foto)",
+    "blocks": [ { "type": "resena" }, { "type": "resena" }, { "type": "resena" }, { "type": "resena" } ]
+  }]
+}
+{% endschema %}
