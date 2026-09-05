@@ -127,7 +127,7 @@
 .product__rating { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--product-text, var(--muted)); margin-bottom: 12px; }
 .product__stars { color: #FFB400; letter-spacing: 2px; }
 
-.product__chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0 0 16px; padding: 0; }
+.product__chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0 0 12px; padding: 0; }
 .product__chips li {
   font-size: 11px; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;
   padding: 7px 12px; border: 1px solid var(--product-text, var(--line)); border-radius: 999px;
@@ -143,6 +143,8 @@
 }
 
 .product__description, .product__text { margin-bottom: 8px; }
+.product__description > *:first-child, .product__text > *:first-child { margin-top: 0; }
+.product__description > *:last-child, .product__text > *:last-child { margin-bottom: 0; }
 
 .product__trust {
   list-style: none; margin: 16px 0; padding: 0;
