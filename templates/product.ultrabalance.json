@@ -188,28 +188,28 @@
         "col4_label": "Magnesio genérico"
       }
     },
-    "why_section_jMR7qM": {
+    "why_section_GTJMtB": {
       "type": "why-section",
       "blocks": {
-        "row_DCjgd3": {
+        "row_eQ6PBW": {
           "type": "row",
           "settings": {
             "benefit": "Beneficio"
           }
         },
-        "row_eLDgNG": {
+        "row_78CEJ9": {
           "type": "row",
           "settings": {
             "benefit": "Beneficio"
           }
         },
-        "row_xxxVxt": {
+        "row_pUiJtV": {
           "type": "row",
           "settings": {
             "benefit": "Beneficio"
           }
         },
-        "row_imqhP8": {
+        "row_V97hJ9": {
           "type": "row",
           "settings": {
             "benefit": "Beneficio"
@@ -217,21 +217,20 @@
         }
       },
       "block_order": [
-        "row_DCjgd3",
-        "row_eLDgNG",
-        "row_xxxVxt",
-        "row_imqhP8"
+        "row_eQ6PBW",
+        "row_78CEJ9",
+        "row_pUiJtV",
+        "row_V97hJ9"
       ],
       "name": "Por qué este producto",
       "settings": {
-        "image": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_1_37e4dd26-23ad-4f69-b4fb-dc5930ec00d3.png",
         "heading": "¿POR QUÉ ESTE PRODUCTO?",
         "text": "",
         "col1_label": "Beneficio:",
         "col2_label": "Cápsulas:",
         "included_label": "Incluido",
         "guarantee": "Garantía de devolución de 30 días",
-        "btn_label": "",
+        "btn_label": "ORDENA AHORA",
         "bg_color": "",
         "text_color": ""
       }
@@ -241,6 +240,6 @@
     "main",
     "trust_ticker_rEHUF7",
     "product_comparison_grid_axaAeB",
-    "why_section_jMR7qM"
+    "why_section_GTJMtB"
   ]
 }
