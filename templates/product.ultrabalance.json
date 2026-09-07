@@ -333,6 +333,42 @@
         "eyebrow": "",
         "heading": "Únete a más de 1,200 clientes felices"
       }
+    },
+    "faq_accordion_xXEaF4": {
+      "type": "faq-accordion",
+      "blocks": {
+        "faq_bWtDDB": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cómo se toma Super Balance?",
+            "answer": "<p>Disuelve un sobre en 8 oz de agua fría, una vez al día. No requiere horario fijo.</p><p></p>"
+          }
+        },
+        "faq_HVdcEc": {
+          "type": "faq",
+          "settings": {
+            "question": "¿En cuánto tiempo veo resultados?",
+            "answer": "<p>Los primeros cambios (piel, energía, antojos) suelen notarse entre la semana 2 y 4. Para resultados en la regularidad del ciclo, se recomienda uso continuo de 2 a 3 meses.</p>"
+          }
+        },
+        "faq_QazpGX": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Es seguro usar este producto?",
+            "answer": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_bWtDDB",
+        "faq_HVdcEc",
+        "faq_QazpGX"
+      ],
+      "name": "Preguntas frecuentes",
+      "settings": {
+        "eyebrow": "Todo lo que necesitas saber",
+        "heading": "Preguntas frecuentes"
+      }
     }
   },
   "order": [
@@ -341,6 +377,7 @@
     "product_comparison_grid_axaAeB",
     "why_section_GTJMtB",
     "stat_bar_PVJWat",
-    "reviews_carousel_photo_NxxrPG"
+    "reviews_carousel_photo_NxxrPG",
+    "faq_accordion_xXEaF4"
   ]
 }
