@@ -354,15 +354,31 @@
         "faq_QazpGX": {
           "type": "faq",
           "settings": {
-            "question": "¿Es seguro usar este producto?",
-            "answer": ""
+            "question": "¿Tiene efectos secundarios?",
+            "answer": "<p>No. Está formulado con ingredientes naturales bien tolerados.</p><p></p>"
+          }
+        },
+        "faq_3BYQi4": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Es seguro tomarlo si estoy embarazada o en lactancia?",
+            "answer": "<p>No se recomienda su uso durante el embarazo o la lactancia.</p><p></p>"
+          }
+        },
+        "faq_Tt9zRM": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Puedo tomarlo si ya uso anticonceptivos u otro tratamiento hormonal?",
+            "answer": "<p>Sí, se puede combinar sin problema.</p>"
           }
         }
       },
       "block_order": [
         "faq_bWtDDB",
         "faq_HVdcEc",
-        "faq_QazpGX"
+        "faq_QazpGX",
+        "faq_3BYQi4",
+        "faq_Tt9zRM"
       ],
       "name": "Preguntas frecuentes",
       "settings": {
