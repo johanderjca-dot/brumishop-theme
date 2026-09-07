@@ -311,10 +311,11 @@
         "resena_C7NnQY": {
           "type": "resena",
           "settings": {
+            "photo": "shopify://shop_images/ChatGPT_Image_7_sept_2026_04_37_34_p.m..png",
             "headline": "",
-            "text": "Escribe aquí lo que dijo tu cliente sobre el producto.",
+            "text": "Voy por mi segundo paquete, y cuando viene a ver pido otro mas",
             "rating": 5,
-            "author": "- Cliente verificado",
+            "author": "Lorena Cortez- Cliente verificado",
             "product": ""
           }
         }
