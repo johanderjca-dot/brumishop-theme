@@ -268,47 +268,50 @@
       ],
       "name": "Franja de estadísticas",
       "settings": {
-        "bg_color": "#DEA5A7",
-        "text_color": "#FFFFFF"
+        "bg_color": "#dea5a7",
+        "text_color": "#ffffff"
       }
     },
-    "reviews_carousel_cGVcpG": {
-      "type": "reviews-carousel",
+    "reviews_carousel_photo_NxxrPG": {
+      "type": "reviews-carousel-photo",
       "blocks": {
-        "resena_q4fNx8": {
+        "resena_ibrYRa": {
           "type": "resena",
           "settings": {
-            "headline": "Un resultado increíble",
-            "text": "Escribe aquí lo que dijo tu cliente sobre el producto.",
+            "photo": "shopify://shop_images/ChatGPT_Image_7_sept_2026_04_35_50_p.m..png",
+            "headline": "",
+            "text": "Tal como me lo describieron",
             "rating": 5,
-            "author": "- Cliente verificado",
+            "author": "Ronsagela Martinez - Cliente verificado",
             "product": ""
           }
         },
-        "resena_FUjnq7": {
+        "resena_hfy6c4": {
           "type": "resena",
           "settings": {
-            "headline": "Un resultado increíble",
-            "text": "Escribe aquí lo que dijo tu cliente sobre el producto.",
+            "photo": "shopify://shop_images/ChatGPT_Image_5_sept_2026_10_18_24_a.m..png",
+            "headline": "",
+            "text": "Lo que me encanta es el sabor.",
             "rating": 5,
-            "author": "- Cliente verificado",
+            "author": "Ana Maria - Cliente verificado",
             "product": ""
           }
         },
-        "resena_RKazL9": {
+        "resena_eyzxBC": {
           "type": "resena",
           "settings": {
-            "headline": "Un resultado increíble",
-            "text": "Escribe aquí lo que dijo tu cliente sobre el producto.",
+            "photo": "shopify://shop_images/ChatGPT_Image_7_sept_2026_04_28_57_p.m..png",
+            "headline": "es real",
+            "text": "si puedo decir que me he sentido mas comoda desde que lo tomo",
             "rating": 5,
-            "author": "- Cliente verificado",
+            "author": "Agustina Gomez- Cliente verificado",
             "product": ""
           }
         },
-        "resena_QerwFg": {
+        "resena_C7NnQY": {
           "type": "resena",
           "settings": {
-            "headline": "Un resultado increíble",
+            "headline": "",
             "text": "Escribe aquí lo que dijo tu cliente sobre el producto.",
             "rating": 5,
             "author": "- Cliente verificado",
@@ -317,12 +320,12 @@
         }
       },
       "block_order": [
-        "resena_q4fNx8",
-        "resena_FUjnq7",
-        "resena_RKazL9",
-        "resena_QerwFg"
+        "resena_ibrYRa",
+        "resena_hfy6c4",
+        "resena_eyzxBC",
+        "resena_C7NnQY"
       ],
-      "name": "Carrusel de reseñas",
+      "name": "Reseñas con foto",
       "settings": {
         "trust_text": "Hecho con calidad | Envío a todo el país | Recomendado por clientes",
         "trust_speed": 24,
@@ -337,6 +340,6 @@
     "product_comparison_grid_axaAeB",
     "why_section_GTJMtB",
     "stat_bar_PVJWat",
-    "reviews_carousel_cGVcpG"
+    "reviews_carousel_photo_NxxrPG"
   ]
 }
