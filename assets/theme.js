@@ -703,7 +703,7 @@
       return !el.dataset.nudgeReady;
     });
     if (!wraps.length) return;
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -713,15 +713,16 @@
 
         // solo si de verdad hay algo hacia donde deslizar
         if (el.scrollWidth <= el.clientWidth + 4) return;
+        if (reduceMotion) { return; }
 
         window.setTimeout(function () {
-          el.scrollTo({ left: 40, behavior: 'smooth' });
+          el.scrollTo({ left: 56, behavior: 'smooth' });
           window.setTimeout(function () {
             el.scrollTo({ left: 0, behavior: 'smooth' });
-          }, 550);
-        }, 500);
+          }, 450);
+        }, 300);
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.15 });
 
     wraps.forEach(function (el) {
       el.dataset.nudgeReady = 'true';
