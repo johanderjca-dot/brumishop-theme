@@ -697,6 +697,38 @@
     bars.forEach(function (bar) { observer.observe(bar); });
   }
 
+  /* ---------- empujoncito de "desliza" en tablas con scroll horizontal ---------- */
+  function initCgridNudge() {
+    var wraps = Array.prototype.filter.call(doc.querySelectorAll('[data-cgrid-nudge]'), function (el) {
+      return !el.dataset.nudgeReady;
+    });
+    if (!wraps.length) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        observer.unobserve(el);
+
+        // solo si de verdad hay algo hacia donde deslizar
+        if (el.scrollWidth <= el.clientWidth + 4) return;
+
+        window.setTimeout(function () {
+          el.scrollTo({ left: 40, behavior: 'smooth' });
+          window.setTimeout(function () {
+            el.scrollTo({ left: 0, behavior: 'smooth' });
+          }, 550);
+        }, 500);
+      });
+    }, { threshold: 0.5 });
+
+    wraps.forEach(function (el) {
+      el.dataset.nudgeReady = 'true';
+      observer.observe(el);
+    });
+  }
+
   /* ---------- arranque ---------- */
   function boot() {
     initVideoFallbackAlt();
@@ -714,6 +746,7 @@
     initReviews();
     initCollectionToolbar();
     initStatBarCount();
+    initCgridNudge();
   }
 
   if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', boot);
