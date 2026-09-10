@@ -4,7 +4,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; overflow-x: hidden; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -1832,63 +1832,4 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   margin-top: 8px; padding: 12px 4px;
   font-size: 13px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
   border-top: 1px solid var(--line);
-}
-
-/* ---------- Releasit COD Form: selector de paquetes (app de terceros) ----------
-   Clases reales confirmadas en el HTML publicado por la app
-   (rsi_embedded_quantity_wrapper / rsi-quantity-product). El widget en sí
-   es una app de React ajena al tema — no controlamos su markup, así que
-   se fuerza con !important para ganarle a cualquier estilo/ancho inline
-   que React le ponga. Objetivo: que las 3 tarjetas de paquete siempre
-   quepan en el ancho de pantalla en vez de desbordarse. */
-.rsi_embedded_quantity_wrapper {
-  max-width: 100% !important;
-  width: 100% !important;
-  gap: 6px !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  box-sizing: border-box !important;
-  overflow: visible !important;
-  justify-content: center !important;
-}
-.rsi-quantity-product {
-  flex: 1 1 0 !important;
-  min-width: 0 !important;
-  max-width: none !important;
-  width: auto !important;
-  margin: 0 !important;
-  box-sizing: border-box !important;
-  padding: 8px 4px !important;
-}
-/* la imagen del paquete (bolsa del producto) no tenía tope de ancho:
-   por más flexible que fuera la tarjeta, la foto la obligaba a mantener
-   su ancho original y por eso las 3 no cabían */
-.rsi-quantity-image-wrapper {
-  width: 100% !important;
-  max-width: 52px !important;
-  margin: 0 auto !important;
-}
-.rsi-quantity-image-wrapper img,
-.rsi-quantity-image-wrapper svg {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
-}
-.rsi-quantity-title {
-  font-size: 10.5px !important;
-  line-height: 1.2 !important;
-}
-.rsi-quantity-price-wrapper,
-.rsi-quantity-price-wrapper * {
-  font-size: 12px !important;
-}
-.rsi-quantity-plaque {
-  font-size: 10px !important;
-  padding: 4px 6px !important;
-  display: block !important;
-  width: 100% !important;
-  margin: 8px 0 0 !important;
-  border-radius: 8px !important;
-  box-sizing: border-box !important;
-  text-align: center !important;
 }
