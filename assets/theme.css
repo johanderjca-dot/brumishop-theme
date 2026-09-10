@@ -1845,14 +1845,18 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   max-width: 100% !important;
   width: 100% !important;
   gap: 6px !important;
+  padding: 0 !important;
+  margin: 0 !important;
   box-sizing: border-box !important;
   overflow: visible !important;
+  justify-content: center !important;
 }
 .rsi-quantity-product {
   flex: 1 1 0 !important;
   min-width: 0 !important;
   max-width: none !important;
   width: auto !important;
+  margin: 0 !important;
   box-sizing: border-box !important;
   padding: 8px 4px !important;
 }
