@@ -1833,3 +1833,24 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   font-size: 13px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
   border-top: 1px solid var(--line);
 }
+
+/* ---------- Releasit COD Form: selector de paquetes (app de terceros) ----------
+   Clases reales confirmadas en el HTML publicado por la app
+   (rsi_embedded_quantity_wrapper / rsi-quantity-product). El widget en sí
+   es una app de React ajena al tema — no controlamos su markup, así que
+   se fuerza con !important para ganarle a cualquier estilo/ancho inline
+   que React le ponga. Objetivo: que las 3 tarjetas de paquete siempre
+   quepan en el ancho de pantalla en vez de desbordarse. */
+.rsi_embedded_quantity_wrapper {
+  max-width: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+.rsi-quantity-product {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  width: auto !important;
+  box-sizing: border-box !important;
+}
