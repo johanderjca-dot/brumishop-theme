@@ -1885,4 +1885,10 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .rsi-quantity-plaque {
   font-size: 10px !important;
   padding: 4px 6px !important;
+  display: block !important;
+  width: 100% !important;
+  margin: 8px 0 0 !important;
+  border-radius: 8px !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
 }
