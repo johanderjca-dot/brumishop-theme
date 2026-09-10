@@ -1844,6 +1844,7 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .rsi_embedded_quantity_wrapper {
   max-width: 100% !important;
   width: 100% !important;
+  gap: 6px !important;
   box-sizing: border-box !important;
   overflow: visible !important;
 }
@@ -1853,14 +1854,14 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   max-width: none !important;
   width: auto !important;
   box-sizing: border-box !important;
-  padding: 10px 6px !important;
+  padding: 8px 4px !important;
 }
 /* la imagen del paquete (bolsa del producto) no tenía tope de ancho:
    por más flexible que fuera la tarjeta, la foto la obligaba a mantener
    su ancho original y por eso las 3 no cabían */
 .rsi-quantity-image-wrapper {
   width: 100% !important;
-  max-width: 64px !important;
+  max-width: 52px !important;
   margin: 0 auto !important;
 }
 .rsi-quantity-image-wrapper img,
@@ -1870,6 +1871,14 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   height: auto !important;
 }
 .rsi-quantity-title {
-  font-size: 11px !important;
-  line-height: 1.25 !important;
+  font-size: 10.5px !important;
+  line-height: 1.2 !important;
+}
+.rsi-quantity-price-wrapper,
+.rsi-quantity-price-wrapper * {
+  font-size: 12px !important;
+}
+.rsi-quantity-plaque {
+  font-size: 10px !important;
+  padding: 4px 6px !important;
 }
