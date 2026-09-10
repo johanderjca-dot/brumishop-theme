@@ -1434,8 +1434,9 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   overflow: hidden; margin-bottom: 20px;
 }
 .why__table-head, .why__table-row {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  display: grid; grid-template-columns: 1.6fr 1fr; gap: 12px;
   padding: 12px 16px; font-size: 13px;
+  align-items: center;
 }
 .why__table-head { background: rgba(0,0,0,.08); font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
 .why__table-row:nth-child(odd) { background: rgba(0,0,0,.04); }
@@ -1463,12 +1464,12 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   margin: 0 4px;
 }
 .cgrid__table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-.cgrid__table { display: grid; min-width: 650px; }
+.cgrid__table { display: grid; min-width: 590px; }
 @media (min-width: 750px) {
   .cgrid__table { min-width: 560px; }
 }
 .cgrid__row {
-  display: grid; grid-template-columns: 130px repeat(4, 130px);
+  display: grid; grid-template-columns: 170px repeat(4, 105px);
   align-items: center; border-bottom: 1px solid var(--line);
 }
 @media (min-width: 750px) {
