@@ -76,8 +76,8 @@
       ],
       "settings": {
         "bg_color": "#AD191F",
-        "badge_text": "TOP",
-        "badge_rating": "4.9/5.0",
+        "badge_text": "",
+        "badge_rating": "",
         "sticky_bar": true,
         "sticky_label": "Ordenar ahora"
       }
