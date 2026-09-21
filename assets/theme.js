@@ -755,7 +755,7 @@
         var stack = section.querySelector('.showcase__stack');
         if (!stack) return;
         var scrolledPast = -stack.getBoundingClientRect().top;
-        section.classList.toggle('is-blurred', scrolledPast >= window.innerHeight * 0.25);
+        section.classList.toggle('is-blurred', scrolledPast >= window.innerHeight * 0.15);
       });
       ticking = false;
     }
