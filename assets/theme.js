@@ -731,50 +731,34 @@
     });
   }
 
-  /* ---------- vitrina con fondo: el texto aparece a mitad de camino y luego se desvanece ---------- */
-  function initShowcaseScrub() {
-    var sections = Array.prototype.filter.call(doc.querySelectorAll('[data-showcase-scrub]'), function (el) {
-      return !el.dataset.scrubReady;
+  /* ---------- vitrina con fondo: pasa de nítida a difuminada una sola vez y se queda así ---------- */
+  function initShowcaseBlur() {
+    var sections = Array.prototype.filter.call(doc.querySelectorAll('[data-showcase-blur]'), function (el) {
+      return !el.dataset.blurReady;
     });
     if (!sections.length) return;
-    sections.forEach(function (el) { el.dataset.scrubReady = 'true'; });
+    sections.forEach(function (el) { el.dataset.blurReady = 'true'; });
 
     var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduceMotion) {
-      sections.forEach(function (section) { section.style.setProperty('--reveal', 1); });
+      sections.forEach(function (el) { el.classList.add('is-blurred'); });
       return;
     }
 
-    // aparece casi enseguida (10%-25% del recorrido) y se desvanece de nuevo hasta el final
-    function reveal(p) {
-      if (p <= 0.1) return 0;
-      if (p <= 0.25) return (p - 0.1) / 0.15;
-      return Math.max(0, 1 - (p - 0.25) / 0.75);
-    }
-
-    var ticking = false;
-    function update() {
-      var vh = window.innerHeight;
-      sections.forEach(function (section) {
-        var wrap = section.querySelector('.showcase__scrub-wrap');
-        if (!wrap) return;
-        var total = wrap.offsetHeight - vh;
-        var progress = total > 0 ? (-wrap.getBoundingClientRect().top) / total : 1;
-        progress = Math.max(0, Math.min(1, progress));
-        section.style.setProperty('--reveal', reveal(progress).toFixed(3));
+    // observamos el fondo sticky (100vh) en lugar de la sección entera,
+    // que puede ser mucho más alta por el texto y las tarjetas de abajo
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.closest('[data-showcase-blur]').classList.add('is-blurred');
+        observer.unobserve(entry.target);
       });
-      ticking = false;
-    }
+    }, { threshold: 0.5 });
 
-    function onScroll() {
-      if (ticking) return;
-      ticking = true;
-      window.requestAnimationFrame(update);
-    }
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
-    update();
+    sections.forEach(function (section) {
+      var bg = section.querySelector('.showcase__sticky-bg');
+      if (bg) observer.observe(bg);
+    });
   }
 
   /* ---------- arranque ---------- */
@@ -795,7 +779,7 @@
     initCollectionToolbar();
     initStatBarCount();
     initCgridNudge();
-    initShowcaseScrub();
+    initShowcaseBlur();
   }
 
   if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', boot);
