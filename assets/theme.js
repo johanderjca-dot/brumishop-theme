@@ -731,6 +731,45 @@
     });
   }
 
+  /* ---------- vitrina con fondo: difumina/oscurece la imagen sticky según el scroll ---------- */
+  function initShowcaseScrub() {
+    var sections = Array.prototype.filter.call(doc.querySelectorAll('[data-showcase-scrub]'), function (el) {
+      return !el.dataset.scrubReady;
+    });
+    if (!sections.length) return;
+    sections.forEach(function (el) { el.dataset.scrubReady = 'true'; });
+
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) {
+      sections.forEach(function (section) { section.style.setProperty('--scrub', 1); });
+      return;
+    }
+
+    var ticking = false;
+    function update() {
+      var vh = window.innerHeight;
+      sections.forEach(function (section) {
+        var wrap = section.querySelector('.showcase__scrub-wrap');
+        if (!wrap) return;
+        var total = wrap.offsetHeight - vh;
+        var progress = total > 0 ? (-wrap.getBoundingClientRect().top) / total : 1;
+        progress = Math.max(0, Math.min(1, progress));
+        section.style.setProperty('--scrub', progress.toFixed(3));
+      });
+      ticking = false;
+    }
+
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(update);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+  }
+
   /* ---------- arranque ---------- */
   function boot() {
     initVideoFallbackAlt();
@@ -749,6 +788,7 @@
     initCollectionToolbar();
     initStatBarCount();
     initCgridNudge();
+    initShowcaseScrub();
   }
 
   if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', boot);

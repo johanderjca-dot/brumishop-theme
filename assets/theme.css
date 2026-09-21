@@ -1305,11 +1305,33 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 .editorial__text { margin-top: 16px; font-size: 15px; opacity: .92; }
 
 /* ---------- vitrina con fondo (feature-showcase) ---------- */
-.showcase { position: relative; padding: 64px 0; overflow: hidden; }
+.showcase { position: relative; --scrub: 0; }
+.showcase__scrub-wrap { position: relative; height: 175vh; }
+.showcase__sticky {
+  position: sticky; top: 0;
+  height: 100vh; min-height: 480px; max-height: 900px;
+  overflow: hidden;
+  display: flex; align-items: flex-end;
+}
 .showcase__media { position: absolute; inset: 0; }
-.showcase__media img { width: 100%; height: 100%; object-fit: cover; opacity: .35; filter: blur(2px); }
-.showcase__blur { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.1), rgba(0,0,0,.35)); }
-.showcase__content { position: relative; z-index: 1; text-align: center; max-width: 780px; margin: 0 auto; }
+.showcase__bg-img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  filter: blur(calc(var(--scrub) * 18px));
+  transform: scale(calc(1 + var(--scrub) * 0.08));
+  will-change: filter, transform;
+}
+.showcase__scrim {
+  position: absolute; inset: 0;
+  background: rgba(6,10,20, calc(var(--scrub) * 0.6));
+}
+.showcase__content {
+  position: relative; z-index: 1;
+  text-align: center; max-width: 780px; margin: 0 auto;
+  padding-bottom: 56px;
+  opacity: var(--scrub);
+  transform: translateY(calc((1 - var(--scrub)) * 22px));
+  will-change: opacity, transform;
+}
 .showcase__eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 12px; opacity: .9; }
 .showcase__heading {
   font-family: var(--font-heading);
@@ -1322,15 +1344,29 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 }
 @media (min-width: 750px) { .showcase__heading { font-size: calc(40px * var(--heading-scale)); } }
 .showcase__text { margin-top: 14px; font-size: 15px; opacity: .9; }
-.showcase__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 36px; }
-.showcase__card { position: relative; border-radius: var(--card-radius); overflow: hidden; aspect-ratio: 4/3; }
-.showcase__card img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.showcase__card-title {
-  position: absolute; left: 12px; right: 12px; bottom: 10px;
-  color: #fff; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px;
-  text-shadow: 0 1px 4px rgba(0,0,0,.6);
-}
+
+.showcase__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 36px 0 56px; }
 @media (max-width: 749px) { .showcase__grid { grid-template-columns: 1fr; } }
+.showcase__card {
+  border-radius: var(--card-radius); overflow: hidden;
+  background: #10151f;
+}
+.showcase__card-media { aspect-ratio: 4/3; }
+.showcase__card-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.showcase__card-panel { position: relative; overflow: hidden; padding: 20px 18px; }
+.showcase__card-panel-bg {
+  position: absolute; inset: -20%;
+  width: 140%; height: 140%; object-fit: cover;
+  filter: blur(26px) brightness(.55) saturate(1.1);
+  transform: scale(1.1);
+}
+.showcase__card-scrim { position: absolute; inset: 0; background: rgba(6,10,20,.35); }
+.showcase__card-text { position: relative; z-index: 1; }
+.showcase__card-title {
+  color: #fff; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .5px;
+  margin: 0 0 6px;
+}
+.showcase__card-body { color: rgba(255,255,255,.85); font-size: 13px; line-height: 1.5; margin: 0; }
 
 /* ---------- tabla comparativa (comparison-table) ---------- */
 .compare__heading {
