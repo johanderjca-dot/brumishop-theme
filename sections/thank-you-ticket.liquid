@@ -1,0 +1,100 @@
+<div class="page-width section-pad ty-ticket-wrap">
+  <div class="ty-ticket" id="ty-ticket">
+    <div class="ty-ticket__top">
+      <div class="ty-ticket__emoji">🎉</div>
+      <h1 class="ty-ticket__heading">{{ section.settings.heading | default: '¡Gracias por tu compra!' }}</h1>
+      <p class="ty-ticket__subheading">{{ section.settings.subheading | default: 'Tu pedido fue confirmado con éxito' }}</p>
+    </div>
+
+    <div class="ty-ticket__divider-wrap">
+      <div class="ty-ticket__notch ty-ticket__notch--left"></div>
+      <div class="ty-ticket__notch ty-ticket__notch--right"></div>
+      <div class="ty-ticket__divider"></div>
+    </div>
+
+    <div class="ty-ticket__row">
+      <div>
+        <div class="ty-ticket__label">Pedido</div>
+        <div class="ty-ticket__value" id="ty-order">—</div>
+      </div>
+      <div class="ty-ticket__row-right">
+        <div class="ty-ticket__label">Total</div>
+        <div class="ty-ticket__value" id="ty-amount">—</div>
+      </div>
+    </div>
+
+    <div class="ty-ticket__row">
+      <div>
+        <div class="ty-ticket__label">Fecha y hora</div>
+        <div class="ty-ticket__value" id="ty-date">—</div>
+      </div>
+    </div>
+
+    <div class="ty-ticket__bottom-fade"></div>
+    <div class="ty-ticket__barcode-wrap">
+      <svg id="ty-barcode"></svg>
+    </div>
+  </div>
+
+  <p class="ty-ticket__note">{{ section.settings.footer_text | default: 'Te enviamos los detalles completos a tu correo.' }}</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js" defer></script>
+<script>
+  (function () {
+    function init() {
+      var params = new URLSearchParams(window.location.search);
+      var order = params.get('order') || '';
+      var amount = params.get('amount') || '';
+      var currency = params.get('currency') || '';
+      var date = params.get('date') || '';
+      var time = params.get('time') || '';
+
+      var orderEl = document.getElementById('ty-order');
+      var amountEl = document.getElementById('ty-amount');
+      var dateEl = document.getElementById('ty-date');
+      var barcodeEl = document.getElementById('ty-barcode');
+
+      if (orderEl) orderEl.textContent = order || 'N/A';
+      if (amountEl) amountEl.textContent = amount ? (amount + (currency ? ' ' + currency : '')) : 'N/A';
+      if (dateEl) dateEl.textContent = [date, time].filter(Boolean).join(' • ') || 'N/A';
+
+      if (barcodeEl && order && window.JsBarcode) {
+        try {
+          window.JsBarcode(barcodeEl, order.replace('#', ''), {
+            format: 'CODE128',
+            lineColor: '#151515',
+            width: 2,
+            height: 46,
+            displayValue: false,
+            margin: 0
+          });
+        } catch (e) {
+          barcodeEl.style.display = 'none';
+        }
+      } else if (barcodeEl) {
+        barcodeEl.style.display = 'none';
+      }
+    }
+
+    if (window.JsBarcode) {
+      init();
+    } else {
+      window.addEventListener('load', init);
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Ticket de gracias",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Título", "default": "¡Gracias por tu compra!" },
+    { "type": "text", "id": "subheading", "label": "Subtítulo", "default": "Tu pedido fue confirmado con éxito" },
+    { "type": "text", "id": "footer_text", "label": "Texto al pie", "default": "Te enviamos los detalles completos a tu correo." }
+  ],
+  "presets": [
+    { "name": "Ticket de gracias" }
+  ]
+}
+{% endschema %}

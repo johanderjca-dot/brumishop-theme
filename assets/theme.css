@@ -1836,3 +1836,55 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   font-size: 13px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
   border-top: 1px solid var(--line);
 }
+
+/* ---------- ticket de gracias por tu compra ---------- */
+.ty-ticket-wrap { display: flex; flex-direction: column; align-items: center; }
+.ty-ticket {
+  position: relative;
+  width: 100%; max-width: 360px;
+  background: var(--bg, #FFFFFF);
+  border-radius: var(--card-radius, 12px);
+  box-shadow: 0 12px 32px rgba(0,0,0,.08);
+  padding: 32px 28px 28px;
+  overflow: hidden;
+}
+.ty-ticket__top { text-align: center; }
+.ty-ticket__emoji { font-size: 34px; line-height: 1; margin-bottom: 10px; }
+.ty-ticket__heading { font-size: 19px; font-weight: 800; margin: 0 0 6px; }
+.ty-ticket__subheading { font-size: 13px; color: var(--muted); margin: 0; }
+.ty-ticket__divider-wrap {
+  position: relative;
+  margin: 26px -28px 20px;
+  padding: 0 28px;
+}
+.ty-ticket__divider {
+  border-top: 1px dashed var(--line);
+}
+.ty-ticket__notch {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  width: 24px; height: 24px;
+  background: var(--bg-alt, #EFEDE6);
+  border-radius: 50%;
+}
+.ty-ticket__notch--left { left: -12px; }
+.ty-ticket__notch--right { right: -12px; }
+.ty-ticket__row {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 16px;
+}
+.ty-ticket__row-right { text-align: right; }
+.ty-ticket__label {
+  font-size: 11px; letter-spacing: .5px; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 4px;
+}
+.ty-ticket__value { font-size: 15px; font-weight: 700; }
+.ty-ticket__barcode-wrap {
+  margin-top: 18px; padding-top: 18px;
+  border-top: 1px dashed var(--line);
+  display: flex; justify-content: center;
+}
+.ty-ticket__barcode-wrap svg { max-width: 100%; }
+.ty-ticket__note {
+  margin-top: 18px; font-size: 13px; color: var(--muted); text-align: center;
+}

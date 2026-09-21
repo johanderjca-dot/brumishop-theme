@@ -1,0 +1,8 @@
+{
+  "sections": {
+    "main": {
+      "type": "thank-you-ticket"
+    }
+  },
+  "order": ["main"]
+}
