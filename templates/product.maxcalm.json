@@ -116,15 +116,16 @@
         "card_NURC3K": {
           "type": "card",
           "settings": {
-            "title": "Beneficio",
-            "text": ""
+            "image": "shopify://shop_images/Diseno_sin_titulo_4_feb265df-7741-49d7-adfe-c75abfbcbd00.png",
+            "title": "Desinflama barriga, cara y papada",
+            "text": "No es hinchazón pasajera. Es cortisol alto reteniendo lo que no debería. Bajas la hormona, baja la inflamación."
           }
         },
         "card_gJdzJp": {
           "type": "card",
           "settings": {
-            "title": "Beneficio",
-            "text": ""
+            "title": "Frena la caída del cabello",
+            "text": "El estrés crónico ataca el folículo antes de que lo notes en el espejo. Cuando el cortisol baja, tu cabello deja de pagar la cuenta."
           }
         }
       },
