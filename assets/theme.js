@@ -745,11 +745,11 @@
       return;
     }
 
-    // aparece entre 30%-50% del recorrido, y se desvanece de nuevo entre 50%-100%
+    // aparece casi enseguida (10%-25% del recorrido) y se desvanece de nuevo hasta el final
     function reveal(p) {
-      if (p <= 0.3) return 0;
-      if (p <= 0.5) return (p - 0.3) / 0.2;
-      return Math.max(0, 1 - (p - 0.5) / 0.5);
+      if (p <= 0.1) return 0;
+      if (p <= 0.25) return (p - 0.1) / 0.15;
+      return Math.max(0, 1 - (p - 0.25) / 0.75);
     }
 
     var ticking = false;
