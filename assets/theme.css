@@ -1306,7 +1306,7 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 
 /* ---------- vitrina con fondo (feature-showcase) ---------- */
 .showcase { position: relative; --scrub: 0; }
-.showcase__scrub-wrap { position: relative; height: 175vh; }
+.showcase__scrub-wrap { position: relative; height: 130vh; }
 .showcase__sticky {
   position: sticky; top: 0;
   height: 100vh; min-height: 480px; max-height: 900px;
