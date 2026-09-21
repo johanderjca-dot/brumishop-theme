@@ -1869,22 +1869,10 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 }
 .ty-ticket__notch--left { left: -12px; }
 .ty-ticket__notch--right { right: -12px; }
-.ty-ticket__row {
-  display: flex; justify-content: space-between; align-items: flex-start;
-  margin-bottom: 16px;
+.ty-ticket__agent-msg {
+  font-size: 15px; font-weight: 600; text-align: center;
+  line-height: 1.4; margin: 0;
 }
-.ty-ticket__row-right { text-align: right; }
-.ty-ticket__label {
-  font-size: 11px; letter-spacing: .5px; text-transform: uppercase;
-  color: var(--muted); margin-bottom: 4px;
-}
-.ty-ticket__value { font-size: 15px; font-weight: 700; }
-.ty-ticket__barcode-wrap {
-  margin-top: 18px; padding-top: 18px;
-  border-top: 1px dashed var(--line);
-  display: flex; justify-content: center;
-}
-.ty-ticket__barcode-wrap svg { max-width: 100%; }
 .ty-ticket__note {
   margin-top: 18px; font-size: 13px; color: var(--muted); text-align: center;
 }
