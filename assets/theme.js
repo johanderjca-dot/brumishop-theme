@@ -712,14 +712,15 @@
         observer.unobserve(el);
 
         // solo si de verdad hay algo hacia donde deslizar
-        if (el.scrollWidth <= el.clientWidth + 4) return;
+        var maxScroll = el.scrollWidth - el.clientWidth;
+        if (maxScroll <= 4) return;
         if (reduceMotion) { return; }
 
         window.setTimeout(function () {
-          el.scrollTo({ left: 56, behavior: 'smooth' });
+          el.scrollTo({ left: maxScroll, behavior: 'smooth' });
           window.setTimeout(function () {
             el.scrollTo({ left: 0, behavior: 'smooth' });
-          }, 450);
+          }, 650);
         }, 300);
       });
     }, { threshold: 0.15 });
