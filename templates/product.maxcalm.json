@@ -69,7 +69,7 @@
           "type": "collapsible",
           "settings": {
             "heading": "INGREDIENTES",
-            "content": "<ul><li>Magnesio (como citrato de magnesio y glicinato de magnesio) — 325 mg por porción (77% del valor diario).</li><li>Otros ingredientes: ácido cítrico, carbonato de magnesio, extracto de estevia orgánica<br/>Libre de gluten, azúcar y colorantes artificiales</li></ul>"
+            "content": "<ul><li>Magnesio (como citrato de magnesio y glicinato de magnesio) — 325 mg por porción (77% del valor diario).</li><li>Otros ingredientes: ácido cítrico, carbonato de magnesio, extracto de estevia orgánica.</li></ul><p><br/><em><strong>Libre de gluten, azúcar y colorantes artificiales</strong></em></p>"
           }
         }
       },
@@ -100,6 +100,47 @@
         "speed": 60,
         "bg_color": "",
         "text_color": ""
+      }
+    },
+    "feature_showcase_pCbizw": {
+      "type": "feature-showcase",
+      "blocks": {
+        "card_WX7eAM": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Diseno_sin_titulo_3208bf0e-8da5-4dff-92a4-9943ec3e8416.png",
+            "title": "Baja el cortisol",
+            "text": "Cuando la hormona del estrés se dispara, tu cuerpo lo paga: peso, piel, ánimo. MaxCalm ataca justo ahí."
+          }
+        },
+        "card_NURC3K": {
+          "type": "card",
+          "settings": {
+            "title": "Beneficio",
+            "text": ""
+          }
+        },
+        "card_gJdzJp": {
+          "type": "card",
+          "settings": {
+            "title": "Beneficio",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_WX7eAM",
+        "card_NURC3K",
+        "card_gJdzJp"
+      ],
+      "name": "Vitrina con fondo",
+      "settings": {
+        "image": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_5.png",
+        "bg_color": "#3FAAB9",
+        "text_color": "#FFFFFF",
+        "eyebrow": "MAGNESIO QUE SÍ SE NOTA",
+        "heading": "Cuando el estrés deja de controlar tu cuerpo",
+        "text": ""
       }
     },
     "comparacion": {
@@ -412,6 +453,7 @@
   "order": [
     "main",
     "confianza",
+    "feature_showcase_pCbizw",
     "comparacion",
     "mision",
     "why_section_wXXwHV",
