@@ -731,7 +731,7 @@
     });
   }
 
-  /* ---------- vitrina con fondo: pasa de nítida a difuminada una sola vez y se queda así ---------- */
+  /* ---------- vitrina con fondo: nítida arriba, difuminada al scrollear (reversible) ---------- */
   function initShowcaseBlur() {
     var sections = Array.prototype.filter.call(doc.querySelectorAll('[data-showcase-blur]'), function (el) {
       return !el.dataset.blurReady;
@@ -745,29 +745,19 @@
       return;
     }
 
-    // No alcanza con "se ve" el fondo (eso pasa apenas entra a pantalla,
-    // con la imagen todavía nítida). Hace falta haber scrolleado de verdad
-    // una vez que ya se fijó, así que medimos cuánto se movió el bloque
-    // completo (imagen + texto + tarjetas) respecto al tope del viewport.
-    var pending = sections.slice();
+    // Nítida mientras el bloque (imagen + texto + tarjetas) recién entra;
+    // difuminada una vez que se scrolleó de verdad hacia adentro. Si el
+    // usuario vuelve a subir por encima del umbral, vuelve a estar nítida.
     var ticking = false;
 
     function check() {
-      pending = pending.filter(function (section) {
+      sections.forEach(function (section) {
         var stack = section.querySelector('.showcase__stack');
-        if (!stack) return false;
+        if (!stack) return;
         var scrolledPast = -stack.getBoundingClientRect().top;
-        if (scrolledPast >= window.innerHeight * 0.25) {
-          section.classList.add('is-blurred');
-          return false;
-        }
-        return true;
+        section.classList.toggle('is-blurred', scrolledPast >= window.innerHeight * 0.25);
       });
       ticking = false;
-      if (!pending.length) {
-        window.removeEventListener('scroll', onScroll);
-        window.removeEventListener('resize', onScroll);
-      }
     }
 
     function onScroll() {
