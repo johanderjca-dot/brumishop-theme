@@ -731,7 +731,7 @@
     });
   }
 
-  /* ---------- vitrina con fondo: difumina/oscurece la imagen sticky según el scroll ---------- */
+  /* ---------- vitrina con fondo: el texto aparece a mitad de camino y luego se desvanece ---------- */
   function initShowcaseScrub() {
     var sections = Array.prototype.filter.call(doc.querySelectorAll('[data-showcase-scrub]'), function (el) {
       return !el.dataset.scrubReady;
@@ -741,8 +741,15 @@
 
     var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduceMotion) {
-      sections.forEach(function (section) { section.style.setProperty('--scrub', 1); });
+      sections.forEach(function (section) { section.style.setProperty('--reveal', 1); });
       return;
+    }
+
+    // aparece entre 30%-50% del recorrido, y se desvanece de nuevo entre 50%-100%
+    function reveal(p) {
+      if (p <= 0.3) return 0;
+      if (p <= 0.5) return (p - 0.3) / 0.2;
+      return Math.max(0, 1 - (p - 0.5) / 0.5);
     }
 
     var ticking = false;
@@ -754,7 +761,7 @@
         var total = wrap.offsetHeight - vh;
         var progress = total > 0 ? (-wrap.getBoundingClientRect().top) / total : 1;
         progress = Math.max(0, Math.min(1, progress));
-        section.style.setProperty('--scrub', progress.toFixed(3));
+        section.style.setProperty('--reveal', reveal(progress).toFixed(3));
       });
       ticking = false;
     }
