@@ -1351,7 +1351,7 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
 
 .showcase__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 40px 0 56px; }
 @media (max-width: 749px) {
-  .showcase__grid { grid-template-columns: 1fr; padding-top: 28px; max-width: 280px; margin: 0 auto; }
+  .showcase__grid { grid-template-columns: 1fr; padding-top: 56px; max-width: 280px; margin: 0 auto; }
 }
 .showcase__card { border-radius: var(--card-radius); overflow: hidden; }
 .showcase__card-media { aspect-ratio: 4/3; }
