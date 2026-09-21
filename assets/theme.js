@@ -745,20 +745,40 @@
       return;
     }
 
-    // observamos el fondo sticky (100vh) en lugar de la sección entera,
-    // que puede ser mucho más alta por el texto y las tarjetas de abajo
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        entry.target.closest('[data-showcase-blur]').classList.add('is-blurred');
-        observer.unobserve(entry.target);
-      });
-    }, { threshold: 0.5 });
+    // No alcanza con "se ve" el fondo (eso pasa apenas entra a pantalla,
+    // con la imagen todavía nítida). Hace falta haber scrolleado de verdad
+    // una vez que ya se fijó, así que medimos cuánto se movió el bloque
+    // completo (imagen + texto + tarjetas) respecto al tope del viewport.
+    var pending = sections.slice();
+    var ticking = false;
 
-    sections.forEach(function (section) {
-      var bg = section.querySelector('.showcase__sticky-bg');
-      if (bg) observer.observe(bg);
-    });
+    function check() {
+      pending = pending.filter(function (section) {
+        var stack = section.querySelector('.showcase__stack');
+        if (!stack) return false;
+        var scrolledPast = -stack.getBoundingClientRect().top;
+        if (scrolledPast >= window.innerHeight * 0.25) {
+          section.classList.add('is-blurred');
+          return false;
+        }
+        return true;
+      });
+      ticking = false;
+      if (!pending.length) {
+        window.removeEventListener('scroll', onScroll);
+        window.removeEventListener('resize', onScroll);
+      }
+    }
+
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(check);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    check();
   }
 
   /* ---------- arranque ---------- */
