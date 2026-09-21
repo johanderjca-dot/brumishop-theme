@@ -1338,11 +1338,11 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   font-weight: var(--font-heading-weight);
   text-transform: var(--heading-transform);
   letter-spacing: var(--heading-tracking);
-  line-height: 1.15;
-  font-size: calc(28px * var(--heading-scale));
+  line-height: 1.2;
+  font-size: calc(20px * var(--heading-scale));
   margin: 0;
 }
-@media (min-width: 750px) { .showcase__heading { font-size: calc(40px * var(--heading-scale)); } }
+@media (min-width: 750px) { .showcase__heading { font-size: calc(30px * var(--heading-scale)); } }
 .showcase__text { margin-top: 14px; font-size: 15px; opacity: .9; }
 
 .showcase__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 36px 0 56px; }
