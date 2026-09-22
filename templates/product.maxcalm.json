@@ -145,90 +145,61 @@
         "text": ""
       }
     },
-    "comparacion": {
-      "type": "product-comparison-grid",
+    "comparison_table_CzNqyf": {
+      "type": "comparison-table",
       "blocks": {
-        "f1": {
+        "row_FgC7mN": {
           "type": "row",
           "settings": {
-            "label": "Baja el cortisol",
-            "check1": true,
-            "check2": false,
-            "check3": false,
-            "check4": false
+            "text": "Fórmula 100% vegana"
           }
         },
-        "f2": {
+        "row_QAytG3": {
           "type": "row",
           "settings": {
-            "label": "Desinflama barriga y cara",
-            "check1": true,
-            "check2": false,
-            "check3": true,
-            "check4": false
+            "text": "Formato en polvo, listo para disolver"
           }
         },
-        "f3": {
+        "row_bHcpJ8": {
           "type": "row",
           "settings": {
-            "label": "Corta los antojos por estrés",
-            "check1": true,
-            "check2": false,
-            "check3": false,
-            "check4": false
+            "text": "Baja el cortisol directamente"
           }
         },
-        "f4": {
+        "row_jaDzHf": {
           "type": "row",
           "settings": {
-            "label": "Mejora la digestión",
-            "check1": true,
-            "check2": false,
-            "check3": true,
-            "check4": true
+            "text": "Citrato + glicinato, alta absorción"
           }
         },
-        "f5": {
+        "row_D7Pwn4": {
           "type": "row",
           "settings": {
-            "label": "Alta absorción (citrato + glicinato)",
-            "check1": true,
-            "check2": false,
-            "check3": false,
-            "check4": false
+            "text": "Corta antojos por estrés"
           }
         },
-        "f6": {
+        "row_faENdg": {
           "type": "row",
           "settings": {
-            "label": "Formato listo para consumir",
-            "check1": true,
-            "check2": false,
-            "check3": false,
-            "check4": true
+            "text": "Desinflama barriga, cara y papada"
           }
         }
       },
       "block_order": [
-        "f1",
-        "f2",
-        "f3",
-        "f4",
-        "f5",
-        "f6"
+        "row_FgC7mN",
+        "row_QAytG3",
+        "row_bHcpJ8",
+        "row_jaDzHf",
+        "row_D7Pwn4",
+        "row_faENdg"
       ],
+      "name": "Tabla comparativa",
       "settings": {
-        "bg_color": "#ffffff",
-        "check_color": "#3faab9",
-        "check_icon_color": "#ffffff",
-        "eyebrow": "MAXCALM",
-        "heading_1": "La fórmula definitiva para controlar tu cortisol",
-        "heading_2": "",
-        "heading_3": "",
-        "col1_label": "NUESTRO PRODUCTO",
-        "col2_label": "Pastillas de magnesio tradicionales",
-        "col3_label": "Tés relajantes",
-        "col4_label": "Polvos detox genéricos"
+        "heading": "NOSOTROS VS. ELLOS",
+        "image_us": "shopify://shop_images/Green_White_Simple_Iced_Matcha_Latte_Instagram_Post_13.png",
+        "label_us": "Nuestro producto",
+        "image_them": "shopify://shop_images/frasco-de-magnesio-gen-rico_ebd1fbe1-2ca2-4d26-ba10-f7dcc45acf3f.png",
+        "label_them": "Genérico"
       }
     },
     "mision": {
@@ -456,7 +427,7 @@
     "main",
     "confianza",
     "feature_showcase_pCbizw",
-    "comparacion",
+    "comparison_table_CzNqyf",
     "mision",
     "why_section_wXXwHV",
     "stat_bar_yy84Ad",
