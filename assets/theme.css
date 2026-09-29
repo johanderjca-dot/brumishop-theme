@@ -1908,8 +1908,10 @@ label { display: block; font-size: 13px; margin-bottom: 6px; }
   margin-top: 18px; font-size: 13px; color: var(--muted); text-align: center;
 }
 
-/* ---------- caja de ofertas de Releasit (rsi-*) ----------
+/* ---------- caja de ofertas de Releasit ----------
    Hereda --product-text (blanco) del contenedor del producto, pero su
    propio fondo es claro, así que el texto blanco queda ilegible.
-   Se fuerza un color oscuro solo dentro de sus bloques. */
-[class*="rsi-"] { color: var(--ink) !important; }
+   Acotado solo a las filas de precio (fondo claro) — NO a todo lo que
+   tenga prefijo rsi-, porque eso también le pegaba al botón negro
+   "ORDENA AHORA" (texto/ícono blanco sobre fondo negro, como debe ser). */
+.rsi-quantity-product { color: var(--ink) !important; }
