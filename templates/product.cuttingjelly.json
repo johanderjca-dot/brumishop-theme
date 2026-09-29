@@ -37,7 +37,7 @@
         "descripcion": {
           "type": "text",
           "settings": {
-            "text": "<p>Le Dicen El Ozempic Coreano — Y Todo Internet Está Hablando De Esto</p>"
+            "text": "<ul><li>Bloquea la grasa antes de que se te pegue en la cintura</li><li>Se acabó el bajón después del dulce</li><li>Corta el hambre entre comidas, sin dietas ni esperas</li></ul>"
           }
         },
         "compra": {
@@ -102,90 +102,47 @@
         "text_color": ""
       }
     },
-    "comparacion": {
-      "type": "product-comparison-grid",
+    "feature_showcase_WmRYX9": {
+      "type": "feature-showcase",
       "blocks": {
-        "f1": {
-          "type": "row",
+        "card_RYmtdP": {
+          "type": "card",
           "settings": {
-            "label": "Reduce absorción de carbohidratos",
-            "check1": true,
-            "check2": false,
-            "check3": false,
-            "check4": false
+            "image": "shopify://shop_images/Diseno_sin_titulo_5_97f887e2-2325-4b66-8259-a6e4ea3f69cb.png",
+            "title": "Bloquea la grasa",
+            "text": "El HCA de la Garcinia Cambogia frena que los carbohidratos que comes se conviertan en grasa, para que te des tu gusto sin que se te quede pegado."
           }
         },
-        "f2": {
-          "type": "row",
+        "card_riL9Hd": {
+          "type": "card",
           "settings": {
-            "label": "Controla antojos y apetito",
-            "check1": true,
-            "check2": false,
-            "check3": true,
-            "check4": false
+            "image": "shopify://shop_images/Diseno_sin_titulo_6.png",
+            "title": "Corta el bajón de azúcar",
+            "text": "Evita esa bajada de energía que llega después de comer dulce o harina, para que tu tarde no se venga abajo."
           }
         },
-        "f3": {
-          "type": "row",
+        "card_graqXK": {
+          "type": "card",
           "settings": {
-            "label": "Mejora digestión",
-            "check1": true,
-            "check2": true,
-            "check3": false,
-            "check4": true
-          }
-        },
-        "f4": {
-          "type": "row",
-          "settings": {
-            "label": "Formato listo para consumir",
-            "check1": true,
-            "check2": true,
-            "check3": true,
-            "check4": false
-          }
-        },
-        "f5": {
-          "type": "row",
-          "settings": {
-            "label": "Contiene Garcinia Cambogia",
-            "check1": true,
-            "check2": false,
-            "check3": false,
-            "check4": false
-          }
-        },
-        "f6": {
-          "type": "row",
-          "settings": {
-            "label": "Fibra natural (semillas de chía)",
-            "check1": true,
-            "check2": false,
-            "check3": false,
-            "check4": true
+            "image": "shopify://shop_images/Diseno_sin_titulo_7_78e4d3c5-6024-40e3-95d3-1b5530e5f5cd.png",
+            "title": "Te sacia desde la primera toma",
+            "text": "La fibra de chía te llena entre comidas desde el primer día, sin dietas ni esperas, para que comas menos sin sentir que te falta algo."
           }
         }
       },
       "block_order": [
-        "f1",
-        "f2",
-        "f3",
-        "f4",
-        "f5",
-        "f6"
+        "card_RYmtdP",
+        "card_riL9Hd",
+        "card_graqXK"
       ],
+      "name": "Vitrina con fondo",
       "settings": {
-        "bg_color": "#ffffff",
-        "check_color": "#cf7573",
-        "check_icon_color": "#ffffff",
-        "eyebrow": "CUTTING JELLY",
-        "heading_1": "LA SOLUCIÓN DEFINITIVA PARA CONTROLAR TU APETITO",
-        "heading_2": "",
-        "heading_3": "",
-        "col1_label": "NUESTRO PRODUCTO",
-        "col2_label": "Digestivos Tradicionales",
-        "col3_label": "Gominolas de Control",
-        "col4_label": "Fibra en Polvo"
+        "image": "shopify://shop_images/woman-holding-oversized-jeans-in-front-of-mirror-2026-09-23-22-22-16-utc.jpg",
+        "bg_color": "#1B2A3A",
+        "text_color": "#FFFFFF",
+        "eyebrow": "EL CAMBIO EMPIEZA POR DENTRO",
+        "heading": "Cuando el antojo deja de ganarte la partida",
+        "text": ""
       }
     },
     "mision": {
@@ -412,7 +369,7 @@
   "order": [
     "main",
     "confianza",
-    "comparacion",
+    "feature_showcase_WmRYX9",
     "mision",
     "why_section_wXXwHV",
     "stat_bar_yy84Ad",
