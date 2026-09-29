@@ -86,7 +86,7 @@
       ],
       "settings": {
         "bg_color": "#cf7573",
-        "text_color": "#000000",
+        "text_color": "#FFFFFF",
         "badge_text": "",
         "badge_rating": "",
         "sticky_bar": true,
