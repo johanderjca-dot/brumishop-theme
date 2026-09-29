@@ -86,7 +86,7 @@
       ],
       "settings": {
         "bg_color": "#cf7573",
-        "text_color": "#ffffff",
+        "text_color": "#000000",
         "badge_text": "",
         "badge_rating": "",
         "sticky_bar": true,
@@ -138,8 +138,8 @@
       "name": "Vitrina con fondo",
       "settings": {
         "image": "shopify://shop_images/woman-holding-oversized-jeans-in-front-of-mirror-2026-09-23-22-22-16-utc.jpg",
-        "bg_color": "#1B2A3A",
-        "text_color": "#FFFFFF",
+        "bg_color": "#1b2a3a",
+        "text_color": "#ffffff",
         "eyebrow": "EL CAMBIO EMPIEZA POR DENTRO",
         "heading": "Cuando el antojo deja de ganarte la partida",
         "text": ""
