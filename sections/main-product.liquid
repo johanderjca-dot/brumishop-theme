@@ -92,6 +92,7 @@
             {%- endif -%}
 
           {%- when 'price' -%}
+            {%- if section.settings.show_regular_price -%}
             <div class="product__price" {{ block.shopify_attributes }}>
               {%- if product.compare_at_price > product.price -%}
                 <s class="product__price-was">{{ product.compare_at_price | money }}</s>
@@ -102,6 +103,7 @@
                 <span class="product__badge">-{{ pct }}%</span>
               {%- endif -%}
             </div>
+            {%- endif -%}
 
           {%- when 'description' -%}
             <div class="product__description rte" {{ block.shopify_attributes }}>{{ product.description }}</div>
@@ -152,6 +154,7 @@
                 <div class="product__purchase-card-header">{{ block.settings.header_label }}</div>
               {%- endif -%}
               <div class="product__purchase-card-body">
+                {%- if section.settings.show_regular_price -%}
                 <div class="product__price product__price--card">
                   {%- if product.compare_at_price > product.price -%}
                     <s class="product__price-was">{{ product.compare_at_price | money }}</s>
@@ -162,6 +165,7 @@
                     <span class="product__badge">-{{ pct }}%</span>
                   {%- endif -%}
                 </div>
+                {%- endif -%}
                 {%- if block.settings.item1 != blank or block.settings.item2 != blank or block.settings.item3 != blank -%}
                   <ul class="product__trust">
                     {%- if block.settings.item1 != blank -%}<li>{{ block.settings.item1 }}</li>{%- endif -%}
@@ -220,7 +224,7 @@
         {%- endif -%}
         <div>
           <span class="sticky-buy__title">{{ product.title }}</span>
-          <span class="sticky-buy__price">{{ product.price | money }}</span>
+          {%- if section.settings.show_regular_price -%}<span class="sticky-buy__price">{{ product.price | money }}</span>{%- endif -%}
         </div>
       </div>
       <button class="btn btn--primary" type="button" data-sticky-cta>
@@ -238,6 +242,7 @@
     { "type": "header", "content": "Galería" },
     { "type": "color", "id": "bg_color", "label": "Color de fondo de toda la sección (opcional)" },
     { "type": "color", "id": "text_color", "label": "Color del texto (opcional)", "info": "Úsalo cuando el fondo sea oscuro o intenso, para que el texto se siga leyendo bien." },
+    { "type": "checkbox", "id": "show_regular_price", "label": "Mostrar precio normal del producto", "default": true, "info": "Actívalo para mostrar el precio antes de las opciones o bundles." },
     { "type": "text", "id": "badge_text", "label": "Texto de la insignia sobre la imagen (opcional)" },
     { "type": "text", "id": "badge_rating", "label": "Calificación junto a las estrellas (opcional)", "default": "4.9/5.0" },
 
