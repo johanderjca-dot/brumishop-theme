@@ -86,10 +86,10 @@
       ],
       "settings": {
         "bg_color": "#cf7573",
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
+        "show_regular_price": false,
         "badge_text": "",
         "badge_rating": "",
-        "show_regular_price": false,
         "sticky_bar": true,
         "sticky_label": "Ordenar ahora"
       }
