@@ -89,6 +89,7 @@
         "text_color": "#FFFFFF",
         "badge_text": "",
         "badge_rating": "",
+        "show_regular_price": false,
         "sticky_bar": true,
         "sticky_label": "Ordenar ahora"
       }
