@@ -62,7 +62,7 @@
           "type": "collapsible",
           "settings": {
             "heading": "¿CÓMO USARLO?",
-            "content": "<ol><li>Sirve el polvo en 2-3 oz de agua caliente y actívalo</li><li>Revuelve hasta disolver — la efervescencia lo hace suave con tu estómago</li><li>Completa con agua fría o tibia hasta llenar tu vaso</li><li>Bébelo y siente la ligereza en minutos</li></ol>"
+            "content": "<ol><li>Añadir una cucharadita del producto en medio vaso de agua fría y agitar bien antes de consumir.</li><li>Revuelve hasta disolver — la efervescencia lo hace suave con tu estómago</li><li>Bébelo y siente la ligereza en minutos</li></ol>"
           }
         },
         "ingredientes": {
@@ -87,6 +87,7 @@
       "settings": {
         "bg_color": "#3faab9",
         "text_color": "#ffffff",
+        "show_regular_price": true,
         "badge_text": "",
         "badge_rating": "",
         "sticky_bar": true,
@@ -138,8 +139,8 @@
       "name": "Vitrina con fondo",
       "settings": {
         "image": "shopify://shop_images/Fondo_Virtual_para_Zoom_Divertido_Marron_y_Naranja_5.png",
-        "bg_color": "#3FAAB9",
-        "text_color": "#FFFFFF",
+        "bg_color": "#3faab9",
+        "text_color": "#ffffff",
         "eyebrow": "MAGNESIO QUE SÍ SE NOTA",
         "heading": "Cuando el estrés deja de controlar tu cuerpo",
         "text": ""
